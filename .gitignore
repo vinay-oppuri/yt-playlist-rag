@@ -36,3 +36,10 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+
+# Qdrant & Python
+qdrant_data/
+.venv/
+__pycache__/
+*.pyc
+

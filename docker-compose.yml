@@ -1,0 +1,10 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: yt-rag-qdrant
+    restart: unless-stopped
+    ports:
+      - "6333:6333"   # REST API & Web UI Dashboard
+      - "6334:6334"   # gRPC API
+    volumes:
+      - ./qdrant_data:/qdrant/storage
