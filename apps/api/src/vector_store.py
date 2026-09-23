@@ -173,14 +173,20 @@ class VectorStore:
         results: List[Dict[str, Any]] = []
         for point in response.points:
             payload = point.payload or {}
+            start_val = float(payload.get("start", 0.0))
+            end_val = float(payload.get("end", 0.0))
+            link_sec_val = int(payload.get("link_sec", max(0, int(start_val) - 5)))
             results.append(
                 {
                     "score": round(float(point.score), 4),
                     "chunk_id": payload.get("chunk_id"),
                     "text": payload.get("text"),
-                    "start": payload.get("start"),
-                    "end": payload.get("end"),
-                    "duration": payload.get("duration"),
+                    "body": payload.get("body", payload.get("text", "")),
+                    "start": start_val,
+                    "end": end_val,
+                    "link_sec": link_sec_val,
+                    "timestamp": payload.get("timestamp") or f"{int(start_val // 60):02d}:{int(start_val % 60):02d}",
+                    "duration": payload.get("duration", round(max(0.0, end_val - start_val), 2)),
                     "video_id": payload.get("video_id"),
                     "video_title": payload.get("video_title"),
                     "video_url": payload.get("video_url"),

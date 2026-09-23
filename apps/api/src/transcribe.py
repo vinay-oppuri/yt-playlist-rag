@@ -1,4 +1,7 @@
 import html
+import json
+import os
+from pathlib import Path
 import re
 import sys
 from typing import Any, Dict, List, Optional
@@ -12,6 +15,10 @@ if sys.platform == "win32":
         sys.stderr.reconfigure(encoding="utf-8")
     except Exception:
         pass
+
+# Cache directory for transcripts
+CACHE_DIR = Path(os.getenv("YTRAG_CACHE_DIR", Path(__file__).resolve().parent.parent / "data" / "transcripts"))
+CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
 
 def clean_text(text: str) -> str:
@@ -40,7 +47,6 @@ def extract_video_url(url: str) -> str:
     """Extract YouTube 11-character video ID from a URL or raw ID."""
     match = re.search(r"(?:v=|\/|youtu\.be\/|embed\/|shorts\/)([0-9A-Za-z_-]{11})", url)
     if not match:
-        # Check if the string itself is a clean 11-char ID
         if re.match(r"^[0-9A-Za-z_-]{11}$", url.strip()):
             return url.strip()
         raise ValueError(f"Could not extract video ID from URL: {url}")
@@ -112,7 +118,6 @@ def get_video_metadata(url: str) -> Dict[str, Any]:
 def parse_vtt_subtitles(vtt_text: str) -> List[Dict[str, Any]]:
     """Fallback parser for WebVTT subtitle format."""
     segments = []
-    # Regex matching VTT timestamp format: 00:01:23.456 --> 00:01:26.789
     cue_pattern = re.compile(
         r"(?:(\d{2}):)?(\d{2}):(\d{2})\.(\d{3})\s+-->\s+(?:(\d{2}):)?(\d{2}):(\d{2})\.(\d{3})"
     )
@@ -137,7 +142,6 @@ def parse_vtt_subtitles(vtt_text: str) -> List[Dict[str, Any]]:
             i += 1
             text_lines = []
             while i < len(lines) and lines[i].strip():
-                # Strip out formatting tags like <c> </c>
                 cleaned_line = re.sub(r"<[^>]+>", "", lines[i])
                 text_lines.append(cleaned_line)
                 i += 1
@@ -149,12 +153,58 @@ def parse_vtt_subtitles(vtt_text: str) -> List[Dict[str, Any]]:
     return segments
 
 
-def get_transcript(url: str) -> List[Dict[str, Any]]:
+def _load_cached_transcript(video_id: str) -> Optional[List[Dict[str, Any]]]:
+    """Check if transcript is already cached on disk."""
+    cache_file = CACHE_DIR / f"{video_id}.json"
+    if cache_file.exists():
+        try:
+            with open(cache_file, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                return data.get("segments", [])
+        except Exception as e:
+            print(f"Warning: Failed reading cache for {video_id}: {e}")
+    return None
+
+
+def _save_cached_transcript(video_id: str, segments: List[Dict[str, Any]], title: str = "") -> None:
+    """Atomically save transcript to local JSON cache to prevent partial writes."""
+    if not segments:
+        return
+    cache_file = CACHE_DIR / f"{video_id}.json"
+    temp_file = CACHE_DIR / f"{video_id}.tmp"
+    try:
+        payload = {
+            "video_id": video_id,
+            "title": title,
+            "total_segments": len(segments),
+            "segments": segments,
+        }
+        with open(temp_file, "w", encoding="utf-8") as f:
+            json.dump(payload, f, ensure_ascii=False, indent=2)
+        os.replace(temp_file, cache_file)
+    except Exception as e:
+        print(f"Warning: Failed caching transcript for {video_id}: {e}")
+        if temp_file.exists():
+            try:
+                temp_file.unlink()
+            except Exception:
+                pass
+
+
+def get_transcript(url: str, force_refresh: bool = False) -> List[Dict[str, Any]]:
     """
     Fetch transcript segments with timestamps for a YouTube video.
+    Checks local disk cache first. If not cached, fetches from YouTube.
     Returns a list of dicts: [{'start': float, 'duration': float, 'text': str}]
     """
     video_id = extract_video_url(url)
+
+    # 1. Check local cache first (idempotent & fast)
+    if not force_refresh:
+        cached = _load_cached_transcript(video_id)
+        if cached is not None:
+            return cached
+
     clean_url = f"https://www.youtube.com/watch?v={video_id}"
     ydl_opts = {
         "skip_download": True,
@@ -166,6 +216,7 @@ def get_transcript(url: str) -> List[Dict[str, Any]]:
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info = ydl.extract_info(clean_url, download=False)
+            video_title = info.get("title", f"Video {video_id}")
 
             # Filter out non-subtitle tracks like live_chat
             subs = {k: v for k, v in (info.get("subtitles") or {}).items() if k != "live_chat"}
@@ -202,6 +253,7 @@ def get_transcript(url: str) -> List[Dict[str, Any]]:
                                 duration = event.get("dDurationMs", 0) / 1000.0
                                 segments.append({"start": start, "duration": duration, "text": cleaned})
                     if segments:
+                        _save_cached_transcript(video_id, segments, video_title)
                         return segments
 
             # 2. Fallback to vtt format if json3 wasn't available
@@ -209,7 +261,10 @@ def get_transcript(url: str) -> List[Dict[str, Any]]:
             if vtt_track and "url" in vtt_track:
                 res = httpx.get(vtt_track["url"], timeout=15.0)
                 if res.status_code == 200:
-                    return parse_vtt_subtitles(res.text)
+                    segments = parse_vtt_subtitles(res.text)
+                    if segments:
+                        _save_cached_transcript(video_id, segments, video_title)
+                        return segments
 
             print(f"No parseable caption track available for video {video_id}.")
             return []
@@ -220,6 +275,8 @@ def get_transcript(url: str) -> List[Dict[str, Any]]:
 
 if __name__ == "__main__":
     url_input = input(">> Enter YouTube video or playlist URL: ").strip()
+    if not url_input:
+        url_input = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     if is_playlist_url(url_input):
         print(f"Detected playlist URL. Extracting videos...")
         videos = get_playlist_videos(url_input)
