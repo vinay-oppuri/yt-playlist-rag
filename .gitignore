@@ -39,6 +39,7 @@ yarn-error.log*
 
 # Qdrant & Python
 qdrant_data/
+qdrant_storage/
 .venv/
 __pycache__/
 *.pyc
