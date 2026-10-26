@@ -151,17 +151,20 @@ def filter_and_renumber_citations(
 def generate_answer(
     question: str,
     collection_name: str = "yt_transcripts",
+    videos_collection: str = "yt_videos",
     top_k: int = 5,
     min_score: float = MIN_SIMILARITY_SCORE,
     filter_video_id: Optional[str] = None,
+    enable_jit: bool = True,
 ) -> Dict[str, Any]:
     """
     Full Grounded RAG Generation Pipeline:
-    1. Retrieves top-k semantically relevant chunks from Qdrant.
-    2. Guardrail 1: If no chunks meet the min_score cutoff, refuse immediately without calling LLM.
-    3. Builds grounded context and dispatches to LLM with strict system constraints.
-    4. Guardrail 2: Checks if LLM produced the refusal string.
-    5. Guardrail 3: Filters and renumbers only the citations the LLM explicitly referenced.
+    1. Hierarchical Two-Tier Routing: routes question to top video lectures and loads JIT if needed.
+    2. Retrieves top-k semantically relevant chunks from Qdrant transcripts.
+    3. Guardrail 1: If no chunks meet the min_score cutoff, refuse immediately without calling LLM.
+    4. Builds grounded context and dispatches to LLM with strict system constraints.
+    5. Guardrail 2: Checks if LLM produced the refusal string.
+    6. Guardrail 3: Filters and renumbers only the citations the LLM explicitly referenced.
     """
     clean_question = question.strip()
     if not clean_question:
@@ -177,8 +180,10 @@ def generate_answer(
     raw_hits = store.search(
         query=clean_question,
         collection_name=collection_name,
+        videos_collection=videos_collection,
         limit=top_k,
         filter_video_id=filter_video_id,
+        enable_jit=enable_jit,
     )
 
     # Filter by minimum similarity score

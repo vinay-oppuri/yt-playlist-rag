@@ -1,0 +1,4347 @@
+{
+  "video_id": "wvcQg43_V8U",
+  "title": "Rotate Array by K places | Union, Intersection of Sorted Arrays | Move Zeros to End | Arrays Part-2",
+  "total_segments": 868,
+  "segments": [
+    {
+      "start": 3.24,
+      "duration": 4.76,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.48,
+      "duration": 6.039,
+      "text": "so this is another video from the Strivers A2Z DSA course just in case"
+    },
+    {
+      "start": 10.599,
+      "duration": 7.361,
+      "text": "you're for the first time here this is world's most in-depth course on DS algo"
+    },
+    {
+      "start": 15.799,
+      "duration": 6.56,
+      "text": "why do I say that you can go across internet you can buy any of the paid"
+    },
+    {
+      "start": 19.96,
+      "duration": 9.76,
+      "text": "courses none of them will be covering DS algo in such depth we will be covering"
+    },
+    {
+      "start": 25.64,
+      "duration": 9.2,
+      "text": "456 modules and we will be solving 400 plus problems in this DS algo course so"
+    },
+    {
+      "start": 32.719,
+      "duration": 6.881,
+      "text": "when you end this course you can actually clear any of the DS algo rounds"
+    },
+    {
+      "start": 37.36,
+      "duration": 7.84,
+      "text": "in any of the interviews in any part of the world so till now we have covered"
+    },
+    {
+      "start": 41.8,
+      "duration": 8.439,
+      "text": "till step 3.1 fourth problem and in this video we will be covering these five"
+    },
+    {
+      "start": 48.0,
+      "duration": 5.879,
+      "text": "problems just in case you want to directly jump to any of the particular"
+    },
+    {
+      "start": 51.8,
+      "duration": 6.559,
+      "text": "problem the time Stamps will be there you can directly jump over but let's get"
+    },
+    {
+      "start": 56.199,
+      "duration": 6.601,
+      "text": "started with the first problem which is left rotate an array by one place so if"
+    },
+    {
+      "start": 61.48,
+      "duration": 6.16,
+      "text": "you have seen our previous video you know that we always start from brute"
+    },
+    {
+      "start": 65.56,
+      "duration": 7.16,
+      "text": "then we go to better and then we go to Optimal given that the brute and better"
+    },
+    {
+      "start": 70.119,
+      "duration": 6.401,
+      "text": "exists for that problem and this is the way you should always tell in an"
+    },
+    {
+      "start": 74.32,
+      "duration": 6.119,
+      "text": "interview why because in an interview your thought process should be visible"
+    },
+    {
+      "start": 78.479,
+      "duration": 5.841,
+      "text": "to the interviewer because it's you who will be driving the interview so make"
+    },
+    {
+      "start": 82.2,
+      "duration": 7.239,
+      "text": "sure you follow this particular stepbystep optimization of approaches"
+    },
+    {
+      "start": 87.079,
+      "duration": 6.641,
+      "text": "because it does leave a very positive impact on the interview now coming back"
+    },
+    {
+      "start": 91.439,
+      "duration": 6.601,
+      "text": "to the problem left rotate the array by one place what does it mean so given an"
+    },
+    {
+      "start": 95.84,
+      "duration": 5.84,
+      "text": "array you have to left rotate it yes you have to left rotate it by one place so"
+    },
+    {
+      "start": 100.24,
+      "duration": 7.6,
+      "text": "if I have this array and you have to left rotate it by one place so one place"
+    },
+    {
+      "start": 104.24,
+      "duration": 8.72,
+      "text": "so one element will go and rotate it so basically this one will go to the end"
+    },
+    {
+      "start": 110.32,
+      "duration": 7.839,
+      "text": "because you rotate it and everyone will move a bit because you're rotating it so"
+    },
+    {
+      "start": 114.96,
+      "duration": 10.28,
+      "text": "it'll be like 2 3 4 5 so this is what rotation means if I'm talking about left"
+    },
+    {
+      "start": 121.68,
+      "duration": 8.919,
+      "text": "rotation so I have rotated the array and this will be my final array now for this"
+    },
+    {
+      "start": 128.44,
+      "duration": 6.32,
+      "text": "problem this is a very easy problem so you can directly jump to the optimal"
+    },
+    {
+      "start": 132.28,
+      "duration": 7.239,
+      "text": "solution instead of going like to the proo where you take another array and"
+    },
+    {
+      "start": 137.56,
+      "duration": 7.399,
+      "text": "store the answer in another array it's not required for this problem you have"
+    },
+    {
+      "start": 142.08,
+      "duration": 7.92,
+      "text": "to solve the problem in the given array itself like you cannot use any new array"
+    },
+    {
+      "start": 147.92,
+      "duration": 6.72,
+      "text": "make sure you solve the problem in the given array itself now since it has been"
+    },
+    {
+      "start": 152.959,
+      "duration": 6.401,
+      "text": "clearly stated that you have to just rotate it by one place hence the problem"
+    },
+    {
+      "start": 157.2,
+      "duration": 6.119,
+      "text": "is very simple after that we will be increasing the difficulty of the problem"
+    },
+    {
+      "start": 161.239,
+      "duration": 6.681,
+      "text": "but as of now let's understand how do you left rotate by one place now I know"
+    },
+    {
+      "start": 165.72,
+      "duration": 8.56,
+      "text": "one thing if I have to talk about left rotation let's visualize what happened"
+    },
+    {
+      "start": 171.36,
+      "duration": 6.959,
+      "text": "in the final array in the final array this is the only guy that went to the"
+    },
+    {
+      "start": 175.92,
+      "duration": 6.76,
+      "text": "last the first guy is the only guy that went to the last and apart from that"
+    },
+    {
+      "start": 180.319,
+      "duration": 7.601,
+      "text": "what happened the two moved here the three moved here the four moved here the"
+    },
+    {
+      "start": 185.04,
+      "duration": 8.24,
+      "text": "five moved here it's like they moved one place they moved one place ahead so"
+    },
+    {
+      "start": 191.36,
+      "duration": 7.84,
+      "text": "moving them one place ahead should not be a big deal but we need to store this"
+    },
+    {
+      "start": 195.959,
+      "duration": 8.2,
+      "text": "one so assume I say temporary equal to array of zero and over here temporary"
+    },
+    {
+      "start": 201.56,
+      "duration": 8.72,
+      "text": "will be stored as one because array of Z is one now what I say is okay I'm"
+    },
+    {
+      "start": 206.959,
+      "duration": 7.721,
+      "text": "standing here this two ideally since it is left rotated by one should"
+    },
+    {
+      "start": 212.56,
+      "duration": 8.759,
+      "text": "go at the zeroth index so I'll place it here so it's like saying okay if I'm at"
+    },
+    {
+      "start": 217.599,
+      "duration": 8.92,
+      "text": "I index I'll place it at one index before and then again I'll move the a"
+    },
+    {
+      "start": 223.4,
+      "duration": 7.8,
+      "text": "index and I'll see place it at one index before which is again the IUS one and"
+    },
+    {
+      "start": 229.08,
+      "duration": 7.04,
+      "text": "then again I'll move the I index and I'll say place it at one index before so"
+    },
+    {
+      "start": 234.2,
+      "duration": 7.319,
+      "text": "this will be placed here then I'll move here and I'll say place this five at one"
+    },
+    {
+      "start": 239.0,
+      "duration": 7.92,
+      "text": "index before so this will be placed once I've done this the iteration will be"
+    },
+    {
+      "start": 243.72,
+      "duration": 8.719,
+      "text": "over once the iteration is over the last place is having five as of now we need"
+    },
+    {
+      "start": 249.92,
+      "duration": 6.64,
+      "text": "to take this one and place it at the last place and the one is stored in"
+    },
+    {
+      "start": 254.599,
+      "duration": 7.88,
+      "text": "temporary variable so you take this temporary and put it into the last index"
+    },
+    {
+      "start": 260.16,
+      "duration": 8.16,
+      "text": "so this will take one hence the array will get modified to this after left"
+    },
+    {
+      "start": 265.68,
+      "duration": 5.799,
+      "text": "rotating it by one place now let's talk about the implementation how how will"
+    },
+    {
+      "start": 269.88,
+      "duration": 6.56,
+      "text": "you implement it can I say this is nothing but the first index and this is"
+    },
+    {
+      "start": 273.479,
+      "duration": 7.881,
+      "text": "nothing but the N minus one index so thereby what you can do is you can say"
+    },
+    {
+      "start": 278.56,
+      "duration": 7.72,
+      "text": "for I like At first what you can do is you can always do temporary of array of"
+    },
+    {
+      "start": 283.84,
+      "duration": 7.4,
+      "text": "zero and then you can start from one and you can go on till I N minus one so you"
+    },
+    {
+      "start": 288.479,
+      "duration": 10.481,
+      "text": "can run a loop till n minus one and then you can say this ayat guy will go to i -"
+    },
+    {
+      "start": 294.199,
+      "duration": 10.801,
+      "text": "one so array of IUS one will store array of I"
+    },
+    {
+      "start": 300.479,
+      "duration": 10.481,
+      "text": "once this Loop is completed that means this will be completed and at the end of"
+    },
+    {
+      "start": 308.0,
+      "duration": 8.88,
+      "text": "the day at this position which is nothing but array of n minus one"
+    },
+    {
+      "start": 314.039,
+      "duration": 7.361,
+      "text": "whatever we stored in temporary we take it and we will place it over here as"
+    },
+    {
+      "start": 319.28,
+      "duration": 8.639,
+      "text": "simple as that if I have to discuss the time complexity what will the time"
+    },
+    {
+      "start": 324.0,
+      "duration": 8.639,
+      "text": "complexity yes a simple beo of n pass because we are running this Loop for n"
+    },
+    {
+      "start": 329.919,
+      "duration": 8.481,
+      "text": "times thereby the time complexity is p of n are we using any extra space no"
+    },
+    {
+      "start": 335.68,
+      "duration": 7.4,
+      "text": "thereby the space complexity is p of one why because we are doing everything in"
+    },
+    {
+      "start": 340.639,
+      "duration": 7.801,
+      "text": "the given array itself so we can see that we are not using any extra space"
+    },
+    {
+      "start": 345.44,
+      "duration": 7.64,
+      "text": "but yes we are modifying the array so the space used to solve the problem is B"
+    },
+    {
+      "start": 351.12,
+      "duration": 6.48,
+      "text": "of n because we're using an array to solve the problem yeah that array is"
+    },
+    {
+      "start": 354.84,
+      "duration": 8.32,
+      "text": "already there but we using it so if someone says what is the space used in"
+    },
+    {
+      "start": 360.8,
+      "duration": 6.32,
+      "text": "your algorithm then it becomes B offen because you definitely are using this"
+    },
+    {
+      "start": 365.12,
+      "duration": 7.199,
+      "text": "array but it is already created but you're using it in your algorithm but if"
+    },
+    {
+      "start": 369.319,
+      "duration": 7.481,
+      "text": "someone says what is the space that you like what is the extra space that you're"
+    },
+    {
+      "start": 373.96,
+      "duration": 8.079,
+      "text": "using and the extra space is be of one but in for the algorithm we definitely"
+    },
+    {
+      "start": 378.919,
+      "duration": 8.241,
+      "text": "are using this so understand the shuttle difference if someone says in the"
+    },
+    {
+      "start": 384.16,
+      "duration": 6.96,
+      "text": "algorithm you should always take the space that you are being used like"
+    },
+    {
+      "start": 388.96,
+      "duration": 6.72,
+      "text": "that's being used and if someone says what's the extra space then you can say"
+    },
+    {
+      "start": 393.56,
+      "duration": 7.44,
+      "text": "B go fun so there's a shuttle difference whenever you go to an interview always"
+    },
+    {
+      "start": 398.12,
+      "duration": 6.96,
+      "text": "clarified tell them that sir the extra space is so whenever you go to an"
+    },
+    {
+      "start": 402.919,
+      "duration": 7.161,
+      "text": "interview always clarify this tell them sir or ma'am the extra space that I'm"
+    },
+    {
+      "start": 407.639,
+      "duration": 6.161,
+      "text": "using is we fun but in order to solve this problem I'm using this array so if"
+    },
+    {
+      "start": 412.24,
+      "duration": 5.519,
+      "text": "you have to take space into consideration for the algorithm"
+    },
+    {
+      "start": 415.52,
+      "duration": 6.88,
+      "text": "particularly I will say I'm using this are so thereby a b go of n space is"
+    },
+    {
+      "start": 419.84,
+      "duration": 7.359,
+      "text": "being used yes it's already given to me but I'm using it in order to solve it so"
+    },
+    {
+      "start": 425.479,
+      "duration": 7.84,
+      "text": "this way you tell to the interview so that every concept of yours is Crystal"
+    },
+    {
+      "start": 431.319,
+      "duration": 6.761,
+      "text": "clearly presented to the interview and he is impressed this is how you should"
+    },
+    {
+      "start": 436.12,
+      "duration": 4.919,
+      "text": "drive the interviews got it so if you want to solve this problem the problem"
+    },
+    {
+      "start": 439.599,
+      "duration": 4.801,
+      "text": "link will be in the description so I've written the exact same code and I'm"
+    },
+    {
+      "start": 442.56,
+      "duration": 5.479,
+      "text": "submitting this problem and it is running absolutely fine so you have"
+    },
+    {
+      "start": 445.96,
+      "duration": 6.16,
+      "text": "solved this problem now if this problem comes up in an interview the followup"
+    },
+    {
+      "start": 450.16,
+      "duration": 7.2,
+      "text": "question very likely will be the next one which is left rotating an array by D"
+    },
+    {
+      "start": 455.44,
+      "duration": 6.8,
+      "text": "places till now you have solved a problem where you did left rotate the"
+    },
+    {
+      "start": 458.96,
+      "duration": 6.84,
+      "text": "array by one place now I am telling you okay one is easy what if I give you two"
+    },
+    {
+      "start": 464.52,
+      "duration": 6.92,
+      "text": "what if I give you three what if I give you four can you left rotate an array by"
+    },
+    {
+      "start": 469.12,
+      "duration": 6.44,
+      "text": "certain number of places so that certain number is d d can be anything in a"
+    },
+    {
+      "start": 473.96,
+      "duration": 7.76,
+      "text": "problem so you have to design an algorithm so that the algorithm works"
+    },
+    {
+      "start": 478.319,
+      "duration": 6.88,
+      "text": "for any given number of places that is what the followup question will be so"
+    },
+    {
+      "start": 483.36,
+      "duration": 5.399,
+      "text": "let's try to solve this followup problem so let's understand the problem"
+    },
+    {
+      "start": 486.52,
+      "duration": 7.32,
+      "text": "statement it states you to left rotate the array but this time by D places"
+    },
+    {
+      "start": 491.44,
+      "duration": 8.56,
+      "text": "assume for this given example array we have D equal to 2 so it stating that"
+    },
+    {
+      "start": 496.36,
+      "duration": 9.44,
+      "text": "left rotated by two places so this two elements should be left rotated and"
+    },
+    {
+      "start": 502.84,
+      "duration": 7.12,
+      "text": "these elements should be moved by two places this is what you mean by left"
+    },
+    {
+      "start": 507.879,
+      "duration": 11.28,
+      "text": "rotation so if I do that the resultant array will be 3 4 5 6 7"
+    },
+    {
+      "start": 515.76,
+      "duration": 9.16,
+      "text": "and then 1 and 2 so this one and two kind of moves here and then moves here"
+    },
+    {
+      "start": 521.519,
+      "duration": 8.0,
+      "text": "and these will move two places ahead so this is what the resultant array will be"
+    },
+    {
+      "start": 527.24,
+      "duration": 7.76,
+      "text": "after you have left rotated the array by D places D over here is two D could have"
+    },
+    {
+      "start": 533.04,
+      "duration": 6.919,
+      "text": "been three yes D could have been three as well in case of three what would have"
+    },
+    {
+      "start": 537.279,
+      "duration": 7.281,
+      "text": "been the answer yes obviously in that case 1 2 3 would have been left rotated"
+    },
+    {
+      "start": 542.72,
+      "duration": 9.28,
+      "text": "and they would have been moving by three places ahead so in that case the answer"
+    },
+    {
+      "start": 547.079,
+      "duration": 11.121,
+      "text": "would have been 4 5 6 7 and then 1 2 3 so that's the answer for D equal to 3"
+    },
+    {
+      "start": 555.079,
+      "duration": 10.2,
+      "text": "now what if yes what if like let's count the size of the array it's like one"
+    },
+    {
+      "start": 560.079,
+      "duration": 11.281,
+      "text": "sorry my bad 1 2 3 4 5 6 7 s is the size of the AR imagine I asked you can you"
+    },
+    {
+      "start": 568.079,
+      "duration": 9.32,
+      "text": "rotate this yes you rotate this by seven places so if you actually rotate this by"
+    },
+    {
+      "start": 574.16,
+      "duration": 7.84,
+      "text": "seven places it will again come back to the same place it will again come back"
+    },
+    {
+      "start": 579.519,
+      "duration": 7.88,
+      "text": "to the same place so rotating it by seven places will bring it back to the"
+    },
+    {
+      "start": 584.2,
+      "duration": 9.639,
+      "text": "same place so if I ask you can I rotate it by eight places if you do a rotation"
+    },
+    {
+      "start": 590.839,
+      "duration": 11.201,
+      "text": "by eight places can I break eight down to seven rotations plus one rotation can"
+    },
+    {
+      "start": 597.92,
+      "duration": 8.2,
+      "text": "I I can so can I see that Hey listen on seven rotation it comes back to the"
+    },
+    {
+      "start": 604.12,
+      "duration": 8.68,
+      "text": "original array and then you just have to do one rotation on it Mak sense so if it"
+    },
+    {
+      "start": 609.6,
+      "duration": 8.12,
+      "text": "is nine rotation can I break it down to 7 + 2 and say okay on seven rotation it"
+    },
+    {
+      "start": 616.04,
+      "duration": 6.12,
+      "text": "will be the original array again and then you just have to do a mega two"
+    },
+    {
+      "start": 619.48,
+      "duration": 10.919,
+      "text": "rotation on the array does make sense if I tell you D equal to 15 can I write 15"
+    },
+    {
+      "start": 625.519,
+      "duration": 9.961,
+      "text": "as 7 + 7 + 1 stating that on two seven rotations on two seven rotations the"
+    },
+    {
+      "start": 632.839,
+      "duration": 8.24,
+      "text": "array will be back to its original and then you just have to do one rotation"
+    },
+    {
+      "start": 637.2,
+      "duration": 10.319,
+      "text": "and that will sum up to 15 rotations so can I see multiple of seven rotations"
+    },
+    {
+      "start": 644.12,
+      "duration": 8.6,
+      "text": "can be done and it will always bring you back to the original array I repeat"
+    },
+    {
+      "start": 649.959,
+      "duration": 7.721,
+      "text": "multiple of seven rotations will always bring you to the original array the"
+    },
+    {
+      "start": 655.04,
+      "duration": 7.44,
+      "text": "remaining is what you need to do so can I see whatever AR is given to you sorry"
+    },
+    {
+      "start": 660.44,
+      "duration": 9.28,
+      "text": "whatever D is given to you doesn't matter the number of rotations you have"
+    },
+    {
+      "start": 665.24,
+      "duration": 9.2,
+      "text": "to do will always be D modular whatever is the size of the AR can I say this if"
+    },
+    {
+      "start": 671.839,
+      "duration": 8.601,
+      "text": "it's given like 20 doesn't matter I'll just have to do six rotations because 20"
+    },
+    {
+      "start": 677.48,
+      "duration": 7.799,
+      "text": "module of 7 will be six which means you have to do seven two times and the"
+    },
+    {
+      "start": 683.0,
+      "duration": 9.16,
+      "text": "remaining six so you actually have to just do six rotations and if you have"
+    },
+    {
+      "start": 689.639,
+      "duration": 7.401,
+      "text": "any number of rotations which is lesser than the size of the array it's very"
+    },
+    {
+      "start": 694.04,
+      "duration": 9.64,
+      "text": "simple if I say six it means this will go here it's like 1 2 3 4 5 6 and this"
+    },
+    {
+      "start": 700.839,
+      "duration": 9.56,
+      "text": "will go here that is the meaning of six rotations so anything lesser than seven"
+    },
+    {
+      "start": 707.079,
+      "duration": 9.641,
+      "text": "is very easy to solve that's why we will always do a modular of n because end"
+    },
+    {
+      "start": 714.519,
+      "duration": 5.401,
+      "text": "rotations like on multiple of end rotation means coming back to the"
+    },
+    {
+      "start": 718.68,
+      "duration": 7.0,
+      "text": "original which we do not care we care about doing"
+    },
+    {
+      "start": 722.399,
+      "duration": 7.721,
+      "text": "the next set of steps got it so that's the first thing we have to be careful"
+    },
+    {
+      "start": 727.36,
+      "duration": 7.08,
+      "text": "about whatever D is given to you just do a module with n and that will be solving"
+    },
+    {
+      "start": 733.0,
+      "duration": 7.199,
+      "text": "your problem and that will be solving your problem if D is very very l so if"
+    },
+    {
+      "start": 738.279,
+      "duration": 5.961,
+      "text": "in an interview this question comes up the first approach that you'll be"
+    },
+    {
+      "start": 741.56,
+      "duration": 5.92,
+      "text": "telling will be the Brute Force approach now what will be the Brute Force"
+    },
+    {
+      "start": 745.959,
+      "duration": 5.041,
+      "text": "approach over here let's go back to the previous problem in the previous problem"
+    },
+    {
+      "start": 749.76,
+      "duration": 8.68,
+      "text": "D was one element you were being asked to rotate"
+    },
+    {
+      "start": 754.079,
+      "duration": 9.161,
+      "text": "the array by one place so you initially took a temporary and you stored one"
+    },
+    {
+      "start": 760.8,
+      "duration": 8.24,
+      "text": "element this one element was stored and then you yes then you did this and then"
+    },
+    {
+      "start": 766.36,
+      "duration": 8.24,
+      "text": "you replace that one element to the last we'll do the exact same thing D was one"
+    },
+    {
+      "start": 771.959,
+      "duration": 8.68,
+      "text": "over here so you stored one element if D is two you will be storing two elements"
+    },
+    {
+      "start": 777.68,
+      "duration": 8.32,
+      "text": "into this temporary and then you will rotate and then you'll take the Two"
+    },
+    {
+      "start": 782.639,
+      "duration": 8.64,
+      "text": "element and you'll put it on the back that's what we'll do let me explain so"
+    },
+    {
+      "start": 788.959,
+      "duration": 8.721,
+      "text": "what I'll say is okay D is three so I'll take a temporary array or a temporary"
+    },
+    {
+      "start": 794.199,
+      "duration": 9.401,
+      "text": "list whatever you can and I'll say okay let's take the first three elements very"
+    },
+    {
+      "start": 800.839,
+      "duration": 7.521,
+      "text": "simple done so I've taken the first three I've taken the first three and"
+    },
+    {
+      "start": 806.24,
+      "duration": 6.959,
+      "text": "I've put that into the temporary array similar to Out we uh similar to what we"
+    },
+    {
+      "start": 810.279,
+      "duration": 8.281,
+      "text": "did in the first problem now what was the next step shifting so let's do the"
+    },
+    {
+      "start": 816.36,
+      "duration": 8.4,
+      "text": "next job of Shifting now when I say shifting how"
+    },
+    {
+      "start": 822.199,
+      "duration": 7.521,
+      "text": "will you shift let's write down the indexes and let's try to observe how do"
+    },
+    {
+      "start": 827.36,
+      "duration": 12.08,
+      "text": "we shift so if I write down the indexes it's like 0 1 2 3 4 5 six and if D is"
+    },
+    {
+      "start": 835.519,
+      "duration": 8.801,
+      "text": "three we start shifting from third index we start shifting from the third index"
+    },
+    {
+      "start": 841.079,
+      "duration": 9.161,
+      "text": "which is the dth index so we we start from here and where do we put three"
+    },
+    {
+      "start": 847.079,
+      "duration": 7.481,
+      "text": "let's analyze three is put to the zeroth index obviously four will come here and"
+    },
+    {
+      "start": 852.92,
+      "duration": 7.24,
+      "text": "the fourth index is put to the first Index this one will come here and then"
+    },
+    {
+      "start": 857.32,
+      "duration": 9.24,
+      "text": "the fifth index which is this which is six is put here so fifth index comes to"
+    },
+    {
+      "start": 863.68,
+      "duration": 9.32,
+      "text": "Second do you see where it is coming up if this is your I index if this is your"
+    },
+    {
+      "start": 869.36,
+      "duration": 7.56,
+      "text": "index it's always coming to I minus D place this is where it is coming to the"
+    },
+    {
+      "start": 875.079,
+      "duration": 10.281,
+      "text": "shifting is happening in this way so what I can say is okay for shifting I"
+    },
+    {
+      "start": 880.279,
+      "duration": 11.321,
+      "text": "can probably start from this one sorry this one which is the third"
+    },
+    {
+      "start": 888.72,
+      "duration": 9.32,
+      "text": "index which is nothing but D and I can go until the last i++ and I can say"
+    },
+    {
+      "start": 894.959,
+      "duration": 8.761,
+      "text": "array of because the third index guy will go to the zero IND next guy please"
+    },
+    {
+      "start": 900.199,
+      "duration": 11.361,
+      "text": "observe this guy goes here and this will become four so it goes three places back"
+    },
+    {
+      "start": 906.56,
+      "duration": 12.56,
+      "text": "it goes D places back so I minus D places is where the array of I will go"
+    },
+    {
+      "start": 915.079,
+      "duration": 7.2,
+      "text": "so once you have performed this shifting how will the AR look like let's write"
+    },
+    {
+      "start": 920.92,
+      "duration": 5.599,
+      "text": "once you performed this shifting how will the AR look like it will look like"
+    },
+    {
+      "start": 923.8,
+      "duration": 8.719,
+      "text": "four is here five is here six is here seven is here now you still have three"
+    },
+    {
+      "start": 929.079,
+      "duration": 8.281,
+      "text": "places where 5 6 7 is there and what do you need to put it like what do you need"
+    },
+    {
+      "start": 934.04,
+      "duration": 7.239,
+      "text": "to put there very simple you have to take this temporary and you have to put"
+    },
+    {
+      "start": 939.44,
+      "duration": 9.24,
+      "text": "the temporary one by one here which is like 1 2 3 quite simple so put back"
+    },
+    {
+      "start": 944.839,
+      "duration": 10.12,
+      "text": "temporary is the last step put back temp is your last step so let's put back the"
+    },
+    {
+      "start": 950.88,
+      "duration": 10.399,
+      "text": "temp so I can see how do I put back the temp now we need to analyze where are we"
+    },
+    {
+      "start": 958.399,
+      "duration": 10.961,
+      "text": "putting it let's try to analyze so can I say if we shifting by three places it"
+    },
+    {
+      "start": 965.399,
+      "duration": 10.36,
+      "text": "means if the size of the array is seven three places before it because the last"
+    },
+    {
+      "start": 971.92,
+      "duration": 8.039,
+      "text": "three places will only be occupied if we are shifting the array by three places"
+    },
+    {
+      "start": 978.279,
+      "duration": 9.161,
+      "text": "only the last three places will be occupied so it be like okay 7 - 3 which"
+    },
+    {
+      "start": 984.639,
+      "duration": 8.161,
+      "text": "is basically n minus D which is basically 7 - three which is basically"
+    },
+    {
+      "start": 990.279,
+      "duration": 7.601,
+      "text": "four so we're starting at four can I say we will start putting at the fourth"
+    },
+    {
+      "start": 994.839,
+      "duration": 8.48,
+      "text": "index can I I can so I'll start from I'll start putting it from the fourth"
+    },
+    {
+      "start": 1000.839,
+      "duration": 7.8,
+      "text": "like n minus K and I'll go on to the last quite simple and what will we put"
+    },
+    {
+      "start": 1006.68,
+      "duration": 5.399,
+      "text": "in the array of five what will we put we'll put first"
+    },
+    {
+      "start": 1009.88,
+      "duration": 7.28,
+      "text": "one so we'll put something from the temporary we will put something from the"
+    },
+    {
+      "start": 1014.199,
+      "duration": 6.961,
+      "text": "temporary for sure now we need to figure out what's the index the easy e EST way"
+    },
+    {
+      "start": 1019.319,
+      "duration": 7.041,
+      "text": "to do this is like without any mathematical calculations or anything"
+    },
+    {
+      "start": 1023.24,
+      "duration": 8.12,
+      "text": "the easiest way is say J equal to Z and put J and then do a j++ so what will"
+    },
+    {
+      "start": 1029.199,
+      "duration": 8.441,
+      "text": "happen at first J is here because that's the zero index takes up one puts it here"
+    },
+    {
+      "start": 1034.959,
+      "duration": 6.921,
+      "text": "then J goes here takes up two puts up here then J goes here takes up three and"
+    },
+    {
+      "start": 1039.839,
+      "duration": 7.401,
+      "text": "puts in here so you put J and you increment J you put J you increment J"
+    },
+    {
+      "start": 1044.4,
+      "duration": 7.08,
+      "text": "and this will easily fill up the last three places that's one of the ways to"
+    },
+    {
+      "start": 1049.4,
+      "duration": 5.32,
+      "text": "do it but if you're going to an interview you have to show all your"
+    },
+    {
+      "start": 1052.96,
+      "duration": 6.64,
+      "text": "skills so this is the first thing you'll tell in an interview then you can say"
+    },
+    {
+      "start": 1056.88,
+      "duration": 8.679,
+      "text": "maybe we can get rid of this possible J yes let's get rid of this possible J can"
+    },
+    {
+      "start": 1062.84,
+      "duration": 8.6,
+      "text": "I deduce something which is mathematically correct I can maybe so"
+    },
+    {
+      "start": 1068.44,
+      "duration": 10.88,
+      "text": "something which I know is this element which is at the zeroth index will always"
+    },
+    {
+      "start": 1074.44,
+      "duration": 10.52,
+      "text": "go to the N minus D Index can I say this I can now can I say someone who is at"
+    },
+    {
+      "start": 1081.72,
+      "duration": 9.6,
+      "text": "the first index will always go to n minus D + 1 which is basically the next"
+    },
+    {
+      "start": 1087.919,
+      "duration": 8.481,
+      "text": "index I can now can I say someone who is here will always go to here which is"
+    },
+    {
+      "start": 1094.12,
+      "duration": 6.64,
+      "text": "apparently two places ahead which is n minus D +"
+    },
+    {
+      "start": 1098.52,
+      "duration": 11.2,
+      "text": "2 can I say this and this is the second index so n minus D + 2 so can I say if"
+    },
+    {
+      "start": 1104.919,
+      "duration": 9.321,
+      "text": "your base index is n minus d n minus D is your base index can I say this"
+    },
+    {
+      "start": 1112.2,
+      "duration": 8.52,
+      "text": "temporary will say okay if you're standing here if you're standing at"
+    },
+    {
+      "start": 1116.84,
+      "duration": 9.92,
+      "text": "I then you just need sorry n minus D to get your base index can I say this you"
+    },
+    {
+      "start": 1123.08,
+      "duration": 10.88,
+      "text": "just need i - n- D because again I'll repeat this is n minus D + 2 and this is"
+    },
+    {
+      "start": 1130.76,
+      "duration": 8.279,
+      "text": "n minus D so if you are trying to put some something here then if you just"
+    },
+    {
+      "start": 1137.0,
+      "duration": 6.88,
+      "text": "subtract this you'll get two and you get the second guy from here quite simple"
+    },
+    {
+      "start": 1141.48,
+      "duration": 7.4,
+      "text": "maths very very simple take a pen and paper and try to do it yourself I'll"
+    },
+    {
+      "start": 1145.919,
+      "duration": 6.721,
+      "text": "repeat again the base index here is n minus D then the next index will"
+    },
+    {
+      "start": 1150.679,
+      "duration": 8.521,
+      "text": "definitely n minus D + 1 the next will be n minus D + 2 right and we're taking"
+    },
+    {
+      "start": 1155.84,
+      "duration": 9.319,
+      "text": "from 0 one2 so this is like zero this is like one and this is like two that's why"
+    },
+    {
+      "start": 1163.08,
+      "duration": 6.12,
+      "text": "wherever you are currently at just subtract the base index if you subtract"
+    },
+    {
+      "start": 1167.559,
+      "duration": 5.761,
+      "text": "first you'll get zero then you get one then you'll get two which apparently"
+    },
+    {
+      "start": 1170.88,
+      "duration": 8.0,
+      "text": "means this so you'll automatically take the temporary this is how you can easily"
+    },
+    {
+      "start": 1176.159,
+      "duration": 6.081,
+      "text": "put it back got it so quite simple first I stored everything from the temporary"
+    },
+    {
+      "start": 1180.679,
+      "duration": 7.0,
+      "text": "again to store everything from the temporary you just need to loop from 0"
+    },
+    {
+      "start": 1185.28,
+      "duration": 10.24,
+      "text": "to D so it's like looping from I = to 0 I lesser than D and I +"
+    },
+    {
+      "start": 1192.679,
+      "duration": 9.201,
+      "text": "plus and in the list you can probably take a vector or a list in uh Java push"
+    },
+    {
+      "start": 1199.44,
+      "duration": 7.119,
+      "text": "back in V uh in Java it will be list. add array fine that's it so this is the"
+    },
+    {
+      "start": 1205.28,
+      "duration": 5.8,
+      "text": "putting into the temporary this is the step one so this is how you can put"
+    },
+    {
+      "start": 1208.679,
+      "duration": 8.841,
+      "text": "everything over there then you can easily shift and then you can easily put"
+    },
+    {
+      "start": 1214.799,
+      "duration": 6.721,
+      "text": "back the temporary array this is how you can easily do it so for the for this"
+    },
+    {
+      "start": 1219.919,
+      "duration": 6.201,
+      "text": "brute approach I have written the pseudo code so that you can code in C++ or Java"
+    },
+    {
+      "start": 1224.2,
+      "duration": 6.2,
+      "text": "but coming to a cleaner code we just take the array as the input then we take"
+    },
+    {
+      "start": 1228.039,
+      "duration": 6.841,
+      "text": "the d and then we call the left rotate function which rotates it and then we"
+    },
+    {
+      "start": 1232.559,
+      "duration": 6.721,
+      "text": "just kind like print it so let's look at the function so it takes an array it"
+    },
+    {
+      "start": 1236.76,
+      "duration": 9.24,
+      "text": "takes the size of the array takes D and the first step we make sure is we just"
+    },
+    {
+      "start": 1242.48,
+      "duration": 8.84,
+      "text": "reduce the D to something lesser than n because we know on all the multiples of"
+    },
+    {
+      "start": 1248.52,
+      "duration": 9.12,
+      "text": "n it will come back to its origal array and then we store everything into"
+    },
+    {
+      "start": 1254.08,
+      "duration": 8.599,
+      "text": "temporary then we shift it and after that we place back temporary into array"
+    },
+    {
+      "start": 1261.039,
+      "duration": 5.921,
+      "text": "quite simple so that was the cleaner code and the problem link will be in the"
+    },
+    {
+      "start": 1264.799,
+      "duration": 6.521,
+      "text": "description so what will be the time complexity so can I say the time"
+    },
+    {
+      "start": 1268.88,
+      "duration": 10.0,
+      "text": "complexity will be in order to do the step one this is taking a beo of"
+    },
+    {
+      "start": 1275.559,
+      "duration": 10.36,
+      "text": "D because we are looping through the first D elements next can I say in order"
+    },
+    {
+      "start": 1282.32,
+      "duration": 10.56,
+      "text": "to transfer like shift everything that's going to take B go of n minus d because"
+    },
+    {
+      "start": 1289.72,
+      "duration": 8.48,
+      "text": "those many elements are what you will be transferring or shifting to the front so"
+    },
+    {
+      "start": 1295.88,
+      "duration": 7.76,
+      "text": "n minus the next one putting back temporary so that's like again B go of D"
+    },
+    {
+      "start": 1301.52,
+      "duration": 11.08,
+      "text": "because you're putting back D elements so that's like B go of D and if I have"
+    },
+    {
+      "start": 1306.12,
+      "duration": 11.48,
+      "text": "to add it up it will become beo of n + D this will be the time complexity and if"
+    },
+    {
+      "start": 1315.08,
+      "duration": 8.68,
+      "text": "I ask you what is the very important one what is the extra space used extra the"
+    },
+    {
+      "start": 1320.559,
+      "duration": 7.641,
+      "text": "extra space used will be B go of B why because you're using a temporary area to"
+    },
+    {
+      "start": 1326.24,
+      "duration": 6.439,
+      "text": "store the extra elements now this is where the interview will tell you okay"
+    },
+    {
+      "start": 1330.48,
+      "duration": 6.36,
+      "text": "fine enough but I want to get rid of this extra space can you just do it and"
+    },
+    {
+      "start": 1334.679,
+      "duration": 6.081,
+      "text": "be off one extra space that's when you'll say okay maybe I'll try maybe"
+    },
+    {
+      "start": 1338.84,
+      "duration": 6.64,
+      "text": "I'll try to optimize this into an optimal solution for this a better might"
+    },
+    {
+      "start": 1343.159,
+      "duration": 5.961,
+      "text": "not exist so I'll not discuss it but this is where I'll try but this is where"
+    },
+    {
+      "start": 1347.4,
+      "duration": 6.36,
+      "text": "I'll try to optimize this into an optimal one so let's look at the optimal"
+    },
+    {
+      "start": 1351.559,
+      "duration": 6.6,
+      "text": "solution so let's talk about the most optimal solution the most optimal"
+    },
+    {
+      "start": 1355.52,
+      "duration": 7.84,
+      "text": "solution will be based on observation now this will be the resultant array"
+    },
+    {
+      "start": 1360.279,
+      "duration": 10.76,
+      "text": "after you have rotated this array by three places now something to observe"
+    },
+    {
+      "start": 1366.24,
+      "duration": 13.039,
+      "text": "this 1 2 3 yes this 1 2 3 is over here okay and this 4567 is over here so what"
+    },
+    {
+      "start": 1375.64,
+      "duration": 9.48,
+      "text": "we can do is we will say okay let's let's take the first three elements and"
+    },
+    {
+      "start": 1382.159,
+      "duration": 8.561,
+      "text": "try to rotate it sorry try to reverse it so if I reverse it it'll be 3 2 1 I've"
+    },
+    {
+      "start": 1388.159,
+      "duration": 7.76,
+      "text": "reversed it and then I'll say let's take the last four elements let's try to"
+    },
+    {
+      "start": 1393.52,
+      "duration": 11.88,
+      "text": "reverse it as well so if I reverse it it'll be 7 6 5 4 now what I'll say is"
+    },
+    {
+      "start": 1401.32,
+      "duration": 10.239,
+      "text": "okay this is the Reversed array post two reversal one is the first D the next is"
+    },
+    {
+      "start": 1408.039,
+      "duration": 8.841,
+      "text": "the n minus D elements after this if you have to get this final array what do you"
+    },
+    {
+      "start": 1414.24,
+      "duration": 6.88,
+      "text": "need to do reverse it again so if you reverse it what will happen this four"
+    },
+    {
+      "start": 1419.12,
+      "duration": 5.2,
+      "text": "will come first this five will come here this six will come here this seven will"
+    },
+    {
+      "start": 1422.64,
+      "duration": 6.639,
+      "text": "come here this one will come here this two will come here and this three will"
+    },
+    {
+      "start": 1425.96,
+      "duration": 11.0,
+      "text": "come here done and dusted yes this is super easy so I will say"
+    },
+    {
+      "start": 1433.36,
+      "duration": 8.439,
+      "text": "reverse first array to array plus d then I'll say reverse"
+    },
+    {
+      "start": 1438.919,
+      "duration": 7.081,
+      "text": "from array plus d to array plus n which is the last one and then I'll say"
+    },
+    {
+      "start": 1443.799,
+      "duration": 8.0,
+      "text": "reverse the entire array which is array to AR plus n so if I perform this three"
+    },
+    {
+      "start": 1448.919,
+      "duration": 7.681,
+      "text": "reversals if I perform this three reversals I will actually get the"
+    },
+    {
+      "start": 1453.76,
+      "duration": 6.279,
+      "text": "resultant AR I don't have to do like I don't have to take a temporary do"
+    },
+    {
+      "start": 1458.12,
+      "duration": 7.6,
+      "text": "shiftings and then copy pasting back again just three reversals first for the"
+    },
+    {
+      "start": 1462.6,
+      "duration": 9.84,
+      "text": "D elements then from D to n and then the entire and if I do this I should done"
+    },
+    {
+      "start": 1469.2,
+      "duration": 7.959,
+      "text": "and this will take me a b go of n sorry B go of D complexity because we are"
+    },
+    {
+      "start": 1474.919,
+      "duration": 6.76,
+      "text": "reversing D elements this will take me a b go of n minus D because we reversing n"
+    },
+    {
+      "start": 1479.64,
+      "duration": 6.639,
+      "text": "minus D elements this will take me a b go of n because we reversing the entire"
+    },
+    {
+      "start": 1483.96,
+      "duration": 7.56,
+      "text": "array so overall the complexity will be this plus this so D and D will strike"
+    },
+    {
+      "start": 1488.88,
+      "duration": 8.08,
+      "text": "out and the complexity will be 2 N so the time complexity slightly increased"
+    },
+    {
+      "start": 1494.279,
+      "duration": 7.601,
+      "text": "from the previous one but but the space complexity we are not using any extra"
+    },
+    {
+      "start": 1499.84,
+      "duration": 6.36,
+      "text": "space very important we're not using any extra space yes we are using the array"
+    },
+    {
+      "start": 1504.919,
+      "duration": 6.12,
+      "text": "that you can tell to the interview but we are not using anything extra we're"
+    },
+    {
+      "start": 1509.0,
+      "duration": 7.12,
+      "text": "using the given array okay that's why the space complexity over here will be"
+    },
+    {
+      "start": 1512.679,
+      "duration": 7.041,
+      "text": "vco of one got it so let's quickly code this up again the problem link will be"
+    },
+    {
+      "start": 1517.76,
+      "duration": 7.44,
+      "text": "in the description so there is a reverse function a and C++ so if you just give"
+    },
+    {
+      "start": 1522.399,
+      "duration": 7.52,
+      "text": "this it will reverse from array plus 0 like zero index to D minus one to D"
+    },
+    {
+      "start": 1527.96,
+      "duration": 9.04,
+      "text": "minus one and then you can say again reverse array plus d to array + one this"
+    },
+    {
+      "start": 1534.159,
+      "duration": 9.921,
+      "text": "means from D Index to n minus one at index then I can say again"
+    },
+    {
+      "start": 1539.52,
+      "duration": 9.36,
+      "text": "reverse array plus sorry plus Z that's means from zero index to the last index"
+    },
+    {
+      "start": 1546.48,
+      "duration": 6.76,
+      "text": "if you do this three steps it will be done and I now I can quickly run this"
+    },
+    {
+      "start": 1551.6,
+      "duration": 5.6,
+      "text": "and see if it is running yes and now you submit this it should be submitted so in"
+    },
+    {
+      "start": 1555.12,
+      "duration": 6.32,
+      "text": "case your programming language does not have a reverse function"
+    },
+    {
+      "start": 1559.0,
+      "duration": 6.399,
+      "text": "you can always write something like this which is a manual function where you"
+    },
+    {
+      "start": 1563.52,
+      "duration": 5.759,
+      "text": "take the starting index and the ending index which means you want to reverse"
+    },
+    {
+      "start": 1566.96,
+      "duration": 6.8,
+      "text": "from this index to this index and this is quite simple you can go through this"
+    },
+    {
+      "start": 1571.159,
+      "duration": 6.52,
+      "text": "it's very very simple and this will also work like if you write a manual function"
+    },
+    {
+      "start": 1575.52,
+      "duration": 6.0,
+      "text": "just because in C++ there is an STL that's why I did not write an extra"
+    },
+    {
+      "start": 1579.84,
+      "duration": 4.88,
+      "text": "function but in an interview the interview might ask you to write an"
+    },
+    {
+      "start": 1583.2,
+      "duration": 6.0,
+      "text": "additional function without using the STL so in that case you can go ahead and"
+    },
+    {
+      "start": 1586.76,
+      "duration": 7.039,
+      "text": "write a similar function which will reverse you a particular array from"
+    },
+    {
+      "start": 1591.44,
+      "duration": 6.8,
+      "text": "start to end so with this we are done with this problem as well which is left"
+    },
+    {
+      "start": 1595.76,
+      "duration": 6.639,
+      "text": "rotate an array by D places now remember there might be a follow-up question to"
+    },
+    {
+      "start": 1599.679,
+      "duration": 7.041,
+      "text": "this in an interview which is what if instead of left rotation I'll see you WR"
+    },
+    {
+      "start": 1604.76,
+      "duration": 6.48,
+      "text": "rotate the array by D places you have to come up with a solution and this will be"
+    },
+    {
+      "start": 1608.2,
+      "duration": 6.839,
+      "text": "an assignment try to think how will you WR rotate an array by D places and once"
+    },
+    {
+      "start": 1613.84,
+      "duration": 5.24,
+      "text": "you have written the code you can put that into the comment section also"
+    },
+    {
+      "start": 1616.919,
+      "duration": 6.041,
+      "text": "remember in an interview do not jump to the optimal solution directly go from"
+    },
+    {
+      "start": 1621.039,
+      "duration": 6.041,
+      "text": "brute to Optimal that will show your thought process and that does leave a"
+    },
+    {
+      "start": 1625.0,
+      "duration": 6.76,
+      "text": "very very good impact in the interview head about you okay uh let's now move on"
+    },
+    {
+      "start": 1629.799,
+      "duration": 7.521,
+      "text": "to the next problem which is moving zeros to the end so what is the problem"
+    },
+    {
+      "start": 1634.36,
+      "duration": 6.96,
+      "text": "State move all zeros to the end of the array so you will be given an array"
+    },
+    {
+      "start": 1639.64,
+      "duration": 7.399,
+      "text": "which will be consisting of some integers and it will also be consisting"
+    },
+    {
+      "start": 1644.0,
+      "duration": 7.159,
+      "text": "of some zeros now your task is to move all the zeros to the end of the array so"
+    },
+    {
+      "start": 1649.399,
+      "duration": 5.361,
+      "text": "first there will be one then there will be two then there will be three then"
+    },
+    {
+      "start": 1653.12,
+      "duration": 5.52,
+      "text": "there will be two then there will be four then there'll be five then there"
+    },
+    {
+      "start": 1656.799,
+      "duration": 10.76,
+      "text": "will be one so basically what you do is you take 1 2 3 2 4 5 1 so I took all the"
+    },
+    {
+      "start": 1664.799,
+      "duration": 7.36,
+      "text": "nonzero numbers and I put them into the front of the array once I've done that"
+    },
+    {
+      "start": 1670.08,
+      "duration": 6.079,
+      "text": "what are the remaining elements they are zeros and there are three zeros so you"
+    },
+    {
+      "start": 1674.0,
+      "duration": 6.48,
+      "text": "take all the three zeros and you put it to the end of the array right so once"
+    },
+    {
+      "start": 1678.48,
+      "duration": 6.0,
+      "text": "you've done this the modified array will look something like this and this is"
+    },
+    {
+      "start": 1682.12,
+      "duration": 6.0,
+      "text": "what the problem is asking you to do question is asked to you in an interview"
+    },
+    {
+      "start": 1686.84,
+      "duration": 4.559,
+      "text": "you should definitely start with the brute for solution and then maybe come"
+    },
+    {
+      "start": 1689.88,
+      "duration": 5.919,
+      "text": "up with a better solution if there is one and then go to the optimal one so"
+    },
+    {
+      "start": 1693.88,
+      "duration": 6.44,
+      "text": "what is the Brute Force solution if you look at the problem it states all the"
+    },
+    {
+      "start": 1697.799,
+      "duration": 8.161,
+      "text": "non-zero numbers at the front like all the nonzero numbers at the front so my"
+    },
+    {
+      "start": 1703.84,
+      "duration": 6.4,
+      "text": "mind kind of says that okay let's pick up all the non-zero numbers and store it"
+    },
+    {
+      "start": 1708.24,
+      "duration": 5.24,
+      "text": "somewhere so what I'll do is I'll start iterating in the array so I'll start"
+    },
+    {
+      "start": 1711.919,
+      "duration": 5.961,
+      "text": "from the first index and I'll say it's a non zero let's pick it up then I'll go"
+    },
+    {
+      "start": 1715.76,
+      "duration": 7.48,
+      "text": "to the next it's zero then I'll go to the next it's a non zero then I go to"
+    },
+    {
+      "start": 1720.24,
+      "duration": 9.64,
+      "text": "the next it's a non zero it's a non zero it's a zero it's a zero it's a non zero"
+    },
+    {
+      "start": 1727.12,
+      "duration": 8.12,
+      "text": "it's a non zero it's a non zero and the iteration is over once the iteration is"
+    },
+    {
+      "start": 1732.679,
+      "duration": 7.36,
+      "text": "over I can say that I have all the nonzero numbers and again you can store"
+    },
+    {
+      "start": 1737.399,
+      "duration": 8.28,
+      "text": "them in a list in an array wherever you wish to so I have all the nonzero"
+    },
+    {
+      "start": 1742.72,
+      "duration": 8.679,
+      "text": "numbers stored with me once I've done this what is my next job I know one"
+    },
+    {
+      "start": 1749.2,
+      "duration": 7.52,
+      "text": "thing for sure I have all the non-zero numbers that will go at the front so"
+    },
+    {
+      "start": 1753.76,
+      "duration": 8.56,
+      "text": "let's do it let's take let's assume this is the temporary array let's take"
+    },
+    {
+      "start": 1759.64,
+      "duration": 7.399,
+      "text": "everything let's first take one and put it here let's then take two put it here"
+    },
+    {
+      "start": 1764.88,
+      "duration": 6.08,
+      "text": "let's then take three put it here let's then take two put it here here let's"
+    },
+    {
+      "start": 1768.76,
+      "duration": 6.919,
+      "text": "then take four put it here then take five put it here then take one put it"
+    },
+    {
+      "start": 1773.399,
+      "duration": 9.561,
+      "text": "here so I have taken everything from the temporary array and put them into the"
+    },
+    {
+      "start": 1779.399,
+      "duration": 8.64,
+      "text": "front of the array once I have done that I know all the nonzero numbers are at"
+    },
+    {
+      "start": 1785.76,
+      "duration": 6.759,
+      "text": "the front if I've done that what is the next job all the remaining positions"
+    },
+    {
+      "start": 1790.44,
+      "duration": 8.719,
+      "text": "will definitely be zeros so I'll just assign them zeros done and this is how"
+    },
+    {
+      "start": 1796.44,
+      "duration": 8.239,
+      "text": "my Brute Force approach will look like first iterate store all the nonzero"
+    },
+    {
+      "start": 1802.24,
+      "duration": 7.24,
+      "text": "numbers then put all the nonzero numbers to the front and then fill the remaining"
+    },
+    {
+      "start": 1807.08,
+      "duration": 7.92,
+      "text": "places with zero so if I have to code this what I'll do is I'll probably"
+    },
+    {
+      "start": 1811.24,
+      "duration": 9.279,
+      "text": "Define a temporary which is an empty list and then I'll start iterating from"
+    },
+    {
+      "start": 1817.399,
+      "duration": 7.601,
+      "text": "the zeroth index until the nth index and I will say Hey listen if you are a non"
+    },
+    {
+      "start": 1822.76,
+      "duration": 6.44,
+      "text": "zero number which means not equal to zero then can you go and get added to"
+    },
+    {
+      "start": 1827.279,
+      "duration": 7.64,
+      "text": "the temporary and you'll add it to the temporary simple this will create your"
+    },
+    {
+      "start": 1833.0,
+      "duration": 6.039,
+      "text": "temporary array with all the non-zero numbers so I can say the step one The"
+    },
+    {
+      "start": 1836.88,
+      "duration": 7.44,
+      "text": "Brute Force approach is done what is the step two step two is very simple pick up"
+    },
+    {
+      "start": 1842.159,
+      "duration": 6.321,
+      "text": "everything from the temporary and put it into the front of the array so you will"
+    },
+    {
+      "start": 1846.08,
+      "duration": 6.479,
+      "text": "just move in the temporary array so I equal to Z and then you can go to"
+    },
+    {
+      "start": 1849.919,
+      "duration": 7.521,
+      "text": "Temporary do size because that will tell you how many nonzero numbers are there"
+    },
+    {
+      "start": 1854.72,
+      "duration": 8.76,
+      "text": "and then you can move and you can say array of I let's put it into the front"
+    },
+    {
+      "start": 1860.159,
+      "duration": 7.52,
+      "text": "array of I equal to Temporary of I so this is step two once you have done the"
+    },
+    {
+      "start": 1865.48,
+      "duration": 8.159,
+      "text": "step two all the non zero numbers will go to the front now the step three is"
+    },
+    {
+      "start": 1870.2,
+      "duration": 10.68,
+      "text": "filling up of zeros at the back so I know if temporary dot size like is the"
+    },
+    {
+      "start": 1876.6,
+      "duration": 4.28,
+      "text": "number of nonzero"
+    },
+    {
+      "start": 1881.12,
+      "duration": 11.439,
+      "text": "numbers like over here it is like 1 2 3 4 5 6 7 so it took"
+    },
+    {
+      "start": 1888.6,
+      "duration": 8.959,
+      "text": "the first seven places so the last index it took was the sixth index so you'll"
+    },
+    {
+      "start": 1895.2,
+      "duration": 6.8,
+      "text": "start filling from the seventh index go to the eth and go to the last which is"
+    },
+    {
+      "start": 1899.76,
+      "duration": 8.519,
+      "text": "the n minus one index so you start filling from the seventh index which is"
+    },
+    {
+      "start": 1904.399,
+      "duration": 9.201,
+      "text": "nothing but number of nonzero elements so you'll just start from the"
+    },
+    {
+      "start": 1911.0,
+      "duration": 6.919,
+      "text": "non-zero elements like whatever it is the number of non-zero elements and"
+    },
+    {
+      "start": 1915.24,
+      "duration": 7.36,
+      "text": "you'll go till the last and you will see in all of these places I'll just fill up"
+    },
+    {
+      "start": 1920.48,
+      "duration": 6.559,
+      "text": "zero and this is how my brute force will look like and if I have to analyze the"
+    },
+    {
+      "start": 1924.24,
+      "duration": 8.039,
+      "text": "time complexity can I say this is taking a big of n because I'm running an entire"
+    },
+    {
+      "start": 1929.36,
+      "duration": 7.76,
+      "text": "Loop can I say this will be taking imagine there is"
+    },
+    {
+      "start": 1934.159,
+      "duration": 7.561,
+      "text": "X imagine there are X nonzero numbers so this will take X and this will be the"
+    },
+    {
+      "start": 1940.0,
+      "duration": 6.32,
+      "text": "remaining portions so the remaining portions will be n minus X because if x"
+    },
+    {
+      "start": 1944.48,
+      "duration": 8.039,
+      "text": "is the number of nonzero the remaining will be n minus X so can I say the total"
+    },
+    {
+      "start": 1948.639,
+      "duration": 10.481,
+      "text": "time complexity to be B go of n plus b go of X plus b go of n minus X so - X"
+    },
+    {
+      "start": 1956.639,
+      "duration": 7.28,
+      "text": "Plus X will cancel and that will be B of 2 N will be the time complexity of this"
+    },
+    {
+      "start": 1961.679,
+      "duration": 7.24,
+      "text": "particular one and can I say the extra space again very important the extra"
+    },
+    {
+      "start": 1966.159,
+      "duration": 9.801,
+      "text": "space that I'm using will be weo of X where X is the number of nonzero numbers"
+    },
+    {
+      "start": 1972.84,
+      "duration": 8.28,
+      "text": "and that at Max can be we go off and imagine the entire array to not have a"
+    },
+    {
+      "start": 1978.399,
+      "duration": 7.441,
+      "text": "single zero then you'll end up transferring the entire array into the"
+    },
+    {
+      "start": 1983.72,
+      "duration": 7.0,
+      "text": "temporary array so thereby the this is the worst case there this is the worst"
+    },
+    {
+      "start": 1988.159,
+      "duration": 7.24,
+      "text": "case where there is no zero in an array then you will transfer the entire array"
+    },
+    {
+      "start": 1993.399,
+      "duration": 8.52,
+      "text": "into the temporary so that in that case you'll be using V go of n space so this"
+    },
+    {
+      "start": 1999.32,
+      "duration": 6.76,
+      "text": "will be the time complexity and space complexity for The Brute Force solution"
+    },
+    {
+      "start": 2004.72,
+      "duration": 5.0,
+      "text": "so in case you want to Cote The Brute Force solution and submit it the problem"
+    },
+    {
+      "start": 2007.919,
+      "duration": 5.0,
+      "text": "link will be in the description there is a reason why I'm writing the pseudo code"
+    },
+    {
+      "start": 2011.32,
+      "duration": 5.479,
+      "text": "so that you can code it in any of the languages but still if you want the Java"
+    },
+    {
+      "start": 2014.84,
+      "duration": 5.4,
+      "text": "and the python codes the link will be in the description you can go to the notes"
+    },
+    {
+      "start": 2018.519,
+      "duration": 5.241,
+      "text": "and you can check them out so the Brute Force solution is done now it's time to"
+    },
+    {
+      "start": 2022.08,
+      "duration": 5.68,
+      "text": "move to the better solution but there is no better solution so we'll be moving to"
+    },
+    {
+      "start": 2025.639,
+      "duration": 5.88,
+      "text": "the optimal solution now this is what you have to tell to the interviewer what"
+    },
+    {
+      "start": 2029.84,
+      "duration": 6.04,
+      "text": "will be an optimal solution let's analyze the thought process till now"
+    },
+    {
+      "start": 2033.519,
+      "duration": 6.601,
+      "text": "what we did was very basic we just picked up the elements and put them into"
+    },
+    {
+      "start": 2037.36,
+      "duration": 8.52,
+      "text": "the front but now we'll try to do it on like while iterating how can we do that"
+    },
+    {
+      "start": 2043.24,
+      "duration": 6.0,
+      "text": "if somehow I can take this two and put it"
+    },
+    {
+      "start": 2046.96,
+      "duration": 6.28,
+      "text": "here and somehow I can take this three and put it here somehow I can take this"
+    },
+    {
+      "start": 2051.24,
+      "duration": 6.32,
+      "text": "two and put it here and maybe somehow I can take this four and can of put it"
+    },
+    {
+      "start": 2055.119,
+      "duration": 7.601,
+      "text": "here my job should be done so we'll be trying to move the elements we will be"
+    },
+    {
+      "start": 2060.2,
+      "duration": 7.56,
+      "text": "trying to move the elements and in order to do that we are already iterating in"
+    },
+    {
+      "start": 2065.04,
+      "duration": 7.559,
+      "text": "the are remember this we are already treating in the array so what we will do"
+    },
+    {
+      "start": 2070.079,
+      "duration": 7.921,
+      "text": "is we'll try to use a two-pointer approach to move it something similar to"
+    },
+    {
+      "start": 2076.159,
+      "duration": 6.68,
+      "text": "what we did uh in this particular problem where we did remove the"
+    },
+    {
+      "start": 2080.32,
+      "duration": 7.24,
+      "text": "duplicates from the sorted array something similar now what I will say is"
+    },
+    {
+      "start": 2085.24,
+      "duration": 9.52,
+      "text": "okay Hey where's the first zero and I'll say here is my first zero and this will"
+    },
+    {
+      "start": 2090.359,
+      "duration": 11.161,
+      "text": "be pointed by J which is the right next index after zero which is this I'll"
+    },
+    {
+      "start": 2098.079,
+      "duration": 9.241,
+      "text": "point it over here now what I say is Hey listen I start from here and I check are"
+    },
+    {
+      "start": 2104.88,
+      "duration": 8.0,
+      "text": "you a nonzero number he says yes I am a non- zero number okay we have a zero"
+    },
+    {
+      "start": 2109.88,
+      "duration": 7.92,
+      "text": "here let's let's swap it so I'll do a swap so the two will go here and the"
+    },
+    {
+      "start": 2116.04,
+      "duration": 8.039,
+      "text": "zero will come here the moment you have done a swap you will say okay done now I"
+    },
+    {
+      "start": 2121.0,
+      "duration": 8.56,
+      "text": "will move to here and I'll also move the G to here so once I've moved I'll just"
+    },
+    {
+      "start": 2127.2,
+      "duration": 8.8,
+      "text": "quickly erase this so that it's clearly like it's clean done this next I'll say"
+    },
+    {
+      "start": 2133.96,
+      "duration": 7.159,
+      "text": "hey are you a non zero number he says yes I'm a non zero number I'll say Okay"
+    },
+    {
+      "start": 2138.04,
+      "duration": 7.4,
+      "text": "swap to the zero so I'll go across and again swap so three goes here zero comes"
+    },
+    {
+      "start": 2143.599,
+      "duration": 7.321,
+      "text": "here and the moment you do that I will move ahead and J will move to the next"
+    },
+    {
+      "start": 2149.079,
+      "duration": 7.681,
+      "text": "place and if you've done this let's remove this so that it's again clean"
+    },
+    {
+      "start": 2153.68,
+      "duration": 9.04,
+      "text": "next are you a nonzero number he says yes I'm a nonzero number number I'm like"
+    },
+    {
+      "start": 2158.96,
+      "duration": 10.359,
+      "text": "okay so so two goes here Zer goes here perfect and now I'll move I here and"
+    },
+    {
+      "start": 2165.4,
+      "duration": 12.8,
+      "text": "I'll move j here so J will be always at a zero J will be always at a zero and I"
+    },
+    {
+      "start": 2172.96,
+      "duration": 10.72,
+      "text": "will be simply iterating okay next I ask is this a nonzero number he says no so"
+    },
+    {
+      "start": 2180.52,
+      "duration": 9.48,
+      "text": "no swapping I moves is this a nonzero number no no slapping I moves is this a"
+    },
+    {
+      "start": 2186.76,
+      "duration": 7.28,
+      "text": "non-zero number he says yes I am a nonzero number so I'm saying you're a"
+    },
+    {
+      "start": 2191.88,
+      "duration": 7.68,
+      "text": "nonzero number okay you need to go to the zero g so he says okay I'll go so"
+    },
+    {
+      "start": 2197.079,
+      "duration": 8.04,
+      "text": "I'll go to here which is four and this will be zero perfect and the J will be"
+    },
+    {
+      "start": 2202.56,
+      "duration": 9.16,
+      "text": "moving here and the I will be moving here once I've done this I'll just clean"
+    },
+    {
+      "start": 2208.68,
+      "duration": 6.88,
+      "text": "this next five are you a non zero number he says"
+    },
+    {
+      "start": 2213.079,
+      "duration": 8.681,
+      "text": "yes and zero comes in here and then I move I here and then I move J here next"
+    },
+    {
+      "start": 2220.079,
+      "duration": 6.961,
+      "text": "one are you a non zero number he says yes so one comes here Zer goes here and"
+    },
+    {
+      "start": 2224.8,
+      "duration": 6.96,
+      "text": "I crosses the boundary the moment I crosses the boundary you stop and do you"
+    },
+    {
+      "start": 2228.88,
+      "duration": 7.959,
+      "text": "notice something all of these positive like all of these nonzero elements are"
+    },
+    {
+      "start": 2233.88,
+      "duration": 9.64,
+      "text": "in the front and all the Zer went to the last very simple and it's done and what"
+    },
+    {
+      "start": 2240.88,
+      "duration": 7.08,
+      "text": "we did was a single iteration if you carefully observe what it did was we"
+    },
+    {
+      "start": 2245.599,
+      "duration": 6.401,
+      "text": "started the iteration like we first figured out the zero and then we started"
+    },
+    {
+      "start": 2250.24,
+      "duration": 5.839,
+      "text": "the iteration and we went till the end so it's like a one iteration we did"
+    },
+    {
+      "start": 2254.48,
+      "duration": 6.4,
+      "text": "which is much better than what we were doing previously right see in the"
+    },
+    {
+      "start": 2258.24,
+      "duration": 7.599,
+      "text": "optimal solution what is my step one if I have to ask you what is my step one"
+    },
+    {
+      "start": 2263.4,
+      "duration": 7.0,
+      "text": "it's finding the first zero element so what you can do is you can probably say"
+    },
+    {
+      "start": 2267.88,
+      "duration": 9.199,
+      "text": "J is initially minus one okay and then you can start from zero and you can go"
+    },
+    {
+      "start": 2272.4,
+      "duration": 11.16,
+      "text": "on till I ++ and you say hey array of I are you zero if you're zero okay fine J"
+    },
+    {
+      "start": 2281.56,
+      "duration": 10.519,
+      "text": "store this index because this is zero and just go out no need to go ahead go"
+    },
+    {
+      "start": 2285.64,
+      "duration": 11.36,
+      "text": "out and this will make sure J is stored as the first like wherever the first"
+    },
+    {
+      "start": 2294.119,
+      "duration": 6.2,
+      "text": "zero is if J is still minus one it means there is nothing and you can just stop"
+    },
+    {
+      "start": 2298.56,
+      "duration": 5.92,
+      "text": "you can just stop if J is still minus one there is no zero and all are non"
+    },
+    {
+      "start": 2302.72,
+      "duration": 6.0,
+      "text": "zero elements so you can stop the moment you have G what's the next step we did"
+    },
+    {
+      "start": 2306.8,
+      "duration": 7.2,
+      "text": "we took a i right at the next of J and this is where"
+    },
+    {
+      "start": 2311.319,
+      "duration": 8.481,
+      "text": "we start out so I said okay I'll start from J + 1 and I'll go until here and"
+    },
+    {
+      "start": 2316.88,
+      "duration": 9.64,
+      "text": "what did we do we said hey are you a non Zer are you a non zero he said yes I am"
+    },
+    {
+      "start": 2322.48,
+      "duration": 10.68,
+      "text": "so I'll check hey if array of I are you a nonzero number if you are a nonzero"
+    },
+    {
+      "start": 2329.079,
+      "duration": 10.721,
+      "text": "number can you please swap yourself with array of I and array of J and if you"
+    },
+    {
+      "start": 2337.2,
+      "duration": 7.2,
+      "text": "have swapped if you have swapped can you just move your j++ pointer because I"
+    },
+    {
+      "start": 2342.48,
+      "duration": 6.96,
+      "text": "will always be moving no matter what you do but the moment you get a non zero"
+    },
+    {
+      "start": 2346.44,
+      "duration": 9.0,
+      "text": "number you just swap it and then you move j as well but whenever I was here"
+    },
+    {
+      "start": 2353.72,
+      "duration": 7.359,
+      "text": "and it was a zero you did not do anything it say the I always moved I"
+    },
+    {
+      "start": 2358.359,
+      "duration": 9.161,
+      "text": "always moved because J will still stay where it is so J swaps and then moves"
+    },
+    {
+      "start": 2364.52,
+      "duration": 7.72,
+      "text": "ahead quite simple step two so the step is also done so if I have to figure out"
+    },
+    {
+      "start": 2369.839,
+      "duration": 8.041,
+      "text": "the time complexity can I do it now I think I can first we moved till here"
+    },
+    {
+      "start": 2376.28,
+      "duration": 8.12,
+      "text": "assuming this to be X assuming this to be X length where the"
+    },
+    {
+      "start": 2381.16,
+      "duration": 9.52,
+      "text": "first zero was found so the step one takes you beo of X because you're doing"
+    },
+    {
+      "start": 2386.76,
+      "duration": 8.599,
+      "text": "a break where X is the first index where the zero was form then you move from"
+    },
+    {
+      "start": 2393.48,
+      "duration": 7.72,
+      "text": "here to here which is the remaining n minus x n- x l so this is like the"
+    },
+    {
+      "start": 2398.64,
+      "duration": 7.56,
+      "text": "remaining nus X where you moved so the overall complexity is this plus this"
+    },
+    {
+      "start": 2403.76,
+      "duration": 8.76,
+      "text": "where X and X goes off so the time complexity overall is V go of one sorry"
+    },
+    {
+      "start": 2409.16,
+      "duration": 7.12,
+      "text": "V go of n are we using any extra space no we using the given array yeah we we"
+    },
+    {
+      "start": 2414.88,
+      "duration": 4.76,
+      "text": "have to tell that to the interview that Hey listen I'm modifying the array"
+    },
+    {
+      "start": 2417.56,
+      "duration": 6.2,
+      "text": "because that's required but we're not using anything extra we're not using"
+    },
+    {
+      "start": 2421.2,
+      "duration": 6.96,
+      "text": "anything out of the box so this will be the time complexity and space complexity"
+    },
+    {
+      "start": 2426.359,
+      "duration": 4.681,
+      "text": "of the most optimal approach that you have to tell to the interviewer so if"
+    },
+    {
+      "start": 2429.599,
+      "duration": 3.961,
+      "text": "you want to submit the optimal solution the problem link will be in the"
+    },
+    {
+      "start": 2432.319,
+      "duration": 5.28,
+      "text": "description what I've done is I've converted the same pseudo code into a"
+    },
+    {
+      "start": 2435.68,
+      "duration": 5.24,
+      "text": "C++ code just in case you want the Java and python codes the link will be in the"
+    },
+    {
+      "start": 2439.48,
+      "duration": 5.48,
+      "text": "description for notes you can go over there and check it out and you can try"
+    },
+    {
+      "start": 2442.64,
+      "duration": 5.88,
+      "text": "submitting it as well I'm focusing on the pseudo code so that you can write it"
+    },
+    {
+      "start": 2446.8,
+      "duration": 6.24,
+      "text": "in any programming language remember this so coming back to the sheet I can"
+    },
+    {
+      "start": 2450.56,
+      "duration": 6.36,
+      "text": "say that this problem is done the next problem that we will be solving is"
+    },
+    {
+      "start": 2454.68,
+      "duration": 7.6,
+      "text": "linear search linear search is one of the e easier problems while it comes to"
+    },
+    {
+      "start": 2459.24,
+      "duration": 6.68,
+      "text": "arrays it just involves iteration if you understand iteration in an array you"
+    },
+    {
+      "start": 2464.079,
+      "duration": 6.321,
+      "text": "should be able to solve linear search now what does linear search say it says"
+    },
+    {
+      "start": 2467.96,
+      "duration": 8.32,
+      "text": "that you'll be given an array array of numbers and you will also be given a"
+    },
+    {
+      "start": 2473.4,
+      "duration": 7.199,
+      "text": "separate number now to tell me which is the first occurrence very important"
+    },
+    {
+      "start": 2478.319,
+      "duration": 8.201,
+      "text": "which is the first occurrence of this number in an array so if I have to check"
+    },
+    {
+      "start": 2484.079,
+      "duration": 6.121,
+      "text": "this is where the number occurs what is the zero based indexing again very"
+    },
+    {
+      "start": 2488.24,
+      "duration": 6.96,
+      "text": "important what is the zerob based indexing so the zero based indexing is"
+    },
+    {
+      "start": 2492.8,
+      "duration": 7.36,
+      "text": "three so you have to return three yes you have to return three which means it"
+    },
+    {
+      "start": 2497.72,
+      "duration": 6.96,
+      "text": "like the number does exist in the third index if I give you something like 10"
+    },
+    {
+      "start": 2502.64,
+      "duration": 5.719,
+      "text": "what if the number is 10 if I scroll through the entire array like if I look"
+    },
+    {
+      "start": 2506.72,
+      "duration": 9.24,
+      "text": "at the entire array the number 10 doesn't exist that's when you return"
+    },
+    {
+      "start": 2512.56,
+      "duration": 8.039,
+      "text": "minus1 simple right very simple how will you solve this yes"
+    },
+    {
+      "start": 2517.8,
+      "duration": 6.559,
+      "text": "quick iteration on the array and check that's like I'll just go across the"
+    },
+    {
+      "start": 2522.64,
+      "duration": 8.24,
+      "text": "array you know how to wrer in the array now you just go across and you say Hey"
+    },
+    {
+      "start": 2527.16,
+      "duration": 9.959,
+      "text": "listen if at any moment array of I is equal to equal to the number I will try"
+    },
+    {
+      "start": 2534.319,
+      "duration": 8.081,
+      "text": "returning the I index because that's where the first occurrence is if they"
+    },
+    {
+      "start": 2539.76,
+      "duration": 7.68,
+      "text": "want last occurrence you start wring from the last if they want all occurence"
+    },
+    {
+      "start": 2544.92,
+      "duration": 6.919,
+      "text": "then you can always store this I in some temporary array or some list and at the"
+    },
+    {
+      "start": 2550.4,
+      "duration": 5.959,
+      "text": "end of the day you can say return minus one which means I did not find it if"
+    },
+    {
+      "start": 2554.079,
+      "duration": 7.0,
+      "text": "there is a complete iteration done and the return statement was never ever"
+    },
+    {
+      "start": 2558.72,
+      "duration": 6.76,
+      "text": "executed then you will go across and return minus one now going to the"
+    },
+    {
+      "start": 2563.72,
+      "duration": 5.28,
+      "text": "compiler again the problem link will be in the description in case you want to"
+    },
+    {
+      "start": 2567.079,
+      "duration": 5.76,
+      "text": "try it out and this is how the code will look like and again the Java and the"
+    },
+    {
+      "start": 2570.88,
+      "duration": 4.92,
+      "text": "python code will be given in the notes so you can check them out as well so"
+    },
+    {
+      "start": 2574.28,
+      "duration": 6.559,
+      "text": "with this the most easiest problem in the AR playlist is done as well and now"
+    },
+    {
+      "start": 2578.68,
+      "duration": 6.8,
+      "text": "let's go to the next problem which is finding the union and the intersection"
+    },
+    {
+      "start": 2582.92,
+      "duration": 7.36,
+      "text": "of two given sorted arrays so what is the problem statement Union of two"
+    },
+    {
+      "start": 2588.119,
+      "duration": 7.161,
+      "text": "sorted again very very important word because this will be helping us to"
+    },
+    {
+      "start": 2592.52,
+      "duration": 8.16,
+      "text": "determine the most optimal solution so Union of two sorted arrays so this is"
+    },
+    {
+      "start": 2598.52,
+      "duration": 6.559,
+      "text": "array one which is sorted in itself might have duplicates array two sorted"
+    },
+    {
+      "start": 2602.96,
+      "duration": 6.2,
+      "text": "in itself again might have duplicates so what you have to do is you have to give"
+    },
+    {
+      "start": 2606.68,
+      "duration": 6.72,
+      "text": "me an Union array what is the meaning of union so what do you mean by Union it's"
+    },
+    {
+      "start": 2611.559,
+      "duration": 6.56,
+      "text": "basically you're given two guys and you just add them up but you do not repeat"
+    },
+    {
+      "start": 2615.8,
+      "duration": 7.64,
+      "text": "anyone you do not repeat anyone it's like if you have one okay one goes you"
+    },
+    {
+      "start": 2620.8,
+      "duration": 6.84,
+      "text": "have two two goes you have three three goes you have four four goes you have"
+    },
+    {
+      "start": 2625.72,
+      "duration": 6.48,
+      "text": "five five goes then you start from here you have two but wait two is already"
+    },
+    {
+      "start": 2630.2,
+      "duration": 5.0,
+      "text": "here doesn't goes three is already here doesn't goes four is already here"
+    },
+    {
+      "start": 2634.0,
+      "duration": 5.599,
+      "text": "doesn't goes four is already here doesn't goes five is already here"
+    },
+    {
+      "start": 2636.8,
+      "duration": 9.88,
+      "text": "doesn't not goes so this is how you can easily do an Union so the union of the"
+    },
+    {
+      "start": 2643.119,
+      "duration": 8.401,
+      "text": "both arrays will be 1 2 3 4 5 imagine I just go ahead and say Hey listen I also"
+    },
+    {
+      "start": 2649.44,
+      "duration": 8.679,
+      "text": "have a six in that case the union will be 1 2 3 4 five and six quite simple"
+    },
+    {
+      "start": 2655.92,
+      "duration": 5.679,
+      "text": "because six is over here it's not here but it's okay you have to add both of"
+    },
+    {
+      "start": 2660.119,
+      "duration": 7.161,
+      "text": "them you have to add both of them and make sure there is no duplicates so this"
+    },
+    {
+      "start": 2663.76,
+      "duration": 8.28,
+      "text": "will be the answer for Union of two sort AR and this is what you have to return"
+    },
+    {
+      "start": 2669.76,
+      "duration": 5.0,
+      "text": "so so this problem comes up in an interview the first solution that you'll"
+    },
+    {
+      "start": 2673.599,
+      "duration": 5.76,
+      "text": "be telling the interviewers should be the Brute Force approach what will be"
+    },
+    {
+      "start": 2677.079,
+      "duration": 7.881,
+      "text": "the Brute Force approach what are we doing we're combining both of them but"
+    },
+    {
+      "start": 2681.2,
+      "duration": 8.2,
+      "text": "we making sure the unique elements are just there in the union array so"
+    },
+    {
+      "start": 2686.88,
+      "duration": 8.28,
+      "text": "whenever we hear something like unique something like a map or like a set comes"
+    },
+    {
+      "start": 2692.359,
+      "duration": 7.521,
+      "text": "to our head because if we just keep on throwing everyone to the set at the end"
+    },
+    {
+      "start": 2697.4,
+      "duration": 6.36,
+      "text": "of the day the set will only contain unique elements in a sorted order in a"
+    },
+    {
+      "start": 2702.079,
+      "duration": 8.201,
+      "text": "sorted order very important because you have to return the Union in sorted order"
+    },
+    {
+      "start": 2706.16,
+      "duration": 8.439,
+      "text": "as well so can I say let's take a set data structure I like why not let's take"
+    },
+    {
+      "start": 2712.64,
+      "duration": 7.199,
+      "text": "a set data structure so assume this is my set data structure which is as of now"
+    },
+    {
+      "start": 2717.44,
+      "duration": 10.08,
+      "text": "empty I'll start iterating in the first array one put that into the set one"
+    },
+    {
+      "start": 2723.04,
+      "duration": 10.72,
+      "text": "again no two goes into the set three goes into the set"
+    },
+    {
+      "start": 2730.24,
+      "duration": 9.359,
+      "text": "four goes into the set five goes into the set perfect I it in the second array"
+    },
+    {
+      "start": 2736.96,
+      "duration": 7.32,
+      "text": "two already in the set if you try to put it into the set the set will say I"
+    },
+    {
+      "start": 2741.04,
+      "duration": 7.079,
+      "text": "already have it three already in the set set will say I already have it four"
+    },
+    {
+      "start": 2746.68,
+      "duration": 6.6,
+      "text": "already in the set four already in the set five already in the set six not in"
+    },
+    {
+      "start": 2750.079,
+      "duration": 8.441,
+      "text": "the set so after iterating in both the Ares the set data structure will have 1"
+    },
+    {
+      "start": 2755.64,
+      "duration": 7.84,
+      "text": "2 3 4 5 6 and now what you can do is you can probably take a union array and in"
+    },
+    {
+      "start": 2761.44,
+      "duration": 6.48,
+      "text": "that array the size of that array will be nothing but the size of the set which"
+    },
+    {
+      "start": 2765.92,
+      "duration": 6.84,
+      "text": "is six and you can just pick up one element pick up one pick up two and put"
+    },
+    {
+      "start": 2770.96,
+      "duration": 7.2,
+      "text": "them into the array and put them into the array that's what it will be that's"
+    },
+    {
+      "start": 2776.079,
+      "duration": 6.441,
+      "text": "how it will look like once you have done this this Union array will be the union"
+    },
+    {
+      "start": 2780.72,
+      "duration": 6.56,
+      "text": "array of two sorted arrays and this will also be in sorted order why because"
+    },
+    {
+      "start": 2784.96,
+      "duration": 7.84,
+      "text": "you're using something like set if you're using something like like if"
+    },
+    {
+      "start": 2788.8,
+      "duration": 9.319,
+      "text": "you're using C++ do not use unordered set because if you use unordered set the"
+    },
+    {
+      "start": 2795.64,
+      "duration": 7.56,
+      "text": "ordering will get distorted and if the ordering gets distorted you will not be"
+    },
+    {
+      "start": 2800.64,
+      "duration": 6.8,
+      "text": "able to maintain the sorted order got it that's why you have to use something"
+    },
+    {
+      "start": 2804.48,
+      "duration": 6.16,
+      "text": "like a set data structure got it so if I have to write the Brute Force approach"
+    },
+    {
+      "start": 2808.8,
+      "duration": 6.44,
+      "text": "it's going to be very simple we we kind of Define the set data structure and"
+    },
+    {
+      "start": 2812.64,
+      "duration": 7.959,
+      "text": "then what we do is we go across the first array as you that to have a size"
+    },
+    {
+      "start": 2818.24,
+      "duration": 7.04,
+      "text": "N1 we can go across the first array and we can say set do"
+    },
+    {
+      "start": 2822.319,
+      "duration": 7.601,
+      "text": "insert and we can say array of I assuming the first array A1 of I and"
+    },
+    {
+      "start": 2827.64,
+      "duration": 7.32,
+      "text": "then we can go across the next one which is from 0 to N2 and we can say"
+    },
+    {
+      "start": 2833.079,
+      "duration": 7.881,
+      "text": "set do insert a2. I"
+    },
+    {
+      "start": 2838.599,
+      "duration": 6.201,
+      "text": "a2i so what this will do is this will put everything into the set once you've"
+    },
+    {
+      "start": 2842.8,
+      "duration": 7.92,
+      "text": "done this you can declare the union to be of set do size quite simp again and"
+    },
+    {
+      "start": 2848.119,
+      "duration": 7.321,
+      "text": "in this what you can do is just iterate again you can use an auto iterator you"
+    },
+    {
+      "start": 2853.04,
+      "duration": 5.96,
+      "text": "can iterate in the set once you iterating in the set you can say Hey"
+    },
+    {
+      "start": 2857.24,
+      "duration": 9.56,
+      "text": "listen maybe you can keep a pointer like I equal to Z and you can say Union"
+    },
+    {
+      "start": 2863.079,
+      "duration": 6.921,
+      "text": "i++ equal to it so first time goes to the zeroth index then to the second"
+    },
+    {
+      "start": 2868.359,
+      "duration": 7.681,
+      "text": "index if you're using something like a list or a vector you can simply write"
+    },
+    {
+      "start": 2872.559,
+      "duration": 7.8,
+      "text": "Union do add or push back in that case ID and this will add it directly you"
+    },
+    {
+      "start": 2878.2,
+      "duration": 7.119,
+      "text": "don't have to maintain an index so this is how the step two looks like now if I"
+    },
+    {
+      "start": 2883.72,
+      "duration": 5.76,
+      "text": "have to discuss the time complexity of this particular Brute Force approach"
+    },
+    {
+      "start": 2887.119,
+      "duration": 8.921,
+      "text": "what will it be can I say the stes be go of N1 log"
+    },
+    {
+      "start": 2891.28,
+      "duration": 12.559,
+      "text": "N1 not N1 log n where n is the size of the set so N1 log n and over here can I"
+    },
+    {
+      "start": 2901.2,
+      "duration": 8.159,
+      "text": "say that the complexity will be n to log n again n log n where n is the size of"
+    },
+    {
+      "start": 2907.119,
+      "duration": 7.44,
+      "text": "the set which will be varying at every step so you cannot precisely say that"
+    },
+    {
+      "start": 2912.28,
+      "duration": 8.44,
+      "text": "logarithmic of something you cannot precisely determine the complexity for a"
+    },
+    {
+      "start": 2916.88,
+      "duration": 10.52,
+      "text": "set correct and now for this it's a v go of N1 + N2 at the worst case imagine the"
+    },
+    {
+      "start": 2924.92,
+      "duration": 6.639,
+      "text": "array one contains all different elements than array two then it will be"
+    },
+    {
+      "start": 2929.64,
+      "duration": 5.88,
+      "text": "everything different and all different will go into the set and if all"
+    },
+    {
+      "start": 2933.16,
+      "duration": 7.88,
+      "text": "different go into the set it will be N1 over here N2 over here so the total"
+    },
+    {
+      "start": 2937.96,
+      "duration": 6.8,
+      "text": "elements in the set will be N1 + N2 if every element is unique if every element"
+    },
+    {
+      "start": 2942.92,
+      "duration": 7.879,
+      "text": "is unique so can I say the time complexity stands at for the first"
+    },
+    {
+      "start": 2947.24,
+      "duration": 10.119,
+      "text": "insertion n log n for the second N2 log n and then a beo of N1 plus N2 at the"
+    },
+    {
+      "start": 2954.64,
+      "duration": 7.0,
+      "text": "worst case and the space complexity is we're using an external set which might"
+    },
+    {
+      "start": 2959.88,
+      "duration": 6.64,
+      "text": "end up taking N1 plus n at the worst case if all of them are unique and then"
+    },
+    {
+      "start": 2964.28,
+      "duration": 6.72,
+      "text": "we using an Union array in order to return the answer again this this is not"
+    },
+    {
+      "start": 2969.16,
+      "duration": 5.959,
+      "text": "used to solve the problem this is used to return the answer please uh"
+    },
+    {
+      "start": 2973.92,
+      "duration": 6.159,
+      "text": "specifically mention that to the interview that this N1 plus N2 space is"
+    },
+    {
+      "start": 2978.119,
+      "duration": 5.921,
+      "text": "used to return the answer I'm not using in order to solve the problem I'm just"
+    },
+    {
+      "start": 2981.96,
+      "duration": 6.639,
+      "text": "using it in order to return the answer got it this will be the time complexity"
+    },
+    {
+      "start": 2987.079,
+      "duration": 4.641,
+      "text": "and space complexity of the Brute Force approach so if you want to submit the"
+    },
+    {
+      "start": 2990.2,
+      "duration": 6.08,
+      "text": "Brute Force solution again the problem link will be in the description make"
+    },
+    {
+      "start": 2993.52,
+      "duration": 6.599,
+      "text": "sure to add hash include b/ STD because in this function snippet it was not"
+    },
+    {
+      "start": 2998.119,
+      "duration": 5.921,
+      "text": "there and this is how the code will look like in case you want the Java and"
+    },
+    {
+      "start": 3001.68,
+      "duration": 5.56,
+      "text": "python code there will be links in the description for the notes you can go"
+    },
+    {
+      "start": 3005.24,
+      "duration": 7.079,
+      "text": "over there and check it out so we done with the Brute Force approach now I will"
+    },
+    {
+      "start": 3009.079,
+      "duration": 7.921,
+      "text": "be moving to the optimal approach and we will be taking advantage of the fact"
+    },
+    {
+      "start": 3014.799,
+      "duration": 6.161,
+      "text": "that both the arrays are sorted and we will be using something like a"
+    },
+    {
+      "start": 3018.24,
+      "duration": 8.0,
+      "text": "two-pointer approach it's a very easy approach so what I will do is I will"
+    },
+    {
+      "start": 3023.76,
+      "duration": 7.52,
+      "text": "keep an eye pointer over here I will keep J pointer over here so I'll just"
+    },
+    {
+      "start": 3028.359,
+      "duration": 7.521,
+      "text": "erase these couple of lines perfect so I'll keep an ey pointer on the first"
+    },
+    {
+      "start": 3034.119,
+      "duration": 6.281,
+      "text": "element of the first array and I'll keep a JP pointer on the first element of the"
+    },
+    {
+      "start": 3037.76,
+      "duration": 9.319,
+      "text": "second array and now I will declare a union list and initially remember the"
+    },
+    {
+      "start": 3044.16,
+      "duration": 8.28,
+      "text": "list will be empty it will have a size zero it doesn't have any elements"
+    },
+    {
+      "start": 3048.72,
+      "duration": 9.56,
+      "text": "initially and now I will be like okay I'm over here and I'm over here if you"
+    },
+    {
+      "start": 3055.119,
+      "duration": 6.521,
+      "text": "have to look at the union array the first element of the Union array will be"
+    },
+    {
+      "start": 3059.92,
+      "duration": 6.12,
+      "text": "the smallest one will be the smallest one so if I have to take the smallest"
+    },
+    {
+      "start": 3063.44,
+      "duration": 6.96,
+      "text": "one who among it is a smaller one obviously one so what I'll do is I'll"
+    },
+    {
+      "start": 3068.16,
+      "duration": 6.32,
+      "text": "take the one into the Union array and I'll move the I pointer to the next"
+    },
+    {
+      "start": 3072.4,
+      "duration": 6.84,
+      "text": "index I'll move the I point to the next index now if I have to again take"
+    },
+    {
+      "start": 3077.319,
+      "duration": 8.561,
+      "text": "something into the Union array I'll definitely take one because it's still"
+    },
+    {
+      "start": 3081.559,
+      "duration": 10.361,
+      "text": "smaller than two but I say wait the last element I took into the Union array was"
+    },
+    {
+      "start": 3087.72,
+      "duration": 9.68,
+      "text": "one and Union means no repetion just unique elements like fine the last one"
+    },
+    {
+      "start": 3095.119,
+      "duration": 6.96,
+      "text": "was one so I would not take it I'm like okay I have a two I have a two so the"
+    },
+    {
+      "start": 3099.52,
+      "duration": 6.799,
+      "text": "next element I have to take it'll be two so I can take two from either so I'll"
+    },
+    {
+      "start": 3103.72,
+      "duration": 8.639,
+      "text": "take just two from the first and this two was not equivalent to this so I took"
+    },
+    {
+      "start": 3108.48,
+      "duration": 7.839,
+      "text": "it and now I'll move the I I'll move the now if I have to again take between"
+    },
+    {
+      "start": 3114.359,
+      "duration": 7.801,
+      "text": "three and between two I'll actually take two because Union always takes smaller"
+    },
+    {
+      "start": 3119.96,
+      "duration": 6.839,
+      "text": "which is at the front but this two is already here so the last element is"
+    },
+    {
+      "start": 3124.359,
+      "duration": 7.401,
+      "text": "equalent so I'll not take it I'll not take it but I will move the pointer I"
+    },
+    {
+      "start": 3128.96,
+      "duration": 7.04,
+      "text": "will move the pointer because it won't be taken because it's already there so"
+    },
+    {
+      "start": 3133.359,
+      "duration": 6.801,
+      "text": "I'll just move the pointer correct next I'll compare three and three I can take"
+    },
+    {
+      "start": 3137.96,
+      "duration": 8.04,
+      "text": "any so I'll just take the three I'll move the pointer next four and three but"
+    },
+    {
+      "start": 3143.72,
+      "duration": 5.92,
+      "text": "wait this three is already here do not take it"
+    },
+    {
+      "start": 3147.079,
+      "duration": 8.161,
+      "text": "move the pointer four and four again take one and four and move the pointer"
+    },
+    {
+      "start": 3152.359,
+      "duration": 8.96,
+      "text": "this time five and four four is already there because the last one is there so"
+    },
+    {
+      "start": 3157.359,
+      "duration": 10.041,
+      "text": "move it four is already there so move it this time compare five and five same"
+    },
+    {
+      "start": 3165.359,
+      "duration": 9.48,
+      "text": "take any one of them and move the pointer next it's over please please"
+    },
+    {
+      "start": 3172.0,
+      "duration": 7.559,
+      "text": "Focus the iteration on one of the arrays is over the iteration"
+    },
+    {
+      "start": 3177.0,
+      "duration": 7.0,
+      "text": "on one of the arrays is over if the iteration on one of the arrays is over"
+    },
+    {
+      "start": 3181.48,
+      "duration": 9.28,
+      "text": "what you will do is you will just say okay five you're already there six"
+    },
+    {
+      "start": 3187.4,
+      "duration": 7.439,
+      "text": "you're not there go so if iteration on one of the arrays is over you will"
+    },
+    {
+      "start": 3193.2,
+      "duration": 5.76,
+      "text": "you'll not compare anymore but you will iterate in the remaining portion of the"
+    },
+    {
+      "start": 3197.079,
+      "duration": 5.441,
+      "text": "other array you will iterate in the remaining portion of the other array and"
+    },
+    {
+      "start": 3201.04,
+      "duration": 6.68,
+      "text": "you will check if it's equivalent to back or not and then you'll keep on"
+    },
+    {
+      "start": 3204.559,
+      "duration": 8.04,
+      "text": "inserting into the Union so once it's done you will have your union array"
+    },
+    {
+      "start": 3209.64,
+      "duration": 6.04,
+      "text": "ready and this will be your answer got it let's code the optimal solution again"
+    },
+    {
+      "start": 3214.48,
+      "duration": 5.8,
+      "text": "the problem link will be in the description so we given this uh function"
+    },
+    {
+      "start": 3218.2,
+      "duration": 7.119,
+      "text": "sorted array where we have to return a list and we given a couple of arrays"
+    },
+    {
+      "start": 3222.92,
+      "duration": 6.399,
+      "text": "right so at first I'll do one thing I'll just figure out the size of the first"
+    },
+    {
+      "start": 3227.24,
+      "duration": 5.119,
+      "text": "array which is something like this and I'll also figure out the size of the"
+    },
+    {
+      "start": 3230.64,
+      "duration": 4.919,
+      "text": "second aray which is something like this and now I know I'll have two pointers I"
+    },
+    {
+      "start": 3234.52,
+      "duration": 4.559,
+      "text": "which will be pointing to the first index of the first array and J which"
+    },
+    {
+      "start": 3237.48,
+      "duration": 7.4,
+      "text": "will be pointing and then we will also have a list which will be the answer"
+    },
+    {
+      "start": 3242.4,
+      "duration": 6.159,
+      "text": "okay which is Union array and then at the end of the day we will be returning"
+    },
+    {
+      "start": 3246.24,
+      "duration": 8.92,
+      "text": "this particular list this is something we do now let's say we are comparing"
+    },
+    {
+      "start": 3252.04,
+      "duration": 7.84,
+      "text": "both we'll be comparing till both pointers are pointing somewhere which"
+    },
+    {
+      "start": 3257.2,
+      "duration": 9.28,
+      "text": "means we'll be comparing it till either I is lesser than N1 in the first array"
+    },
+    {
+      "start": 3262.68,
+      "duration": 8.679,
+      "text": "and J is lesser than N2 which means both of them are still somewhere in both the"
+    },
+    {
+      "start": 3268.52,
+      "duration": 8.319,
+      "text": "arrays and we say Hey listen on the first array if that's smaller than the"
+    },
+    {
+      "start": 3274.119,
+      "duration": 7.48,
+      "text": "second AR both the pointers are pointing if the first element is smaller than the"
+    },
+    {
+      "start": 3279.64,
+      "duration": 6.08,
+      "text": "other element in the other then I say okay I'll take this I'll take this but"
+    },
+    {
+      "start": 3283.88,
+      "duration": 6.16,
+      "text": "before taking I need to have a comparison if you remember when we are"
+    },
+    {
+      "start": 3287.76,
+      "duration": 7.039,
+      "text": "taking this one the union ARR already had a one so you did not take it right"
+    },
+    {
+      "start": 3293.16,
+      "duration": 7.159,
+      "text": "so I'll be like I need to compare so I'll be like okay let's take Union array"
+    },
+    {
+      "start": 3297.2,
+      "duration": 7.68,
+      "text": "what's your last El it's like back is this not"
+    },
+    {
+      "start": 3301.799,
+      "duration": 10.921,
+      "text": "equivalent to the current array I if this is not okay cool let's take"
+    },
+    {
+      "start": 3308.2,
+      "duration": 8.96,
+      "text": "it like fine I'll take it no problem and irrespective of whether you take it or"
+    },
+    {
+      "start": 3314.96,
+      "duration": 6.159,
+      "text": "you do not take it you'll move because if you take it it's fine if you do not"
+    },
+    {
+      "start": 3319.28,
+      "duration": 5.72,
+      "text": "take it that means that element is equivalent to something which is inside"
+    },
+    {
+      "start": 3323.0,
+      "duration": 7.359,
+      "text": "Union array so you will not be considering that element anymore so move"
+    },
+    {
+      "start": 3327.119,
+      "duration": 8.0,
+      "text": "but but if you're doing a DOT back the union ARR has to have something what if"
+    },
+    {
+      "start": 3333.28,
+      "duration": 6.799,
+      "text": "what if I come to a case where this is for the first time and the union array"
+    },
+    {
+      "start": 3337.599,
+      "duration": 6.801,
+      "text": "is empty then you always take the one if the union array is empty because it's"
+    },
+    {
+      "start": 3341.359,
+      "duration": 11.601,
+      "text": "the first time if it's the first time which means Union array do"
+    },
+    {
+      "start": 3348.359,
+      "duration": 9.281,
+      "text": "size is equal to zero then you sorry or you always take it so if the size is"
+    },
+    {
+      "start": 3355.119,
+      "duration": 6.72,
+      "text": "zero it means it's for the first time just take it and similarly you go to the"
+    },
+    {
+      "start": 3359.76,
+      "duration": 7.359,
+      "text": "else which means the other element is the smaller the other element in the B"
+    },
+    {
+      "start": 3364.119,
+      "duration": 5.641,
+      "text": "array is smaller if that's the case cool I'll just copy paste the same thing"
+    },
+    {
+      "start": 3368.44,
+      "duration": 6.159,
+      "text": "maybe I'll just copy paste the same thing I'll copy paste the same thing and"
+    },
+    {
+      "start": 3372.28,
+      "duration": 6.92,
+      "text": "I'll say should not be equal to B of J should not be and if it is not then I'll"
+    },
+    {
+      "start": 3377.28,
+      "duration": 8.319,
+      "text": "just push in B of J I'll just push in B of J once this is done I I'll just move"
+    },
+    {
+      "start": 3382.24,
+      "duration": 9.879,
+      "text": "the J Point quite same quite same and after this is completed I will return"
+    },
+    {
+      "start": 3388.28,
+      "duration": 8.559,
+      "text": "but wait what if while iterating this got exhausted the first array got"
+    },
+    {
+      "start": 3394.599,
+      "duration": 6.681,
+      "text": "exhausted so there must be someone left if you remember our case we completed"
+    },
+    {
+      "start": 3399.559,
+      "duration": 5.321,
+      "text": "the iteration and there were still two elements left there were still two"
+    },
+    {
+      "start": 3402.92,
+      "duration": 5.159,
+      "text": "elements left what do you that means J would be somewhere here so you need to"
+    },
+    {
+      "start": 3406.44,
+      "duration": 7.48,
+      "text": "iterate for this these remaining elements so WR it so you say okay listen"
+    },
+    {
+      "start": 3411.64,
+      "duration": 7.399,
+      "text": "if the first was exhausted J will still be there and if J is still there let's"
+    },
+    {
+      "start": 3416.28,
+      "duration": 7.48,
+      "text": "let's do the same thing I'll say Hey listen I'll do the same thing which"
+    },
+    {
+      "start": 3421.079,
+      "duration": 7.361,
+      "text": "means okay fine if you're not equivalent go in and just keep on moving and what"
+    },
+    {
+      "start": 3426.24,
+      "duration": 5.559,
+      "text": "if the second got exhausted so I will still be there there is someone still in"
+    },
+    {
+      "start": 3429.88,
+      "duration": 6.919,
+      "text": "the first and if there is someone still in the first you simply take take it"
+    },
+    {
+      "start": 3434.079,
+      "duration": 6.24,
+      "text": "without any thinking yes without any thinking you simply take it and once"
+    },
+    {
+      "start": 3438.839,
+      "duration": 6.0,
+      "text": "you've done this once you've done this you can return it so this is the"
+    },
+    {
+      "start": 3442.319,
+      "duration": 7.201,
+      "text": "remaining array that you just iterate through once you've done this you can go"
+    },
+    {
+      "start": 3446.96,
+      "duration": 9.32,
+      "text": "ahead and really let's submit I'm I'm sure that I write error free code oh"
+    },
+    {
+      "start": 3452.64,
+      "duration": 9.0,
+      "text": "yeah I do so at one go I've submitted this code and this is exactly how it"
+    },
+    {
+      "start": 3458.839,
+      "duration": 8.881,
+      "text": "will look like now if I have to ask you the time complexity of this particular"
+    },
+    {
+      "start": 3463.72,
+      "duration": 11.48,
+      "text": "code what will be the time complexity of this particular code can I see I'm"
+    },
+    {
+      "start": 3472.0,
+      "duration": 7.559,
+      "text": "iterating in some way throughout this entire somewhere iting throughout this"
+    },
+    {
+      "start": 3477.039,
+      "duration": 7.921,
+      "text": "entire and some I'm also hting throughout this entire because no matter"
+    },
+    {
+      "start": 3483.24,
+      "duration": 6.48,
+      "text": "what we do we will itate through every element no matter what we do we will"
+    },
+    {
+      "start": 3486.92,
+      "duration": 6.879,
+      "text": "beating through every element do we do anything apart from this yeah we"
+    },
+    {
+      "start": 3491.64,
+      "duration": 7.24,
+      "text": "definitely enter that into the Union array but do we iterate or do we do any"
+    },
+    {
+      "start": 3496.359,
+      "duration": 6.881,
+      "text": "fall Loops or any Loops apart from this no steps will always be like this you'll"
+    },
+    {
+      "start": 3501.72,
+      "duration": 6.28,
+      "text": "be either here either here either here either here either here either here"
+    },
+    {
+      "start": 3504.52,
+      "duration": 7.96,
+      "text": "either here so that that means it'll be of N1 plus N2 yeah there there are lot"
+    },
+    {
+      "start": 3510.559,
+      "duration": 6.0,
+      "text": "of Loops lot of these but at the end of the day if you think carefully you'll"
+    },
+    {
+      "start": 3514.24,
+      "duration": 7.48,
+      "text": "actually be visiting every element once so N1 plus N2 is the time complexity and"
+    },
+    {
+      "start": 3519.4,
+      "duration": 6.679,
+      "text": "space you can say I'm just using N1 plus N2 at the worst case if all the elements"
+    },
+    {
+      "start": 3523.96,
+      "duration": 7.24,
+      "text": "are unique and that is for returning the answer not for solving not in my"
+    },
+    {
+      "start": 3528.2,
+      "duration": 6.48,
+      "text": "algorithm using that to return tell that specifically to the interviewer and"
+    },
+    {
+      "start": 3532.92,
+      "duration": 7.48,
+      "text": "that's how your optimal solution will look like in order to Union to sorted"
+    },
+    {
+      "start": 3537.76,
+      "duration": 7.359,
+      "text": "arrays so what I can say is I'll go back to the sheet the union is done now it's"
+    },
+    {
+      "start": 3542.92,
+      "duration": 6.84,
+      "text": "time to understand the intersection of two sorted arrays so what is the problem"
+    },
+    {
+      "start": 3547.2,
+      "duration": 9.2,
+      "text": "statement State intersection of two sorted arrays again the term sorted is"
+    },
+    {
+      "start": 3553.4,
+      "duration": 7.52,
+      "text": "very important if you want to go for the optimal solution so keep that in mind"
+    },
+    {
+      "start": 3558.599,
+      "duration": 8.561,
+      "text": "okay what do you mean by intersection the element that is present in both are"
+    },
+    {
+      "start": 3562.96,
+      "duration": 9.839,
+      "text": "remember this present in both present in both so if I have to write the"
+    },
+    {
+      "start": 3568.96,
+      "duration": 9.399,
+      "text": "intersection of A and B sorted arrays so if I see one I don't see a one here so I"
+    },
+    {
+      "start": 3575.599,
+      "duration": 7.52,
+      "text": "will not take it if I see two I actually see a two over here so there has to be a"
+    },
+    {
+      "start": 3580.64,
+      "duration": 7.439,
+      "text": "corresponding match so I see a two over here so I'll take it if I see again two"
+    },
+    {
+      "start": 3585.88,
+      "duration": 5.959,
+      "text": "there is no cor like there is a two but there is this two has already been"
+    },
+    {
+      "start": 3589.48,
+      "duration": 6.4,
+      "text": "occupied like is already been matched with this so there is no corresponding"
+    },
+    {
+      "start": 3593.24,
+      "duration": 6.599,
+      "text": "two for this so I I do not take it if I see three for this three I can say I"
+    },
+    {
+      "start": 3598.079,
+      "duration": 6.601,
+      "text": "have a corresponding three so I'll take it now for this three I have another"
+    },
+    {
+      "start": 3602.599,
+      "duration": 6.2,
+      "text": "corresponding three so I'll again take it remember over here repetion of"
+    },
+    {
+      "start": 3606.76,
+      "duration": 8.2,
+      "text": "elements is allowed because you are seeing present in both next four no one"
+    },
+    {
+      "start": 3612.76,
+      "duration": 8.88,
+      "text": "five yes there is a corresponding five six there is a corresponding six as well"
+    },
+    {
+      "start": 3617.359,
+      "duration": 8.2,
+      "text": "so this will be your intersection array right so if this question comes up in an"
+    },
+    {
+      "start": 3623.64,
+      "duration": 5.919,
+      "text": "interview the first solution will definitely be a brute for solution and"
+    },
+    {
+      "start": 3627.76,
+      "duration": 6.279,
+      "text": "what will be the brute for solution we are saying that for every element there"
+    },
+    {
+      "start": 3631.839,
+      "duration": 5.921,
+      "text": "should be a corresponding element for a two there should be another two for this"
+    },
+    {
+      "start": 3635.92,
+      "duration": 5.8,
+      "text": "two there is no another two so we do not take it so we just take one two so for"
+    },
+    {
+      "start": 3639.92,
+      "duration": 6.399,
+      "text": "every element there has to be a coresponding element in the other R"
+    },
+    {
+      "start": 3644.44,
+      "duration": 6.84,
+      "text": "we'll just follow the same process we will say okay fine we'll pick up one and"
+    },
+    {
+      "start": 3648.92,
+      "duration": 6.639,
+      "text": "we will check if there's a one if there is we will take it we will pick up two"
+    },
+    {
+      "start": 3653.68,
+      "duration": 6.24,
+      "text": "and we will check if there is a two and we say we have a two so we take this two"
+    },
+    {
+      "start": 3657.96,
+      "duration": 7.079,
+      "text": "then we will say we will pick up this two and we will see if there's a two"
+    },
+    {
+      "start": 3662.0,
+      "duration": 8.44,
+      "text": "there is but this has been taken by this so he won't take it so it's like picking"
+    },
+    {
+      "start": 3668.16,
+      "duration": 8.56,
+      "text": "up one element and checking but at the same time keeping a track if someone has"
+    },
+    {
+      "start": 3673.24,
+      "duration": 7.52,
+      "text": "been used previously or not so what I know is I have to keep a track if"
+    },
+    {
+      "start": 3678.599,
+      "duration": 6.801,
+      "text": "someone has been used previously or not so what I'll do is I'll probably create"
+    },
+    {
+      "start": 3683.079,
+      "duration": 9.24,
+      "text": "a visited array I'll probably create a visited AR AR which will be marked as 0"
+    },
+    {
+      "start": 3688.48,
+      "duration": 7.96,
+      "text": "0 0 0 0 which means they haven't been used they haven't been used as of now"
+    },
+    {
+      "start": 3694.4,
+      "duration": 6.719,
+      "text": "and now what I'll do is I'll start with the first element in the first array you"
+    },
+    {
+      "start": 3699.039,
+      "duration": 5.881,
+      "text": "can also start with the first element in the second array as well but I'll start"
+    },
+    {
+      "start": 3703.52,
+      "duration": 6.44,
+      "text": "with the first element in the first array and I'll say one are you here are"
+    },
+    {
+      "start": 3708.119,
+      "duration": 6.92,
+      "text": "you here are you here I'll just go through the entire B and I will not find"
+    },
+    {
+      "start": 3712.52,
+      "duration": 7.799,
+      "text": "a one so if I do not find a one I will end up not taking this into my"
+    },
+    {
+      "start": 3718.359,
+      "duration": 8.281,
+      "text": "intersection array and I will move forward next two are you here yes I here"
+    },
+    {
+      "start": 3725.2,
+      "duration": 6.599,
+      "text": "so I'll take this two the moment I take this two I will"
+    },
+    {
+      "start": 3729.4,
+      "duration": 6.8,
+      "text": "mark it as visitor I'll say this two has been taken by someone this two has been"
+    },
+    {
+      "start": 3733.48,
+      "duration": 7.48,
+      "text": "taken by someone fine we have one two who found its corresponding two in the"
+    },
+    {
+      "start": 3738.039,
+      "duration": 7.961,
+      "text": "other array now I'll move ahead when I move ahead I have a two and I'll see for"
+    },
+    {
+      "start": 3742.96,
+      "duration": 9.76,
+      "text": "a two I see a two but it's taken now I see a three so since it's a sorted array"
+    },
+    {
+      "start": 3750.68,
+      "duration": 8.84,
+      "text": "I'm sure that Beyond this there will be no two so I stop I sto I'll be like I"
+    },
+    {
+      "start": 3755.2,
+      "duration": 11.639,
+      "text": "did not find next three let's check two no three yes yes let's take three and at"
+    },
+    {
+      "start": 3764.4,
+      "duration": 10.679,
+      "text": "the same time see you are taken you are taken let's go ahead three again"
+    },
+    {
+      "start": 3772.52,
+      "duration": 6.599,
+      "text": "two again two no not equal to three three yes equal"
+    },
+    {
+      "start": 3776.52,
+      "duration": 7.92,
+      "text": "but but but taken this guy is already committed so I'll not take him next oh"
+    },
+    {
+      "start": 3782.039,
+      "duration": 8.921,
+      "text": "he's not committed and that's three so let's take this three and Mark it as one"
+    },
+    {
+      "start": 3787.68,
+      "duration": 8.32,
+      "text": "next four now when we have four do we have a four four four four no do we need"
+    },
+    {
+      "start": 3793.96,
+      "duration": 6.72,
+      "text": "to check for the next no it's a sorted array so if five like till five you did"
+    },
+    {
+      "start": 3798.599,
+      "duration": 7.281,
+      "text": "not get it beyond that everything will be greater than five so no need to check"
+    },
+    {
+      "start": 3802.279,
+      "duration": 7.56,
+      "text": "it next five five will'll get it here so take five and you'll mark it six six"
+    },
+    {
+      "start": 3808.319,
+      "duration": 6.401,
+      "text": "you'll get it here so you'll take it and Mark it and the iteration is over once"
+    },
+    {
+      "start": 3812.599,
+      "duration": 5.321,
+      "text": "the iteration is over you will have your answer array yes you will have your"
+    },
+    {
+      "start": 3816.359,
+      "duration": 6.2,
+      "text": "answer array and once you have your answer array that will be the brute"
+    },
+    {
+      "start": 3819.839,
+      "duration": 7.48,
+      "text": "force method got it so if I have to write the pseudo code what I'll do is"
+    },
+    {
+      "start": 3824.72,
+      "duration": 7.72,
+      "text": "I'll say N1 is the size of the a array N2 is the size of the B aray and I'll"
+    },
+    {
+      "start": 3829.359,
+      "duration": 9.92,
+      "text": "probably keep a visited of size N2 and I'll mark every one of them as zero once"
+    },
+    {
+      "start": 3836.0,
+      "duration": 9.4,
+      "text": "I've done this I will try picking up one element from the first array always and"
+    },
+    {
+      "start": 3842.839,
+      "duration": 7.561,
+      "text": "for that one element remember we have an answer intersection which we have to"
+    },
+    {
+      "start": 3847.48,
+      "duration": 7.599,
+      "text": "fill for that one element I will go through J and I'll go through the second"
+    },
+    {
+      "start": 3852.799,
+      "duration": 6.121,
+      "text": "array now what am I doing I'm saying okay I is zero which means I standing"
+    },
+    {
+      "start": 3857.119,
+      "duration": 6.96,
+      "text": "here and I'm moving across the entire array that's that is that is what I'm"
+    },
+    {
+      "start": 3861.44,
+      "duration": 10.2,
+      "text": "doing right so I will be like okay if array of I is is equal to equal"
+    },
+    {
+      "start": 3868.16,
+      "duration": 9.399,
+      "text": "to array of BJ if it is if it is that means for this a ofi we find a"
+    },
+    {
+      "start": 3874.92,
+      "duration": 7.56,
+      "text": "corresponding in the B AR and if you find it we can take it but wait has it"
+    },
+    {
+      "start": 3879.64,
+      "duration": 8.24,
+      "text": "been taken previously and this is where the visited array will tell me the"
+    },
+    {
+      "start": 3884.799,
+      "duration": 9.361,
+      "text": "visited of the jth index so this is the indexing of the jth index are you not"
+    },
+    {
+      "start": 3890.599,
+      "duration": 9.361,
+      "text": "taken oh you're not taken perfect please come to our answer so this will be the"
+    },
+    {
+      "start": 3896.92,
+      "duration": 7.0,
+      "text": "corresponding added so I'll say visited of J has been taken so please mark it"
+    },
+    {
+      "start": 3902.16,
+      "duration": 5.76,
+      "text": "and you can break out there's no need to do any further you can break out once"
+    },
+    {
+      "start": 3905.92,
+      "duration": 6.48,
+      "text": "you have done this perfect and what's the other thing if this is this"
+    },
+    {
+      "start": 3910.0,
+      "duration": 9.4,
+      "text": "condition is false we just move ahead but be sure if at any moment a of J"
+    },
+    {
+      "start": 3917.4,
+      "duration": 8.879,
+      "text": "sorry uh if at any moment the array of B and J is greater"
+    },
+    {
+      "start": 3924.16,
+      "duration": 8.08,
+      "text": "than array of a of I we say okay we've exceeded you"
+    },
+    {
+      "start": 3929.279,
+      "duration": 7.121,
+      "text": "will never find even if you go ahead so this will kind of truncate this Loop"
+    },
+    {
+      "start": 3934.92,
+      "duration": 4.48,
+      "text": "just in case you are getting someone greater there's no point in going"
+    },
+    {
+      "start": 3937.88,
+      "duration": 7.52,
+      "text": "forward there's no point in looping so you stop and you can just stop it here"
+    },
+    {
+      "start": 3942.359,
+      "duration": 9.161,
+      "text": "so for every I is for every I you will Loop through the entire array B and"
+    },
+    {
+      "start": 3948.72,
+      "duration": 6.76,
+      "text": "you'll try to find someone same and which is not taken if it is not then you"
+    },
+    {
+      "start": 3953.799,
+      "duration": 5.48,
+      "text": "kind of add it to your answer and mark it it has taken and you break out so you"
+    },
+    {
+      "start": 3957.279,
+      "duration": 6.76,
+      "text": "keep on doing for every eye and at the end of the day you will have your answer"
+    },
+    {
+      "start": 3960.799,
+      "duration": 7.681,
+      "text": "AR so if I have to determine the time complexity of this Brute Force approach"
+    },
+    {
+      "start": 3966.44,
+      "duration": 7.48,
+      "text": "what will it be obviously two Loops running so that's an N1 cross N2 are the"
+    },
+    {
+      "start": 3971.44,
+      "duration": 7.48,
+      "text": "worst case if the break and all these things never happen at the worst case N1"
+    },
+    {
+      "start": 3976.839,
+      "duration": 7.121,
+      "text": "cross N2 and what is the space complexity obviously the space"
+    },
+    {
+      "start": 3980.64,
+      "duration": 8.159,
+      "text": "complexity is B go of N2 in this case imagine you apply a visitor array for"
+    },
+    {
+      "start": 3986.2,
+      "duration": 6.72,
+      "text": "this you can do the reverse as well where you have a visited for this and"
+    },
+    {
+      "start": 3991.119,
+      "duration": 7.0,
+      "text": "you iterate for this and you check for the corresponding in the other array you"
+    },
+    {
+      "start": 3994.799,
+      "duration": 8.081,
+      "text": "can do how you wish to that is okay so we can say that that so we can say that"
+    },
+    {
+      "start": 4000.88,
+      "duration": 7.76,
+      "text": "in the order in which we apply the algorithm the space complexity might"
+    },
+    {
+      "start": 4004.839,
+      "duration": 9.0,
+      "text": "change so logically it will make sense to have the algorithm in such a way that"
+    },
+    {
+      "start": 4011.4,
+      "duration": 8.439,
+      "text": "for the smaller array is for the smaller array we have the visited array so that"
+    },
+    {
+      "start": 4016.2,
+      "duration": 6.68,
+      "text": "the space complexity is minimum but it's okay this is what you have to tell to"
+    },
+    {
+      "start": 4021.319,
+      "duration": 5.48,
+      "text": "the interviewer that this is my Brute Force approach so in case you want to"
+    },
+    {
+      "start": 4025.2,
+      "duration": 6.399,
+      "text": "try out the problem the link will be in the description and this is how the root"
+    },
+    {
+      "start": 4029.52,
+      "duration": 7.16,
+      "text": "Force solution code will look like but this is something which is taking a lot"
+    },
+    {
+      "start": 4033.4,
+      "duration": 8.399,
+      "text": "of time yes this is taking N1 into N2 and that's a lot of time so we'll be"
+    },
+    {
+      "start": 4039.76,
+      "duration": 5.0,
+      "text": "trying to optimize this and let's understand how the optimal solution will"
+    },
+    {
+      "start": 4043.16,
+      "duration": 6.32,
+      "text": "look like so the optimal solution depends on on both the arrays being"
+    },
+    {
+      "start": 4046.76,
+      "duration": 6.039,
+      "text": "sorted since they are sorted we will be applying something as a two-pointer"
+    },
+    {
+      "start": 4051.079,
+      "duration": 7.96,
+      "text": "approach and it's going to be very simple what we do is we basically keep"
+    },
+    {
+      "start": 4055.76,
+      "duration": 8.559,
+      "text": "two poters one at this one and the other one at this and now we will be taking"
+    },
+    {
+      "start": 4062.88,
+      "duration": 7.28,
+      "text": "like we will be taking the intersection of both so tell me something if this one"
+    },
+    {
+      "start": 4068.2,
+      "duration": 7.76,
+      "text": "like this is the first case is not equivalent to this two can I definitely"
+    },
+    {
+      "start": 4073.559,
+      "duration": 6.201,
+      "text": "say that we do not have any occurence of one can I definitely say that I can so"
+    },
+    {
+      "start": 4078.319,
+      "duration": 6.881,
+      "text": "I'll be like there's no occurrence of one please move please and then I'm like"
+    },
+    {
+      "start": 4082.64,
+      "duration": 6.84,
+      "text": "at two and at two like they equal oh there is an occence there is an Ence so"
+    },
+    {
+      "start": 4087.52,
+      "duration": 7.4,
+      "text": "be like let's take two and if there is an Ence can I say this two is for this"
+    },
+    {
+      "start": 4091.88,
+      "duration": 8.72,
+      "text": "two right so I'll move both I'll move both because they matched they matched"
+    },
+    {
+      "start": 4098.52,
+      "duration": 7.839,
+      "text": "let them put into a relationship and let's move okay now we have two I'm like"
+    },
+    {
+      "start": 4103.96,
+      "duration": 7.399,
+      "text": "three okay for this two it's lesser than three so I definitely cannot have a"
+    },
+    {
+      "start": 4108.52,
+      "duration": 7.96,
+      "text": "partner for two so I'll be like not an issue let's move now this three is a"
+    },
+    {
+      "start": 4114.44,
+      "duration": 7.48,
+      "text": "partner of this three so let's take three let's try to move both we have"
+    },
+    {
+      "start": 4120.04,
+      "duration": 8.56,
+      "text": "tried to move both now and now this three says okay fine I can still have a"
+    },
+    {
+      "start": 4124.359,
+      "duration": 8.92,
+      "text": "partner so again take three and move now this four says I'm lesser than five so I"
+    },
+    {
+      "start": 4130.88,
+      "duration": 7.68,
+      "text": "definitely cannot have a partner now the five says I'm equivalent to you so five"
+    },
+    {
+      "start": 4136.319,
+      "duration": 7.561,
+      "text": "will be a partner let's move now both so whenever they match move both if they do"
+    },
+    {
+      "start": 4140.96,
+      "duration": 9.08,
+      "text": "not match then just move next six equivalent to six so I"
+    },
+    {
+      "start": 4147.56,
+      "duration": 7.239,
+      "text": "take six and it moves I run out of Partners I run out of Partners remember"
+    },
+    {
+      "start": 4152.319,
+      "duration": 8.04,
+      "text": "this I've taken six and the moment I move both this I exceeds so there's no"
+    },
+    {
+      "start": 4158.0,
+      "duration": 7.52,
+      "text": "one else to be compared with there's no one else so there there's no one else"
+    },
+    {
+      "start": 4162.759,
+      "duration": 6.48,
+      "text": "who will be partner with so it's over so once you have done both the pointers"
+    },
+    {
+      "start": 4167.319,
+      "duration": 5.88,
+      "text": "this is how it will look like and this will be your answer quite simple so if I"
+    },
+    {
+      "start": 4171.52,
+      "duration": 5.639,
+      "text": "have to code this uh the problem link will again be in the description it's"
+    },
+    {
+      "start": 4175.4,
+      "duration": 6.72,
+      "text": "going to be very simple I is going to be zero J is going to be zero and I'll be"
+    },
+    {
+      "start": 4179.759,
+      "duration": 6.04,
+      "text": "keeping a vector int and so and at the end of the day I will definitely be"
+    },
+    {
+      "start": 4184.64,
+      "duration": 6.679,
+      "text": "returning it and I know one thing for sure I'll be"
+    },
+    {
+      "start": 4188.839,
+      "duration": 7.281,
+      "text": "iterating in both of them so I lesser than n and J less than n quite and now I"
+    },
+    {
+      "start": 4195.0,
+      "duration": 7.92,
+      "text": "know one thing if this particular a of I is lesser than"
+    },
+    {
+      "start": 4198.64,
+      "duration": 7.24,
+      "text": "b of J for an example obviously if a is smaller it doesn't have a partner please"
+    },
+    {
+      "start": 4204.48,
+      "duration": 7.08,
+      "text": "move you don't have a partner please move and I'm like what if it's the other"
+    },
+    {
+      "start": 4208.52,
+      "duration": 7.52,
+      "text": "way the other way means what if B is smaller then definitely the B Guy cannot"
+    },
+    {
+      "start": 4215.08,
+      "duration": 7.639,
+      "text": "have a partner sorry please move but if it's"
+    },
+    {
+      "start": 4218.96,
+      "duration": 9.08,
+      "text": "not the case they equal you guys can go into a relationship isn't it so I'll be"
+    },
+    {
+      "start": 4225.0,
+      "duration": 7.32,
+      "text": "like okay okay please go and both of them are SE so doesn't matter which one"
+    },
+    {
+      "start": 4230.0,
+      "duration": 6.199,
+      "text": "you insert and both of them can go ahead because you guys are committed now you"
+    },
+    {
+      "start": 4234.32,
+      "duration": 7.72,
+      "text": "cannot have dual relationship go ahead and let the other ones find theirs fine"
+    },
+    {
+      "start": 4239.44,
+      "duration": 7.2,
+      "text": "I'll go ahead once this is done the answer will be stored here and that's it"
+    },
+    {
+      "start": 4244.199,
+      "duration": 7.441,
+      "text": "so if I I'll just go go ahead and submit it so if I submit it I will see that"
+    },
+    {
+      "start": 4248.84,
+      "duration": 9.04,
+      "text": "this is running running running running I'm absolutely fine yeah so what will be"
+    },
+    {
+      "start": 4254.76,
+      "duration": 8.16,
+      "text": "the time C lexity can I say the moment I run out of partners for someone that's"
+    },
+    {
+      "start": 4259.84,
+      "duration": 8.56,
+      "text": "when I end but what can be the worst case when you like keep on going keep on"
+    },
+    {
+      "start": 4265.44,
+      "duration": 8.719,
+      "text": "going since I'm moving I I'm moving J so the worst case can be once this executes"
+    },
+    {
+      "start": 4272.28,
+      "duration": 8.439,
+      "text": "the other time this executes the other time this the other time this so if"
+    },
+    {
+      "start": 4276.32,
+      "duration": 11.56,
+      "text": "you're like i j i j i j i j i IG so we moving like one by one so it's like it's"
+    },
+    {
+      "start": 4283.84,
+      "duration": 9.319,
+      "text": "more like one here you're here this Moves In The Next Step this Moves In The"
+    },
+    {
+      "start": 4290.64,
+      "duration": 7.039,
+      "text": "Next Step this Moves In The Next Step this Moves In The Next Step this Moves"
+    },
+    {
+      "start": 4295.52,
+      "duration": 7.24,
+      "text": "In The Next Step this Moves In The Next Step this Moves In The Next Step this"
+    },
+    {
+      "start": 4299.56,
+      "duration": 6.679,
+      "text": "moves so moving one by one by one and this one has an N1 length this one has"
+    },
+    {
+      "start": 4304.4,
+      "duration": 8.88,
+      "text": "an N2 length can I say the time complexity will be N1 plus N2 that is in"
+    },
+    {
+      "start": 4310.48,
+      "duration": 6.6,
+      "text": "the worst case that is in the worst case can I say the space complexity are we"
+    },
+    {
+      "start": 4315.32,
+      "duration": 6.96,
+      "text": "using any extra space the answer to that is I don't think so we're not using any"
+    },
+    {
+      "start": 4319.639,
+      "duration": 9.481,
+      "text": "extra space so the optimal solution has a Time complexity and space complexity"
+    },
+    {
+      "start": 4325.04,
+      "duration": 8.96,
+      "text": "of this that that is seen on the screen so I can say that have successfully"
+    },
+    {
+      "start": 4331.88,
+      "duration": 7.48,
+      "text": "solved the optimal solution of intersection of two sorted arrays so I"
+    },
+    {
+      "start": 4336.76,
+      "duration": 7.32,
+      "text": "can go back into the sheet and I can say this is done as well so with this we"
+    },
+    {
+      "start": 4341.48,
+      "duration": 7.04,
+      "text": "cover up nine problems from the easy section of the array I know this was a"
+    },
+    {
+      "start": 4346.199,
+      "duration": 7.161,
+      "text": "long video and I hope you enjoyed every bit of it so please please do consider"
+    },
+    {
+      "start": 4351.28,
+      "duration": 6.8,
+      "text": "giving us a like because I put have enough effort for this video and you can"
+    },
+    {
+      "start": 4355.8,
+      "duration": 5.24,
+      "text": "you can understand by the voice so to continue our tradition if you have"
+    },
+    {
+      "start": 4359.719,
+      "duration": 5.321,
+      "text": "understood everything do comment understood and also make sure you do the"
+    },
+    {
+      "start": 4363.159,
+      "duration": 5.201,
+      "text": "assignment there was an assignment that you have to WR rotate the aray by D"
+    },
+    {
+      "start": 4366.92,
+      "duration": 5.239,
+      "text": "places so make sure you do the assignment and drop the code in the"
+    },
+    {
+      "start": 4370.36,
+      "duration": 5.359,
+      "text": "comments and if you are new to our Channel please please do consider"
+    },
+    {
+      "start": 4374.159,
+      "duration": 5.761,
+      "text": "subscribing to us and if you have haven't followed me on all my social"
+    },
+    {
+      "start": 4377.4,
+      "duration": 6.52,
+      "text": "media handles uh LinkedIn Instagram Twitter all the links will be in the"
+    },
+    {
+      "start": 4381.84,
+      "duration": 4.92,
+      "text": "description do join our telegram group with this I will be wrapping up this"
+    },
+    {
+      "start": 4385.36,
+      "duration": 5.04,
+      "text": "video Let's SP in some other video till then bye-bye take"
+    },
+    {
+      "start": 4388.88,
+      "duration": 8.92,
+      "text": "care Bren don't forget your"
+    },
+    {
+      "start": 4393.679,
+      "duration": 4.121,
+      "text": "golden I will"
+    }
+  ]
+}

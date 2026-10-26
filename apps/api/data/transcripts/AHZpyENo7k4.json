@@ -1,0 +1,1287 @@
+{
+  "video_id": "AHZpyENo7k4",
+  "title": "Kadane's Algorithm | Maximum Subarray Sum | Finding and Printing",
+  "total_segments": 256,
+  "segments": [
+    {
+      "start": 2.94,
+      "duration": 5.46,
+      "text": "if y'all come back to the channel I hope you guys are doing extremely well so"
+    },
+    {
+      "start": 6.54,
+      "duration": 5.519,
+      "text": "this is another video from the stripers A to Z DSA course just in case you're"
+    },
+    {
+      "start": 10.559,
+      "duration": 5.82,
+      "text": "for the first time here this is world's most in-depth course when it comes to DS"
+    },
+    {
+      "start": 13.92,
+      "duration": 6.3,
+      "text": "algo why do I say that because this goes as 455 modules by the end of the course"
+    },
+    {
+      "start": 18.48,
+      "duration": 5.94,
+      "text": "you would have solved more than 400 plus problems in DS I'll go and you can go"
+    },
+    {
+      "start": 22.92,
+      "duration": 5.16,
+      "text": "across the entire internet you can buy any of the paid courses none of them"
+    },
+    {
+      "start": 26.279,
+      "duration": 6.181,
+      "text": "will be teaching you DSL go in such depth something that I can give you as"
+    },
+    {
+      "start": 30.3,
+      "duration": 5.7,
+      "text": "guarantee is if you complete this entire post you can clear any of the DS"
+    },
+    {
+      "start": 34.38,
+      "duration": 6.24,
+      "text": "algorithms in any of the companies in any part of the world so till now we"
+    },
+    {
+      "start": 38.1,
+      "duration": 7.799,
+      "text": "have uh covered until majority element in Step 3.2 and in this video we will be"
+    },
+    {
+      "start": 43.32,
+      "duration": 6.48,
+      "text": "covering maximum sub-are sum which will be involving the dance algorithm so what"
+    },
+    {
+      "start": 48.3,
+      "duration": 7.919,
+      "text": "does the problem say subaric out of all the savares give me"
+    },
+    {
+      "start": 53.28,
+      "duration": 6.24,
+      "text": "the maximum sum now what is the definition of sub array the definition"
+    },
+    {
+      "start": 57.66,
+      "duration": 4.98,
+      "text": "of sabare is a contagious part of the array I've"
+    },
+    {
+      "start": 61.379,
+      "duration": 7.201,
+      "text": "already explained you this in the previous videos now what is a contagious"
+    },
+    {
+      "start": 65.159,
+      "duration": 7.441,
+      "text": "part something like this minus 1 minus 2 this is a contagious part so you can"
+    },
+    {
+      "start": 70.619,
+      "duration": 8.221,
+      "text": "call this as a sub array within the array itself even if if even if you pick"
+    },
+    {
+      "start": 76.08,
+      "duration": 7.8,
+      "text": "up a single element that can also be called as a sub array even if you pick"
+    },
+    {
+      "start": 81.659,
+      "duration": 6.661,
+      "text": "up the entire array that can also be called as a sub array now what cannot be"
+    },
+    {
+      "start": 86.4,
+      "duration": 6.359,
+      "text": "called as a sub array imagine you pick up this contagious part and then you say"
+    },
+    {
+      "start": 90.659,
+      "duration": 6.96,
+      "text": "I'll pick up five so what happened was there was a discontinuity between minus"
+    },
+    {
+      "start": 95.579,
+      "duration": 7.561,
+      "text": "one and five so it cannot be called as a sub array but it can be called as a"
+    },
+    {
+      "start": 99.84,
+      "duration": 9.18,
+      "text": "subsequence subsequence but the question is asking you out of all the sub arrays"
+    },
+    {
+      "start": 105.72,
+      "duration": 7.62,
+      "text": "give me the maximum sum so if I give you this particular array you can draw all"
+    },
+    {
+      "start": 111.299,
+      "duration": 5.881,
+      "text": "the sub arrays probably this is one of the sub arrays that will give you a sum"
+    },
+    {
+      "start": 114.659,
+      "duration": 6.42,
+      "text": "of six probably this is a sub array which will give you a sum of four but if"
+    },
+    {
+      "start": 119.1,
+      "duration": 7.559,
+      "text": "I take this motion which has negative Elements which has negative elements it"
+    },
+    {
+      "start": 123.659,
+      "duration": 7.38,
+      "text": "still gives you a sum of 7 which is the highest possible among all the subares"
+    },
+    {
+      "start": 129.0,
+      "duration": 5.7,
+      "text": "and that is what you have to return as the answer to this problem now this now"
+    },
+    {
+      "start": 133.26,
+      "duration": 4.979,
+      "text": "this question comes up in an interview what is the first approach that you'll"
+    },
+    {
+      "start": 136.319,
+      "duration": 7.081,
+      "text": "be giving to the interview that's definitely trying out all submaris and"
+    },
+    {
+      "start": 141.78,
+      "duration": 5.34,
+      "text": "we've already discussed how do we do that in the previous video just in case"
+    },
+    {
+      "start": 145.02,
+      "duration": 6.48,
+      "text": "you do not know please go back and watch the previous videos in this playlist"
+    },
+    {
+      "start": 148.739,
+      "duration": 6.0,
+      "text": "you'll understand how do you print all the subarues or how do you iterate"
+    },
+    {
+      "start": 153.06,
+      "duration": 6.0,
+      "text": "through all the subares so if you try out all the sub arrays and out of all"
+    },
+    {
+      "start": 156.599,
+      "duration": 8.461,
+      "text": "the savannas which gives you the maximum sum can actually be uh the answer will"
+    },
+    {
+      "start": 163.14,
+      "duration": 6.84,
+      "text": "actually be the answer so how do you try out all the sub arrays if I have a clear"
+    },
+    {
+      "start": 167.819,
+      "duration": 6.721,
+      "text": "observation we know this is the first sub array this is the second this is the"
+    },
+    {
+      "start": 172.56,
+      "duration": 9.0,
+      "text": "third this is the fourth this is the fifth is the sixth seventh and eighth"
+    },
+    {
+      "start": 176.94,
+      "duration": 10.439,
+      "text": "and then ninth tenth eleventh twelfth Thirteenth Fourteenth fifteenth then"
+    },
+    {
+      "start": 184.08,
+      "duration": 7.98,
+      "text": "this one this one this one this one this one this one do you see a pattern each"
+    },
+    {
+      "start": 189.9,
+      "duration": 5.46,
+      "text": "time I'm standing at an element then the first about is minus two then it's like"
+    },
+    {
+      "start": 193.68,
+      "duration": 5.94,
+      "text": "minus two minus three it's like minus two minus three four so I'm just taking"
+    },
+    {
+      "start": 197.159,
+      "duration": 8.281,
+      "text": "one one element at a time and I'm forming the next summary once starting"
+    },
+    {
+      "start": 202.62,
+      "duration": 6.6,
+      "text": "from this I've taken every one then what is the next step I'm doing I'm going and"
+    },
+    {
+      "start": 207.239,
+      "duration": 5.881,
+      "text": "standing at the next element and I'm doing the same thing again I'm doing the"
+    },
+    {
+      "start": 211.08,
+      "duration": 5.4,
+      "text": "same thing again with it and then again at the next step I"
+    },
+    {
+      "start": 214.98,
+      "duration": 5.7,
+      "text": "started the next and do the same thing stand at the next do the same thing so"
+    },
+    {
+      "start": 218.76,
+      "duration": 7.02,
+      "text": "this is how you can iterate through all the savannes so if I'm standing at here"
+    },
+    {
+      "start": 222.78,
+      "duration": 7.319,
+      "text": "and I can call that as an eye Loop so the eye Loop will always stand at first"
+    },
+    {
+      "start": 227.94,
+      "duration": 4.859,
+      "text": "at the zeroth index and it will go on till the last index which is I lesser"
+    },
+    {
+      "start": 231.78,
+      "duration": 6.3,
+      "text": "than n right and whereas the next what are you"
+    },
+    {
+      "start": 236.04,
+      "duration": 5.82,
+      "text": "doing first you're taking minus 2 then you're taking minus 3"
+    },
+    {
+      "start": 239.58,
+      "duration": 7.32,
+      "text": "then you're taking 4 so it's basically you're iterating from"
+    },
+    {
+      "start": 244.08,
+      "duration": 6.84,
+      "text": "I and you're taking every one till the end so please do that say iterating from"
+    },
+    {
+      "start": 249.54,
+      "duration": 5.699,
+      "text": "the eye and you're taking every want in the end"
+    },
+    {
+      "start": 252.78,
+      "duration": 9.12,
+      "text": "so just go ahead and do that and now can I say my sub array is nothing if I is 0"
+    },
+    {
+      "start": 258.959,
+      "duration": 7.261,
+      "text": "and J is 0 this first sub array is from 0 to index to zeroth index which is this"
+    },
+    {
+      "start": 264.18,
+      "duration": 5.7,
+      "text": "the next sub array is from 0 to the first index which is this the next sub"
+    },
+    {
+      "start": 268.32,
+      "duration": 6.9,
+      "text": "array is from 0 to the second index which is this the next sub array is from"
+    },
+    {
+      "start": 272.34,
+      "duration": 7.62,
+      "text": "0 to 3 index which is this the next sub array is from 0 to 4 index which is this"
+    },
+    {
+      "start": 277.62,
+      "duration": 6.84,
+      "text": "and when I becomes one and it's standing here it's like 1 to 1 is the first sub"
+    },
+    {
+      "start": 282.419,
+      "duration": 5.161,
+      "text": "array which is only this then one to two is the second sub array which is only"
+    },
+    {
+      "start": 285.96,
+      "duration": 6.06,
+      "text": "this then one two three is the same third sub array which is this and so on"
+    },
+    {
+      "start": 289.919,
+      "duration": 7.081,
+      "text": "it will go so you know the sabare is from I to J so what you'll do is"
+    },
+    {
+      "start": 294.199,
+      "duration": 8.921,
+      "text": "summation will be 0 and you can probably run the K loop from I to J because you"
+    },
+    {
+      "start": 299.94,
+      "duration": 8.94,
+      "text": "know that is where yes that is where the sub array is from and you can say sum"
+    },
+    {
+      "start": 305.34,
+      "duration": 9.24,
+      "text": "plus equal to array of K you can easily say that once you have figured out the"
+    },
+    {
+      "start": 310.74,
+      "duration": 10.5,
+      "text": "sum using this particular Loop once the internal Loop is completed what you can"
+    },
+    {
+      "start": 316.74,
+      "duration": 9.54,
+      "text": "say is maximum is equal to Max of sun comma maximum because I know this is"
+    },
+    {
+      "start": 323.699,
+      "duration": 6.661,
+      "text": "every sub array generation this is every sub array generation and then you can"
+    },
+    {
+      "start": 328.38,
+      "duration": 6.96,
+      "text": "easily get the maximum initially you can keep the maximum as the lowest possible"
+    },
+    {
+      "start": 332.58,
+      "duration": 7.619,
+      "text": "value that you can think of so imagining like just wondering that everything can"
+    },
+    {
+      "start": 337.5,
+      "duration": 6.6,
+      "text": "be stored in integers I'll take the integer minimum because that is the"
+    },
+    {
+      "start": 341.699,
+      "duration": 7.861,
+      "text": "least number that I can have so what will be the time complexity can"
+    },
+    {
+      "start": 346.979,
+      "duration": 6.901,
+      "text": "I say it's Big O of n Cube because it's very simple I'm running three Loops it's"
+    },
+    {
+      "start": 351.419,
+      "duration": 7.021,
+      "text": "near about B go of n Cube not exactly because I know it's running from I so it"
+    },
+    {
+      "start": 356.759,
+      "duration": 6.061,
+      "text": "won't exactly run for end times always and I can say it's near about big off"
+    },
+    {
+      "start": 360.6,
+      "duration": 8.52,
+      "text": "and keep not exactly in queue am I using any space no the space complexity is"
+    },
+    {
+      "start": 365.1,
+      "duration": 8.52,
+      "text": "being B go of one so what I can say is this will be the extremist Brute Force"
+    },
+    {
+      "start": 372.0,
+      "duration": 4.919,
+      "text": "solution this is where the interviewer will come up and say can you please"
+    },
+    {
+      "start": 374.94,
+      "duration": 5.819,
+      "text": "optimize The Brute Force then you move to the better solution and the better"
+    },
+    {
+      "start": 378.36,
+      "duration": 8.16,
+      "text": "solution is very very easy what we do is we say okay let's for a moment erase the"
+    },
+    {
+      "start": 384.06,
+      "duration": 6.359,
+      "text": "sum for a moment erase the sum let's do some observations"
+    },
+    {
+      "start": 387.9,
+      "duration": 6.18,
+      "text": "the first about it was minus two so can I say the sum is -2 for the first sub"
+    },
+    {
+      "start": 392.16,
+      "duration": 7.5,
+      "text": "array the next sub array is minus 2 minus 3 so do you need to do you need to"
+    },
+    {
+      "start": 397.139,
+      "duration": 7.741,
+      "text": "reiterate on minus to minus 3 and if the next value is minus 2 minus 3 4 we need"
+    },
+    {
+      "start": 402.6,
+      "duration": 6.42,
+      "text": "to reiterate and sum it up no whatever was the sum of the previous sub array"
+    },
+    {
+      "start": 407.039,
+      "duration": 6.301,
+      "text": "hear me out properly whatever was the sum of the previous I just add the next"
+    },
+    {
+      "start": 411.3,
+      "duration": 6.3,
+      "text": "element then I add the next element so sum over here will become minus 5 sum"
+    },
+    {
+      "start": 415.56,
+      "duration": 7.32,
+      "text": "over here including 4 will become one so you just add the next element whenever J"
+    },
+    {
+      "start": 420.78,
+      "duration": 5.34,
+      "text": "was initially here take this and J goes here take this and G goes here takes"
+    },
+    {
+      "start": 424.5,
+      "duration": 6.36,
+      "text": "this So eventually you'll get the summary three like three elements sum"
+    },
+    {
+      "start": 428.58,
+      "duration": 8.52,
+      "text": "stored so what I'll do is I'll take this sum out and I'll say some can you stay"
+    },
+    {
+      "start": 433.199,
+      "duration": 8.161,
+      "text": "here and some As you move forward can you just add up array of J so first"
+    },
+    {
+      "start": 439.62,
+      "duration": 5.46,
+      "text": "time this gets added so we have one summary sum next time this gets added so"
+    },
+    {
+      "start": 443.46,
+      "duration": 5.519,
+      "text": "we have two sub arrays some extent this gets added so if three sub addition and"
+    },
+    {
+      "start": 447.06,
+      "duration": 6.539,
+      "text": "every time you have a sum you update it with the maximum so this will be the"
+    },
+    {
+      "start": 451.319,
+      "duration": 6.301,
+      "text": "brute uh better approach and the time complexity will be n square and the"
+    },
+    {
+      "start": 455.88,
+      "duration": 6.9,
+      "text": "space complexity will be big of one pretty clear the Bruton better now we"
+    },
+    {
+      "start": 460.44,
+      "duration": 7.319,
+      "text": "will move to the most optimal solution why because the interview will be like n"
+    },
+    {
+      "start": 464.94,
+      "duration": 6.84,
+      "text": "Square no please optimize that's when we move to the optimal one so in order to"
+    },
+    {
+      "start": 470.22,
+      "duration": 6.0,
+      "text": "find the most optimal solution we will be using something known as the Cadance"
+    },
+    {
+      "start": 473.699,
+      "duration": 6.72,
+      "text": "algorithm again I'll be explaining uh the algo as well as the intuition behind"
+    },
+    {
+      "start": 478.68,
+      "duration": 6.299,
+      "text": "the algorithm do not worry about that the first thing that you will do is"
+    },
+    {
+      "start": 482.58,
+      "duration": 7.98,
+      "text": "you will say maximum to be the lowest number"
+    },
+    {
+      "start": 486.66,
+      "duration": 8.7,
+      "text": "and as you may say int mean and then you start from the zeroth index"
+    },
+    {
+      "start": 492.36,
+      "duration": 9.059,
+      "text": "and you take a sum initially as zero and I even start iterating in the array"
+    },
+    {
+      "start": 498.66,
+      "duration": 6.9,
+      "text": "and as I move through the algorithm I will be telling you the third process do"
+    },
+    {
+      "start": 503.22,
+      "duration": 7.08,
+      "text": "not worry about that so first time you get minus two so what you do is you go"
+    },
+    {
+      "start": 508.02,
+      "duration": 5.22,
+      "text": "to sum and say can you please add it to yourself can you please add it to"
+    },
+    {
+      "start": 511.56,
+      "duration": 7.08,
+      "text": "yourself and you're like okay I'll add it to myself once you have added this"
+    },
+    {
+      "start": 515.88,
+      "duration": 6.959,
+      "text": "minus 2 gets compared with the maximum yes it gets compared with the maximum"
+    },
+    {
+      "start": 520.5,
+      "duration": 6.779,
+      "text": "and it is better and it is better because intervene is super small so what"
+    },
+    {
+      "start": 525.839,
+      "duration": 6.361,
+      "text": "I'll do is I'll be like okay Maximo can you update yourself with"
+    },
+    {
+      "start": 529.74,
+      "duration": 8.039,
+      "text": "minus two is like sure I can but wait now tell me one thing if this is minus"
+    },
+    {
+      "start": 535.5,
+      "duration": 8.64,
+      "text": "if you move forward will it make sense to carry minus two"
+    },
+    {
+      "start": 541.98,
+      "duration": 7.62,
+      "text": "it will not why because if you carry minus 2 and you move forward to this sub"
+    },
+    {
+      "start": 546.839,
+      "duration": 8.761,
+      "text": "array this will be like minus 2 minus 3 which will give you a sum of minus five"
+    },
+    {
+      "start": 551.88,
+      "duration": 6.84,
+      "text": "correct but if you just take the single element"
+    },
+    {
+      "start": 556.5,
+      "duration": 9.0,
+      "text": "it will be minus 3. and the sum will be minus 3 and if you"
+    },
+    {
+      "start": 561.959,
+      "duration": 8.161,
+      "text": "took two elements the sum was minus 5 by the way minus 3 is greater than minus B"
+    },
+    {
+      "start": 567.42,
+      "duration": 7.26,
+      "text": "A lot of people get confused minus 3 is greater than minus 5. so will it make"
+    },
+    {
+      "start": 572.64,
+      "duration": 7.319,
+      "text": "sense to carry a minus because if you carry negative sum if you carry negative"
+    },
+    {
+      "start": 577.08,
+      "duration": 7.8,
+      "text": "sum forward the summation will always reduce will always reduce it is -3 since"
+    },
+    {
+      "start": 583.56,
+      "duration": 8.16,
+      "text": "you carried a negative it will always reduce so what you will do is at any"
+    },
+    {
+      "start": 587.82,
+      "duration": 9.0,
+      "text": "moment the sound is lesser than zero say no need to take it will only hamper my"
+    },
+    {
+      "start": 594.42,
+      "duration": 7.919,
+      "text": "sum in the future so I'll say reduce yourself to zero and then move so when I"
+    },
+    {
+      "start": 599.82,
+      "duration": 6.66,
+      "text": "move it's the first index so when I move to the minus 3 can I say I'll just add"
+    },
+    {
+      "start": 604.68,
+      "duration": 6.839,
+      "text": "it to the cell I will to add it the new sum will be -3 and now"
+    },
+    {
+      "start": 609.12,
+      "duration": 8.04,
+      "text": "I'll be like is minus 3 greater than minus 2. no it is not minus 2 is greater"
+    },
+    {
+      "start": 614.459,
+      "duration": 9.0,
+      "text": "than minus 3 so we will not replace and then we will move but before moving when"
+    },
+    {
+      "start": 620.58,
+      "duration": 8.64,
+      "text": "it makes sense no so we'll replace that to zero then we move to 4 then we move"
+    },
+    {
+      "start": 626.519,
+      "duration": 5.701,
+      "text": "to 4 and we will add it to the sum this time when you are adding to the sum"
+    },
+    {
+      "start": 630.54,
+      "duration": 6.299,
+      "text": "you're starting the sub array from here because there's no point in taking minus"
+    },
+    {
+      "start": 634.38,
+      "duration": 7.5,
+      "text": "3 because it will only reduce your sum so you start from four now when you're"
+    },
+    {
+      "start": 639.06,
+      "duration": 7.459,
+      "text": "starting from 4 can I say the maximum is now 4 just for betterment I'll just"
+    },
+    {
+      "start": 644.399,
+      "duration": 8.221,
+      "text": "erase it I can and then I'll move why will I"
+    },
+    {
+      "start": 650.279,
+      "duration": 7.081,
+      "text": "carry 4 because it's a positive sum it's a positive sum so I'll carry it now I"
+    },
+    {
+      "start": 654.899,
+      "duration": 7.321,
+      "text": "will add minus three a minus one so this one will become three this one will"
+    },
+    {
+      "start": 659.16,
+      "duration": 6.6,
+      "text": "become 3. now will it make any sense to carry three yes even if it's a negative"
+    },
+    {
+      "start": 664.86,
+      "duration": 6.719,
+      "text": "element these two elements together are still"
+    },
+    {
+      "start": 668.16,
+      "duration": 8.4,
+      "text": "giving us a positive value a positive addition so even if it's a minus one I"
+    },
+    {
+      "start": 674.1,
+      "duration": 7.859,
+      "text": "know I should not carry minus one but I will carry someone before minus one"
+    },
+    {
+      "start": 678.18,
+      "duration": 8.159,
+      "text": "which is 4. I cannot carry in Danny Ford but okay even if I have to include minus"
+    },
+    {
+      "start": 684.12,
+      "duration": 6.3,
+      "text": "one I'll still lose some value but I'll still have plus 3 with me which is still"
+    },
+    {
+      "start": 688.32,
+      "duration": 6.18,
+      "text": "of some addition to the sum of it will still increase the sum right cell carry"
+    },
+    {
+      "start": 692.399,
+      "duration": 6.301,
+      "text": "it I'll carry it and then I'll move to minus two the moment I move to minus 2"
+    },
+    {
+      "start": 696.24,
+      "duration": 5.52,
+      "text": "what will happen this will be 1 and we will compare with maximum it's not more"
+    },
+    {
+      "start": 700.44,
+      "duration": 6.54,
+      "text": "than but wait will I will I still carry yes you will"
+    },
+    {
+      "start": 704.7,
+      "duration": 7.02,
+      "text": "still carry why because even if you add two negatives to it it is still giving"
+    },
+    {
+      "start": 709.74,
+      "duration": 6.0,
+      "text": "you a plus one value addition to the sum which is"
+    },
+    {
+      "start": 713.399,
+      "duration": 7.921,
+      "text": "okay which is okay to me so I'll just move now next there's one so this will"
+    },
+    {
+      "start": 718.86,
+      "duration": 7.26,
+      "text": "increase to two two is not greater than maximum and it's still a positive value"
+    },
+    {
+      "start": 723.839,
+      "duration": 6.421,
+      "text": "so even if you carry all the four elements including negatives it is still"
+    },
+    {
+      "start": 728.399,
+      "duration": 5.821,
+      "text": "giving you a value addition of plus two now in The Next Step you will see how it"
+    },
+    {
+      "start": 732.18,
+      "duration": 7.8,
+      "text": "is beneficial the moment I move to the next it is a five so the moment you add"
+    },
+    {
+      "start": 736.74,
+      "duration": 8.159,
+      "text": "five you get seven and that 7 will be your new maximum now did you see what"
+    },
+    {
+      "start": 742.62,
+      "duration": 6.959,
+      "text": "advantage you had if you'd have just taken these two elements it would have"
+    },
+    {
+      "start": 746.279,
+      "duration": 6.321,
+      "text": "been six the reason you carried a positive one"
+    },
+    {
+      "start": 752.76,
+      "duration": 8.1,
+      "text": "as these three elements it was a value addition of plus 1 to the sum of six"
+    },
+    {
+      "start": 757.32,
+      "duration": 9.78,
+      "text": "that's why you will only neglect if it is going lesser than 0 otherwise you"
+    },
+    {
+      "start": 763.32,
+      "duration": 8.459,
+      "text": "will not neglect perfect next minus three so when you do minus 3 it'll be 4"
+    },
+    {
+      "start": 769.26,
+      "duration": 6.48,
+      "text": "that will be not greater than maximum so at the end of the day I can say that my"
+    },
+    {
+      "start": 773.82,
+      "duration": 6.36,
+      "text": "answer is 7 so that is what pronounce algorithm"
+    },
+    {
+      "start": 778.079,
+      "duration": 7.741,
+      "text": "says it's like Hey listen I don't care about anything I will simply move I'll"
+    },
+    {
+      "start": 782.94,
+      "duration": 7.8,
+      "text": "keep on adding and if it goes below zero I'll drop because it's of no"
+    },
+    {
+      "start": 788.7,
+      "duration": 7.92,
+      "text": "more significance to me that's how you will get the maximum sub I sum as seven"
+    },
+    {
+      "start": 794.579,
+      "duration": 7.021,
+      "text": "I will explain you how to find the sub array as well but as of now let's code"
+    },
+    {
+      "start": 798.6,
+      "duration": 6.84,
+      "text": "this one and then we will move to coding how to find that particular sub okay so"
+    },
+    {
+      "start": 804.12,
+      "duration": 4.26,
+      "text": "let's quote this off again the problem link will be in the description please"
+    },
+    {
+      "start": 806.94,
+      "duration": 9.06,
+      "text": "make sure you try out the problem from the problem link itself long long sum"
+    },
+    {
+      "start": 811.92,
+      "duration": 9.0,
+      "text": "equal to zero Maxi equal to not int you can take long Min okay because it's"
+    },
+    {
+      "start": 818.76,
+      "duration": 5.699,
+      "text": "given uh it find written the answer in Long now so just for safety I can take"
+    },
+    {
+      "start": 822.72,
+      "duration": 5.88,
+      "text": "this and now you will go ahead and say I 0 I lesser than n i plus plus now you"
+    },
+    {
+      "start": 826.92,
+      "duration": 5.94,
+      "text": "know one thing for sure every time you get in you wear adding up the sum and"
+    },
+    {
+      "start": 831.12,
+      "duration": 5.76,
+      "text": "when you are getting out you are saying if at any moment some was going lesser"
+    },
+    {
+      "start": 834.72,
+      "duration": 6.78,
+      "text": "than zero reinitialize sum to zero do not carry any negatives into your future"
+    },
+    {
+      "start": 839.399,
+      "duration": 5.821,
+      "text": "do not carry if it is positive then only carry otherwise do not and in the mid"
+    },
+    {
+      "start": 843.3,
+      "duration": 7.68,
+      "text": "Waterway are you doing you are saying hey if this sum is greater than maximum"
+    },
+    {
+      "start": 849.24,
+      "duration": 7.8,
+      "text": "can you go ahead and say maximum equal to sa perfect now you can at the end of"
+    },
+    {
+      "start": 853.86,
+      "duration": 7.5,
+      "text": "the day return this maximum and this you can run but wait in this particular"
+    },
+    {
+      "start": 859.44,
+      "duration": 5.699,
+      "text": "problem in this particular problem they have said"
+    },
+    {
+      "start": 862.68,
+      "duration": 6.599,
+      "text": "you're given an array you have to find the sum of the sub array including MP"
+    },
+    {
+      "start": 867.12,
+      "duration": 6.6,
+      "text": "sub array including empty sub array now let me take you to one more example"
+    },
+    {
+      "start": 871.2,
+      "duration": 8.52,
+      "text": "imagine it is minus 4 minus 2 minus 3 minus 1. in this case which is the link"
+    },
+    {
+      "start": 877.2,
+      "duration": 7.139,
+      "text": "according to our definition I can say this is the summary so I can say this"
+    },
+    {
+      "start": 882.12,
+      "duration": 7.56,
+      "text": "minus 1 is the sub array which gives me the maximum sum again minus 4 is not"
+    },
+    {
+      "start": 886.86,
+      "duration": 8.279,
+      "text": "greater than minus four so this sub array is but in this particular problem"
+    },
+    {
+      "start": 892.199,
+      "duration": 7.801,
+      "text": "they have explicitly mentioned if you do not find any sub array with greater than"
+    },
+    {
+      "start": 897.54,
+      "duration": 6.659,
+      "text": "zero sound then you just say fine I'll take an empty sub array and this is what"
+    },
+    {
+      "start": 901.98,
+      "duration": 5.58,
+      "text": "you call empty I I will not taken you I will not take any one if I do not take"
+    },
+    {
+      "start": 905.76,
+      "duration": 8.04,
+      "text": "any one it will be 0. so what you will do at the end is before returning if by"
+    },
+    {
+      "start": 910.26,
+      "duration": 7.439,
+      "text": "chance maximum is lesser than zero you will reinitialize that to zero stays up"
+    },
+    {
+      "start": 916.019,
+      "duration": 5.521,
+      "text": "because of this one because of this one where it states if none of them is"
+    },
+    {
+      "start": 919.8,
+      "duration": 5.94,
+      "text": "giving you a positive sum return 0 because you will take new one and then"
+    },
+    {
+      "start": 923.699,
+      "duration": 5.521,
+      "text": "you will go ahead and and say okay now I can easily go ahead and submit this"
+    },
+    {
+      "start": 927.12,
+      "duration": 7.74,
+      "text": "let's see it's running fine or not so guys what is the time complexity very"
+    },
+    {
+      "start": 931.5,
+      "duration": 8.3,
+      "text": "simple the time complexity is we go of N and the space complexity is we go of one"
+    },
+    {
+      "start": 937.98,
+      "duration": 5.039,
+      "text": "because we are not using any extra space whatsoever so once you get the optimal"
+    },
+    {
+      "start": 941.94,
+      "duration": 6.54,
+      "text": "solution to the interviewer the interview now might ask you a follow-up"
+    },
+    {
+      "start": 945.36,
+      "duration": 7.2,
+      "text": "question and that will be can you print the"
+    },
+    {
+      "start": 949.68,
+      "duration": 6.839,
+      "text": "sub array with the maximum sum and he might ask you to print any of those sub"
+    },
+    {
+      "start": 954.3,
+      "duration": 6.0,
+      "text": "arrays why do I say any of those there might be multiple sabaris okay so you"
+    },
+    {
+      "start": 958.74,
+      "duration": 6.599,
+      "text": "might ask you to print any of those sub arrays which will give you a maximum sum"
+    },
+    {
+      "start": 963.0,
+      "duration": 7.92,
+      "text": "now for this follow-up question you just have to slightly do some changes to the"
+    },
+    {
+      "start": 968.76,
+      "duration": 7.079,
+      "text": "given Port that we wrote which was finding out the maximum sum now what are"
+    },
+    {
+      "start": 973.199,
+      "duration": 8.101,
+      "text": "the changes let's quickly analyze the algorithm once again so what did we do"
+    },
+    {
+      "start": 978.899,
+      "duration": 7.081,
+      "text": "we had a maxi as into mean and we started the sum as 0 and we started from"
+    },
+    {
+      "start": 983.639,
+      "duration": 6.901,
+      "text": "the first and we had a minus 2 added correct and then we dropped"
+    },
+    {
+      "start": 988.56,
+      "duration": 6.0,
+      "text": "and then we made it 0 again and then we move to"
+    },
+    {
+      "start": 991.68,
+      "duration": 9.3,
+      "text": "-3 and then we added minus 3 and then when we moved to 4 we dropped it back to"
+    },
+    {
+      "start": 997.199,
+      "duration": 9.541,
+      "text": "zero and then we started from 4 we took 4 then we took minus one and we took"
+    },
+    {
+      "start": 1003.5,
+      "duration": 9.48,
+      "text": "minus 2 then we took one then we took five so did you see something"
+    },
+    {
+      "start": 1009.86,
+      "duration": 9.18,
+      "text": "we were always having zeros when we started even at this place sum was zero"
+    },
+    {
+      "start": 1016.16,
+      "duration": 9.0,
+      "text": "even at this place sum was zero even at this place sum was 0 and it went on went"
+    },
+    {
+      "start": 1021.139,
+      "duration": 8.7,
+      "text": "on went on so can I say whenever I am starting"
+    },
+    {
+      "start": 1026.179,
+      "duration": 10.201,
+      "text": "to form a new sub array with some greater than 0 I'm always starting with"
+    },
+    {
+      "start": 1032.9,
+      "duration": 11.399,
+      "text": "the sum 0. that is a short so what I can say is okay if"
+    },
+    {
+      "start": 1038.9,
+      "duration": 10.98,
+      "text": "sum is 0 I can say I'm starting off I'm starting off a new sub array whose sum"
+    },
+    {
+      "start": 1047.059,
+      "duration": 11.461,
+      "text": "has to be computed now what I'll add is this time I will add an answer start and"
+    },
+    {
+      "start": 1055.34,
+      "duration": 8.82,
+      "text": "answer end this is what I'll add like two new variables initially initialized"
+    },
+    {
+      "start": 1061.34,
+      "duration": 7.079,
+      "text": "as minus one now what I will do is I'll say if summation is greater than maximum"
+    },
+    {
+      "start": 1066.74,
+      "duration": 7.559,
+      "text": "I know this summation started at start I"
+    },
+    {
+      "start": 1071.36,
+      "duration": 8.22,
+      "text": "because whenever it was here it just marked the index at start and then then"
+    },
+    {
+      "start": 1076.94,
+      "duration": 7.8,
+      "text": "it went on it did not get re-initialized because I just do it when sum is 0 so"
+    },
+    {
+      "start": 1082.16,
+      "duration": 7.74,
+      "text": "whenever the sum exceeds your maximum what you will see is"
+    },
+    {
+      "start": 1086.66,
+      "duration": 10.74,
+      "text": "answer start will be the start that I initialized that is one thing that I am"
+    },
+    {
+      "start": 1092.0,
+      "duration": 10.559,
+      "text": "sure about and answer end will be what if you are standing at a correct if you"
+    },
+    {
+      "start": 1100.039,
+      "duration": 7.02,
+      "text": "are standing at a current index and you have some debt up and you're"
+    },
+    {
+      "start": 1104.66,
+      "duration": 8.94,
+      "text": "saying the sum is greater can I say the current end index is I"
+    },
+    {
+      "start": 1110.9,
+      "duration": 8.04,
+      "text": "this is which will keep a track yes this is what will keep a track of the sub"
+    },
+    {
+      "start": 1116.84,
+      "duration": 6.9,
+      "text": "array now if they ask you the longest shortage that can be implemented after"
+    },
+    {
+      "start": 1121.22,
+      "duration": 7.68,
+      "text": "this you can do it easily but I wanted to mention this this was important"
+    },
+    {
+      "start": 1125.96,
+      "duration": 7.62,
+      "text": "whenever the sum is 0 we are having a new start here we add a new start and"
+    },
+    {
+      "start": 1131.24,
+      "duration": 5.88,
+      "text": "then it ended because it's a minus then we had a new start again it ended"
+    },
+    {
+      "start": 1135.38,
+      "duration": 6.12,
+      "text": "because it had a minus again we had a new start here and it went on so it's"
+    },
+    {
+      "start": 1139.039,
+      "duration": 6.601,
+      "text": "very critical to understand a start is always when the sum is zero got it so"
+    },
+    {
+      "start": 1144.44,
+      "duration": 6.119,
+      "text": "will there be any change to the time complexity definitely not the time"
+    },
+    {
+      "start": 1147.679,
+      "duration": 7.261,
+      "text": "complexity still stays as Big O of N and the space complexity is Big of one for"
+    },
+    {
+      "start": 1153.02,
+      "duration": 5.279,
+      "text": "Cadance algorithm even if you find this a very sum or even if you find the"
+    },
+    {
+      "start": 1156.559,
+      "duration": 4.141,
+      "text": "subari I hope that's clear so coming back to the sheet I can say that this"
+    },
+    {
+      "start": 1159.44,
+      "duration": 4.859,
+      "text": "one is done and also this one why because we already have a video made on"
+    },
+    {
+      "start": 1162.26,
+      "duration": 5.34,
+      "text": "this and this video was made recently it might have a DP tag but it does not"
+    },
+    {
+      "start": 1165.919,
+      "duration": 5.941,
+      "text": "involves any random programming why because this video was the base of the"
+    },
+    {
+      "start": 1169.28,
+      "duration": 5.639,
+      "text": "next set of problems dp36 37 38 is the base of this one that is why you can"
+    },
+    {
+      "start": 1173.72,
+      "duration": 5.04,
+      "text": "just watch it without any brand knowledge of dynamic programming so I"
+    },
+    {
+      "start": 1177.14,
+      "duration": 4.44,
+      "text": "hope you have understood everything just in case you have please please do"
+    },
+    {
+      "start": 1180.26,
+      "duration": 4.08,
+      "text": "consider giving that like to us because it won't cost you anything but it does"
+    },
+    {
+      "start": 1182.9,
+      "duration": 3.899,
+      "text": "motivate me and to continue our tradition please do comment understood"
+    },
+    {
+      "start": 1185.419,
+      "duration": 4.38,
+      "text": "so that I get an idea that you've understood everything that I'm teaching"
+    },
+    {
+      "start": 1188.12,
+      "duration": 4.679,
+      "text": "and yes if you haven't followed me on social media that is Instagram Twitter"
+    },
+    {
+      "start": 1191.12,
+      "duration": 4.32,
+      "text": "LinkedIn all the links will be in the description make sure you try the"
+    },
+    {
+      "start": 1193.82,
+      "duration": 4.62,
+      "text": "problem from the problem Link in the description whenever this I'll be"
+    },
+    {
+      "start": 1197.0,
+      "duration": 7.919,
+      "text": "wrapping up this video let's read in the next video till then bye take care"
+    },
+    {
+      "start": 1200.799,
+      "duration": 8.941,
+      "text": "your heart is broken don't ever forget you're golden I will find foreign"
+    }
+  ]
+}

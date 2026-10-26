@@ -1,0 +1,128 @@
+[
+  {
+    "question": "What is the difference between memoization and tabulation?",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace expected_video_id and expected_around_sec after ingesting your playlist."
+  },
+  {
+    "question": "How does a sliding window technique work?",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  },
+  {
+    "question": "What is time complexity of binary search?",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  },
+  {
+    "question": "Explain BFS vs DFS traversal",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  },
+  {
+    "question": "What are the steps to implement dynamic programming?",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  },
+  {
+    "question": "How does a hash map resolve collisions?",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  },
+  {
+    "question": "What is quicksort and when should you use it?",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  },
+  {
+    "question": "How does merge sort guarantee O(n log n)?",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  },
+  {
+    "question": "What is the two pointer approach?",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  },
+  {
+    "question": "Explain heap data structure and its applications",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  },
+  {
+    "question": "What is a trie and how is it used for string search?",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  },
+  {
+    "question": "Explain Dijkstra's shortest path algorithm",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  },
+  {
+    "question": "What is backtracking and how does it differ from recursion?",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  },
+  {
+    "question": "How do you detect a cycle in a linked list?",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  },
+  {
+    "question": "What is a monotonic stack and when is it useful?",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  },
+  {
+    "question": "Explain union-find (disjoint set) data structure",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  },
+  {
+    "question": "What is amortized time complexity?",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  },
+  {
+    "question": "How does Kadane's algorithm find the maximum subarray sum?",
+    "expected_video_id": null,
+    "expected_around_sec": null,
+    "tolerance_sec": 60,
+    "notes": "Replace after ingestion."
+  }
+]

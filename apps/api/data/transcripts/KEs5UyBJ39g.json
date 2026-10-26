@@ -1,0 +1,4102 @@
+{
+  "video_id": "KEs5UyBJ39g",
+  "title": "Hashing | Maps | Time Complexity | Collisions | Division Rule of Hashing | Strivers A2Z DSA Course",
+  "total_segments": 819,
+  "segments": [
+    {
+      "start": 3.2,
+      "duration": 4.24,
+      "text": "Hey everyone, welcome back to the channel. I hope you guys are doing"
+    },
+    {
+      "start": 5.28,
+      "duration": 7.0,
+      "text": "extremely well. So, this is yet another lecture from the Strivers A2Z DSA"
+    },
+    {
+      "start": 9.68,
+      "duration": 7.08,
+      "text": "course, and this is India's most in-depth DS Algo course. Why do I say"
+    },
+    {
+      "start": 15.12,
+      "duration": 6.44,
+      "text": "that? Because you can check out all the free courses, all the paid batches, you"
+    },
+    {
+      "start": 19.12,
+      "duration": 8.28,
+      "text": "will not find any courses, any batches with 455 modules or 455 problems solved"
+    },
+    {
+      "start": 25.92,
+      "duration": 7.48,
+      "text": "in it. This is the reason I'm saying that this is India's probably world's"
+    },
+    {
+      "start": 30.44,
+      "duration": 7.64,
+      "text": "most in-depth DS Algo course. In the previous lectures, we have covered till"
+    },
+    {
+      "start": 35.44,
+      "duration": 7.48,
+      "text": "step 1.5. In this lecture, we will be covering basic hashing. Once I cover"
+    },
+    {
+      "start": 40.52,
+      "duration": 6.96,
+      "text": "this, we will be covering everything related to basics that we require in"
+    },
+    {
+      "start": 45.0,
+      "duration": 5.68,
+      "text": "order to start with DS Algo. So, without waiting, let's get started with the"
+    },
+    {
+      "start": 48.88,
+      "duration": 4.72,
+      "text": "hashing lecture. So, we're solving a lot of interview problems, isn't it? But"
+    },
+    {
+      "start": 52.36,
+      "duration": 4.72,
+      "text": "whenever you go for interviews, our first round will always be coding round."
+    },
+    {
+      "start": 55.28,
+      "duration": 5.28,
+      "text": "So, in order to clear that coding round, you have to actually give a lot of"
+    },
+    {
+      "start": 59.04,
+      "duration": 6.24,
+      "text": "similar coding rounds in your preparation. So, one such coding round"
+    },
+    {
+      "start": 62.48,
+      "duration": 7.24,
+      "text": "is Code Rush X by Newton School. This is India's biggest competitive programming"
+    },
+    {
+      "start": 67.56,
+      "duration": 5.96,
+      "text": "contest that is happening in the year. Why do I say that? Because it has prizes"
+    },
+    {
+      "start": 71.36,
+      "duration": 5.08,
+      "text": "worth 10 lakh rupees. So, what you need to do is there's a link in the"
+    },
+    {
+      "start": 74.56,
+      "duration": 4.68,
+      "text": "description. Go to that, and you can click on register. The moment you click"
+    },
+    {
+      "start": 77.64,
+      "duration": 5.36,
+      "text": "on register, you will get a form. You can sign up with Google, or you can fill"
+    },
+    {
+      "start": 80.68,
+      "duration": 7.72,
+      "text": "up your details. And the contest is on 28th of January. Now, just need to"
+    },
+    {
+      "start": 86.76,
+      "duration": 4.48,
+      "text": "register. Post that, you will be participating. There will be eight"
+    },
+    {
+      "start": 89.88,
+      "duration": 5.08,
+      "text": "questions that you have to solve in 3 hours. After that, there will be a"
+    },
+    {
+      "start": 92.92,
+      "duration": 5.68,
+      "text": "thorough plagiarism check, and the results will be announced. The first"
+    },
+    {
+      "start": 96.64,
+      "duration": 6.96,
+      "text": "prize is 1 lakh rupees. The second is 50,000, and so on. And there are a lot"
+    },
+    {
+      "start": 101.04,
+      "duration": 6.36,
+      "text": "of prizes for other people as well. Till the top 100, you can get a lot of"
+    },
+    {
+      "start": 105.4,
+      "duration": 5.76,
+      "text": "goodies. And going forward, you will also be getting a lot of gift vouchers."
+    },
+    {
+      "start": 109.52,
+      "duration": 5.24,
+      "text": "So, the prizes are worth 10 lakh rupees. So, what I will recommend you is the"
+    },
+    {
+      "start": 112.96,
+      "duration": 6.32,
+      "text": "link in the description. Make sure you go and register and participate in such"
+    },
+    {
+      "start": 116.92,
+      "duration": 5.76,
+      "text": "contests, because this will help you in your preparation journey. So, without"
+    },
+    {
+      "start": 120.92,
+      "duration": 6.52,
+      "text": "waiting, let's get back to the video. Now, when I talk about hashing, it is"
+    },
+    {
+      "start": 124.32,
+      "duration": 8.32,
+      "text": "one of the most important topics in DS algo. If you do not understand hashing,"
+    },
+    {
+      "start": 130.16,
+      "duration": 6.72,
+      "text": "you will not be able to solve a lot of problems in data structures and"
+    },
+    {
+      "start": 134.48,
+      "duration": 6.36,
+      "text": "algorithms. So, please do not miss this lecture because I'm going to teach you"
+    },
+    {
+      "start": 138.72,
+      "duration": 5.92,
+      "text": "hashing and I'll be using pseudo code. So, language will not matter. Everything"
+    },
+    {
+      "start": 143.04,
+      "duration": 6.08,
+      "text": "that I'll be teaching will be in terms of pseudo code because for loops are"
+    },
+    {
+      "start": 146.64,
+      "duration": 5.48,
+      "text": "similar in C++, similar in Java and Python. So, once you understand the"
+    },
+    {
+      "start": 150.8,
+      "duration": 4.84,
+      "text": "pseudo code, once you understand the concept, you can actually code it in any"
+    },
+    {
+      "start": 154.16,
+      "duration": 5.56,
+      "text": "of the languages that you are following this particular course in. So, in order"
+    },
+    {
+      "start": 158.12,
+      "duration": 5.56,
+      "text": "to understand hashing, let's take uh initial problem. Imagine you're given"
+    },
+    {
+      "start": 161.76,
+      "duration": 6.72,
+      "text": "this particular array. And now, suddenly I come up and say, \"Hey, can you tell me"
+    },
+    {
+      "start": 166.0,
+      "duration": 7.32,
+      "text": "how many times does one appear in the array?\" And you can say that, \"Hey, one"
+    },
+    {
+      "start": 170.92,
+      "duration": 6.16,
+      "text": "appears twice in the array.\" Right? Because one is appearing once here and"
+    },
+    {
+      "start": 175.56,
+      "duration": 5.52,
+      "text": "one is appearing once here. So, one appears twice in the array. And again,"
+    },
+    {
+      "start": 179.12,
+      "duration": 6.44,
+      "text": "come up and say, \"Hey, can you please tell me how many times does three appear"
+    },
+    {
+      "start": 183.8,
+      "duration": 5.68,
+      "text": "in the array?\" And you'll be saying, \"Three appears once.\" Now, imagine I"
+    },
+    {
+      "start": 187.92,
+      "duration": 5.44,
+      "text": "again come up and say, \"Hey, can you tell me how many times four appears in"
+    },
+    {
+      "start": 192.0,
+      "duration": 4.44,
+      "text": "the array?\" You'll be saying, \"It doesn't appear in the array.\" Now,"
+    },
+    {
+      "start": 194.8,
+      "duration": 5.48,
+      "text": "imagine I again come up and say, \"Hey, can you tell me how many times does two"
+    },
+    {
+      "start": 198.8,
+      "duration": 5.64,
+      "text": "appear in the array?\" You'll be like, \"Two appears twice.\" Imagine I again"
+    },
+    {
+      "start": 202.12,
+      "duration": 6.8,
+      "text": "come up and say, \"Hey, how many times does 10 appear in the array?\" You'll be"
+    },
+    {
+      "start": 206.959,
+      "duration": 7.081,
+      "text": "like, \"Hey, listen. 10 doesn't appear in the array.\" So, 10 is appearing zero"
+    },
+    {
+      "start": 210.88,
+      "duration": 7.48,
+      "text": "times. So, given an array and you ask a lot of times. Very, very important"
+    },
+    {
+      "start": 216.0,
+      "duration": 6.239,
+      "text": "points. Very, very important point. You ask a lot of times. First, you might be"
+    },
+    {
+      "start": 220.519,
+      "duration": 6.201,
+      "text": "asked for any given number, then any other number, then again the same"
+    },
+    {
+      "start": 223.64,
+      "duration": 7.12,
+      "text": "number. You could be asked for any given number of times for any number. And they"
+    },
+    {
+      "start": 229.0,
+      "duration": 5.28,
+      "text": "might ask you how many times it appears. And you have to tell. Now, what is the"
+    },
+    {
+      "start": 231.88,
+      "duration": 5.36,
+      "text": "first approach that comes to your mind when you think about it? Because you"
+    },
+    {
+      "start": 235.64,
+      "duration": 7.72,
+      "text": "know for loops, right? The first approach that comes up is, hey, if I'm"
+    },
+    {
+      "start": 239.28,
+      "duration": 8.08,
+      "text": "given if someone says the number is one, the first approach that comes up to my"
+    },
+    {
+      "start": 245.2,
+      "duration": 5.68,
+      "text": "mind is I will iterate through the entire array. What I'll do is I'll take"
+    },
+    {
+      "start": 249.04,
+      "duration": 6.12,
+      "text": "this one and I'll compare it with the first guy, one. And I say, yes. And I'll"
+    },
+    {
+      "start": 253.32,
+      "duration": 6.8,
+      "text": "take a counter variable which is zero. I'll say, this is equal to this, so I"
+    },
+    {
+      "start": 257.32,
+      "duration": 6.08,
+      "text": "update it to one. Next I'll go to two and I'll say, is this equal to one? I'll"
+    },
+    {
+      "start": 261.6,
+      "duration": 5.64,
+      "text": "say, no. Next I'll go to one and I'll say, this is equal to this. So the"
+    },
+    {
+      "start": 265.2,
+      "duration": 6.24,
+      "text": "counter which was one previously will be updated to two. Next I'll go to this and"
+    },
+    {
+      "start": 269.56,
+      "duration": 4.8,
+      "text": "I'll say, is this equal to this? No. Next I'll go to this and I'll say, is"
+    },
+    {
+      "start": 272.8,
+      "duration": 6.68,
+      "text": "this equal to this? And no. So the counter stays at two. So if I have to"
+    },
+    {
+      "start": 276.88,
+      "duration": 8.2,
+      "text": "write the brute force method in order to find how many times it appears, can I"
+    },
+    {
+      "start": 282.32,
+      "duration": 6.24,
+      "text": "say it will be a function which takes a number"
+    },
+    {
+      "start": 286.56,
+      "duration": 6.4,
+      "text": "I'm writing a plain pseudo code. It will be a function which takes a number,"
+    },
+    {
+      "start": 290.68,
+      "duration": 8.0,
+      "text": "probably an integer function, because it has to return how many times it appears."
+    },
+    {
+      "start": 295.2,
+      "duration": 7.28,
+      "text": "And you can be like, for loop, int I, or rather, you also need the array in the"
+    },
+    {
+      "start": 300.4,
+      "duration": 4.56,
+      "text": "function. So go ahead and take the array as well."
+    },
+    {
+      "start": 305.44,
+      "duration": 6.32,
+      "text": "int function and probably array. Again, I'm writing the pseudo code, guys. I'm"
+    },
+    {
+      "start": 309.2,
+      "duration": 6.6,
+      "text": "just writing the pseudo code. Please focus on the logic. So can I say"
+    },
+    {
+      "start": 314.16,
+      "duration": 7.36,
+      "text": "probably I'll take a counter equal to zero and I'll say for I will loop from"
+    },
+    {
+      "start": 319.0,
+      "duration": 6.32,
+      "text": "zero and I'll loop till the last of the array. You already know this. How do you"
+    },
+    {
+      "start": 323.64,
+      "duration": 8.12,
+      "text": "loop in the array, right? And you will say, hey, if"
+    },
+    {
+      "start": 327.4,
+      "duration": 11.08,
+      "text": "array of I is equal to equal to number, can I say counter equal to counter plus"
+    },
+    {
+      "start": 335.96,
+      "duration": 7.8,
+      "text": "one? And I can end this for loop and I'll say return"
+    },
+    {
+      "start": 340.72,
+      "duration": 7.12,
+      "text": "counter. And this will be my code. Can I say this? Yes, I can say this. Why does"
+    },
+    {
+      "start": 346.16,
+      "duration": 6.44,
+      "text": "this work? Because it's very simple. If you're given a number one, that number"
+    },
+    {
+      "start": 350.08,
+      "duration": 6.72,
+      "text": "one is given over here and the array is given over here and you iterate through"
+    },
+    {
+      "start": 354.36,
+      "duration": 5.92,
+      "text": "the entire array. What is zeroth index? This is this. What is after this first"
+    },
+    {
+      "start": 358.68,
+      "duration": 5.72,
+      "text": "index? This is this. And what are you doing? You're saying array of zero equal"
+    },
+    {
+      "start": 362.72,
+      "duration": 5.84,
+      "text": "to equal to one, then you're increasing the counter. So, eventually you will"
+    },
+    {
+      "start": 366.2,
+      "duration": 6.92,
+      "text": "iterate through the entire array and the counter value will be updated at the end"
+    },
+    {
+      "start": 370.84,
+      "duration": 6.56,
+      "text": "of the for loop. Once it is updated, you return the counter. Correct? So, in"
+    },
+    {
+      "start": 375.32,
+      "duration": 6.0,
+      "text": "order to find how many times one appears in the array, what you can say is, \"Hey"
+    },
+    {
+      "start": 379.36,
+      "duration": 5.4,
+      "text": "function, take one and take this particular array and tell me how many"
+    },
+    {
+      "start": 383.04,
+      "duration": 5.12,
+      "text": "times it appears.\" And it will return you two. Now, to find out how many times"
+    },
+    {
+      "start": 386.56,
+      "duration": 4.84,
+      "text": "three appears, you'll say, \"Func- Hey function, take three and take this"
+    },
+    {
+      "start": 389.8,
+      "duration": 8.119,
+      "text": "particular array and say how many times does three appear?\" And it does a linear"
+    },
+    {
+      "start": 395.12,
+      "duration": 6.92,
+      "text": "iteration. It goes to every element and checks if it is equal and it counts it."
+    },
+    {
+      "start": 400.2,
+      "duration": 6.84,
+      "text": "And at the end of the day, it returns the count. Simple. So, if I have to ask"
+    },
+    {
+      "start": 404.4,
+      "duration": 7.88,
+      "text": "you, what is the time complexity? Can I say I'm running a loop for big O of n"
+    },
+    {
+      "start": 410.12,
+      "duration": 6.36,
+      "text": "times? And there are certain number of operations that we are doing, but we do"
+    },
+    {
+      "start": 413.68,
+      "duration": 7.6,
+      "text": "not calculate that in time complexity. So, can I say I'm running the loop for n"
+    },
+    {
+      "start": 418.44,
+      "duration": 9.52,
+      "text": "times? Thereby, the time that I'm taking in order to compute how many times a"
+    },
+    {
+      "start": 424.4,
+      "duration": 9.2,
+      "text": "number appears is big O of n. So, for this, I will take big O of n. For this,"
+    },
+    {
+      "start": 431.48,
+      "duration": 7.56,
+      "text": "I will take another big O of n. For this, I'll take another big O of n. For"
+    },
+    {
+      "start": 436.28,
+      "duration": 8.28,
+      "text": "this, I'll take another big O of n. For this, I'll take another big O of n."
+    },
+    {
+      "start": 441.52,
+      "duration": 7.48,
+      "text": "So, can I say for five times, if I have to do five times, like these are five"
+    },
+    {
+      "start": 446.48,
+      "duration": 7.84,
+      "text": "numbers, for five numbers, if I have to find how many times each of these"
+    },
+    {
+      "start": 452.0,
+      "duration": 9.96,
+      "text": "numbers appear, can I say the time complexity is five into big O of n? I"
+    },
+    {
+      "start": 457.96,
+      "duration": 9.36,
+      "text": "can say. And imagine if I give you a lot of such numbers"
+    },
+    {
+      "start": 463.6,
+      "duration": 8.04,
+      "text": "like a lot of such numbers If I give you a lot of such numbers and"
+    },
+    {
+      "start": 469.4,
+      "duration": 6.96,
+      "text": "imagine there are Q numbers. I give you Q numbers and for every Q number, sorry,"
+    },
+    {
+      "start": 474.4,
+      "duration": 8.52,
+      "text": "for every number you have to tell me how many times it appears. Can I say the"
+    },
+    {
+      "start": 478.4,
+      "duration": 8.84,
+      "text": "time complexity will be Q into N? Can I say the time complexity will be Q"
+    },
+    {
+      "start": 484.56,
+      "duration": 7.72,
+      "text": "into N because for every time you're taking a for loop and computing it. So,"
+    },
+    {
+      "start": 490.28,
+      "duration": 5.68,
+      "text": "thereby the time complexity will be Q because there are Q numbers and for"
+    },
+    {
+      "start": 494.08,
+      "duration": 8.32,
+      "text": "every time you're computing N. So, the time complexity boils down to Q into N."
+    },
+    {
+      "start": 499.88,
+      "duration": 7.36,
+      "text": "And this is something which might not be good if imagine Q is very large."
+    },
+    {
+      "start": 505.0,
+      "duration": 6.0,
+      "text": "Imagine, just imagine I I'm giving you Q to be"
+    },
+    {
+      "start": 509.0,
+      "duration": 6.36,
+      "text": "10 to the power 5. I'm giving you 10 to the power power 5 numbers and imagine I"
+    },
+    {
+      "start": 513.44,
+      "duration": 7.12,
+      "text": "give you an array size. I give you a huge array of 10 to the power 5 size."
+    },
+    {
+      "start": 518.32,
+      "duration": 6.76,
+      "text": "And what will happen then? It will be big O of 10 to the power 5 because 10 to"
+    },
+    {
+      "start": 523.2,
+      "duration": 5.16,
+      "text": "the power 5 numbers will be there and the array size is 10 to the power 5"
+    },
+    {
+      "start": 526.4,
+      "duration": 6.88,
+      "text": "because it's a huge array. So, the number of operations will be 10 to the"
+    },
+    {
+      "start": 530.64,
+      "duration": 6.84,
+      "text": "power 10 and the number of operations is 10 to the power 10. How many time uh"
+    },
+    {
+      "start": 535.76,
+      "duration": 7.72,
+      "text": "like how much time will it take? If you remember, I told you 10 to the power 8"
+    },
+    {
+      "start": 540.4,
+      "duration": 7.52,
+      "text": "roughly takes around 1 second and most of the problems you'll find on DS Algo"
+    },
+    {
+      "start": 545.8,
+      "duration": 5.8,
+      "text": "will be taking 1 second or 2 second. So, if I'm taking 10 to the power 10"
+    },
+    {
+      "start": 549.24,
+      "duration": 6.96,
+      "text": "operations how many time how much time will it take? It will take 10 to the"
+    },
+    {
+      "start": 553.88,
+      "duration": 6.32,
+      "text": "power 10 seconds. We'll take approximately"
+    },
+    {
+      "start": 557.72,
+      "duration": 8.48,
+      "text": "100 seconds. How do I get that? Very simple. If 10 to the power 8 takes 1"
+    },
+    {
+      "start": 562.36,
+      "duration": 8.24,
+      "text": "second, then one operation will take 1 second by 10 to the power 8, then 10 to"
+    },
+    {
+      "start": 568.2,
+      "duration": 6.28,
+      "text": "the power 10 operation will take 1 by 10 to the power 8 into 10 to the power 10,"
+    },
+    {
+      "start": 572.72,
+      "duration": 6.04,
+      "text": "which is nothing but 10 to the power square, which is nothing but 100"
+    },
+    {
+      "start": 576.68,
+      "duration": 7.2,
+      "text": "seconds. So, 10 to the power 10 will take 100 seconds, which is a lot of"
+    },
+    {
+      "start": 581.44,
+      "duration": 7.84,
+      "text": "time. You cannot wait for 1 and 1/2 minutes for a program to execute. This"
+    },
+    {
+      "start": 586.8,
+      "duration": 6.88,
+      "text": "is where something like hashing comes in. It's a technique which will help you"
+    },
+    {
+      "start": 591.04,
+      "duration": 6.8,
+      "text": "to do it in a much faster way. So, if I have to define hashing in extremely"
+    },
+    {
+      "start": 595.4,
+      "duration": 9.04,
+      "text": "naive terms, what is it? It is something like pre-storing"
+    },
+    {
+      "start": 601.64,
+      "duration": 7.32,
+      "text": "and fetching. This is what hashing is. Pre-store"
+    },
+    {
+      "start": 606.52,
+      "duration": 5.88,
+      "text": "something and fetch when required. Let's understand this in depth."
+    },
+    {
+      "start": 610.84,
+      "duration": 6.92,
+      "text": "Now, this is an array, okay? Now, imagine the problem statement states the"
+    },
+    {
+      "start": 615.68,
+      "duration": 5.84,
+      "text": "array will at the max have numbers till 12"
+    },
+    {
+      "start": 618.88,
+      "duration": 5.96,
+      "text": "or 15. Let's say 12. At the max, it will have 12."
+    },
+    {
+      "start": 623.24,
+      "duration": 7.2,
+      "text": "What does it mean? Over here, you're seeing 1 2 1 3. So, at max over here, it"
+    },
+    {
+      "start": 627.8,
+      "duration": 6.32,
+      "text": "is three. But, imagine a problem statement where I state"
+    },
+    {
+      "start": 632.12,
+      "duration": 5.84,
+      "text": "I'll give you an array, and the array at max will have 12."
+    },
+    {
+      "start": 635.68,
+      "duration": 7.28,
+      "text": "Over here, it is having three at max, but the array can have at max of 12. So,"
+    },
+    {
+      "start": 640.68,
+      "duration": 8.76,
+      "text": "what hashing says is, \"Okay, I know I can have numbers from 0 1 2 3 till 12.\""
+    },
+    {
+      "start": 647.0,
+      "duration": 7.2,
+      "text": "So, what I will do is I will create another array, okay?"
+    },
+    {
+      "start": 651.52,
+      "duration": 6.44,
+      "text": "Remember this. I'll create another array and I'll call this as"
+    },
+    {
+      "start": 656.48,
+      "duration": 5.12,
+      "text": "hash array. And in this hash array, what I'll do is"
+    },
+    {
+      "start": 660.24,
+      "duration": 4.0,
+      "text": "I'll say zero one"
+    },
+    {
+      "start": 662.72,
+      "duration": 4.92,
+      "text": "two. So, what I'll do is I'll create an array"
+    },
+    {
+      "start": 665.6,
+      "duration": 6.44,
+      "text": "of size 13. And I know the indexing starts from zero, and the indexing will"
+    },
+    {
+      "start": 669.6,
+      "duration": 7.64,
+      "text": "go on till 12. And I'll assign everything as zero initially."
+    },
+    {
+      "start": 675.16,
+      "duration": 6.52,
+      "text": "And this is something which I'll call as hash array. This is something which I'll"
+    },
+    {
+      "start": 679.28,
+      "duration": 7.08,
+      "text": "call as hash array, or you can call it as a frequency array as well. Now, what"
+    },
+    {
+      "start": 684.04,
+      "duration": 5.64,
+      "text": "I will do is I will do some pre-calculation. Remember this. I will"
+    },
+    {
+      "start": 688.52,
+      "duration": 5.36,
+      "text": "do some pre-calculation."
+    },
+    {
+      "start": 691.72,
+      "duration": 7.4,
+      "text": "Now, what is this pre-calculation? It's very simple. I go to the first number,"
+    },
+    {
+      "start": 696.76,
+      "duration": 6.12,
+      "text": "which is one, and I say, \"Okay, you are one. So, I'll go to the first index, and"
+    },
+    {
+      "start": 701.6,
+      "duration": 5.4,
+      "text": "I'll say, 'Hey, can you just remember that I have one"
+    },
+    {
+      "start": 706.08,
+      "duration": 4.12,
+      "text": "one?' So, he will say, \"Okay, I'll remember"
+    },
+    {
+      "start": 709.0,
+      "duration": 4.76,
+      "text": "you have one one.\" Next, I'll go to this two."
+    },
+    {
+      "start": 711.92,
+      "duration": 5.48,
+      "text": "So, it will come to this two and say, \"Hey, can you remember I have one two?\""
+    },
+    {
+      "start": 716.12,
+      "duration": 5.16,
+      "text": "He'll say, \"Okay.\" Next, he'll go to this one,"
+    },
+    {
+      "start": 719.0,
+      "duration": 6.52,
+      "text": "and he'll say, \"Go to one and say that he has one more one.\" He goes to one and"
+    },
+    {
+      "start": 723.32,
+      "duration": 5.28,
+      "text": "says, \"You have one more one.\" He says, \"Okay,"
+    },
+    {
+      "start": 726.88,
+      "duration": 5.0,
+      "text": "I know I have two ones.\" He'll go to three and say, \"You go and"
+    },
+    {
+      "start": 730.32,
+      "duration": 7.24,
+      "text": "remember you have one three.\" He will do that. He goes to two again,"
+    },
+    {
+      "start": 734.6,
+      "duration": 7.88,
+      "text": "says, \"Go and remember you have one two.\" So,"
+    },
+    {
+      "start": 739.44,
+      "duration": 6.72,
+      "text": "two increases to two. So, apparently, the moment"
+    },
+    {
+      "start": 743.68,
+      "duration": 7.12,
+      "text": "you have traversed for all the elements in the array,"
+    },
+    {
+      "start": 747.28,
+      "duration": 7.84,
+      "text": "the hash array, if you properly observe, in one index, because one is the number"
+    },
+    {
+      "start": 753.64,
+      "duration": 4.92,
+      "text": "representation, in one it states,"
+    },
+    {
+      "start": 756.76,
+      "duration": 4.6,
+      "text": "\"I'm appearing twice.\" In two, it states, \"I'm appearing"
+    },
+    {
+      "start": 760.36,
+      "duration": 5.88,
+      "text": "twice.\" In three, it states, \"I'm appearing"
+    },
+    {
+      "start": 763.2,
+      "duration": 7.6,
+      "text": "once.\" And all the others are marked as zero, because they do not appear. So,"
+    },
+    {
+      "start": 768.72,
+      "duration": 6.119,
+      "text": "now, this is the pre-store that you have done. This is the pre-store. This is the"
+    },
+    {
+      "start": 772.76,
+      "duration": 6.48,
+      "text": "pre-fetching that you have done. Now, what will happen? You come over here,"
+    },
+    {
+      "start": 777.24,
+      "duration": 5.84,
+      "text": "and you say, \"Hey, listen. How many times one appears?\""
+    },
+    {
+      "start": 780.8,
+      "duration": 6.08,
+      "text": "You do not loop and find out how many times one appears. What do you say is,"
+    },
+    {
+      "start": 785.4,
+      "duration": 5.36,
+      "text": "\"Hey, how many times one appear?\" I don't I have done a pre-fetching. I'll"
+    },
+    {
+      "start": 789.2,
+      "duration": 6.639,
+      "text": "go to one and I'll say, \"It appears twice.\" I get twice. For this one, I go"
+    },
+    {
+      "start": 794.04,
+      "duration": 7.08,
+      "text": "and say how many times it appears, and I'll get this value at hash of one."
+    },
+    {
+      "start": 799.08,
+      "duration": 7.16,
+      "text": "Instead of iterating in the entire array, I say"
+    },
+    {
+      "start": 803.08,
+      "duration": 8.0,
+      "text": "hash of one, and it tells me two. For this three, I'll say hash of three"
+    },
+    {
+      "start": 809.24,
+      "duration": 7.16,
+      "text": "and it will give me one. For this four, I'll say hash of four and"
+    },
+    {
+      "start": 813.76,
+      "duration": 6.28,
+      "text": "it will tell me zero. For this two, I'll do hash of two, it will give me two. For"
+    },
+    {
+      "start": 818.4,
+      "duration": 7.04,
+      "text": "this 10, I'll do hash of 10, it will give me zero. For this 12, I'll do hash"
+    },
+    {
+      "start": 822.48,
+      "duration": 7.0,
+      "text": "of 12, it will give me zero. So, can I say"
+    },
+    {
+      "start": 826.48,
+      "duration": 6.64,
+      "text": "I just did a single, can I say I just did a single pre-computation"
+    },
+    {
+      "start": 831.88,
+      "duration": 7.4,
+      "text": "and that apparently solved all of my queries in"
+    },
+    {
+      "start": 836.64,
+      "duration": 5.24,
+      "text": "one go. If I have to code this up, can I say"
+    },
+    {
+      "start": 840.12,
+      "duration": 7.64,
+      "text": "I'll first be given the size of the array. Imagine this is five size array"
+    },
+    {
+      "start": 844.36,
+      "duration": 5.76,
+      "text": "and 1 3 2 1 and 3. I'm given this array. Then probably I'll give you the number"
+    },
+    {
+      "start": 849.2,
+      "duration": 4.68,
+      "text": "of numbers for whom I require how many"
+    },
+    {
+      "start": 852.0,
+      "duration": 6.12,
+      "text": "times they appear. I tell you I need for five numbers. And the number is first"
+    },
+    {
+      "start": 855.8,
+      "duration": 6.68,
+      "text": "I'll say how many times one appears. Next I'll say how many times, let's say,"
+    },
+    {
+      "start": 860.36,
+      "duration": 5.52,
+      "text": "four appears. Next time, how many times two appears. Next time, how many times"
+    },
+    {
+      "start": 864.28,
+      "duration": 7.4,
+      "text": "three appears. Next time, how many times 12 appears. So, five numbers for which I"
+    },
+    {
+      "start": 869.0,
+      "duration": 7.52,
+      "text": "have to find how many times they appear. So, this is the size of the array. This"
+    },
+    {
+      "start": 874.04,
+      "duration": 7.56,
+      "text": "is the array. How many numbers, like, how many queries are you giving? And"
+    },
+    {
+      "start": 878.4,
+      "duration": 5.6,
+      "text": "these are the queries. 1 4 2 3 12. Tell me how many times one appears. Tell me"
+    },
+    {
+      "start": 882.8,
+      "duration": 3.88,
+      "text": "how many times four appears. Tell me how many times two appears. Tell me how many"
+    },
+    {
+      "start": 885.16,
+      "duration": 4.48,
+      "text": "times three appears. Tell me how many times 12 appears."
+    },
+    {
+      "start": 887.92,
+      "duration": 6.04,
+      "text": "So, I need to take all of these inputs. So, it's a very simple way. First N and"
+    },
+    {
+      "start": 892.04,
+      "duration": 6.88,
+      "text": "then C++ Then you declare the array of size N."
+    },
+    {
+      "start": 897.08,
+      "duration": 7.12,
+      "text": "And then you say for I and D I equal to zero, I less than N, I plus plus. Then"
+    },
+    {
+      "start": 901.64,
+      "duration": 5.72,
+      "text": "you go across and say C++ array of I. Perfect."
+    },
+    {
+      "start": 905.24,
+      "duration": 7.76,
+      "text": "You've done this. What's the next step? If you take the query, let's First I'm"
+    },
+    {
+      "start": 909.76,
+      "duration": 8.04,
+      "text": "taking up all the inputs, okay? C++ Q. So, you can run a while loop like Q"
+    },
+    {
+      "start": 915.56,
+      "duration": 8.16,
+      "text": "minus minus. And then you can say take me the number"
+    },
+    {
+      "start": 920.16,
+      "duration": 7.08,
+      "text": "and C++ number. So, this is what is the input."
+    },
+    {
+      "start": 925.0,
+      "duration": 6.04,
+      "text": "First, the array, then the queries, and for every query, the number. Now, you"
+    },
+    {
+      "start": 928.96,
+      "duration": 7.4,
+      "text": "need to tell me how many times the number appears. So, this is where you do"
+    },
+    {
+      "start": 933.88,
+      "duration": 8.4,
+      "text": "some pre-compute, and this is the fetch method. This is where you fetch. So, can"
+    },
+    {
+      "start": 939.16,
+      "duration": 8.68,
+      "text": "I say for pre-computation, I need hash? I need a hash. And over here, for"
+    },
+    {
+      "start": 945.24,
+      "duration": 8.96,
+      "text": "simplicity purpose, let's take 13 because I know at max the size can be"
+    },
+    {
+      "start": 951.44,
+      "duration": 7.56,
+      "text": "till 12. Whatever the problem states, if the problem states the maximum size can"
+    },
+    {
+      "start": 957.04,
+      "duration": 6.12,
+      "text": "be till 10 to the power five, then you will go across and say 10 to the power"
+    },
+    {
+      "start": 960.92,
+      "duration": 6.04,
+      "text": "five. If the problem states 10 to the power six, you go across and declare it."
+    },
+    {
+      "start": 965.28,
+      "duration": 7.12,
+      "text": "Over here, I've kept it simple. I've said that maximum size will be 12. So, I"
+    },
+    {
+      "start": 969.72,
+      "duration": 6.96,
+      "text": "require a size 13 because in order to have the 12th index, I need"
+    },
+    {
+      "start": 974.68,
+      "duration": 7.48,
+      "text": "a size of 13 because the last array index is 12. All of us know that. Now,"
+    },
+    {
+      "start": 980.16,
+      "duration": 6.16,
+      "text": "the pre-computation was very simple. I will go like this to the array. This"
+    },
+    {
+      "start": 984.32,
+      "duration": 7.08,
+      "text": "is the iteration of the array. Now, I know for array element, I have to go to"
+    },
+    {
+      "start": 988.44,
+      "duration": 6.96,
+      "text": "that index and do a plus one. So, I say, \"Hey, go to that index, which is array"
+    },
+    {
+      "start": 993.48,
+      "duration": 7.04,
+      "text": "of I, because that is the index where I have to go.\" And I have to tell him,"
+    },
+    {
+      "start": 997.64,
+      "duration": 7.4,
+      "text": "\"Can you increase your value by one?\" And he increases because previously it"
+    },
+    {
+      "start": 1002.36,
+      "duration": 7.52,
+      "text": "was zero. And he will Every number it goes to that index and says plus equal"
+    },
+    {
+      "start": 1007.48,
+      "duration": 6.64,
+      "text": "to one. Once this is done, now, I have my hash array ready. So, if"
+    },
+    {
+      "start": 1012.28,
+      "duration": 6.52,
+      "text": "I go back to the iPad, can I say I have this particular hash array ready after"
+    },
+    {
+      "start": 1016.28,
+      "duration": 7.2,
+      "text": "the pre-computation? Because one means hash of one plus equal to one. It goes"
+    },
+    {
+      "start": 1021.28,
+      "duration": 6.36,
+      "text": "to this and does a one. And similarly for this number, similarly for this, for"
+    },
+    {
+      "start": 1024.959,
+      "duration": 5.761,
+      "text": "this, and for this. This hash array is ready. The input is different, but it's"
+    },
+    {
+      "start": 1029.839,
+      "duration": 4.721,
+      "text": "okay. Once the hash array is ready, you have"
+    },
+    {
+      "start": 1032.68,
+      "duration": 5.84,
+      "text": "the number, you just fetch it. So, you say see out of"
+    },
+    {
+      "start": 1036.52,
+      "duration": 5.36,
+      "text": "hash of number. This is the number of times it"
+    },
+    {
+      "start": 1040.439,
+      "duration": 5.88,
+      "text": "appears. And you can just go ahead and do this."
+    },
+    {
+      "start": 1043.439,
+      "duration": 7.201,
+      "text": "I'll go ahead and quickly run this and see if it is running fine."
+    },
+    {
+      "start": 1048.439,
+      "duration": 5.921,
+      "text": "If you see, this these are the answers. How many times one appears? Twice. How"
+    },
+    {
+      "start": 1052.68,
+      "duration": 4.68,
+      "text": "many times four appears? Zero. How many times two appears? Once. How many times"
+    },
+    {
+      "start": 1056.12,
+      "duration": 6.16,
+      "text": "three appears? Twice. How many times 12 appears? Zero."
+    },
+    {
+      "start": 1059.92,
+      "duration": 7.56,
+      "text": "Depending on what is the maximum size of the array, you declare the hash."
+    },
+    {
+      "start": 1065.76,
+      "duration": 5.52,
+      "text": "Now, question that might come up to your mind. Striver,"
+    },
+    {
+      "start": 1069.68,
+      "duration": 6.76,
+      "text": "in this you said the array could be having a max element"
+    },
+    {
+      "start": 1073.8,
+      "duration": 7.16,
+      "text": "till 12. So, it is very obvious that you declare an array of size 13 because the"
+    },
+    {
+      "start": 1078.28,
+      "duration": 7.36,
+      "text": "last index then we will get as 12 and we can keep how many times 12 appears. But,"
+    },
+    {
+      "start": 1084.48,
+      "duration": 4.48,
+      "text": "what I tell you that the maximum array"
+    },
+    {
+      "start": 1087.88,
+      "duration": 5.24,
+      "text": "element can be till 10 to the power 9. Like, it"
+    },
+    {
+      "start": 1091.08,
+      "duration": 5.88,
+      "text": "can have numbers till 10 to the power 9 or maybe 10 to the power 12 or maybe 10"
+    },
+    {
+      "start": 1094.84,
+      "duration": 7.84,
+      "text": "to the power 15. What if they have larger numbers? Can we declare an array"
+    },
+    {
+      "start": 1100.28,
+      "duration": 6.96,
+      "text": "of size 10 to the power 9 plus one because apparently that is what we are"
+    },
+    {
+      "start": 1104.44,
+      "duration": 8.96,
+      "text": "seeing. If there was an array of size at max till 12, we declared a size 13."
+    },
+    {
+      "start": 1110.8,
+      "duration": 6.52,
+      "text": "So, if the array has max element till 10 to the power 9,"
+    },
+    {
+      "start": 1114.92,
+      "duration": 8.4,
+      "text": "can we declare an array of size 10 to the power 9 plus one? The answer"
+    },
+    {
+      "start": 1119.52,
+      "duration": 10.28,
+      "text": "to that is no. You cannot. The maximum size array that you can declare is 10 to"
+    },
+    {
+      "start": 1126.28,
+      "duration": 6.84,
+      "text": "the power 6 if it is of integer. Inside, very important,"
+    },
+    {
+      "start": 1131.08,
+      "duration": 6.2,
+      "text": "inside main, inside main, what does it mean? If I go"
+    },
+    {
+      "start": 1135.96,
+      "duration": 6.08,
+      "text": "back to the code, this is where you declare. If you're"
+    },
+    {
+      "start": 1139.04,
+      "duration": 7.76,
+      "text": "declaring it inside main, it can only go up to 10 to the power 6. Like, somewhere"
+    },
+    {
+      "start": 1144.76,
+      "duration": 7.64,
+      "text": "near about. You cannot declare something like 10 to the power 7. This will throw"
+    },
+    {
+      "start": 1149.16,
+      "duration": 8.76,
+      "text": "you segmentation fault. It will not be able to allocate that much memory. But,"
+    },
+    {
+      "start": 1155.04,
+      "duration": 7.12,
+      "text": "but, but, if you go across and declare it somewhere globally, which means over"
+    },
+    {
+      "start": 1160.2,
+      "duration": 7.56,
+      "text": "here, if I go across and declare somewhere globally, I can actually do it"
+    },
+    {
+      "start": 1164.72,
+      "duration": 7.72,
+      "text": "till 10 ^ 7, which is 10 to the power 7. So, if you declare globally the array,"
+    },
+    {
+      "start": 1170.24,
+      "duration": 7.4,
+      "text": "the array can go till 10 to the power 7 as well if it is"
+    },
+    {
+      "start": 1174.88,
+      "duration": 8.0,
+      "text": "declared globally. 10 to the power 7 + 1 might also work. Near about 10 to the"
+    },
+    {
+      "start": 1179.56,
+      "duration": 7.92,
+      "text": "power 7, it will go. But, if it is declared globally,"
+    },
+    {
+      "start": 1185.64,
+      "duration": 5.64,
+      "text": "very, very important. This is something which I'm talking"
+    },
+    {
+      "start": 1188.96,
+      "duration": 8.04,
+      "text": "for integers because we are dealing with hashing. For boolean, yes, for boolean,"
+    },
+    {
+      "start": 1195.04,
+      "duration": 6.12,
+      "text": "this value will be if you're declaring a boolean array"
+    },
+    {
+      "start": 1198.52,
+      "duration": 5.44,
+      "text": "inside int main, you can go till 10 to the power 7."
+    },
+    {
+      "start": 1202.56,
+      "duration": 5.6,
+      "text": "Globally, you can go till 10 to the power 8. You can run them and see. If"
+    },
+    {
+      "start": 1206.12,
+      "duration": 7.28,
+      "text": "you declare anything like 10 to the power 8 inside this inside your int"
+    },
+    {
+      "start": 1211.36,
+      "duration": 6.8,
+      "text": "main, it is going to throw you a segmentation fault. So, let's let's go"
+    },
+    {
+      "start": 1216.08,
+      "duration": 7.12,
+      "text": "to the code editor and imagine instead of 13 I say 10 to the power 7, okay? And"
+    },
+    {
+      "start": 1220.68,
+      "duration": 7.16,
+      "text": "let's let's try to run this and see if it is taking 10 to the power 7. So, if"
+    },
+    {
+      "start": 1225.48,
+      "duration": 5.88,
+      "text": "you look at the terminal, it actually says"
+    },
+    {
+      "start": 1229.12,
+      "duration": 5.96,
+      "text": "there is a problem because the memory size is something which it cannot"
+    },
+    {
+      "start": 1232.92,
+      "duration": 6.8,
+      "text": "allocate. But, the moment I reduce one zero and I try to rerun,"
+    },
+    {
+      "start": 1237.88,
+      "duration": 5.0,
+      "text": "you will see that this is actually running fine."
+    },
+    {
+      "start": 1241.6,
+      "duration": 4.96,
+      "text": "Let's run this. You see it is running fine."
+    },
+    {
+      "start": 1244.6,
+      "duration": 6.32,
+      "text": "And if I add one more zero and I go across and declare this"
+    },
+    {
+      "start": 1248.56,
+      "duration": 6.8,
+      "text": "globally, you will actually see this is like you don't need to give zero because"
+    },
+    {
+      "start": 1252.96,
+      "duration": 6.16,
+      "text": "if you declare globally, everything is initialized as zero instead of garbage"
+    },
+    {
+      "start": 1257.84,
+      "duration": 5.8,
+      "text": "values. If you go over there,"
+    },
+    {
+      "start": 1261.12,
+      "duration": 6.28,
+      "text": "I declared it. Okay, what is the problem it's giving?"
+    },
+    {
+      "start": 1266.28,
+      "duration": 5.16,
+      "text": "Okay. Let's run this."
+    },
+    {
+      "start": 1269.24,
+      "duration": 7.44,
+      "text": "Hash is ambiguous because Okay, let's do double hash because the name is"
+    },
+    {
+      "start": 1273.64,
+      "duration": 5.72,
+      "text": "something which is already taken. Let's now run it."
+    },
+    {
+      "start": 1279.52,
+      "duration": 4.56,
+      "text": "You see it is working fine. If I declared it globally as 10 to the power"
+    },
+    {
+      "start": 1282.84,
+      "duration": 4.88,
+      "text": "7, it did run fine. So, this is something"
+    },
+    {
+      "start": 1286.12,
+      "duration": 6.64,
+      "text": "which I wanted to tell you. This is something which I wanted to tell you. If"
+    },
+    {
+      "start": 1289.68,
+      "duration": 8.0,
+      "text": "you are using array in order to do hashing, you can only go up to 10 to the"
+    },
+    {
+      "start": 1295.16,
+      "duration": 8.12,
+      "text": "power 6 inside of main or 10 to the power 7 globally, not beyond that. For"
+    },
+    {
+      "start": 1301.12,
+      "duration": 5.4,
+      "text": "something like 10 to the power 9, what will we be using? That is something"
+    },
+    {
+      "start": 1305.2,
+      "duration": 5.04,
+      "text": "which we'll be discussing in the later half of the video. So, make sure you"
+    },
+    {
+      "start": 1307.92,
+      "duration": 7.04,
+      "text": "watch the video till the end. So, till now what have we learned? We"
+    },
+    {
+      "start": 1312.28,
+      "duration": 7.96,
+      "text": "kind of learned about number hashing. If there is a problem which"
+    },
+    {
+      "start": 1317.4,
+      "duration": 7.32,
+      "text": "requires number hashing, we can use arrays to hash them, right? What is the"
+    },
+    {
+      "start": 1322.92,
+      "duration": 5.04,
+      "text": "next thing that we will be learning? That's something as"
+    },
+    {
+      "start": 1326.36,
+      "duration": 6.68,
+      "text": "character hashing. Can we do character hashing using"
+    },
+    {
+      "start": 1330.96,
+      "duration": 8.32,
+      "text": "arrays? Yes, we can. And that is something which we will be learning."
+    },
+    {
+      "start": 1335.52,
+      "duration": 8.2,
+      "text": "Imagine I give you a string like a b c d a b e f c, and I give you certain"
+    },
+    {
+      "start": 1341.88,
+      "duration": 7.92,
+      "text": "queries. And I ask you how many times does a appear? And I say once,"
+    },
+    {
+      "start": 1347.32,
+      "duration": 5.68,
+      "text": "twice is what a appears. How many times does c appear? If I ask"
+    },
+    {
+      "start": 1351.72,
+      "duration": 7.08,
+      "text": "you how many times c appears, it will be one and again twice."
+    },
+    {
+      "start": 1355.64,
+      "duration": 8.48,
+      "text": "How many times z appears? It will be zero. If you look at over here, z"
+    },
+    {
+      "start": 1361.68,
+      "duration": 8.2,
+      "text": "doesn't appear. And similarly, I can give you a lot of other"
+    },
+    {
+      "start": 1366.56,
+      "duration": 8.88,
+      "text": "things like q queries. I can ask you q times a b c. I can I can"
+    },
+    {
+      "start": 1373.28,
+      "duration": 7.48,
+      "text": "give you any character, and it is your task to tell me how many times does that"
+    },
+    {
+      "start": 1378.16,
+      "duration": 6.52,
+      "text": "character appear in this particular Again, what is the standard procedure?"
+    },
+    {
+      "start": 1382.64,
+      "duration": 6.84,
+      "text": "The standard procedure is very simple. You pick up A and you iterate in the"
+    },
+    {
+      "start": 1386.88,
+      "duration": 7.96,
+      "text": "string and you say A equal to A. Yes, count A equal to 1. A equal to A here?"
+    },
+    {
+      "start": 1392.2,
+      "duration": 7.28,
+      "text": "Count equal to 2. So, you just basically iterate through the string and in a"
+    },
+    {
+      "start": 1396.84,
+      "duration": 6.04,
+      "text": "similar way, you compare the character with each of the characters and you"
+    },
+    {
+      "start": 1401.44,
+      "duration": 4.88,
+      "text": "count it. So, if I have to write the pseudo code, this is how the pseudo code"
+    },
+    {
+      "start": 1404.76,
+      "duration": 6.04,
+      "text": "will look like. You take the character C and you"
+    },
+    {
+      "start": 1408.44,
+      "duration": 6.12,
+      "text": "probably take the string C. And what you do is you keep a counter zero and now"
+    },
+    {
+      "start": 1413.04,
+      "duration": 4.32,
+      "text": "you go through the string I equal to zero. Imagine the size of the string is"
+    },
+    {
+      "start": 1416.44,
+      "duration": 7.36,
+      "text": "N. You go till that and you say F if S of I"
+    },
+    {
+      "start": 1421.12,
+      "duration": 6.56,
+      "text": "is equal to equal to character C, then I will do a counter plus plus and at the"
+    },
+    {
+      "start": 1426.16,
+      "duration": 6.28,
+      "text": "end of the day I can return that counter. So, this is what the simple"
+    },
+    {
+      "start": 1430.48,
+      "duration": 6.44,
+      "text": "pseudo code will be. For every character, you go ahead. Again, if you"
+    },
+    {
+      "start": 1434.44,
+      "duration": 6.68,
+      "text": "do the similar thing for Q queries, how much time will you end up taking? For"
+    },
+    {
+      "start": 1438.76,
+      "duration": 6.96,
+      "text": "every query you are taking N. So, for Q queries, you will be taking big O of Q"
+    },
+    {
+      "start": 1443.68,
+      "duration": 7.12,
+      "text": "into N time. Similar to the previous problem. So, the question is can you"
+    },
+    {
+      "start": 1448.2,
+      "duration": 6.68,
+      "text": "hash them into arrays? And the answer to that is yes."
+    },
+    {
+      "start": 1452.56,
+      "duration": 5.4,
+      "text": "The question comes up, how do you hash them using arrays? Because if we"
+    },
+    {
+      "start": 1456.76,
+      "duration": 7.8,
+      "text": "remember the arrays have indexes like 0 1 2 3."
+    },
+    {
+      "start": 1462.16,
+      "duration": 10.04,
+      "text": "And if I have to talk about these characters, imagine I'm strictly"
+    },
+    {
+      "start": 1468.04,
+      "duration": 8.24,
+      "text": "stating imagine the array only has lower case letters."
+    },
+    {
+      "start": 1473.88,
+      "duration": 6.16,
+      "text": "Imagine the array only has lower case letters. In that case, how"
+    },
+    {
+      "start": 1479.04,
+      "duration": 5.0,
+      "text": "can you hash? Now, I know lower case means it will"
+    },
+    {
+      "start": 1482.36,
+      "duration": 4.32,
+      "text": "have A B till Z."
+    },
+    {
+      "start": 1485.24,
+      "duration": 9.2,
+      "text": "How many elements? I know there will be 26 elements because"
+    },
+    {
+      "start": 1490.24,
+      "duration": 9.04,
+      "text": "those many elements is what we 25 or 26. So, I know there will be 26 characters,"
+    },
+    {
+      "start": 1497.52,
+      "duration": 7.6,
+      "text": "26 lowercase characters. So, if I have to practically think,"
+    },
+    {
+      "start": 1502.12,
+      "duration": 6.72,
+      "text": "can I have an array of size 26? I I'll be like, yes, I can."
+    },
+    {
+      "start": 1507.08,
+      "duration": 6.0,
+      "text": "So, imagine if you have an array of size 26."
+    },
+    {
+      "start": 1510.84,
+      "duration": 5.96,
+      "text": "What will it be indexed from? It'll be indexed from zero, then to one, then to"
+    },
+    {
+      "start": 1514.88,
+      "duration": 6.24,
+      "text": "two, then to three, then probably to four, then probably to five, then"
+    },
+    {
+      "start": 1518.44,
+      "duration": 6.64,
+      "text": "probably to six, and so on till 25. Can I say this? This will be the array"
+    },
+    {
+      "start": 1522.72,
+      "duration": 6.64,
+      "text": "indexing. But, can I say this? Since I know there are 26 alphabets, can"
+    },
+    {
+      "start": 1527.72,
+      "duration": 8.2,
+      "text": "I correspond A to zero? Can I correspond B to one?"
+    },
+    {
+      "start": 1533.8,
+      "duration": 6.96,
+      "text": "Basically, I'm mapping them in my memory. I'm saying, okay, wait. Can I"
+    },
+    {
+      "start": 1538.32,
+      "duration": 6.68,
+      "text": "say A to be the zero-th index? I do not have any relation, but I will say I will"
+    },
+    {
+      "start": 1543.08,
+      "duration": 6.68,
+      "text": "assume I'll assume A to be this, I'll assume B to be this, C to be this, this,"
+    },
+    {
+      "start": 1547.6,
+      "duration": 7.0,
+      "text": "and this, and this to be Z. Can I say this? For every character,"
+    },
+    {
+      "start": 1552.0,
+      "duration": 5.72,
+      "text": "I will have an index. I will. Simple as that."
+    },
+    {
+      "start": 1555.84,
+      "duration": 5.0,
+      "text": "So, if I can do that, I think my problem will be solved. Now, you might have a"
+    },
+    {
+      "start": 1559.04,
+      "duration": 5.52,
+      "text": "question in your head. So, Srikanth, you were saying A will be this, B will be"
+    },
+    {
+      "start": 1562.8,
+      "duration": 6.24,
+      "text": "this, C will be this, this will be this. And how do I"
+    },
+    {
+      "start": 1566.04,
+      "duration": 7.56,
+      "text": "program it? Because in program, I cannot visualize. I need something which works"
+    },
+    {
+      "start": 1571.0,
+      "duration": 6.6,
+      "text": "programmatically, code-wise. So, if I have to talk about F,"
+    },
+    {
+      "start": 1575.64,
+      "duration": 8.36,
+      "text": "I can visualize over here that F is five. But, how do I do that in program?"
+    },
+    {
+      "start": 1580.2,
+      "duration": 8.24,
+      "text": "This is where something like ASCII value comes in. If you do not know about"
+    },
+    {
+      "start": 1585.92,
+      "duration": 7.84,
+      "text": "ASCII, it's basically American Standard Code for Information Interchange. So, if"
+    },
+    {
+      "start": 1591.76,
+      "duration": 6.64,
+      "text": "I have to show you the ASCII, so there are 256 characters. And this This is how"
+    },
+    {
+      "start": 1596.4,
+      "duration": 5.84,
+      "text": "the ASCII looks like. So, if I just scroll across, these are the ASCII"
+    },
+    {
+      "start": 1600.12,
+      "duration": 7.68,
+      "text": "values for everyone. The digit zero has an ASCII value of 48. The digit one has"
+    },
+    {
+      "start": 1605.12,
+      "duration": 9.16,
+      "text": "an ASCII value of 49. Going across the upper case A, the upper case A has an"
+    },
+    {
+      "start": 1611.12,
+      "duration": 11.44,
+      "text": "ASCII of 65. If I go across, the lowercase A has an ASCII of 97. The"
+    },
+    {
+      "start": 1618.64,
+      "duration": 9.52,
+      "text": "lowercase Z has an ASCII of 122. What do I mean by ASCII? So, imagine if you're"
+    },
+    {
+      "start": 1624.8,
+      "duration": 9.68,
+      "text": "writing a code where you say INT X equal to character A. So, what will X store"
+    },
+    {
+      "start": 1631.64,
+      "duration": 8.52,
+      "text": "because you are storing a character into X and X is an integer data type. So,"
+    },
+    {
+      "start": 1637.0,
+      "duration": 9.72,
+      "text": "what happens is this A is converted. Yes, this A is converted into its ASCII."
+    },
+    {
+      "start": 1643.56,
+      "duration": 9.16,
+      "text": "And this is a small A, the ASCII is 97. The X stores the ASCII of A, that is 97."
+    },
+    {
+      "start": 1651.08,
+      "duration": 5.88,
+      "text": "Got it? It will not throw a syntactical error."
+    },
+    {
+      "start": 1654.72,
+      "duration": 10.16,
+      "text": "Instead, it will typecast it. So, we know about ASCII. So, something I know"
+    },
+    {
+      "start": 1659.08,
+      "duration": 10.92,
+      "text": "for sure is small A is 97 and small Z is 122. So, how can you represent now? It's"
+    },
+    {
+      "start": 1668.92,
+      "duration": 5.36,
+      "text": "very simple. So, imagine you have to represent for F."
+    },
+    {
+      "start": 1672.52,
+      "duration": 6.48,
+      "text": "Then you say F minus A."
+    },
+    {
+      "start": 1676.08,
+      "duration": 7.76,
+      "text": "What is F's ASCII value? If I look at the F's ASCII value, that's 102 because"
+    },
+    {
+      "start": 1682.12,
+      "duration": 6.96,
+      "text": "when you're doing a subtraction, subtraction happens between two"
+    },
+    {
+      "start": 1686.0,
+      "duration": 7.32,
+      "text": "integers. So, computer says, \"What's the integer?\" He says,"
+    },
+    {
+      "start": 1691.2,
+      "duration": 7.44,
+      "text": "\"102 because that is my ASCII.\" What is the ASCII of small A? 97. So, I"
+    },
+    {
+      "start": 1697.04,
+      "duration": 6.28,
+      "text": "get five. You get five and that is what you"
+    },
+    {
+      "start": 1700.6,
+      "duration": 7.32,
+      "text": "require. If you require for A, that's A minus A equal to zero. If you require"
+    },
+    {
+      "start": 1705.36,
+      "duration": 5.6,
+      "text": "for B, that's B minus B equal to one. If you require Sorry, B minus A equal to"
+    },
+    {
+      "start": 1709.24,
+      "duration": 7.88,
+      "text": "one. If you require for C, that's C minus A equal to two. So, apparently,"
+    },
+    {
+      "start": 1714.44,
+      "duration": 9.52,
+      "text": "the formula that you need is character minus A. If you do this, you get the"
+    },
+    {
+      "start": 1720.36,
+      "duration": 6.76,
+      "text": "corresponding index in the hash array. And then you can easily index it. You"
+    },
+    {
+      "start": 1725.68,
+      "duration": 6.84,
+      "text": "can easily hash it. So, imagine you are having at A, you do"
+    },
+    {
+      "start": 1730.48,
+      "duration": 6.68,
+      "text": "A minus A, you get zero. So, you go to zero and you say one."
+    },
+    {
+      "start": 1734.72,
+      "duration": 6.72,
+      "text": "Right? Next is B. So, you do B minus A, that is one. So, you do a one. Next is"
+    },
+    {
+      "start": 1739.36,
+      "duration": 7.44,
+      "text": "C. You do C minus A, that's two. You do one. Next is D. That's D minus A. So,"
+    },
+    {
+      "start": 1744.48,
+      "duration": 7.76,
+      "text": "you go and do over here. Next is A. That says A minus A equal to zero. You do a"
+    },
+    {
+      "start": 1748.64,
+      "duration": 9.12,
+      "text": "two. Next is B. You do a two. Next is E. E minus A is nothing but four. So, if E"
+    },
+    {
+      "start": 1755.52,
+      "duration": 9.32,
+      "text": "minus A is four, you go to four and do A. F. F minus A is five. So, you go and"
+    },
+    {
+      "start": 1761.44,
+      "duration": 7.96,
+      "text": "do one. C. C minus A is nothing but two. So, you do a two. Done."
+    },
+    {
+      "start": 1767.16,
+      "duration": 10.28,
+      "text": "As simple as that. This is how you hash it. You require 26. And imagine if the"
+    },
+    {
+      "start": 1773.72,
+      "duration": 9.68,
+      "text": "string contains uppercase as well. You You just saw that you have 256"
+    },
+    {
+      "start": 1780.6,
+      "duration": 9.84,
+      "text": "characters into You can just go across and create an array till 256 size."
+    },
+    {
+      "start": 1788.16,
+      "duration": 7.0,
+      "text": "And this time you don't have to subtract anything."
+    },
+    {
+      "start": 1791.88,
+      "duration": 9.56,
+      "text": "For smaller A, the value is 97. So, the smaller A will get at 97."
+    },
+    {
+      "start": 1799.0,
+      "duration": 5.56,
+      "text": "For smaller B, the value is 98. So, it goes to 98."
+    },
+    {
+      "start": 1803.32,
+      "duration": 6.16,
+      "text": "Simple. Just because"
+    },
+    {
+      "start": 1806.0,
+      "duration": 8.32,
+      "text": "you just had lowercase letters, that is the reason you took a 26 size array. You"
+    },
+    {
+      "start": 1812.08,
+      "duration": 5.88,
+      "text": "could have taken a 256 size array. That would have worked as well. I'll show you"
+    },
+    {
+      "start": 1816.08,
+      "duration": 5.92,
+      "text": "that in code. So, let's look at the input. We're given the string. We're"
+    },
+    {
+      "start": 1819.64,
+      "duration": 6.64,
+      "text": "given the queries. And these are the number of queries that we are given. And"
+    },
+    {
+      "start": 1823.56,
+      "duration": 6.16,
+      "text": "we have to print the output. So, what is the first thing that we are given?"
+    },
+    {
+      "start": 1827.6,
+      "duration": 6.32,
+      "text": "String. So, let's take string and we say C in of S. We've taken the string. Now,"
+    },
+    {
+      "start": 1832.48,
+      "duration": 5.36,
+      "text": "we need the queries. So, let's take all the queries."
+    },
+    {
+      "start": 1835.32,
+      "duration": 5.76,
+      "text": "Very simple. And I say while Q minus minus."
+    },
+    {
+      "start": 1839.36,
+      "duration": 5.76,
+      "text": "And now we need the character. So, let's take the character. And that's it."
+    },
+    {
+      "start": 1843.4,
+      "duration": 4.2,
+      "text": "These are the inputs that we have to do. Now, we know we need to do some"
+    },
+    {
+      "start": 1846.2,
+      "duration": 4.76,
+      "text": "precompute because we're performing hashing."
+    },
+    {
+      "start": 1849.92,
+      "duration": 5.64,
+      "text": "And we know we have to fetch it over here in order to print the answer."
+    },
+    {
+      "start": 1853.68,
+      "duration": 6.76,
+      "text": "Let's do the precomputation. Can I say that I require a hash because"
+    },
+    {
+      "start": 1858.28,
+      "duration": 5.08,
+      "text": "we are sure that it will be of size 26. I require an"
+    },
+    {
+      "start": 1861.92,
+      "duration": 5.48,
+      "text": "hash of 26 size. And now, I will go across the"
+    },
+    {
+      "start": 1865.68,
+      "duration": 7.76,
+      "text": "string. In order to go across the string, this is one of the ways. You say"
+    },
+    {
+      "start": 1869.84,
+      "duration": 9.96,
+      "text": "s.size and then you go across i++. And you say hash of s of i minus a plus"
+    },
+    {
+      "start": 1877.44,
+      "duration": 5.92,
+      "text": "plus. So, what this will do is this is your indexing."
+    },
+    {
+      "start": 1881.64,
+      "duration": 5.64,
+      "text": "Character minus a will give you the index"
+    },
+    {
+      "start": 1884.6,
+      "duration": 6.28,
+      "text": "at which you have to do it for the hash. And over here, in order to fetch, you"
+    },
+    {
+      "start": 1888.88,
+      "duration": 6.44,
+      "text": "say see out hash of"
+    },
+    {
+      "start": 1892.88,
+      "duration": 5.92,
+      "text": "So, see minus a because the index in order to get the index,"
+    },
+    {
+      "start": 1897.04,
+      "duration": 5.68,
+      "text": "it's character minus a. That's what you do."
+    },
+    {
+      "start": 1900.92,
+      "duration": 6.04,
+      "text": "You can go across and do an end l. I'll go across and let's quickly run this off"
+    },
+    {
+      "start": 1905.0,
+      "duration": 5.04,
+      "text": "and see if it is running fine. It is."
+    },
+    {
+      "start": 1907.96,
+      "duration": 7.92,
+      "text": "We saw that it is giving us the correct answers. Now, we took hash of 26."
+    },
+    {
+      "start": 1913.32,
+      "duration": 7.16,
+      "text": "I know that was done because we knew that they were just lowercase letters."
+    },
+    {
+      "start": 1918.48,
+      "duration": 5.44,
+      "text": "Imagine it doesn't state you that it has just lowercase letters. In that case, we"
+    },
+    {
+      "start": 1922.8,
+      "duration": 5.52,
+      "text": "know the number of characters that exist is"
+    },
+    {
+      "start": 1926.16,
+      "duration": 7.12,
+      "text": "that exist is 256. I'll do 256."
+    },
+    {
+      "start": 1929.84,
+      "duration": 7.16,
+      "text": "Instead of doing this, I'll do s of i. If it's a, it goes to 97. If it's b, it"
+    },
+    {
+      "start": 1935.48,
+      "duration": 5.24,
+      "text": "goes to 98. So, and over here also, I don't do"
+    },
+    {
+      "start": 1938.4,
+      "duration": 7.04,
+      "text": "anything. Even if you do this, this is still going to run fine."
+    },
+    {
+      "start": 1943.16,
+      "duration": 7.04,
+      "text": "Because it's it's taking a bigger size, but it's mapping it correctly."
+    },
+    {
+      "start": 1947.6,
+      "duration": 5.92,
+      "text": "Just because we did not require uppercase and all the other characters,"
+    },
+    {
+      "start": 1951.64,
+      "duration": 7.24,
+      "text": "I took it of size 26. If it doesn't states"
+    },
+    {
+      "start": 1956.04,
+      "duration": 7.56,
+      "text": "about the exclusivity of the characters. You have to take 256. This is how you"
+    },
+    {
+      "start": 1960.76,
+      "duration": 6.64,
+      "text": "hash all the characters. So, are there any complications in order to hash"
+    },
+    {
+      "start": 1965.52,
+      "duration": 5.36,
+      "text": "characters? Because in number hashing, we saw that if the number goes till 10"
+    },
+    {
+      "start": 1969.2,
+      "duration": 6.04,
+      "text": "to the power 9, there might be a problem. But in character, there will"
+    },
+    {
+      "start": 1973.32,
+      "duration": 7.12,
+      "text": "never be a problem because at max there are 256 characters. An array can store"
+    },
+    {
+      "start": 1978.16,
+      "duration": 8.0,
+      "text": "256 elements. So, for character hashing, you don't have to think much. Always"
+    },
+    {
+      "start": 1982.64,
+      "duration": 7.4,
+      "text": "prefer arrays, always. And always use this logic, character minus A for lower"
+    },
+    {
+      "start": 1988.2,
+      "duration": 6.44,
+      "text": "case. If there are upper case, it will be character minus capital A. And if"
+    },
+    {
+      "start": 1991.92,
+      "duration": 7.32,
+      "text": "there are all characters, 256, and simply hash the character. It will be"
+    },
+    {
+      "start": 1996.84,
+      "duration": 5.72,
+      "text": "auto converted. Yes. If I'm saying S of I,"
+    },
+    {
+      "start": 2000.12,
+      "duration": 7.4,
+      "text": "this auto converts itself to its ASCII because hash of hash needs an index. And"
+    },
+    {
+      "start": 2005.64,
+      "duration": 7.52,
+      "text": "the index is an integer. S of I is a character, but it auto casts itself into"
+    },
+    {
+      "start": 2009.96,
+      "duration": 3.2,
+      "text": "an integer. Got it?"
+    },
+    {
+      "start": 2013.68,
+      "duration": 5.68,
+      "text": "So, this is a character S of I. But the hash"
+    },
+    {
+      "start": 2017.52,
+      "duration": 7.12,
+      "text": "inside its bracket, hash inside its brackets needs an"
+    },
+    {
+      "start": 2022.48,
+      "duration": 6.96,
+      "text": "integer. So, even if you write a character, it will auto cast itself to"
+    },
+    {
+      "start": 2027.48,
+      "duration": 5.92,
+      "text": "its integer value, which is the ASCII value. This is why"
+    },
+    {
+      "start": 2031.96,
+      "duration": 5.64,
+      "text": "the coming back to the problem that we had in number hashing. So, in number"
+    },
+    {
+      "start": 2035.76,
+      "duration": 5.84,
+      "text": "hashing, when we were trying to hash it into the arrays,"
+    },
+    {
+      "start": 2039.4,
+      "duration": 5.72,
+      "text": "we saw that we can at max do it till 10 to the power 7. That also if you declare"
+    },
+    {
+      "start": 2043.68,
+      "duration": 4.959,
+      "text": "the array globally. And for numbers exceeding 10 to the"
+    },
+    {
+      "start": 2047.12,
+      "duration": 6.4,
+      "text": "power 7, like 10 to the power 9 or 10 to the power 12 or 10 to the power 18,"
+    },
+    {
+      "start": 2050.76,
+      "duration": 5.8,
+      "text": "we cannot hash it using arrays. That is not possible."
+    },
+    {
+      "start": 2054.639,
+      "duration": 6.201,
+      "text": "This is something that we need to solve. And that is where"
+    },
+    {
+      "start": 2059.2,
+      "duration": 6.12,
+      "text": "in C++, STL comes in. If you have not seen the"
+    },
+    {
+      "start": 2062.679,
+      "duration": 7.681,
+      "text": "STL video, please go back and watch it. And in Java, the collection comes in."
+    },
+    {
+      "start": 2067.96,
+      "duration": 4.88,
+      "text": "So, in STL, there are two things. One is the map."
+    },
+    {
+      "start": 2071.399,
+      "duration": 5.801,
+      "text": "While the other one is the unordered map, which I'll be talking in depth. And"
+    },
+    {
+      "start": 2075.6,
+      "duration": 6.44,
+      "text": "most of the concepts that I'll be talking about map and unordered map also"
+    },
+    {
+      "start": 2080.24,
+      "duration": 5.8,
+      "text": "apply to the hash map. It is just the same stuff."
+    },
+    {
+      "start": 2083.76,
+      "duration": 8.36,
+      "text": "Just the writing format is different. And the concept inside it is the same."
+    },
+    {
+      "start": 2089.24,
+      "duration": 7.48,
+      "text": "So, let's understand map and unordered map. So, till now, we were taking an"
+    },
+    {
+      "start": 2094.84,
+      "duration": 7.76,
+      "text": "array, right? If you remember, we we took an array of size 13 and then"
+    },
+    {
+      "start": 2100.04,
+      "duration": 8.44,
+      "text": "we hash it. In C++, let's talk about map. So, what"
+    },
+    {
+      "start": 2105.8,
+      "duration": 8.88,
+      "text": "happens is imagine you're given an array something like 1, 2, 3, 1, 3, 2."
+    },
+    {
+      "start": 2112.92,
+      "duration": 5.64,
+      "text": "Imagine you're given something like this."
+    },
+    {
+      "start": 2115.76,
+      "duration": 5.08,
+      "text": "So, in C++, what happens is map is a data structure."
+    },
+    {
+      "start": 2119.64,
+      "duration": 4.6,
+      "text": "So, I'll just represent this with a bucket."
+    },
+    {
+      "start": 2123.0,
+      "duration": 4.2,
+      "text": "As well. So, what you do is you say, \"Okay, I"
+    },
+    {
+      "start": 2126.28,
+      "duration": 5.36,
+      "text": "know there has to be a key."
+    },
+    {
+      "start": 2129.2,
+      "duration": 6.56,
+      "text": "What is a key over here?\" So, this is the key."
+    },
+    {
+      "start": 2133.72,
+      "duration": 5.4,
+      "text": "The number is the key. So, the number is the key. Remember"
+    },
+    {
+      "start": 2137.16,
+      "duration": 6.24,
+      "text": "this. And there has to be a corresponding"
+    },
+    {
+      "start": 2140.52,
+      "duration": 7.72,
+      "text": "value to it. And the value over here is the frequency."
+    },
+    {
+      "start": 2146.04,
+      "duration": 6.0,
+      "text": "So, this is how it is defined. You basically say, \"Okay, what is your key?"
+    },
+    {
+      "start": 2150.08,
+      "duration": 5.32,
+      "text": "Is your number. How many times it appears"
+    },
+    {
+      "start": 2153.08,
+      "duration": 5.84,
+      "text": "is the value.\" This is what you do. As simple as that. So, what I do is, okay,"
+    },
+    {
+      "start": 2157.52,
+      "duration": 6.84,
+      "text": "I know one thing. At the first step, I have one. So, I"
+    },
+    {
+      "start": 2161.0,
+      "duration": 6.32,
+      "text": "will say, \"Can you go ahead and if if Remember one thing."
+    },
+    {
+      "start": 2165.68,
+      "duration": 6.68,
+      "text": "Before before iterating in the array. Before iterating in the array. If you"
+    },
+    {
+      "start": 2169.12,
+      "duration": 7.72,
+      "text": "say MPP of one, this will return you zero because it doesn't exist in the"
+    },
+    {
+      "start": 2174.48,
+      "duration": 8.0,
+      "text": "map. So, the value the corresponding value will be zero, right?"
+    },
+    {
+      "start": 2179.96,
+      "duration": 8.4,
+      "text": "So, the moment you go to one, you say MPP of one plus plus. So, what will"
+    },
+    {
+      "start": 2185.6,
+      "duration": 8.0,
+      "text": "happen? If it doesn't exist in the map? It'll go to the map and see one you do"
+    },
+    {
+      "start": 2190.28,
+      "duration": 7.64,
+      "text": "not exist. It's zero. It's zero. Zero plus plus is one."
+    },
+    {
+      "start": 2195.52,
+      "duration": 7.72,
+      "text": "So, it will store a key value. Key map to a value of"
+    },
+    {
+      "start": 2200.84,
+      "duration": 6.12,
+      "text": "Next, it goes to two and does a map two plus."
+    },
+    {
+      "start": 2204.04,
+      "duration": 10.92,
+      "text": "And it sees it doesn't stores two. So, what happens is it goes and stores two."
+    },
+    {
+      "start": 2212.16,
+      "duration": 7.44,
+      "text": "Next, it goes to three. Again, goes and sees doesn't stores three. So, three"
+    },
+    {
+      "start": 2217.8,
+      "duration": 5.68,
+      "text": "plus plus. Next, it goes to one and sees, okay, I"
+    },
+    {
+      "start": 2222.08,
+      "duration": 5.08,
+      "text": "already have one. Let's go back to that one and say, \"Can"
+    },
+    {
+      "start": 2225.44,
+      "duration": 7.08,
+      "text": "you please increase my value?\" So, it just increases its value to two."
+    },
+    {
+      "start": 2229.6,
+      "duration": 7.68,
+      "text": "Next, goes to three, again increases its value to two. Next, goes to two, again"
+    },
+    {
+      "start": 2235.2,
+      "duration": 4.88,
+      "text": "increases its value to two. So, what do you need to do is"
+    },
+    {
+      "start": 2238.64,
+      "duration": 7.52,
+      "text": "MPP of array of I plus plus."
+    },
+    {
+      "start": 2243.32,
+      "duration": 8.44,
+      "text": "That's what you need to do. And imagine, I'll just erase this. Imagine I had a"
+    },
+    {
+      "start": 2248.64,
+      "duration": 7.08,
+      "text": "number like 12. Then what would have happened?"
+    },
+    {
+      "start": 2253.16,
+      "duration": 7.12,
+      "text": "So, you'd have done MPP 12 plus plus. So, 12 would have gone as one."
+    },
+    {
+      "start": 2258.52,
+      "duration": 4.8,
+      "text": "Quite simple. Very very simple."
+    },
+    {
+      "start": 2262.0,
+      "duration": 5.32,
+      "text": "So, something to observe."
+    },
+    {
+      "start": 2265.08,
+      "duration": 8.12,
+      "text": "Over here, even if the number was still 12 and you'd have used array hashing,"
+    },
+    {
+      "start": 2270.48,
+      "duration": 7.08,
+      "text": "you'd have ended up taking a size 13 array in the array hashing."
+    },
+    {
+      "start": 2275.72,
+      "duration": 5.12,
+      "text": "And over here, how many elements are you storing?"
+    },
+    {
+      "start": 2278.64,
+      "duration": 8.32,
+      "text": "We're just storing the elements that are required because you require one, two,"
+    },
+    {
+      "start": 2284.32,
+      "duration": 9.0,
+      "text": "three, and 12. So, four elements are stored. Whereas in array hashing, you"
+    },
+    {
+      "start": 2290.6,
+      "duration": 9.6,
+      "text": "had to declare a 13 size array if the maximum was still 12 in order to get the"
+    },
+    {
+      "start": 2297.12,
+      "duration": 8.88,
+      "text": "12th index. So, this is where map is slightly beneficial. It takes a little"
+    },
+    {
+      "start": 2303.32,
+      "duration": 8.08,
+      "text": "less memory because it will just store the elements that are required."
+    },
+    {
+      "start": 2308.88,
+      "duration": 6.36,
+      "text": "If you do for MPP of four, it is not there in the map. It will automatically"
+    },
+    {
+      "start": 2313.4,
+      "duration": 6.28,
+      "text": "throw you a zero. But it doesn't store four. It doesn't store four. Got it?"
+    },
+    {
+      "start": 2318.32,
+      "duration": 4.88,
+      "text": "So, if I go back to the code, you see that you have a n, you have the array,"
+    },
+    {
+      "start": 2321.52,
+      "duration": 7.0,
+      "text": "you have the queries, and then you have all the queries. So, it's quite simple."
+    },
+    {
+      "start": 2325.56,
+      "duration": 8.48,
+      "text": "You say n is a scene of n. And then you say int array of n. Then you say for int"
+    },
+    {
+      "start": 2331.84,
+      "duration": 7.96,
+      "text": "i equal to zero, i less than n, i plus plus. And then you go across and say"
+    },
+    {
+      "start": 2336.96,
+      "duration": 7.64,
+      "text": "let's take these arrays values. Array of i."
+    },
+    {
+      "start": 2340.92,
+      "duration": 3.68,
+      "text": "And now you need the queries."
+    },
+    {
+      "start": 2345.44,
+      "duration": 9.96,
+      "text": "Let's take the queries. int q. Scene of q. And now you do while q minus"
+    },
+    {
+      "start": 2350.96,
+      "duration": 4.44,
+      "text": "minus. And then you take the number."
+    },
+    {
+      "start": 2356.96,
+      "duration": 8.84,
+      "text": "And you take number over here. And you say see out. This is where you fetch."
+    },
+    {
+      "start": 2362.48,
+      "duration": 3.32,
+      "text": "So, you precompute here."
+    },
+    {
+      "start": 2367.28,
+      "duration": 7.12,
+      "text": "And then you fetch it over here. So, we have to do the precompute. So, what"
+    },
+    {
+      "start": 2372.84,
+      "duration": 5.64,
+      "text": "do you do is map of key. And you know the key is a number which will be"
+    },
+    {
+      "start": 2375.52,
+      "duration": 6.76,
+      "text": "integer. If the number goes till like 10 to the power nine or 10 to the power 12,"
+    },
+    {
+      "start": 2380.56,
+      "duration": 5.12,
+      "text": "then you could also go ahead and take a long because there will be bigger"
+    },
+    {
+      "start": 2384.12,
+      "duration": 5.88,
+      "text": "numbers. Or you can take long long as well. Depending on the size of the"
+    },
+    {
+      "start": 2387.28,
+      "duration": 7.08,
+      "text": "numbers, you can define your keys data type. Done? And now what do you do is"
+    },
+    {
+      "start": 2392.64,
+      "duration": 5.88,
+      "text": "you go across and say int i equal to zero, i less than n, i plus plus. And"
+    },
+    {
+      "start": 2397.2,
+      "duration": 6.76,
+      "text": "you say map of array of i. And you do our plus"
+    },
+    {
+      "start": 2402.0,
+      "duration": 8.44,
+      "text": "plus. Quite simple. And in order to fetch it, you say see out"
+    },
+    {
+      "start": 2406.88,
+      "duration": 7.84,
+      "text": "of map of number. And once you've done this, you could go"
+    },
+    {
+      "start": 2412.36,
+      "duration": 6.36,
+      "text": "ahead and say, \"Can you please run this?\" And if you run this, you will see"
+    },
+    {
+      "start": 2416.48,
+      "duration": 6.04,
+      "text": "that everything fine. Four appears zero, that's why. 12 appears once. It does run"
+    },
+    {
+      "start": 2421.48,
+      "duration": 6.0,
+      "text": "fine. So, remember one thing,"
+    },
+    {
+      "start": 2424.4,
+      "duration": 4.8,
+      "text": "the map stores all the values in sorted order."
+    },
+    {
+      "start": 2428.2,
+      "duration": 6.2,
+      "text": "This is something which you have to keep in mind. The map stores all the values"
+    },
+    {
+      "start": 2431.6,
+      "duration": 6.16,
+      "text": "in sorted order. What does that mean? This will be at the first place in the"
+    },
+    {
+      "start": 2436.32,
+      "duration": 3.92,
+      "text": "map. This will be at the second place. This will be at the third place. This"
+    },
+    {
+      "start": 2438.76,
+      "duration": 5.64,
+      "text": "will be at the fourth. How can I prove it? What I'll do is I'll"
+    },
+    {
+      "start": 2442.44,
+      "duration": 6.08,
+      "text": "go ahead and say, let's iterate in the map. So, if you just iterate in the map,"
+    },
+    {
+      "start": 2446.6,
+      "duration": 8.0,
+      "text": "this is how you iterate in the map. An auto iterator on the map."
+    },
+    {
+      "start": 2450.92,
+      "duration": 8.04,
+      "text": "And if you do see out of IT.first, up something like this, and do"
+    },
+    {
+      "start": 2456.64,
+      "duration": 7.08,
+      "text": "IT.second, this is how you can get it. So, if I just try to run this,"
+    },
+    {
+      "start": 2461.24,
+      "duration": 5.44,
+      "text": "you will see what will happen. Before printing all of these, it"
+    },
+    {
+      "start": 2465.16,
+      "duration": 7.68,
+      "text": "actually shows you one appears twice, and this is how it is stored in the map."
+    },
+    {
+      "start": 2468.96,
+      "duration": 8.04,
+      "text": "This is how you can also iterate in the map. Very So, let's quickly comment this"
+    },
+    {
+      "start": 2475.16,
+      "duration": 5.68,
+      "text": "off. Now, you might have a question. You're pre-computing here as driver."
+    },
+    {
+      "start": 2478.68,
+      "duration": 6.4,
+      "text": "That's like running a loop or taking the input and then doing the pre-compute."
+    },
+    {
+      "start": 2482.96,
+      "duration": 8.08,
+      "text": "You can also do this over here. It is okay. Like, you can declare this before"
+    },
+    {
+      "start": 2487.72,
+      "duration": 5.92,
+      "text": "this. And it saves. And you can just omit."
+    },
+    {
+      "start": 2491.92,
+      "duration": 5.52,
+      "text": "The pre-computation can be done while taking the input as well. It doesn't"
+    },
+    {
+      "start": 2495.32,
+      "duration": 6.68,
+      "text": "matters. It will save you one for loop, but that is okay. That won't change"
+    },
+    {
+      "start": 2499.52,
+      "duration": 7.48,
+      "text": "anything or that won't make your program super fast. Why won't it make super"
+    },
+    {
+      "start": 2504.32,
+      "duration": 7.76,
+      "text": "fast? Because it's n plus n, and not n into n. n into n generates a bigger"
+    },
+    {
+      "start": 2509.56,
+      "duration": 7.44,
+      "text": "value. n plus n is like 2n. And if you remember, the time complexity, we ignore"
+    },
+    {
+      "start": 2515.32,
+      "duration": 5.84,
+      "text": "two, three, and all these smaller values. Remember?"
+    },
+    {
+      "start": 2518.68,
+      "duration": 7.52,
+      "text": "So, we did learn about map. Can this map be used in something else?"
+    },
+    {
+      "start": 2523.48,
+      "duration": 5.52,
+      "text": "Yes. You can also use map in string hashing."
+    },
+    {
+      "start": 2527.16,
+      "duration": 7.24,
+      "text": "Now, what is the key over here? If you remember, the key is a character. So,"
+    },
+    {
+      "start": 2531.32,
+      "duration": 8.04,
+      "text": "what you can do is you can say map of character and store its frequency. So,"
+    },
+    {
+      "start": 2537.16,
+      "duration": 7.12,
+      "text": "instead of using a array for hashing, you can go ahead and say map of"
+    },
+    {
+      "start": 2541.64,
+      "duration": 8.44,
+      "text": "character and now you can say map of whatever is your character S of I"
+    },
+    {
+      "start": 2547.0,
+      "duration": 6.96,
+      "text": "plus plus. This will not be converted into integer. Now, your map will be"
+    },
+    {
+      "start": 2552.12,
+      "duration": 7.2,
+      "text": "storing something like this. A appears twice, B appears once, C"
+    },
+    {
+      "start": 2557.04,
+      "duration": 7.72,
+      "text": "appears once. So, depending on what you are trying to hash, that will become"
+    },
+    {
+      "start": 2561.88,
+      "duration": 7.12,
+      "text": "your key. And what are you storing? That will become your value. Over here, we"
+    },
+    {
+      "start": 2567.0,
+      "duration": 6.4,
+      "text": "are storing the frequency. That's why it's doing plus plus. Got it?"
+    },
+    {
+      "start": 2571.48,
+      "duration": 6.36,
+      "text": "In Java, so in Java, there is something as hash map. You can use it. It works in"
+    },
+    {
+      "start": 2575.92,
+      "duration": 7.44,
+      "text": "the similar fashion. Now, let's talk about something very important. What is"
+    },
+    {
+      "start": 2579.96,
+      "duration": 7.32,
+      "text": "the time complexity of this map? So, in order to do something like map of"
+    },
+    {
+      "start": 2585.16,
+      "duration": 6.56,
+      "text": "something plus plus, that is basically storing in the map. You have to fetch"
+    },
+    {
+      "start": 2589.0,
+      "duration": 4.96,
+      "text": "from the map, that is MPP of you're doing array of I or something"
+    },
+    {
+      "start": 2593.08,
+      "duration": 4.96,
+      "text": "like this. So, that's fetching from the map. So,"
+    },
+    {
+      "start": 2595.44,
+      "duration": 5.4,
+      "text": "storing of fetching, remember this. Storing"
+    },
+    {
+      "start": 2599.32,
+      "duration": 8.28,
+      "text": "of fetching, both of them in a map in a map"
+    },
+    {
+      "start": 2604.56,
+      "duration": 12.24,
+      "text": "takes logarithmic of n. Takes logarithmic of n in all cases, in best,"
+    },
+    {
+      "start": 2612.12,
+      "duration": 11.08,
+      "text": "in average, in worst. In all cases, takes logarithmic of n. Remember this."
+    },
+    {
+      "start": 2620.36,
+      "duration": 7.24,
+      "text": "But, there is something as unordered map."
+    },
+    {
+      "start": 2624.24,
+      "duration": 7.68,
+      "text": "There is something as unordered map, which we will be talking about now. So,"
+    },
+    {
+      "start": 2629.88,
+      "duration": 7.0,
+      "text": "let's go back to the code. So, even if I write this, unordered,"
+    },
+    {
+      "start": 2634.32,
+      "duration": 5.32,
+      "text": "will it run? And if I go ahead and run this,"
+    },
+    {
+      "start": 2638.0,
+      "duration": 6.2,
+      "text": "it will actually run. You see the values are getting printed."
+    },
+    {
+      "start": 2641.8,
+      "duration": 5.84,
+      "text": "So, even if you take unordered map, it does run. Now, what is the meaning of"
+    },
+    {
+      "start": 2646.08,
+      "duration": 6.8,
+      "text": "unordered map? So, as the name recommends, unordered."
+    },
+    {
+      "start": 2650.08,
+      "duration": 6.64,
+      "text": "So, imagine now I go across the map and try to print it."
+    },
+    {
+      "start": 2654.44,
+      "duration": 4.92,
+      "text": "So, if you remember in the map, it was storing everything in the sorted"
+    },
+    {
+      "start": 2658.28,
+      "duration": 5.36,
+      "text": "fashion. But, over here, by the way, just my bad."
+    },
+    {
+      "start": 2661.76,
+      "duration": 5.96,
+      "text": "Let's comment this out. In the map, everything was stored in the"
+    },
+    {
+      "start": 2665.28,
+      "duration": 7.72,
+      "text": "sorted order. But, over here, if you see, there is no particular order."
+    },
+    {
+      "start": 2670.36,
+      "duration": 8.44,
+      "text": "There is absolutely no order. It can change on every program. Like, over"
+    },
+    {
+      "start": 2676.16,
+      "duration": 6.68,
+      "text": "here, it's 3 12 2 1. If you run it If you run the same code on some other"
+    },
+    {
+      "start": 2680.44,
+      "duration": 6.64,
+      "text": "compiler, it might be having some different order. So, the order is"
+    },
+    {
+      "start": 2684.48,
+      "duration": 8.0,
+      "text": "something which you cannot decide. So, as the name recommends, it is unordered."
+    },
+    {
+      "start": 2689.88,
+      "duration": 6.96,
+      "text": "But, then you might ask, \"What is the advantage of using this?\" Let's talk"
+    },
+    {
+      "start": 2695.24,
+      "duration": 4.68,
+      "text": "about this. When you are storing something in the map, which you are"
+    },
+    {
+      "start": 2698.28,
+      "duration": 7.0,
+      "text": "doing, and when you're fetching in the map,"
+    },
+    {
+      "start": 2701.76,
+      "duration": 6.68,
+      "text": "the average and the best time complexity is a"
+    },
+    {
+      "start": 2706.44,
+      "duration": 5.28,
+      "text": "constant one. The average"
+    },
+    {
+      "start": 2710.36,
+      "duration": 5.2,
+      "text": "and the best is"
+    },
+    {
+      "start": 2713.32,
+      "duration": 6.6,
+      "text": "average. Again, most of the cases In most of the cases, it'll be big O of one"
+    },
+    {
+      "start": 2718.12,
+      "duration": 4.6,
+      "text": "for storing and fetching. But, there is something as the worst"
+    },
+    {
+      "start": 2721.4,
+      "duration": 7.0,
+      "text": "case, and that ends up taking linear time."
+    },
+    {
+      "start": 2726.24,
+      "duration": 4.88,
+      "text": "Linear time. What do you mean by linear time?"
+    },
+    {
+      "start": 2729.24,
+      "duration": 7.08,
+      "text": "This is nothing but the number of elements in the map. This is nothing but"
+    },
+    {
+      "start": 2733.28,
+      "duration": 8.8,
+      "text": "the number of elements in the map. When I talk about n, I'm talking about"
+    },
+    {
+      "start": 2738.68,
+      "duration": 8.64,
+      "text": "log n. This is nothing but the number of elements in map data structure."
+    },
+    {
+      "start": 2745.48,
+      "duration": 6.24,
+      "text": "Depending on the number of elements, the time will be computed. So,"
+    },
+    {
+      "start": 2749.88,
+      "duration": 6.4,
+      "text": "the average and the best case will be big O of one. In most of the cases,"
+    },
+    {
+      "start": 2753.4,
+      "duration": 6.32,
+      "text": "it'll be big O of one. In very minor cases,"
+    },
+    {
+      "start": 2757.32,
+      "duration": 7.96,
+      "text": "it will happen once in a blue moon. If the problem setup is extremely, like, he"
+    },
+    {
+      "start": 2763.0,
+      "duration": 6.56,
+      "text": "just wants to make your code fail. He might end up"
+    },
+    {
+      "start": 2766.72,
+      "duration": 6.96,
+      "text": "giving a worst case. It might end up taking big off n, and your code"
+    },
+    {
+      "start": 2772.0,
+      "duration": 7.68,
+      "text": "apparently will take n squared because imagine if"
+    },
+    {
+      "start": 2776.56,
+      "duration": 5.88,
+      "text": "this line is taking big O of n, and you're running a loop over it, so it's"
+    },
+    {
+      "start": 2781.2,
+      "duration": 5.92,
+      "text": "like n, and this is n. So, n into n, n into n"
+    },
+    {
+      "start": 2785.0,
+      "duration": 5.36,
+      "text": "happens. But, if this line is big O of 1,"
+    },
+    {
+      "start": 2788.08,
+      "duration": 6.4,
+      "text": "then it becomes n into 1. Most of the times, what you need to do is you need"
+    },
+    {
+      "start": 2793.08,
+      "duration": 7.12,
+      "text": "to do you need to use unordered map. Yes."
+    },
+    {
+      "start": 2797.4,
+      "duration": 7.0,
+      "text": "If it fails, if it gives you a time limit exceeded, that means taking a"
+    },
+    {
+      "start": 2802.88,
+      "duration": 5.8,
+      "text": "lot of time, then you switch back to map. But, the"
+    },
+    {
+      "start": 2806.24,
+      "duration": 7.24,
+      "text": "first preference should be unordered map because the worst case very rarely"
+    },
+    {
+      "start": 2811.56,
+      "duration": 7.16,
+      "text": "happens. I know it's it has a worst case, but it very very rarely happens."
+    },
+    {
+      "start": 2816.36,
+      "duration": 7.16,
+      "text": "Why does the worst case happens? Because of"
+    },
+    {
+      "start": 2820.04,
+      "duration": 6.52,
+      "text": "internal collisions, because of internal collisions. So, since we are talking"
+    },
+    {
+      "start": 2825.04,
+      "duration": 6.48,
+      "text": "about collisions, let's understand how does hashing go."
+    },
+    {
+      "start": 2829.0,
+      "duration": 6.56,
+      "text": "Because if you remember, I told you that the moment it"
+    },
+    {
+      "start": 2833.68,
+      "duration": 6.92,
+      "text": "crosses 10 to the power 7, an array hashing cannot be done. So, how does"
+    },
+    {
+      "start": 2838.48,
+      "duration": 6.16,
+      "text": "how's map data structure created? Will someone ask you? Might not. Like, in"
+    },
+    {
+      "start": 2843.0,
+      "duration": 5.84,
+      "text": "interviews, they generally don't ask that much. Even if they ask,"
+    },
+    {
+      "start": 2846.84,
+      "duration": 5.32,
+      "text": "only telling them about division method will work. These two methods are"
+    },
+    {
+      "start": 2850.44,
+      "duration": 5.04,
+      "text": "something which you just need to know the names. Might come up in your"
+    },
+    {
+      "start": 2853.68,
+      "duration": 5.64,
+      "text": "semesters, but this is the method that you have to understand."
+    },
+    {
+      "start": 2857.64,
+      "duration": 4.48,
+      "text": "So, how is the internal map designed?"
+    },
+    {
+      "start": 2861.08,
+      "duration": 4.56,
+      "text": "Because if I'm talking about design, I know I"
+    },
+    {
+      "start": 2863.88,
+      "duration": 5.64,
+      "text": "can design a array hash. But, for numbers like 10 to the power"
+    },
+    {
+      "start": 2867.32,
+      "duration": 5.08,
+      "text": "18, how do I store it? This is where"
+    },
+    {
+      "start": 2871.0,
+      "duration": 5.6,
+      "text": "internally you might see, like, these map data"
+    },
+    {
+      "start": 2874.6,
+      "duration": 4.68,
+      "text": "structures are implemented in different different ways."
+    },
+    {
+      "start": 2877.96,
+      "duration": 5.28,
+      "text": "They might be using division method. They might be using folding mid square."
+    },
+    {
+      "start": 2881.36,
+      "duration": 5.8,
+      "text": "They are implemented in a very complex way. You don't need to know it. Let's"
+    },
+    {
+      "start": 2884.92,
+      "duration": 6.56,
+      "text": "understand what is a division method because if we take the division method,"
+    },
+    {
+      "start": 2889.64,
+      "duration": 5.52,
+      "text": "then I might be able to explain you what is collisions. So, let's understand the"
+    },
+    {
+      "start": 2894.0,
+      "duration": 5.76,
+      "text": "division method. So, imagine imagine I'm giving you"
+    },
+    {
+      "start": 2897.44,
+      "duration": 5.16,
+      "text": "numbers like in an array I'm giving you numbers like two,"
+    },
+    {
+      "start": 2901.4,
+      "duration": 7.36,
+      "text": "five, and then 15,"
+    },
+    {
+      "start": 2904.24,
+      "duration": 11.36,
+      "text": "and then 55, not 55. Uh not 15. Let's take 16. And let's say"
+    },
+    {
+      "start": 2911.72,
+      "duration": 9.0,
+      "text": "28, and let's take 139. Okay. So, these are the numbers that I've given."
+    },
+    {
+      "start": 2917.4,
+      "duration": 6.8,
+      "text": "So, you can do array hashing because I'm not talking about map. If you have"
+    },
+    {
+      "start": 2922.68,
+      "duration": 7.56,
+      "text": "to do array hashing, you can actually go ahead and create an"
+    },
+    {
+      "start": 2926.72,
+      "duration": 6.8,
+      "text": "array of size 140. Then you go like 0 1 until till"
+    },
+    {
+      "start": 2931.4,
+      "duration": 5.6,
+      "text": "139 because if you create an array of size 140, you'll get 130."
+    },
+    {
+      "start": 2935.56,
+      "duration": 4.56,
+      "text": "And then you can hash it. But imagine I tell you imagine I tell"
+    },
+    {
+      "start": 2939.32,
+      "duration": 4.68,
+      "text": "you you cannot create an array"
+    },
+    {
+      "start": 2942.12,
+      "duration": 6.24,
+      "text": "for a time being you cannot create an array of size greater than 10. This is"
+    },
+    {
+      "start": 2945.96,
+      "duration": 6.12,
+      "text": "not allowed. An array of greater than size 10 is not"
+    },
+    {
+      "start": 2950.28,
+      "duration": 5.76,
+      "text": "allowed. I'm taking very smaller values in order to explain."
+    },
+    {
+      "start": 2953.56,
+      "duration": 5.6,
+      "text": "You can map this to bigger values. So, you can map this to the bigger"
+    },
+    {
+      "start": 2957.44,
+      "duration": 6.04,
+      "text": "problem that we are trying to solve. In the bigger problem imagine you have"
+    },
+    {
+      "start": 2960.4,
+      "duration": 5.96,
+      "text": "number like 100, 10 to the power 18, and then 10 to the power 16, and then 10 to"
+    },
+    {
+      "start": 2965.16,
+      "duration": 4.72,
+      "text": "the power four. And the maximum size allowed is 10 to"
+    },
+    {
+      "start": 2968.48,
+      "duration": 6.36,
+      "text": "the power seven. Beyond this it's not allowed. Right? So, same problem you're"
+    },
+    {
+      "start": 2972.12,
+      "duration": 8.16,
+      "text": "solving. We have bigger numbers, but as of now we have a restriction that you"
+    },
+    {
+      "start": 2976.8,
+      "duration": 7.68,
+      "text": "cannot create an array greater than size 10. Greater than equal to like at max 10"
+    },
+    {
+      "start": 2982.36,
+      "duration": 5.28,
+      "text": "is allowed, not more than. How will you do it?"
+    },
+    {
+      "start": 2986.12,
+      "duration": 5.44,
+      "text": "So, this is where something like a division method comes in. Yes. This is"
+    },
+    {
+      "start": 2990.0,
+      "duration": 4.4,
+      "text": "where something like a division method comes."
+    },
+    {
+      "start": 2992.36,
+      "duration": 5.4,
+      "text": "What does division method say? Division says, okay,"
+    },
+    {
+      "start": 2995.68,
+      "duration": 8.12,
+      "text": "I just have 10 size array allowed, which means"
+    },
+    {
+      "start": 3001.68,
+      "duration": 7.16,
+      "text": "I can only store 0 to 9, right?"
+    },
+    {
+      "start": 3005.68,
+      "duration": 9.32,
+      "text": "So, it's like 0 1 2. So, as I said, an array of greater than"
+    },
+    {
+      "start": 3010.92,
+      "duration": 9.68,
+      "text": "size 10 is not allowed. So, this is what we can have at max. So, 0 9 and we will"
+    },
+    {
+      "start": 3018.8,
+      "duration": 5.48,
+      "text": "be using the division method in order to hash it. How will we use the division"
+    },
+    {
+      "start": 3022.56,
+      "duration": 5.04,
+      "text": "method? It's very simple. If we have two,"
+    },
+    {
+      "start": 3025.8,
+      "duration": 5.56,
+      "text": "whatever number we have, we will try to"
+    },
+    {
+      "start": 3029.08,
+      "duration": 5.0,
+      "text": "modulate it with 10. So, for two,"
+    },
+    {
+      "start": 3032.52,
+      "duration": 4.76,
+      "text": "the corresponding value will be two. I'll go to two and I'll say"
+    },
+    {
+      "start": 3035.92,
+      "duration": 5.88,
+      "text": "it appears one. For five, we'll modulate it with 10,"
+    },
+    {
+      "start": 3039.88,
+      "duration": 6.16,
+      "text": "I'll get five. For 16, I'll modulate with 10, I'll get"
+    },
+    {
+      "start": 3044.16,
+      "duration": 6.84,
+      "text": "six. For 28, I'll modulate with 10"
+    },
+    {
+      "start": 3049.16,
+      "duration": 5.24,
+      "text": "and I will get something like What will I get?"
+    },
+    {
+      "start": 3052.4,
+      "duration": 8.24,
+      "text": "I'll get eight. For 139, I will modulate with nine and"
+    },
+    {
+      "start": 3057.52,
+      "duration": 6.32,
+      "text": "I'll get nine. Well, do a one. Right?"
+    },
+    {
+      "start": 3061.8,
+      "duration": 5.24,
+      "text": "Now, what I do is I have"
+    },
+    {
+      "start": 3065.24,
+      "duration": 6.24,
+      "text": "used the division method to kind of trim down the number."
+    },
+    {
+      "start": 3068.56,
+      "duration": 6.44,
+      "text": "And I've been able to somehow add a hash it."
+    },
+    {
+      "start": 3073.52,
+      "duration": 5.04,
+      "text": "Right? This is what the division"
+    },
+    {
+      "start": 3076.88,
+      "duration": 4.44,
+      "text": "But your brain might be thinking a lot of things. I'll come to that one. Don't"
+    },
+    {
+      "start": 3080.4,
+      "duration": 3.68,
+      "text": "worry. So, this is how the division method"
+    },
+    {
+      "start": 3083.28,
+      "duration": 4.44,
+      "text": "works. Now, if someone does ask you and someone"
+    },
+    {
+      "start": 3085.96,
+      "duration": 7.96,
+      "text": "just comes up and asks you, \"Hey, how many times 139 appears?\" So, you say"
+    },
+    {
+      "start": 3090.32,
+      "duration": 6.52,
+      "text": "139 modulo 10 is equal to nine. What is the value at nine? It's one. So, it"
+    },
+    {
+      "start": 3095.84,
+      "duration": 6.16,
+      "text": "appears one time. That's how you retrieve. The"
+    },
+    {
+      "start": 3099.88,
+      "duration": 5.28,
+      "text": "division method is modulo 10. So, that's how you put it and that's how"
+    },
+    {
+      "start": 3103.44,
+      "duration": 4.92,
+      "text": "you retrieve it. So, that's how you trim down the number."
+    },
+    {
+      "start": 3106.64,
+      "duration": 4.4,
+      "text": "Now, you might have a lot of questions. I'll come to each of these questions"
+    },
+    {
+      "start": 3109.92,
+      "duration": 5.6,
+      "text": "now. Now, what I've done is I have kind of"
+    },
+    {
+      "start": 3112.84,
+      "duration": 6.72,
+      "text": "drawn the array in the vertical fashion. And the first question that might come"
+    },
+    {
+      "start": 3117.08,
+      "duration": 6.48,
+      "text": "to your head is what if on modulo 10 there are same numbers?"
+    },
+    {
+      "start": 3121.88,
+      "duration": 5.88,
+      "text": "Because this is two. So, now I'll do it a slightly different."
+    },
+    {
+      "start": 3125.72,
+      "duration": 5.2,
+      "text": "This is two. Then I'll take Okay, we have one two."
+    },
+    {
+      "start": 3129.24,
+      "duration": 7.0,
+      "text": "We have one. We have five. We have one five."
+    },
+    {
+      "start": 3133.16,
+      "duration": 7.36,
+      "text": "We have 16. We have one six. So, I'll probably store the numbers in"
+    },
+    {
+      "start": 3138.24,
+      "duration": 6.56,
+      "text": "some chaining in some chaining. This is what you call as"
+    },
+    {
+      "start": 3141.84,
+      "duration": 2.96,
+      "text": "linear chaining."
+    },
+    {
+      "start": 3145.04,
+      "duration": 4.4,
+      "text": "Again, these things will be done using linked list."
+    },
+    {
+      "start": 3148.0,
+      "duration": 5.92,
+      "text": "You don't need to know. Just understand the logic and concept. 28"
+    },
+    {
+      "start": 3152.16,
+      "duration": 6.72,
+      "text": "modulo 10 is eight. So, in eight you put 28. 139 modulo 10"
+    },
+    {
+      "start": 3156.96,
+      "duration": 4.92,
+      "text": "is nine. So, in nine you say"
+    },
+    {
+      "start": 3160.44,
+      "duration": 6.0,
+      "text": "139. 38 Here comes the"
+    },
+    {
+      "start": 3164.12,
+      "duration": 6.56,
+      "text": "collision factor. This was also modulo eight. This was"
+    },
+    {
+      "start": 3167.96,
+      "duration": 8.08,
+      "text": "also modulo eight. So, you cannot store. So, you chain it."
+    },
+    {
+      "start": 3172.12,
+      "duration": 8.32,
+      "text": "You say I have one more 38. Next"
+    },
+    {
+      "start": 3178.08,
+      "duration": 5.84,
+      "text": "48. Again, you do a modulo 10 and you get eight."
+    },
+    {
+      "start": 3181.44,
+      "duration": 6.32,
+      "text": "So, you go and say chain it. And this time again you get eight. But"
+    },
+    {
+      "start": 3185.44,
+      "duration": 6.4,
+      "text": "this time you get 28. So, you chain it. But you do not chain it in the back."
+    },
+    {
+      "start": 3189.76,
+      "duration": 6.72,
+      "text": "Instead of that you chain it somewhere like this 28 and back over here. And you"
+    },
+    {
+      "start": 3194.84,
+      "duration": 5.12,
+      "text": "break this. This is something which can be done using linked"
+    },
+    {
+      "start": 3197.88,
+      "duration": 5.88,
+      "text": "list in a very simple way. You'll be learning it it I'll learning this in"
+    },
+    {
+      "start": 3201.56,
+      "duration": 5.6,
+      "text": "linked list. So, you chain it. 28 is there twice."
+    },
+    {
+      "start": 3205.08,
+      "duration": 8.64,
+      "text": "And then again you get 18. So, you chain it something like 18. And then you break"
+    },
+    {
+      "start": 3210.0,
+      "duration": 8.4,
+      "text": "you make 28. It's like 18 28 28 38 40. So, you chained it. Right?"
+    },
+    {
+      "start": 3215.92,
+      "duration": 7.84,
+      "text": "So, this is how it works. Now, if someone does comes up and ask"
+    },
+    {
+      "start": 3219.92,
+      "duration": 8.72,
+      "text": "you how many times 28 appears So, what what we do is we say 28 modulo"
+    },
+    {
+      "start": 3226.52,
+      "duration": 4.48,
+      "text": "8, we go to 8 direct. And we know there will be limited"
+    },
+    {
+      "start": 3229.76,
+      "duration": 6.08,
+      "text": "numbers. And we know it is sorted."
+    },
+    {
+      "start": 3233.48,
+      "duration": 7.2,
+      "text": "So, there are a lot of sort algorithms which are applied internally and you can"
+    },
+    {
+      "start": 3238.16,
+      "duration": 5.44,
+      "text": "easily do a binary search on it. And you'll find that there are two"
+    },
+    {
+      "start": 3241.68,
+      "duration": 4.8,
+      "text": "numbers and it can be done in minimal time, minimal time."
+    },
+    {
+      "start": 3245.64,
+      "duration": 4.88,
+      "text": "Got it? So, this was the division method that I"
+    },
+    {
+      "start": 3248.44,
+      "duration": 6.92,
+      "text": "did talk about. So, you can do some chaining and you can keep it in certain"
+    },
+    {
+      "start": 3252.52,
+      "duration": 7.68,
+      "text": "ways. Imagine you had 22, then this will be chained here. So, chaining can be"
+    },
+    {
+      "start": 3257.44,
+      "duration": 6.32,
+      "text": "done and you can always keep them in limited"
+    },
+    {
+      "start": 3261.72,
+      "duration": 4.68,
+      "text": "memory storage. So,"
+    },
+    {
+      "start": 3264.72,
+      "duration": 5.6,
+      "text": "do you need to implement this? No, you just need to understand the concept."
+    },
+    {
+      "start": 3268.72,
+      "duration": 4.12,
+      "text": "What then But sir, then what is collision?"
+    },
+    {
+      "start": 3273.64,
+      "duration": 7.48,
+      "text": "So, in order to find out how many times 28 appeared, what did you do?"
+    },
+    {
+      "start": 3279.36,
+      "duration": 5.28,
+      "text": "You just went to 8 and then you figured out 28 appears twice because it was"
+    },
+    {
+      "start": 3283.52,
+      "duration": 5.92,
+      "text": "chained in a sorted order. Because it was"
+    },
+    {
+      "start": 3287.4,
+      "duration": 6.96,
+      "text": "chained in a sorted order. So, that is quite easy to find out 28 twice."
+    },
+    {
+      "start": 3291.76,
+      "duration": 6.76,
+      "text": "But but but if if"
+    },
+    {
+      "start": 3296.12,
+      "duration": 6.72,
+      "text": "just just realize this 8, this chain would have been"
+    },
+    {
+      "start": 3300.88,
+      "duration": 5.32,
+      "text": "ultra huge. Do they use the division method"
+    },
+    {
+      "start": 3304.08,
+      "duration": 5.48,
+      "text": "internally? No, they use some method which is a mixture of everything."
+    },
+    {
+      "start": 3308.32,
+      "duration": 5.56,
+      "text": "Depending on your input, they find out some method and they use it. Imagine"
+    },
+    {
+      "start": 3311.4,
+      "duration": 6.48,
+      "text": "they're using a method internally which falls under collision."
+    },
+    {
+      "start": 3316.12,
+      "duration": 4.8,
+      "text": "What is collision? You're given an array."
+    },
+    {
+      "start": 3319.2,
+      "duration": 7.28,
+      "text": "Imagine they're using division. Just imagine, they're not, just imagine. And"
+    },
+    {
+      "start": 3322.84,
+      "duration": 7.64,
+      "text": "I give you something like 18, 28, 38, 48 and all the arrays"
+    },
+    {
+      "start": 3328.56,
+      "duration": 5.8,
+      "text": "are ending with 8. So, how will the chain look like?"
+    },
+    {
+      "start": 3331.88,
+      "duration": 5.28,
+      "text": "The chain will be on 8, you will have all the numbers"
+    },
+    {
+      "start": 3335.84,
+      "duration": 5.8,
+      "text": "all the numbers. So, apparently"
+    },
+    {
+      "start": 3339.16,
+      "duration": 7.12,
+      "text": "all the other memories are not used. And in eight, you had all the numbers. It's"
+    },
+    {
+      "start": 3343.72,
+      "duration": 6.32,
+      "text": "a huge chain. Collision happened. Everyone went to the same hash place."
+    },
+    {
+      "start": 3348.44,
+      "duration": 6.24,
+      "text": "Collision is this. Everyone went to the same hash place. If"
+    },
+    {
+      "start": 3352.48,
+      "duration": 5.52,
+      "text": "everyone went to the same hash place, you have to find it out. It's going to"
+    },
+    {
+      "start": 3356.16,
+      "duration": 5.2,
+      "text": "be tough. Going to take a lot of time. Got it? This is what we mean as"
+    },
+    {
+      "start": 3360.08,
+      "duration": 5.2,
+      "text": "collision. Whatever hash they're using, remember"
+    },
+    {
+      "start": 3363.04,
+      "duration": 5.76,
+      "text": "this. Whatever hash they're using internally, can be anything. You cannot"
+    },
+    {
+      "start": 3367.44,
+      "duration": 6.64,
+      "text": "say what they're using. Whatever hash they're using,"
+    },
+    {
+      "start": 3371.2,
+      "duration": 7.64,
+      "text": "it ends up that all your keys all your keys"
+    },
+    {
+      "start": 3375.56,
+      "duration": 6.8,
+      "text": "end up at the same hash value, hash index."
+    },
+    {
+      "start": 3380.24,
+      "duration": 6.92,
+      "text": "Ends up at the same hash index. This is when the worst case will happen and big"
+    },
+    {
+      "start": 3384.2,
+      "duration": 8.2,
+      "text": "of it. Now you understand why I said it's a very, very minor case. It might"
+    },
+    {
+      "start": 3389.56,
+      "duration": 6.92,
+      "text": "not happen. It Like the the problem that it has to be extremely brilliant. He has"
+    },
+    {
+      "start": 3394.12,
+      "duration": 5.56,
+      "text": "to find out and then he might be able to do it, but it's an extremely rare case"
+    },
+    {
+      "start": 3398.72,
+      "duration": 5.36,
+      "text": "to happen. This is why in interviews, when you talk"
+    },
+    {
+      "start": 3402.24,
+      "duration": 5.68,
+      "text": "about the time complexity, you tell them in the best and the average, if I'm"
+    },
+    {
+      "start": 3405.6,
+      "duration": 6.88,
+      "text": "using an unordered map, it's big of one. If I go across the"
+    },
+    {
+      "start": 3409.72,
+      "duration": 7.08,
+      "text": "worst case, it will be big of n. So, this is how it works. So, I hope you"
+    },
+    {
+      "start": 3414.28,
+      "duration": 6.56,
+      "text": "understood the division method. This is the normal simple division method. And"
+    },
+    {
+      "start": 3419.52,
+      "duration": 6.56,
+      "text": "linear chaining is done if there are multiple values. Folding and mid square"
+    },
+    {
+      "start": 3423.48,
+      "duration": 6.4,
+      "text": "method not required. Not required. I just told you the division method"
+    },
+    {
+      "start": 3427.48,
+      "duration": 5.6,
+      "text": "because I wanted to explain you what is collision. And in order to explain"
+    },
+    {
+      "start": 3431.36,
+      "duration": 6.72,
+      "text": "collision, then I could have explained you why big of n is such a"
+    },
+    {
+      "start": 3435.72,
+      "duration": 5.4,
+      "text": "like it never happens. It just happens once in a blue moon."
+    },
+    {
+      "start": 3440.12,
+      "duration": 5.04,
+      "text": "A quick another thing."
+    },
+    {
+      "start": 3443.4,
+      "duration": 5.0,
+      "text": "Can the key be an integer? Yes. Can Can it be a double? Can it be a character?"
+    },
+    {
+      "start": 3446.72,
+      "duration": 6.0,
+      "text": "Can it be a string? It can be anything. It can even be a pair of integers. It"
+    },
+    {
+      "start": 3450.72,
+      "duration": 7.44,
+      "text": "can be pair of two guys as well. This can also be a key. Key can be anything."
+    },
+    {
+      "start": 3455.16,
+      "duration": 6.24,
+      "text": "Any data structure can be a key in a map."
+    },
+    {
+      "start": 3459.12,
+      "duration": 8.52,
+      "text": "But when it comes to unordered map, you can only have individual data types."
+    },
+    {
+      "start": 3464.36,
+      "duration": 8.08,
+      "text": "You cannot say pair of int {comma} int to be a key and the value to be int."
+    },
+    {
+      "start": 3470.24,
+      "duration": 7.28,
+      "text": "This cannot be a key in unordered map. This cannot. But in map, any data"
+    },
+    {
+      "start": 3475.04,
+      "duration": 7.72,
+      "text": "structure, any particular data type can be a key. In unordered map, it's limited"
+    },
+    {
+      "start": 3480.6,
+      "duration": 7.88,
+      "text": "to integer, double, character, string. You cannot take like pair of int {comma}"
+    },
+    {
+      "start": 3486.36,
+      "duration": 5.72,
+      "text": "int or something like a vector of int. It will not allow you. Remember this in"
+    },
+    {
+      "start": 3490.64,
+      "duration": 4.96,
+      "text": "mind. A lot of you might be thinking this"
+    },
+    {
+      "start": 3493.68,
+      "duration": 6.56,
+      "text": "chaining stuff and everything. No need to worry. No one is going to ask you in"
+    },
+    {
+      "start": 3497.36,
+      "duration": 7.28,
+      "text": "interviews. It's just for understanding what are collisions and if someone will"
+    },
+    {
+      "start": 3502.52,
+      "duration": 5.84,
+      "text": "ask you about this complexity, just for explaining. No one is going to"
+    },
+    {
+      "start": 3506.2,
+      "duration": 6.12,
+      "text": "ask you to implement this. No one. No one. Trust me on this."
+    },
+    {
+      "start": 3510.2,
+      "duration": 5.84,
+      "text": "So coming back to the course, you can do this. Can you do this? Find the highest"
+    },
+    {
+      "start": 3514.24,
+      "duration": 5.44,
+      "text": "and lowest frequent element. I'll give you this as homework. It's quite simple."
+    },
+    {
+      "start": 3518.36,
+      "duration": 5.16,
+      "text": "The hint is you can use map or you can use the array"
+    },
+    {
+      "start": 3522.4,
+      "duration": 4.16,
+      "text": "hashing. And then depending on how many times"
+    },
+    {
+      "start": 3525.56,
+      "duration": 5.96,
+      "text": "they appear in map, you can iterate like this and"
+    },
+    {
+      "start": 3528.84,
+      "duration": 6.56,
+      "text": "this is what has to be maximum if you're finding highest frequency. So try to do"
+    },
+    {
+      "start": 3533.6,
+      "duration": 5.04,
+      "text": "this. It's quite simple. Some if-else statements will do. This will be your"
+    },
+    {
+      "start": 3537.2,
+      "duration": 4.84,
+      "text": "homework. Once you've done this, you can put the code in the comments. I'll check"
+    },
+    {
+      "start": 3540.8,
+      "duration": 6.0,
+      "text": "it out and the other people will also get help from it. So with this, I can"
+    },
+    {
+      "start": 3544.56,
+      "duration": 6.4,
+      "text": "say that the learn the basic stuff module is completed from the Striver's"
+    },
+    {
+      "start": 3548.52,
+      "duration": 4.92,
+      "text": "A2Z course. The next module, we will go to step two."
+    },
+    {
+      "start": 3552.4,
+      "duration": 4.76,
+      "text": "So guys, I hope you've understood everything I taught. Just in case you"
+    },
+    {
+      "start": 3555.08,
+      "duration": 5.72,
+      "text": "didn't, please hit that like button. And yeah, yeah, to follow our tradition,"
+    },
+    {
+      "start": 3558.64,
+      "duration": 4.88,
+      "text": "make sure you comment understood in the comments so that I get to know that"
+    },
+    {
+      "start": 3561.96,
+      "duration": 4.44,
+      "text": "you've understood everything. And if you're new to our channel, what are you"
+    },
+    {
+      "start": 3564.6,
+      "duration": 5.0,
+      "text": "waiting for? Hit that subscribe button because that is the only thing that"
+    },
+    {
+      "start": 3567.64,
+      "duration": 6.2,
+      "text": "keeps you motivated to make such kind of content and I do get disheartened"
+    },
+    {
+      "start": 3572.04,
+      "duration": 5.72,
+      "text": "because nearly 60% of the users who watch my video do not hit that subscribe"
+    },
+    {
+      "start": 3575.92,
+      "duration": 5.4,
+      "text": "button. I know I know a lot of people watch videos they do not consider"
+    },
+    {
+      "start": 3579.2,
+      "duration": 5.96,
+      "text": "hitting it. So please please do consider hitting it because it does motivate me a"
+    },
+    {
+      "start": 3583.2,
+      "duration": 5.68,
+      "text": "lot and if you haven't followed me on Instagram, Twitter, LinkedIn, all the"
+    },
+    {
+      "start": 3587.4,
+      "duration": 5.2,
+      "text": "links will be in the description. Make sure you follow me across everywhere and"
+    },
+    {
+      "start": 3591.24,
+      "duration": 4.72,
+      "text": "do share your learnings using the hashtag. With this I'll be wrapping up"
+    },
+    {
+      "start": 3594.44,
+      "duration": 5.84,
+      "text": "this video and some of the video doesn't make sense but bye-bye team."
+    },
+    {
+      "start": 3597.04,
+      "duration": 10.04,
+      "text": "Whenever your heart is broken, don't ever forget you're golden."
+    },
+    {
+      "start": 3603.56,
+      "duration": 3.52,
+      "text": "I will find the light in you."
+    }
+  ]
+}

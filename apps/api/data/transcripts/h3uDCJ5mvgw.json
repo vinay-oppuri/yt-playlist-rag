@@ -1,0 +1,612 @@
+{
+  "video_id": "h3uDCJ5mvgw",
+  "title": "How to setup VS code for DSA and CP | Input / Output split format",
+  "total_segments": 121,
+  "segments": [
+    {
+      "start": 2.94,
+      "duration": 6.0,
+      "text": "so in case you're looking for a setup which works something like this where"
+    },
+    {
+      "start": 6.359,
+      "duration": 6.061,
+      "text": "the code is on the left the input is on the right and the output is on the right"
+    },
+    {
+      "start": 10.26,
+      "duration": 6.42,
+      "text": "and they're splitted across screen and you input something and you write the"
+    },
+    {
+      "start": 14.28,
+      "duration": 6.419,
+      "text": "code and then you click one button and then the output is visible if you want"
+    },
+    {
+      "start": 18.66,
+      "duration": 6.24,
+      "text": "to set up something like this this video is going to be about setting up a"
+    },
+    {
+      "start": 23.22,
+      "duration": 5.04,
+      "text": "similar kind of setup but for that in case for the first time here please make"
+    },
+    {
+      "start": 26.64,
+      "duration": 6.36,
+      "text": "sure that you check out Strivers a to Zsa course now this is the world's most"
+    },
+    {
+      "start": 30.779,
+      "duration": 8.521,
+      "text": "in-depth DS algo course why do I see that because the course has 455 modules"
+    },
+    {
+      "start": 35.88,
+      "duration": 8.699,
+      "text": "yes we have solved over 455 problems and all the videos are free you get premium"
+    },
+    {
+      "start": 41.94,
+      "duration": 7.139,
+      "text": "quality articles as well over there we have C plus plus Java JavaScript python"
+    },
+    {
+      "start": 46.739,
+      "duration": 6.121,
+      "text": "codes covered as well so you get everything at one place and you don't"
+    },
+    {
+      "start": 51.0,
+      "duration": 5.64,
+      "text": "need anything else you can straight away prepare for it and this is targeted for"
+    },
+    {
+      "start": 55.02,
+      "duration": 5.4,
+      "text": "companies like Google Amazon Facebook and all the other product based"
+    },
+    {
+      "start": 58.5,
+      "duration": 4.859,
+      "text": "companies in the market and that's one other thing that I want to clarify"
+    },
+    {
+      "start": 61.559,
+      "duration": 6.181,
+      "text": "there's a lot of rumor that the this particular course is in C plus plus no"
+    },
+    {
+      "start": 65.22,
+      "duration": 6.24,
+      "text": "that does not the truth so the first couple of videos are in C plus plus"
+    },
+    {
+      "start": 69.299,
+      "duration": 5.941,
+      "text": "where I'm teaching for Loop while loop because they're pretty much similar in C"
+    },
+    {
+      "start": 73.14,
+      "duration": 6.42,
+      "text": "plus plus and Java so I've just plot in C plus plus if you know Java you'll you"
+    },
+    {
+      "start": 77.4,
+      "duration": 5.579,
+      "text": "can easily grasp it right but when I move to recursion when I move to arrays"
+    },
+    {
+      "start": 81.299,
+      "duration": 7.32,
+      "text": "when I move to binary search or any other thing each of those lectures are"
+    },
+    {
+      "start": 85.5,
+      "duration": 8.52,
+      "text": "recorded with logic and then pseudocode I do not write code in any language and"
+    },
+    {
+      "start": 91.799,
+      "duration": 7.14,
+      "text": "after that in the description you'll find notes where you'll find C plus plus"
+    },
+    {
+      "start": 96.0,
+      "duration": 7.56,
+      "text": "Java JavaScript python codes in those nodes so this course is not language"
+    },
+    {
+      "start": 101.4,
+      "duration": 6.719,
+      "text": "dependent the first couple of videos might be but the entire course is not"
+    },
+    {
+      "start": 106.38,
+      "duration": 7.559,
+      "text": "only the basics like the for Loop while you're printing stuff is in C plus plus"
+    },
+    {
+      "start": 110.22,
+      "duration": 7.92,
+      "text": "after that everything a pseudo code yes pseudocode I focus on the logic so"
+    },
+    {
+      "start": 116.28,
+      "duration": 5.46,
+      "text": "please remember this and the link is in the description make sure you check it"
+    },
+    {
+      "start": 119.52,
+      "duration": 6.059,
+      "text": "out so let's get back to the vs code and try to set it up so first I will be"
+    },
+    {
+      "start": 123.479,
+      "duration": 5.941,
+      "text": "setting it up for C plus plus after that I will be setting it up for Java and for"
+    },
+    {
+      "start": 127.5,
+      "duration": 5.459,
+      "text": "any other language if you see these two setups you will be able to set it up so"
+    },
+    {
+      "start": 131.94,
+      "duration": 5.159,
+      "text": "the first thing that you will do is you'll just open the vs code editor and"
+    },
+    {
+      "start": 135.12,
+      "duration": 6.54,
+      "text": "right after that you open a folder so what I'll do is I'll go over here and"
+    },
+    {
+      "start": 139.02,
+      "duration": 8.06,
+      "text": "I'll open C plus plus so I've opened C plus plus after that I go to the"
+    },
+    {
+      "start": 144.239,
+      "duration": 8.041,
+      "text": "extensions and I install C plus plus extension so search and you'll find an"
+    },
+    {
+      "start": 150.72,
+      "duration": 6.12,
+      "text": "extension from Microsoft I've already installed it so please make sure that"
+    },
+    {
+      "start": 154.56,
+      "duration": 8.6,
+      "text": "you install it once you have installed it go back to this folder and try to"
+    },
+    {
+      "start": 160.14,
+      "duration": 9.5,
+      "text": "create a file so maybe I'll just create demo.cpp so that's your file after that"
+    },
+    {
+      "start": 166.44,
+      "duration": 9.6,
+      "text": "create another file with input dot txt after that create one more file with"
+    },
+    {
+      "start": 172.459,
+      "duration": 9.761,
+      "text": "output.txt done once you created these three files go to view and go to editor"
+    },
+    {
+      "start": 179.58,
+      "duration": 6.48,
+      "text": "layout and say split left once you splitting left you will find demo is on"
+    },
+    {
+      "start": 184.26,
+      "duration": 6.0,
+      "text": "the left as input and output so just cross it out so you have input over here"
+    },
+    {
+      "start": 188.04,
+      "duration": 6.36,
+      "text": "and output so you have input and output on the right you want to spread them"
+    },
+    {
+      "start": 191.519,
+      "duration": 7.86,
+      "text": "across so go to view again edit a layout and say split down once you split them"
+    },
+    {
+      "start": 196.98,
+      "duration": 6.539,
+      "text": "into down so you can just drag the output and that should be done so the"
+    },
+    {
+      "start": 201.18,
+      "duration": 5.52,
+      "text": "input is on the top and the output is over here let's take a quick break"
+    },
+    {
+      "start": 204.959,
+      "duration": 5.581,
+      "text": "before we move ahead so nowadays everyone is focusing on DS algo but"
+    },
+    {
+      "start": 208.62,
+      "duration": 5.759,
+      "text": "people are ignoring all the other aspects something like projects is going"
+    },
+    {
+      "start": 212.64,
+      "duration": 5.64,
+      "text": "to be of extreme importance when you're going in for placements so what I'll"
+    },
+    {
+      "start": 216.42,
+      "duration": 6.539,
+      "text": "recommend you is to get a strong portfolio with projects and with Ds algo"
+    },
+    {
+      "start": 221.099,
+      "duration": 5.941,
+      "text": "as well so what you can do is you can check out crowd.do's project Hub over"
+    },
+    {
+      "start": 225.42,
+      "duration": 5.879,
+      "text": "there they have structured a lot of projects according to domains let's say"
+    },
+    {
+      "start": 229.2,
+      "duration": 6.539,
+      "text": "we go to web dev and you can see a lot of project ideas and they are given in a"
+    },
+    {
+      "start": 233.94,
+      "duration": 6.06,
+      "text": "structured manner so you can follow them and build some amazing projects and you"
+    },
+    {
+      "start": 237.9,
+      "duration": 5.82,
+      "text": "can build a portfolio like pavitra Sharma over here you can see his"
+    },
+    {
+      "start": 241.26,
+      "duration": 5.52,
+      "text": "portfolio is built some amazing projects so you can have a portfolio something"
+    },
+    {
+      "start": 245.159,
+      "duration": 5.28,
+      "text": "like this when you're going in for your placement so let's talk about crowd or"
+    },
+    {
+      "start": 248.76,
+      "duration": 5.699,
+      "text": "do as well so crowd or do is world's first experiential learning and"
+    },
+    {
+      "start": 252.0,
+      "duration": 6.9,
+      "text": "upscaling platform over here you don't typically watch videos you basically"
+    },
+    {
+      "start": 256.38,
+      "duration": 7.319,
+      "text": "learn by doing so they offer you program so you'll be working like a software"
+    },
+    {
+      "start": 260.76,
+      "duration": 6.42,
+      "text": "engineer does at Amazon Netflix Google Etc you'll be building some amazing"
+    },
+    {
+      "start": 265.38,
+      "duration": 5.64,
+      "text": "projects you can see on the screen and you'll be building under mentors who are"
+    },
+    {
+      "start": 269.28,
+      "duration": 5.4,
+      "text": "working at Google Amazon Microsoft Walmart PayPal so talking about"
+    },
+    {
+      "start": 273.0,
+      "duration": 5.58,
+      "text": "placement stats crack has already transformed thousand plus careers cry"
+    },
+    {
+      "start": 276.96,
+      "duration": 5.34,
+      "text": "out graduates from various backgrounds have already been placed in 750 plus"
+    },
+    {
+      "start": 280.56,
+      "duration": 4.62,
+      "text": "companies so they offer you fellowship program in software development what you"
+    },
+    {
+      "start": 283.8,
+      "duration": 5.76,
+      "text": "can do is you can book a free trial session and test it out for yourself and"
+    },
+    {
+      "start": 287.52,
+      "duration": 5.88,
+      "text": "at the same time make sure that you bookmark the projects Hub I'll be"
+    },
+    {
+      "start": 291.419,
+      "duration": 5.161,
+      "text": "leaving the link in the description and you'll also find the free trial session"
+    },
+    {
+      "start": 295.02,
+      "duration": 5.58,
+      "text": "Link in the description make sure you check them out now quickly try to run a"
+    },
+    {
+      "start": 298.979,
+      "duration": 6.181,
+      "text": "code so what I've done is I've copy pasted a demo code now the next step is"
+    },
+    {
+      "start": 303.479,
+      "duration": 7.761,
+      "text": "to run this but before that you have to go to terminal configure tasks there's"
+    },
+    {
+      "start": 308.1,
+      "duration": 8.52,
+      "text": "something else create task click it others once you click on others you see"
+    },
+    {
+      "start": 314.639,
+      "duration": 6.181,
+      "text": "there's a vs code folder and there's a task.json"
+    },
+    {
+      "start": 318.419,
+      "duration": 6.421,
+      "text": "remove this configuration and go to the description I'll be pasting the"
+    },
+    {
+      "start": 322.02,
+      "duration": 9.42,
+      "text": "configuration just paste it and remember one thing the compile and run should be"
+    },
+    {
+      "start": 327.539,
+      "duration": 10.201,
+      "text": "together save it and close it and right after that I'll be pressing command plus"
+    },
+    {
+      "start": 334.979,
+      "duration": 8.341,
+      "text": "shift plus b but for that let's give an input 13 command shift and B and you"
+    },
+    {
+      "start": 341.16,
+      "duration": 7.08,
+      "text": "will see that there is an output quite simple isn't it so the configuration"
+    },
+    {
+      "start": 345.66,
+      "duration": 7.979,
+      "text": "that you see over here that's for C plus plus for MacBook in the notes like in"
+    },
+    {
+      "start": 351.96,
+      "duration": 6.239,
+      "text": "the description I'll be leaving some notes I will find for Windows as well in"
+    },
+    {
+      "start": 356.699,
+      "duration": 6.0,
+      "text": "case you have any other operating system what you need to do is just copy paste"
+    },
+    {
+      "start": 360.36,
+      "duration": 6.6,
+      "text": "the configuration that I've given in the notes take it to chat GPT and whatever"
+    },
+    {
+      "start": 365.52,
+      "duration": 6.42,
+      "text": "is your system ask rgbt can you give me the equivalent"
+    },
+    {
+      "start": 369.6,
+      "duration": 6.36,
+      "text": "for my system and it will give you this copy paste and it will start working so"
+    },
+    {
+      "start": 374.039,
+      "duration": 7.44,
+      "text": "this is this is how you set it up remember the starts.json is under your C"
+    },
+    {
+      "start": 379.62,
+      "duration": 6.18,
+      "text": "plus folder in case you are switching folders you'll have to again repeat the"
+    },
+    {
+      "start": 383.4,
+      "duration": 6.06,
+      "text": "same thing got it so that was easy for C plus plus isn't it now it's time for"
+    },
+    {
+      "start": 387.36,
+      "duration": 7.26,
+      "text": "Java it's very much similar I go to open I go to desktop and open one of my"
+    },
+    {
+      "start": 391.979,
+      "duration": 6.901,
+      "text": "folders you can open from anywhere the next thing"
+    },
+    {
+      "start": 395.66,
+      "duration": 7.36,
+      "text": "uh install an extension Java extension pack okay this one I've"
+    },
+    {
+      "start": 401.58,
+      "duration": 5.88,
+      "text": "already installed it so I'll not be reinstalling it"
+    },
+    {
+      "start": 404.4,
+      "duration": 8.94,
+      "text": "right after this what's the next job just uh add a Java file probably I can"
+    },
+    {
+      "start": 410.639,
+      "duration": 6.961,
+      "text": "give demo.java after that add an input.txt which takes"
+    },
+    {
+      "start": 416.34,
+      "duration": 5.28,
+      "text": "your input add an output dot txt which takes your"
+    },
+    {
+      "start": 420.12,
+      "duration": 7.579,
+      "text": "output go to view editor layout split left once"
+    },
+    {
+      "start": 425.22,
+      "duration": 2.479,
+      "text": "you've done this"
+    },
+    {
+      "start": 427.74,
+      "duration": 8.579,
+      "text": "this is how it looks like and go to view edit a layout and then say split down so"
+    },
+    {
+      "start": 433.979,
+      "duration": 6.84,
+      "text": "once you do this you just drag it off and move this input so you have your"
+    },
+    {
+      "start": 438.72,
+      "duration": 6.12,
+      "text": "input and your output ready now let's quickly paste a demo Java code"
+    },
+    {
+      "start": 443.099,
+      "duration": 4.801,
+      "text": "so I've written a demo Java code now what is the next step to run it so I'll"
+    },
+    {
+      "start": 446.34,
+      "duration": 6.419,
+      "text": "go to terminal and then something as configure task"
+    },
+    {
+      "start": 449.22,
+      "duration": 8.64,
+      "text": "create task.g some others and over here you paste this configuration I'll be"
+    },
+    {
+      "start": 456.0,
+      "duration": 6.72,
+      "text": "leaving uh this configuration in the links so this is what you will paste and"
+    },
+    {
+      "start": 460.68,
+      "duration": 5.639,
+      "text": "this is this is basically the command which kind of takes the input so the"
+    },
+    {
+      "start": 464.22,
+      "duration": 7.199,
+      "text": "file names have to be input and output and you can save it and close it so once"
+    },
+    {
+      "start": 469.74,
+      "duration": 6.42,
+      "text": "you click save you can see that it is under a DOT vs code folder and this is"
+    },
+    {
+      "start": 473.94,
+      "duration": 6.72,
+      "text": "under the folder that I opened initially so if you're changing folders it will"
+    },
+    {
+      "start": 478.56,
+      "duration": 6.479,
+      "text": "not run you have to reconfigure the task got it so what I'll do is I'll give an"
+    },
+    {
+      "start": 482.759,
+      "duration": 7.44,
+      "text": "input over here try to run it command shift plus b and you can see that it is"
+    },
+    {
+      "start": 487.5,
+      "duration": 6.12,
+      "text": "running this is how easy it was to set it up so yeah this was a talk quite"
+    },
+    {
+      "start": 492.18,
+      "duration": 5.1,
+      "text": "simple isn't it in case you're someone who uses python or JavaScript the blog"
+    },
+    {
+      "start": 495.78,
+      "duration": 5.34,
+      "text": "links will be in the description and in case you run into any of the errors"
+    },
+    {
+      "start": 498.9,
+      "duration": 6.06,
+      "text": "please do use chatgpt that will be helping you out if you're still watching"
+    },
+    {
+      "start": 503.22,
+      "duration": 4.68,
+      "text": "please do consider giving us a like and if you are new to our channel do"
+    },
+    {
+      "start": 506.099,
+      "duration": 6.36,
+      "text": "consider subscribing to us and make sure you check out striveless A2Z DSA course"
+    },
+    {
+      "start": 510.06,
+      "duration": 5.399,
+      "text": "because that can be a One-Stop solution if you're preparing for placements if"
+    },
+    {
+      "start": 514.5,
+      "duration": 4.02,
+      "text": "you haven't followed me on Instagram Twitter and Linkedin all the profile"
+    },
+    {
+      "start": 516.899,
+      "duration": 6.38,
+      "text": "links will be in the description with this I will be wrapping up this video"
+    },
+    {
+      "start": 520.02,
+      "duration": 3.259,
+      "text": "let's finish out the video till number"
+    },
+    {
+      "start": 524.159,
+      "duration": 8.18,
+      "text": "spoken again don't ever forget your golden"
+    },
+    {
+      "start": 529.019,
+      "duration": 3.32,
+      "text": "I will find the lighting"
+    }
+  ]
+}

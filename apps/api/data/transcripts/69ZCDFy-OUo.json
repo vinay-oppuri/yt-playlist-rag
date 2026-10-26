@@ -1,0 +1,1227 @@
+{
+  "video_id": "69ZCDFy-OUo",
+  "title": "Re 3. Parameterised and Functional Recursion | Strivers A2Z DSA Course",
+  "total_segments": 244,
+  "segments": [
+    {
+      "start": 0.0,
+      "duration": 5.04,
+      "text": "so before starting this video i'd love to thank the sponsor of this video which"
+    },
+    {
+      "start": 2.96,
+      "duration": 5.84,
+      "text": "is code studio now if you are willing to practice uh interview problems topic"
+    },
+    {
+      "start": 7.12,
+      "duration": 5.76,
+      "text": "wise this is the place where you should look for because core studio has over"
+    },
+    {
+      "start": 10.639,
+      "duration": 6.64,
+      "text": "2000 plus problems and has all the problem solution in c plus java as well"
+    },
+    {
+      "start": 15.28,
+      "duration": 6.48,
+      "text": "as python if you're looking for a guided path then you can find for python for"
+    },
+    {
+      "start": 19.68,
+      "duration": 6.0,
+      "text": "dbms for object oriented programming operating system computer networks"
+    },
+    {
+      "start": 23.359,
+      "duration": 5.361,
+      "text": "system design web development any other thing that you're looking for you'll"
+    },
+    {
+      "start": 26.56,
+      "duration": 6.48,
+      "text": "find guided paths for every other thing over here also also if you're looking"
+    },
+    {
+      "start": 30.64,
+      "duration": 5.84,
+      "text": "for any top company questions let's say if you have an interview at amazon if"
+    },
+    {
+      "start": 35.12,
+      "duration": 5.279,
+      "text": "you're looking for amazon questions you can get all the top amazon coding"
+    },
+    {
+      "start": 38.48,
+      "duration": 5.919,
+      "text": "questions via tag and all the solutions in c plus java as well as python also if"
+    },
+    {
+      "start": 43.04,
+      "duration": 5.679,
+      "text": "you have an interview schedule you can read their interview experiences where"
+    },
+    {
+      "start": 46.48,
+      "duration": 6.8,
+      "text": "there are 600 plus interview experiences from companies like amazon microsoft"
+    },
+    {
+      "start": 50.559,
+      "duration": 5.68,
+      "text": "adobe google etc so what are you waiting for code studio has a lot of free"
+    },
+    {
+      "start": 54.719,
+      "duration": 5.761,
+      "text": "resources for interview preparation the link will be in the description make"
+    },
+    {
+      "start": 57.76,
+      "duration": 2.72,
+      "text": "sure you check it out"
+    },
+    {
+      "start": 64.0,
+      "duration": 6.32,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well"
+    },
+    {
+      "start": 67.2,
+      "duration": 8.32,
+      "text": "today we will be uh solving a very very interesting problem in recursion which"
+    },
+    {
+      "start": 72.96,
+      "duration": 8.56,
+      "text": "is the summation of the first n numbers"
+    },
+    {
+      "start": 77.92,
+      "duration": 7.839,
+      "text": "now this can be done using a very simple for loop but i want you to"
+    },
+    {
+      "start": 83.84,
+      "duration": 6.319,
+      "text": "do this using recursion because that will create your base of recursion very"
+    },
+    {
+      "start": 88.4,
+      "duration": 6.88,
+      "text": "very strong i'm going to teach you a couple of ways the first way being the"
+    },
+    {
+      "start": 92.96,
+      "duration": 6.88,
+      "text": "parameter wise ways where i'll be showing you how to do this"
+    },
+    {
+      "start": 97.119,
+      "duration": 5.921,
+      "text": "using parameter the next one will be functional way where the function itself"
+    },
+    {
+      "start": 102.0,
+      "duration": 4.64,
+      "text": "returns the answer okay so to start off with uh"
+    },
+    {
+      "start": 105.52,
+      "duration": 6.08,
+      "text": "i hope you have understood the question sum of first n numbers assume n is given"
+    },
+    {
+      "start": 109.439,
+      "duration": 7.441,
+      "text": "as 3 then the summation will be definitely 6 because"
+    },
+    {
+      "start": 113.52,
+      "duration": 6.559,
+      "text": "1 plus 2 plus 3 is equal to 6 the sum of the first three numbers is what the"
+    },
+    {
+      "start": 118.799,
+      "duration": 8.201,
+      "text": "question states so to start off with"
+    },
+    {
+      "start": 122.159,
+      "duration": 4.841,
+      "text": "let's uh learn the parameterized way"
+    },
+    {
+      "start": 128.399,
+      "duration": 5.601,
+      "text": "now when i say a parameterized wave what does that mean"
+    },
+    {
+      "start": 131.599,
+      "duration": 8.241,
+      "text": "that means assume i write a function is assume i write a function and i say i"
+    },
+    {
+      "start": 137.36,
+      "duration": 6.959,
+      "text": "and i carry a variable sum okay and that's the recursive function"
+    },
+    {
+      "start": 141.84,
+      "duration": 7.6,
+      "text": "that i'm writing and i say that okay i'm gonna think this"
+    },
+    {
+      "start": 146.959,
+      "duration": 7.121,
+      "text": "as a loop so in the previous lecture we saw that we started from one we went on"
+    },
+    {
+      "start": 151.599,
+      "duration": 6.881,
+      "text": "to two we went down to three so we're gonna do this uh till we don't reach n"
+    },
+    {
+      "start": 156.64,
+      "duration": 6.4,
+      "text": "or probably we can do it the opposite way from n to uh"
+    },
+    {
+      "start": 161.04,
+      "duration": 7.919,
+      "text": "one so let's assume we do it from n to one so we can say if at any moment i is"
+    },
+    {
+      "start": 166.72,
+      "duration": 7.44,
+      "text": "lesser than one yes if at any moment i is less than one"
+    },
+    {
+      "start": 170.48,
+      "duration": 8.479,
+      "text": "i can definitely print yes i can definitely say let's uh print the"
+    },
+    {
+      "start": 177.36,
+      "duration": 5.84,
+      "text": "summation okay"
+    },
+    {
+      "start": 179.92,
+      "duration": 7.36,
+      "text": "and then try our return make sense and apart from this what i'm going to"
+    },
+    {
+      "start": 184.879,
+      "duration": 5.28,
+      "text": "say is okay f of i minus 1"
+    },
+    {
+      "start": 189.04,
+      "duration": 6.16,
+      "text": "sum plus i is what i'm going to pass"
+    },
+    {
+      "start": 192.64,
+      "duration": 7.92,
+      "text": "so this is what my recursive statement will be and the main will be very simple"
+    },
+    {
+      "start": 197.599,
+      "duration": 6.801,
+      "text": "again the main will be uh taking an n as the input"
+    },
+    {
+      "start": 201.76,
+      "duration": 6.479,
+      "text": "and then we can just call f of n comma initial summation as"
+    },
+    {
+      "start": 207.36,
+      "duration": 6.56,
+      "text": "0. now this is what i have taken now for an"
+    },
+    {
+      "start": 210.4,
+      "duration": 7.36,
+      "text": "example let's assume this is the output screen"
+    },
+    {
+      "start": 215.36,
+      "duration": 5.68,
+      "text": "and let's assume n is given as 3"
+    },
+    {
+      "start": 218.64,
+      "duration": 6.0,
+      "text": "so what i'm calling for the first time is"
+    },
+    {
+      "start": 221.92,
+      "duration": 4.959,
+      "text": "i'm saying i to be 3"
+    },
+    {
+      "start": 225.599,
+      "duration": 6.081,
+      "text": "sum to be 0"
+    },
+    {
+      "start": 228.64,
+      "duration": 8.48,
+      "text": "right that is what i'm saying i to be 3 and sum to be 0"
+    },
+    {
+      "start": 234.56,
+      "duration": 7.44,
+      "text": "this line is not executed this line is executed and it thereby"
+    },
+    {
+      "start": 239.92,
+      "duration": 5.84,
+      "text": "calls another function in the same link the same function is"
+    },
+    {
+      "start": 243.439,
+      "duration": 8.72,
+      "text": "called in the memory and it passes i minus 1 which is 2 because i was 3 so it"
+    },
+    {
+      "start": 249.36,
+      "duration": 9.439,
+      "text": "tends down to 3 minus 1 which is 2 and sum plus i"
+    },
+    {
+      "start": 253.519,
+      "duration": 10.4,
+      "text": "sum was 0 if you see sum was 0 so 0 plus 3 will become 3 so it goes as"
+    },
+    {
+      "start": 262.32,
+      "duration": 6.48,
+      "text": "3 again is the if line executed"
+    },
+    {
+      "start": 265.919,
+      "duration": 7.601,
+      "text": "no the if line is not executed so the functional line will be executed and"
+    },
+    {
+      "start": 270.8,
+      "duration": 6.24,
+      "text": "that's i minus 1 which means something and then sum was 3"
+    },
+    {
+      "start": 276.08,
+      "duration": 6.64,
+      "text": "plus i this time is 2."
+    },
+    {
+      "start": 280.0,
+      "duration": 8.0,
+      "text": "now this time this function again calls a function which says function i minus 1"
+    },
+    {
+      "start": 285.44,
+      "duration": 10.56,
+      "text": "so i was 2 it becomes 1 and the summation 3 plus 2 becomes 5"
+    },
+    {
+      "start": 293.199,
+      "duration": 5.28,
+      "text": "is the if statement executed no because the if statement if you carefully"
+    },
+    {
+      "start": 297.6,
+      "duration": 4.56,
+      "text": "observe it's"
+    },
+    {
+      "start": 300.0,
+      "duration": 7.28,
+      "text": "i lesser than one and that's not the case so it's not executed correct"
+    },
+    {
+      "start": 305.44,
+      "duration": 6.24,
+      "text": "thereby it goes again and calls the same"
+    },
+    {
+      "start": 309.039,
+      "duration": 5.201,
+      "text": "function with i minus 1 comma"
+    },
+    {
+      "start": 312.639,
+      "duration": 6.801,
+      "text": "sum plus i"
+    },
+    {
+      "start": 316.24,
+      "duration": 10.0,
+      "text": "this time i minus 1 i was 1 so this time the functional call is made"
+    },
+    {
+      "start": 321.759,
+      "duration": 11.841,
+      "text": "to f of i minus 1 1 minus 1 becomes 0 then summation summation was 5"
+    },
+    {
+      "start": 328.88,
+      "duration": 9.52,
+      "text": "plus i i was 1 so it calls it as 6. what is the if statement if statement stated"
+    },
+    {
+      "start": 335.759,
+      "duration": 7.121,
+      "text": "i lesser than 1 i less than 1 is that the case yes so what it"
+    },
+    {
+      "start": 341.759,
+      "duration": 8.081,
+      "text": "does is print the summation summation was 6 so"
+    },
+    {
+      "start": 346.4,
+      "duration": 7.12,
+      "text": "on the output screen the 6 is printed and it says"
+    },
+    {
+      "start": 351.199,
+      "duration": 6.641,
+      "text": "return so thereby this functional line is no more executed and it directly"
+    },
+    {
+      "start": 355.6,
+      "duration": 5.92,
+      "text": "returns from here so if it returns"
+    },
+    {
+      "start": 359.52,
+      "duration": 6.72,
+      "text": "this function is done and now it returns"
+    },
+    {
+      "start": 363.68,
+      "duration": 5.6,
+      "text": "thereby saying this function is done so this guy"
+    },
+    {
+      "start": 367.919,
+      "duration": 5.84,
+      "text": "again returns thereby this function is done thereby"
+    },
+    {
+      "start": 371.44,
+      "duration": 7.92,
+      "text": "this guy returns so we did a parameterized function where we can say"
+    },
+    {
+      "start": 376.4,
+      "duration": 9.6,
+      "text": "that our recursive tree was 3 comma 0 where this being the i and sum"
+    },
+    {
+      "start": 382.24,
+      "duration": 10.64,
+      "text": "we went on to f of 2 comma added this 3 we went on to f of 1 comma added this 2"
+    },
+    {
+      "start": 389.36,
+      "duration": 8.8,
+      "text": "we went on to f comma 0 added this one so whenever we ended up at 0 we just"
+    },
+    {
+      "start": 395.84,
+      "duration": 6.96,
+      "text": "printed this because we were adding the i adding the i every time to"
+    },
+    {
+      "start": 401.12,
+      "duration": 5.359,
+      "text": "the parameter and that is what we printed this could"
+    },
+    {
+      "start": 405.039,
+      "duration": 4.961,
+      "text": "have been done in the other way where you could have done i plus one as well"
+    },
+    {
+      "start": 408.4,
+      "duration": 6.96,
+      "text": "but i'm just teaching you the parameter way in how can you actually carry the"
+    },
+    {
+      "start": 413.28,
+      "duration": 6.639,
+      "text": "parameters yes because over here we increase the parameters and at the end"
+    },
+    {
+      "start": 417.759,
+      "duration": 6.321,
+      "text": "of the day at the end of the day we came here and print this particular parameter"
+    },
+    {
+      "start": 422.319,
+      "duration": 6.081,
+      "text": "which is six so this is how the recursion tree will be at the end it"
+    },
+    {
+      "start": 426.24,
+      "duration": 7.519,
+      "text": "came back came back came back and went back right this is how you can do it"
+    },
+    {
+      "start": 430.639,
+      "duration": 6.881,
+      "text": "using parameterized okay now if you've understood the"
+    },
+    {
+      "start": 435.12,
+      "duration": 5.919,
+      "text": "parameterized it's time to understand the functional"
+    },
+    {
+      "start": 439.36,
+      "duration": 5.6,
+      "text": "how do you generally write the function because functional"
+    },
+    {
+      "start": 443.68,
+      "duration": 5.04,
+      "text": "means uh you don't want the parameter to do the"
+    },
+    {
+      "start": 446.479,
+      "duration": 7.201,
+      "text": "work you want you write a recursive function where you say that hey listen"
+    },
+    {
+      "start": 450.8,
+      "duration": 7.519,
+      "text": "this is my value of n take n as 3 and give me the summation as 6. so if i'm"
+    },
+    {
+      "start": 456.56,
+      "duration": 5.12,
+      "text": "asking you to write such a function that's when you cannot use parameterized"
+    },
+    {
+      "start": 460.16,
+      "duration": 5.36,
+      "text": "because you want the function to return the answer you don't want it to print"
+    },
+    {
+      "start": 463.44,
+      "duration": 4.4,
+      "text": "you want it to return why uh"
+    },
+    {
+      "start": 466.319,
+      "duration": 5.201,
+      "text": "there will be a lot of cases when you learn dynamic programming that you want"
+    },
+    {
+      "start": 469.759,
+      "duration": 5.84,
+      "text": "the function to give you back something instead of printing right so basically"
+    },
+    {
+      "start": 474.0,
+      "duration": 5.919,
+      "text": "uh to understand the concept before writing the recursive code let's uh so"
+    },
+    {
+      "start": 478.16,
+      "duration": 4.96,
+      "text": "these are all patterns that i'm teaching it's not that i'm just writing the codes"
+    },
+    {
+      "start": 481.44,
+      "duration": 4.479,
+      "text": "these are patterns i'm teaching you to learn these patterns if parameters are"
+    },
+    {
+      "start": 484.72,
+      "duration": 4.64,
+      "text": "there then you have to do it in such a way if there's return then you have to"
+    },
+    {
+      "start": 487.84,
+      "duration": 5.039,
+      "text": "do it in such a way to learn these patterns once you're very confident"
+    },
+    {
+      "start": 491.199,
+      "duration": 7.12,
+      "text": "about these patterns you can solve any problem in recursion that is my word"
+    },
+    {
+      "start": 496.0,
+      "duration": 7.12,
+      "text": "okay to go with functional let's understand when i say functional what"
+    },
+    {
+      "start": 499.919,
+      "duration": 8.081,
+      "text": "does that mean now if n is given as a 3 for a reason if n is given as 3"
+    },
+    {
+      "start": 505.52,
+      "duration": 7.519,
+      "text": "can i say this can i say this i can say i'll do a 3 i'll do"
+    },
+    {
+      "start": 511.84,
+      "duration": 5.52,
+      "text": "f of 2 where i know where i know"
+    },
+    {
+      "start": 514.959,
+      "duration": 8.32,
+      "text": "f of n means summation of"
+    },
+    {
+      "start": 519.12,
+      "duration": 7.44,
+      "text": "first n numbers okay i know this so if i write"
+    },
+    {
+      "start": 524.159,
+      "duration": 6.001,
+      "text": "3 plus f of 2 makes sense then when i'm calling for f of 2 can i"
+    },
+    {
+      "start": 528.88,
+      "duration": 6.88,
+      "text": "say okay that can be written as 2 plus f of 1"
+    },
+    {
+      "start": 533.04,
+      "duration": 5.68,
+      "text": "and when i'm at f of 1 can i write this as"
+    },
+    {
+      "start": 536.72,
+      "duration": 6.08,
+      "text": "1 plus f of 0 and everyone knows that f of 0 is"
+    },
+    {
+      "start": 540.72,
+      "duration": 6.0,
+      "text": "nothing but 0 so i can think it in such a way that okay"
+    },
+    {
+      "start": 544.72,
+      "duration": 5.6,
+      "text": "whenever there is an f of n i know n will be there"
+    },
+    {
+      "start": 548.399,
+      "duration": 6.801,
+      "text": "i know n will be there which is 3 because if i'm saying f of 3 i know the"
+    },
+    {
+      "start": 552.8,
+      "duration": 6.719,
+      "text": "summation will contain 3 but i need the summation of the rest of the"
+    },
+    {
+      "start": 557.279,
+      "duration": 7.68,
+      "text": "rest of the two numbers so this is the idea that i am going to"
+    },
+    {
+      "start": 562.16,
+      "duration": 7.76,
+      "text": "follow so what i'll say is okay let them give me the n"
+    },
+    {
+      "start": 567.839,
+      "duration": 7.12,
+      "text": "if at any moment n is equal to equal to zero i'm going to return a zero because"
+    },
+    {
+      "start": 572.72,
+      "duration": 6.64,
+      "text": "if f is if n is zero i know the summation of the first 0 numbers is 0"
+    },
+    {
+      "start": 577.92,
+      "duration": 7.68,
+      "text": "or else i'm going to return simply"
+    },
+    {
+      "start": 581.44,
+      "duration": 8.959,
+      "text": "n plus f of n minus 1 okay i'm going to simply return n plus f of n"
+    },
+    {
+      "start": 589.36,
+      "duration": 3.84,
+      "text": "minus 1"
+    },
+    {
+      "start": 591.519,
+      "duration": 4.561,
+      "text": "done now question"
+    },
+    {
+      "start": 594.48,
+      "duration": 5.44,
+      "text": "might arise how will this work let's understand"
+    },
+    {
+      "start": 598.24,
+      "duration": 6.56,
+      "text": "let's write the main function again so if i write main"
+    },
+    {
+      "start": 601.76,
+      "duration": 6.88,
+      "text": "and i say n is given as 3 and i call f of 3 or f of n rather"
+    },
+    {
+      "start": 608.8,
+      "duration": 4.8,
+      "text": "and i write print"
+    },
+    {
+      "start": 611.44,
+      "duration": 7.28,
+      "text": "print this f of n"
+    },
+    {
+      "start": 615.279,
+      "duration": 9.12,
+      "text": "so what is being done this f of n"
+    },
+    {
+      "start": 620.24,
+      "duration": 8.8,
+      "text": "goes and calls this so let's call this with what value"
+    },
+    {
+      "start": 625.76,
+      "duration": 5.84,
+      "text": "with the value 3 f of 3 is called is this line executed"
+    },
+    {
+      "start": 630.72,
+      "duration": 3.84,
+      "text": "no n means"
+    },
+    {
+      "start": 633.36,
+      "duration": 6.0,
+      "text": "3 plus"
+    },
+    {
+      "start": 635.519,
+      "duration": 8.401,
+      "text": "f of n minus 1 is called remember this there's a line"
+    },
+    {
+      "start": 640.88,
+      "duration": 7.28,
+      "text": "in completed line 3 plus something incompleted that incompleted will be"
+    },
+    {
+      "start": 646.24,
+      "duration": 6.88,
+      "text": "called in recursion till it does not comes i'm waiting three plus three plus"
+    },
+    {
+      "start": 650.16,
+      "duration": 5.679,
+      "text": "something something i'm waiting got that so"
+    },
+    {
+      "start": 653.92,
+      "duration": 5.599,
+      "text": "f of two now goes it states if n is equal to equal to zero"
+    },
+    {
+      "start": 658.16,
+      "duration": 5.28,
+      "text": "it says no so i'm like okay return"
+    },
+    {
+      "start": 661.44,
+      "duration": 4.32,
+      "text": "two plus f of one this time"
+    },
+    {
+      "start": 664.64,
+      "duration": 4.8,
+      "text": "two plus this line"
+    },
+    {
+      "start": 667.2,
+      "duration": 5.84,
+      "text": "waits for f of one to be done so i go and call"
+    },
+    {
+      "start": 671.839,
+      "duration": 6.641,
+      "text": "f of one if n is equal to equal to 0 again i say"
+    },
+    {
+      "start": 676.079,
+      "duration": 6.561,
+      "text": "no remember this you could have written n equal to equal to 1 that's your choice"
+    },
+    {
+      "start": 680.56,
+      "duration": 6.719,
+      "text": "you can write it i'm just teaching you patterns that's it return 0 doesn't"
+    },
+    {
+      "start": 685.12,
+      "duration": 4.88,
+      "text": "works return"
+    },
+    {
+      "start": 688.72,
+      "duration": 6.32,
+      "text": "one plus f of zero"
+    },
+    {
+      "start": 691.519,
+      "duration": 6.161,
+      "text": "again this line awaits i am awaiting let him come back"
+    },
+    {
+      "start": 696.32,
+      "duration": 5.12,
+      "text": "so let's go f of zero"
+    },
+    {
+      "start": 699.44,
+      "duration": 6.32,
+      "text": "when you go for f of zero let's understand what happens"
+    },
+    {
+      "start": 703.279,
+      "duration": 8.24,
+      "text": "if n equal to equal to 0 returns a 0"
+    },
+    {
+      "start": 707.44,
+      "duration": 8.48,
+      "text": "this guy comes in with a value 0 returns a 0 this time i'm returning something"
+    },
+    {
+      "start": 713.839,
+      "duration": 6.641,
+      "text": "i'm giving back something so it's returning a zero i hope that makes sense"
+    },
+    {
+      "start": 719.04,
+      "duration": 6.16,
+      "text": "so whenever this function is called this function is"
+    },
+    {
+      "start": 722.48,
+      "duration": 8.0,
+      "text": "called it came back with zero came back with zero so can i say"
+    },
+    {
+      "start": 727.44,
+      "duration": 7.92,
+      "text": "now instead of writing this f of 0 i can actually write this 0 because this"
+    },
+    {
+      "start": 732.399,
+      "duration": 9.841,
+      "text": "function yielded you a value 0 so thereby 1 plus 0 is 1"
+    },
+    {
+      "start": 738.639,
+      "duration": 8.081,
+      "text": "hence return this guy returns a 1 1 0 returns are one so can i say now"
+    },
+    {
+      "start": 744.88,
+      "duration": 5.44,
+      "text": "instead of writing f of one can i write one because one has been"
+    },
+    {
+      "start": 749.279,
+      "duration": 6.56,
+      "text": "returned thereby two plus one can i say this guy"
+    },
+    {
+      "start": 752.88,
+      "duration": 8.72,
+      "text": "returns a three indeed i can say that f of n minus one goes away and i can write"
+    },
+    {
+      "start": 758.32,
+      "duration": 7.12,
+      "text": "three so thereby three plus three is six thereby this guy returns six and you say"
+    },
+    {
+      "start": 763.92,
+      "duration": 6.8,
+      "text": "print so output is six"
+    },
+    {
+      "start": 768.0,
+      "duration": 7.04,
+      "text": "this is how yes this is how you can write a"
+    },
+    {
+      "start": 772.72,
+      "duration": 7.28,
+      "text": "functional stuff when the problem is broken down into smaller parts yes"
+    },
+    {
+      "start": 778.0,
+      "duration": 6.959,
+      "text": "the problem gets broken down into smaller smaller parts and once it is"
+    },
+    {
+      "start": 782.16,
+      "duration": 6.799,
+      "text": "broken down it easily gives you the output"
+    },
+    {
+      "start": 786.56,
+      "duration": 6.48,
+      "text": "so coming across to the code the quotes very very simple you say int sum you can"
+    },
+    {
+      "start": 791.6,
+      "duration": 6.32,
+      "text": "call int n right and you can simply write if n is"
+    },
+    {
+      "start": 795.68,
+      "duration": 5.52,
+      "text": "equal to equal to 0 please"
+    },
+    {
+      "start": 799.44,
+      "duration": 8.16,
+      "text": "return a 0 else return an n plus sum of"
+    },
+    {
+      "start": 804.72,
+      "duration": 7.44,
+      "text": "n minus 1 and over here probably i i can just keep n equal to a 3 you can take"
+    },
+    {
+      "start": 809.76,
+      "duration": 6.8,
+      "text": "this take this as input as well c out sum of n so if i just write it you'll"
+    },
+    {
+      "start": 814.24,
+      "duration": 6.88,
+      "text": "see this this perfectly works i saw it perfectly it's a very simple"
+    },
+    {
+      "start": 818.72,
+      "duration": 8.119,
+      "text": "one okay so i hope you've understood how to get the sum of first n numbers"
+    },
+    {
+      "start": 823.839,
+      "duration": 8.401,
+      "text": "now if i give you a very simple task task is"
+    },
+    {
+      "start": 829.6,
+      "duration": 6.0,
+      "text": "factorial of n"
+    },
+    {
+      "start": 833.839,
+      "duration": 7.521,
+      "text": "what is factorial of n whenever i give you n equal to 3"
+    },
+    {
+      "start": 838.24,
+      "duration": 12.159,
+      "text": "it is 6 whenever i give you n equal to 4 it's 24 basically 1 into 2 into 3 this"
+    },
+    {
+      "start": 845.68,
+      "duration": 9.76,
+      "text": "time it's 1 into 2 into 3 into 4 correct multiplication instead of addition"
+    },
+    {
+      "start": 853.199,
+      "duration": 6.401,
+      "text": "multiplication instead of addition so how will you do this"
+    },
+    {
+      "start": 857.199,
+      "duration": 4.481,
+      "text": "i think that's very simple this time very simple"
+    },
+    {
+      "start": 860.8,
+      "duration": 4.64,
+      "text": "uh if i write the code"
+    },
+    {
+      "start": 863.76,
+      "duration": 6.56,
+      "text": "so i'll leave the parameterized you can do it yourself i'll try to write the"
+    },
+    {
+      "start": 867.6,
+      "duration": 6.479,
+      "text": "recursive code okay now you know one thing for sure in the recursive code"
+    },
+    {
+      "start": 872.079,
+      "duration": 7.12,
+      "text": "this will become a factorial correct"
+    },
+    {
+      "start": 876.0,
+      "duration": 6.56,
+      "text": "and this will become into because 5 into 4 into 3"
+    },
+    {
+      "start": 880.8,
+      "duration": 5.44,
+      "text": "and this will become n minus 1 but we need to understand will the base case"
+    },
+    {
+      "start": 885.279,
+      "duration": 5.521,
+      "text": "change will it be n equal to equal to zero the"
+    },
+    {
+      "start": 888.48,
+      "duration": 5.919,
+      "text": "step let's see if i write this and if i run this what happens let's understand"
+    },
+    {
+      "start": 892.8,
+      "duration": 6.0,
+      "text": "if i just give it a run see uh okay sorry let's give it a run so"
+    },
+    {
+      "start": 897.12,
+      "duration": 5.2,
+      "text": "if i let's change it factorial okay now let's"
+    },
+    {
+      "start": 900.48,
+      "duration": 5.44,
+      "text": "give it a run so if i give it a run you see the output being zero so you see the"
+    },
+    {
+      "start": 903.92,
+      "duration": 7.599,
+      "text": "output being zero why due to this base case let's understand"
+    },
+    {
+      "start": 909.199,
+      "duration": 6.88,
+      "text": "how why did this base gave uh why did this base case give you 0 so if"
+    },
+    {
+      "start": 913.92,
+      "duration": 6.479,
+      "text": "i write f of n and i write the base cases n equal to"
+    },
+    {
+      "start": 918.0,
+      "duration": 6.079,
+      "text": "equal to 0 and i say return 0 and i'm saying return"
+    },
+    {
+      "start": 923.12,
+      "duration": 4.8,
+      "text": "n into"
+    },
+    {
+      "start": 924.959,
+      "duration": 8.481,
+      "text": "factorial of n minus 1 if this is the code"
+    },
+    {
+      "start": 928.8,
+      "duration": 4.64,
+      "text": "and i am writing the main function as"
+    },
+    {
+      "start": 933.6,
+      "duration": 6.0,
+      "text": "n is given as 3 and i'm saying print"
+    },
+    {
+      "start": 937.36,
+      "duration": 6.24,
+      "text": "f of n so basically this guy goes and calls"
+    },
+    {
+      "start": 941.759,
+      "duration": 5.44,
+      "text": "this with three not executed"
+    },
+    {
+      "start": 945.12,
+      "duration": 5.519,
+      "text": "three into f of"
+    },
+    {
+      "start": 948.32,
+      "duration": 10.639,
+      "text": "two not executed if line is not executed so return"
+    },
+    {
+      "start": 954.8,
+      "duration": 8.159,
+      "text": "2 into f of 2 minus 1 which is 1 so this is gone f of 1"
+    },
+    {
+      "start": 961.44,
+      "duration": 5.68,
+      "text": "again you're writing n equal to equal to 0 not executed"
+    },
+    {
+      "start": 964.959,
+      "duration": 5.201,
+      "text": "return 1 into f of"
+    },
+    {
+      "start": 968.72,
+      "duration": 7.2,
+      "text": "0 f of 0 is going"
+    },
+    {
+      "start": 973.199,
+      "duration": 8.32,
+      "text": "and this time the if is executed and you return a 0 and you return a 0"
+    },
+    {
+      "start": 979.36,
+      "duration": 6.88,
+      "text": "which is absolutely wrong because the moment you return on 0 this guy returns"
+    },
+    {
+      "start": 983.759,
+      "duration": 9.281,
+      "text": "a 0 and if i just strike it off instead of f of 0 you end up writing a 0 which"
+    },
+    {
+      "start": 989.04,
+      "duration": 9.2,
+      "text": "means 1 into 0 is 0 you get a 0 thereby this is straight up 0 2 into 0 is 0"
+    },
+    {
+      "start": 996.8,
+      "duration": 7.52,
+      "text": "0 this gets 0 3 into 0 is 0 you get a 3."
+    },
+    {
+      "start": 1001.199,
+      "duration": 7.601,
+      "text": "so what should you have returned yes you should have written ideally 1"
+    },
+    {
+      "start": 1007.279,
+      "duration": 4.961,
+      "text": "or or or you should have done this"
+    },
+    {
+      "start": 1010.56,
+      "duration": 4.719,
+      "text": "this is also correct or even if you keep this this is also correct you should"
+    },
+    {
+      "start": 1013.759,
+      "duration": 6.241,
+      "text": "return one because in case of multiplications if you're returning 0"
+    },
+    {
+      "start": 1017.519,
+      "duration": 7.52,
+      "text": "the overall product gets multiplied to 0 thereby giving you a wrong answer so"
+    },
+    {
+      "start": 1022.88,
+      "duration": 7.84,
+      "text": "this is what i wanted to explain you again uh what about the time"
+    },
+    {
+      "start": 1027.439,
+      "duration": 9.441,
+      "text": "complexity you're basically uh doing one call two call three call till n calls"
+    },
+    {
+      "start": 1034.88,
+      "duration": 6.88,
+      "text": "so i can say big of n is the time and the space complexity is"
+    },
+    {
+      "start": 1039.199,
+      "duration": 6.48,
+      "text": "an auxiliary space stack space because this awaits then this awaits so there"
+    },
+    {
+      "start": 1044.0,
+      "duration": 6.32,
+      "text": "will be go of n uh n functions will be awaiting to be"
+    },
+    {
+      "start": 1048.24,
+      "duration": 7.04,
+      "text": "completed so stack space will be taken so in stack uh this is what the time and"
+    },
+    {
+      "start": 1052.96,
+      "duration": 5.76,
+      "text": "space complexity will be y big of n as the time complexity first time this"
+    },
+    {
+      "start": 1056.72,
+      "duration": 5.28,
+      "text": "function is called next this time and these functions are all unique functions"
+    },
+    {
+      "start": 1060.559,
+      "duration": 4.801,
+      "text": "you don't take a lot of time inside these functions thereby the number of"
+    },
+    {
+      "start": 1064.08,
+      "duration": 6.0,
+      "text": "function calls will be equal to the number of time complex is equal to the"
+    },
+    {
+      "start": 1067.6,
+      "duration": 6.24,
+      "text": "time complexity so guys i hope you have understood the entire lecture so just in"
+    },
+    {
+      "start": 1072.24,
+      "duration": 4.96,
+      "text": "case you did please please please make sure you like this video and if you're"
+    },
+    {
+      "start": 1075.44,
+      "duration": 5.84,
+      "text": "new to the channel please do consider subscribing please please do consider"
+    },
+    {
+      "start": 1079.12,
+      "duration": 6.33,
+      "text": "subscribing and yeah with this let's wrap up this video and meet in the next"
+    },
+    {
+      "start": 1083.039,
+      "duration": 12.431,
+      "text": "precaution video bye-bye [Music]"
+    }
+  ]
+}

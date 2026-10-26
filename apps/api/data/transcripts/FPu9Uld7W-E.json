@@ -1,0 +1,2062 @@
+{
+  "video_id": "FPu9Uld7W-E",
+  "title": "Time and Space Complexity - Strivers A2Z DSA Course",
+  "total_segments": 411,
+  "segments": [
+    {
+      "start": 3.179,
+      "duration": 4.501,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.18,
+      "duration": 5.999,
+      "text": "then this lecture we'll be learning about time complexity and this is the"
+    },
+    {
+      "start": 9.96,
+      "duration": 7.8,
+      "text": "continuation of Strivers A to Z DSA course slash cheat so uh if you remember"
+    },
+    {
+      "start": 16.08,
+      "duration": 5.82,
+      "text": "in the previous video we have covered all of these green TIG Mark things and"
+    },
+    {
+      "start": 20.4,
+      "duration": 6.06,
+      "text": "this video will be covering the time complexity learn Basics and then analyze"
+    },
+    {
+      "start": 25.14,
+      "duration": 5.34,
+      "text": "the next steps what does that mean they'll be teaching the basics of pen"
+    },
+    {
+      "start": 28.14,
+      "duration": 6.72,
+      "text": "complexity what is time complexity how to compute time complexity and all the"
+    },
+    {
+      "start": 32.759,
+      "duration": 7.561,
+      "text": "terms related to it and then eventually when you go through all the latest steps"
+    },
+    {
+      "start": 37.44,
+      "duration": 6.6,
+      "text": "at every problem that we solve we will be discussing time complexity of every"
+    },
+    {
+      "start": 42.12,
+      "duration": 6.3,
+      "text": "problem in depth So eventually when you complete all the steps or all the"
+    },
+    {
+      "start": 45.78,
+      "duration": 6.599,
+      "text": "problems you will have a very very good hold on the time complexity part now in"
+    },
+    {
+      "start": 51.18,
+      "duration": 5.64,
+      "text": "this video I cannot teach you time complexity of uh very complex codes"
+    },
+    {
+      "start": 54.78,
+      "duration": 5.64,
+      "text": "because you do not know them right so once you learn the complex codes and"
+    },
+    {
+      "start": 58.44,
+      "duration": 7.62,
+      "text": "recursion backtracking we will be discussing time complexity in depth over"
+    },
+    {
+      "start": 62.879,
+      "duration": 11.221,
+      "text": "here but as of now just let's start with the B6 so the first question what is"
+    },
+    {
+      "start": 69.619,
+      "duration": 8.141,
+      "text": "time complexity now what why is time complexity required first of all now"
+    },
+    {
+      "start": 76.5,
+      "duration": 7.08,
+      "text": "whenever you're going to an interview you might end up writing a piece of code"
+    },
+    {
+      "start": 81.06,
+      "duration": 7.86,
+      "text": "right now that code how do how does an"
+    },
+    {
+      "start": 86.34,
+      "duration": 7.62,
+      "text": "interview judge that code this is where they will analyze the time complexity of"
+    },
+    {
+      "start": 91.979,
+      "duration": 6.421,
+      "text": "the code now they will not they're not going to take your code run into a"
+    },
+    {
+      "start": 96.24,
+      "duration": 6.839,
+      "text": "machine and see how much time does the machine take and on the basis of that"
+    },
+    {
+      "start": 101.159,
+      "duration": 6.541,
+      "text": "tell you that your code is right or wrong that is not going to happen this"
+    },
+    {
+      "start": 105.36,
+      "duration": 6.66,
+      "text": "is where something like time complexity comes in whatever code you are going to"
+    },
+    {
+      "start": 109.799,
+      "duration": 7.561,
+      "text": "write in an interview in every interview they're going to analyze you what is the"
+    },
+    {
+      "start": 115.079,
+      "duration": 8.521,
+      "text": "time complex team and what is the space complexity and then on the basis of that"
+    },
+    {
+      "start": 120.0,
+      "duration": 8.099,
+      "text": "you will be judged right so whenever you write a code that might end up taking"
+    },
+    {
+      "start": 125.939,
+      "duration": 6.541,
+      "text": "let's say two seconds on a machine or might end up taking three seconds on a"
+    },
+    {
+      "start": 130.2,
+      "duration": 8.94,
+      "text": "machine might end up taking five seconds on a machine so the time taken will you"
+    },
+    {
+      "start": 136.379,
+      "duration": 10.981,
+      "text": "call it the time complexity no you will never call time complexity As"
+    },
+    {
+      "start": 142.879,
+      "duration": 9.041,
+      "text": "Time taken now you might ask but why if a code is taking certain time that"
+    },
+    {
+      "start": 149.94,
+      "duration": 7.14,
+      "text": "should be its time complexity let's give you a very very easy example to explain"
+    },
+    {
+      "start": 153.599,
+      "duration": 8.341,
+      "text": "why not imagine I take this code I take this code this can be any code"
+    },
+    {
+      "start": 159.12,
+      "duration": 8.58,
+      "text": "any code I take this code and I run it on two machines one is the old Windows"
+    },
+    {
+      "start": 165.06,
+      "duration": 6.539,
+      "text": "machine and the other one is the new Macbook machine"
+    },
+    {
+      "start": 169.019,
+      "duration": 7.561,
+      "text": "now I'm sure the old windows hypothetically might end up taking two"
+    },
+    {
+      "start": 174.66,
+      "duration": 6.9,
+      "text": "second to run that code while the new Macbook which is a lot more in terms of"
+    },
+    {
+      "start": 179.819,
+      "duration": 6.301,
+      "text": "the like a lot more latest in terms of the configuration might end up taking"
+    },
+    {
+      "start": 183.54,
+      "duration": 6.36,
+      "text": "one second so does it mean that your code is taking one second or"
+    },
+    {
+      "start": 188.64,
+      "duration": 5.94,
+      "text": "does it mean that your code is taking two second it might happen I bring up"
+    },
+    {
+      "start": 191.94,
+      "duration": 7.86,
+      "text": "some other machine the next day it might end up taking lesser than one second so"
+    },
+    {
+      "start": 196.8,
+      "duration": 8.939,
+      "text": "depending on the system the code ends up taking a different time so that is why"
+    },
+    {
+      "start": 203.099,
+      "duration": 6.72,
+      "text": "time complexity cannot be said as time taken because it is dependent on system"
+    },
+    {
+      "start": 208.14,
+      "duration": 7.319,
+      "text": "it is different dependent on configuration right so this is why that"
+    },
+    {
+      "start": 212.34,
+      "duration": 8.58,
+      "text": "is this is the first point time taken is never equal to time taken never ever so"
+    },
+    {
+      "start": 218.4,
+      "duration": 7.919,
+      "text": "you might ask if time complexity is not time taken then what is it that is where"
+    },
+    {
+      "start": 223.739,
+      "duration": 9.06,
+      "text": "I see the definition the rate remember the rate at which"
+    },
+    {
+      "start": 228.72,
+      "duration": 8.76,
+      "text": "the time taken increases the rate at which the time taken"
+    },
+    {
+      "start": 234.78,
+      "duration": 7.019,
+      "text": "increases with respect to"
+    },
+    {
+      "start": 239.94,
+      "duration": 6.019,
+      "text": "the input with respect to the input size rather"
+    },
+    {
+      "start": 247.14,
+      "duration": 6.54,
+      "text": "so what does that mean let's explain this with the help of a graph so again"
+    },
+    {
+      "start": 251.939,
+      "duration": 8.52,
+      "text": "let's take the same example where I'm saying I have a old Windows machine"
+    },
+    {
+      "start": 257.28,
+      "duration": 9.3,
+      "text": "and I have a new Macbook okay now imagine you are giving the old"
+    },
+    {
+      "start": 263.16,
+      "duration": 8.18,
+      "text": "windows a size 10 just as hypothetical a size 10 input size and I'm plotting the"
+    },
+    {
+      "start": 269.1,
+      "duration": 2.24,
+      "text": "graph"
+    },
+    {
+      "start": 271.56,
+      "duration": 5.1,
+      "text": "and this is one second this is two seconds this is three second"
+    },
+    {
+      "start": 275.22,
+      "duration": 9.12,
+      "text": "this is four second this is five second this is 10 input size is 20 30 40."
+    },
+    {
+      "start": 281.88,
+      "duration": 9.06,
+      "text": "at 10 input size it might end up taking 2 seconds at 20 it might end up taking 4"
+    },
+    {
+      "start": 287.28,
+      "duration": 9.3,
+      "text": "at 30 it might end up taking 6 which will be here so"
+    },
+    {
+      "start": 292.68,
+      "duration": 10.14,
+      "text": "you see the time increasing at some at some Theta angle like it's increasing"
+    },
+    {
+      "start": 299.46,
+      "duration": 10.86,
+      "text": "at a certain slope so this increase this increase this Theta angle is what"
+    },
+    {
+      "start": 306.3,
+      "duration": 9.36,
+      "text": "you call as the rate of increase this is what you call"
+    },
+    {
+      "start": 311.82,
+      "duration": 8.46,
+      "text": "the rate of increase okay now let's see the new Macbook"
+    },
+    {
+      "start": 317.58,
+      "duration": 8.22,
+      "text": "so if I take the new Macbook the 10 might end up taking one second"
+    },
+    {
+      "start": 323.22,
+      "duration": 6.24,
+      "text": "the 20 might end up taking two second the 40"
+    },
+    {
+      "start": 327.6,
+      "duration": 7.98,
+      "text": "might end up taking three seconds so it's here here"
+    },
+    {
+      "start": 332.1,
+      "duration": 9.539,
+      "text": "so this is the read and this Theta is the rate for the new Macbook so I can"
+    },
+    {
+      "start": 338.4,
+      "duration": 10.019,
+      "text": "say the rate at which it increases time is what you call As Time complexity"
+    },
+    {
+      "start": 346.46,
+      "duration": 5.86,
+      "text": "depending on the input if they are giving you more input it might end up"
+    },
+    {
+      "start": 350.1,
+      "duration": 8.34,
+      "text": "taking a certain more time so the rate at which the time increases is what is"
+    },
+    {
+      "start": 355.919,
+      "duration": 8.041,
+      "text": "generically referred as time complexity of Any Given code the next question that"
+    },
+    {
+      "start": 361.02,
+      "duration": 7.5,
+      "text": "might come to your brain is okay if we are saying the time complexity is not"
+    },
+    {
+      "start": 366.66,
+      "duration": 8.099,
+      "text": "computed in terms of seconds or minutes then how do we how do we write it this"
+    },
+    {
+      "start": 371.759,
+      "duration": 8.28,
+      "text": "is where something like a big O a bigger notation comes in"
+    },
+    {
+      "start": 378.24,
+      "duration": 6.78,
+      "text": "now in all the interviews that you're going to give or in all the examinations"
+    },
+    {
+      "start": 382.44,
+      "duration": 6.18,
+      "text": "if you're writing a piece of code they will ask you to analyze the time"
+    },
+    {
+      "start": 387.06,
+      "duration": 7.079,
+      "text": "that is when you do not like you will not say two seconds no you will say it"
+    },
+    {
+      "start": 391.319,
+      "duration": 8.16,
+      "text": "in terms of bigon notation every piece of code takes time in terms of Vigo"
+    },
+    {
+      "start": 397.02,
+      "duration": 8.28,
+      "text": "notation what is Big annotation I just give you a prime example so it's like a"
+    },
+    {
+      "start": 402.12,
+      "duration": 9.0,
+      "text": "capital O open parenthesis and a closed pattern this is what bigo notation is"
+    },
+    {
+      "start": 408.36,
+      "duration": 7.38,
+      "text": "and inside it you write whatever the time is taken inside is you write the"
+    },
+    {
+      "start": 414.84,
+      "duration": 5.22,
+      "text": "time taken or the hypothetical time which"
+    },
+    {
+      "start": 418.08,
+      "duration": 6.899,
+      "text": "I'll show you how to compute let's take a very very small example to compute the"
+    },
+    {
+      "start": 422.52,
+      "duration": 5.58,
+      "text": "time complexity of a certain code so imagine I write the for Loop I've"
+    },
+    {
+      "start": 426.84,
+      "duration": 7.979,
+      "text": "already taught you Loops in the previous video I equal to 1"
+    },
+    {
+      "start": 431.16,
+      "duration": 9.599,
+      "text": "I lesser than 5 I plus plus and then I write C out and my name Raj"
+    },
+    {
+      "start": 439.139,
+      "duration": 6.12,
+      "text": "okay so can you tell me what is the Big O of"
+    },
+    {
+      "start": 443.039,
+      "duration": 7.021,
+      "text": "this this is nothing but the number of steps that this code will take first"
+    },
+    {
+      "start": 448.38,
+      "duration": 9.24,
+      "text": "step is very sure assigning the second step is comparison"
+    },
+    {
+      "start": 453.479,
+      "duration": 8.401,
+      "text": "the third step is printing right and then you come across and this is your"
+    },
+    {
+      "start": 459.539,
+      "duration": 6.841,
+      "text": "fourth step and then again you check this is your fifth step and then again"
+    },
+    {
+      "start": 463.979,
+      "duration": 7.5,
+      "text": "you print this is your sixth step so this is how every step is computed so"
+    },
+    {
+      "start": 469.68,
+      "duration": 8.04,
+      "text": "whatever is the total number of steps that is what you write inside is and"
+    },
+    {
+      "start": 474.479,
+      "duration": 9.481,
+      "text": "that is what you call as the prime bego notation but you cannot just keep on"
+    },
+    {
+      "start": 480.479,
+      "duration": 9.601,
+      "text": "Counting step one step two step three step four step five step six step seven"
+    },
+    {
+      "start": 487.62,
+      "duration": 7.16,
+      "text": "that is insane you just cannot keep on manually"
+    },
+    {
+      "start": 491.46,
+      "duration": 8.88,
+      "text": "counting the steps this is where three rules come in and I'll write the rules"
+    },
+    {
+      "start": 498.18,
+      "duration": 8.04,
+      "text": "the three rules are very simple always compute time complexity in terms of"
+    },
+    {
+      "start": 502.639,
+      "duration": 10.661,
+      "text": "worst case scenario time complexity to be computed in terms of worst case"
+    },
+    {
+      "start": 510.74,
+      "duration": 9.64,
+      "text": "scenario why was case I'll explain you the next one is avoid constants"
+    },
+    {
+      "start": 518.039,
+      "duration": 8.641,
+      "text": "avoid constants the third and the third is avoid"
+    },
+    {
+      "start": 524.219,
+      "duration": 8.041,
+      "text": "lower values so if I have to compute the time"
+    },
+    {
+      "start": 529.62,
+      "duration": 7.32,
+      "text": "complexity or the Big O of this piece of code let's look at it on a very high"
+    },
+    {
+      "start": 534.6,
+      "duration": 6.78,
+      "text": "level can I say this for Loop is running for 5K I can"
+    },
+    {
+      "start": 538.86,
+      "duration": 6.0,
+      "text": "at every time what is happening it's like increment"
+    },
+    {
+      "start": 543.54,
+      "duration": 11.88,
+      "text": "check print increment check print so can I say"
+    },
+    {
+      "start": 550.019,
+      "duration": 10.921,
+      "text": "for every time it's operating price but every time it is operating three times"
+    },
+    {
+      "start": 557.3,
+      "duration": 10.539,
+      "text": "increment check print five into three can I see this I can so can I say a"
+    },
+    {
+      "start": 564.18,
+      "duration": 10.98,
+      "text": "total of 15 times that is how you write it you write it as we go of 15 is what"
+    },
+    {
+      "start": 572.459,
+      "duration": 6.661,
+      "text": "you write and this is time complexity it runs for 15 times"
+    },
+    {
+      "start": 577.26,
+      "duration": 7.079,
+      "text": "but this is a number this is a number you generally do not represent your code"
+    },
+    {
+      "start": 581.459,
+      "duration": 7.681,
+      "text": "in terms of numbers okay so let's let's change this"
+    },
+    {
+      "start": 586.019,
+      "duration": 8.82,
+      "text": "now can I see this if I change the statement if I if I probably will change"
+    },
+    {
+      "start": 592.32,
+      "duration": 7.139,
+      "text": "this to lesser than n less than equal to n"
+    },
+    {
+      "start": 596.76,
+      "duration": 9.54,
+      "text": "now can you say how many times will this Loop run I know one thing this is going"
+    },
+    {
+      "start": 602.22,
+      "duration": 10.619,
+      "text": "to run for we go of n times the loop the code will run for n times n iteration"
+    },
+    {
+      "start": 609.0,
+      "duration": 7.98,
+      "text": "and at every iteration one two three things will happen"
+    },
+    {
+      "start": 613.98,
+      "duration": 11.4,
+      "text": "that every iteration three things fella pretty obvious this is what will be the"
+    },
+    {
+      "start": 620.459,
+      "duration": 8.401,
+      "text": "time complexity we go of t n we go of 3n will be your time"
+    },
+    {
+      "start": 626.58,
+      "duration": 5.879,
+      "text": "so whenever you're saying we go you go to the code and you see how many times"
+    },
+    {
+      "start": 630.42,
+      "duration": 9.0,
+      "text": "it is running and then you write we go of 3 n as your time complexity does that"
+    },
+    {
+      "start": 636.779,
+      "duration": 6.601,
+      "text": "make sense right okay let's now come back to the three points that have"
+    },
+    {
+      "start": 640.8,
+      "duration": 7.5,
+      "text": "written always compute time complexity in terms of worst case scenario now"
+    },
+    {
+      "start": 646.98,
+      "duration": 7.74,
+      "text": "there are three things one is the best case"
+    },
+    {
+      "start": 651.66,
+      "duration": 8.52,
+      "text": "one is the average case and the other one is the worst case now"
+    },
+    {
+      "start": 657.959,
+      "duration": 7.861,
+      "text": "let's take a snippet of the code and explain you what is best case what is"
+    },
+    {
+      "start": 662.579,
+      "duration": 8.041,
+      "text": "average case and what is worst case okay let's so this is the snippet of the code"
+    },
+    {
+      "start": 668.04,
+      "duration": 8.58,
+      "text": "now imagine the snippet of the code is very it states of marks is lesser than"
+    },
+    {
+      "start": 673.2,
+      "duration": 8.699,
+      "text": "25 print grade D it states of marks is less than 45 print grade C if marks is"
+    },
+    {
+      "start": 679.8,
+      "duration": 7.32,
+      "text": "lesser than 65 then you go ahead and print Grade B or else you go ahead and"
+    },
+    {
+      "start": 684.42,
+      "duration": 5.94,
+      "text": "print create a so let's talk about the best case"
+    },
+    {
+      "start": 688.38,
+      "duration": 7.74,
+      "text": "scenario what is baskets when the program"
+    },
+    {
+      "start": 693.72,
+      "duration": 8.28,
+      "text": "takes the least amount of time so over here can I say if someone gives"
+    },
+    {
+      "start": 699.06,
+      "duration": 8.519,
+      "text": "you an input of marks equal to let's say 10 what will happen"
+    },
+    {
+      "start": 704.459,
+      "duration": 7.681,
+      "text": "this will execute it and grade D will be printed and none of these lines will be"
+    },
+    {
+      "start": 709.74,
+      "duration": 7.74,
+      "text": "executed none of these like so can I take can I say the number of operations"
+    },
+    {
+      "start": 714.24,
+      "duration": 8.7,
+      "text": "will be just one a check and a print which is like two operation"
+    },
+    {
+      "start": 719.94,
+      "duration": 6.24,
+      "text": "which is like two operations and I said imagine"
+    },
+    {
+      "start": 724.26,
+      "duration": 8.28,
+      "text": "if I give you marks equal to"
+    },
+    {
+      "start": 728.42,
+      "duration": 10.419,
+      "text": "70. so at Max 10 it was we go of 2 operation correct we go off to operation"
+    },
+    {
+      "start": 735.839,
+      "duration": 5.461,
+      "text": "now if I give you marks equal to 70 what will happen"
+    },
+    {
+      "start": 739.68,
+      "duration": 8.7,
+      "text": "check false check"
+    },
+    {
+      "start": 743.519,
+      "duration": 9.961,
+      "text": "false check false it comes here 3 and then four can I say four operations were"
+    },
+    {
+      "start": 751.079,
+      "duration": 9.301,
+      "text": "here like one two three and then goes to else somewhere around 4 octave so it"
+    },
+    {
+      "start": 756.839,
+      "duration": 8.94,
+      "text": "takes four operations so whenever you're analyzing the time complexity will you"
+    },
+    {
+      "start": 762.66,
+      "duration": 7.26,
+      "text": "say that my code runs in week of or will you say that your code runs in week of"
+    },
+    {
+      "start": 767.459,
+      "duration": 7.62,
+      "text": "four obviously you will say we go for because that might be the worst case"
+    },
+    {
+      "start": 771.839,
+      "duration": 9.841,
+      "text": "that the computer might encounter when it is given an input so always yes"
+    },
+    {
+      "start": 778.8,
+      "duration": 8.4,
+      "text": "always compute the time complexity in terms of worst case scenario and if they"
+    },
+    {
+      "start": 785.04,
+      "duration": 6.12,
+      "text": "will ask you the best case you know the best case whatever is the best case like"
+    },
+    {
+      "start": 789.06,
+      "duration": 5.519,
+      "text": "in this case is the first if statement getting executed which is we go of two"
+    },
+    {
+      "start": 793.44,
+      "duration": 5.579,
+      "text": "operations so you've got an idea about the best"
+    },
+    {
+      "start": 796.74,
+      "duration": 6.36,
+      "text": "case and the worst case you know what is the average case there's nothing but the"
+    },
+    {
+      "start": 800.82,
+      "duration": 8.1,
+      "text": "best plus worse and divided by two it's it's the median of it so pretty"
+    },
+    {
+      "start": 806.16,
+      "duration": 7.799,
+      "text": "self-explanatory why if I give you a question why do we"
+    },
+    {
+      "start": 811.8,
+      "duration": 7.46,
+      "text": "compute it in terms of worst case the answer is again self-explanatory if"
+    },
+    {
+      "start": 816.36,
+      "duration": 2.9,
+      "text": "you're building a system"
+    },
+    {
+      "start": 819.6,
+      "duration": 7.14,
+      "text": "will you build it for one person or or will you build it for one million"
+    },
+    {
+      "start": 824.579,
+      "duration": 6.901,
+      "text": "person if given an option if given an option he will say 1 million because you"
+    },
+    {
+      "start": 829.92,
+      "duration": 6.24,
+      "text": "want to build a system which can scale up you always think of the worst that"
+    },
+    {
+      "start": 833.94,
+      "duration": 8.28,
+      "text": "can happen that is why when I talk about time complexity your code"
+    },
+    {
+      "start": 839.22,
+      "duration": 8.76,
+      "text": "extreme worst case is what is considered while Computing time complexity now"
+    },
+    {
+      "start": 845.22,
+      "duration": 7.679,
+      "text": "let's talk about constants I'm saying avoid constants why am I seeing that"
+    },
+    {
+      "start": 849.899,
+      "duration": 10.68,
+      "text": "let's take a shuttle example let's say something like 4 n Cube something like 3"
+    },
+    {
+      "start": 857.339,
+      "duration": 8.581,
+      "text": "n square plus 8 that's it so over here"
+    },
+    {
+      "start": 862.5,
+      "duration": 7.32,
+      "text": "4 n q plus 3 n square plus 8 these are the number of operations that your code"
+    },
+    {
+      "start": 867.779,
+      "duration": 6.06,
+      "text": "is taking hypothetically I do not want to be support I'm just taking a"
+    },
+    {
+      "start": 871.019,
+      "duration": 9.12,
+      "text": "hypothetical we go expression now imagine if I tell you that the input"
+    },
+    {
+      "start": 876.6,
+      "duration": 8.039,
+      "text": "size n the input size n is somewhere around"
+    },
+    {
+      "start": 881.639,
+      "duration": 7.801,
+      "text": "10 to the power 5. right I'm saying 10 to the power 5 is the input size"
+    },
+    {
+      "start": 886.56,
+      "duration": 8.04,
+      "text": "so when I say 10 to the power 5 and you put that in What will what will it be 10"
+    },
+    {
+      "start": 892.199,
+      "duration": 9.301,
+      "text": "to the power 15 10 to the power 5 Cube 15 plus 3 n Square that's 3 10 to the"
+    },
+    {
+      "start": 898.56,
+      "duration": 8.399,
+      "text": "power 10 plus 8. tell me a very easy thing"
+    },
+    {
+      "start": 904.019,
+      "duration": 8.641,
+      "text": "10 degree of 15 plus 10 to the power 10 into Plus 8 will this 8 have any"
+    },
+    {
+      "start": 909.899,
+      "duration": 9.44,
+      "text": "significance in the operations this is in itself such a huge number if you had"
+    },
+    {
+      "start": 916.199,
+      "duration": 7.44,
+      "text": "eight will it will it matter to them like whatever is standard of 50 I'm not"
+    },
+    {
+      "start": 921.72,
+      "duration": 6.54,
+      "text": "sure what it is it's a billion trillion whatever more than that I guess"
+    },
+    {
+      "start": 925.8,
+      "duration": 5.64,
+      "text": "with that A Plus 8 does it have a significant"
+    },
+    {
+      "start": 929.459,
+      "duration": 7.32,
+      "text": "it doesn't if you're earning 1 million and I give you one buck that will not"
+    },
+    {
+      "start": 933.959,
+      "duration": 7.981,
+      "text": "have any significance that is why we do not consider constants we do not"
+    },
+    {
+      "start": 939.36,
+      "duration": 7.68,
+      "text": "consider constants now in terms of code imagine I see you something like this"
+    },
+    {
+      "start": 944.06,
+      "duration": 7.839,
+      "text": "int x equal to 2. so this is the modified code"
+    },
+    {
+      "start": 950.04,
+      "duration": 6.659,
+      "text": "this is the modified code x equal to 2 and then the for Loop so this is one"
+    },
+    {
+      "start": 954.12,
+      "duration": 8.76,
+      "text": "operation it's it's something like n into three plus one the time complexity"
+    },
+    {
+      "start": 959.399,
+      "duration": 8.94,
+      "text": "updated will be n into 3 plus 1 operation and this is the one operation"
+    },
+    {
+      "start": 964.62,
+      "duration": 8.94,
+      "text": "so you never ever take this unit operation so you will not consider this"
+    },
+    {
+      "start": 970.38,
+      "duration": 8.04,
+      "text": "you will say no it will still stay as n into 3 I will avoid constants because"
+    },
+    {
+      "start": 976.26,
+      "duration": 7.319,
+      "text": "whenever the input size is very large those constants have very less"
+    },
+    {
+      "start": 980.94,
+      "duration": 8.82,
+      "text": "significance got it now let's take the next thing avoid lower values let's take"
+    },
+    {
+      "start": 987.12,
+      "duration": 7.8,
+      "text": "the same example I am saying 10 to the power of 15 10 to the power 15. if you"
+    },
+    {
+      "start": 992.76,
+      "duration": 7.079,
+      "text": "add 10 to the power 10 to it will it have any significant it won't so adding"
+    },
+    {
+      "start": 998.04,
+      "duration": 6.18,
+      "text": "10 to the power 10 to 10 to the power 15 10 to the power 15 will have absolutely"
+    },
+    {
+      "start": 1002.839,
+      "duration": 5.041,
+      "text": "no significance it is similar to saying I will add let's"
+    },
+    {
+      "start": 1007.04,
+      "duration": 4.859,
+      "text": "say one two thousand"
+    },
+    {
+      "start": 1009.74,
+      "duration": 8.219,
+      "text": "maybe even lesser than that it is similar to actually seeing one two"
+    },
+    {
+      "start": 1015.079,
+      "duration": 7.26,
+      "text": "yeah I'm adding one to this much or one more zero yeah will it have any"
+    },
+    {
+      "start": 1019.639,
+      "duration": 6.961,
+      "text": "significance no so adding this one to this one will it have any significance"
+    },
+    {
+      "start": 1024.199,
+      "duration": 6.841,
+      "text": "no the number of operations will be like slightly slightly more because 10 to the"
+    },
+    {
+      "start": 1029.179,
+      "duration": 7.321,
+      "text": "power 5 15 in itself is such a huge number but this is why again certainly"
+    },
+    {
+      "start": 1033.74,
+      "duration": 10.319,
+      "text": "very important avoid the lower values which does not change its significance"
+    },
+    {
+      "start": 1039.5,
+      "duration": 9.6,
+      "text": "by much so avoid lower values correct so these are the three points that you will"
+    },
+    {
+      "start": 1046.04,
+      "duration": 7.8,
+      "text": "always keep in mind while Computing the Beagle notation because Vigo notation is"
+    },
+    {
+      "start": 1051.2,
+      "duration": 6.24,
+      "text": "what you will be expressing your code in interviews always all the problems that"
+    },
+    {
+      "start": 1056.059,
+      "duration": 5.881,
+      "text": "I'll be solving I'll be telling you about bigo notation only apart from"
+    },
+    {
+      "start": 1060.38,
+      "duration": 6.48,
+      "text": "bigot notation there are certain other terms at Theta notation"
+    },
+    {
+      "start": 1064.34,
+      "duration": 7.86,
+      "text": "Omega notation Delphi a lot of other terms in textbooks are they required in"
+    },
+    {
+      "start": 1069.38,
+      "duration": 7.44,
+      "text": "interviews no no one is going to ask you these things no one or just for"
+    },
+    {
+      "start": 1074.539,
+      "duration": 7.201,
+      "text": "knowledge let me tell you the bigo notation is always the highest complex"
+    },
+    {
+      "start": 1079.34,
+      "duration": 7.62,
+      "text": "or the worst case complexity remember this worst case complexity or the"
+    },
+    {
+      "start": 1084.86,
+      "duration": 7.679,
+      "text": "highest or generically known as the upper bound complexity"
+    },
+    {
+      "start": 1089.48,
+      "duration": 8.22,
+      "text": "it's known as the upper bound the Omega is the lower Bond as I said the kind of"
+    },
+    {
+      "start": 1096.2,
+      "duration": 5.64,
+      "text": "the best case is the lower bound or the lowest Bond or"
+    },
+    {
+      "start": 1099.919,
+      "duration": 5.421,
+      "text": "whatever you can and this is nothing but the average complexity"
+    },
+    {
+      "start": 1105.74,
+      "duration": 8.28,
+      "text": "foreign just a quick disclaimer there are a lot"
+    },
+    {
+      "start": 1111.74,
+      "duration": 8.22,
+      "text": "of theoretical stuffs revolving around Biko Theta Omega a lot of limit"
+    },
+    {
+      "start": 1117.32,
+      "duration": 8.04,
+      "text": "derivations but I am not teaching you Theory stuff I'm not teaching you for"
+    },
+    {
+      "start": 1122.059,
+      "duration": 8.341,
+      "text": "your semester examinations I am teaching you for interviews I am preparing you"
+    },
+    {
+      "start": 1127.58,
+      "duration": 6.9,
+      "text": "for the DAC coding rounds and they will not be asking it over there they'll be"
+    },
+    {
+      "start": 1132.44,
+      "duration": 6.18,
+      "text": "asking a programming logic you'll have to solve problems don't be asking you"
+    },
+    {
+      "start": 1136.46,
+      "duration": 6.18,
+      "text": "tell the formula for big connotation in limit terms no one is going to ask might"
+    },
+    {
+      "start": 1140.72,
+      "duration": 5.819,
+      "text": "be asked in semesters for that you'll find different teachers on YouTube if"
+    },
+    {
+      "start": 1144.62,
+      "duration": 7.26,
+      "text": "you are learning from me you're learning for interviews for coding rounds for"
+    },
+    {
+      "start": 1149.539,
+      "duration": 7.801,
+      "text": "problem solving abilities not for your semester exam so please do not comment"
+    },
+    {
+      "start": 1154.76,
+      "duration": 6.419,
+      "text": "that you did not teach the mathematical derivation because that is something"
+    },
+    {
+      "start": 1158.72,
+      "duration": 7.319,
+      "text": "which is not required while problem solving right so you know how to compute"
+    },
+    {
+      "start": 1163.82,
+      "duration": 8.16,
+      "text": "picona let's uh do one thing let's quickly solve some questions okay so the"
+    },
+    {
+      "start": 1170.24,
+      "duration": 6.179,
+      "text": "first snippet of the code for which you have to find the time complexity imagine"
+    },
+    {
+      "start": 1174.14,
+      "duration": 8.159,
+      "text": "inside your main you have something like int I equal to zero I lesser than n i"
+    },
+    {
+      "start": 1180.98,
+      "duration": 11.4,
+      "text": "plus plus and for INT J equal to 0 J lesser than n"
+    },
+    {
+      "start": 1187.82,
+      "duration": 11.28,
+      "text": "j plus plus and imagine it has a block of code like something a single line of"
+    },
+    {
+      "start": 1194.6,
+      "duration": 9.199,
+      "text": "code and this is your entire snippet of the code okay this is your some block of"
+    },
+    {
+      "start": 1201.62,
+      "duration": 2.179,
+      "text": "code"
+    },
+    {
+      "start": 1203.96,
+      "duration": 6.839,
+      "text": "you can consider this to be taking very constant time constant time so this can"
+    },
+    {
+      "start": 1209.66,
+      "duration": 5.639,
+      "text": "be avoided tell me the time complexity you know"
+    },
+    {
+      "start": 1213.559,
+      "duration": 7.261,
+      "text": "time complexity will be computed in terms of bigo notation tell me the time"
+    },
+    {
+      "start": 1218.419,
+      "duration": 6.661,
+      "text": "complexity of this particular code pause the video and maybe think about it and"
+    },
+    {
+      "start": 1222.5,
+      "duration": 6.6,
+      "text": "then see if you are correct or not so how do you analyze the"
+    },
+    {
+      "start": 1226.94,
+      "duration": 7.739,
+      "text": "time complexity of Snippets of the code it's very simple analyze how's the code"
+    },
+    {
+      "start": 1231.38,
+      "duration": 7.38,
+      "text": "working so if you see the outer loop is starting from I equal to 0 and going"
+    },
+    {
+      "start": 1236.419,
+      "duration": 8.521,
+      "text": "till n so it's definitely running for n times and the inner loop is going from J"
+    },
+    {
+      "start": 1242.24,
+      "duration": 7.74,
+      "text": "equal to 0 till n this is also running for n times now if you're a beginner you"
+    },
+    {
+      "start": 1248.0,
+      "duration": 5.7,
+      "text": "might find it a bit difficult so what you will do is you will say at I equal"
+    },
+    {
+      "start": 1251.84,
+      "duration": 8.04,
+      "text": "to 0 what is happening let's see whenever I is 0 what is happening"
+    },
+    {
+      "start": 1256.94,
+      "duration": 9.359,
+      "text": "whenever I is 0 it goes inside and J starts its value from 0 and goes till n"
+    },
+    {
+      "start": 1262.46,
+      "duration": 10.62,
+      "text": "and this completes n iterations can I say when I is uh zero J goes from 1 0 1"
+    },
+    {
+      "start": 1270.38,
+      "duration": 7.919,
+      "text": "2 3 dot dot till n can I see that and then again when the is value"
+    },
+    {
+      "start": 1275.419,
+      "duration": 9.241,
+      "text": "increases to one can I say J again goes from 0 1 2 3 because it's inside it it's"
+    },
+    {
+      "start": 1281.84,
+      "duration": 10.319,
+      "text": "reiterating again from zero can I say if I is 2 again it again goes from 0 till n"
+    },
+    {
+      "start": 1288.62,
+      "duration": 9.059,
+      "text": "can I say till I is n minus 1 y n minus 1 because it is lesser than n can I say"
+    },
+    {
+      "start": 1294.679,
+      "duration": 8.88,
+      "text": "it again goes from 0 till"
+    },
+    {
+      "start": 1299.48,
+      "duration": 6.72,
+      "text": "n minus 1 to be very accurate can I say this"
+    },
+    {
+      "start": 1304.46,
+      "duration": 9.3,
+      "text": "so what is happening every time it is running for n n"
+    },
+    {
+      "start": 1310.419,
+      "duration": 8.38,
+      "text": "every time it is running for n and n so can I say it's running for n times first"
+    },
+    {
+      "start": 1316.7,
+      "duration": 6.719,
+      "text": "then for another n times second time then for another end time second and"
+    },
+    {
+      "start": 1321.2,
+      "duration": 6.54,
+      "text": "then dot dot dot till end times how many times is it running"
+    },
+    {
+      "start": 1325.4,
+      "duration": 6.42,
+      "text": "can I say it's running for exactly n times so can I say this is nothing but n"
+    },
+    {
+      "start": 1330.559,
+      "duration": 6.6,
+      "text": "into n yes thereby n square is the number of"
+    },
+    {
+      "start": 1335.059,
+      "duration": 8.461,
+      "text": "iterations it is taking yes there are other things as well like increase"
+    },
+    {
+      "start": 1340.659,
+      "duration": 8.681,
+      "text": "comparison we usually do not consider which rule avoid lower values if you"
+    },
+    {
+      "start": 1346.82,
+      "duration": 6.78,
+      "text": "remember because 3 into something won't matter that much because you can avoid"
+    },
+    {
+      "start": 1351.26,
+      "duration": 6.96,
+      "text": "it so what I can say is it's running for n Square yeah if you want to consider"
+    },
+    {
+      "start": 1355.76,
+      "duration": 8.52,
+      "text": "all these constant operations you can do it that is your wish I usually do not do"
+    },
+    {
+      "start": 1361.039,
+      "duration": 9.241,
+      "text": "it so we go off n square is what is the time complexity"
+    },
+    {
+      "start": 1368.24,
+      "duration": 6.6,
+      "text": "of this particular let's say the next example and try to compute the time"
+    },
+    {
+      "start": 1371.84,
+      "duration": 7.079,
+      "text": "complexity of this one so it's like the first Loop is definitely running for n"
+    },
+    {
+      "start": 1377.059,
+      "duration": 9.061,
+      "text": "a second Loop is running from 0 to I"
+    },
+    {
+      "start": 1382.7,
+      "duration": 9.42,
+      "text": "so let's analyze slowly and probably we'll get the time complexity so can I"
+    },
+    {
+      "start": 1388.4,
+      "duration": 9.779,
+      "text": "say if I equal to 0 J is nothing but from 0 is only running for 0 can I say"
+    },
+    {
+      "start": 1395.059,
+      "duration": 10.321,
+      "text": "this because when I is 0 J is running for 0 K lesser than equal to 0 it will"
+    },
+    {
+      "start": 1401.059,
+      "duration": 9.48,
+      "text": "run for just one time 12. when I becomes 2 what happens J now runs for 0 sorry"
+    },
+    {
+      "start": 1408.62,
+      "duration": 6.48,
+      "text": "when I becomes 1 rather and I becomes one what happens J now"
+    },
+    {
+      "start": 1413.059,
+      "duration": 7.74,
+      "text": "runs for zero and one can I say why because I is 1 it's like 0 lesser than"
+    },
+    {
+      "start": 1418.46,
+      "duration": 7.32,
+      "text": "one correct nice can I see if I is equal to 2 what"
+    },
+    {
+      "start": 1422.539,
+      "duration": 9.961,
+      "text": "happens J now runs for 0 1 2 so when I at the end becomes n minus 1"
+    },
+    {
+      "start": 1429.02,
+      "duration": 8.88,
+      "text": "what will happen J will be 0 1 2 dot dot n minus one can I see this is how many"
+    },
+    {
+      "start": 1435.14,
+      "duration": 8.64,
+      "text": "operations it is taking again I'm ignoring all these constant operations"
+    },
+    {
+      "start": 1440.299,
+      "duration": 8.641,
+      "text": "I'm taking the overall iterations now first time it's one equation next time"
+    },
+    {
+      "start": 1445.88,
+      "duration": 7.5,
+      "text": "it's 2 x m is three four until n so can I say the number of iterations the first"
+    },
+    {
+      "start": 1450.5,
+      "duration": 9.12,
+      "text": "time it is one the next time it is two the next time it is 3 and X7 is 4 so on"
+    },
+    {
+      "start": 1456.62,
+      "duration": 7.86,
+      "text": "Del Nitric can I see and do you remember the formula for this particular thing"
+    },
+    {
+      "start": 1462.62,
+      "duration": 9.6,
+      "text": "some of the first and natural numbers simple maths n into n plus 1 whole"
+    },
+    {
+      "start": 1469.22,
+      "duration": 10.079,
+      "text": "divided by 2 which is nothing but n Square by 2 plus n by 2"
+    },
+    {
+      "start": 1477.74,
+      "duration": 6.98,
+      "text": "thereby this is the exact time complex but we"
+    },
+    {
+      "start": 1482.84,
+      "duration": 7.26,
+      "text": "can avoid if you remember the rules constant to be a like the smaller values"
+    },
+    {
+      "start": 1487.52,
+      "duration": 5.22,
+      "text": "to be avoided so it'll be like n Square by 2"
+    },
+    {
+      "start": 1491.24,
+      "duration": 6.12,
+      "text": "so this is the time complexity again if you try to"
+    },
+    {
+      "start": 1495.08,
+      "duration": 7.74,
+      "text": "remove the constants like one by half you can say the time complexity is near"
+    },
+    {
+      "start": 1499.88,
+      "duration": 7.44,
+      "text": "about we go of n square but if someone does ask you the exact time complexity"
+    },
+    {
+      "start": 1504.679,
+      "duration": 7.021,
+      "text": "this is the exact time complexity but according to the rules"
+    },
+    {
+      "start": 1508.94,
+      "duration": 8.52,
+      "text": "this is voted boils down to so these were the basics of time complexity okay"
+    },
+    {
+      "start": 1514.58,
+      "duration": 7.979,
+      "text": "now next I'll be doing all these patterns in the next lecture well be"
+    },
+    {
+      "start": 1519.98,
+      "duration": 7.86,
+      "text": "writing all the nested for loops and there you can analyze time complexity in"
+    },
+    {
+      "start": 1525.08,
+      "duration": 11.339,
+      "text": "a much better way but eventually all the time complexity terms like login and"
+    },
+    {
+      "start": 1531.14,
+      "duration": 9.84,
+      "text": "login n Square n Cube n Square login all of these things you will see as I"
+    },
+    {
+      "start": 1539.059,
+      "duration": 7.381,
+      "text": "proceed with the playlist I do not want to rush you in I just want you to get an"
+    },
+    {
+      "start": 1543.679,
+      "duration": 6.901,
+      "text": "overview of what is time complexity how to think on it how to compute how to"
+    },
+    {
+      "start": 1548.48,
+      "duration": 6.0,
+      "text": "avoid terms these things should be crystal clear to you so I'm assuming the"
+    },
+    {
+      "start": 1552.559,
+      "duration": 6.72,
+      "text": "time complexity uh stuff is crystal clear to you they'll now be moving to"
+    },
+    {
+      "start": 1556.4,
+      "duration": 7.98,
+      "text": "something like space complexity again"
+    },
+    {
+      "start": 1560.779,
+      "duration": 8.4,
+      "text": "what a space complexity it's the memory space that your program takes it is the"
+    },
+    {
+      "start": 1567.08,
+      "duration": 8.76,
+      "text": "memory space that your program takes in a very very naive term"
+    },
+    {
+      "start": 1572.96,
+      "duration": 8.04,
+      "text": "when I talk about memory space again it will vary from machine to machine so you"
+    },
+    {
+      "start": 1578.72,
+      "duration": 7.559,
+      "text": "cannot be dependent on the machine and that is why again in order to complete"
+    },
+    {
+      "start": 1583.22,
+      "duration": 7.559,
+      "text": "base complexity we will be using the bigo notation again"
+    },
+    {
+      "start": 1588.74,
+      "duration": 7.38,
+      "text": "so bigo notation is kind of very very important in all the interviews we go in"
+    },
+    {
+      "start": 1593.72,
+      "duration": 6.36,
+      "text": "terms of time we go in terms of the space so we'll again be using bigger"
+    },
+    {
+      "start": 1597.98,
+      "duration": 9.78,
+      "text": "notation and you know the reasons why not in terms of KB MB GB Etc"
+    },
+    {
+      "start": 1604.22,
+      "duration": 9.5,
+      "text": "so what is exactly the definition of space complexity it is nothing but"
+    },
+    {
+      "start": 1610.299,
+      "duration": 3.421,
+      "text": "auxiliary space"
+    },
+    {
+      "start": 1614.779,
+      "duration": 5.481,
+      "text": "Plus input space"
+    },
+    {
+      "start": 1620.299,
+      "duration": 5.281,
+      "text": "what is auxiliary space the space that you take to solve the"
+    },
+    {
+      "start": 1624.08,
+      "duration": 4.86,
+      "text": "problem the space"
+    },
+    {
+      "start": 1627.08,
+      "duration": 10.68,
+      "text": "that you take to solve the problem input space"
+    },
+    {
+      "start": 1635.2,
+      "duration": 6.9,
+      "text": "the space that you take to store the problem"
+    },
+    {
+      "start": 1639.559,
+      "duration": 2.541,
+      "text": "foreign"
+    },
+    {
+      "start": 1646.779,
+      "duration": 7.841,
+      "text": "not the problem so let's give a very very small example in order to explain"
+    },
+    {
+      "start": 1652.34,
+      "duration": 7.319,
+      "text": "what is auxiliary space and what is the input space so I'll write a very very"
+    },
+    {
+      "start": 1656.659,
+      "duration": 7.921,
+      "text": "small thing imagine I am taking an input of A and B in Java you know how to take"
+    },
+    {
+      "start": 1662.6,
+      "duration": 8.34,
+      "text": "it and C plus plus you know so I'm assuming I'm taking an input of a uh"
+    },
+    {
+      "start": 1668.24,
+      "duration": 7.74,
+      "text": "so I'm not writing any syntax because then it'll be C plus plus or Java"
+    },
+    {
+      "start": 1672.679,
+      "duration": 8.761,
+      "text": "specific I just want you to learn pseudo code and the logic so in Imagine a given"
+    },
+    {
+      "start": 1678.679,
+      "duration": 7.321,
+      "text": "input to variably imagine I give an input to variable B and I am saying c"
+    },
+    {
+      "start": 1684.679,
+      "duration": 7.62,
+      "text": "equal to a plus b now I am saying c equal to a"
+    },
+    {
+      "start": 1689.419,
+      "duration": 7.021,
+      "text": "plus b so the auxiliary space that you're using is"
+    },
+    {
+      "start": 1693.559,
+      "duration": 7.86,
+      "text": "an extra C variable this is the auxiliary space why"
+    },
+    {
+      "start": 1698.48,
+      "duration": 6.78,
+      "text": "because you're using a c variable in order to solve the problem okay you"
+    },
+    {
+      "start": 1703.4,
+      "duration": 7.32,
+      "text": "cannot use that is okay I am saying if you use any extra variable or extra"
+    },
+    {
+      "start": 1707.539,
+      "duration": 9.661,
+      "text": "space to solve the problem that is what you refer as auxiliary space what about"
+    },
+    {
+      "start": 1714.26,
+      "duration": 8.039,
+      "text": "the input space this is one and this is one so both of these can be referred as"
+    },
+    {
+      "start": 1719.419,
+      "duration": 9.901,
+      "text": "input space whereas this can be referred as auxiliary space and combined I can"
+    },
+    {
+      "start": 1726.74,
+      "duration": 6.6,
+      "text": "say this is the space complexity or I can say we go off"
+    },
+    {
+      "start": 1730.82,
+      "duration": 6.239,
+      "text": "three over here because you're using three different variables you can"
+    },
+    {
+      "start": 1735.2,
+      "duration": 5.64,
+      "text": "convert them into bytes if you're taking an integer you can convert them into"
+    },
+    {
+      "start": 1738.2,
+      "duration": 7.68,
+      "text": "bytes I am not concerned about this in an interview you will have to say it in"
+    },
+    {
+      "start": 1743.36,
+      "duration": 10.26,
+      "text": "terms of bigo of something not in terms of bytes KB MB so for example"
+    },
+    {
+      "start": 1750.08,
+      "duration": 10.199,
+      "text": "if I Define an array of size n it means I'm consuming B go of n size or n space"
+    },
+    {
+      "start": 1757.76,
+      "duration": 8.82,
+      "text": "complexity so in an interview if you are solving a problem which uses an array of"
+    },
+    {
+      "start": 1762.799,
+      "duration": 8.281,
+      "text": "size n you say bego of n is the space complexity that I am using as simple as"
+    },
+    {
+      "start": 1769.34,
+      "duration": 6.959,
+      "text": "that now a thing that I want to highlight over here is if you're doing"
+    },
+    {
+      "start": 1773.299,
+      "duration": 7.62,
+      "text": "space complexity a lot of times it will happen is imagine you're given an input"
+    },
+    {
+      "start": 1778.58,
+      "duration": 7.92,
+      "text": "to a imagine you're given an input to B and the task is to some add both the"
+    },
+    {
+      "start": 1784.279,
+      "duration": 7.081,
+      "text": "numbers a lot of people say I'll do this b equal to a plus b so the summation of"
+    },
+    {
+      "start": 1789.02,
+      "duration": 7.259,
+      "text": "a plus b will be stored in B and I'll not be using the third variable it is"
+    },
+    {
+      "start": 1793.34,
+      "duration": 7.74,
+      "text": "okay to do it is okay but this is something you should avoid it takes"
+    },
+    {
+      "start": 1798.74,
+      "duration": 7.98,
+      "text": "lesser space but in an interview the interviewer will say this method is not"
+    },
+    {
+      "start": 1803.659,
+      "duration": 7.62,
+      "text": "done why is it not done this thing in person in perspective of software"
+    },
+    {
+      "start": 1808.7,
+      "duration": 7.38,
+      "text": "engineering imagine you writing a quote for a big MNC and they're giving you"
+    },
+    {
+      "start": 1813.86,
+      "duration": 5.699,
+      "text": "some data they've given you some set of data and they want you to do something"
+    },
+    {
+      "start": 1817.94,
+      "duration": 5.099,
+      "text": "on that data and you're like you manipulate the data"
+    },
+    {
+      "start": 1821.0,
+      "duration": 7.559,
+      "text": "over here you change the data you changed B this is why never ever do"
+    },
+    {
+      "start": 1826.279,
+      "duration": 7.201,
+      "text": "anything on the input very very crucial rule in interviews never do anything to"
+    },
+    {
+      "start": 1831.559,
+      "duration": 5.521,
+      "text": "the never do anything to the input unless the interviewer sees anything to"
+    },
+    {
+      "start": 1836.0,
+      "duration": 7.799,
+      "text": "the input because data should not be touched you"
+    },
+    {
+      "start": 1840.919,
+      "duration": 8.161,
+      "text": "can do whatever You Wish by taking the data what you cannot do on the data"
+    },
+    {
+      "start": 1845.96,
+      "duration": 6.78,
+      "text": "because if you manipulate the data it has an issue because in software"
+    },
+    {
+      "start": 1851.0,
+      "duration": 6.299,
+      "text": "engineering that data might be used in some other place so never ever"
+    },
+    {
+      "start": 1854.72,
+      "duration": 6.54,
+      "text": "manipulate data this might save you a bit of space but the interviewer will"
+    },
+    {
+      "start": 1859.159,
+      "duration": 6.9,
+      "text": "end up rejecting you because this is a very very bad practice so never ever do"
+    },
+    {
+      "start": 1863.6,
+      "duration": 7.98,
+      "text": "anything to the input given always take extra variables extra array extra Matrix"
+    },
+    {
+      "start": 1868.94,
+      "duration": 7.68,
+      "text": "it might be tempting that if you use the same input variables you will end up"
+    },
+    {
+      "start": 1873.559,
+      "duration": 7.141,
+      "text": "taking less of space but it's it's not a big concern if you're using bigo of n"
+    },
+    {
+      "start": 1879.32,
+      "duration": 7.979,
+      "text": "space like if 2N is used by taking an extra"
+    },
+    {
+      "start": 1884.36,
+      "duration": 6.9,
+      "text": "array it is okay this is okay no one is going to reject if you're using big of"
+    },
+    {
+      "start": 1888.799,
+      "duration": 7.081,
+      "text": "2N instead of B of n if the interview specifically says do it on the input"
+    },
+    {
+      "start": 1893.72,
+      "duration": 6.36,
+      "text": "then you can use them otherwise do not and you can tell that to the interview"
+    },
+    {
+      "start": 1897.38,
+      "duration": 6.48,
+      "text": "you can explain that I do not want to uh I do not want to tamper with the data"
+    },
+    {
+      "start": 1901.76,
+      "duration": 7.139,
+      "text": "that is why I'm taking an extra variable in order to solve this problem keep this"
+    },
+    {
+      "start": 1905.899,
+      "duration": 6.721,
+      "text": "in mind forever so this was about the high level idea about space complexity"
+    },
+    {
+      "start": 1910.94,
+      "duration": 5.88,
+      "text": "and the practices you should follow regarding the in-depth knowledge when we"
+    },
+    {
+      "start": 1914.779,
+      "duration": 6.841,
+      "text": "solve different problems on different data structures you will see how I'll be"
+    },
+    {
+      "start": 1919.58,
+      "duration": 5.699,
+      "text": "explaining space complexity in terms because the more problems you solve the"
+    },
+    {
+      "start": 1923.419,
+      "duration": 6.721,
+      "text": "space complexity gets into your head in a much much better way so before ending"
+    },
+    {
+      "start": 1927.86,
+      "duration": 6.72,
+      "text": "up this lecture in case you are into competitive programming then remember"
+    },
+    {
+      "start": 1931.94,
+      "duration": 8.58,
+      "text": "one thing over there you do not run your codes on your MacBook or your windows"
+    },
+    {
+      "start": 1937.64,
+      "duration": 6.12,
+      "text": "whatever code you write you send it to the server"
+    },
+    {
+      "start": 1941.539,
+      "duration": 7.86,
+      "text": "there is a server you send it to the server everyone sends to the same server"
+    },
+    {
+      "start": 1947.24,
+      "duration": 6.9,
+      "text": "and these servers in competitive programming or let's say you're using"
+    },
+    {
+      "start": 1951.32,
+      "duration": 7.979,
+      "text": "lead code or let's say code Studio or let's say gfg any platform if you're"
+    },
+    {
+      "start": 1956.72,
+      "duration": 9.36,
+      "text": "using they have their servers and most of the servers take one second for 10 to"
+    },
+    {
+      "start": 1963.32,
+      "duration": 8.94,
+      "text": "the power 8 operations remember this most of the servers most of us are take"
+    },
+    {
+      "start": 1969.98,
+      "duration": 5.34,
+      "text": "one second for roughly 10 to the power 8 operation might be 10 to the power 8"
+    },
+    {
+      "start": 1974.0,
+      "duration": 6.6,
+      "text": "plus something might be 10 to the power 8 minus something but roughly it is 10"
+    },
+    {
+      "start": 1977.779,
+      "duration": 8.221,
+      "text": "to the power 8 operations is what you can execute in one seconds on the server"
+    },
+    {
+      "start": 1983.36,
+      "duration": 8.46,
+      "text": "most of the servers are relatively the same and if they're saying two seconds"
+    },
+    {
+      "start": 1988.039,
+      "duration": 9.301,
+      "text": "it doesn't mean 10 to the power 16. it doesn't it doesn't it means 2 into 25"
+    },
+    {
+      "start": 1994.899,
+      "duration": 6.88,
+      "text": "operations if they're saying five seconds it means 500 to The Power 8"
+    },
+    {
+      "start": 1999.74,
+      "duration": 5.939,
+      "text": "operations do not do 10 to the power 8 to the power of to not a lot of people"
+    },
+    {
+      "start": 2003.519,
+      "duration": 6.0,
+      "text": "do that okay so this is something just keep in your mind because a lot of times"
+    },
+    {
+      "start": 2007.24,
+      "duration": 5.4,
+      "text": "you will see time limit one second they'll write it they'll write it in"
+    },
+    {
+      "start": 2011.5,
+      "duration": 6.179,
+      "text": "your uh let's say coding round the time limit"
+    },
+    {
+      "start": 2015.46,
+      "duration": 7.14,
+      "text": "given to you is one second where you should Analyze That the time"
+    },
+    {
+      "start": 2020.62,
+      "duration": 6.38,
+      "text": "complexity of your snippet of the code or your entire code should be roughly"
+    },
+    {
+      "start": 2025.12,
+      "duration": 8.34,
+      "text": "big go of 10 to the power 8 operations if in a coding round they are stating"
+    },
+    {
+      "start": 2030.399,
+      "duration": 7.441,
+      "text": "time limit one second it means roughly when you compute the time complexity of"
+    },
+    {
+      "start": 2035.32,
+      "duration": 7.739,
+      "text": "your code avoiding constants avoiding lower values it should be because of 10"
+    },
+    {
+      "start": 2040.539,
+      "duration": 6.56,
+      "text": "to the power 8 operations so with this I will be uh completing the"
+    },
+    {
+      "start": 2046.179,
+      "duration": 5.881,
+      "text": "step 1.1 guys I hope you have understood"
+    },
+    {
+      "start": 2049.78,
+      "duration": 6.78,
+      "text": "everything over here and the next lecture will be about uh do all these"
+    },
+    {
+      "start": 2054.52,
+      "duration": 7.859,
+      "text": "patterns yes I'll be doing all of these patterns each other 22 of them in the"
+    },
+    {
+      "start": 2059.98,
+      "duration": 6.24,
+      "text": "next lecture just in case you have one District time complexity and space"
+    },
+    {
+      "start": 2063.94,
+      "duration": 5.82,
+      "text": "complexity in depth we have a ritual on Tiki forward on every lecture if you"
+    },
+    {
+      "start": 2068.08,
+      "duration": 4.74,
+      "text": "understand everything right at the end of the lecture you drop a comment"
+    },
+    {
+      "start": 2071.02,
+      "duration": 6.06,
+      "text": "understood in the comment section so that I get that belief that you guys"
+    },
+    {
+      "start": 2074.98,
+      "duration": 6.0,
+      "text": "understanding I get that motivation that I come back and record these videos so"
+    },
+    {
+      "start": 2078.76,
+      "duration": 5.82,
+      "text": "please please do consider dropping the comment understood if you're new to our"
+    },
+    {
+      "start": 2082.839,
+      "duration": 6.181,
+      "text": "Channel please please do consider subscribing to us if you haven't checked"
+    },
+    {
+      "start": 2086.5,
+      "duration": 6.0,
+      "text": "out uh Strivers A to Z DSA course the link will be in the description and you"
+    },
+    {
+      "start": 2091.3,
+      "duration": 4.799,
+      "text": "get everything on the description my LinkedIn Instagram Twitter everything"
+    },
+    {
+      "start": 2093.7,
+      "duration": 7.02,
+      "text": "you can follow me at any any of these places and if you are learning online"
+    },
+    {
+      "start": 2097.66,
+      "duration": 6.36,
+      "text": "you can always use the hashtag that is over here and with this I'll be wrapping"
+    },
+    {
+      "start": 2102.64,
+      "duration": 3.56,
+      "text": "up this video let's be in some other videos"
+    },
+    {
+      "start": 2113.98,
+      "duration": 2.88,
+      "text": "[Music]"
+    }
+  ]
+}

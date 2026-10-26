@@ -1,0 +1,1362 @@
+{
+  "video_id": "twuC1F6gLI8",
+  "title": "Re 4. Problems on Functional Recursion | Strivers A2Z DSA Course",
+  "total_segments": 271,
+  "segments": [
+    {
+      "start": 0.08,
+      "duration": 5.199,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well"
+    },
+    {
+      "start": 3.199,
+      "duration": 6.081,
+      "text": "so today we will be uh again doing one more i think couple of"
+    },
+    {
+      "start": 6.96,
+      "duration": 7.52,
+      "text": "more problems on recursion the first one being we will be learning how to uh"
+    },
+    {
+      "start": 12.0,
+      "duration": 6.8,
+      "text": "reverse an array using recursion definitely and after"
+    },
+    {
+      "start": 16.72,
+      "duration": 9.2,
+      "text": "that we will be uh learning how to check if a given string is palindrome or not"
+    },
+    {
+      "start": 22.08,
+      "duration": 8.56,
+      "text": "using recursion now reverse an array let's understand uh if i am giving you"
+    },
+    {
+      "start": 28.48,
+      "duration": 5.44,
+      "text": "uh something uh like let's say this this is the array that"
+    },
+    {
+      "start": 32.64,
+      "duration": 4.079,
+      "text": "i'm giving you and i ask you to"
+    },
+    {
+      "start": 35.6,
+      "duration": 6.88,
+      "text": "reverse this so the reverse will be definitely"
+    },
+    {
+      "start": 39.52,
+      "duration": 5.6,
+      "text": "something like two four three two one i think there's no doubt that the reverse"
+    },
+    {
+      "start": 44.0,
+      "duration": 4.64,
+      "text": "will be this if you don't understand what is reverse"
+    },
+    {
+      "start": 46.559,
+      "duration": 5.041,
+      "text": "i can't help so this is what the reverse will be"
+    },
+    {
+      "start": 49.76,
+      "duration": 4.88,
+      "text": "generically if i ask you to do this using for loop how will you do"
+    },
+    {
+      "start": 53.52,
+      "duration": 5.519,
+      "text": "this okay very simple"
+    },
+    {
+      "start": 57.199,
+      "duration": 6.881,
+      "text": "keep a point over here which is the zeroth index you keep a point over here"
+    },
+    {
+      "start": 61.359,
+      "duration": 7.281,
+      "text": "which is uh one two three fourth index n minus one at index and you basically say"
+    },
+    {
+      "start": 66.32,
+      "duration": 2.32,
+      "text": "swap"
+    },
+    {
+      "start": 69.76,
+      "duration": 7.52,
+      "text": "and right after that you move this point ahead and you move this pointer back"
+    },
+    {
+      "start": 75.119,
+      "duration": 5.761,
+      "text": "and again you say swap so it's like this this is what you do"
+    },
+    {
+      "start": 79.84,
+      "duration": 4.56,
+      "text": "correct and uh at the next moment you again say"
+    },
+    {
+      "start": 83.119,
+      "duration": 6.401,
+      "text": "move ahead and if they are they are at the moment"
+    },
+    {
+      "start": 86.72,
+      "duration": 8.0,
+      "text": "at the same guy and you can say that the left and right half have been swapped"
+    },
+    {
+      "start": 91.92,
+      "duration": 7.36,
+      "text": "hence the array has been reversed so this is how you would have done"
+    },
+    {
+      "start": 97.2,
+      "duration": 7.04,
+      "text": "normally or if you are writing a for loop or while loop so can i implement"
+    },
+    {
+      "start": 101.68,
+      "duration": 8.0,
+      "text": "the same concept i think we can we can definitely implement the same concept so"
+    },
+    {
+      "start": 106.56,
+      "duration": 9.36,
+      "text": "assuming uh that this is the array given and uh"
+    },
+    {
+      "start": 112.0,
+      "duration": 7.439,
+      "text": "i is this one right i is this one so there can be a couple of ways to do this"
+    },
+    {
+      "start": 117.52,
+      "duration": 6.4,
+      "text": "one is i say i'm gonna do recursion using two pointers so let's uh first"
+    },
+    {
+      "start": 121.6,
+      "duration": 5.44,
+      "text": "learn to do recursion using two pointers so i'll be like okay let's keep a"
+    },
+    {
+      "start": 125.439,
+      "duration": 5.281,
+      "text": "pointer here l let's keep a point at r so i swap l and"
+    },
+    {
+      "start": 129.92,
+      "duration": 5.679,
+      "text": "r and that's my recursions task my"
+    },
+    {
+      "start": 132.959,
+      "duration": 6.081,
+      "text": "recursion task will be to swap and then again call the recursion to"
+    },
+    {
+      "start": 137.36,
+      "duration": 6.32,
+      "text": "swap the next index apparently the next index should have"
+    },
+    {
+      "start": 140.319,
+      "duration": 8.961,
+      "text": "been this so if you logically think it's swap and call the next l"
+    },
+    {
+      "start": 146.959,
+      "duration": 6.241,
+      "text": "and the before r right so if you're gonna think in that direction i think"
+    },
+    {
+      "start": 150.56,
+      "duration": 7.12,
+      "text": "you can write recursion until how long l r l r l r the moment across or the"
+    },
+    {
+      "start": 156.239,
+      "duration": 4.72,
+      "text": "overlap you're gonna stop you're gonna say no more"
+    },
+    {
+      "start": 159.2,
+      "duration": 8.08,
+      "text": "need to swap so probably i can think of recursion over"
+    },
+    {
+      "start": 162.64,
+      "duration": 4.64,
+      "text": "here i'm like okay f of l comma r"
+    },
+    {
+      "start": 167.44,
+      "duration": 7.28,
+      "text": "i know my recursions task is to swap so the recursion task is to swap"
+    },
+    {
+      "start": 173.2,
+      "duration": 6.319,
+      "text": "array of l and array of r"
+    },
+    {
+      "start": 176.8,
+      "duration": 7.04,
+      "text": "so they will definitely swap it once the recursion has swapped"
+    },
+    {
+      "start": 182.08,
+      "duration": 7.84,
+      "text": "i know i'm again gonna call the recursion to swap the next elements"
+    },
+    {
+      "start": 186.4,
+      "duration": 6.64,
+      "text": "which is l plus one and r minus one makes sense because"
+    },
+    {
+      "start": 191.28,
+      "duration": 6.56,
+      "text": "i i'll say recursion go and swap the next"
+    },
+    {
+      "start": 195.36,
+      "duration": 8.799,
+      "text": "set of guys which is l plus 1 and r minus 1 but till how long can i say the"
+    },
+    {
+      "start": 201.519,
+      "duration": 4.8,
+      "text": "limiting case and recursion will be if l"
+    },
+    {
+      "start": 205.44,
+      "duration": 5.92,
+      "text": "goes or beyond r or equal to there's no need"
+    },
+    {
+      "start": 209.28,
+      "duration": 6.239,
+      "text": "to swap and i can return and i think this"
+    },
+    {
+      "start": 212.72,
+      "duration": 7.04,
+      "text": "is pretty much going to be my recursion"
+    },
+    {
+      "start": 216.72,
+      "duration": 6.4,
+      "text": "i hope that makes sense so in order to understand this uh we can definitely"
+    },
+    {
+      "start": 221.68,
+      "duration": 4.96,
+      "text": "take a main and assuming you have an array"
+    },
+    {
+      "start": 225.36,
+      "duration": 6.08,
+      "text": "you can take the input of the array by yourself and you can say f of 0 that's"
+    },
+    {
+      "start": 229.519,
+      "duration": 7.841,
+      "text": "the first index and the last index will be n minus 1 which is definitely the"
+    },
+    {
+      "start": 234.4,
+      "duration": 7.52,
+      "text": "last index correct now assuming uh this is the array given let's assume we take"
+    },
+    {
+      "start": 239.76,
+      "duration": 4.479,
+      "text": "a very simple array"
+    },
+    {
+      "start": 242.959,
+      "duration": 5.36,
+      "text": "one three two three"
+    },
+    {
+      "start": 245.76,
+      "duration": 5.039,
+      "text": "not two three then the problem five four okay let's see this"
+    },
+    {
+      "start": 249.76,
+      "duration": 5.039,
+      "text": "and uh first time this is zero which is going"
+    },
+    {
+      "start": 253.36,
+      "duration": 7.119,
+      "text": "to call this guy so l is 0 l is over here"
+    },
+    {
+      "start": 257.68,
+      "duration": 8.72,
+      "text": "r is n minus 1 which is this guy which is definitely 0 1 2 3 4th index so"
+    },
+    {
+      "start": 264.32,
+      "duration": 5.92,
+      "text": "this is what we do this line is not executed"
+    },
+    {
+      "start": 267.84,
+      "duration": 8.0,
+      "text": "this line of swap is executed thereby saying swap a of l and a of r so"
+    },
+    {
+      "start": 273.28,
+      "duration": 7.76,
+      "text": "this guy will be swapped four and one next i'm saying f of something which is"
+    },
+    {
+      "start": 278.4,
+      "duration": 8.64,
+      "text": "f of one comma three and again the f will not be executed the"
+    },
+    {
+      "start": 284.0,
+      "duration": 6.08,
+      "text": "swap will be executed so l will go here and r will go here this time so they"
+    },
+    {
+      "start": 288.96,
+      "duration": 4.959,
+      "text": "will swap five and three"
+    },
+    {
+      "start": 291.44,
+      "duration": 6.56,
+      "text": "correct next i'll call f of l which is two"
+    },
+    {
+      "start": 294.84,
+      "duration": 6.84,
+      "text": "comma 2 and thereby when this function goes"
+    },
+    {
+      "start": 299.199,
+      "duration": 5.681,
+      "text": "it's like f of 2 comma 2 if states"
+    },
+    {
+      "start": 303.12,
+      "duration": 7.84,
+      "text": "is this greater than equal to 2 greater than equal to 2 yes"
+    },
+    {
+      "start": 307.039,
+      "duration": 8.801,
+      "text": "return no more swap returned this guy said returned"
+    },
+    {
+      "start": 313.039,
+      "duration": 9.521,
+      "text": "this guy said return so ultimately our entire array was indeed reversed now i i"
+    },
+    {
+      "start": 320.96,
+      "duration": 8.16,
+      "text": "easily did this using couple of variables l and r right but can we do"
+    },
+    {
+      "start": 326.24,
+      "duration": 8.0,
+      "text": "this using a single variable that's my very very straightforward question do"
+    },
+    {
+      "start": 330.639,
+      "duration": 10.481,
+      "text": "you can you do this using a very single pointer yes we can let's understand how"
+    },
+    {
+      "start": 337.6,
+      "duration": 3.52,
+      "text": "so if i again write the same array"
+    },
+    {
+      "start": 344.08,
+      "duration": 6.88,
+      "text": "and if i say this is the ith pointer which is 0 1 2 3 4"
+    },
+    {
+      "start": 348.8,
+      "duration": 6.399,
+      "text": "and i say n is equal to 5 for this eye"
+    },
+    {
+      "start": 352.88,
+      "duration": 7.36,
+      "text": "this guy is the this index is what you'll swap it"
+    },
+    {
+      "start": 357.36,
+      "duration": 6.559,
+      "text": "for this eye this index is what you will swap that with for this eye there's no"
+    },
+    {
+      "start": 362.88,
+      "duration": 6.0,
+      "text": "more so something that i can observe is"
+    },
+    {
+      "start": 366.96,
+      "duration": 6.64,
+      "text": "if this is i for this for this guy the corresponding"
+    },
+    {
+      "start": 372.4,
+      "duration": 6.639,
+      "text": "will be this and that's nothing but"
+    },
+    {
+      "start": 375.28,
+      "duration": 7.6,
+      "text": "n minus i minus 1 you can try doing this 5 is n"
+    },
+    {
+      "start": 380.56,
+      "duration": 6.16,
+      "text": "i is 0 minus 1 is 4"
+    },
+    {
+      "start": 384.96,
+      "duration": 7.04,
+      "text": "again you can try doing n minus i minus 1 over here which gives me 5 minus"
+    },
+    {
+      "start": 390.16,
+      "duration": 7.36,
+      "text": "i over here is 1 minus 1 which makes it three so"
+    },
+    {
+      "start": 395.28,
+      "duration": 6.72,
+      "text": "you can easily swap one and three you can easily have four and uh zero so i"
+    },
+    {
+      "start": 400.319,
+      "duration": 7.121,
+      "text": "can say instead of carrying couple of pointers you can always do i comma"
+    },
+    {
+      "start": 405.12,
+      "duration": 7.44,
+      "text": "n minus i minus one as simple as it can get"
+    },
+    {
+      "start": 409.919,
+      "duration": 6.961,
+      "text": "now question arises till how low if you carefully observe this"
+    },
+    {
+      "start": 415.44,
+      "duration": 6.08,
+      "text": "is 2 n was 5"
+    },
+    {
+      "start": 418.4,
+      "duration": 7.04,
+      "text": "so i can say at any moment i crosses"
+    },
+    {
+      "start": 424.08,
+      "duration": 3.76,
+      "text": "n by two because"
+    },
+    {
+      "start": 426.56,
+      "duration": 4.56,
+      "text": "whenever you're crossing the middle there's no need to swap before that you"
+    },
+    {
+      "start": 429.599,
+      "duration": 5.201,
+      "text": "can just keep on swapping the left and the right guys"
+    },
+    {
+      "start": 432.24,
+      "duration": 5.92,
+      "text": "so i can again write these in this way that okay f of"
+    },
+    {
+      "start": 436.96,
+      "duration": 5.519,
+      "text": "uh f of something as"
+    },
+    {
+      "start": 440.24,
+      "duration": 2.239,
+      "text": "i"
+    },
+    {
+      "start": 442.639,
+      "duration": 6.96,
+      "text": "and i can say if i crosses n by two"
+    },
+    {
+      "start": 447.12,
+      "duration": 7.84,
+      "text": "then i can definitely return or else i can say uh can you please swap"
+    },
+    {
+      "start": 453.12,
+      "duration": 7.199,
+      "text": "a of i a of n minus i minus 1"
+    },
+    {
+      "start": 458.479,
+      "duration": 5.921,
+      "text": "correct and once you've swapped"
+    },
+    {
+      "start": 462.479,
+      "duration": 6.081,
+      "text": "you can say f of i plus one can you please swap the next guy"
+    },
+    {
+      "start": 466.479,
+      "duration": 5.84,
+      "text": "and over here on the main you can simply call"
+    },
+    {
+      "start": 470.72,
+      "duration": 8.24,
+      "text": "the like if you can simply take the array and you can simply call f of"
+    },
+    {
+      "start": 475.52,
+      "duration": 6.239,
+      "text": "zero so basically our first call will be made to f of"
+    },
+    {
+      "start": 482.479,
+      "duration": 4.881,
+      "text": "f of 0 straps a of"
+    },
+    {
+      "start": 486.24,
+      "duration": 3.76,
+      "text": "0 a of 4"
+    },
+    {
+      "start": 488.879,
+      "duration": 3.521,
+      "text": "calls f of"
+    },
+    {
+      "start": 491.36,
+      "duration": 3.44,
+      "text": "1 swaps"
+    },
+    {
+      "start": 493.84,
+      "duration": 5.6,
+      "text": "a of 1 a of 3"
+    },
+    {
+      "start": 497.759,
+      "duration": 5.44,
+      "text": "calls f of 2"
+    },
+    {
+      "start": 500.4,
+      "duration": 6.16,
+      "text": "the moment f of 2 is called if"
+    },
+    {
+      "start": 504.16,
+      "duration": 5.36,
+      "text": "2 greater than equal to n by 2 which is 5 by 2 true"
+    },
+    {
+      "start": 508.479,
+      "duration": 4.8,
+      "text": "return returns"
+    },
+    {
+      "start": 511.599,
+      "duration": 6.8,
+      "text": "returns and returns but ideally"
+    },
+    {
+      "start": 516.159,
+      "duration": 7.36,
+      "text": "these couple of lines the swap happens"
+    },
+    {
+      "start": 520.56,
+      "duration": 5.839,
+      "text": "right thereby your entire array will be swapped"
+    },
+    {
+      "start": 524.8,
+      "duration": 5.2,
+      "text": "correct so in case if you just want to check this"
+    },
+    {
+      "start": 528.0,
+      "duration": 4.959,
+      "text": "out you can just take into n and then you can take c enough n then you can"
+    },
+    {
+      "start": 531.44,
+      "duration": 5.04,
+      "text": "probably take the array as well so easy enough"
+    },
+    {
+      "start": 545.36,
+      "duration": 5.76,
+      "text": "so you can say function of zero you can pass on the array and"
+    },
+    {
+      "start": 549.04,
+      "duration": 6.239,
+      "text": "pass on the end they will do their job and you can write void f"
+    },
+    {
+      "start": 553.12,
+      "duration": 6.48,
+      "text": "and you can write the index and in order to carry the array you can take it and"
+    },
+    {
+      "start": 557.44,
+      "duration": 6.48,
+      "text": "you can say int n and you'll be like okay at any moment i crosses n by 2"
+    },
+    {
+      "start": 562.56,
+      "duration": 4.88,
+      "text": "there's no need to do anything you can return"
+    },
+    {
+      "start": 565.36,
+      "duration": 6.72,
+      "text": "or else you can simply swap array of i"
+    },
+    {
+      "start": 568.88,
+      "duration": 9.04,
+      "text": "comma array of n minus i minus 1 once you've done this you can"
+    },
+    {
+      "start": 574.959,
+      "duration": 6.88,
+      "text": "say f of i plus one comma array comma n so these are the extra parameters that"
+    },
+    {
+      "start": 579.68,
+      "duration": 5.36,
+      "text": "you will carry nothing special just the extra parameters that you will carry and"
+    },
+    {
+      "start": 583.519,
+      "duration": 7.201,
+      "text": "once you have done this you can definitely uh print the array which is"
+    },
+    {
+      "start": 587.36,
+      "duration": 7.44,
+      "text": "something like for int i equal to zero i lesser than n i plus plus and you can"
+    },
+    {
+      "start": 592.8,
+      "duration": 6.4,
+      "text": "do in c out of array of i remember arrays are passed using reference so"
+    },
+    {
+      "start": 597.2,
+      "duration": 5.92,
+      "text": "that's okay so we give one"
+    },
+    {
+      "start": 601.04,
+      "duration": 5.039,
+      "text": "two three four five and if i just run this"
+    },
+    {
+      "start": 604.399,
+      "duration": 5.68,
+      "text": "you'll see this running it's automatically swapped did you see this"
+    },
+    {
+      "start": 608.079,
+      "duration": 6.641,
+      "text": "so this is how the swap function works so i hope you have"
+    },
+    {
+      "start": 612.399,
+      "duration": 7.761,
+      "text": "understood again avoid function avoid function which a recollection which does"
+    },
+    {
+      "start": 616.8,
+      "duration": 8.88,
+      "text": "it task and calls the next index uh to do the next task so it's uh so in"
+    },
+    {
+      "start": 623.2,
+      "duration": 6.72,
+      "text": "recursion it's very specific to identify which task does the recursion need to do"
+    },
+    {
+      "start": 627.76,
+      "duration": 6.079,
+      "text": "like over here the recursion has to do a task of swapping all right you need to"
+    },
+    {
+      "start": 632.16,
+      "duration": 4.88,
+      "text": "you need to understand that if you've understood this"
+    },
+    {
+      "start": 635.04,
+      "duration": 6.239,
+      "text": "precaution is very straightforward okay uh let's do the next one"
+    },
+    {
+      "start": 638.88,
+      "duration": 6.959,
+      "text": "the next one is very simple uh check if a given string"
+    },
+    {
+      "start": 643.839,
+      "duration": 6.401,
+      "text": "is palindrome or not again we have to write a functional code over here"
+    },
+    {
+      "start": 648.079,
+      "duration": 6.081,
+      "text": "basically uh we will be giving the string"
+    },
+    {
+      "start": 651.36,
+      "duration": 6.08,
+      "text": "and the string itself like the function we will be giving the string to a"
+    },
+    {
+      "start": 655.519,
+      "duration": 5.121,
+      "text": "function and the function is going to tell us"
+    },
+    {
+      "start": 658.48,
+      "duration": 6.24,
+      "text": "true or false if the string is palindrome the function is going to say"
+    },
+    {
+      "start": 662.399,
+      "duration": 7.12,
+      "text": "true it's a palindrome if the string is not a palindrome the function is going"
+    },
+    {
+      "start": 666.16,
+      "duration": 7.2,
+      "text": "to say false this is not a palindrome okay so you have to write a functional"
+    },
+    {
+      "start": 671.36,
+      "duration": 6.96,
+      "text": "kind of thing so for an example let's understand what is the palindrome so the"
+    },
+    {
+      "start": 675.279,
+      "duration": 6.881,
+      "text": "definition of a palindrome is a string on reversal"
+    },
+    {
+      "start": 679.92,
+      "duration": 7.68,
+      "text": "reads the same a string on reversal reads the same that"
+    },
+    {
+      "start": 685.2,
+      "duration": 8.48,
+      "text": "is what we call as a palindrome for an example if i write madden"
+    },
+    {
+      "start": 691.04,
+      "duration": 8.16,
+      "text": "if this is the string even if you reverse it even if you apply"
+    },
+    {
+      "start": 696.32,
+      "duration": 6.639,
+      "text": "a reverse function on it like m then a"
+    },
+    {
+      "start": 700.64,
+      "duration": 2.319,
+      "text": "then a"
+    },
+    {
+      "start": 704.48,
+      "duration": 8.96,
+      "text": "you see madam still stays as madam for an example one one two double one even"
+    },
+    {
+      "start": 711.279,
+      "duration": 7.12,
+      "text": "if you do in reverse the string still stays one one two double one like in a"
+    },
+    {
+      "start": 715.92,
+      "duration": 10.32,
+      "text": "string so a palindrome is a string when on reverse still stays the exact same so"
+    },
+    {
+      "start": 723.44,
+      "duration": 6.079,
+      "text": "how do you write this so we can think that okay it's pretty much"
+    },
+    {
+      "start": 728.0,
+      "duration": 6.0,
+      "text": "similar to reverse where because because white is similar"
+    },
+    {
+      "start": 732.48,
+      "duration": 4.799,
+      "text": "to reverse because m a d a"
+    },
+    {
+      "start": 736.48,
+      "duration": 5.599,
+      "text": "m we know one thing"
+    },
+    {
+      "start": 739.519,
+      "duration": 7.12,
+      "text": "if on reversing it is the same we know how are we reversing we were"
+    },
+    {
+      "start": 744.56,
+      "duration": 7.04,
+      "text": "reversing something like this this guy with this guy right then this guy with"
+    },
+    {
+      "start": 749.44,
+      "duration": 8.48,
+      "text": "this guy correct so basically the left half and the right half were strapped"
+    },
+    {
+      "start": 754.079,
+      "duration": 8.801,
+      "text": "so if after reversing they are covered if after reversing they are correct the"
+    },
+    {
+      "start": 760.24,
+      "duration": 7.12,
+      "text": "left half and the right half has to be identical that means this m"
+    },
+    {
+      "start": 765.279,
+      "duration": 6.8,
+      "text": "this m has to be same this a this a has to be same and this d"
+    },
+    {
+      "start": 770.72,
+      "duration": 6.559,
+      "text": "is definitely the middle one there's no need to check for it make sense because"
+    },
+    {
+      "start": 774.48,
+      "duration": 6.0,
+      "text": "if reversal logic was that and if i say on reversing it is correct or like if i"
+    },
+    {
+      "start": 779.76,
+      "duration": 3.28,
+      "text": "say that is how you reverse"
+    },
+    {
+      "start": 781.92,
+      "duration": 5.44,
+      "text": "and if i say the definition of palindrome is after reversing is same so"
+    },
+    {
+      "start": 785.519,
+      "duration": 5.041,
+      "text": "thereby i can say uh the left half and the right half has to"
+    },
+    {
+      "start": 788.72,
+      "duration": 6.559,
+      "text": "be same makes sense so how do you uh how do you check for it"
+    },
+    {
+      "start": 793.44,
+      "duration": 5.76,
+      "text": "again you need to write a functional one remember this you need to write a"
+    },
+    {
+      "start": 796.32,
+      "duration": 6.8,
+      "text": "functional one so can i say can i say i'll write a function"
+    },
+    {
+      "start": 801.2,
+      "duration": 5.84,
+      "text": "because it has to be a function so instead of swapping i say are they"
+    },
+    {
+      "start": 805.92,
+      "duration": 5.599,
+      "text": "equal if they are equal it's fine let's do the"
+    },
+    {
+      "start": 808.88,
+      "duration": 6.32,
+      "text": "next check or else tell them that it's not a palindrome"
+    },
+    {
+      "start": 813.44,
+      "duration": 5.12,
+      "text": "because they're not equal make sense because instead of swapping i can just"
+    },
+    {
+      "start": 816.8,
+      "duration": 6.32,
+      "text": "do a check okay so f of i"
+    },
+    {
+      "start": 820.8,
+      "duration": 8.0,
+      "text": "and while reversing we know how to do that using single point"
+    },
+    {
+      "start": 824.8,
+      "duration": 8.96,
+      "text": "we say if i is greater than n by two let's come to this case afterwards"
+    },
+    {
+      "start": 830.72,
+      "duration": 8.32,
+      "text": "let's come to this case afterwards so we can be like instead of swapping"
+    },
+    {
+      "start": 836.399,
+      "duration": 7.401,
+      "text": "why don't you check if s of i is not equal to s of"
+    },
+    {
+      "start": 844.399,
+      "duration": 4.481,
+      "text": "n minus i minus 1 okay"
+    },
+    {
+      "start": 847.519,
+      "duration": 5.281,
+      "text": "so if they're not equal"
+    },
+    {
+      "start": 850.639,
+      "duration": 5.121,
+      "text": "i can say return a true so return of false"
+    },
+    {
+      "start": 854.56,
+      "duration": 6.079,
+      "text": "but if they are equal if these two guys"
+    },
+    {
+      "start": 859.44,
+      "duration": 4.56,
+      "text": "are equal then i'll be like okay"
+    },
+    {
+      "start": 862.399,
+      "duration": 4.641,
+      "text": "please check for i plus 1"
+    },
+    {
+      "start": 865.519,
+      "duration": 6.401,
+      "text": "please go and check for the upcoming indexes"
+    },
+    {
+      "start": 869.04,
+      "duration": 8.08,
+      "text": "and whatever that guy says if it says me yes i'm fine if it saves me no i'm fine"
+    },
+    {
+      "start": 875.04,
+      "duration": 6.56,
+      "text": "and i'll put a return on here whatever this guy says i'm going to return that"
+    },
+    {
+      "start": 879.839,
+      "duration": 5.281,
+      "text": "but till how long if"
+    },
+    {
+      "start": 883.12,
+      "duration": 6.079,
+      "text": "this particular guy is being checked again and again and"
+    },
+    {
+      "start": 887.04,
+      "duration": 7.52,
+      "text": "again and reaches the end thereby this line"
+    },
+    {
+      "start": 891.12,
+      "duration": 7.2,
+      "text": "is never executed right so i can say if if"
+    },
+    {
+      "start": 895.44,
+      "duration": 9.04,
+      "text": "i reaches at any moment n by 2 i can return yes i can return are true"
+    },
+    {
+      "start": 902.32,
+      "duration": 4.72,
+      "text": "make sense let's understand from adam and then we'll take another"
+    },
+    {
+      "start": 905.6,
+      "duration": 6.16,
+      "text": "non-palindromic string and try to understand that as well"
+    },
+    {
+      "start": 910.079,
+      "duration": 5.76,
+      "text": "let's see madam so this is the index zero"
+    },
+    {
+      "start": 913.44,
+      "duration": 7.68,
+      "text": "so you know how the main will call the main will definitely call it as f of"
+    },
+    {
+      "start": 918.72,
+      "duration": 6.16,
+      "text": "zero please uh like whatever f of zero says"
+    },
+    {
+      "start": 922.56,
+      "duration": 8.48,
+      "text": "please please do me that so first time uh definitely f of zero goes"
+    },
+    {
+      "start": 927.92,
+      "duration": 6.64,
+      "text": "first time f of the zero call goes zero"
+    },
+    {
+      "start": 932.8,
+      "duration": 7.68,
+      "text": "and the last index four are they equal yes they're equal so can"
+    },
+    {
+      "start": 936.8,
+      "duration": 7.039,
+      "text": "you please call for f of one"
+    },
+    {
+      "start": 941.6,
+      "duration": 7.28,
+      "text": "again uh the if first base case is not executed"
+    },
+    {
+      "start": 946.639,
+      "duration": 5.841,
+      "text": "if s of one is not equal to s of three"
+    },
+    {
+      "start": 951.199,
+      "duration": 4.961,
+      "text": "which is again not the case they're equal"
+    },
+    {
+      "start": 953.279,
+      "duration": 6.961,
+      "text": "so again i'm saying return f of 2 so the moment i call f of 2"
+    },
+    {
+      "start": 958.8,
+      "duration": 4.959,
+      "text": "it says 2 greater than equal to 5 by 2 which is"
+    },
+    {
+      "start": 962.72,
+      "duration": 5.6,
+      "text": "true and i'm saying return"
+    },
+    {
+      "start": 965.44,
+      "duration": 7.28,
+      "text": "are true so this guy returns a true so this becomes true so return a true"
+    },
+    {
+      "start": 972.8,
+      "duration": 6.8,
+      "text": "true this becomes true return it true so this guy says"
+    },
+    {
+      "start": 977.36,
+      "duration": 7.279,
+      "text": "allendro yes this guy says palindrome right"
+    },
+    {
+      "start": 981.36,
+      "duration": 9.68,
+      "text": "so madam works fine let's uh let's try to take another"
+    },
+    {
+      "start": 987.12,
+      "duration": 8.56,
+      "text": "example uh something like m a d mad some"
+    },
+    {
+      "start": 993.199,
+      "duration": 6.401,
+      "text": "match up so this is not a palette why because this guy"
+    },
+    {
+      "start": 997.519,
+      "duration": 5.12,
+      "text": "and this guy are not equal because on reversing they will not be equal so"
+    },
+    {
+      "start": 1000.959,
+      "duration": 7.12,
+      "text": "let's see how this works so at the first time f of 0 comes again"
+    },
+    {
+      "start": 1006.32,
+      "duration": 5.439,
+      "text": "s of 0 s of 4 equal so not equal doesn't works"
+    },
+    {
+      "start": 1010.639,
+      "duration": 6.0,
+      "text": "return calls f one"
+    },
+    {
+      "start": 1014.639,
+      "duration": 5.2,
+      "text": "f s f one this one"
+    },
+    {
+      "start": 1017.759,
+      "duration": 7.761,
+      "text": "not equal to s of three this one not equal"
+    },
+    {
+      "start": 1022.839,
+      "duration": 7.801,
+      "text": "return false this guy returns a false"
+    },
+    {
+      "start": 1028.079,
+      "duration": 7.201,
+      "text": "thereby this guy says false returns or false so you did not go and check the"
+    },
+    {
+      "start": 1033.36,
+      "duration": 6.4,
+      "text": "entire one if you would have checked every index every index was coming out"
+    },
+    {
+      "start": 1037.76,
+      "duration": 5.84,
+      "text": "as true it would have reached this particular base case it would have"
+    },
+    {
+      "start": 1041.6,
+      "duration": 6.959,
+      "text": "returned it true but it did not there was a case where the false was executed"
+    },
+    {
+      "start": 1045.76,
+      "duration": 8.56,
+      "text": "so it did not move ahead this is how you can write a functional"
+    },
+    {
+      "start": 1050.799,
+      "duration": 7.201,
+      "text": "check for checking a palindrome correct so again uh if i just"
+    },
+    {
+      "start": 1057.2,
+      "duration": 6.0,
+      "text": "uh write this let's quickly write this"
+    },
+    {
+      "start": 1060.4,
+      "duration": 6.639,
+      "text": "string s is equal to mod okay"
+    },
+    {
+      "start": 1064.16,
+      "duration": 5.68,
+      "text": "let's write c out of f of s f of i"
+    },
+    {
+      "start": 1068.16,
+      "duration": 3.84,
+      "text": "zero commas rather so"
+    },
+    {
+      "start": 1070.559,
+      "duration": 5.681,
+      "text": "like i'll write a boolean function definitely boolean function"
+    },
+    {
+      "start": 1073.84,
+      "duration": 8.24,
+      "text": "into index string just uh you can take it using reference"
+    },
+    {
+      "start": 1078.799,
+      "duration": 3.281,
+      "text": "and you can say if"
+    },
+    {
+      "start": 1082.64,
+      "duration": 5.44,
+      "text": "i is greater than equal to s dot size which is the length"
+    },
+    {
+      "start": 1086.64,
+      "duration": 6.72,
+      "text": "you can return a true all the checks have been done"
+    },
+    {
+      "start": 1089.28,
+      "duration": 8.24,
+      "text": "if s of i is not equal to s of n s dot size"
+    },
+    {
+      "start": 1094.88,
+      "duration": 6.4,
+      "text": "minus i minus 1 you can return a false"
+    },
+    {
+      "start": 1100.32,
+      "duration": 4.4,
+      "text": "correct or else"
+    },
+    {
+      "start": 1102.799,
+      "duration": 6.081,
+      "text": "you can be right okay can you please go and check the"
+    },
+    {
+      "start": 1106.72,
+      "duration": 5.12,
+      "text": "next one and you can return that so if i just write this you'll see this coming"
+    },
+    {
+      "start": 1110.48,
+      "duration": 5.28,
+      "text": "out as true you see coming out as one because true"
+    },
+    {
+      "start": 1113.76,
+      "duration": 6.64,
+      "text": "is one but the moment i change this m and dsm is coming out as zero see"
+    },
+    {
+      "start": 1119.2,
+      "duration": 3.76,
+      "text": "got this so this is how you can easily write a"
+    },
+    {
+      "start": 1122.0,
+      "duration": 4.799,
+      "text": "function so i hope you have understood how to"
+    },
+    {
+      "start": 1124.72,
+      "duration": 6.319,
+      "text": "write a void recursive function how to write a functional recursive function"
+    },
+    {
+      "start": 1128.799,
+      "duration": 6.801,
+      "text": "that is what is very important going forward so i hope you have understood"
+    },
+    {
+      "start": 1134.16,
+      "duration": 5.68,
+      "text": "everything in this video what about the time complexity how much indexes are you"
+    },
+    {
+      "start": 1138.16,
+      "duration": 6.32,
+      "text": "iterating for half because you're just going till the half"
+    },
+    {
+      "start": 1141.36,
+      "duration": 6.8,
+      "text": "length the time complexity is n by two because you're going to only the half"
+    },
+    {
+      "start": 1146.32,
+      "duration": 6.239,
+      "text": "you're going only till the half right and the space complexity will also be"
+    },
+    {
+      "start": 1150.64,
+      "duration": 5.52,
+      "text": "auxiliary stack space nothing like significant like"
+    },
+    {
+      "start": 1154.24,
+      "duration": 6.0,
+      "text": "no containers as use internal stack space is n by two because half of the"
+    },
+    {
+      "start": 1158.16,
+      "duration": 6.08,
+      "text": "recursion calls will be waiting if it's a palindrome correct so that's how the"
+    },
+    {
+      "start": 1162.64,
+      "duration": 4.08,
+      "text": "time complexity in space complexity will be"
+    },
+    {
+      "start": 1165.039,
+      "duration": 5.76,
+      "text": "and i hope you have understood the entire concept everything so just in"
+    },
+    {
+      "start": 1169.12,
+      "duration": 4.88,
+      "text": "case you did please please please make sure you like this video and if you're"
+    },
+    {
+      "start": 1172.48,
+      "duration": 5.76,
+      "text": "new to this channel please please please do consider subscribing and yeah with"
+    },
+    {
+      "start": 1176.08,
+      "duration": 7.15,
+      "text": "this let's wrap up this video bye take it"
+    },
+    {
+      "start": 1178.88,
+      "duration": 9.989,
+      "text": "whenever your heart is broken [Music]"
+    }
+  ]
+}

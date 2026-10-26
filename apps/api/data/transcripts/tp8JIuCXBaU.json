@@ -1,0 +1,1542 @@
+{
+  "video_id": "tp8JIuCXBaU",
+  "title": "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal",
+  "total_segments": 307,
+  "segments": [
+    {
+      "start": 2.94,
+      "duration": 4.8,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.18,
+      "duration": 4.919,
+      "text": "so this is another video from the stripers A to Z DSA course just in case"
+    },
+    {
+      "start": 9.84,
+      "duration": 5.4,
+      "text": "you're for the first time here this is world's most in-depth course in Dia"
+    },
+    {
+      "start": 12.719,
+      "duration": 7.801,
+      "text": "sangu why do I say that because we are covering 456 modules by the end of the"
+    },
+    {
+      "start": 18.359,
+      "duration": 5.641,
+      "text": "course you would have solved 400 plus problems in DS algo you can go over the"
+    },
+    {
+      "start": 22.56,
+      "duration": 5.76,
+      "text": "entire internet you can buy any of the paid courses none of them will be"
+    },
+    {
+      "start": 25.68,
+      "duration": 6.36,
+      "text": "teaching UDS I'll go in such depth one thing that I can give you as a guarantee"
+    },
+    {
+      "start": 30.24,
+      "duration": 5.999,
+      "text": "from my end is if you complete this course you can actually clear any of the"
+    },
+    {
+      "start": 33.96,
+      "duration": 6.66,
+      "text": "DS algorithms in any of the companies in any part of the world so till the last"
+    },
+    {
+      "start": 38.7,
+      "duration": 7.5,
+      "text": "video we have covered uh the twosome problem in this video I will be covering"
+    },
+    {
+      "start": 42.6,
+      "duration": 8.04,
+      "text": "the problem sort an array of zeros ones and twos what does the problems take"
+    },
+    {
+      "start": 48.18,
+      "duration": 8.64,
+      "text": "you'll be given an array but the array only consists of 0 1 2."
+    },
+    {
+      "start": 53.7,
+      "duration": 7.8,
+      "text": "nothing else only these three integers 0 1 and 2 and your task is to sort it you"
+    },
+    {
+      "start": 60.059,
+      "duration": 5.521,
+      "text": "might be thinking it's an easy problem no it is not when you will hear about"
+    },
+    {
+      "start": 63.6,
+      "duration": 6.18,
+      "text": "the most optimal solution your mind will be like wow so"
+    },
+    {
+      "start": 68.22,
+      "duration": 4.8,
+      "text": "what's the first solution that you'll give to the interview that's definitely"
+    },
+    {
+      "start": 71.34,
+      "duration": 6.36,
+      "text": "the Brute Force solution and we know what is that that is to use any of the"
+    },
+    {
+      "start": 75.479,
+      "duration": 6.841,
+      "text": "Sorting algorithms if we end up using merge sort it will take a Time"
+    },
+    {
+      "start": 79.5,
+      "duration": 7.32,
+      "text": "complexity of n login and it will take a space complexity of bigo open which is"
+    },
+    {
+      "start": 85.14,
+      "duration": 4.86,
+      "text": "the temporary array that we use during the birth chart if you do not the most"
+    },
+    {
+      "start": 88.56,
+      "duration": 5.52,
+      "text": "shot I've already made a video on that you can go back and watch it obviously"
+    },
+    {
+      "start": 91.979,
+      "duration": 6.061,
+      "text": "the interview will not be happy with n Log In Time complexity and the extra"
+    },
+    {
+      "start": 95.939,
+      "duration": 5.881,
+      "text": "space that you're using so I'll ask you to optimize it that's when you'll be"
+    },
+    {
+      "start": 99.84,
+      "duration": 5.88,
+      "text": "telling the better solution now what is the better solution that comes up now"
+    },
+    {
+      "start": 103.38,
+      "duration": 8.099,
+      "text": "something I can say is Hey listen one thing I know for sure is the array"
+    },
+    {
+      "start": 108.36,
+      "duration": 9.24,
+      "text": "contains 0 1 and 2. so what I'll be doing is I will do a single iteration"
+    },
+    {
+      "start": 114.72,
+      "duration": 8.46,
+      "text": "and I'll keep three variables count zero count one and count two and in all of"
+    },
+    {
+      "start": 120.72,
+      "duration": 6.24,
+      "text": "the iterations so when I reach 0 it's a zero so I'll increase it by one then"
+    },
+    {
+      "start": 125.28,
+      "duration": 5.819,
+      "text": "when I reach one I'll increase this by one when I reach 2"
+    },
+    {
+      "start": 128.7,
+      "duration": 6.84,
+      "text": "I'll increase this by one when I reach 0 I'll increase this by 2 and eventually I"
+    },
+    {
+      "start": 133.319,
+      "duration": 6.661,
+      "text": "will keep on going and I'll reach the end of the array once I've reached the"
+    },
+    {
+      "start": 138.0,
+      "duration": 5.34,
+      "text": "end of the array the count 0 will be containing the number of zeros the count"
+    },
+    {
+      "start": 141.9,
+      "duration": 5.22,
+      "text": "one will be containing the number of ones and the count two will be"
+    },
+    {
+      "start": 144.9,
+      "duration": 6.78,
+      "text": "containing the number of twos in this case the count 0 will be five count one"
+    },
+    {
+      "start": 149.16,
+      "duration": 7.68,
+      "text": "will be four count two will be three so once you have done this what you can do"
+    },
+    {
+      "start": 153.48,
+      "duration": 7.92,
+      "text": "is very simply run a loop from 0 to 4 because we know the first five places"
+    },
+    {
+      "start": 158.76,
+      "duration": 7.5,
+      "text": "will be occupied by zero because if you are sorting an array of 0 1 and 2 the"
+    },
+    {
+      "start": 164.4,
+      "duration": 5.699,
+      "text": "first place will only have zeros the next place will only have once and the"
+    },
+    {
+      "start": 168.18,
+      "duration": 7.26,
+      "text": "next place will only have two so you will run a loop which runs five times"
+    },
+    {
+      "start": 171.9,
+      "duration": 7.8,
+      "text": "and you will just manually overwrite the first five values to zero then you'll"
+    },
+    {
+      "start": 177.42,
+      "duration": 7.02,
+      "text": "run a loop for four times and you will manually overwrite the next four"
+    },
+    {
+      "start": 182.22,
+      "duration": 7.2,
+      "text": "elements to one then you will run a loop for three times and you'll manually"
+    },
+    {
+      "start": 186.36,
+      "duration": 7.44,
+      "text": "overwrite the last three m comments as to once you have done this I can say"
+    },
+    {
+      "start": 191.64,
+      "duration": 7.019,
+      "text": "that the array is sorted according to zeros at first then once and then twos"
+    },
+    {
+      "start": 196.379,
+      "duration": 6.601,
+      "text": "so what I can say is the better solution will be running a loop in order to count"
+    },
+    {
+      "start": 200.879,
+      "duration": 6.601,
+      "text": "the zeros once at Do's that will be taking a big go of n time complexity"
+    },
+    {
+      "start": 205.26,
+      "duration": 6.96,
+      "text": "then we will be running a first Loop then a second Loop and the"
+    },
+    {
+      "start": 209.459,
+      "duration": 7.381,
+      "text": "third Loop which overall is actually bigger of n because the count of zero"
+    },
+    {
+      "start": 214.5,
+      "duration": 7.2,
+      "text": "plus count of one plus count of two is equal to n so overall I can say the time"
+    },
+    {
+      "start": 219.48,
+      "duration": 7.5,
+      "text": "complexity that I'll end up taking is n plus n 2 N am I using any extra space I"
+    },
+    {
+      "start": 225.239,
+      "duration": 6.301,
+      "text": "can say that no I'm not using any extra space we are just modifying the given"
+    },
+    {
+      "start": 229.2,
+      "duration": 6.24,
+      "text": "array which is the given task because we've been asked to sort an array so"
+    },
+    {
+      "start": 233.34,
+      "duration": 6.72,
+      "text": "we're modifying the given array so by the way this will go from 0 to count 0"
+    },
+    {
+      "start": 237.72,
+      "duration": 6.0,
+      "text": "in order to fill up the first count zero places once I filled up the first term"
+    },
+    {
+      "start": 241.92,
+      "duration": 6.06,
+      "text": "zero places the next place will start from count zero index and it will go"
+    },
+    {
+      "start": 245.76,
+      "duration": 6.36,
+      "text": "until Cal zero plus count one because till then you will fill up then the next"
+    },
+    {
+      "start": 250.319,
+      "duration": 5.521,
+      "text": "will start from count zero because these many have been filled up so it starts"
+    },
+    {
+      "start": 253.86,
+      "duration": 5.52,
+      "text": "from there and it goes until the end so that's how the better solution will be"
+    },
+    {
+      "start": 257.4,
+      "duration": 5.64,
+      "text": "looking like now the interview will be like hey you're taking B go off to n"
+    },
+    {
+      "start": 261.419,
+      "duration": 5.581,
+      "text": "which is two iterations I don't need two iterations can you further optimize this"
+    },
+    {
+      "start": 265.02,
+      "duration": 5.34,
+      "text": "this is when the most optimal solution will come in and this is going to blow"
+    },
+    {
+      "start": 268.68,
+      "duration": 6.66,
+      "text": "your mind off so let's talk about the most optimal solution and that will be"
+    },
+    {
+      "start": 272.22,
+      "duration": 7.68,
+      "text": "using the touch national flag algorithm now across all the lectures on YouTube"
+    },
+    {
+      "start": 277.38,
+      "duration": 6.36,
+      "text": "I've seen something very common people are just giving you the algorithm that"
+    },
+    {
+      "start": 281.58,
+      "duration": 5.76,
+      "text": "right and then the code no one is talking about the indication no one is"
+    },
+    {
+      "start": 285.24,
+      "duration": 5.7,
+      "text": "talking about the thought process so in this video I'll be focusing on the"
+    },
+    {
+      "start": 288.84,
+      "duration": 6.48,
+      "text": "thought process and the intuition behind the algorithm so make sure you watch the"
+    },
+    {
+      "start": 293.28,
+      "duration": 6.72,
+      "text": "video till the end because one thing I can assure you is you are going to take"
+    },
+    {
+      "start": 297.6,
+      "duration": 7.86,
+      "text": "away a lot of things when you end this particular video so the algorithm will"
+    },
+    {
+      "start": 302.94,
+      "duration": 10.199,
+      "text": "be using three pointers that is where the thought process starts low mid High"
+    },
+    {
+      "start": 309.32,
+      "duration": 9.64,
+      "text": "and the algorithm is revolving around three rules and the rules are very"
+    },
+    {
+      "start": 315.06,
+      "duration": 10.62,
+      "text": "simple it states everything from 0 to low minus 1 will be zeros everything"
+    },
+    {
+      "start": 322.74,
+      "duration": 10.04,
+      "text": "between 0 to low minus one not low low minus one will be zeros which is nothing"
+    },
+    {
+      "start": 328.8,
+      "duration": 9.679,
+      "text": "but the extreme left and then it states everything from low again very important"
+    },
+    {
+      "start": 335.46,
+      "duration": 15.84,
+      "text": "everything from low to make minus 1 minus 1 should be 1 then it"
+    },
+    {
+      "start": 344.88,
+      "duration": 12.72,
+      "text": "states High plus 1 plus 1 to n minus 1 should be 2. now this is something which"
+    },
+    {
+      "start": 353.52,
+      "duration": 9.239,
+      "text": "is Extreme right now these are the three rules"
+    },
+    {
+      "start": 358.68,
+      "duration": 8.94,
+      "text": "on which the algorithm is based now let me let me explain you all the three"
+    },
+    {
+      "start": 364.56,
+      "duration": 10.079,
+      "text": "rules in diagram imagine this is the zero pointer of the array"
+    },
+    {
+      "start": 370.62,
+      "duration": 8.1,
+      "text": "and imagine this is no minus 1. so these are the indexes hypothetical indexes so"
+    },
+    {
+      "start": 376.56,
+      "duration": 6.9,
+      "text": "they are filled with zeros that's what they are State then with the low index"
+    },
+    {
+      "start": 380.88,
+      "duration": 10.379,
+      "text": "which is the right next index after no minus 1. till the mid minus one index"
+    },
+    {
+      "start": 387.419,
+      "duration": 9.601,
+      "text": "everything is filled with one then right after mid minus one there's a mid index"
+    },
+    {
+      "start": 393.18,
+      "duration": 10.38,
+      "text": "under the high index everything is filled with random numbers in an"
+    },
+    {
+      "start": 400.56,
+      "duration": 10.02,
+      "text": "unsorted way in an unsorted way then right after high comes High plus 1"
+    },
+    {
+      "start": 407.039,
+      "duration": 10.621,
+      "text": "till n minus 1 everything over here is filled with twos such like two two so"
+    },
+    {
+      "start": 414.479,
+      "duration": 10.141,
+      "text": "again it's in hypothetical array where 0 to low minus 1 is zeros low to mid minus"
+    },
+    {
+      "start": 421.38,
+      "duration": 9.659,
+      "text": "1 is once mid to high is 0 1 2's and high plus 1 to n minus 1 is just twos"
+    },
+    {
+      "start": 427.919,
+      "duration": 8.28,
+      "text": "these are the three rules on which we will be using this three pointers to"
+    },
+    {
+      "start": 433.74,
+      "duration": 6.54,
+      "text": "sort the array so we've understood the three rules clearly now let's have some"
+    },
+    {
+      "start": 437.88,
+      "duration": 8.819,
+      "text": "observations can I say from this portion to this portion the array is sorted from"
+    },
+    {
+      "start": 444.36,
+      "duration": 8.58,
+      "text": "this portion to this portion the array is sorted if I can somehow manage to"
+    },
+    {
+      "start": 449.94,
+      "duration": 9.84,
+      "text": "sort this particular unsorted portion then my task will be easy so can I say"
+    },
+    {
+      "start": 456.68,
+      "duration": 8.2,
+      "text": "initially we are starting with an entire array so can I say the mid or rather"
+    },
+    {
+      "start": 463.02,
+      "duration": 7.38,
+      "text": "I'll take the n look can I say the mid will be pointing here and the high will"
+    },
+    {
+      "start": 466.86,
+      "duration": 7.8,
+      "text": "be here why because the entire array is unsoft because the entire array is"
+    },
+    {
+      "start": 472.139,
+      "duration": 8.041,
+      "text": "unsorted and that is what we were looking to sort the entire arrays and so"
+    },
+    {
+      "start": 477.18,
+      "duration": 9.54,
+      "text": "on and thereby I can say the low can be just put over here why because that's"
+    },
+    {
+      "start": 483.9,
+      "duration": 7.62,
+      "text": "the starting index and we know from 0 to low minus 1 everything is zero so that"
+    },
+    {
+      "start": 488.94,
+      "duration": 7.319,
+      "text": "is still valid still valid even if I put a low here because 0 to like 0 to low"
+    },
+    {
+      "start": 494.22,
+      "duration": 8.039,
+      "text": "minus 1 is nothing so this is still valid the main thing that we are looking"
+    },
+    {
+      "start": 498.539,
+      "duration": 8.821,
+      "text": "at is from mid to high everything should be containing 0 1 and 2 and everything"
+    },
+    {
+      "start": 504.539,
+      "duration": 8.461,
+      "text": "should be unsorted that is valid now our algorithm will work on a of mid you can"
+    },
+    {
+      "start": 510.18,
+      "duration": 8.34,
+      "text": "also make it work on a of I that is okay but I'll try to tell you in terms of a"
+    },
+    {
+      "start": 516.36,
+      "duration": 6.96,
+      "text": "of mid if I tell you in terms of a of mid you can actually write it in terms"
+    },
+    {
+      "start": 520.5,
+      "duration": 7.98,
+      "text": "of a of high as well so I'll try to tell you in terms of a of mid so what can be"
+    },
+    {
+      "start": 526.92,
+      "duration": 6.24,
+      "text": "the possible values of array of weight it can be zero"
+    },
+    {
+      "start": 530.22,
+      "duration": 7.26,
+      "text": "or it can be 1 or what is the other thing or it can be"
+    },
+    {
+      "start": 536.22,
+      "duration": 6.0,
+      "text": "2. now these are the three possible values"
+    },
+    {
+      "start": 539.339,
+      "duration": 8.521,
+      "text": "of array of mid right now let's analyze what happens if it is 0 what happens if"
+    },
+    {
+      "start": 545.22,
+      "duration": 6.84,
+      "text": "it is 1 what happens if it is two now we know one thing we are taking pointers"
+    },
+    {
+      "start": 549.72,
+      "duration": 7.38,
+      "text": "and whenever we are applying a pointer algorithm the pointers will always move"
+    },
+    {
+      "start": 554.519,
+      "duration": 8.221,
+      "text": "that is the that is the use of pointers so coming back to the algorithm"
+    },
+    {
+      "start": 559.8,
+      "duration": 6.12,
+      "text": "something to think about we're talking about myth we're talking about height"
+    },
+    {
+      "start": 564.3,
+      "duration": 7.02,
+      "text": "and this portion is what we are looking to sort now what is the first case when"
+    },
+    {
+      "start": 568.68,
+      "duration": 7.32,
+      "text": "array is said to be the area of mid array of mid is said to be having zero"
+    },
+    {
+      "start": 574.14,
+      "duration": 6.54,
+      "text": "because that is the first case when I'm saying array of mate has a zero so array"
+    },
+    {
+      "start": 578.339,
+      "duration": 8.401,
+      "text": "of mid has a zero now if I have to ask you how do you make sure that this 0 is"
+    },
+    {
+      "start": 584.76,
+      "duration": 8.639,
+      "text": "in a softened order it'll be like hey wait I know one thing the left portion"
+    },
+    {
+      "start": 589.2,
+      "duration": 9.84,
+      "text": "is sorted so the zero has to be somewhere on the left and we have to"
+    },
+    {
+      "start": 595.86,
+      "duration": 10.44,
+      "text": "hypothetically think can I say the 0 will be somewhere here so that this"
+    },
+    {
+      "start": 602.88,
+      "duration": 8.82,
+      "text": "still stays in a sorted order yes so what I will do is I'll say Okay zero can"
+    },
+    {
+      "start": 609.18,
+      "duration": 6.42,
+      "text": "you go here but then if I take the 0 here what will happen to one and like"
+    },
+    {
+      "start": 614.339,
+      "duration": 7.381,
+      "text": "wait if I take this 0 here"
+    },
+    {
+      "start": 618.66,
+      "duration": 9.9,
+      "text": "and if I take this one here it's like what will happen so it'll be"
+    },
+    {
+      "start": 624.72,
+      "duration": 9.299,
+      "text": "like zero zero zero zero zero zero one one one one and one it will still be"
+    },
+    {
+      "start": 631.26,
+      "duration": 7.92,
+      "text": "sorted it'll still be sorted what I did was since it was 0 I"
+    },
+    {
+      "start": 636.959,
+      "duration": 7.201,
+      "text": "I just brought it to the correct place and I know what is the correct place it"
+    },
+    {
+      "start": 641.279,
+      "duration": 8.161,
+      "text": "will be low why because that is where the section contains the first one so"
+    },
+    {
+      "start": 647.399,
+      "duration": 5.281,
+      "text": "I'll bring it to the correct place and I know"
+    },
+    {
+      "start": 650.16,
+      "duration": 9.119,
+      "text": "this will still be sorted now can I say something if this is sorted if this is"
+    },
+    {
+      "start": 655.68,
+      "duration": 9.48,
+      "text": "sorted what is now unsorted the element after mid plus 1 till high is unsorted"
+    },
+    {
+      "start": 662.279,
+      "duration": 7.8,
+      "text": "because now this portion is entirely sorted because you did swap one and"
+    },
+    {
+      "start": 667.56,
+      "duration": 7.08,
+      "text": "zeros so they are completely sorted let's do the swap and then think about"
+    },
+    {
+      "start": 672.72,
+      "duration": 4.82,
+      "text": "the other steps so what I'll do is I'll quickly do the shaft"
+    },
+    {
+      "start": 677.88,
+      "duration": 7.74,
+      "text": "so I've done the swap now can I see this that the mid can easily move to the next"
+    },
+    {
+      "start": 682.8,
+      "duration": 6.36,
+      "text": "because now we are looking for this portion to"
+    },
+    {
+      "start": 688.26,
+      "duration": 5.28,
+      "text": "be sorted like this portion is unsorted now"
+    },
+    {
+      "start": 691.68,
+      "duration": 6.839,
+      "text": "because this is now sorted so mid has moved but now can I say one more thing"
+    },
+    {
+      "start": 695.519,
+      "duration": 9.0,
+      "text": "what is the first law zero to low minus one everything zero but as of now zero"
+    },
+    {
+      "start": 702.36,
+      "duration": 7.86,
+      "text": "to lower is everything zero so what will happen this low will also move a step"
+    },
+    {
+      "start": 706.86,
+      "duration": 8.039,
+      "text": "this low will also move a step yes and the low pointer will be now pointing to"
+    },
+    {
+      "start": 711.899,
+      "duration": 8.94,
+      "text": "this so now 0 to low minus L will be this low to mid minus 1 will be this"
+    },
+    {
+      "start": 717.24,
+      "duration": 10.86,
+      "text": "which is palette so what did we do first thing we did was very simple we said can"
+    },
+    {
+      "start": 723.959,
+      "duration": 11.281,
+      "text": "you go ahead and swap a of low and a of mid so that that 0 comes into its"
+    },
+    {
+      "start": 732.959,
+      "duration": 8.221,
+      "text": "correct order then I know if there is a addition of 0 if there is an addition of"
+    },
+    {
+      "start": 737.7,
+      "duration": 7.74,
+      "text": "zero so this range will increase the low will increase"
+    },
+    {
+      "start": 742.44,
+      "duration": 8.519,
+      "text": "and since mid is the element admit is now at a sorted"
+    },
+    {
+      "start": 747.6,
+      "duration": 7.5,
+      "text": "position let's move wait done so the first step I know how to move the"
+    },
+    {
+      "start": 752.88,
+      "duration": 7.019,
+      "text": "pointer with the first step I will be easily able to move my bit pointer right"
+    },
+    {
+      "start": 757.86,
+      "duration": 5.94,
+      "text": "so we are back to our initial configuration because this is the rule"
+    },
+    {
+      "start": 761.88,
+      "duration": 7.68,
+      "text": "that we are following in order to reduce the algorithm so now next to what if it"
+    },
+    {
+      "start": 766.98,
+      "duration": 7.32,
+      "text": "was one let's now think let's go back again what if there was a one here"
+    },
+    {
+      "start": 772.26,
+      "duration": 5.34,
+      "text": "then what would have happened can I see if it's a one"
+    },
+    {
+      "start": 775.74,
+      "duration": 6.839,
+      "text": "either this was sorted can I say this is also sorted yeah it is"
+    },
+    {
+      "start": 780.42,
+      "duration": 6.24,
+      "text": "sorted we don't need to do anything with that one because that one is attached"
+    },
+    {
+      "start": 784.86,
+      "duration": 7.74,
+      "text": "right after one so this is already softened so the elements that are not"
+    },
+    {
+      "start": 789.66,
+      "duration": 9.299,
+      "text": "sorted are in this category so just move mid because mid is sorted so I'll not do"
+    },
+    {
+      "start": 795.899,
+      "duration": 7.62,
+      "text": "anything if it's a one I will say dude I don't care you can just move ahead"
+    },
+    {
+      "start": 801.06,
+      "duration": 6.719,
+      "text": "that's what I will do so the second step is also done let's talk about the third"
+    },
+    {
+      "start": 805.68,
+      "duration": 7.14,
+      "text": "step so in the third step I'm saying what if at the area of mid there is two"
+    },
+    {
+      "start": 810.18,
+      "duration": 7.92,
+      "text": "so if there is two where should you put two like logically I know all the tools"
+    },
+    {
+      "start": 816.06,
+      "duration": 7.38,
+      "text": "are over here and in the sorted fashion and all the zeros and ones are over here"
+    },
+    {
+      "start": 820.26,
+      "duration": 8.759,
+      "text": "so you can say maybe I can put two at the end maybe I can take two and put it"
+    },
+    {
+      "start": 825.839,
+      "duration": 7.981,
+      "text": "somewhere in between but think logical just think low chicken"
+    },
+    {
+      "start": 830.7,
+      "duration": 9.0,
+      "text": "they have to take two and I what am I looking for I'm looking to make sure"
+    },
+    {
+      "start": 836.339,
+      "duration": 6.841,
+      "text": "that this portion is sorted so can I say something"
+    },
+    {
+      "start": 840.54,
+      "duration": 5.28,
+      "text": "I know this portion is sorted what if I take this to and put it right before"
+    },
+    {
+      "start": 844.92,
+      "duration": 5.219,
+      "text": "this right before this"
+    },
+    {
+      "start": 847.92,
+      "duration": 8.159,
+      "text": "then what will happen this portion will get sorted and this will shrink to this"
+    },
+    {
+      "start": 853.139,
+      "duration": 6.841,
+      "text": "much so I will be able to sort one more element I'll be able to solve one more"
+    },
+    {
+      "start": 857.76,
+      "duration": 6.54,
+      "text": "element can I say this I can't so this is what I'll do no matter if there is a"
+    },
+    {
+      "start": 862.2,
+      "duration": 7.5,
+      "text": "zero if there's a zero there's a one there's a two at this index no matter I"
+    },
+    {
+      "start": 867.6,
+      "duration": 6.6,
+      "text": "will take this two and I'll say can you go over here so what will happen is this"
+    },
+    {
+      "start": 872.459,
+      "duration": 6.721,
+      "text": "two will go over there and whatever is there even it if it's a"
+    },
+    {
+      "start": 877.32,
+      "duration": 5.819,
+      "text": "zero it will come over here so now what will happen is if you have swapped it"
+    },
+    {
+      "start": 880.8,
+      "duration": 10.14,
+      "text": "now you can say this portion is sorted now which portion is still unsorted can"
+    },
+    {
+      "start": 886.92,
+      "duration": 8.099,
+      "text": "I say from mid to high minus 1 make why lesser than high because high is now"
+    },
+    {
+      "start": 892.32,
+      "duration": 7.5,
+      "text": "sorted so we shrinked the right at half this time we shrinked the writer half"
+    },
+    {
+      "start": 897.12,
+      "duration": 7.38,
+      "text": "this time got it so so did you understand this we are not moving mid"
+    },
+    {
+      "start": 901.98,
+      "duration": 8.159,
+      "text": "now in The Next Step since you got a zero from here this zero will be treated"
+    },
+    {
+      "start": 906.839,
+      "duration": 7.74,
+      "text": "according to the first condition I will show you that in the dryer but as of now"
+    },
+    {
+      "start": 912.06,
+      "duration": 10.8,
+      "text": "can I say what I did was very simple I said swap of a of mid and a of high"
+    },
+    {
+      "start": 919.56,
+      "duration": 7.139,
+      "text": "and then I'll see since high is getting a correct"
+    },
+    {
+      "start": 924.0,
+      "duration": 7.56,
+      "text": "correct guy of 2 so we can just move High one this back and it will be sorted"
+    },
+    {
+      "start": 929.76,
+      "duration": 6.12,
+      "text": "so these are the three rules and I hope you have understood the entire thought"
+    },
+    {
+      "start": 933.24,
+      "duration": 6.24,
+      "text": "process when all these three rules so keeping all the three rules in the mind"
+    },
+    {
+      "start": 937.56,
+      "duration": 7.56,
+      "text": "let's do our dragons of the algorithm sticks to your brain remember one thing"
+    },
+    {
+      "start": 941.459,
+      "duration": 9.0,
+      "text": "whenever I do a dragon try to visualize in terms of this particular diagram okay"
+    },
+    {
+      "start": 947.94,
+      "duration": 7.32,
+      "text": "let's throw that run we have a zero what do we do in terms of zero we strap a"
+    },
+    {
+      "start": 952.32,
+      "duration": 7.62,
+      "text": "upload and a of a so 0 and 0 are at the same place they get swapped and low and"
+    },
+    {
+      "start": 957.18,
+      "duration": 8.48,
+      "text": "mid both will move so let's quickly move both so low I'll go here"
+    },
+    {
+      "start": 962.339,
+      "duration": 3.321,
+      "text": "and mid will go here"
+    },
+    {
+      "start": 965.699,
+      "duration": 9.061,
+      "text": "and erase the other things okay that what's the next"
+    },
+    {
+      "start": 971.16,
+      "duration": 6.479,
+      "text": "it's a one so array of mid is one submit plus plus you don't do anything you just"
+    },
+    {
+      "start": 976.8,
+      "duration": 4.039,
+      "text": "move submit will reach here"
+    },
+    {
+      "start": 981.54,
+      "duration": 7.76,
+      "text": "what's the next it's again one you don't do anything you just move mid submit"
+    },
+    {
+      "start": 986.279,
+      "duration": 3.021,
+      "text": "will reach here this time"
+    },
+    {
+      "start": 990.72,
+      "duration": 8.22,
+      "text": "so can you visualize so can you relate this to the diagram that we did draw 0"
+    },
+    {
+      "start": 996.54,
+      "duration": 8.76,
+      "text": "to low minus one all zeros low to bit minus 1 all ones mid to high all"
+    },
+    {
+      "start": 1002.12,
+      "duration": 9.24,
+      "text": "unsorted correct let's move and see if the diagram is still being relatable or"
+    },
+    {
+      "start": 1008.36,
+      "duration": 7.38,
+      "text": "not so we have a mid it's a zero we know what do we do in terms of zero we take"
+    },
+    {
+      "start": 1013.279,
+      "duration": 8.521,
+      "text": "it here and we take it here let's do it so it's like zero will go here and one"
+    },
+    {
+      "start": 1018.5,
+      "duration": 8.4,
+      "text": "will come here and after that yes low will move one place ahead and mid will"
+    },
+    {
+      "start": 1024.319,
+      "duration": 7.02,
+      "text": "move one place aired let's quickly erase this because they have moved one place"
+    },
+    {
+      "start": 1028.16,
+      "duration": 9.779,
+      "text": "ahead that was the next job yes middle one no need to do anything just move mid"
+    },
+    {
+      "start": 1034.819,
+      "duration": 8.581,
+      "text": "one please add if you have moved it is this what is that no again try to relate"
+    },
+    {
+      "start": 1040.76,
+      "duration": 8.4,
+      "text": "zero to low minus one all zeros low domain minus one all ones mid to high"
+    },
+    {
+      "start": 1046.12,
+      "duration": 7.24,
+      "text": "unsorted still relatable right what's the next we have to"
+    },
+    {
+      "start": 1051.14,
+      "duration": 6.539,
+      "text": "but we have to you have to put it on the back that was the thought process so if"
+    },
+    {
+      "start": 1055.88,
+      "duration": 6.06,
+      "text": "there's a two what will you do you'll be like okay these two will go here"
+    },
+    {
+      "start": 1060.02,
+      "duration": 7.62,
+      "text": "the zero will come here let's show this so this two will become"
+    },
+    {
+      "start": 1064.039,
+      "duration": 8.52,
+      "text": "a bad this 2 will become zero and two will go yeah you just slap both the"
+    },
+    {
+      "start": 1070.16,
+      "duration": 6.96,
+      "text": "places once you have done this this portion is sorted so what will happen to"
+    },
+    {
+      "start": 1074.36,
+      "duration": 5.819,
+      "text": "this hi this I will come here let's do this once I've done this quickly raise"
+    },
+    {
+      "start": 1078.799,
+      "duration": 6.901,
+      "text": "this for okay now now we have a zero again we"
+    },
+    {
+      "start": 1083.6,
+      "duration": 6.42,
+      "text": "fall back to the step one this zero has to be here and this one has to be here"
+    },
+    {
+      "start": 1087.919,
+      "duration": 7.38,
+      "text": "let's quickly do this the zero has to be here and probably led is this"
+    },
+    {
+      "start": 1093.32,
+      "duration": 7.8,
+      "text": "and I'll bring the what here if I've done this was an X drop we just move the"
+    },
+    {
+      "start": 1098.059,
+      "duration": 6.661,
+      "text": "mid here and we move the low here quite simple"
+    },
+    {
+      "start": 1102.799,
+      "duration": 4.561,
+      "text": "I'll erase this as well now can I say again if I have to relate"
+    },
+    {
+      "start": 1106.64,
+      "duration": 6.12,
+      "text": "it 0 to low minus one all zeros low to mid"
+    },
+    {
+      "start": 1110.059,
+      "duration": 7.261,
+      "text": "minus 1 all ones mid to high unsorted now again it is one so you do not do"
+    },
+    {
+      "start": 1115.28,
+      "duration": 6.6,
+      "text": "anything just say we will move the pointer ahead so let's move the pointer"
+    },
+    {
+      "start": 1119.12,
+      "duration": 6.299,
+      "text": "ahead where are we we are at a two and this portion is unsorted so this time"
+    },
+    {
+      "start": 1123.74,
+      "duration": 5.4,
+      "text": "this will go here and this will go here because if it's a 2 put it at the"
+    },
+    {
+      "start": 1127.46,
+      "duration": 5.339,
+      "text": "extreme right so you'll put it at the extreme right so this will go here and"
+    },
+    {
+      "start": 1131.12,
+      "duration": 6.12,
+      "text": "we will get a zero here and what will happen to this High it will just shrink"
+    },
+    {
+      "start": 1135.02,
+      "duration": 8.039,
+      "text": "so let's quickly shrink it so if you shrink it it shrinks like this"
+    },
+    {
+      "start": 1139.7,
+      "duration": 7.74,
+      "text": "so we have a mid and high as 0 0 if it's a zero would have happened yes it will"
+    },
+    {
+      "start": 1145.28,
+      "duration": 7.139,
+      "text": "go here this will come here please do it 0 and this will be one so it quickly"
+    },
+    {
+      "start": 1150.02,
+      "duration": 6.72,
+      "text": "raise this will be like zero it'll be like one once"
+    },
+    {
+      "start": 1155.12,
+      "duration": 7.26,
+      "text": "you've done this what will you do you will move the low and you'll move the"
+    },
+    {
+      "start": 1158.84,
+      "duration": 7.8,
+      "text": "mid as well so the low end mid will move and I can quickly raise the previous"
+    },
+    {
+      "start": 1163.96,
+      "duration": 5.219,
+      "text": "occurrences of the bandwidth done what's the next job"
+    },
+    {
+      "start": 1170.919,
+      "duration": 8.62,
+      "text": "so let's quickly swap it at one and done once you've done this you move low"
+    },
+    {
+      "start": 1177.08,
+      "duration": 6.66,
+      "text": "and you move the mid and the mid goes here"
+    },
+    {
+      "start": 1180.86,
+      "duration": 6.84,
+      "text": "and if I just quickly it is the last occurrence of mid and the last"
+    },
+    {
+      "start": 1185.48,
+      "duration": 8.28,
+      "text": "occurrence of low this is how it looks like and there's a point where you say"
+    },
+    {
+      "start": 1189.26,
+      "duration": 9.779,
+      "text": "the mid has gone past height which means the area that you are trying to sort is"
+    },
+    {
+      "start": 1195.919,
+      "duration": 6.781,
+      "text": "not over that's why your mid past high and if that is the case can I say that"
+    },
+    {
+      "start": 1200.78,
+      "duration": 7.259,
+      "text": "the array is sorted and if you carefully look around from 0 to low minus one"
+    },
+    {
+      "start": 1204.919,
+      "duration": 6.901,
+      "text": "everything is zero from low to middle minus one everything is one and"
+    },
+    {
+      "start": 1210.26,
+      "duration": 8.7,
+      "text": "from High plus 1 to last everything is S2 and it is"
+    },
+    {
+      "start": 1217.22,
+      "duration": 7.74,
+      "text": "sorted so we are still following the condition I hope"
+    },
+    {
+      "start": 1220.82,
+      "duration": 7.739,
+      "text": "this diagram helped you to visualize the Dutch national flag algorithm and it is"
+    },
+    {
+      "start": 1227.059,
+      "duration": 6.841,
+      "text": "very important to understand the thought process most of the videos will be like"
+    },
+    {
+      "start": 1230.72,
+      "duration": 7.74,
+      "text": "three steps do I run code and done no this is indeed important so it is very"
+    },
+    {
+      "start": 1236.78,
+      "duration": 5.34,
+      "text": "important to understand if there's a zero why it is moving here and why the"
+    },
+    {
+      "start": 1240.2,
+      "duration": 5.76,
+      "text": "one is moving here if there's a one we are not doing anything if there's a two"
+    },
+    {
+      "start": 1243.86,
+      "duration": 6.54,
+      "text": "why is it moving back all the three steps are very very important to"
+    },
+    {
+      "start": 1248.24,
+      "duration": 5.16,
+      "text": "understand so that you can explain it to the interviewer also your problem"
+    },
+    {
+      "start": 1251.6,
+      "duration": 5.34,
+      "text": "solving skills will grow if you understand these problems in very depth"
+    },
+    {
+      "start": 1255.2,
+      "duration": 5.4,
+      "text": "so let's quickly jump into the code editor and try to code it up again the"
+    },
+    {
+      "start": 1259.16,
+      "duration": 6.66,
+      "text": "problem link will be in the description so we have two rather three pointers so"
+    },
+    {
+      "start": 1263.299,
+      "duration": 8.161,
+      "text": "let's mark all the three pointers we know this is uh the starting points and"
+    },
+    {
+      "start": 1268.64,
+      "duration": 6.779,
+      "text": "I'll keep on going till this is till we have an unsorted section and we"
+    },
+    {
+      "start": 1274.16,
+      "duration": 7.7,
+      "text": "know we are working on area from it if that is 0 it"
+    },
+    {
+      "start": 1278.6,
+      "duration": 8.819,
+      "text": "can be one case else if array of mid is 1 or else it will be always 2 because"
+    },
+    {
+      "start": 1284.84,
+      "duration": 6.18,
+      "text": "the array only consists of 0 1 and 2. if it is 0 what are we doing we are seeing"
+    },
+    {
+      "start": 1288.86,
+      "duration": 6.84,
+      "text": "area flow can you please swap with array of it and once you've done this can you"
+    },
+    {
+      "start": 1292.88,
+      "duration": 10.62,
+      "text": "move yourself and mint ahead in this case I am saying just move mid ahead in"
+    },
+    {
+      "start": 1299.6,
+      "duration": 11.28,
+      "text": "this case I am saying swap array of rather mid and array of"
+    },
+    {
+      "start": 1307.34,
+      "duration": 8.52,
+      "text": "high once you've done this since this 2 is at the back I will shrink once this"
+    },
+    {
+      "start": 1313.46,
+      "duration": 7.74,
+      "text": "is done I can say that the array which is passed by reference is indeed sorted"
+    },
+    {
+      "start": 1318.74,
+      "duration": 5.28,
+      "text": "now so we can see this and now we will quickly go and run again it's a void"
+    },
+    {
+      "start": 1323.059,
+      "duration": 5.641,
+      "text": "function you don't have to return anything you have to just work it on the"
+    },
+    {
+      "start": 1326.299,
+      "duration": 6.301,
+      "text": "particular given array so we see that this is submitted okay so let's go back"
+    },
+    {
+      "start": 1330.86,
+      "duration": 8.34,
+      "text": "to the iPad and discuss the time complexity now we know one thing we have"
+    },
+    {
+      "start": 1335.9,
+      "duration": 7.38,
+      "text": "to go from the mid and till the high and make sure the unsorted section is sorted"
+    },
+    {
+      "start": 1341.419,
+      "duration": 6.421,
+      "text": "and initially the mid was here if you remember and the high was here so there"
+    },
+    {
+      "start": 1345.559,
+      "duration": 6.721,
+      "text": "is an entire length of n that you have to sort that is something which we know"
+    },
+    {
+      "start": 1349.82,
+      "duration": 7.92,
+      "text": "and we know at every step we perform either this either this or either this"
+    },
+    {
+      "start": 1354.38,
+      "duration": 8.039,
+      "text": "so if we perform this the mid increases by one so it's like on one iteration"
+    },
+    {
+      "start": 1360.559,
+      "duration": 8.221,
+      "text": "that you're doing so you are shrinking the mid on to the right so that's like"
+    },
+    {
+      "start": 1365.0,
+      "duration": 10.14,
+      "text": "plus one iteration if you do this if you do this it is still shrinking the mid"
+    },
+    {
+      "start": 1371.059,
+      "duration": 9.061,
+      "text": "which is like plus one iteration but if you are doing this step the mids is"
+    },
+    {
+      "start": 1377.72,
+      "duration": 5.459,
+      "text": "staying where it is rather the high is shrinking and the high shrinking bright"
+    },
+    {
+      "start": 1382.039,
+      "duration": 6.301,
+      "text": "this section how does it matter because at the end of"
+    },
+    {
+      "start": 1385.64,
+      "duration": 6.6,
+      "text": "the day if you're moving the mid by onto the right one of the elements will be"
+    },
+    {
+      "start": 1390.559,
+      "duration": 5.821,
+      "text": "sorted and if you are moving the high to the left again one of the elements will"
+    },
+    {
+      "start": 1393.98,
+      "duration": 6.54,
+      "text": "be socket so in each of the three steps in each of the three steps you are"
+    },
+    {
+      "start": 1398.6,
+      "duration": 6.78,
+      "text": "actually solving one element so the end of the day overall if at every step"
+    },
+    {
+      "start": 1403.22,
+      "duration": 5.579,
+      "text": "you're sorting one element and all the elements and all the elements were"
+    },
+    {
+      "start": 1406.94,
+      "duration": 5.219,
+      "text": "unsorted can I say at the end of the day you'll end up sorting n Elements by"
+    },
+    {
+      "start": 1410.96,
+      "duration": 6.66,
+      "text": "taking n and guess a snake n those cases that's"
+    },
+    {
+      "start": 1415.64,
+      "duration": 7.38,
+      "text": "why the time complexity is Big go often a single iteration and the space"
+    },
+    {
+      "start": 1419.72,
+      "duration": 7.079,
+      "text": "complexity is bigger or fun just in case you did not understand the time"
+    },
+    {
+      "start": 1424.46,
+      "duration": 6.54,
+      "text": "complexity what I usually did in my initial years was"
+    },
+    {
+      "start": 1428.48,
+      "duration": 7.319,
+      "text": "they can take this particular array and whenever I'm moving whenever I'm doing"
+    },
+    {
+      "start": 1433.4,
+      "duration": 7.74,
+      "text": "an iteration I count plus one I count plus one I count plus one and then I can"
+    },
+    {
+      "start": 1438.14,
+      "duration": 7.5,
+      "text": "visualize how many iterations where done by using this particular example and"
+    },
+    {
+      "start": 1443.179,
+      "duration": 6.24,
+      "text": "then I can relate white as we go off and please do dry runs please count one"
+    },
+    {
+      "start": 1447.919,
+      "duration": 5.821,
+      "text": "iteration please count one iteration that will help you do uh analyze the"
+    },
+    {
+      "start": 1451.94,
+      "duration": 6.54,
+      "text": "time complexity in a much much better way so coming back to the sheet I can"
+    },
+    {
+      "start": 1456.08,
+      "duration": 5.76,
+      "text": "mark this as done and I hope you have understood the thought process and the"
+    },
+    {
+      "start": 1460.22,
+      "duration": 5.1,
+      "text": "intuition behind the Dutch national flag algorithm I know the algorithm is easy"
+    },
+    {
+      "start": 1464.059,
+      "duration": 4.5,
+      "text": "but you have to understand the third process right so if I understood"
+    },
+    {
+      "start": 1466.88,
+      "duration": 6.72,
+      "text": "everything to continue our tradition please do comment understood so that I"
+    },
+    {
+      "start": 1470.659,
+      "duration": 7.26,
+      "text": "understand that my effort was worth it because I really did put a lot of time"
+    },
+    {
+      "start": 1475.7,
+      "duration": 6.839,
+      "text": "on to this video and if you're new to our Channel please please do consider"
+    },
+    {
+      "start": 1479.539,
+      "duration": 7.14,
+      "text": "subscribing it's 2 8 am in the night and I have an office tomorrow so please do"
+    },
+    {
+      "start": 1484.82,
+      "duration": 5.64,
+      "text": "consider subscribing because that does motivate me to make such kind of video"
+    },
+    {
+      "start": 1488.48,
+      "duration": 5.04,
+      "text": "videos late in the night and yeah if you haven't followed me on Instagram"
+    },
+    {
+      "start": 1491.36,
+      "duration": 4.92,
+      "text": "LinkedIn and Twitter the links will be in the description with this let's wrap"
+    },
+    {
+      "start": 1495.32,
+      "duration": 12.61,
+      "text": "up this video and millions of other videos"
+    },
+    {
+      "start": 1497.9,
+      "duration": 10.03,
+      "text": "[Music]"
+    }
+  ]
+}

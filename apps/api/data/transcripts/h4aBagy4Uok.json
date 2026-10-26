@@ -1,0 +1,1407 @@
+{
+  "video_id": "h4aBagy4Uok",
+  "title": "Rearrange Array Elements by Sign | 2 Varieties of same Problem",
+  "total_segments": 280,
+  "segments": [
+    {
+      "start": 3.06,
+      "duration": 4.62,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.06,
+      "duration": 5.1,
+      "text": "so this is another video from the Strivers A to Z DSA course just in case"
+    },
+    {
+      "start": 9.9,
+      "duration": 5.279,
+      "text": "you're for the first time here this is world's most in-depth course in DS algo"
+    },
+    {
+      "start": 13.08,
+      "duration": 6.24,
+      "text": "why do I see that because this cost us 455 modules by the end of the course"
+    },
+    {
+      "start": 17.039,
+      "duration": 6.24,
+      "text": "you'd have sold more than 400 plus problems when it comes to DS algo you"
+    },
+    {
+      "start": 21.96,
+      "duration": 5.04,
+      "text": "can go across the entire internet you can buy any of the paid courses none of"
+    },
+    {
+      "start": 25.32,
+      "duration": 5.76,
+      "text": "them will be teaching you DS and go in such step one thing that I can assure"
+    },
+    {
+      "start": 28.859,
+      "duration": 6.301,
+      "text": "you is once you complete the entire course you can get any of the DSL rounds"
+    },
+    {
+      "start": 33.12,
+      "duration": 7.38,
+      "text": "in any of the companies in any part of the world so till now we have covered uh"
+    },
+    {
+      "start": 37.739,
+      "duration": 8.581,
+      "text": "till stock buy and sell and in this particular video we will be covering the"
+    },
+    {
+      "start": 42.6,
+      "duration": 10.2,
+      "text": "problem rearrange array Elements by sign now what does the problem State you will"
+    },
+    {
+      "start": 48.6,
+      "duration": 8.88,
+      "text": "be given an array with equal positive elements and equal negative elements"
+    },
+    {
+      "start": 54.899,
+      "duration": 7.081,
+      "text": "that means if the length of the array is n there will be n by two positive"
+    },
+    {
+      "start": 59.879,
+      "duration": 8.941,
+      "text": "elements and there will be n by 2 negative elements that is for sure that"
+    },
+    {
+      "start": 65.28,
+      "duration": 7.92,
+      "text": "means n will always be a even number and will always be an even number so if I"
+    },
+    {
+      "start": 70.92,
+      "duration": 7.199,
+      "text": "take this first example over here you can see that n is 6 so there are three"
+    },
+    {
+      "start": 76.439,
+      "duration": 8.161,
+      "text": "years there are three positive numbers if you see three one and two and there"
+    },
+    {
+      "start": 82.5,
+      "duration": 6.9,
+      "text": "are three negative numbers minus two minus five minus four"
+    },
+    {
+      "start": 86.52,
+      "duration": 7.5,
+      "text": "now they can be given in any random order positive positive negative"
+    },
+    {
+      "start": 91.74,
+      "duration": 5.699,
+      "text": "negative positive negative positive negative negative negative positive"
+    },
+    {
+      "start": 95.579,
+      "duration": 6.36,
+      "text": "positive doesn't matter it can be given in any order so your task is to"
+    },
+    {
+      "start": 99.479,
+      "duration": 5.701,
+      "text": "rearrange those Elements by sign what do I mean by rearrange"
+    },
+    {
+      "start": 103.439,
+      "duration": 4.201,
+      "text": "first one has to be positive then it has to be negative then it has to be"
+    },
+    {
+      "start": 106.32,
+      "duration": 6.479,
+      "text": "positive then it has to be negative positive and negative so when I say"
+    },
+    {
+      "start": 110.04,
+      "duration": 7.8,
+      "text": "positives positives positives let's write the positive three one two these"
+    },
+    {
+      "start": 115.92,
+      "duration": 7.62,
+      "text": "are the three positives and you have put them one here one here and the other one"
+    },
+    {
+      "start": 121.259,
+      "duration": 7.681,
+      "text": "here so they are in the order three one two if you look at the order here it's"
+    },
+    {
+      "start": 125.64,
+      "duration": 7.26,
+      "text": "three one and two so the order is maintained but they are making sure that"
+    },
+    {
+      "start": 131.4,
+      "duration": 6.72,
+      "text": "they are alternate like positive negative positive negative"
+    },
+    {
+      "start": 135.0,
+      "duration": 7.62,
+      "text": "if you look at the negatives minus two minus 5"
+    },
+    {
+      "start": 139.8,
+      "duration": 7.079,
+      "text": "and minus 4. let's look at the order in the original array minus two minus five"
+    },
+    {
+      "start": 144.78,
+      "duration": 5.64,
+      "text": "minus 4 the order is maintaining but they're making sure"
+    },
+    {
+      "start": 148.379,
+      "duration": 5.701,
+      "text": "they're in the alternate like positive negative positive negative so your task"
+    },
+    {
+      "start": 152.459,
+      "duration": 4.681,
+      "text": "is to solve this particular problem so whenever this question is asked to you"
+    },
+    {
+      "start": 155.52,
+      "duration": 4.38,
+      "text": "in an interview the first solution that you should definitely tell the"
+    },
+    {
+      "start": 158.22,
+      "duration": 5.64,
+      "text": "interviewer is the Brute Force the first solution that strikes your head that's"
+    },
+    {
+      "start": 161.58,
+      "duration": 6.84,
+      "text": "very obvious you'll be like okay listen I'm going to take uh empty array and"
+    },
+    {
+      "start": 166.5,
+      "duration": 5.04,
+      "text": "I'll call it as positive array I'll take an anti array"
+    },
+    {
+      "start": 169.62,
+      "duration": 6.18,
+      "text": "and I'll call it as negative again it can be array it can be a list I'll"
+    },
+    {
+      "start": 173.16,
+      "duration": 6.9,
+      "text": "prefer a list you can also pick a empty array because you know the size will be"
+    },
+    {
+      "start": 177.599,
+      "duration": 6.121,
+      "text": "n by 2 and N by 2 because the number of positives are n by 2 the number of"
+    },
+    {
+      "start": 181.92,
+      "duration": 5.28,
+      "text": "negatives are invite but I'll prefer taking list"
+    },
+    {
+      "start": 184.92,
+      "duration": 6.66,
+      "text": "now what I'll do is I'll iterate in the entire array it's three so I'll be like"
+    },
+    {
+      "start": 189.599,
+      "duration": 6.121,
+      "text": "put it into the positive it's positive put it into the positive"
+    },
+    {
+      "start": 193.379,
+      "duration": 6.541,
+      "text": "it's negative put it into the negative it's negative put it into the negative"
+    },
+    {
+      "start": 197.879,
+      "duration": 6.72,
+      "text": "it's positive put it into the positive it's negative put it into the negative"
+    },
+    {
+      "start": 202.379,
+      "duration": 6.72,
+      "text": "so I can say once I've done the first iteration in The Brute Force I have all"
+    },
+    {
+      "start": 207.18,
+      "duration": 6.24,
+      "text": "the positives and have all the negatives so after one iteration can I say that I"
+    },
+    {
+      "start": 211.86,
+      "duration": 4.56,
+      "text": "have all the positive elements in the guide order and I also have all the"
+    },
+    {
+      "start": 215.159,
+      "duration": 6.241,
+      "text": "negative elements in the correct order if I go back and recall the rearranged"
+    },
+    {
+      "start": 219.48,
+      "duration": 9.36,
+      "text": "array it would look something like 3 minus 2 1 minus 5 2 minus 4. now if I"
+    },
+    {
+      "start": 225.72,
+      "duration": 6.9,
+      "text": "ask you in terms of indexes where are the positive elements it's like at the"
+    },
+    {
+      "start": 230.519,
+      "duration": 4.86,
+      "text": "zeroth index at the second index at the fourth index do you see a pattern yes"
+    },
+    {
+      "start": 234.42,
+      "duration": 5.879,
+      "text": "you do all these are even indexes all these are"
+    },
+    {
+      "start": 238.2,
+      "duration": 6.959,
+      "text": "even indexes so all the positive elements appear to be at the even"
+    },
+    {
+      "start": 242.22,
+      "duration": 7.62,
+      "text": "indexes what about the negatives they appear to be at the odd indexes so I'll"
+    },
+    {
+      "start": 247.92,
+      "duration": 6.48,
+      "text": "try to take an advantage of it I know one thing three will be at the zero the"
+    },
+    {
+      "start": 252.0,
+      "duration": 5.34,
+      "text": "next one will be at the second index two will be at the fourth index and if I"
+    },
+    {
+      "start": 256.079,
+      "duration": 6.721,
+      "text": "have to write down their particular index it is like 0 1 2 do you see a"
+    },
+    {
+      "start": 259.56,
+      "duration": 9.18,
+      "text": "pattern 0 belongs to zero one belongs to 2 2 belongs to 4 and the third index if"
+    },
+    {
+      "start": 266.46,
+      "duration": 7.32,
+      "text": "there was would have belonged to 6 Sav notice the pattern so what I'll do is"
+    },
+    {
+      "start": 271.139,
+      "duration": 8.101,
+      "text": "I'll be like I equal to 0 I less than n by 2 because I know there are n by two"
+    },
+    {
+      "start": 275.46,
+      "duration": 9.36,
+      "text": "positive elements array of 2 into I because that is what"
+    },
+    {
+      "start": 281.22,
+      "duration": 8.419,
+      "text": "index where it belongs to array because because that is the index where it will"
+    },
+    {
+      "start": 287.1,
+      "duration": 9.18,
+      "text": "go in the array equal to positive of I quite simple similarly for"
+    },
+    {
+      "start": 293.46,
+      "duration": 10.5,
+      "text": "negative this belongs to index one this to three this to vote Yes"
+    },
+    {
+      "start": 300.0,
+      "duration": 9.84,
+      "text": "five so can I say I'll write array of 2 into I plus 1 2 into I plus 1 equal to"
+    },
+    {
+      "start": 307.74,
+      "duration": 7.8,
+      "text": "negative of I quite simple one more iteration and that"
+    },
+    {
+      "start": 312.78,
+      "duration": 8.639,
+      "text": "is done so I can say I did a single iteration of we go of n in order to pick"
+    },
+    {
+      "start": 318.66,
+      "duration": 8.52,
+      "text": "up all the positives and negatives then I did another Big Rock N to reassign"
+    },
+    {
+      "start": 324.12,
+      "duration": 8.94,
+      "text": "them to the array once this is done the array will be rearranged but I ended up"
+    },
+    {
+      "start": 330.12,
+      "duration": 9.06,
+      "text": "taking a space complexity of B go of n in order to store them in order in two"
+    },
+    {
+      "start": 336.9,
+      "duration": 7.32,
+      "text": "different arrays of n by 2 and N by 2 each size so this will be the overall"
+    },
+    {
+      "start": 341.34,
+      "duration": 6.96,
+      "text": "time complexity and space complexity for solution is taking couple of passes and"
+    },
+    {
+      "start": 346.32,
+      "duration": 6.659,
+      "text": "it is using some extra space the interviewer might ask you to optimize"
+    },
+    {
+      "start": 349.68,
+      "duration": 7.5,
+      "text": "can we remove this extra space I don't think we can because somewhere we have"
+    },
+    {
+      "start": 355.259,
+      "duration": 5.461,
+      "text": "to do something in order to find the answer or the store we have to use some"
+    },
+    {
+      "start": 359.52,
+      "duration": 6.959,
+      "text": "extra space but can we reduce this to pass into one"
+    },
+    {
+      "start": 364.08,
+      "duration": 6.42,
+      "text": "pass that is where my focus will be and that's where the optimal solution comes"
+    },
+    {
+      "start": 368.039,
+      "duration": 6.061,
+      "text": "I'll be like Hey listen let's take an answer array"
+    },
+    {
+      "start": 371.82,
+      "duration": 7.26,
+      "text": "and what was the first observation my first observation was and one thing all"
+    },
+    {
+      "start": 377.039,
+      "duration": 8.521,
+      "text": "the positive elements will be at the even index so write down the index 0 1 2"
+    },
+    {
+      "start": 381.6,
+      "duration": 8.039,
+      "text": "3 4 5. can I see all the positive elements will be like the first positive"
+    },
+    {
+      "start": 387.72,
+      "duration": 5.22,
+      "text": "element will be at the zeroth index the next one will be at the second index the"
+    },
+    {
+      "start": 391.319,
+      "duration": 6.781,
+      "text": "next one will be at the fourth index and can I say the first negative will be at"
+    },
+    {
+      "start": 394.68,
+      "duration": 7.32,
+      "text": "the first index I can now what I will try to do differently in order to do it"
+    },
+    {
+      "start": 400.319,
+      "duration": 5.581,
+      "text": "in a one pass is I will go to this three and I'll say Hey"
+    },
+    {
+      "start": 403.919,
+      "duration": 5.941,
+      "text": "you are three you're positive right so can you go to your our first place which"
+    },
+    {
+      "start": 408.12,
+      "duration": 6.48,
+      "text": "was assigned for a positive he's like I can go and then you'll be like okay"
+    },
+    {
+      "start": 411.78,
+      "duration": 6.96,
+      "text": "you're gone so what is the next possible like possible place where you can put a"
+    },
+    {
+      "start": 416.58,
+      "duration": 7.86,
+      "text": "positive it's like this one that's for sure because the zeroth index is perfect"
+    },
+    {
+      "start": 421.38,
+      "duration": 8.159,
+      "text": "done next it's again a positive so which place is there is this second index put"
+    },
+    {
+      "start": 427.259,
+      "duration": 6.72,
+      "text": "it and if you have put it where will the next place like where is the next"
+    },
+    {
+      "start": 431.28,
+      "duration": 7.16,
+      "text": "available place that's the fourth index so you move next we move minus two is"
+    },
+    {
+      "start": 436.5,
+      "duration": 8.88,
+      "text": "like minus two negative first available space this one put it once you put this"
+    },
+    {
+      "start": 442.44,
+      "duration": 8.819,
+      "text": "move to the next what is the next minus five where do you"
+    },
+    {
+      "start": 448.139,
+      "duration": 8.161,
+      "text": "put it we know it is a negative so first available please put it and then what"
+    },
+    {
+      "start": 453.479,
+      "duration": 8.041,
+      "text": "you'll do move it next"
+    },
+    {
+      "start": 457.74,
+      "duration": 7.579,
+      "text": "to positive first available please put it and then moved"
+    },
+    {
+      "start": 465.479,
+      "duration": 8.16,
+      "text": "for the next minus 4 so it is minus 4 it goes to the first available negative"
+    },
+    {
+      "start": 470.639,
+      "duration": 7.68,
+      "text": "Place once you have done it move so once you've done it it just took you"
+    },
+    {
+      "start": 476.4,
+      "duration": 5.88,
+      "text": "one plus you picked up you picked up into the uh you put that into the answer"
+    },
+    {
+      "start": 479.819,
+      "duration": 6.66,
+      "text": "array and done yes we are not rearranging in the original array we"
+    },
+    {
+      "start": 484.139,
+      "duration": 8.4,
+      "text": "know that we're rearranging it in a new array and we will use this as the array"
+    },
+    {
+      "start": 489.539,
+      "duration": 8.521,
+      "text": "that you will return got it but this can be done in B go of n plus while passing"
+    },
+    {
+      "start": 496.5,
+      "duration": 6.66,
+      "text": "I keep on putting them into the answer array and the space complexity is Big"
+    },
+    {
+      "start": 500.759,
+      "duration": 6.66,
+      "text": "open again this is used to return the answer is used to return the answer"
+    },
+    {
+      "start": 505.259,
+      "duration": 6.541,
+      "text": "so this will be the time complexity and the space complexity for the optimal"
+    },
+    {
+      "start": 509.46,
+      "duration": 7.86,
+      "text": "approach not a huge improvement from the better not much by very slight margins"
+    },
+    {
+      "start": 515.64,
+      "duration": 5.639,
+      "text": "so coming back to the code editor let's try to code it up so you're given the"
+    },
+    {
+      "start": 518.7,
+      "duration": 6.48,
+      "text": "nouns Royal reversal initialize an answer"
+    },
+    {
+      "start": 522.419,
+      "duration": 8.281,
+      "text": "and I'll keep the size as n let's quickly declare the size and as nums dot"
+    },
+    {
+      "start": 528.6,
+      "duration": 7.56,
+      "text": "size and now let's quickly have a couple of other things positive index equal to"
+    },
+    {
+      "start": 533.16,
+      "duration": 7.44,
+      "text": "0 negative index equal to 1 because that is where we start the first positive and"
+    },
+    {
+      "start": 538.62,
+      "duration": 7.26,
+      "text": "negative from and now let's quickly go across the entire array and now we say"
+    },
+    {
+      "start": 542.82,
+      "duration": 7.44,
+      "text": "hey Anderson if nouns of I is lesser than zero that's a negative else it is"
+    },
+    {
+      "start": 548.64,
+      "duration": 7.199,
+      "text": "assured that the array will never have zeros"
+    },
+    {
+      "start": 551.519,
+      "duration": 8.88,
+      "text": "the answer of positive index will be nums of or other"
+    },
+    {
+      "start": 558.48,
+      "duration": 7.08,
+      "text": "negative index will be numbers of I and negative index"
+    },
+    {
+      "start": 563.1,
+      "duration": 6.96,
+      "text": "the next one will be two places ahead so you can do and similarly in the else"
+    },
+    {
+      "start": 567.12,
+      "duration": 8.219,
+      "text": "what you can write is if it's a positive one we will put it into the positive and"
+    },
+    {
+      "start": 572.82,
+      "duration": 6.6,
+      "text": "we will move the positive index by 2. once we have done the entire thing we"
+    },
+    {
+      "start": 577.68,
+      "duration": 5.7,
+      "text": "can go ahead and say this is my answer can we quickly go and return this I'll"
+    },
+    {
+      "start": 581.82,
+      "duration": 5.34,
+      "text": "just click on the submit and see if it's running absolutely fine now this one is"
+    },
+    {
+      "start": 585.48,
+      "duration": 5.7,
+      "text": "done but we will be solving one more variety so in code Studio the problem is"
+    },
+    {
+      "start": 589.56,
+      "duration": 6.42,
+      "text": "saying it is having positive and negative but there is no mention that"
+    },
+    {
+      "start": 593.279,
+      "duration": 7.62,
+      "text": "there will be equally like n by 2 and N by 2. if you read this line if any of"
+    },
+    {
+      "start": 598.68,
+      "duration": 6.779,
+      "text": "the positive and negative numbers are left add them at the end without"
+    },
+    {
+      "start": 603.2,
+      "duration": 6.639,
+      "text": "altering the order so if there is still something left you have to add them at"
+    },
+    {
+      "start": 607.8,
+      "duration": 5.7,
+      "text": "the end without altering the order so how do we solve this particular variety"
+    },
+    {
+      "start": 611.22,
+      "duration": 6.72,
+      "text": "let's let's look at the solution for this okay so coming to the variety too"
+    },
+    {
+      "start": 615.6,
+      "duration": 7.2,
+      "text": "let's take this particular example so one thing we know for sure is if"
+    },
+    {
+      "start": 619.92,
+      "duration": 7.44,
+      "text": "positive is not equal to negative there can be two cases either the number of"
+    },
+    {
+      "start": 624.899,
+      "duration": 7.321,
+      "text": "positives are greater than negatives or the number of negatives are greater"
+    },
+    {
+      "start": 629.82,
+      "duration": 9.12,
+      "text": "than positive right that is something we know like for this one we have two"
+    },
+    {
+      "start": 635.22,
+      "duration": 7.5,
+      "text": "negatives and four positives so the number of positives are greater than"
+    },
+    {
+      "start": 641.16,
+      "duration": 5.82,
+      "text": "negatives so what will be the answer after rearranging can I see the answer"
+    },
+    {
+      "start": 644.64,
+      "duration": 6.18,
+      "text": "will be very simple first I'll put up a positive done then I'll put up a"
+    },
+    {
+      "start": 648.839,
+      "duration": 6.541,
+      "text": "negative done then I'll put our next positive done and we'll put up a next"
+    },
+    {
+      "start": 652.74,
+      "duration": 6.539,
+      "text": "negative done and after that whatever remaining because positives were in"
+    },
+    {
+      "start": 657.72,
+      "duration": 5.64,
+      "text": "excess you just pick up the next positives the next negative next"
+    },
+    {
+      "start": 661.38,
+      "duration": 7.62,
+      "text": "positive and put it into your ancillary and this will be your final answer so"
+    },
+    {
+      "start": 666.839,
+      "duration": 5.761,
+      "text": "how do you solve this particular variety that is what we have to figure out so"
+    },
+    {
+      "start": 670.92,
+      "duration": 5.58,
+      "text": "let's quickly solve the second variety of this problem so the second variety of"
+    },
+    {
+      "start": 674.579,
+      "duration": 6.0,
+      "text": "this problem is clearly stating you that we are not sure"
+    },
+    {
+      "start": 677.94,
+      "duration": 6.0,
+      "text": "if positive is equal to equal to negative you're not sure about that it"
+    },
+    {
+      "start": 682.26,
+      "duration": 6.6,
+      "text": "can be more it can be less we're not sure so we have already solved the case"
+    },
+    {
+      "start": 686.22,
+      "duration": 8.22,
+      "text": "of positive equal to negative right and now this is stating that it might be"
+    },
+    {
+      "start": 690.839,
+      "duration": 8.701,
+      "text": "might not be so if it is not if positive is not equal to negative what can it be"
+    },
+    {
+      "start": 697.5,
+      "duration": 6.899,
+      "text": "so there can be two cases yes the number of positives are greater"
+    },
+    {
+      "start": 702.36,
+      "duration": 6.78,
+      "text": "than negatives or the number of negatives are greater than"
+    },
+    {
+      "start": 707.279,
+      "duration": 6.601,
+      "text": "positives there can only be two cases either the positive Sumo either the"
+    },
+    {
+      "start": 711.24,
+      "duration": 6.48,
+      "text": "negative Sumo so definitely we cannot use the optimal solution because the"
+    },
+    {
+      "start": 715.8,
+      "duration": 6.0,
+      "text": "optimal solution was lying on the fact that we have same number of positives"
+    },
+    {
+      "start": 719.7,
+      "duration": 6.3,
+      "text": "and negatives and we are filling them we are filling them alternatively"
+    },
+    {
+      "start": 723.3,
+      "duration": 6.3,
+      "text": "alternative so what we do is we fall back to the Brute Force solution now"
+    },
+    {
+      "start": 727.86,
+      "duration": 7.2,
+      "text": "this is an amazing follow-up question why because a lot of times people think"
+    },
+    {
+      "start": 733.019,
+      "duration": 5.341,
+      "text": "it will be something else they do not fall back to the Brute Force they're not"
+    },
+    {
+      "start": 736.62,
+      "duration": 6.0,
+      "text": "confident about their initial solution so you fall back to the Brute Force"
+    },
+    {
+      "start": 740.519,
+      "duration": 6.361,
+      "text": "solution and what you say is since we know the positives are not equal to"
+    },
+    {
+      "start": 744.54,
+      "duration": 8.1,
+      "text": "negatives I will fall back to my brute force and I'll say okay I'll probably"
+    },
+    {
+      "start": 749.04,
+      "duration": 7.68,
+      "text": "keep two more arrays which is like positive R and a negative array well I"
+    },
+    {
+      "start": 754.92,
+      "duration": 6.12,
+      "text": "trade and I'll collect all the positives in the relative order and I also collect"
+    },
+    {
+      "start": 759.12,
+      "duration": 5.58,
+      "text": "all the negatives in their relative order so let's quickly do this once you"
+    },
+    {
+      "start": 763.44,
+      "duration": 6.78,
+      "text": "have done this we do one thing for sure over here the"
+    },
+    {
+      "start": 767.639,
+      "duration": 8.161,
+      "text": "number of positives are greater than number of negatives so"
+    },
+    {
+      "start": 772.86,
+      "duration": 8.34,
+      "text": "there are two negatives so can I say the first four elements"
+    },
+    {
+      "start": 777.42,
+      "duration": 9.9,
+      "text": "will be in order which is like 2 minus 1 3 minus 3 they will be in the exact"
+    },
+    {
+      "start": 784.92,
+      "duration": 7.08,
+      "text": "alternating order because the number of negatives where to and"
+    },
+    {
+      "start": 790.019,
+      "duration": 8.401,
+      "text": "which was lesser so we are sure of having two positive so two positive two"
+    },
+    {
+      "start": 795.48,
+      "duration": 7.74,
+      "text": "negative four numbers and they can be in the alternate order so what is remaining"
+    },
+    {
+      "start": 800.82,
+      "duration": 7.139,
+      "text": "two positives are remaining so after that you can put up the two positives so"
+    },
+    {
+      "start": 805.26,
+      "duration": 7.56,
+      "text": "something I know as for the first two elements for the first two elements I"
+    },
+    {
+      "start": 810.72,
+      "duration": 5.94,
+      "text": "can follow the pattern I can follow the pattern so what I will do is for the"
+    },
+    {
+      "start": 814.86,
+      "duration": 7.08,
+      "text": "first two elements I will follow the same pattern so I know one thing 4 I"
+    },
+    {
+      "start": 819.899,
+      "duration": 6.841,
+      "text": "equal to 0 and I know the number of negatives are smaller so it is like I"
+    },
+    {
+      "start": 823.86,
+      "duration": 7.74,
+      "text": "less than 2 in this case and I will say hey array"
+    },
+    {
+      "start": 829.019,
+      "duration": 6.081,
+      "text": "I into two because for r that was The Brute Force if you remember the brute"
+    },
+    {
+      "start": 832.74,
+      "duration": 8.82,
+      "text": "force was I into two is equal to positive of I and similarly I'll say"
+    },
+    {
+      "start": 838.139,
+      "duration": 7.14,
+      "text": "array of I into 2 plus 1 because for negative it was that index if you write"
+    },
+    {
+      "start": 843.6,
+      "duration": 6.539,
+      "text": "down the indexes in the answers it's like 0 1 2 3 and these"
+    },
+    {
+      "start": 848.459,
+      "duration": 5.761,
+      "text": "these people will be filled because there are two negatives and two"
+    },
+    {
+      "start": 851.399,
+      "duration": 7.261,
+      "text": "positives for sure and I'll say negative can you pick up"
+    },
+    {
+      "start": 855.72,
+      "duration": 9.299,
+      "text": "perfect so this will make sure till the place the positives where equal"
+    },
+    {
+      "start": 862.32,
+      "duration": 6.12,
+      "text": "to negatives that is done that is for sure so you'll fall back to the Brute"
+    },
+    {
+      "start": 866.639,
+      "duration": 6.541,
+      "text": "Force but now we know one thing for sure there are some more positives there are"
+    },
+    {
+      "start": 871.019,
+      "duration": 7.5,
+      "text": "some more positives who have to be taken care of now where are the positive"
+    },
+    {
+      "start": 876.0,
+      "duration": 6.0,
+      "text": "starting info if there were two if there were two positives and two negatives"
+    },
+    {
+      "start": 879.959,
+      "duration": 6.361,
+      "text": "which are placed in the correct order it will start from the second index in the"
+    },
+    {
+      "start": 884.22,
+      "duration": 5.82,
+      "text": "positive array so let's start from the second index in the positive array and"
+    },
+    {
+      "start": 888.06,
+      "duration": 7.92,
+      "text": "it's very simple and then I'll go till positive dot size"
+    },
+    {
+      "start": 892.26,
+      "duration": 8.939,
+      "text": "I plus plus and they will take place at which place an array so can I say if"
+    },
+    {
+      "start": 899.1,
+      "duration": 6.359,
+      "text": "there are two negatives two positive they would have taken the first four"
+    },
+    {
+      "start": 903.06,
+      "duration": 11.16,
+      "text": "places so the place where I will start off is index 4 index equal to positive I"
+    },
+    {
+      "start": 911.88,
+      "duration": 6.42,
+      "text": "and then I can go ahead and move index plus plus simple so this is an extra"
+    },
+    {
+      "start": 916.74,
+      "duration": 7.2,
+      "text": "addition of code that you have to do extra addition to fill the remaining"
+    },
+    {
+      "start": 921.3,
+      "duration": 6.12,
+      "text": "values to fill the remaining values I hope you have understood this"
+    },
+    {
+      "start": 925.62,
+      "duration": 5.94,
+      "text": "okay so coming back to the code editor let's quickly code this up so what do we"
+    },
+    {
+      "start": 929.82,
+      "duration": 5.639,
+      "text": "know we need to store positives and negatives so we need two radar"
+    },
+    {
+      "start": 933.3,
+      "duration": 5.76,
+      "text": "structures positive and negatives then what we know is we have to go through"
+    },
+    {
+      "start": 937.139,
+      "duration": 6.361,
+      "text": "the entire array so we need the size of the array so let's take a DOT size this"
+    },
+    {
+      "start": 941.82,
+      "duration": 6.78,
+      "text": "will give me the size of the array now let's quickly I trade click this okay I"
+    },
+    {
+      "start": 946.139,
+      "duration": 8.341,
+      "text": "have iterated like this what will be my next job I'll say okay if array of I is"
+    },
+    {
+      "start": 952.26,
+      "duration": 6.42,
+      "text": "greater than 0 it's a positive otherwise it's a negative and in this case what"
+    },
+    {
+      "start": 956.699,
+      "duration": 4.681,
+      "text": "I'll do is I'll say positive dot push back"
+    },
+    {
+      "start": 959.459,
+      "duration": 7.261,
+      "text": "basically I'll store it in the positive list add fi"
+    },
+    {
+      "start": 963.42,
+      "duration": 9.3,
+      "text": "or else I will say negative dot push back a of I so this will make sure we"
+    },
+    {
+      "start": 970.68,
+      "duration": 5.219,
+      "text": "have the positives stored in the relative order and positive and the"
+    },
+    {
+      "start": 974.339,
+      "duration": 6.601,
+      "text": "negative stored in the relative order in Nikita now we know one thing there can"
+    },
+    {
+      "start": 977.94,
+      "duration": 7.259,
+      "text": "be two cases if positive is greater than negative"
+    },
+    {
+      "start": 983.04,
+      "duration": 5.88,
+      "text": "right or else it can be the other case where negative is greater and this will"
+    },
+    {
+      "start": 987.12,
+      "duration": 6.24,
+      "text": "cover the equal to case as well when negatives are equal to positive if this"
+    },
+    {
+      "start": 991.139,
+      "duration": 7.2,
+      "text": "is the case what will you do we know negatives are the limited guys so we'll"
+    },
+    {
+      "start": 996.3,
+      "duration": 5.52,
+      "text": "just go for those many those many negatives we will just go for those very"
+    },
+    {
+      "start": 1000.38,
+      "duration": 5.22,
+      "text": "negatives so let's go for those many negatives"
+    },
+    {
+      "start": 1003.199,
+      "duration": 5.7,
+      "text": "and for so those many negatives are there those many positives will also be"
+    },
+    {
+      "start": 1007.22,
+      "duration": 7.799,
+      "text": "there so let's quickly go into the array and say okay in the even place can you"
+    },
+    {
+      "start": 1011.66,
+      "duration": 7.44,
+      "text": "take the positive of I and in the odd place can you take the negative offer"
+    },
+    {
+      "start": 1017.24,
+      "duration": 5.039,
+      "text": "perfect you remember this we have already explained it The Brute Force"
+    },
+    {
+      "start": 1020.48,
+      "duration": 6.3,
+      "text": "solution 2 into y will be there even into I plus 1 will be dot so this will"
+    },
+    {
+      "start": 1024.62,
+      "duration": 8.52,
+      "text": "make sure so if the negatives are two four elements are done two from negative"
+    },
+    {
+      "start": 1029.12,
+      "duration": 8.339,
+      "text": "two from positive how many how many uh positives are left in this example this"
+    },
+    {
+      "start": 1035.419,
+      "duration": 5.101,
+      "text": "many so you start from the second index in the positive array it starts with the"
+    },
+    {
+      "start": 1039.14,
+      "duration": 7.14,
+      "text": "second index in the positive array what is 2 size of the negative just take it"
+    },
+    {
+      "start": 1043.64,
+      "duration": 7.02,
+      "text": "so you start from the negative dot size"
+    },
+    {
+      "start": 1047.959,
+      "duration": 6.001,
+      "text": "and how long do you go till positive dot size"
+    },
+    {
+      "start": 1051.86,
+      "duration": 6.96,
+      "text": "because those when you are left and which index do you start"
+    },
+    {
+      "start": 1056.36,
+      "duration": 5.939,
+      "text": "a switch index do you start on in the array so can I say if I'm taking two"
+    },
+    {
+      "start": 1060.919,
+      "duration": 6.661,
+      "text": "elements from here two elements from here and I'm taking the first four which"
+    },
+    {
+      "start": 1065.24,
+      "duration": 7.14,
+      "text": "is index 0 1 2 3 so the index that I start is 4 which is nothing but the size"
+    },
+    {
+      "start": 1070.34,
+      "duration": 6.839,
+      "text": "of negative into two size of negative into two so against the size of negative"
+    },
+    {
+      "start": 1074.299,
+      "duration": 9.181,
+      "text": "negative size can you do n into two perfect and now what I'll do is a array"
+    },
+    {
+      "start": 1080.12,
+      "duration": 8.76,
+      "text": "of index can you take the positive of I and after that can you move index plus"
+    },
+    {
+      "start": 1085.96,
+      "duration": 7.66,
+      "text": "quite simple this will make sure this is done and can I do the same thing for the"
+    },
+    {
+      "start": 1091.76,
+      "duration": 5.94,
+      "text": "else I'll quickly do the same thing for the else as well so in the else can I"
+    },
+    {
+      "start": 1095.6,
+      "duration": 6.06,
+      "text": "see this this will be opposite so I'll just quickly copy paste this can I say"
+    },
+    {
+      "start": 1099.5,
+      "duration": 7.02,
+      "text": "this will be positive I can and the remaining elements can I see it will be"
+    },
+    {
+      "start": 1103.94,
+      "duration": 7.2,
+      "text": "just though just the opposite which is instead of this it will be from here"
+    },
+    {
+      "start": 1108.86,
+      "duration": 6.42,
+      "text": "really from here this will be from negative and this will always take from"
+    },
+    {
+      "start": 1113.419,
+      "duration": 7.861,
+      "text": "negative because this time it's opposite and if they are equal this array will"
+    },
+    {
+      "start": 1118.88,
+      "duration": 6.299,
+      "text": "never execute if they equal will be done and dusted from here and this will never"
+    },
+    {
+      "start": 1122.78,
+      "duration": 5.58,
+      "text": "get executed once you've done this can you return the same array because in the"
+    },
+    {
+      "start": 1126.98,
+      "duration": 5.1,
+      "text": "same array you did the changes so you can return the same array so I can"
+    },
+    {
+      "start": 1130.28,
+      "duration": 6.6,
+      "text": "quickly go and run this off and see if it is running fine should okay one go"
+    },
+    {
+      "start": 1134.48,
+      "duration": 6.319,
+      "text": "and error long code impressive so let's discuss the time complexity for the"
+    },
+    {
+      "start": 1138.26,
+      "duration": 2.539,
+      "text": "second variety"
+    },
+    {
+      "start": 1141.46,
+      "duration": 7.66,
+      "text": "iteration to basically get all the positives and negatives and then can I"
+    },
+    {
+      "start": 1146.48,
+      "duration": 7.439,
+      "text": "say I'm running a loop for minimum of the positives or negatives we'll decode"
+    },
+    {
+      "start": 1151.88,
+      "duration": 9.179,
+      "text": "this afterwards yes we are running and then can I say I am running for"
+    },
+    {
+      "start": 1156.46,
+      "duration": 11.62,
+      "text": "leftovers I'm running for the leftovers yes I can now if I have to decode this"
+    },
+    {
+      "start": 1164.6,
+      "duration": 7.98,
+      "text": "let's decode the minimal value of this and the max value of this we know this"
+    },
+    {
+      "start": 1170.72,
+      "duration": 7.02,
+      "text": "is for sure first we run for minimums then whatever our leftover speed up so"
+    },
+    {
+      "start": 1175.64,
+      "duration": 7.26,
+      "text": "what can be the minimum of this like what can be the minimum time it runs I"
+    },
+    {
+      "start": 1180.02,
+      "duration": 7.26,
+      "text": "say all positives when I say all are negatives so either I say this is 0 I"
+    },
+    {
+      "start": 1185.539,
+      "duration": 6.661,
+      "text": "say this is 0 there are no negative or there are no positives in that case this"
+    },
+    {
+      "start": 1190.1,
+      "duration": 5.939,
+      "text": "one will become Big O of 0 but the leftovers will be big of n can I say"
+    },
+    {
+      "start": 1194.12,
+      "duration": 6.0,
+      "text": "this there are still leftovers of B go of n because there are no positives and"
+    },
+    {
+      "start": 1198.44,
+      "duration": 7.32,
+      "text": "I have to still put all the negatives by running a loop what can be the max like"
+    },
+    {
+      "start": 1202.82,
+      "duration": 7.979,
+      "text": "what can be the max of this guy the max of this guy can be this is n by 2 this"
+    },
+    {
+      "start": 1208.58,
+      "duration": 6.18,
+      "text": "is n by 2 because imagine they are equally divided they equally divided"
+    },
+    {
+      "start": 1212.419,
+      "duration": 8.821,
+      "text": "then the leftovers will be zero so what I can say is this"
+    },
+    {
+      "start": 1217.94,
+      "duration": 8.64,
+      "text": "particular thing has a worst complexity of B go offend when everything is"
+    },
+    {
+      "start": 1224.179,
+      "duration": 9.24,
+      "text": "positive or everything is negative and this is for the first iteration so this"
+    },
+    {
+      "start": 1228.74,
+      "duration": 8.939,
+      "text": "boils down to B go off to n got it what about the space complexity we go of n y"
+    },
+    {
+      "start": 1235.7,
+      "duration": 7.62,
+      "text": "because we are storing all the positives and all the negatives I hope I'm"
+    },
+    {
+      "start": 1240.26,
+      "duration": 6.779,
+      "text": "understood and going back to the first variety of the problem in the first"
+    },
+    {
+      "start": 1245.179,
+      "duration": 6.721,
+      "text": "variety I did say that the Brute Force solution is taking to an it is knocked"
+    },
+    {
+      "start": 1248.72,
+      "duration": 7.199,
+      "text": "just taking n plus n by 2 because the second Loop we are running for n by two"
+    },
+    {
+      "start": 1253.82,
+      "duration": 6.54,
+      "text": "times whereas n plus n by 2 that was a typo from my n but I hope I understood"
+    },
+    {
+      "start": 1258.14,
+      "duration": 5.58,
+      "text": "right so this is how we can solve the second variety as well"
+    },
+    {
+      "start": 1262.16,
+      "duration": 4.68,
+      "text": "so going back to the sheet I can just see that this is done and I hope you've"
+    },
+    {
+      "start": 1265.58,
+      "duration": 5.099,
+      "text": "understood everything so just in case you have please please do consider"
+    },
+    {
+      "start": 1268.64,
+      "duration": 4.919,
+      "text": "giving me a like because it won't cost you anything but it will definitely"
+    },
+    {
+      "start": 1272.0,
+      "duration": 4.86,
+      "text": "motivate me to make more and more videos and to continue our tradition please do"
+    },
+    {
+      "start": 1275.66,
+      "duration": 4.08,
+      "text": "comment understood so that I understand that you're understanding everything and"
+    },
+    {
+      "start": 1278.48,
+      "duration": 4.439,
+      "text": "you haven't followed me on all social media handles LinkedIn Instagram Twitter"
+    },
+    {
+      "start": 1281.6,
+      "duration": 4.38,
+      "text": "all the links will be in the description or do try out the problem from the"
+    },
+    {
+      "start": 1284.419,
+      "duration": 4.081,
+      "text": "problem Link in the description and here with this I'll be wrapping up this video"
+    },
+    {
+      "start": 1287.0,
+      "duration": 4.539,
+      "text": "Let's be in some other videos [Music]"
+    },
+    {
+      "start": 1292.34,
+      "duration": 6.199,
+      "text": "forget your golden I will find the lighting"
+    }
+  ]
+}

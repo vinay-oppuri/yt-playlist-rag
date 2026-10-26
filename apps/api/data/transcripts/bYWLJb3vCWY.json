@@ -1,0 +1,2257 @@
+{
+  "video_id": "bYWLJb3vCWY",
+  "title": "Find element that appears once | Find missing number | Max Consecutive number of 1's | Arrays Part-3",
+  "total_segments": 450,
+  "segments": [
+    {
+      "start": 3.06,
+      "duration": 4.92,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.299,
+      "duration": 5.641,
+      "text": "so this is another lecture from the stripers A2Z DSA course just in case"
+    },
+    {
+      "start": 10.62,
+      "duration": 5.4,
+      "text": "you're for the first time here this is world's most in-depth course on DS algo"
+    },
+    {
+      "start": 14.34,
+      "duration": 7.26,
+      "text": "why do I see that because in this course I'll be covering over 455 modules and we"
+    },
+    {
+      "start": 18.9,
+      "duration": 6.9,
+      "text": "will be solving more than 400 plus problems you can go across the Internet"
+    },
+    {
+      "start": 23.58,
+      "duration": 6.959,
+      "text": "by any of the paid courses on DS algo none of them will be covering DS algo in"
+    },
+    {
+      "start": 28.619,
+      "duration": 6.181,
+      "text": "such depth so once you complete this particular course you can actually clear"
+    },
+    {
+      "start": 32.22,
+      "duration": 7.92,
+      "text": "any of the DS algorithms in any of the companies in any part of the world so"
+    },
+    {
+      "start": 37.5,
+      "duration": 7.26,
+      "text": "till now we have covered until step 3.1 this particular problem in this video I"
+    },
+    {
+      "start": 42.48,
+      "duration": 6.12,
+      "text": "will be covering all these five problems in case you want a solution for a"
+    },
+    {
+      "start": 46.98,
+      "duration": 5.759,
+      "text": "particular problem the timestamps will be there you can switch between problems"
+    },
+    {
+      "start": 50.82,
+      "duration": 5.28,
+      "text": "if you want to do that so without waiting let's get started with the first"
+    },
+    {
+      "start": 54.42,
+      "duration": 6.959,
+      "text": "problem that is finding missing number in an array so what does the problem"
+    },
+    {
+      "start": 58.32,
+      "duration": 10.76,
+      "text": "State the problem States you'll be given an end and you'll be given n minus 1"
+    },
+    {
+      "start": 65.04,
+      "duration": 11.399,
+      "text": "numbers okay so these n minus 1 numbers will be containing numbers between 1 to"
+    },
+    {
+      "start": 73.26,
+      "duration": 9.06,
+      "text": "n so if you see one is there 2 is there 4 is there 5 is there who is not there"
+    },
+    {
+      "start": 78.96,
+      "duration": 9.96,
+      "text": "yes 3 is not there so your answer will be 3 because 3 is not here since 3 is"
+    },
+    {
+      "start": 86.22,
+      "duration": 9.899,
+      "text": "not here the answer will be 3 so you have to find the number that is not"
+    },
+    {
+      "start": 91.38,
+      "duration": 13.199,
+      "text": "there between 1 to n in this case 1 to 5 so 1 2 3 4 5 1 was there two was there 4"
+    },
+    {
+      "start": 101.7,
+      "duration": 7.26,
+      "text": "was there 5 was there 3 was not there so this is what the problem States so if"
+    },
+    {
+      "start": 107.4,
+      "duration": 5.64,
+      "text": "this question comes up in an interview the first solution that you will be"
+    },
+    {
+      "start": 110.939,
+      "duration": 6.241,
+      "text": "giving is definitely the Brute Force solution because you will never jump to"
+    },
+    {
+      "start": 115.259,
+      "duration": 5.521,
+      "text": "the optimal solution because it's you who has to drive the interview so what"
+    },
+    {
+      "start": 118.979,
+      "duration": 6.0,
+      "text": "is the Brute Force solution The Brute Force will be like okay"
+    },
+    {
+      "start": 122.64,
+      "duration": 8.52,
+      "text": "I know the numbers will be from 1 to n so be like cool let's take one does one"
+    },
+    {
+      "start": 128.28,
+      "duration": 8.88,
+      "text": "exist yes so one is not my answer let's take two does two exist yes 2 is not my"
+    },
+    {
+      "start": 134.52,
+      "duration": 9.06,
+      "text": "answer let's take three does three exist no so 3 is my answer so what I will do"
+    },
+    {
+      "start": 140.7,
+      "duration": 8.399,
+      "text": "is I will take every number and I'll check in the array if it exists or not"
+    },
+    {
+      "start": 145.56,
+      "duration": 7.8,
+      "text": "by linear search and if it doesn't then that's my answer so that will be the"
+    },
+    {
+      "start": 150.959,
+      "duration": 7.14,
+      "text": "initial Brute Force solution how will the code look like let's check it out so"
+    },
+    {
+      "start": 155.76,
+      "duration": 8.46,
+      "text": "basically you say for I know the numbers will be from I till n that's something"
+    },
+    {
+      "start": 162.12,
+      "duration": 9.06,
+      "text": "which I know for sure now let's do a linear Search for INT J equal to 0 J"
+    },
+    {
+      "start": 168.599,
+      "duration": 10.081,
+      "text": "lesser than I know the size is n minus 1. so JS is an N minus 1 and J plus plus"
+    },
+    {
+      "start": 174.54,
+      "duration": 11.1,
+      "text": "what I do is I know the number is I if array of J is like we can just scroll"
+    },
+    {
+      "start": 182.879,
+      "duration": 7.741,
+      "text": "through and figure out figure it out if it does exist so flag can be said as"
+    },
+    {
+      "start": 188.64,
+      "duration": 8.519,
+      "text": "maybe zero and if this is equal to I I can say that"
+    },
+    {
+      "start": 193.86,
+      "duration": 6.78,
+      "text": "yes it does exist and you can break out quite simple and this can be inside the"
+    },
+    {
+      "start": 199.92,
+      "duration": 7.5,
+      "text": "if and outside this four"
+    },
+    {
+      "start": 203.58,
+      "duration": 8.34,
+      "text": "I can say if flag is still zero which means this number was not there because"
+    },
+    {
+      "start": 209.819,
+      "duration": 7.801,
+      "text": "if this number would have been there at any moment flag would have turned to one"
+    },
+    {
+      "start": 214.319,
+      "duration": 8.521,
+      "text": "so if the number is not there I know my answer like you can directly go ahead"
+    },
+    {
+      "start": 218.94,
+      "duration": 7.92,
+      "text": "and say I know my answer is I quite simple"
+    },
+    {
+      "start": 223.739,
+      "duration": 7.021,
+      "text": "you pick up one you check entirely does it exist you pick up two you check and"
+    },
+    {
+      "start": 229.019,
+      "duration": 5.881,
+      "text": "dial it does it exist you pick up three you check and dial it doesn't exist or"
+    },
+    {
+      "start": 232.44,
+      "duration": 8.76,
+      "text": "not so what will be the time complexity two Loops one for n they are the near"
+    },
+    {
+      "start": 238.2,
+      "duration": 8.399,
+      "text": "about 10. so can I say two Loops means the time complexity the worst case if I"
+    },
+    {
+      "start": 244.14,
+      "duration": 8.64,
+      "text": "if the last number is not found and this gets executed at the last last assume 5"
+    },
+    {
+      "start": 250.68,
+      "duration": 6.72,
+      "text": "was not here assume 5 was not here and three was here in this case the loop"
+    },
+    {
+      "start": 255.12,
+      "duration": 7.38,
+      "text": "will entirely run from one to five and when it comes to five it will not find"
+    },
+    {
+      "start": 259.56,
+      "duration": 7.74,
+      "text": "five so the worst case will be the slope runs entirely and this Loops keep on it"
+    },
+    {
+      "start": 265.259,
+      "duration": 6.241,
+      "text": "keeps on running every time like that's that's nearly the worst case not exactly"
+    },
+    {
+      "start": 269.699,
+      "duration": 6.241,
+      "text": "the worst case because a lot of times you'll find here so the loop will break"
+    },
+    {
+      "start": 273.54,
+      "duration": 7.68,
+      "text": "so I can say the worst case which is again very impractical"
+    },
+    {
+      "start": 277.919,
+      "duration": 7.321,
+      "text": "the worst case is kind of n Square again it's a hypothetical scenario because"
+    },
+    {
+      "start": 283.08,
+      "duration": 6.24,
+      "text": "when you're looking for one you found one here and you broke out when you are"
+    },
+    {
+      "start": 287.4,
+      "duration": 5.4,
+      "text": "looking for two you found two here you broke out so"
+    },
+    {
+      "start": 290.52,
+      "duration": 7.02,
+      "text": "this will never go till the end so it's a hypothetical scenario got it that's"
+    },
+    {
+      "start": 295.62,
+      "duration": 6.72,
+      "text": "how you explain to the interview and the space complexity used as beakoff"
+    },
+    {
+      "start": 299.88,
+      "duration": 5.879,
+      "text": "one that's my brute for solution this is how you should explain to the"
+    },
+    {
+      "start": 303.78,
+      "duration": 6.3,
+      "text": "interviewer so that your thought process your concept Clarity is clearly visible"
+    },
+    {
+      "start": 308.52,
+      "duration": 4.619,
+      "text": "to the interview so when you tell the Brute Force solution to the interviewer"
+    },
+    {
+      "start": 311.52,
+      "duration": 5.22,
+      "text": "there'll definitely not be happy and they'll ask you to optimize it that's"
+    },
+    {
+      "start": 314.94,
+      "duration": 7.62,
+      "text": "when you go across and give him the better solution not the optimal one and"
+    },
+    {
+      "start": 319.139,
+      "duration": 8.821,
+      "text": "you say maybe I can use hashic and how will you use hashing so you know the"
+    },
+    {
+      "start": 324.9,
+      "duration": 7.799,
+      "text": "numbers are between one to five and if you want to Hash five somewhere you need"
+    },
+    {
+      "start": 330.419,
+      "duration": 8.041,
+      "text": "that fifth index so if you need the fifth index you will have to declare an"
+    },
+    {
+      "start": 334.74,
+      "duration": 8.28,
+      "text": "array of size 6 as your hash array so in the hash array I will declare the array"
+    },
+    {
+      "start": 340.32,
+      "duration": 7.02,
+      "text": "of size six I go ahead and declare the array of size six if you declare the"
+    },
+    {
+      "start": 344.88,
+      "duration": 6.659,
+      "text": "array hash array of size 6 then you'll get the fifth index which will be your"
+    },
+    {
+      "start": 348.96,
+      "duration": 7.92,
+      "text": "last index now what you will do is once you've declared the hashtag you'll start"
+    },
+    {
+      "start": 353.46,
+      "duration": 9.179,
+      "text": "iterating one it'll go and Mark one and rest everyone on initially would be zero"
+    },
+    {
+      "start": 359.699,
+      "duration": 7.801,
+      "text": "then you'll go to 2 mark it as one then we'll go to four he'll mark it as"
+    },
+    {
+      "start": 364.86,
+      "duration": 8.88,
+      "text": "one then you'll go to Five it'll mark it as one done once you have marked"
+    },
+    {
+      "start": 370.32,
+      "duration": 11.28,
+      "text": "everything has one you will reiterate from one to five you will I trade from"
+    },
+    {
+      "start": 378.6,
+      "duration": 7.8,
+      "text": "one to five in the hash array and you'll figure out"
+    },
+    {
+      "start": 382.56,
+      "duration": 9.3,
+      "text": "who is not marked so when you go this is marked this is marked oh wait this is"
+    },
+    {
+      "start": 389.16,
+      "duration": 7.259,
+      "text": "not marked so three is your number so three is your answer so we can easily"
+    },
+    {
+      "start": 393.78,
+      "duration": 6.96,
+      "text": "solve it using hashing as well let's look at the code the code is going to be"
+    },
+    {
+      "start": 398.4,
+      "duration": 7.32,
+      "text": "super simple I'd be like okay hash of size n plus 1 and everything will be"
+    },
+    {
+      "start": 403.56,
+      "duration": 7.8,
+      "text": "initially zero and then we will be going across and saying let's go across the"
+    },
+    {
+      "start": 408.84,
+      "duration": 7.44,
+      "text": "array and I know for that array element I have to mark in the hash array so"
+    },
+    {
+      "start": 413.88,
+      "duration": 6.78,
+      "text": "array element is array of I so I go to the hash and say plus plus or I can say"
+    },
+    {
+      "start": 418.44,
+      "duration": 7.979,
+      "text": "mark equal to one so I can I can simply say mark equal to one done once I've"
+    },
+    {
+      "start": 423.18,
+      "duration": 10.079,
+      "text": "done this I know the numbers are from one to n so I'll go from one to n and"
+    },
+    {
+      "start": 428.699,
+      "duration": 10.081,
+      "text": "I'll say if my hash of I if my hash of I is equal to equal to 0 that is going to"
+    },
+    {
+      "start": 436.38,
+      "duration": 7.319,
+      "text": "be my answer that is going to be my answer and this will be your answer"
+    },
+    {
+      "start": 440.46,
+      "duration": 9.0,
+      "text": "whenever you find out the hashtag 0 so what will be the time complexity let's"
+    },
+    {
+      "start": 445.8,
+      "duration": 9.839,
+      "text": "analyze a single Big O of n Loop and another bigot of n Loop so it's a Time"
+    },
+    {
+      "start": 452.22,
+      "duration": 7.379,
+      "text": "complexity of 2N at the worst case so if I ask you about the space complexity"
+    },
+    {
+      "start": 457.139,
+      "duration": 6.78,
+      "text": "that's definitely Big O of n because we are using a hash array in order to Hash"
+    },
+    {
+      "start": 462.3,
+      "duration": 7.32,
+      "text": "all the elements so that we can remember which one was not present got it so that"
+    },
+    {
+      "start": 467.699,
+      "duration": 5.161,
+      "text": "will be your better solution so when the interview again here's the better"
+    },
+    {
+      "start": 470.58,
+      "duration": 6.899,
+      "text": "solution he'll be like okay we did work on the time complexity but now I'm not"
+    },
+    {
+      "start": 475.08,
+      "duration": 5.82,
+      "text": "impressed with the space can we optimize the space complexity or not now this is"
+    },
+    {
+      "start": 479.46,
+      "duration": 6.0,
+      "text": "when you will come up with the optimal solution now remember one thing this"
+    },
+    {
+      "start": 483.18,
+      "duration": 8.34,
+      "text": "problem can have two Optimal Solutions one is the sum the other one is the zone"
+    },
+    {
+      "start": 489.479,
+      "duration": 7.62,
+      "text": "and I'll tell you both and I'll tell you the minor difference between them so"
+    },
+    {
+      "start": 494.099,
+      "duration": 9.121,
+      "text": "something I know for sure is if n is 5 the numbers in them will be one two"
+    },
+    {
+      "start": 500.099,
+      "duration": 8.28,
+      "text": "three four five and if I sum them up if I sum them up I know in order to sum up"
+    },
+    {
+      "start": 505.979,
+      "duration": 8.341,
+      "text": "the first and natural numbers the formula goes as n into n plus 1 by 2."
+    },
+    {
+      "start": 511.62,
+      "duration": 8.82,
+      "text": "very basic maths so it's like five into six by two so the summation is 15 you"
+    },
+    {
+      "start": 517.62,
+      "duration": 7.68,
+      "text": "can also sum it up you will get 15. so that is the summation of the first n"
+    },
+    {
+      "start": 522.06,
+      "duration": 8.16,
+      "text": "natural numbers now I will go across and I will take an S2 and I'll start"
+    },
+    {
+      "start": 527.22,
+      "duration": 8.04,
+      "text": "iterating okay one maybe I'll just erase this so that I can reiterate so I'll"
+    },
+    {
+      "start": 532.5,
+      "duration": 7.98,
+      "text": "I'll go to one I'd like add up one so one added then I'll go to 2 add up 2 so"
+    },
+    {
+      "start": 538.68,
+      "duration": 7.26,
+      "text": "this will become three then I'll go to 4 add a 4 that will become seven then I'll"
+    },
+    {
+      "start": 543.48,
+      "duration": 8.72,
+      "text": "go to Five add a five so I'll be like okay 12 so we have 12. now"
+    },
+    {
+      "start": 549.72,
+      "duration": 8.04,
+      "text": "if one number is missing then can I say 15 and 12 the difference"
+    },
+    {
+      "start": 555.6,
+      "duration": 6.96,
+      "text": "will be that one number because you summed up everyone whom did you not sum"
+    },
+    {
+      "start": 560.04,
+      "duration": 7.08,
+      "text": "up the one number that is missing so if you have to take the summation of the"
+    },
+    {
+      "start": 564.24,
+      "duration": 9.18,
+      "text": "first n and summation of one missing so what will be a missing number yes your"
+    },
+    {
+      "start": 569.76,
+      "duration": 8.759,
+      "text": "missing number will be sum minus S2 your missing number will be sum minus S2 so"
+    },
+    {
+      "start": 576.3,
+      "duration": 8.28,
+      "text": "it's very simple use a summation to have formula of n into n plus 1 by 2."
+    },
+    {
+      "start": 581.88,
+      "duration": 7.98,
+      "text": "and then you say for I equal like you can keep S2 equal to 0 I equal to 0 to n"
+    },
+    {
+      "start": 587.399,
+      "duration": 6.481,
+      "text": "and you can keep S2 Plus equal to array of I and your number will be quite"
+    },
+    {
+      "start": 592.86,
+      "duration": 5.94,
+      "text": "simple summation minus S2 will be your number"
+    },
+    {
+      "start": 597.12,
+      "duration": 7.08,
+      "text": "very very simple so this is how the summation works what"
+    },
+    {
+      "start": 602.399,
+      "duration": 6.961,
+      "text": "will be the time complexity we're just running a single Loop in"
+    },
+    {
+      "start": 606.42,
+      "duration": 7.979,
+      "text": "order to submit all the r elements this is a straight away formula so the time"
+    },
+    {
+      "start": 612.06,
+      "duration": 8.88,
+      "text": "complexity is Big of N and the space complexity is we go off one is it better"
+    },
+    {
+      "start": 617.399,
+      "duration": 9.181,
+      "text": "like this this is the best we can do but we can still do better that is sore"
+    },
+    {
+      "start": 623.58,
+      "duration": 7.92,
+      "text": "now you might ask me but striver how can you do a better website that's when I'll"
+    },
+    {
+      "start": 629.22,
+      "duration": 6.059,
+      "text": "explain you this let's understand so coming to the second optimal solution"
+    },
+    {
+      "start": 633.48,
+      "duration": 6.299,
+      "text": "that I was talking about that involves zot now a lot of people might not be"
+    },
+    {
+      "start": 637.8,
+      "duration": 5.94,
+      "text": "knowing zor do not worry I'll be covering zor in depth when I cover the"
+    },
+    {
+      "start": 641.58,
+      "duration": 8.52,
+      "text": "bit manipulation part but as of now just understand one concept of Zord that is"
+    },
+    {
+      "start": 646.92,
+      "duration": 9.12,
+      "text": "if you solve same numbers result of that is always zero what do I mean by same"
+    },
+    {
+      "start": 653.579,
+      "duration": 6.721,
+      "text": "numbers if you say twos or two it'll be zero if it's a fives or five it'll be"
+    },
+    {
+      "start": 657.959,
+      "duration": 7.32,
+      "text": "zero if you say twos or two zor five zero five that will also be zero why"
+    },
+    {
+      "start": 662.459,
+      "duration": 8.161,
+      "text": "this in itself is zero this in itself is zero zeros or zero will also be zero got"
+    },
+    {
+      "start": 668.459,
+      "duration": 8.281,
+      "text": "it if you say something like twos or twos or twos or two"
+    },
+    {
+      "start": 672.12,
+      "duration": 10.92,
+      "text": "then it will be like 0 or 0 that will be zero if I say twos or twos or two Zod 2"
+    },
+    {
+      "start": 680.279,
+      "duration": 8.101,
+      "text": "zod2 it'll be like this is zero this is zero Zord weight two so this is zero"
+    },
+    {
+      "start": 685.62,
+      "duration": 5.88,
+      "text": "Zord weight 2 and 0 is odd with any number is the number itself is the"
+    },
+    {
+      "start": 690.36,
+      "duration": 4.919,
+      "text": "number itself this is the thing that you have to"
+    },
+    {
+      "start": 693.48,
+      "duration": 6.84,
+      "text": "remember nothing else that's the thing that you have to remember"
+    },
+    {
+      "start": 696.6,
+      "duration": 12.12,
+      "text": "so coming to the most optimal solution so I hope you understood till now"
+    },
+    {
+      "start": 705.0,
+      "duration": 8.88,
+      "text": "n is 5. so when I say n is 5 I know n natural numbers it's like one"
+    },
+    {
+      "start": 711.12,
+      "duration": 9.36,
+      "text": "two three four five I know five natural numbers are these and if I write this"
+    },
+    {
+      "start": 716.399,
+      "duration": 10.261,
+      "text": "will it be like one two four five do you can you somehow relate this to solve you"
+    },
+    {
+      "start": 723.06,
+      "duration": 8.94,
+      "text": "can you'll say striver what I can say is there are seen"
+    },
+    {
+      "start": 728.82,
+      "duration": 7.8,
+      "text": "so if I if I try to do a sword each of them will be zero and only this guy will"
+    },
+    {
+      "start": 733.74,
+      "duration": 8.099,
+      "text": "be left because I know zeros or any number is any number"
+    },
+    {
+      "start": 738.72,
+      "duration": 9.78,
+      "text": "I'm like yeah that's true so what I will do is I'm like okay fine let's do one"
+    },
+    {
+      "start": 744.6,
+      "duration": 10.14,
+      "text": "thing let's take a variables or one and in that in that do this"
+    },
+    {
+      "start": 752.339,
+      "duration": 6.481,
+      "text": "and remember when you do this there will be a numbers to it"
+    },
+    {
+      "start": 756.6,
+      "duration": 7.2,
+      "text": "so we have understood right okay it's all one is done what about sort 2. I"
+    },
+    {
+      "start": 761.459,
+      "duration": 6.12,
+      "text": "will take Zord 2 and I'll be like I trade through the array let's iterate"
+    },
+    {
+      "start": 765.899,
+      "duration": 6.661,
+      "text": "through the array so if I iterate through the array one is at first then"
+    },
+    {
+      "start": 770.339,
+      "duration": 7.081,
+      "text": "there is two then there is four then there is five so Zod 2 is computed this"
+    },
+    {
+      "start": 775.68,
+      "duration": 6.42,
+      "text": "will be a certain number which will be computed but in the back of the number"
+    },
+    {
+      "start": 779.399,
+      "duration": 7.321,
+      "text": "the computer knows the computer knows that this is what it means"
+    },
+    {
+      "start": 784.38,
+      "duration": 7.74,
+      "text": "mathematically I know a number will be generated but mathematically it still"
+    },
+    {
+      "start": 788.82,
+      "duration": 9.6,
+      "text": "means this so what will happen is if you do a zor of one"
+    },
+    {
+      "start": 794.639,
+      "duration": 8.341,
+      "text": "of two what will happen yes yes"
+    },
+    {
+      "start": 799.62,
+      "duration": 8.0,
+      "text": "this and this will be together which will be 0."
+    },
+    {
+      "start": 805.44,
+      "duration": 7.199,
+      "text": "2 and 2 will be together which will be 0 then 3 and"
+    },
+    {
+      "start": 810.42,
+      "duration": 6.479,
+      "text": "there's no one with three so three will be alone"
+    },
+    {
+      "start": 813.899,
+      "duration": 9.0,
+      "text": "4 and 4 will be 0 and there is 5 which will again be 0 5 and 5. so this 3 is"
+    },
+    {
+      "start": 820.019,
+      "duration": 8.76,
+      "text": "alone so apparently zeros or three will be three so you get"
+    },
+    {
+      "start": 825.66,
+      "duration": 8.1,
+      "text": "the number three because they will cut off they will cut off each other"
+    },
+    {
+      "start": 832.019,
+      "duration": 6.421,
+      "text": "they will cut off each other and the only number remaining will be three"
+    },
+    {
+      "start": 835.62,
+      "duration": 5.64,
+      "text": "quite simple so in order to implement this how do you write the code they'll"
+    },
+    {
+      "start": 840.42,
+      "duration": 7.14,
+      "text": "be like let's take solve one equal to zero"
+    },
+    {
+      "start": 844.32,
+      "duration": 8.88,
+      "text": "and then we start from sorry one and we go until n and we go like zor one equal"
+    },
+    {
+      "start": 851.339,
+      "duration": 6.841,
+      "text": "to so or one I and I know the array size is"
+    },
+    {
+      "start": 856.26,
+      "duration": 6.6,
+      "text": "like when it's odd two so it's not 2 equal to 0 the array size goes until n"
+    },
+    {
+      "start": 861.36,
+      "duration": 7.82,
+      "text": "minus 1. whether this will be n minus 1."
+    },
+    {
+      "start": 865.32,
+      "duration": 3.86,
+      "text": "and I know zot will be"
+    },
+    {
+      "start": 869.579,
+      "duration": 8.88,
+      "text": "zordos or array of I quite simple design one is computed sort 2 is computed so"
+    },
+    {
+      "start": 876.18,
+      "duration": 7.38,
+      "text": "the answer is or one zor of zot two this will be your missing"
+    },
+    {
+      "start": 882.3,
+      "duration": 5.399,
+      "text": "number can I say this will be your missing number I can and that's what you"
+    },
+    {
+      "start": 885.959,
+      "duration": 4.56,
+      "text": "can easily return fine"
+    },
+    {
+      "start": 888.779,
+      "duration": 5.881,
+      "text": "we have solved the problem where we have returned the answer"
+    },
+    {
+      "start": 892.5,
+      "duration": 7.139,
+      "text": "now the question comes up but driver we are using two for loops hence the"
+    },
+    {
+      "start": 897.12,
+      "duration": 8.399,
+      "text": "complexity is to n how is this better than this one are like I can still do it"
+    },
+    {
+      "start": 903.6,
+      "duration": 5.82,
+      "text": "up I can still do something okay let's erase this Loop"
+    },
+    {
+      "start": 908.22,
+      "duration": 5.34,
+      "text": "I'm like no"
+    },
+    {
+      "start": 910.62,
+      "duration": 8.279,
+      "text": "I will not run an extra value I will not run an extra Loop in order to compute"
+    },
+    {
+      "start": 915.959,
+      "duration": 9.44,
+      "text": "that I will try to put this all one over here"
+    },
+    {
+      "start": 920.94,
+      "duration": 11.579,
+      "text": "so this Loop is running like if n is 5 this Loop is running from 0 to 3. can I"
+    },
+    {
+      "start": 930.24,
+      "duration": 9.599,
+      "text": "see this this Loop is running from 0 to 3 why because the indexing is 0 1 2 3 so"
+    },
+    {
+      "start": 936.06,
+      "duration": 10.68,
+      "text": "the loop is running from 0 to 3. so if I write something like this"
+    },
+    {
+      "start": 942.0,
+      "duration": 11.22,
+      "text": "zor 1 equal to zor1 zor I plus 1 what will happen the loop that is running"
+    },
+    {
+      "start": 949.38,
+      "duration": 10.44,
+      "text": "from 0 to 3 will end absorbing 1 because instead of 0 I took I plus 1 so it's"
+    },
+    {
+      "start": 956.88,
+      "duration": 6.84,
+      "text": "like 1 0 2 0 3 is also because 0 to 3 means one more so"
+    },
+    {
+      "start": 961.92,
+      "duration": 6.3,
+      "text": "apparently this will mean I'm running from one to four because I"
+    },
+    {
+      "start": 965.699,
+      "duration": 7.681,
+      "text": "did a i plus one so I've absorbed everything in please for sure one but if"
+    },
+    {
+      "start": 971.699,
+      "duration": 8.041,
+      "text": "you remember zor1 was taking everyone till five so five the N"
+    },
+    {
+      "start": 977.16,
+      "duration": 6.66,
+      "text": "the N is not Zord so the end of the day you can say"
+    },
+    {
+      "start": 980.76,
+      "duration": 8.1,
+      "text": "after the for Loop zor1 will have to solve with n as well because it did zot"
+    },
+    {
+      "start": 986.519,
+      "duration": 8.461,
+      "text": "till 4 it requires it once you have done this you can do this so now the we go of"
+    },
+    {
+      "start": 991.44,
+      "duration": 8.399,
+      "text": "2N boils down to B go of N and that's how you explain it to the interview"
+    },
+    {
+      "start": 996.3,
+      "duration": 7.08,
+      "text": "because this is this will tell him about your thought process about your thinking"
+    },
+    {
+      "start": 1001.459,
+      "duration": 8.161,
+      "text": "ability what if done now if I have two which one is better"
+    },
+    {
+      "start": 1006.98,
+      "duration": 6.06,
+      "text": "apparently this one is slightly better why"
+    },
+    {
+      "start": 1010.759,
+      "duration": 7.38,
+      "text": "imagine n is given as 10 to the power 5 and summation is doing n into n plus 1"
+    },
+    {
+      "start": 1015.92,
+      "duration": 8.1,
+      "text": "which means somewhere like 10 to the power 5 plus 1 divided by 2 which is"
+    },
+    {
+      "start": 1021.8,
+      "duration": 7.8,
+      "text": "nearly 10 to the power 10 nearly and this cannot be stored in an integer it"
+    },
+    {
+      "start": 1026.9,
+      "duration": 6.779,
+      "text": "will overflow so you need a bit like bigger data type something like a long"
+    },
+    {
+      "start": 1031.699,
+      "duration": 7.14,
+      "text": "and if you take a bigger data type I'm not saying it is going to take a massive"
+    },
+    {
+      "start": 1035.179,
+      "duration": 9.961,
+      "text": "space slide slight more memory will be required that's why this is better why"
+    },
+    {
+      "start": 1041.6,
+      "duration": 8.88,
+      "text": "I did tell you when we do solve the Zone never exceeds the largest number so at"
+    },
+    {
+      "start": 1048.26,
+      "duration": 7.14,
+      "text": "Max the zor will be 10 to the power 5 it will never exceed thereby the time"
+    },
+    {
+      "start": 1053.12,
+      "duration": 8.16,
+      "text": "complexity is Big off and but using integers we're not using wrongs"
+    },
+    {
+      "start": 1057.5,
+      "duration": 8.76,
+      "text": "it's slightly better got it so this is how you drive the interviewer"
+    },
+    {
+      "start": 1063.74,
+      "duration": 6.72,
+      "text": "from The Brute to the better to the two optimals and you tell him everything"
+    },
+    {
+      "start": 1068.179,
+      "duration": 6.541,
+      "text": "everything that you know and trust me this is where the interviewer gets"
+    },
+    {
+      "start": 1072.38,
+      "duration": 5.64,
+      "text": "impressed that's why I always prefer this method now the interviewer knows"
+    },
+    {
+      "start": 1076.52,
+      "duration": 7.019,
+      "text": "that you know the optimal but when you show all the facets of your thought"
+    },
+    {
+      "start": 1080.84,
+      "duration": 6.78,
+      "text": "process he he knows you know brute you know hashing you know the sum concept"
+    },
+    {
+      "start": 1085.34,
+      "duration": 6.9,
+      "text": "you know the long you know the zor one look you know why is always better you"
+    },
+    {
+      "start": 1090.02,
+      "duration": 6.899,
+      "text": "know everything that's when he says let's hire him so coming back to the"
+    },
+    {
+      "start": 1094.7,
+      "duration": 6.06,
+      "text": "code editor you have the code editor the problem link will be in the description"
+    },
+    {
+      "start": 1098.24,
+      "duration": 9.24,
+      "text": "I've written the same code and the same what I'll do is I just say zor1 as I"
+    },
+    {
+      "start": 1103.34,
+      "duration": 8.1,
+      "text": "said zor1 zor capital n and I've taken the size as this and now I will go ahead"
+    },
+    {
+      "start": 1109.52,
+      "duration": 7.2,
+      "text": "and try to submit this and see if it is running fine or not it is and all the"
+    },
+    {
+      "start": 1114.2,
+      "duration": 6.839,
+      "text": "test cases do pass so I can go back to the sheet and we can mark it because"
+    },
+    {
+      "start": 1119.059,
+      "duration": 6.541,
+      "text": "this is done let's come to the next question which is maximum consecutive"
+    },
+    {
+      "start": 1123.32,
+      "duration": 8.52,
+      "text": "ones so what does the problem State it's very simple maximum consecutive ones you"
+    },
+    {
+      "start": 1128.9,
+      "duration": 7.2,
+      "text": "will be given an array of 0 and once so if I have to look at the consecutiveness"
+    },
+    {
+      "start": 1133.4,
+      "duration": 8.22,
+      "text": "of ones so there are two ones here there are three ones here and there are"
+    },
+    {
+      "start": 1138.26,
+      "duration": 8.159,
+      "text": "two ones here so consecutive ones are these ones so can I say the maximum"
+    },
+    {
+      "start": 1144.559,
+      "duration": 5.641,
+      "text": "consecutive ones is three and that's what you have to tell me is that's what"
+    },
+    {
+      "start": 1148.28,
+      "duration": 5.58,
+      "text": "you have to tell me so the answer is three now how do you solve this problem"
+    },
+    {
+      "start": 1152.059,
+      "duration": 7.261,
+      "text": "so this question comes up in an interview do you go the same way as"
+    },
+    {
+      "start": 1156.08,
+      "duration": 7.02,
+      "text": "brood better optimal now if you start thinking about the group better I think"
+    },
+    {
+      "start": 1160.82,
+      "duration": 6.239,
+      "text": "that will take a lot of time because the optimal solution is very straightforward"
+    },
+    {
+      "start": 1164.96,
+      "duration": 8.82,
+      "text": "so what do you say is as of now I know that there are no ones"
+    },
+    {
+      "start": 1171.02,
+      "duration": 10.68,
+      "text": "I have not figured out any ones I'll keep a counter as zero right what I will"
+    },
+    {
+      "start": 1178.16,
+      "duration": 8.22,
+      "text": "do is I'll start writing okay one increase the counter by one so counter"
+    },
+    {
+      "start": 1184.34,
+      "duration": 8.4,
+      "text": "one that means the consecutiveness is one so the maximum gets updated okay"
+    },
+    {
+      "start": 1189.98,
+      "duration": 8.939,
+      "text": "let's move ahead the counter gets to the maximum gets updated"
+    },
+    {
+      "start": 1194.24,
+      "duration": 9.42,
+      "text": "let's move oh zero wait 0 means is a break there's a break in the"
+    },
+    {
+      "start": 1200.419,
+      "duration": 8.941,
+      "text": "consecutiveness if there is a break do I still count no if there's a break I fall"
+    },
+    {
+      "start": 1206.9,
+      "duration": 5.88,
+      "text": "back to zero because the consecutiveness is broken"
+    },
+    {
+      "start": 1210.679,
+      "duration": 6.36,
+      "text": "so I fall back to zero I'll again continue"
+    },
+    {
+      "start": 1213.74,
+      "duration": 9.9,
+      "text": "one again count but is this one greater than the longest no so I do not replace"
+    },
+    {
+      "start": 1220.28,
+      "duration": 8.639,
+      "text": "then I move again I increase and again move again I increase this time when I"
+    },
+    {
+      "start": 1226.64,
+      "duration": 6.539,
+      "text": "increase I get three so the consecutive mess is three"
+    },
+    {
+      "start": 1230.299,
+      "duration": 8.041,
+      "text": "which will be replaced because now we have three which is better than two"
+    },
+    {
+      "start": 1234.5,
+      "duration": 7.919,
+      "text": "let's move 0 again broken fall back to zero"
+    },
+    {
+      "start": 1240.02,
+      "duration": 4.92,
+      "text": "let's move one let's move"
+    },
+    {
+      "start": 1243.679,
+      "duration": 4.701,
+      "text": "to is 2 greater than maximum"
+    },
+    {
+      "start": 1248.419,
+      "duration": 7.321,
+      "text": "iteration complete when the iteration is complete your maximum"
+    },
+    {
+      "start": 1253.28,
+      "duration": 7.74,
+      "text": "stores the maximum and that's your answer and that's the answer so what is"
+    },
+    {
+      "start": 1257.84,
+      "duration": 9.48,
+      "text": "the time complexity we go of n single iteration with just a minor if"
+    },
+    {
+      "start": 1265.34,
+      "duration": 5.579,
+      "text": "else Loop will do it so if I have to write the code it's very simple you're"
+    },
+    {
+      "start": 1268.82,
+      "duration": 6.96,
+      "text": "given the nums array so what I'll do is I'll keep the maximum as 0 and this is"
+    },
+    {
+      "start": 1273.679,
+      "duration": 7.321,
+      "text": "the answer that I'll return so we can return it perfect and now I can keep the"
+    },
+    {
+      "start": 1277.88,
+      "duration": 8.52,
+      "text": "counter as zero as well so keep the counter as zero now let's iterate for"
+    },
+    {
+      "start": 1283.4,
+      "duration": 9.96,
+      "text": "this so which is like nums dot size and I know if array or rather nums of I"
+    },
+    {
+      "start": 1290.12,
+      "duration": 9.059,
+      "text": "is equal to 1 the counter increases at the maximum will take the maximum of"
+    },
+    {
+      "start": 1295.76,
+      "duration": 9.36,
+      "text": "both if it is not then what happens that means it's a zero I fall back to zero"
+    },
+    {
+      "start": 1301.46,
+      "duration": 7.86,
+      "text": "okay quite simple one is one else and we are pretty much done so I will quickly"
+    },
+    {
+      "start": 1307.4,
+      "duration": 5.639,
+      "text": "go and submit this so if I submit this this is accepted let's come back to the"
+    },
+    {
+      "start": 1311.0,
+      "duration": 6.539,
+      "text": "sheet and I can say that this problem is done now you'll be like wait this is"
+    },
+    {
+      "start": 1315.38,
+      "duration": 6.0,
+      "text": "looking something different yes why because previously there was this"
+    },
+    {
+      "start": 1319.7,
+      "duration": 6.06,
+      "text": "problem find the row with maximum number of ones which I moved into binary search"
+    },
+    {
+      "start": 1323.84,
+      "duration": 5.459,
+      "text": "why this because this problem will be involving time research and I just"
+    },
+    {
+      "start": 1327.62,
+      "duration": 5.7,
+      "text": "realized that I haven't taught you binary search yet so let's move it into"
+    },
+    {
+      "start": 1331.159,
+      "duration": 7.5,
+      "text": "the band research now coming back here we see that this problem has been"
+    },
+    {
+      "start": 1335.9,
+      "duration": 7.5,
+      "text": "splitted into two so this problem is widely searched and I won't be covering"
+    },
+    {
+      "start": 1341.0,
+      "duration": 6.12,
+      "text": "this problem in this video why because I want my channel to be visible I want new"
+    },
+    {
+      "start": 1345.14,
+      "duration": 7.019,
+      "text": "people to discover my channel so I'll be making a separate video where I'll be"
+    },
+    {
+      "start": 1349.1,
+      "duration": 7.079,
+      "text": "covering both of these problems first one is finding the longest sub area with"
+    },
+    {
+      "start": 1354.32,
+      "duration": 7.38,
+      "text": "given sum but just positives in the array the next one is longest Subaru"
+    },
+    {
+      "start": 1359.12,
+      "duration": 7.02,
+      "text": "with given sum which has positives and negatives in the array both of these"
+    },
+    {
+      "start": 1363.26,
+      "duration": 7.5,
+      "text": "I'll be covering in the next video for this video the last problem that I'll be"
+    },
+    {
+      "start": 1367.82,
+      "duration": 7.219,
+      "text": "covering is this one so what is the problem State the problem States will be"
+    },
+    {
+      "start": 1373.039,
+      "duration": 9.181,
+      "text": "given an array where every number appears twice apart from one number that"
+    },
+    {
+      "start": 1379.1,
+      "duration": 8.28,
+      "text": "appears once so you have to find that one number that appears once I think you"
+    },
+    {
+      "start": 1384.86,
+      "duration": 8.1,
+      "text": "know how to do it we have already done a similar kind of approach in this problem"
+    },
+    {
+      "start": 1390.08,
+      "duration": 7.5,
+      "text": "where we were finding the missing number in an array using the zor concept so"
+    },
+    {
+      "start": 1395.419,
+      "duration": 7.201,
+      "text": "over here if you carefully see 4 is appearing twice three is appearing twice"
+    },
+    {
+      "start": 1400.039,
+      "duration": 8.701,
+      "text": "one is appearing twice and the only number that isn't appearing twice is 2"
+    },
+    {
+      "start": 1405.559,
+      "duration": 7.921,
+      "text": "so the answer will be 2. now I'll quickly move over this problem"
+    },
+    {
+      "start": 1411.32,
+      "duration": 6.0,
+      "text": "whenever this problem comes up in an interview what is the Brute Force"
+    },
+    {
+      "start": 1415.52,
+      "duration": 6.48,
+      "text": "approach The Brute Force is very simple you pick up every number once first"
+    },
+    {
+      "start": 1420.559,
+      "duration": 6.36,
+      "text": "you'll pick up one and you will do a linear search on how"
+    },
+    {
+      "start": 1424.94,
+      "duration": 6.84,
+      "text": "many times one appears and you'll find that one appears twice so that's not the"
+    },
+    {
+      "start": 1428.9,
+      "duration": 6.42,
+      "text": "answer next you will go to this one and you'll again do a linear Search and say"
+    },
+    {
+      "start": 1433.58,
+      "duration": 5.579,
+      "text": "how many times do you appear it will again be two so that won't be your"
+    },
+    {
+      "start": 1436.76,
+      "duration": 7.14,
+      "text": "answer next you'll pick up two and you'll do a linear search and you'll"
+    },
+    {
+      "start": 1440.9,
+      "duration": 8.88,
+      "text": "find that 2 appears once so that will be your answer how do you do this you know"
+    },
+    {
+      "start": 1446.539,
+      "duration": 7.14,
+      "text": "the numbers like will be in the array so the number will be no one but the array"
+    },
+    {
+      "start": 1451.28,
+      "duration": 5.58,
+      "text": "of I that is something which I know now you'll again I trade in the array from 0"
+    },
+    {
+      "start": 1455.84,
+      "duration": 6.42,
+      "text": "to n and probably you can keep a counter"
+    },
+    {
+      "start": 1459.14,
+      "duration": 7.86,
+      "text": "equal to zero and you can say if array of J because you are treating in the"
+    },
+    {
+      "start": 1464.299,
+      "duration": 7.86,
+      "text": "array is equal to equal to number you can do a counter plus plus so once the"
+    },
+    {
+      "start": 1469.159,
+      "duration": 9.601,
+      "text": "iteration is over if the counter is 1 that means the answer is this particular"
+    },
+    {
+      "start": 1475.24,
+      "duration": 6.939,
+      "text": "number that's how easily you can do it if I ask you the time complexity again"
+    },
+    {
+      "start": 1480.799,
+      "duration": 7.441,
+      "text": "quite simple n Loop and loop so the time complexity"
+    },
+    {
+      "start": 1485.24,
+      "duration": 8.64,
+      "text": "is B go of n Square because I'm picking up every element one by one doing a"
+    },
+    {
+      "start": 1491.48,
+      "duration": 6.54,
+      "text": "linear search and counting it and at the end I'm comparing the count so the time"
+    },
+    {
+      "start": 1495.5,
+      "duration": 8.34,
+      "text": "complexity is n square and the space complexity is Big O of 1. so that is how"
+    },
+    {
+      "start": 1501.14,
+      "duration": 6.06,
+      "text": "the Brute Force approach will look like so you're done with the Brute Force"
+    },
+    {
+      "start": 1505.4,
+      "duration": 5.22,
+      "text": "solution now the interviewer will definitely ask you to optimize this"
+    },
+    {
+      "start": 1508.64,
+      "duration": 7.08,
+      "text": "that's when you come up to the better solution please hear me out properly for"
+    },
+    {
+      "start": 1513.559,
+      "duration": 7.081,
+      "text": "the better solution because the concept of time complexity and space complexity"
+    },
+    {
+      "start": 1518.12,
+      "duration": 5.58,
+      "text": "will be well explained using this particular problem so better solution"
+    },
+    {
+      "start": 1522.5,
+      "duration": 6.6,
+      "text": "okay so the better solution will definitely"
+    },
+    {
+      "start": 1525.5,
+      "duration": 8.58,
+      "text": "be to use hash very obvious I just hash it and then using that I tell who"
+    },
+    {
+      "start": 1531.44,
+      "duration": 7.2,
+      "text": "appears once but then what data structure am I going to use to Hash it"
+    },
+    {
+      "start": 1535.7,
+      "duration": 8.76,
+      "text": "let's analyze that so over here the maximum element that is kept is 4. so I"
+    },
+    {
+      "start": 1541.52,
+      "duration": 10.2,
+      "text": "can probably say if I create an array of size five then it will have the last"
+    },
+    {
+      "start": 1547.88,
+      "duration": 8.159,
+      "text": "index as 4 and I can probably initialize everyone as zero I can probably"
+    },
+    {
+      "start": 1553.64,
+      "duration": 12.6,
+      "text": "initialize everyone as 0 and I can start iterating okay one okay"
+    },
+    {
+      "start": 1559.88,
+      "duration": 11.279,
+      "text": "two okay one okay three okay three okay four okay four"
+    },
+    {
+      "start": 1568.82,
+      "duration": 8.7,
+      "text": "so at the end of the day only this particular guy too will have a hash"
+    },
+    {
+      "start": 1573.98,
+      "duration": 8.34,
+      "text": "value of one and that will be the guy who is appearing once understood very"
+    },
+    {
+      "start": 1579.98,
+      "duration": 8.4,
+      "text": "simple but the question is what size of hash array do you define"
+    },
+    {
+      "start": 1585.14,
+      "duration": 7.639,
+      "text": "what size of hashtag do you define and the answer is pretty simple the maximum"
+    },
+    {
+      "start": 1590.659,
+      "duration": 2.12,
+      "text": "element"
+    },
+    {
+      "start": 1596.98,
+      "duration": 8.26,
+      "text": "so you define the size of five very simple"
+    },
+    {
+      "start": 1601.22,
+      "duration": 9.3,
+      "text": "so can I say this can I say this first step if you are going to use an array"
+    },
+    {
+      "start": 1607.46,
+      "duration": 7.319,
+      "text": "for hashing will be to figure out the maximum element because without that you"
+    },
+    {
+      "start": 1612.74,
+      "duration": 9.299,
+      "text": "cannot create the hash array so maybe Max c equal to array of 0 let's do it"
+    },
+    {
+      "start": 1618.2,
+      "duration": 10.5,
+      "text": "and it'll be like Max c equal to Max of Max C comma array of I and this will"
+    },
+    {
+      "start": 1625.64,
+      "duration": 7.8,
+      "text": "give me my Max element very obvious and now I will define an hash array of size"
+    },
+    {
+      "start": 1631.22,
+      "duration": 5.88,
+      "text": "maxi which is initially initialized to zero"
+    },
+    {
+      "start": 1636.08,
+      "duration": 6.66,
+      "text": "done now what I need to do I treat"
+    },
+    {
+      "start": 1639.98,
+      "duration": 6.12,
+      "text": "cell I trade in the map from sorry I trade in the array from 0 to n and I'll"
+    },
+    {
+      "start": 1644.779,
+      "duration": 4.741,
+      "text": "say hash can you do at your place of array of I"
+    },
+    {
+      "start": 1648.14,
+      "duration": 7.919,
+      "text": "to be plus plus so kind of I can say this Loop ends up"
+    },
+    {
+      "start": 1653.0,
+      "duration": 8.58,
+      "text": "taking B go of n this Loop for marking will end up taking big off for sure now"
+    },
+    {
+      "start": 1658.76,
+      "duration": 7.799,
+      "text": "what's my check my job is to figure out who appears once obvious ones so the"
+    },
+    {
+      "start": 1664.76,
+      "duration": 4.5,
+      "text": "best way that you can do is you can say Hey listen"
+    },
+    {
+      "start": 1667.82,
+      "duration": 5.76,
+      "text": "Hey listen I will probably"
+    },
+    {
+      "start": 1670.82,
+      "duration": 11.16,
+      "text": "start going from 0 to n again and I'll just see if hash off if hash of array of"
+    },
+    {
+      "start": 1678.62,
+      "duration": 10.26,
+      "text": "I is equal to equal to yes is equal to equal to 1. that array"
+    },
+    {
+      "start": 1685.7,
+      "duration": 10.56,
+      "text": "of I is my answer pretty simple yes and that's B go of N"
+    },
+    {
+      "start": 1692.84,
+      "duration": 7.86,
+      "text": "and that speak of it so that's like we go off 3n and what is the space"
+    },
+    {
+      "start": 1698.72,
+      "duration": 6.02,
+      "text": "complexity can I say the space complexity is nothing but we're using an"
+    },
+    {
+      "start": 1703.82,
+      "duration": 6.12,
+      "text": "hash oversize maximum element of a size"
+    },
+    {
+      "start": 1708.38,
+      "duration": 6.72,
+      "text": "maximum and that is something which will depend"
+    },
+    {
+      "start": 1712.34,
+      "duration": 8.4,
+      "text": "on the input you cannot specifically say so the time complexity is 3n and the"
+    },
+    {
+      "start": 1718.4,
+      "duration": 8.1,
+      "text": "space complexity is this now you can argue that this Beaker of n can be"
+    },
+    {
+      "start": 1723.08,
+      "duration": 11.699,
+      "text": "trimmed why because over here it was like 0 1 2 3 4 5 6 size was 7. you will"
+    },
+    {
+      "start": 1731.659,
+      "duration": 8.581,
+      "text": "end up at the worst case if 2 was placed at the last I repeat if 2 was placed at"
+    },
+    {
+      "start": 1737.179,
+      "duration": 7.141,
+      "text": "the last you will end up iterating for Big O of"
+    },
+    {
+      "start": 1741.679,
+      "duration": 9.061,
+      "text": "seven times I could have done it better I could have done it better if I would"
+    },
+    {
+      "start": 1746.48,
+      "duration": 8.28,
+      "text": "have I tweeted just from one like I know the minimum number might be zero and the"
+    },
+    {
+      "start": 1752.84,
+      "duration": 6.36,
+      "text": "maximum might be four so if you could just iterate from zero to four that will"
+    },
+    {
+      "start": 1757.34,
+      "duration": 7.92,
+      "text": "also do your job and there will just be five iterations which is better than"
+    },
+    {
+      "start": 1761.539,
+      "duration": 10.5,
+      "text": "seven iterations but again what if instead of 4 4 I had to eat it then this"
+    },
+    {
+      "start": 1769.64,
+      "duration": 10.019,
+      "text": "Loop will end up iterating nine types which is not good so instead of this"
+    },
+    {
+      "start": 1775.64,
+      "duration": 7.86,
+      "text": "this is better so depending on the input it will it will vary so you can tell"
+    },
+    {
+      "start": 1781.76,
+      "duration": 7.08,
+      "text": "that to the interview that so I'm not sure depending on the inputs we like"
+    },
+    {
+      "start": 1786.14,
+      "duration": 6.899,
+      "text": "this is also okay if we use this this will be the complexity if we use the"
+    },
+    {
+      "start": 1790.82,
+      "duration": 5.219,
+      "text": "loop where we go from zero to Max element"
+    },
+    {
+      "start": 1794.299,
+      "duration": 6.0,
+      "text": "and for every element we see how many times the talk is then it will be go of"
+    },
+    {
+      "start": 1798.14,
+      "duration": 7.38,
+      "text": "Max for the last Loop depending on what you're trying to use"
+    },
+    {
+      "start": 1801.74,
+      "duration": 8.58,
+      "text": "now the interview might say but can the hashary be used every time and the"
+    },
+    {
+      "start": 1808.159,
+      "duration": 8.461,
+      "text": "answer to that is no why the answer to that is no think of that imagine I tell"
+    },
+    {
+      "start": 1813.38,
+      "duration": 7.919,
+      "text": "you that the array has negatives the array has negatives can you hash"
+    },
+    {
+      "start": 1820.159,
+      "duration": 7.561,
+      "text": "negatives probably yes probably no but what if the"
+    },
+    {
+      "start": 1824.84,
+      "duration": 8.4,
+      "text": "array has uh big numbers like 10 to the power 9 like 10 to the power 12 very"
+    },
+    {
+      "start": 1830.299,
+      "duration": 8.281,
+      "text": "very big numbers in that case in that case you cannot hash it you cannot hash"
+    },
+    {
+      "start": 1835.46,
+      "duration": 8.16,
+      "text": "it in a hash array that's when you have to use the map data structure with a"
+    },
+    {
+      "start": 1841.1,
+      "duration": 6.059,
+      "text": "bigger data type as a key with a bigger data type as a key"
+    },
+    {
+      "start": 1845.12,
+      "duration": 7.02,
+      "text": "and the value can be entered so you have to use a map data structure and now this"
+    },
+    {
+      "start": 1850.22,
+      "duration": 6.839,
+      "text": "can be an unordered map in C plus plus depending on what map you use will the"
+    },
+    {
+      "start": 1855.44,
+      "duration": 6.3,
+      "text": "time complexity will vary now what can I say okay if I use map"
+    },
+    {
+      "start": 1859.46,
+      "duration": 7.26,
+      "text": "data structure I probably do the same thing where I'll reiterate"
+    },
+    {
+      "start": 1864.26,
+      "duration": 13.68,
+      "text": "as you might reacted on one and the map data structure is empty I trade one once"
+    },
+    {
+      "start": 1871.0,
+      "duration": 14.74,
+      "text": "one twice two two ones three ones three twice eight once eight twice at the end"
+    },
+    {
+      "start": 1883.46,
+      "duration": 6.12,
+      "text": "of the day your math data structure will look something like this now you can I"
+    },
+    {
+      "start": 1887.899,
+      "duration": 8.52,
+      "text": "treat on the back and it'll be like okay key one how many"
+    },
+    {
+      "start": 1892.58,
+      "duration": 9.719,
+      "text": "times two next key to how many times one so this key is your answer this key is"
+    },
+    {
+      "start": 1899.96,
+      "duration": 6.9,
+      "text": "your answer I trade in the map and get your answer"
+    },
+    {
+      "start": 1904.22,
+      "duration": 7.679,
+      "text": "let's analyze again if I have to code it can I say the first thing will be very"
+    },
+    {
+      "start": 1908.96,
+      "duration": 8.099,
+      "text": "simple I'll just go from 0 to n or I'll say map data structure can you do an"
+    },
+    {
+      "start": 1914.179,
+      "duration": 8.1,
+      "text": "array of I plus plus quite simple what will be the type complexity if we use an"
+    },
+    {
+      "start": 1920.6,
+      "duration": 8.76,
+      "text": "ordered map it will end log out of the make of n"
+    },
+    {
+      "start": 1924.919,
+      "duration": 9.841,
+      "text": "where n is the length of the array and this n is the size of the map this n"
+    },
+    {
+      "start": 1932.299,
+      "duration": 6.48,
+      "text": "like probably you can write M this m is the size of the map okay"
+    },
+    {
+      "start": 1937.1,
+      "duration": 7.26,
+      "text": "but if you use unordered map"
+    },
+    {
+      "start": 1940.76,
+      "duration": 9.18,
+      "text": "the best case can be big oven I know the worst case of 100 map is Big of it but"
+    },
+    {
+      "start": 1947.0,
+      "duration": 5.52,
+      "text": "that really happens so I can say big of n is the best"
+    },
+    {
+      "start": 1951.32,
+      "duration": 6.12,
+      "text": "case but the worst cases and like the"
+    },
+    {
+      "start": 1954.86,
+      "duration": 8.16,
+      "text": "unordered map might take we go off and in order to find something so the worst"
+    },
+    {
+      "start": 1960.679,
+      "duration": 7.201,
+      "text": "case still can be n square if we use unordered map so you can tell that to"
+    },
+    {
+      "start": 1965.899,
+      "duration": 5.941,
+      "text": "the interview that this will not happen so we can use an unordered map but if"
+    },
+    {
+      "start": 1970.34,
+      "duration": 5.939,
+      "text": "you're saying that the inputs are very critical and the worst case can happen"
+    },
+    {
+      "start": 1973.76,
+      "duration": 5.1,
+      "text": "then I'll switch back to audit map again I've explained this in the time"
+    },
+    {
+      "start": 1977.419,
+      "duration": 5.341,
+      "text": "complexity class so depending on what map you're using"
+    },
+    {
+      "start": 1980.96,
+      "duration": 6.42,
+      "text": "the time complexity will vary done what's the next step I'll just I trade"
+    },
+    {
+      "start": 1985.279,
+      "duration": 6.241,
+      "text": "in the map and that's very simple if you're doing C plus plus this is how you"
+    },
+    {
+      "start": 1989.899,
+      "duration": 6.601,
+      "text": "will be acting the map if you're doing Java you can definitely Google or you"
+    },
+    {
+      "start": 1993.019,
+      "duration": 7.26,
+      "text": "can find it in the notes I know the value is what I have to check so the"
+    },
+    {
+      "start": 1998.779,
+      "duration": 6.841,
+      "text": "value is always stored in the second parameter so the second parameter is one"
+    },
+    {
+      "start": 2002.74,
+      "duration": 8.819,
+      "text": "I'll say it dot first is my key is my key and that's my answer"
+    },
+    {
+      "start": 2008.5,
+      "duration": 5.64,
+      "text": "again in order to it in the map what will be the time complexity is my"
+    },
+    {
+      "start": 2013.0,
+      "duration": 5.88,
+      "text": "question to you very simple time complexity is"
+    },
+    {
+      "start": 2016.899,
+      "duration": 4.981,
+      "text": "how many elements did you store four"
+    },
+    {
+      "start": 2020.26,
+      "duration": 6.779,
+      "text": "where the size of the array was seven but the size of the array was 7 but you"
+    },
+    {
+      "start": 2023.98,
+      "duration": 9.36,
+      "text": "just stored four it's like you store n by two elements why every number appears"
+    },
+    {
+      "start": 2030.46,
+      "duration": 6.18,
+      "text": "twice every number appears twice so the number of elements you'll store is n by"
+    },
+    {
+      "start": 2035.799,
+      "duration": 8.22,
+      "text": "2 plus 1 y plus one the one guy was"
+    },
+    {
+      "start": 2040.24,
+      "duration": 9.72,
+      "text": "appearing once so this Loop will run for n by 2 plus 1 because"
+    },
+    {
+      "start": 2047.26,
+      "duration": 6.119,
+      "text": "most of the number appears twice so they're like"
+    },
+    {
+      "start": 2051.399,
+      "duration": 5.641,
+      "text": "you'll take one occurrence of it there's one guy who's appearing once so this"
+    },
+    {
+      "start": 2055.3,
+      "duration": 7.26,
+      "text": "Loop will run for this side these many times the worst case the total overtime"
+    },
+    {
+      "start": 2059.619,
+      "duration": 8.901,
+      "text": "complexity boils down to n logarithmic of M but again m is the size of the map"
+    },
+    {
+      "start": 2065.32,
+      "duration": 10.44,
+      "text": "and the size of the map is n by 2 plus 1 plus b go of n by 2 plus 1 for this Loop"
+    },
+    {
+      "start": 2073.24,
+      "duration": 8.399,
+      "text": "and the space complexity will be B go of n by 2 plus 1 for a map data structure"
+    },
+    {
+      "start": 2079.179,
+      "duration": 5.22,
+      "text": "again this logarithmic can vary if you're using another map for the best"
+    },
+    {
+      "start": 2083.379,
+      "duration": 5.401,
+      "text": "case better is done if you tell these many"
+    },
+    {
+      "start": 2087.339,
+      "duration": 6.0,
+      "text": "things to the interviewer you will be like dude"
+    },
+    {
+      "start": 2090.94,
+      "duration": 7.08,
+      "text": "I don't need to hear the optimal anyways let's go back to the optimal solution"
+    },
+    {
+      "start": 2095.859,
+      "duration": 6.901,
+      "text": "why because definitely the interviewer will not be impressed with the extra"
+    },
+    {
+      "start": 2100.06,
+      "duration": 6.539,
+      "text": "time a lot of iterations so you might ask you to optimize this this is when"
+    },
+    {
+      "start": 2104.619,
+      "duration": 6.841,
+      "text": "you give the optimal solution so let's come to the optimal solution"
+    },
+    {
+      "start": 2110.02,
+      "duration": 6.78,
+      "text": "it's very simple what are we hearing every number appears"
+    },
+    {
+      "start": 2113.74,
+      "duration": 7.2,
+      "text": "twice twice twice twice there's one who appears once"
+    },
+    {
+      "start": 2118.599,
+      "duration": 6.781,
+      "text": "you have done the same problem you using zone property what we will say is okay"
+    },
+    {
+      "start": 2123.88,
+      "duration": 7.08,
+      "text": "listen since everyone appears twice if you do"
+    },
+    {
+      "start": 2127.3,
+      "duration": 8.16,
+      "text": "Azure they will cancel off is it yes it will cancel off so what we will do is we"
+    },
+    {
+      "start": 2133.599,
+      "duration": 6.961,
+      "text": "will do a zone of all their elements because zor clearly states if there are"
+    },
+    {
+      "start": 2138.22,
+      "duration": 6.96,
+      "text": "same numbers and if you do us all the corresponding value is zero so if you do"
+    },
+    {
+      "start": 2142.9,
+      "duration": 9.48,
+      "text": "a zone of all the numbers it's like 1 0 1 0 2 0 3 0 3 0 8 0 8 so what will"
+    },
+    {
+      "start": 2150.339,
+      "duration": 8.581,
+      "text": "happen is this will come up to give 0 sort 2 this will cut to give zero this"
+    },
+    {
+      "start": 2156.22,
+      "duration": 8.399,
+      "text": "will help to give zero zeros or zeros or zeros or Triple X zeros or two zeros or"
+    },
+    {
+      "start": 2161.98,
+      "duration": 6.66,
+      "text": "any number is the number itself you got your number"
+    },
+    {
+      "start": 2167.14,
+      "duration": 7.8,
+      "text": "very simple it's just a one line that you have to"
+    },
+    {
+      "start": 2170.5,
+      "duration": 10.02,
+      "text": "write for zor can be kept as 0 you can start from 0 to n and you can say zor"
+    },
+    {
+      "start": 2177.52,
+      "duration": 8.819,
+      "text": "equal to zor Zord array of I and your answer will be zor"
+    },
+    {
+      "start": 2184.24,
+      "duration": 7.32,
+      "text": "because when you do an entire Zord everyone will cancel that one guy will"
+    },
+    {
+      "start": 2189.7,
+      "duration": 6.48,
+      "text": "be single and he will be left as an answer the optimal has a Time complexity"
+    },
+    {
+      "start": 2194.14,
+      "duration": 7.08,
+      "text": "of peak of N and has a space complexity of peak of one this is where you end the"
+    },
+    {
+      "start": 2199.119,
+      "duration": 4.98,
+      "text": "solution in an interview so if you want to solve the problem the problem link"
+    },
+    {
+      "start": 2202.599,
+      "duration": 5.161,
+      "text": "will be in the description you can go and try it out and submit the code so"
+    },
+    {
+      "start": 2206.26,
+      "duration": 5.76,
+      "text": "going back to the sheet I can say that this problem is also done and I'll be"
+    },
+    {
+      "start": 2209.98,
+      "duration": 7.08,
+      "text": "covering these couple of problems in the next video so guys I hope you have"
+    },
+    {
+      "start": 2214.119,
+      "duration": 9.181,
+      "text": "understood everything because my main focus was to teach you Basics I wanted"
+    },
+    {
+      "start": 2221.079,
+      "duration": 5.941,
+      "text": "to teach you how how do you approach an interview in terms of brute better"
+    },
+    {
+      "start": 2224.92,
+      "duration": 5.159,
+      "text": "optimal because it's you who's gonna direct the"
+    },
+    {
+      "start": 2228.7,
+      "duration": 6.96,
+      "text": "interview so please be careful about that so with this I can say that we have"
+    },
+    {
+      "start": 2232.3,
+      "duration": 7.68,
+      "text": "done 12 basic problems after this we'll be moving to the tougher versions of the"
+    },
+    {
+      "start": 2237.52,
+      "duration": 7.86,
+      "text": "problems so mostly you will find single video for most of the problems because"
+    },
+    {
+      "start": 2242.619,
+      "duration": 6.601,
+      "text": "these problems are searched a lot on YouTube and I want my channel to be"
+    },
+    {
+      "start": 2246.82,
+      "duration": 8.279,
+      "text": "visible so mostly you'll find single videos for the long like the tougher"
+    },
+    {
+      "start": 2251.859,
+      "duration": 6.781,
+      "text": "problems so with this I will be wrapping up this video but to continue our"
+    },
+    {
+      "start": 2257.56,
+      "duration": 5.1,
+      "text": "tradition if you've understood everything"
+    },
+    {
+      "start": 2259.619,
+      "duration": 6.101,
+      "text": "you gotta comment understood beneath the video and yes if you're new to our"
+    },
+    {
+      "start": 2264.099,
+      "duration": 5.041,
+      "text": "Channel please please do consider subscribing to us you can find all the"
+    },
+    {
+      "start": 2267.579,
+      "duration": 4.041,
+      "text": "links in the description with this I'll be wrapping up this video Let's speed in"
+    },
+    {
+      "start": 2271.0,
+      "duration": 3.739,
+      "text": "some other videos [Music]"
+    },
+    {
+      "start": 2274.9,
+      "duration": 6.38,
+      "text": "don't ever forget you're golden I will finally"
+    }
+  ]
+}

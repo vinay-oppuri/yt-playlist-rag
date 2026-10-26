@@ -1,0 +1,1107 @@
+{
+  "video_id": "kvRjNm4rVBE",
+  "title": "Re 5. Multiple Recursion Calls | Problems | Strivers A2Z DSA Course",
+  "total_segments": 220,
+  "segments": [
+    {
+      "start": 0.08,
+      "duration": 5.279,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well"
+    },
+    {
+      "start": 3.199,
+      "duration": 7.44,
+      "text": "so today we will be learning about multiple recursion calls till now you"
+    },
+    {
+      "start": 8.16,
+      "duration": 7.2,
+      "text": "have seen recursion where we had only single uh recursion calls basically we"
+    },
+    {
+      "start": 13.759,
+      "duration": 6.721,
+      "text": "were learning something as there was a function and inside this function"
+    },
+    {
+      "start": 18.0,
+      "duration": 7.84,
+      "text": "only a single function was called again so over here we will be"
+    },
+    {
+      "start": 23.359,
+      "duration": 6.401,
+      "text": "learning something of this pattern where probably we will have a function"
+    },
+    {
+      "start": 27.76,
+      "duration": 6.4,
+      "text": "and there will be multiple function calls yes"
+    },
+    {
+      "start": 31.679,
+      "duration": 7.521,
+      "text": "this is two times so the function is called twice or thrice or four times so"
+    },
+    {
+      "start": 37.2,
+      "duration": 5.199,
+      "text": "you'll be learning multiple recursion calls now generically in all the"
+    },
+    {
+      "start": 40.879,
+      "duration": 6.961,
+      "text": "problems that we'll be solving there might be two times three times four"
+    },
+    {
+      "start": 44.16,
+      "duration": 8.399,
+      "text": "times and so on so in this video i'll be teaching you how to how to have two"
+    },
+    {
+      "start": 50.239,
+      "duration": 6.401,
+      "text": "multiple recursion calls and going forward you will be seeing problems like"
+    },
+    {
+      "start": 54.879,
+      "duration": 6.801,
+      "text": "end queen and other problems where you'll see multiple not only two n"
+    },
+    {
+      "start": 59.44,
+      "duration": 7.039,
+      "text": "recursion calls being happening inside a function okay so to understand multiple"
+    },
+    {
+      "start": 64.08,
+      "duration": 6.719,
+      "text": "recursion calls the best example is"
+    },
+    {
+      "start": 68.72,
+      "duration": 6.48,
+      "text": "doing the fibonacci number now what is fibonacci number let's first"
+    },
+    {
+      "start": 72.64,
+      "duration": 7.6,
+      "text": "understand basically uh the first couple of fibonacci numbers are zero and one so"
+    },
+    {
+      "start": 78.0,
+      "duration": 6.4,
+      "text": "the next fibonacci number will be last one and the previous class so zero"
+    },
+    {
+      "start": 82.479,
+      "duration": 5.921,
+      "text": "plus one will give you one and the next fibonacci number will be this one plus"
+    },
+    {
+      "start": 86.32,
+      "duration": 6.56,
+      "text": "this one that's two next fibonacci number will be this one and this two"
+    },
+    {
+      "start": 90.96,
+      "duration": 6.64,
+      "text": "three next you energy number will be this two and this three plus"
+    },
+    {
+      "start": 95.52,
+      "duration": 8.0,
+      "text": "five next fibonacci number will be this three and this five which is definitely"
+    },
+    {
+      "start": 100.32,
+      "duration": 9.68,
+      "text": "eight next will be 13 then it'll be 21 34 and so on okay now"
+    },
+    {
+      "start": 107.439,
+      "duration": 5.441,
+      "text": "uh assume i call this as the zeroth fibonacci"
+    },
+    {
+      "start": 111.28,
+      "duration": 6.0,
+      "text": "first fibonacci second fibonacci"
+    },
+    {
+      "start": 114.399,
+      "duration": 7.121,
+      "text": "third fibonacci and so on i call it like this now the question is very"
+    },
+    {
+      "start": 119.68,
+      "duration": 6.0,
+      "text": "straightforward you'll be given a problem you'll be given an n"
+    },
+    {
+      "start": 123.84,
+      "duration": 5.919,
+      "text": "and you need to write a recursive function yes you need to write a"
+    },
+    {
+      "start": 127.36,
+      "duration": 5.599,
+      "text": "recursive function which tells you which is the nth"
+    },
+    {
+      "start": 131.28,
+      "duration": 6.48,
+      "text": "fibonacci number for an example i say f of three"
+    },
+    {
+      "start": 135.68,
+      "duration": 6.4,
+      "text": "so it is the third fibonacci number two if i say f of four"
+    },
+    {
+      "start": 139.68,
+      "duration": 6.24,
+      "text": "that's three if it's f of five that's five so you have to give me the nth"
+    },
+    {
+      "start": 144.08,
+      "duration": 7.439,
+      "text": "fibonacci number now generally what did i say how did"
+    },
+    {
+      "start": 148.16,
+      "duration": 8.64,
+      "text": "this five come up if this is f of let's say this is f of five"
+    },
+    {
+      "start": 153.36,
+      "duration": 9.92,
+      "text": "this f of five was indeed what f of 4 plus f of 3 that is what this f"
+    },
+    {
+      "start": 160.16,
+      "duration": 8.0,
+      "text": "of 5 was all about f of 4 plus f of 3 which is the previous one and the one"
+    },
+    {
+      "start": 165.92,
+      "duration": 7.76,
+      "text": "before that on adding them we were getting the f of 5 correct so"
+    },
+    {
+      "start": 171.84,
+      "duration": 8.0,
+      "text": "generally you could have done this easily using for loop you could be like"
+    },
+    {
+      "start": 176.4,
+      "duration": 7.199,
+      "text": "we can probably write f of 0 as 0 f of 1 as 1"
+    },
+    {
+      "start": 181.44,
+      "duration": 5.92,
+      "text": "and then you can easily run a loop from 2"
+    },
+    {
+      "start": 184.4,
+      "duration": 8.479,
+      "text": "till n and you can write f of i equal to f of i minus 1"
+    },
+    {
+      "start": 189.599,
+      "duration": 7.761,
+      "text": "plus f of i minus 2 it's a very simple simpler linear version that you can"
+    },
+    {
+      "start": 194.48,
+      "duration": 7.36,
+      "text": "write using iterative for loop correct but obviously we are not here to solve"
+    },
+    {
+      "start": 199.28,
+      "duration": 6.56,
+      "text": "fibonacci number over here we are to we have to learn recursion and that is"
+    },
+    {
+      "start": 203.68,
+      "duration": 4.639,
+      "text": "where uh something like fibonacci plays a very important part"
+    },
+    {
+      "start": 207.44,
+      "duration": 6.32,
+      "text": "because it's going to teach you recursion a very classical fashion so we"
+    },
+    {
+      "start": 210.959,
+      "duration": 8.401,
+      "text": "did learn that in order to find f of n we have to know f of n minus 1 and we"
+    },
+    {
+      "start": 216.72,
+      "duration": 7.599,
+      "text": "have to know f of n minus 2 correct that is something we did learn so"
+    },
+    {
+      "start": 222.4,
+      "duration": 4.32,
+      "text": "in case our function"
+    },
+    {
+      "start": 225.44,
+      "duration": 6.079,
+      "text": "takes n we know one thing for sure if n is"
+    },
+    {
+      "start": 229.76,
+      "duration": 5.199,
+      "text": "anything great uh lesser than equal to one"
+    },
+    {
+      "start": 232.239,
+      "duration": 7.441,
+      "text": "if it is n is zero then the answer is zero because the zero fibonacci number"
+    },
+    {
+      "start": 236.799,
+      "duration": 6.561,
+      "text": "is zero if n is one the first fibonacci number is one we definitely know that"
+    },
+    {
+      "start": 242.0,
+      "duration": 5.28,
+      "text": "correct so can i say in this case i will be"
+    },
+    {
+      "start": 245.439,
+      "duration": 7.841,
+      "text": "returning n i mean there is no doubt in this"
+    },
+    {
+      "start": 250.0,
+      "duration": 7.519,
+      "text": "going across what is a fibonacci of n we can be like fibonacci of n is nothing"
+    },
+    {
+      "start": 255.36,
+      "duration": 7.68,
+      "text": "but f of n minus 1 plus f of n minus 2"
+    },
+    {
+      "start": 261.12,
+      "duration": 5.359,
+      "text": "without any doubt this is the answer because"
+    },
+    {
+      "start": 264.24,
+      "duration": 7.519,
+      "text": "if i'm looking for fibonacci of n if i'm looking for fibonacci of n i have to"
+    },
+    {
+      "start": 269.44,
+      "duration": 6.4,
+      "text": "know uh f of n minus 1 i have to know f of n minus 2. there's absolutely no"
+    },
+    {
+      "start": 273.52,
+      "duration": 7.92,
+      "text": "doubt in it but how does this work uh if we call a couple of recursive"
+    },
+    {
+      "start": 278.8,
+      "duration": 6.959,
+      "text": "functions do they go simultaneously how does this work in recursion so let's"
+    },
+    {
+      "start": 283.52,
+      "duration": 7.2,
+      "text": "understand this by again taking a very very simple example so what i'll do is"
+    },
+    {
+      "start": 288.0,
+      "duration": 10.88,
+      "text": "i'll re rewrite it to basically explain you how this works so assume i say last"
+    },
+    {
+      "start": 294.16,
+      "duration": 10.24,
+      "text": "is f of n minus 1 i say a second last is equal to f of n minus 2"
+    },
+    {
+      "start": 301.6,
+      "duration": 5.599,
+      "text": "and then i say why don't you return last plus"
+    },
+    {
+      "start": 306.08,
+      "duration": 3.92,
+      "text": "second last"
+    },
+    {
+      "start": 308.08,
+      "duration": 7.76,
+      "text": "okay so if i write something like this and uh then i simply write a main"
+    },
+    {
+      "start": 313.759,
+      "duration": 7.28,
+      "text": "where in the main i say that okay let's uh pre-assume let's take n equal to uh"
+    },
+    {
+      "start": 319.199,
+      "duration": 8.801,
+      "text": "4 that should make sense and we can say print"
+    },
+    {
+      "start": 325.6,
+      "duration": 5.84,
+      "text": "fibonacci of four what if we write something like this"
+    },
+    {
+      "start": 329.68,
+      "duration": 6.079,
+      "text": "print fibonacci of four and print fibonacci of n so basically this is"
+    },
+    {
+      "start": 334.0,
+      "duration": 6.08,
+      "text": "going to call this guy with a value"
+    },
+    {
+      "start": 337.44,
+      "duration": 7.52,
+      "text": "4 this will not be executed because the value of n is 4"
+    },
+    {
+      "start": 343.039,
+      "duration": 7.121,
+      "text": "now if you carefully observe there are a couple of recursion calls one is this"
+    },
+    {
+      "start": 347.6,
+      "duration": 8.4,
+      "text": "well the other one is this do they go simultaneously no first this"
+    },
+    {
+      "start": 353.28,
+      "duration": 7.759,
+      "text": "guy will go yes first this guy will go come back then this guy will go and then"
+    },
+    {
+      "start": 358.56,
+      "duration": 7.199,
+      "text": "come back so it happens uh what to say line by line like"
+    },
+    {
+      "start": 363.52,
+      "duration": 6.0,
+      "text": "whichever recursion call is made first it will go and call it and after that it"
+    },
+    {
+      "start": 368.0,
+      "duration": 5.919,
+      "text": "will go for the next one that is how recursion works right to understand this"
+    },
+    {
+      "start": 371.759,
+      "duration": 4.56,
+      "text": "in deep let's uh let's just take this example"
+    },
+    {
+      "start": 375.039,
+      "duration": 6.16,
+      "text": "so over here i can say this call will go and if this"
+    },
+    {
+      "start": 379.039,
+      "duration": 9.28,
+      "text": "call goes this will call f of 3 because n minus 1 for this 4 is nothing but 3"
+    },
+    {
+      "start": 384.96,
+      "duration": 7.359,
+      "text": "correct so f of 3 is made now if f of 3 is made again the base case will not be"
+    },
+    {
+      "start": 390.4,
+      "duration": 6.72,
+      "text": "executed let's understand the b scale is not executed and again the last call"
+    },
+    {
+      "start": 394.72,
+      "duration": 5.919,
+      "text": "this time is f of two"
+    },
+    {
+      "start": 397.919,
+      "duration": 5.921,
+      "text": "correct because minus one the second last is definitely f of"
+    },
+    {
+      "start": 402.96,
+      "duration": 6.959,
+      "text": "one and then you are returning last plus"
+    },
+    {
+      "start": 406.88,
+      "duration": 4.719,
+      "text": "second last so remember this recursion call"
+    },
+    {
+      "start": 410.8,
+      "duration": 4.88,
+      "text": "is being done so"
+    },
+    {
+      "start": 413.28,
+      "duration": 6.639,
+      "text": "our stack space will wait over here like we will be waiting at this line we will"
+    },
+    {
+      "start": 418.16,
+      "duration": 6.159,
+      "text": "not be going beneath this line we will be waiting the stack space will keep"
+    },
+    {
+      "start": 422.72,
+      "duration": 5.84,
+      "text": "this function saying that okay i'm gonna wait till this doesn't gives me this"
+    },
+    {
+      "start": 426.24,
+      "duration": 7.92,
+      "text": "answer perfect now f of three will be like okay this is not executed"
+    },
+    {
+      "start": 431.84,
+      "duration": 6.72,
+      "text": "f of two will be executed so again f of two will be executed and it will be like"
+    },
+    {
+      "start": 435.84,
+      "duration": 6.16,
+      "text": "let's call f of 2 so the if line is not executed"
+    },
+    {
+      "start": 439.84,
+      "duration": 8.639,
+      "text": "last will be f of what will be last f 1"
+    },
+    {
+      "start": 444.4,
+      "duration": 10.56,
+      "text": "will be second last f 0 correct so and then they can return last"
+    },
+    {
+      "start": 451.039,
+      "duration": 8.081,
+      "text": "plus second last so if i'm calling last f of one will be called so whenever f of"
+    },
+    {
+      "start": 457.599,
+      "duration": 6.081,
+      "text": "one is called if n lesser than equal to one gets"
+    },
+    {
+      "start": 461.52,
+      "duration": 6.799,
+      "text": "executed you need to understand if n lesser than equal to one gets executed"
+    },
+    {
+      "start": 466.0,
+      "duration": 8.56,
+      "text": "and it returns the value n so this basically gives you a value"
+    },
+    {
+      "start": 471.84,
+      "duration": 7.44,
+      "text": "one because that's how it is and you can say instead of f of one now you can"
+    },
+    {
+      "start": 476.479,
+      "duration": 8.0,
+      "text": "write one so one of the recursion calls was done and it did return you one now"
+    },
+    {
+      "start": 482.08,
+      "duration": 6.799,
+      "text": "this recursion call will go and again call one more same function the same"
+    },
+    {
+      "start": 486.72,
+      "duration": 7.28,
+      "text": "function in the memory but this time it will pass ns0 again the if n lesser than"
+    },
+    {
+      "start": 492.08,
+      "duration": 6.959,
+      "text": "equal to one will be executed and this will return uh"
+    },
+    {
+      "start": 496.479,
+      "duration": 8.0,
+      "text": "zero so this guy is returned as zero so i can write second last as zero thereby"
+    },
+    {
+      "start": 502.24,
+      "duration": 8.639,
+      "text": "last plus second last this is one this is zero plus gives you a value"
+    },
+    {
+      "start": 507.84,
+      "duration": 6.4,
+      "text": "1 plus gives you a value 1 so i can say instead of f of 2"
+    },
+    {
+      "start": 512.56,
+      "duration": 7.599,
+      "text": "i can write 1 last is equal to 1 now coming across to"
+    },
+    {
+      "start": 518.08,
+      "duration": 7.52,
+      "text": "second last f one again f of one will be called remember"
+    },
+    {
+      "start": 522.56,
+      "duration": 6.64,
+      "text": "this again f of one will be called and this time again the same thing n"
+    },
+    {
+      "start": 527.519,
+      "duration": 6.641,
+      "text": "lesser than equal to one return one will happen so this guy will"
+    },
+    {
+      "start": 531.44,
+      "duration": 9.12,
+      "text": "return one so this guy will be getting one so last got one second last as well"
+    },
+    {
+      "start": 537.279,
+      "duration": 8.481,
+      "text": "as got one so one plus one gives you two so what you got over here is two"
+    },
+    {
+      "start": 543.519,
+      "duration": 8.641,
+      "text": "correct now over here this is the case where you'll be doing for f of"
+    },
+    {
+      "start": 548.48,
+      "duration": 7.359,
+      "text": "2 because f of n minus 2 will be 4 minus 2 that's"
+    },
+    {
+      "start": 553.6,
+      "duration": 6.239,
+      "text": "2. again you will go and call these f of 2s"
+    },
+    {
+      "start": 556.8,
+      "duration": 7.12,
+      "text": "f of 2s will go and call the last one as f 1"
+    },
+    {
+      "start": 561.2,
+      "duration": 6.96,
+      "text": "the second last as f of zero remember the if base condition does not execute"
+    },
+    {
+      "start": 566.399,
+      "duration": 6.081,
+      "text": "so f of one will be called it will return one f of zero will be called it"
+    },
+    {
+      "start": 570.08,
+      "duration": 8.16,
+      "text": "will return zero thereby returning of one plus zero last plus second last"
+    },
+    {
+      "start": 575.44,
+      "duration": 5.04,
+      "text": "thereby this returns 1"
+    },
+    {
+      "start": 579.12,
+      "duration": 8.56,
+      "text": "so 2 plus 1 gives you 3 thereby f of 4 is"
+    },
+    {
+      "start": 584.399,
+      "duration": 6.961,
+      "text": "printed as 3 because 2 plus 1 is 3 and it returns you"
+    },
+    {
+      "start": 589.04,
+      "duration": 7.04,
+      "text": "three that's how the recursion works so if i just keep a very very uh"
+    },
+    {
+      "start": 594.48,
+      "duration": 6.64,
+      "text": "so this is how you can see the recursion entire recursion call being happening"
+    },
+    {
+      "start": 598.24,
+      "duration": 7.92,
+      "text": "right so i hope i hope you have got a fair bit of idea about how recursion"
+    },
+    {
+      "start": 603.279,
+      "duration": 7.68,
+      "text": "calls will be worked always remember yes always remember if there are multiple"
+    },
+    {
+      "start": 608.72,
+      "duration": 5.679,
+      "text": "recursion calls to be done if there are multiple recursion calls"
+    },
+    {
+      "start": 612.64,
+      "duration": 4.4,
+      "text": "this will happen come back this will happen come back this will happen come"
+    },
+    {
+      "start": 616.16,
+      "duration": 6.48,
+      "text": "back that's how recursion calls work one"
+    },
+    {
+      "start": 620.0,
+      "duration": 6.399,
+      "text": "is ended then the next comes one is ended then the next comes before ending"
+    },
+    {
+      "start": 624.56,
+      "duration": 6.64,
+      "text": "the previous recursion this can never ever execute so if i if i try to uh for"
+    },
+    {
+      "start": 629.68,
+      "duration": 7.04,
+      "text": "this particular stuff is for this particular stuff if i uh"
+    },
+    {
+      "start": 634.399,
+      "duration": 6.801,
+      "text": "for this particular stuff if i wish to draw the recursion tree it so"
+    },
+    {
+      "start": 639.44,
+      "duration": 5.76,
+      "text": "so if you see this it's in the this level horizontal so the recursion tree"
+    },
+    {
+      "start": 643.44,
+      "duration": 7.12,
+      "text": "is generally vertical so you can easily draw it see this is the ff4 so you can"
+    },
+    {
+      "start": 647.76,
+      "duration": 8.72,
+      "text": "write f of 4 so let's quickly erase this so that i can write it over here"
+    },
+    {
+      "start": 653.519,
+      "duration": 7.921,
+      "text": "so you can write f 4 whom did f of 4 called let's see f of 4"
+    },
+    {
+      "start": 658.959,
+      "duration": 7.44,
+      "text": "called uh whom it called f"
+    },
+    {
+      "start": 663.2,
+      "duration": 7.92,
+      "text": "3 was here and f 2 was here so it did call f of"
+    },
+    {
+      "start": 668.48,
+      "duration": 6.16,
+      "text": "3 and it did call f of 2 correct and going forward f of three"
+    },
+    {
+      "start": 673.68,
+      "duration": 6.08,
+      "text": "called f of two and f of one"
+    },
+    {
+      "start": 677.04,
+      "duration": 7.76,
+      "text": "f of two called f of one f of zero but remember one thing in recursion"
+    },
+    {
+      "start": 682.079,
+      "duration": 7.521,
+      "text": "how does this happen f of four has couple of recursion calls f of three and"
+    },
+    {
+      "start": 687.2,
+      "duration": 5.68,
+      "text": "f of two but which one gets executed first"
+    },
+    {
+      "start": 690.48,
+      "duration": 6.72,
+      "text": "this one gets executed first so f of three is executed at the first for f of"
+    },
+    {
+      "start": 696.0,
+      "duration": 7.279,
+      "text": "three who are the recursion calls f of two and"
+    },
+    {
+      "start": 699.6,
+      "duration": 8.72,
+      "text": "f of one but who is executed first f 2 so please execute f of 2 first which is"
+    },
+    {
+      "start": 705.6,
+      "duration": 8.0,
+      "text": "f 1 and f of 0 again among these both recursion calls"
+    },
+    {
+      "start": 710.32,
+      "duration": 8.959,
+      "text": "which one is executed first f 1 so f of 1 indeed returned you a one f of zero"
+    },
+    {
+      "start": 716.32,
+      "duration": 7.199,
+      "text": "returned you were zero so one plus zero this guy"
+    },
+    {
+      "start": 720.399,
+      "duration": 7.841,
+      "text": "last plus second last give you one f of one returned a one so f of three got one"
+    },
+    {
+      "start": 727.12,
+      "duration": 6.24,
+      "text": "from last second last got one so this returned you"
+    },
+    {
+      "start": 730.88,
+      "duration": 7.6,
+      "text": "two similarly f of two will be done this gives you one this gives you zero so one"
+    },
+    {
+      "start": 735.839,
+      "duration": 7.521,
+      "text": "plus zero will be one so two plus one will be done which gets you"
+    },
+    {
+      "start": 740.639,
+      "duration": 6.241,
+      "text": "an ultimate answer of three this is how you can draw the recursion tree remember"
+    },
+    {
+      "start": 746.0,
+      "duration": 5.2,
+      "text": "this we will be drawing recursion trees in"
+    },
+    {
+      "start": 748.56,
+      "duration": 7.44,
+      "text": "tougher problems i can't like it is practically impossible to"
+    },
+    {
+      "start": 753.2,
+      "duration": 7.36,
+      "text": "write uh every time the entire function and show you how it is being done it's"
+    },
+    {
+      "start": 757.92,
+      "duration": 7.44,
+      "text": "practically impossible to do this so i will be writing in this fashion going"
+    },
+    {
+      "start": 762.88,
+      "duration": 6.8,
+      "text": "forward so please please uh try to relate the horizontal uh"
+    },
+    {
+      "start": 767.839,
+      "duration": 6.24,
+      "text": "programmatic call to the vertical recursion it's very important to relate"
+    },
+    {
+      "start": 771.44,
+      "duration": 5.839,
+      "text": "it it's very simple f of four whom does it call you just have to relate that for"
+    },
+    {
+      "start": 775.839,
+      "duration": 5.44,
+      "text": "four called called last and second last so just"
+    },
+    {
+      "start": 779.279,
+      "duration": 5.841,
+      "text": "related second last last and second last try to relate the horizontal with the"
+    },
+    {
+      "start": 783.2,
+      "duration": 6.8,
+      "text": "vertical recursion tree okay i hope that makes uh sense"
+    },
+    {
+      "start": 787.92,
+      "duration": 7.12,
+      "text": "so if i try to code this uh super quick it'll be like intf of int n"
+    },
+    {
+      "start": 792.639,
+      "duration": 6.481,
+      "text": "and then i can be like if n is less than equal to one"
+    },
+    {
+      "start": 796.32,
+      "duration": 6.319,
+      "text": "you can simply return n or else you can say there will be a last of f of n minus"
+    },
+    {
+      "start": 801.839,
+      "duration": 8.8,
+      "text": "1 there will be a second last of f of"
+    },
+    {
+      "start": 806.56,
+      "duration": 6.48,
+      "text": "n minus 2 and then you can return last"
+    },
+    {
+      "start": 812.0,
+      "duration": 7.04,
+      "text": "plus second last correct and over here you"
+    },
+    {
+      "start": 816.079,
+      "duration": 6.161,
+      "text": "can definitely uh print f of four if you wish to and this will give"
+    },
+    {
+      "start": 820.639,
+      "duration": 3.76,
+      "text": "you the answer you see over here you got the answers"
+    },
+    {
+      "start": 823.68,
+      "duration": 5.279,
+      "text": "three very simple and straightforward but what"
+    },
+    {
+      "start": 826.48,
+      "duration": 6.24,
+      "text": "about the time complexity this is a very very critical thing let's understand the"
+    },
+    {
+      "start": 830.639,
+      "duration": 6.721,
+      "text": "time complexity how many recursion calls did you made"
+    },
+    {
+      "start": 834.639,
+      "duration": 7.841,
+      "text": "for n equal to four let's see first recursion call second"
+    },
+    {
+      "start": 839.92,
+      "duration": 6.96,
+      "text": "recursion call third recursion call fourth recursion call fifth recursion"
+    },
+    {
+      "start": 844.639,
+      "duration": 7.601,
+      "text": "call sixth recursion call seventh recursion call eighth recursion call"
+    },
+    {
+      "start": 849.279,
+      "duration": 7.441,
+      "text": "ninth recursion call it's definitely not"
+    },
+    {
+      "start": 853.12,
+      "duration": 6.56,
+      "text": "four recursion calls it's way way beyond that"
+    },
+    {
+      "start": 857.68,
+      "duration": 5.2,
+      "text": "correct now if i'm asking you"
+    },
+    {
+      "start": 861.12,
+      "duration": 4.88,
+      "text": "for every n how many recursion calls were you making"
+    },
+    {
+      "start": 864.72,
+      "duration": 6.08,
+      "text": "you'll be like i was making a couple of recursion calls"
+    },
+    {
+      "start": 868.0,
+      "duration": 8.0,
+      "text": "i will like make sense because for four uh you made for three and four two it it"
+    },
+    {
+      "start": 873.92,
+      "duration": 6.4,
+      "text": "is not a unidirectional recursion call it's kind of bi-directional when you"
+    },
+    {
+      "start": 877.519,
+      "duration": 7.601,
+      "text": "call a couple of guys so for every n you're calling two guys"
+    },
+    {
+      "start": 882.8,
+      "duration": 7.44,
+      "text": "so for the next n minus one again you call two guys for the next n minus two"
+    },
+    {
+      "start": 887.44,
+      "duration": 8.639,
+      "text": "again you call two guys so for every one you're calling two two two two two so"
+    },
+    {
+      "start": 893.6,
+      "duration": 7.039,
+      "text": "can i say it's like two to the power n will be the time complexity not near not"
+    },
+    {
+      "start": 899.44,
+      "duration": 6.48,
+      "text": "exactly why because uh from four you called for"
+    },
+    {
+      "start": 903.92,
+      "duration": 6.08,
+      "text": "three and the other one was one lesser than three thereby it's not exactly two"
+    },
+    {
+      "start": 908.079,
+      "duration": 4.921,
+      "text": "to the power n but you can say it's near about two to the power n which is"
+    },
+    {
+      "start": 911.519,
+      "duration": 5.68,
+      "text": "generically known as exponential in nature if you did not"
+    },
+    {
+      "start": 915.6,
+      "duration": 6.4,
+      "text": "understand let's understand by recursion tree see this was the first level"
+    },
+    {
+      "start": 919.519,
+      "duration": 7.041,
+      "text": "this guy called couple of guys correct again this guy called couple of guys so"
+    },
+    {
+      "start": 924.079,
+      "duration": 7.041,
+      "text": "if one guy calls couple and the other guy again calls couple so it's twice"
+    },
+    {
+      "start": 929.199,
+      "duration": 4.721,
+      "text": "into twice into twice what this"
+    },
+    {
+      "start": 932.32,
+      "duration": 4.319,
+      "text": "uh try to draw recursion trees you'll understand so if every guy is calling"
+    },
+    {
+      "start": 935.519,
+      "duration": 4.961,
+      "text": "twice and it's like tree type it's going to be"
+    },
+    {
+      "start": 938.56,
+      "duration": 4.399,
+      "text": "2 into 2 into 2 into 2 which is 2 to the power n"
+    },
+    {
+      "start": 941.519,
+      "duration": 6.0,
+      "text": "the only reason it's not like for 4 it isn't like 2 to the"
+    },
+    {
+      "start": 945.04,
+      "duration": 7.359,
+      "text": "power 4 equal to 16 and it is 9 recursion calls the only reason is"
+    },
+    {
+      "start": 949.68,
+      "duration": 6.959,
+      "text": "because from 4 you're calling through 3 and then you're calling it to two down"
+    },
+    {
+      "start": 954.079,
+      "duration": 6.401,
+      "text": "level like from four you're going to two so for every time you're like going to"
+    },
+    {
+      "start": 958.72,
+      "duration": 5.44,
+      "text": "uh twice down there by it's not exactly two to the"
+    },
+    {
+      "start": 962.079,
+      "duration": 7.76,
+      "text": "power n but you can see it's near about exponential in nature so this can be"
+    },
+    {
+      "start": 967.92,
+      "duration": 6.64,
+      "text": "done using dynamic programming where you can trim down but as of now i'll not be"
+    },
+    {
+      "start": 972.24,
+      "duration": 5.68,
+      "text": "giant programming that's coming next but this should be understandable why it is"
+    },
+    {
+      "start": 976.16,
+      "duration": 5.28,
+      "text": "true to the power n okay just in case you still have doubts put"
+    },
+    {
+      "start": 979.68,
+      "duration": 5.2,
+      "text": "that into the comment section put that into the comment section i will"
+    },
+    {
+      "start": 983.04,
+      "duration": 5.599,
+      "text": "definitely reply and yes if you have understood multiple recursion calls"
+    },
+    {
+      "start": 987.04,
+      "duration": 4.32,
+      "text": "please please please make sure you like this video and if you're new to the"
+    },
+    {
+      "start": 989.839,
+      "duration": 5.201,
+      "text": "channel please do consider subscribing please please do consider subscribing"
+    },
+    {
+      "start": 993.36,
+      "duration": 13.109,
+      "text": "and yeah with this uh let's wrap up this video bye-bye"
+    },
+    {
+      "start": 998.6,
+      "duration": 7.869,
+      "text": "[Music]"
+    }
+  ]
+}

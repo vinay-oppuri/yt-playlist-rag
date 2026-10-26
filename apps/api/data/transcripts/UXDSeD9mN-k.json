@@ -1,0 +1,1157 @@
+{
+  "video_id": "UXDSeD9mN-k",
+  "title": "2 Sum Problem | 2 types of the same problem for Interviews | Brute-Better-Optimal",
+  "total_segments": 230,
+  "segments": [
+    {
+      "start": 3.0,
+      "duration": 4.68,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.06,
+      "duration": 5.28,
+      "text": "so this is another video from the stripers A to Z DSA course just in case"
+    },
+    {
+      "start": 10.139,
+      "duration": 4.981,
+      "text": "you're for the first time here this is world's most in-depth course in DSL go"
+    },
+    {
+      "start": 13.259,
+      "duration": 6.02,
+      "text": "why do I see that because in this course I will be covering four 56 modules by"
+    },
+    {
+      "start": 17.699,
+      "duration": 5.821,
+      "text": "the end of the course we would have sort 400 plus problems and yes I'll go you"
+    },
+    {
+      "start": 22.14,
+      "duration": 5.76,
+      "text": "can go across the entire internet you can buy any of the paid courses none of"
+    },
+    {
+      "start": 25.68,
+      "duration": 6.06,
+      "text": "them will be teaching DS algo in such step so something that I can give you as"
+    },
+    {
+      "start": 29.82,
+      "duration": 6.06,
+      "text": "a guarantee is once you complete this entire post you can track any of the DS"
+    },
+    {
+      "start": 34.02,
+      "duration": 6.12,
+      "text": "algo routes at any of the interviews at any of the companies in any part of the"
+    },
+    {
+      "start": 38.1,
+      "duration": 7.2,
+      "text": "world so till now we have covered until step 3.1 we will be starting with step"
+    },
+    {
+      "start": 43.14,
+      "duration": 6.419,
+      "text": "3.2 and the problem that we will be solving in this particular video is the"
+    },
+    {
+      "start": 47.399,
+      "duration": 5.461,
+      "text": "two sum problem so what does this particular problem State now this"
+    },
+    {
+      "start": 50.879,
+      "duration": 5.941,
+      "text": "particular problem has two different varieties and I'll be covering both of"
+    },
+    {
+      "start": 54.719,
+      "duration": 5.701,
+      "text": "them the first one is very simple you will be given an array and the array"
+    },
+    {
+      "start": 58.44,
+      "duration": 7.2,
+      "text": "will be containing integers and you'll be given a Target value your task is to"
+    },
+    {
+      "start": 62.52,
+      "duration": 7.5,
+      "text": "tell me does there exist two elements A and B from the array such that if you"
+    },
+    {
+      "start": 68.159,
+      "duration": 6.721,
+      "text": "add them up you get this particular sum for an example if I give you target"
+    },
+    {
+      "start": 72.06,
+      "duration": 9.239,
+      "text": "equal to 14 I can say if I pick 8 if I pick six six plus eight will give you"
+    },
+    {
+      "start": 77.22,
+      "duration": 9.84,
+      "text": "14. for example if the target was 15 I'd have said can I make 15 let's let's"
+    },
+    {
+      "start": 83.34,
+      "duration": 8.459,
+      "text": "probably check out 11 plus 2 no 6 plus 5 No 8 plus 6 no"
+    },
+    {
+      "start": 89.4,
+      "duration": 9.179,
+      "text": "I cannot find a way in which I can make 15 so 15 is not possible 14 is possible"
+    },
+    {
+      "start": 95.759,
+      "duration": 8.281,
+      "text": "so the answer if the target is 14 it'll be yes that's the first variety tell me"
+    },
+    {
+      "start": 101.34,
+      "duration": 7.5,
+      "text": "yes if it is possible tell me no if it is not possible what is the second"
+    },
+    {
+      "start": 106.14,
+      "duration": 7.68,
+      "text": "variety the second variety is slightly different it does tell you that Hey"
+    },
+    {
+      "start": 111.299,
+      "duration": 7.741,
+      "text": "listen you're given a marry and we are shown yes we are sure that there are two"
+    },
+    {
+      "start": 116.399,
+      "duration": 5.521,
+      "text": "elements which will give you the sum 14. let's share about that your task is to"
+    },
+    {
+      "start": 121.079,
+      "duration": 6.0,
+      "text": "tell me where are these two elements so I'll be"
+    },
+    {
+      "start": 124.38,
+      "duration": 6.48,
+      "text": "like okay 8 is here 6 is here so the indexing is at one comma three so you"
+    },
+    {
+      "start": 129.599,
+      "duration": 6.301,
+      "text": "have to return me both the indexes which will add up to"
+    },
+    {
+      "start": 133.739,
+      "duration": 7.321,
+      "text": "give you 14 because at index 1 I have 6 at index 3 I have eight so six plus"
+    },
+    {
+      "start": 138.84,
+      "duration": 6.72,
+      "text": "eight gives you 14. your task is to return both the indexes instead of"
+    },
+    {
+      "start": 143.28,
+      "duration": 8.039,
+      "text": "saying yes or no the first variety says yes or no and the second variety says"
+    },
+    {
+      "start": 148.44,
+      "duration": 7.2,
+      "text": "give me both the indexes which will add up to give the particular Target so both"
+    },
+    {
+      "start": 153.84,
+      "duration": 5.82,
+      "text": "the varieties are pretty much similar the only difference is you have to tell"
+    },
+    {
+      "start": 157.2,
+      "duration": 6.36,
+      "text": "us which which elements are you picking up right so let's keep both the"
+    },
+    {
+      "start": 161.819,
+      "duration": 5.161,
+      "text": "varieties in mind and let's try to solve this problem so whenever this problem"
+    },
+    {
+      "start": 165.3,
+      "duration": 4.98,
+      "text": "comes up in an interview the first solution that you will give is"
+    },
+    {
+      "start": 168.3,
+      "duration": 6.0,
+      "text": "definitely the Brute Force what is the Brute Force The Brute Force is very"
+    },
+    {
+      "start": 171.959,
+      "duration": 6.06,
+      "text": "simple I pick up one element then I check with every other element does it"
+    },
+    {
+      "start": 176.099,
+      "duration": 5.881,
+      "text": "sum up to give you the target then I pick up the next element then I check"
+    },
+    {
+      "start": 179.94,
+      "duration": 5.519,
+      "text": "with all the other elements does it sum to give the Target and I again pick up"
+    },
+    {
+      "start": 183.84,
+      "duration": 5.28,
+      "text": "the other element and I check up with every other element does it sum up to"
+    },
+    {
+      "start": 187.5,
+      "duration": 5.64,
+      "text": "give this target then I pick up one other element and then I check with"
+    },
+    {
+      "start": 190.319,
+      "duration": 7.021,
+      "text": "every other that's a simple Brute Force solution so if I have to write the code"
+    },
+    {
+      "start": 195.12,
+      "duration": 10.68,
+      "text": "can I say it'll be like for INT I equal to 0 I lesser than n i plus plus and can"
+    },
+    {
+      "start": 201.36,
+      "duration": 9.299,
+      "text": "I say 4 J equal to 0 J lesser than n j plus plus and then can I say if I is"
+    },
+    {
+      "start": 209.099,
+      "duration": 5.341,
+      "text": "equal to equal to J then I will not do anything I'll just continue because we"
+    },
+    {
+      "start": 212.519,
+      "duration": 10.201,
+      "text": "cannot pick up the same elements or else I'll say if array of I plus array of J"
+    },
+    {
+      "start": 219.3,
+      "duration": 7.499,
+      "text": "is equal to equal to the Target then it's a yes"
+    },
+    {
+      "start": 224.519,
+      "duration": 6.241,
+      "text": "or if you want the indexes the indexes are inj so both the varieties can be"
+    },
+    {
+      "start": 228.959,
+      "duration": 6.36,
+      "text": "solved by using the brute force method this is the yes and this is the indexes"
+    },
+    {
+      "start": 233.04,
+      "duration": 7.14,
+      "text": "if you wish to so this is very simple once you've done this you can break out"
+    },
+    {
+      "start": 237.48,
+      "duration": 7.74,
+      "text": "you can return whatever you wish to do it's a very simple Brute Force solution"
+    },
+    {
+      "start": 242.519,
+      "duration": 7.321,
+      "text": "what is the time complexity n Square because for every for every element you"
+    },
+    {
+      "start": 248.7,
+      "duration": 4.739,
+      "text": "are checking with every other element for every element you are checking with"
+    },
+    {
+      "start": 251.64,
+      "duration": 5.879,
+      "text": "every other element so can I optimize them further the answer to that is yes"
+    },
+    {
+      "start": 255.48,
+      "duration": 6.3,
+      "text": "imagine you are two you're checking with six five eight eleven so 2 and 6 are"
+    },
+    {
+      "start": 259.979,
+      "duration": 7.861,
+      "text": "already checked if you carefully observe two and six are already checked as two"
+    },
+    {
+      "start": 265.259,
+      "duration": 7.681,
+      "text": "elements now when you add six is there a point on again checking for"
+    },
+    {
+      "start": 270.9,
+      "duration": 7.019,
+      "text": "two because even if you again check for two it's like again two and six"
+    },
+    {
+      "start": 275.22,
+      "duration": 7.08,
+      "text": "similarly if you're at 5 is there a point for checking for six so can I say"
+    },
+    {
+      "start": 280.32,
+      "duration": 5.879,
+      "text": "if you are at an element you always start checking from the next if you are"
+    },
+    {
+      "start": 284.4,
+      "duration": 6.18,
+      "text": "not six you can start from five because two is done if you are at five you can"
+    },
+    {
+      "start": 288.479,
+      "duration": 7.141,
+      "text": "start checking from eight so what you can do is instead of doing 0 you can say"
+    },
+    {
+      "start": 293.46,
+      "duration": 8.16,
+      "text": "I'll start checking from the next and this line will go off so this is"
+    },
+    {
+      "start": 297.68,
+      "duration": 8.799,
+      "text": "slightly lesser than n square but it is still near about n Square so that is the"
+    },
+    {
+      "start": 303.9,
+      "duration": 6.359,
+      "text": "Brute Force solution quite simple so the interviewer will not be happy with the"
+    },
+    {
+      "start": 307.979,
+      "duration": 6.481,
+      "text": "root 4 solution and it'll ask you to optimize this this is when you go to the"
+    },
+    {
+      "start": 312.6,
+      "duration": 6.78,
+      "text": "better solution the better solution is going to use hashic and what is my"
+    },
+    {
+      "start": 317.22,
+      "duration": 6.9,
+      "text": "thought process behind it it's small like I'm doing an N Square to kind of"
+    },
+    {
+      "start": 322.139,
+      "duration": 7.141,
+      "text": "trim it down to somewhere near about n or n log n or somewhere which is better"
+    },
+    {
+      "start": 326.88,
+      "duration": 8.34,
+      "text": "than n Square now when I think about a big off n approach it tells me that"
+    },
+    {
+      "start": 332.28,
+      "duration": 8.22,
+      "text": "means I treat on an element once that's how mind brain should think I trading on"
+    },
+    {
+      "start": 338.4,
+      "duration": 7.38,
+      "text": "an element once so if I'm eye treating on A8 what am I looking for I'm looking"
+    },
+    {
+      "start": 343.44,
+      "duration": 5.099,
+      "text": "for one more element that gives me the Target"
+    },
+    {
+      "start": 346.62,
+      "duration": 7.56,
+      "text": "simple thought process if I'm looking for one more element what will it be if"
+    },
+    {
+      "start": 351.6,
+      "duration": 7.98,
+      "text": "I'm looking for 14 if I have 8 the other element will be 6 simple mathematics if"
+    },
+    {
+      "start": 356.88,
+      "duration": 7.86,
+      "text": "I'm looking for six how do I figure this out does 6 exist in the array or not so"
+    },
+    {
+      "start": 362.94,
+      "duration": 5.699,
+      "text": "we say yes it does but how do you figure it out easily you know the technique"
+    },
+    {
+      "start": 366.72,
+      "duration": 6.9,
+      "text": "hashing if you would have stored it somewhere that 6 is there 6 is there you"
+    },
+    {
+      "start": 371.46,
+      "duration": 6.42,
+      "text": "can easily retract from it and you can use the map data structure which will"
+    },
+    {
+      "start": 375.36,
+      "duration": 9.119,
+      "text": "tell you yes 6 is there so you can easily say with 8 I have a six that's"
+    },
+    {
+      "start": 381.24,
+      "duration": 6.06,
+      "text": "how you'll be using hashing got it so I hope you have understood the thought"
+    },
+    {
+      "start": 385.5,
+      "duration": 5.58,
+      "text": "process now let's do a dragon of the algorithm so what I'll do is I'll take a"
+    },
+    {
+      "start": 389.16,
+      "duration": 6.96,
+      "text": "hashma and in the hash map I'll be storing the array element I can say"
+    },
+    {
+      "start": 393.18,
+      "duration": 8.22,
+      "text": "element and the index where the element will be the key where the element will"
+    },
+    {
+      "start": 398.1,
+      "duration": 6.599,
+      "text": "be the key and index will be the index of the array this is what I will be"
+    },
+    {
+      "start": 403.02,
+      "duration": 8.399,
+      "text": "storing in the hash file now let's quickly do a trial so when we are at 2"
+    },
+    {
+      "start": 408.9,
+      "duration": 8.82,
+      "text": "we will say okay we have one element dust and now I'm like okay how much like"
+    },
+    {
+      "start": 415.259,
+      "duration": 7.321,
+      "text": "what is the next number that we require that's definitely 12 because 2 plus 12"
+    },
+    {
+      "start": 420.66,
+      "duration": 5.819,
+      "text": "will give you 14 very simple you just take 14 and you subtract 2. so if you"
+    },
+    {
+      "start": 424.56,
+      "duration": 7.919,
+      "text": "subtract 2 you'll get 12 it'll be like okay I have to do we have 12. you look"
+    },
+    {
+      "start": 429.36,
+      "duration": 8.459,
+      "text": "in the hash map and you say no I do not have to so if you do not have 12"
+    },
+    {
+      "start": 434.58,
+      "duration": 9.119,
+      "text": "okay not possible if not possible the index is zero so Del 2 element with the"
+    },
+    {
+      "start": 441.12,
+      "duration": 7.799,
+      "text": "index to be stored in the hash and now we will know okay we are six we have six"
+    },
+    {
+      "start": 446.759,
+      "duration": 6.601,
+      "text": "now if we have six how much more do we require eight we have six do we have"
+    },
+    {
+      "start": 451.62,
+      "duration": 6.299,
+      "text": "eight in the hashgraph we have eight in the map we we have it in the array but"
+    },
+    {
+      "start": 455.58,
+      "duration": 8.1,
+      "text": "do we have it in the hashtag no so presently with the six there is no need"
+    },
+    {
+      "start": 460.979,
+      "duration": 6.901,
+      "text": "on the left on the net there is no weight so if there is no weight fine"
+    },
+    {
+      "start": 465.78,
+      "duration": 8.1,
+      "text": "take six and put it with the index one perfect next move it we have five if we"
+    },
+    {
+      "start": 471.72,
+      "duration": 7.259,
+      "text": "have five what I will do is I'll take five and I'll say with five how much do"
+    },
+    {
+      "start": 476.16,
+      "duration": 7.56,
+      "text": "you require it's like it is 14 so I require nine do we have nine in the"
+    },
+    {
+      "start": 481.139,
+      "duration": 6.421,
+      "text": "entire hashmir no so what you'll do is you'll take five and you'll say it"
+    },
+    {
+      "start": 485.4,
+      "duration": 6.359,
+      "text": "appears at the index two that's what you'll do and then you'll move to eight"
+    },
+    {
+      "start": 489.18,
+      "duration": 6.6,
+      "text": "the moment you move to a it states okay you have eight how much more do you"
+    },
+    {
+      "start": 493.62,
+      "duration": 8.82,
+      "text": "require he says I require six I do have eight do I have six it states yes I have"
+    },
+    {
+      "start": 499.44,
+      "duration": 8.759,
+      "text": "a six here and the six that I have appears at index 1 where am I currently"
+    },
+    {
+      "start": 505.5,
+      "duration": 7.38,
+      "text": "at index two so if they are asking you yes or no you simply return a yes the"
+    },
+    {
+      "start": 510.78,
+      "duration": 7.139,
+      "text": "moment you find it if they're asking you to return the indexes you're like okay"
+    },
+    {
+      "start": 515.58,
+      "duration": 10.5,
+      "text": "you just leave the index system so 8 currently is at index 3. and"
+    },
+    {
+      "start": 522.719,
+      "duration": 9.06,
+      "text": "6 is at index one so three comma 1 simple as that these are the two indexes"
+    },
+    {
+      "start": 529.2,
+      "duration": 6.3,
+      "text": "they do not care about the order if they care about the order then you can just"
+    },
+    {
+      "start": 533.22,
+      "duration": 7.38,
+      "text": "put one at the front and then three you can easily customize it so done once"
+    },
+    {
+      "start": 538.38,
+      "duration": 7.98,
+      "text": "you've done you stop the iteration and if you have completed the iteration and"
+    },
+    {
+      "start": 542.82,
+      "duration": 8.459,
+      "text": "you do not find any existence where you would have got two elements then you"
+    },
+    {
+      "start": 548.22,
+      "duration": 6.299,
+      "text": "return no very simple so let's quickly quote the better solution by the way the"
+    },
+    {
+      "start": 553.14,
+      "duration": 6.78,
+      "text": "problem link will be in the description so we need a map so let's take a map at"
+    },
+    {
+      "start": 557.519,
+      "duration": 7.561,
+      "text": "first and then we will be simply going across this one"
+    },
+    {
+      "start": 562.32,
+      "duration": 6.48,
+      "text": "can I say my first element is this"
+    },
+    {
+      "start": 566.399,
+      "duration": 7.021,
+      "text": "how much more do I require can I say I require more as Target"
+    },
+    {
+      "start": 571.08,
+      "duration": 7.02,
+      "text": "minus a can I see if I have to look in the map as a matplot find more are you"
+    },
+    {
+      "start": 576.48,
+      "duration": 5.4,
+      "text": "there in the map if you're in the map then you will not be pointing to the"
+    },
+    {
+      "start": 579.3,
+      "duration": 6.02,
+      "text": "last straighten if that's the case we will be returning yes"
+    },
+    {
+      "start": 586.82,
+      "duration": 5.98,
+      "text": "or else you just keep on going and if you keep"
+    },
+    {
+      "start": 591.06,
+      "duration": 7.02,
+      "text": "on going what will you do you will say NPP"
+    },
+    {
+      "start": 594.0,
+      "duration": 9.24,
+      "text": "map of this particular guy who is this number and is this Market at the index"
+    },
+    {
+      "start": 600.779,
+      "duration": 8.0,
+      "text": "that's it and if after the complete iteration you never found it you return"
+    },
+    {
+      "start": 605.22,
+      "duration": 8.82,
+      "text": "a quite simple if they wanted the index instead of this you can easily write"
+    },
+    {
+      "start": 611.58,
+      "duration": 7.98,
+      "text": "return okay what are the indexes they need the smaller one at first more and"
+    },
+    {
+      "start": 617.04,
+      "duration": 9.419,
+      "text": "then XI quite simple if they need the index this is how you return if they"
+    },
+    {
+      "start": 623.04,
+      "duration": 5.88,
+      "text": "need yes or no this is how you do so in this way you can solve both the"
+    },
+    {
+      "start": 627.839,
+      "duration": 5.281,
+      "text": "varieties so for the variety 2 you can try the"
+    },
+    {
+      "start": 630.839,
+      "duration": 7.141,
+      "text": "hashing solution only code and then you can quickly go and run this and it"
+    },
+    {
+      "start": 636.0,
+      "duration": 6.899,
+      "text": "should be running on lead code AS so well let's quickly submit this as well"
+    },
+    {
+      "start": 640.2,
+      "duration": 8.4,
+      "text": "cool it last one okay so what is the time complexity of such an approach it's"
+    },
+    {
+      "start": 645.18,
+      "duration": 8.52,
+      "text": "very simple it's big bro of N I can say n if you're assuming the map to work in"
+    },
+    {
+      "start": 651.42,
+      "duration": 6.659,
+      "text": "B go of one if the map Works in logarithmic profit in its login depends"
+    },
+    {
+      "start": 656.279,
+      "duration": 5.281,
+      "text": "on which map you take I have already discussed then in time complexity"
+    },
+    {
+      "start": 659.64,
+      "duration": 7.439,
+      "text": "lecture you can go over there and watch this is when we take a map and we go of"
+    },
+    {
+      "start": 664.44,
+      "duration": 8.399,
+      "text": "n when we take an unordered map in the best and average case in the worst case"
+    },
+    {
+      "start": 669.18,
+      "duration": 9.42,
+      "text": "of unordered map it can go up to Pico of n Square the complexity because find"
+    },
+    {
+      "start": 675.779,
+      "duration": 8.161,
+      "text": "takes we go of n in the worst case in another got it what about this piece I'm"
+    },
+    {
+      "start": 681.66,
+      "duration": 6.119,
+      "text": "using a hash map where we are dumping every element every element and if"
+    },
+    {
+      "start": 685.8,
+      "duration": 5.7,
+      "text": "you're dumping every element we know it's going to show everything so it's a"
+    },
+    {
+      "start": 689.82,
+      "duration": 5.699,
+      "text": "big go off and I hope you have understood this now at this moment a lot"
+    },
+    {
+      "start": 693.66,
+      "duration": 6.359,
+      "text": "of interviews might not drill you more because the better solution is taking an"
+    },
+    {
+      "start": 698.04,
+      "duration": 6.359,
+      "text": "N login approach which is exactly similar to the optimal approach the only"
+    },
+    {
+      "start": 702.24,
+      "duration": 5.82,
+      "text": "thing that they can review is they might ask you hey you're not allowed to use"
+    },
+    {
+      "start": 706.26,
+      "duration": 4.98,
+      "text": "the map data structure can you solve this without using the map data"
+    },
+    {
+      "start": 709.5,
+      "duration": 6.6,
+      "text": "structure this is where you'll be like okay maybe I have a slightly better"
+    },
+    {
+      "start": 714.18,
+      "duration": 6.899,
+      "text": "solution not much slightly better solution and that solution will be using"
+    },
+    {
+      "start": 718.62,
+      "duration": 6.98,
+      "text": "two pointer approach it's a very simple one so there is no particular thought"
+    },
+    {
+      "start": 723.72,
+      "duration": 7.739,
+      "text": "process we added it's a very very simple greedy approach greedy approach so if I"
+    },
+    {
+      "start": 728.76,
+      "duration": 10.8,
+      "text": "sort the array what will I get I'll get something like 2 5 6. 8 11 what is the"
+    },
+    {
+      "start": 736.86,
+      "duration": 7.08,
+      "text": "Target that I'm looking for 14. now I'm looking I will apply a greedy approach"
+    },
+    {
+      "start": 741.72,
+      "duration": 7.26,
+      "text": "so what I will do is I'll keep a left pointer at 2 I'll keep a right pointer"
+    },
+    {
+      "start": 746.399,
+      "duration": 8.461,
+      "text": "at a level that's what I do left pointer at 2 and a right pointer at 11. now I'll"
+    },
+    {
+      "start": 751.98,
+      "duration": 8.94,
+      "text": "be like okay fine what do we have 2 plus 11 that's giving me 14. no it is 4 it is"
+    },
+    {
+      "start": 758.64,
+      "duration": 8.879,
+      "text": "not how much is it giving me it's giving me 13. one shot where one shot now since"
+    },
+    {
+      "start": 765.0,
+      "duration": 8.16,
+      "text": "the array is sorted if you move to this portion this will be 8 and 2 plus 8 will"
+    },
+    {
+      "start": 770.639,
+      "duration": 7.921,
+      "text": "give you ten see you will not reach the packet so what will you do since this is"
+    },
+    {
+      "start": 775.8,
+      "duration": 6.12,
+      "text": "13 and you want to reach 14 you have to do increment if you if you have to do"
+    },
+    {
+      "start": 780.66,
+      "duration": 6.06,
+      "text": "increment in which direction is the increment if"
+    },
+    {
+      "start": 784.56,
+      "duration": 6.42,
+      "text": "you move in this direction then 2 will increase so you have to increase the"
+    },
+    {
+      "start": 788.519,
+      "duration": 6.901,
+      "text": "value if you move on left 11 will decrease so this is why I sorted the"
+    },
+    {
+      "start": 793.2,
+      "duration": 6.78,
+      "text": "array so what I'll do is I'll just take the left pointer and I'll move it to"
+    },
+    {
+      "start": 796.8,
+      "duration": 9.599,
+      "text": "files this is now five on five what do you get 11 plus 5 is 16 I'm like ah this"
+    },
+    {
+      "start": 804.3,
+      "duration": 7.68,
+      "text": "is more than 40 this is more than 14. I'm like okay more than 14 reduce I know"
+    },
+    {
+      "start": 809.7,
+      "duration": 6.48,
+      "text": "if I move left then I'll reduce so I'll just move over here"
+    },
+    {
+      "start": 813.779,
+      "duration": 8.761,
+      "text": "now what is the value to stand five plus eight how much again do I get 13 5 plus"
+    },
+    {
+      "start": 819.839,
+      "duration": 8.761,
+      "text": "8 is 13 okay again you have to increase so you move"
+    },
+    {
+      "start": 825.899,
+      "duration": 10.56,
+      "text": "so when you move what will you get you will get 6 and you'll get 6 Plus 8 14"
+    },
+    {
+      "start": 832.8,
+      "duration": 10.2,
+      "text": "and you can say yes I was able to but if at any moment left and right cross cross"
+    },
+    {
+      "start": 840.0,
+      "duration": 7.079,
+      "text": "and you did not find two elements which add up to give you the target the answer"
+    },
+    {
+      "start": 845.22,
+      "duration": 6.84,
+      "text": "will be no you might be thinking but Strava this is solving the variety one"
+    },
+    {
+      "start": 850.079,
+      "duration": 9.601,
+      "text": "how can I solve the variety too because the Variety Tool tells me to give me the"
+    },
+    {
+      "start": 855.06,
+      "duration": 9.66,
+      "text": "index in that case you have to put it in some other data structure and you have"
+    },
+    {
+      "start": 862.139,
+      "duration": 9.301,
+      "text": "to put it like 2 comma zero six comma 1 5 comma 2 8 comma three"
+    },
+    {
+      "start": 869.519,
+      "duration": 5.581,
+      "text": "eleven comma four so you have to put along with the"
+    },
+    {
+      "start": 872.82,
+      "duration": 6.18,
+      "text": "indexes into some data structure then you have to sort it so that along with"
+    },
+    {
+      "start": 877.32,
+      "duration": 5.579,
+      "text": "two you will always have zero along with five you'll always have to along with 6"
+    },
+    {
+      "start": 880.98,
+      "duration": 5.7,
+      "text": "you'll always have one along with eight you'll always have three along with 11"
+    },
+    {
+      "start": 884.76,
+      "duration": 7.199,
+      "text": "you will always have four so that the indexes are preserved but again this is"
+    },
+    {
+      "start": 889.44,
+      "duration": 8.339,
+      "text": "not an optimal approach for the variety too because you will be ending up using"
+    },
+    {
+      "start": 894.899,
+      "duration": 6.421,
+      "text": "like more space because using a data structure of n cross 2 because you have"
+    },
+    {
+      "start": 899.639,
+      "duration": 6.181,
+      "text": "to store it in some other data structure then you have to sort it so it's not an"
+    },
+    {
+      "start": 903.36,
+      "duration": 7.5,
+      "text": "optimal solution for the variety too for the variety one where you just have to"
+    },
+    {
+      "start": 907.5,
+      "duration": 7.68,
+      "text": "tell me yes or no I can use this because we are no more using a map data"
+    },
+    {
+      "start": 912.959,
+      "duration": 6.361,
+      "text": "structure we're just using sorting and then we are using a traversal in order"
+    },
+    {
+      "start": 916.8,
+      "duration": 5.039,
+      "text": "to find it so let's jump into the editor and try to code this up again the"
+    },
+    {
+      "start": 920.639,
+      "duration": 4.741,
+      "text": "problem link will be in the description so you can keep the left pointer as 0"
+    },
+    {
+      "start": 924.12,
+      "duration": 6.54,
+      "text": "and the right pointer the last index which is n minus 1 what's the first step"
+    },
+    {
+      "start": 927.36,
+      "duration": 8.339,
+      "text": "yes you go ahead and say I'm gonna sort it so you can use the Sorting function"
+    },
+    {
+      "start": 932.76,
+      "duration": 8.639,
+      "text": "again the Java Port will be in the description and now what I can do is I"
+    },
+    {
+      "start": 937.86,
+      "duration": 9.36,
+      "text": "can run the while loop so while left like this and I can go ahead and say Hey"
+    },
+    {
+      "start": 944.22,
+      "duration": 9.78,
+      "text": "listen I need the sound so sum has to be book of left plus book of right this is"
+    },
+    {
+      "start": 951.899,
+      "duration": 5.221,
+      "text": "very short first thing I know is if someone is Target"
+    },
+    {
+      "start": 955.26,
+      "duration": 6.18,
+      "text": "then we are going to say hey I got my answer I don't care about you else if"
+    },
+    {
+      "start": 959.459,
+      "duration": 7.38,
+      "text": "you're gonna say if sum is lesser than Target I'll be like hey increase so from"
+    },
+    {
+      "start": 964.5,
+      "duration": 7.92,
+      "text": "the left else decrease if the sum is greater at the end of the day I can say"
+    },
+    {
+      "start": 968.88,
+      "duration": 6.54,
+      "text": "return no and also make sure after you have done this"
+    },
+    {
+      "start": 973.56,
+      "duration": 6.3,
+      "text": "you need to do or you don't need to Hash up yeah this"
+    },
+    {
+      "start": 977.399,
+      "duration": 6.18,
+      "text": "is how you can easily do it and now we even quickly go and run this and see if"
+    },
+    {
+      "start": 981.779,
+      "duration": 6.18,
+      "text": "it is running fine it is let's quickly submit this what is the time complexity"
+    },
+    {
+      "start": 985.74,
+      "duration": 5.82,
+      "text": "if I have to analyze I can say the time complexity is very simple since we are"
+    },
+    {
+      "start": 989.94,
+      "duration": 7.56,
+      "text": "moving from the left and the right and covering the Dan array the time"
+    },
+    {
+      "start": 993.6,
+      "duration": 7.56,
+      "text": "complexity is B go of n because they're moving from the left they're moving from"
+    },
+    {
+      "start": 999.12,
+      "duration": 6.0,
+      "text": "the right so the worst case it might end up getting to the last"
+    },
+    {
+      "start": 1002.899,
+      "duration": 6.901,
+      "text": "Point as you saw we went here we went here so we covered this much we covered"
+    },
+    {
+      "start": 1006.98,
+      "duration": 8.039,
+      "text": "this much the time complexity distance surely is because of n plus another Big"
+    },
+    {
+      "start": 1012.5,
+      "duration": 6.839,
+      "text": "O of n log n for sorting so what about so what about the space complexity I'm"
+    },
+    {
+      "start": 1016.88,
+      "duration": 5.94,
+      "text": "not using any extra space so B go off one yeah the interviewer might argue"
+    },
+    {
+      "start": 1021.139,
+      "duration": 6.601,
+      "text": "that the you are changing the array you're like yeah I'm changing the array"
+    },
+    {
+      "start": 1024.559,
+      "duration": 7.201,
+      "text": "so if he has to like take into account the space complexity of the array"
+    },
+    {
+      "start": 1029.839,
+      "duration": 6.84,
+      "text": "because you have changed it then it will become big of n so you can clearly tell"
+    },
+    {
+      "start": 1034.64,
+      "duration": 5.58,
+      "text": "them I'm not using anything extra but I'm distorting so if you want to"
+    },
+    {
+      "start": 1038.419,
+      "duration": 5.821,
+      "text": "consider if you want to consider that distorted and a space complexity well"
+    },
+    {
+      "start": 1042.199,
+      "duration": 5.88,
+      "text": "and good it's very often if you don't want to consider it speak of one it's"
+    },
+    {
+      "start": 1046.16,
+      "duration": 7.259,
+      "text": "something which is very theoretical and you can always explain that to the"
+    },
+    {
+      "start": 1049.52,
+      "duration": 10.92,
+      "text": "interview again this for variety 2 I lot prefer this for variety 2 the better is"
+    },
+    {
+      "start": 1056.36,
+      "duration": 7.679,
+      "text": "the most optimal one for variety one you can sort it and then use it so coming"
+    },
+    {
+      "start": 1062.24,
+      "duration": 4.74,
+      "text": "back to the sheeta I can say this is done if you need the C plus plus Java"
+    },
+    {
+      "start": 1065.72,
+      "duration": 5.1,
+      "text": "and python code for all the three approaches there is a link in the"
+    },
+    {
+      "start": 1068.96,
+      "duration": 6.0,
+      "text": "description you can check it out and yes uh to continue our tradition please do"
+    },
+    {
+      "start": 1072.559,
+      "duration": 6.601,
+      "text": "comment understood read the video and if you're new to our Channel please please"
+    },
+    {
+      "start": 1076.64,
+      "duration": 6.84,
+      "text": "do consider subscribing to us because that does motivate me to make such kind"
+    },
+    {
+      "start": 1081.62,
+      "duration": 5.64,
+      "text": "of content and if you haven't followed me on Instagram Twitter LinkedIn the"
+    },
+    {
+      "start": 1085.88,
+      "duration": 4.44,
+      "text": "links will be in the description please do follow me and here with this I'll be"
+    },
+    {
+      "start": 1088.94,
+      "duration": 3.68,
+      "text": "wrapping up this video let's put in some other videos"
+    },
+    {
+      "start": 1094.66,
+      "duration": 7.08,
+      "text": "don't ever forget your golden I will find the light in"
+    }
+  ]
+}

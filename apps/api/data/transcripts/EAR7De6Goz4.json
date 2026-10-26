@@ -1,0 +1,5697 @@
+{
+  "video_id": "EAR7De6Goz4",
+  "title": "C++ Basics in One Shot - Strivers A2Z DSA Course - L1",
+  "total_segments": 1138,
+  "segments": [
+    {
+      "start": 3.56,
+      "duration": 3.64,
+      "text": "Hey everyone, welcome back to the channel. I hope you guys are doing"
+    },
+    {
+      "start": 5.52,
+      "duration": 4.4,
+      "text": "extremely well. Just in case you're about the first time over here, welcome"
+    },
+    {
+      "start": 8.8,
+      "duration": 4.56,
+      "text": "to the channel. And if you don't know me, I go by the name Striver in the"
+    },
+    {
+      "start": 11.76,
+      "duration": 5.6,
+      "text": "programming community. If you want to check me out, you can definitely check"
+    },
+    {
+      "start": 15.04,
+      "duration": 7.6,
+      "text": "me out on LinkedIn. I'll be leaving my LinkedIn, Twitter, Instagram, Telegram,"
+    },
+    {
+      "start": 20.16,
+      "duration": 7.48,
+      "text": "all the social media handles in the description below. So, without wasting"
+    },
+    {
+      "start": 24.84,
+      "duration": 7.88,
+      "text": "any time, let's get started. So, Take U Forward is a full-fledged interview"
+    },
+    {
+      "start": 30.36,
+      "duration": 7.28,
+      "text": "preparation website that I run on my end. So, if you're someone who has 3"
+    },
+    {
+      "start": 34.88,
+      "duration": 8.32,
+      "text": "months to like 6 months of time left for interviews, I will definitely ask you"
+    },
+    {
+      "start": 40.08,
+      "duration": 8.52,
+      "text": "out to check this Striver's SD sheet. Trust me, this is one of the most"
+    },
+    {
+      "start": 45.84,
+      "duration": 6.68,
+      "text": "followed resources in the country as of now. What does this resource gives you?"
+    },
+    {
+      "start": 51.16,
+      "duration": 8.88,
+      "text": "It gives you 190 uh 191 well-curated problems such"
+    },
+    {
+      "start": 56.68,
+      "duration": 7.879,
+      "text": "that all your DS Algo concepts will be covered. But, only prerequisite is you"
+    },
+    {
+      "start": 62.4,
+      "duration": 7.44,
+      "text": "should be well-versed with the basics of DS Algo in order to start with."
+    },
+    {
+      "start": 67.44,
+      "duration": 8.32,
+      "text": "Now, if you're someone who's a beginner, you can definitely check out our"
+    },
+    {
+      "start": 71.4,
+      "duration": 10.32,
+      "text": "Striver's A2Z DSA course or sheet. Now, over here what I've done is I've created"
+    },
+    {
+      "start": 77.72,
+      "duration": 10.24,
+      "text": "455 steps. Every step has been curated properly, and you will get all the"
+    },
+    {
+      "start": 85.08,
+      "duration": 7.24,
+      "text": "problem links, everything. Imagine you open dynamic programming, you want"
+    },
+    {
+      "start": 89.72,
+      "duration": 6.48,
+      "text": "video, you get videos for everything. So, all the hard topics have been"
+    },
+    {
+      "start": 94.52,
+      "duration": 6.76,
+      "text": "covered. You'll find videos for all the hard topics. Now, we will be starting"
+    },
+    {
+      "start": 98.48,
+      "duration": 7.68,
+      "text": "off to cover all the basic topics. So, this is the video where we'll be"
+    },
+    {
+      "start": 102.6,
+      "duration": 6.4,
+      "text": "starting to cover from the step 1.1. In case you have doubt about the"
+    },
+    {
+      "start": 107.32,
+      "duration": 5.6,
+      "text": "credibility, you can go to our LinkedIn page, and you can check out all the"
+    },
+    {
+      "start": 111.0,
+      "duration": 4.88,
+      "text": "success stories. Or you can follow me on LinkedIn, and you can see how many"
+    },
+    {
+      "start": 114.04,
+      "duration": 5.44,
+      "text": "people do tag me. And also, you can check out our Instagram story"
+    },
+    {
+      "start": 117.48,
+      "duration": 5.6,
+      "text": "highlights. So if you go to Instagram, there is a highlight as success stories."
+    },
+    {
+      "start": 121.36,
+      "duration": 5.44,
+      "text": "Over there you can check out all our success stories like there are thousands"
+    },
+    {
+      "start": 124.8,
+      "duration": 6.52,
+      "text": "and thousands of success stories of the Striver's SD sheet. And now we are"
+    },
+    {
+      "start": 128.52,
+      "duration": 7.16,
+      "text": "starting off with Striver's A2Z DSA course sheet, which is for beginners or"
+    },
+    {
+      "start": 133.52,
+      "duration": 7.72,
+      "text": "intermediate level people. Today we will be covering the step 1.1, that is things"
+    },
+    {
+      "start": 138.6,
+      "duration": 6.52,
+      "text": "to know in C++ Java Python or any language. Now in order to start off with"
+    },
+    {
+      "start": 143.32,
+      "duration": 7.2,
+      "text": "data structures and algorithms here to pick up any one language. It can be C++"
+    },
+    {
+      "start": 147.8,
+      "duration": 7.2,
+      "text": "Java Python or JavaScript. And you have to code in that language. Make sure you"
+    },
+    {
+      "start": 152.68,
+      "duration": 6.36,
+      "text": "master one language. Now in the previous video I've already"
+    },
+    {
+      "start": 156.24,
+      "duration": 7.36,
+      "text": "talked about C++ versus Java, so you can definitely check out that video. So in"
+    },
+    {
+      "start": 160.68,
+      "duration": 7.8,
+      "text": "this video I'll be telling you about C++ and I'll be covering all these basic"
+    },
+    {
+      "start": 165.64,
+      "duration": 7.0,
+      "text": "stuffs related to C++ and in the next video we will be covering the Java one."
+    },
+    {
+      "start": 182.6,
+      "duration": 4.359,
+      "text": "I think you should definitely check out Coding Ninjas because"
+    },
+    {
+      "start": 191.04,
+      "duration": 6.96,
+      "text": "Coding Ninjas comes up with the best curated and structured path of learning"
+    },
+    {
+      "start": 195.0,
+      "duration": 3.0,
+      "text": "and their courses may"
+    },
+    {
+      "start": 203.84,
+      "duration": 5.28,
+      "text": "The best thing about Coding Ninjas is that they are like honestly Why do I"
+    },
+    {
+      "start": 207.6,
+      "duration": 4.08,
+      "text": "promote them? The reason is their service. I feel like if you pay for"
+    },
+    {
+      "start": 211.0,
+      "duration": 3.36,
+      "text": "something you deserve that service and that is where Coding Ninjas stand out."
+    },
+    {
+      "start": 215.239,
+      "duration": 3.761,
+      "text": "Like their teaching assistant service"
+    },
+    {
+      "start": 221.04,
+      "duration": 4.199,
+      "text": "That gets resolved within 10 to 15 minutes."
+    },
+    {
+      "start": 226.239,
+      "duration": 5.121,
+      "text": "You need someone who resolves your doubt like within a second. And if you can't"
+    },
+    {
+      "start": 230.0,
+      "duration": 6.92,
+      "text": "believe it you can definitely check out their Google reviews as well as Facebook"
+    },
+    {
+      "start": 233.08,
+      "duration": 3.84,
+      "text": "reviews. Content I think is good."
+    },
+    {
+      "start": 243.28,
+      "duration": 6.12,
+      "text": "Content is top-notch. The service is top-notch. If you want extra discount,"
+    },
+    {
+      "start": 247.4,
+      "duration": 5.88,
+      "text": "there's a link in the description. Make sure you check them out. I'll be using"
+    },
+    {
+      "start": 251.56,
+      "duration": 5.44,
+      "text": "VS code in order to code. I'll be writing my C++ code over here. I'll be"
+    },
+    {
+      "start": 255.08,
+      "duration": 5.92,
+      "text": "giving the input over here. And whatever the code generates as an output will be"
+    },
+    {
+      "start": 258.799,
+      "duration": 6.721,
+      "text": "produced over here. So, before starting this C++ video, I'd love to mention two"
+    },
+    {
+      "start": 263.28,
+      "duration": 6.44,
+      "text": "points. First is, please make sure you watch the video till the end. You might"
+    },
+    {
+      "start": 267.56,
+      "duration": 5.76,
+      "text": "be knowing C++, but there are a lot of things that I'll be covering in this"
+    },
+    {
+      "start": 270.88,
+      "duration": 6.32,
+      "text": "video which you might know or you might like find it very interesting. So, make"
+    },
+    {
+      "start": 275.64,
+      "duration": 4.56,
+      "text": "sure you watch the video till the end. The second point is again very"
+    },
+    {
+      "start": 278.6,
+      "duration": 7.4,
+      "text": "important. When you're learning something on uh for the first time, do"
+    },
+    {
+      "start": 282.48,
+      "duration": 7.56,
+      "text": "not dig deep too much into uh certain things because what happens is when we"
+    },
+    {
+      "start": 287.919,
+      "duration": 7.241,
+      "text": "start off, we start to think that, \"Okay, every certain thing we'll learn"
+    },
+    {
+      "start": 292.0,
+      "duration": 7.0,
+      "text": "in depth.\" And eventually, we are stuck in the beginning process and we do not"
+    },
+    {
+      "start": 297.12,
+      "duration": 7.04,
+      "text": "move ahead. So, what I'll recommend you is first learn the basics and do not dig"
+    },
+    {
+      "start": 302.08,
+      "duration": 6.68,
+      "text": "much. And eventually, when you'll uh go from beginner to intermediate to medium"
+    },
+    {
+      "start": 306.48,
+      "duration": 7.56,
+      "text": "and then to hard, you will on this uh flow, you will be learning everything in"
+    },
+    {
+      "start": 311.12,
+      "duration": 8.28,
+      "text": "depth. But during your start, do not dig deep so much. Why? Why? Why? Do not do a"
+    },
+    {
+      "start": 317.2,
+      "duration": 5.88,
+      "text": "lot of why. It is good to do, but there are certain things where you should not"
+    },
+    {
+      "start": 321.04,
+      "duration": 7.32,
+      "text": "do a lot of why's because that will be not required in the longer run. So,"
+    },
+    {
+      "start": 326.4,
+      "duration": 7.76,
+      "text": "the first thing in order to write a C++ code is the skeleton of C++ code. Now,"
+    },
+    {
+      "start": 331.04,
+      "duration": 7.04,
+      "text": "the skeleton of C++ code stays constant across all the programs that you'll be"
+    },
+    {
+      "start": 335.84,
+      "duration": 5.28,
+      "text": "writing in C++. Uh something like hash include."
+    },
+    {
+      "start": 339.04,
+      "duration": 5.44,
+      "text": "So, we write hash include. Now, imagine the first program that we will be"
+    },
+    {
+      "start": 342.56,
+      "duration": 5.96,
+      "text": "writing is to print our name. So, the skeleton states, \"Okay, you have to"
+    },
+    {
+      "start": 346.28,
+      "duration": 5.68,
+      "text": "print you have to probably print something which is you have to give an"
+    },
+    {
+      "start": 350.0,
+      "duration": 6.64,
+      "text": "output. Or let's say you have to take an input. So in order to take an input or"
+    },
+    {
+      "start": 354.72,
+      "duration": 5.84,
+      "text": "take an output, we have to use this particular library. Now, as I said, do"
+    },
+    {
+      "start": 358.8,
+      "duration": 5.4,
+      "text": "not dig deep. You don't have to know what is inside this library. Yes, if you"
+    },
+    {
+      "start": 362.68,
+      "duration": 5.4,
+      "text": "want to know it is okay, but you don't have to remember this. So if you use"
+    },
+    {
+      "start": 366.24,
+      "duration": 6.84,
+      "text": "this library, this allows you to take an input and produce an output. And in"
+    },
+    {
+      "start": 370.4,
+      "duration": 7.0,
+      "text": "order to use this library in C++, we can use the hash include. So hash include"
+    },
+    {
+      "start": 375.36,
+      "duration": 6.76,
+      "text": "iostream. Imagine if you want to use something like a mathematical function"
+    },
+    {
+      "start": 379.48,
+      "duration": 6.96,
+      "text": "which exists in the C++ library, then you have to use something like a math.h."
+    },
+    {
+      "start": 385.16,
+      "duration": 4.68,
+      "text": "I'll be talking about mathematical functions afterwards. In case you want"
+    },
+    {
+      "start": 388.2,
+      "duration": 5.88,
+      "text": "to use something like a string, then you use hash include string. So whatever"
+    },
+    {
+      "start": 392.68,
+      "duration": 5.6,
+      "text": "library you want to use, you have to hash include it. You don't need to know"
+    },
+    {
+      "start": 396.48,
+      "duration": 6.439,
+      "text": "what is inside the library. As I said, do not dig much deep. And then you say"
+    },
+    {
+      "start": 400.48,
+      "duration": 6.72,
+      "text": "int main. And then you say return zero. So this is"
+    },
+    {
+      "start": 405.52,
+      "duration": 5.6,
+      "text": "the generic skeleton of the code. I'll remove this couple of hash includes"
+    },
+    {
+      "start": 408.84,
+      "duration": 8.64,
+      "text": "because as of now, we are just going to print. So this is the generic skeleton"
+    },
+    {
+      "start": 413.96,
+      "duration": 8.08,
+      "text": "of a C++ code. After this I said, I'm going to print my name. So I'll be like,"
+    },
+    {
+      "start": 419.6,
+      "duration": 6.88,
+      "text": "see out. So when I write see out, it means you have to that allows you to"
+    },
+    {
+      "start": 424.0,
+      "duration": 7.96,
+      "text": "give an output. Okay. Now, in order to use see out, you have to write std and"
+    },
+    {
+      "start": 429.28,
+      "duration": 8.48,
+      "text": "double colon. So see out is a function which exists under the std. Okay, so you"
+    },
+    {
+      "start": 435.48,
+      "duration": 6.64,
+      "text": "have to say std, can you give me see out and then two lower than signs and then"
+    },
+    {
+      "start": 440.68,
+      "duration": 6.239,
+      "text": "double quotes if you're printing a string and you can say, \"Hey Striver.\""
+    },
+    {
+      "start": 445.48,
+      "duration": 4.96,
+      "text": "And then you can give this. So what I'll do is I'll go and run this. The moment I"
+    },
+    {
+      "start": 448.76,
+      "duration": 7.48,
+      "text": "run this, you see in the output screen we have, \"Hey Striver.\" So in case you"
+    },
+    {
+      "start": 454.08,
+      "duration": 6.16,
+      "text": "want to again print this, so go across and copy paste the same line and again"
+    },
+    {
+      "start": 458.16,
+      "duration": 6.36,
+      "text": "run this. So what happens is, \"Hey Striver\" is printed two times, but"
+    },
+    {
+      "start": 462.68,
+      "duration": 5.48,
+      "text": "they're are printed on the same line. In case you want to print them in different"
+    },
+    {
+      "start": 466.0,
+      "duration": 7.36,
+      "text": "lines, you can go ahead and give a backslash n and you can just"
+    },
+    {
+      "start": 472.24,
+      "duration": 6.44,
+      "text": "So, the moment you compile this, what"
+    },
+    {
+      "start": 474.76,
+      "duration": 10.64,
+      "text": "happens is the backslash n goes across and prints it in the new line. So, very"
+    },
+    {
+      "start": 482.28,
+      "duration": 11.2,
+      "text": "simple. Can Can we use something else? Yes. Instead of a backslash n, we can"
+    },
+    {
+      "start": 489.08,
+      "duration": 10.36,
+      "text": "take std and l and we can again compile. So, if we compile, endl is similar to"
+    },
+    {
+      "start": 495.76,
+      "duration": 8.76,
+      "text": "backslash n. Endl or backslash n takes you to the next line, but usually people"
+    },
+    {
+      "start": 501.72,
+      "duration": 7.6,
+      "text": "use backslash n because it is faster. Okay, but you will find people using"
+    },
+    {
+      "start": 506.84,
+      "duration": 6.28,
+      "text": "both, so it is your choice. If you want to print something on the same line, you"
+    },
+    {
+      "start": 511.52,
+      "duration": 5.079,
+      "text": "can again print something like Hey Raj. You can again"
+    },
+    {
+      "start": 515.08,
+      "duration": 6.44,
+      "text": "print and again you can give something like endl. There is no limitations on"
+    },
+    {
+      "start": 519.32,
+      "duration": 6.6,
+      "text": "the thing that you want to print on the same line. You can print as many things"
+    },
+    {
+      "start": 524.16,
+      "duration": 6.88,
+      "text": "over here on the see out and that will be printed according to the functions"
+    },
+    {
+      "start": 528.68,
+      "duration": 5.48,
+      "text": "that you give. Like over here given endl, so that is why Hey Raj, Hey Raj"
+    },
+    {
+      "start": 532.48,
+      "duration": 6.12,
+      "text": "and Hey Raj and Hey Raj and Hey Raj are printed on new lines. So, this is how"
+    },
+    {
+      "start": 536.72,
+      "duration": 6.52,
+      "text": "you give. Now, something must be very annoying, which is this std. Now, for"
+    },
+    {
+      "start": 541.44,
+      "duration": 5.2,
+      "text": "any functions, for most of the functions you have to write std double colon"
+    },
+    {
+      "start": 544.88,
+      "duration": 6.2,
+      "text": "double colon. This is very annoying, right? This is where something like"
+    },
+    {
+      "start": 548.64,
+      "duration": 9.96,
+      "text": "using namespace comes in. So, we say, \"Hey, can you use the namespace std?\""
+    },
+    {
+      "start": 556.36,
+      "duration": 6.8,
+      "text": "So, basically what this means is if you're not giving anything, if you're"
+    },
+    {
+      "start": 560.64,
+      "duration": 6.44,
+      "text": "not stating anything, it eventually says, \"Since you have written using"
+    },
+    {
+      "start": 564.96,
+      "duration": 7.44,
+      "text": "namespace std.\" Again, you don't have to dig deep. The moment you say this, the"
+    },
+    {
+      "start": 569.68,
+      "duration": 7.6,
+      "text": "program always uses std for all the functions. Yes, always uses std for all"
+    },
+    {
+      "start": 575.16,
+      "duration": 6.68,
+      "text": "the functions. Now, if you compile, it prints everything. Now, it looks a"
+    },
+    {
+      "start": 579.96,
+      "duration": 6.4,
+      "text": "easier task, isn't it? So, this is how you can easily write Okay. Now, let's"
+    },
+    {
+      "start": 584.24,
+      "duration": 7.12,
+      "text": "quickly have an input. Imagine you want to take an input. So, imagine I want to"
+    },
+    {
+      "start": 589.0,
+      "duration": 7.04,
+      "text": "take an integer as an input. int x. So, this is how you take"
+    },
+    {
+      "start": 592.88,
+      "duration": 7.12,
+      "text": "an input. It's a cin of x. cin means input into this variable. Input into"
+    },
+    {
+      "start": 598.52,
+      "duration": 6.8,
+      "text": "this variable. Now, imagine in the input, I go across and I say 10. And"
+    },
+    {
+      "start": 602.68,
+      "duration": 8.44,
+      "text": "I'll be like, let's print this x guy. So, I'll be like, value of x. And then I"
+    },
+    {
+      "start": 608.76,
+      "duration": 6.68,
+      "text": "can go ahead and write x. If I go and print this, you will see value of x is"
+    },
+    {
+      "start": 613.32,
+      "duration": 7.24,
+      "text": "printed as 10. What happened? You printed this particular string, and then"
+    },
+    {
+      "start": 617.8,
+      "duration": 8.84,
+      "text": "you said space, and then you printed x. So, this x was taken from here. Got it?"
+    },
+    {
+      "start": 623.88,
+      "duration": 6.4,
+      "text": "Imagine if you want to take two variables as input. So, if you want to"
+    },
+    {
+      "start": 628.44,
+      "duration": 5.16,
+      "text": "take two variables as input, you can give it like this. And over here, you"
+    },
+    {
+      "start": 631.92,
+      "duration": 6.64,
+      "text": "can give them in the same line. The value of x"
+    },
+    {
+      "start": 636.12,
+      "duration": 7.04,
+      "text": "And then you can go ahead and say, and y. And you can probably write this as"
+    },
+    {
+      "start": 642.2,
+      "duration": 6.76,
+      "text": "that this one and this. So, what happens is"
+    },
+    {
+      "start": 645.8,
+      "duration": 6.92,
+      "text": "value of x and y. Now, do you need to give them in the same line? You can give"
+    },
+    {
+      "start": 650.8,
+      "duration": 7.32,
+      "text": "them in different lines as well, and it will still run in the similar fashion."
+    },
+    {
+      "start": 655.68,
+      "duration": 7.04,
+      "text": "So, this is how you can take any inputs. So, what happens is the first thing gets"
+    },
+    {
+      "start": 660.64,
+      "duration": 7.16,
+      "text": "into the first cin. The next thing gets into the next cin. So, depending on how"
+    },
+    {
+      "start": 665.76,
+      "duration": 6.16,
+      "text": "you are writing cin, line by line, line by line, everything gets into variables"
+    },
+    {
+      "start": 670.04,
+      "duration": 6.56,
+      "text": "that you're initializing it with. Now, you might be thinking, what is this end?"
+    },
+    {
+      "start": 674.48,
+      "duration": 6.04,
+      "text": "Now, there are certain things as data types, which I'll be talking about. But"
+    },
+    {
+      "start": 678.52,
+      "duration": 7.0,
+      "text": "before moving into data types, now as I said, there are a bunch of libraries."
+    },
+    {
+      "start": 682.44,
+      "duration": 7.8,
+      "text": "Imagine you're taking string, integer, let's say a lot of other data types, or"
+    },
+    {
+      "start": 688.36,
+      "duration": 5.76,
+      "text": "a lot of other libraries. Will you be writing hash include, hash include, hash"
+    },
+    {
+      "start": 691.96,
+      "duration": 6.12,
+      "text": "include, hash include every time? No, it's going to take you a lot of time."
+    },
+    {
+      "start": 695.76,
+      "duration": 7.72,
+      "text": "This is where C++ says, \"Hey, I've got something better for you.\" I say, \"Can I"
+    },
+    {
+      "start": 700.24,
+      "duration": 3.24,
+      "text": "write bits/stdc++.h?\""
+    },
+    {
+      "start": 703.92,
+      "duration": 7.88,
+      "text": "Now, what it does is it includes all the libraries, everything."
+    },
+    {
+      "start": 709.32,
+      "duration": 7.56,
+      "text": "Whatever libraries are there in C++, everything is included under this"
+    },
+    {
+      "start": 713.88,
+      "duration": 3.0,
+      "text": "bits/stdc++.h."
+    },
+    {
+      "start": 717.16,
+      "duration": 6.68,
+      "text": "You might think, \"But Striver, in order to include so many libraries, we will be"
+    },
+    {
+      "start": 721.32,
+      "duration": 6.44,
+      "text": "taking a lot of time.\" Yes, we do take a lot of time, but that is very negligible"
+    },
+    {
+      "start": 726.12,
+      "duration": 7.56,
+      "text": "compared to the time that your program takes to run. So, that is why it is okay"
+    },
+    {
+      "start": 729.84,
+      "duration": 7.6,
+      "text": "to include bits/stdc++.h. Yeah, it takes a bit more time, but that"
+    },
+    {
+      "start": 735.2,
+      "duration": 5.52,
+      "text": "is okay. Again, if you want to check out what are the libraries inside this, you"
+    },
+    {
+      "start": 739.16,
+      "duration": 6.08,
+      "text": "can definitely Google this, and you'll get all the list of libraries that are"
+    },
+    {
+      "start": 742.6,
+      "duration": 5.36,
+      "text": "inside this particular directory. So, this is"
+    },
+    {
+      "start": 746.44,
+      "duration": 7.24,
+      "text": "what is the common skeleton of the code that we"
+    },
+    {
+      "start": 750.44,
+      "duration": 6.12,
+      "text": "will be using to write any C++ program on the planet. So, we have discussed the"
+    },
+    {
+      "start": 755.08,
+      "duration": 5.8,
+      "text": "first thing, that is the skeleton of the code, and the user input and output to a"
+    },
+    {
+      "start": 759.2,
+      "duration": 6.56,
+      "text": "certain extent. We will be digging deep into this as we move forward. What is"
+    },
+    {
+      "start": 763.32,
+      "duration": 7.44,
+      "text": "the next type? That is the data types. Now, we're talking about input and"
+    },
+    {
+      "start": 767.96,
+      "duration": 7.2,
+      "text": "output. Now, if you're taking a number in, you have to store it somewhere in"
+    },
+    {
+      "start": 772.56,
+      "duration": 6.44,
+      "text": "your program. That is the the place where you store, that can"
+    },
+    {
+      "start": 776.8,
+      "duration": 9.4,
+      "text": "be a data type. Okay. Now, imagine you're taking a number like 10, 12, -5."
+    },
+    {
+      "start": 783.8,
+      "duration": 7.0,
+      "text": "What will you use to store it? So, there is a data type known as int, integer."
+    },
+    {
+      "start": 789.32,
+      "duration": 5.8,
+      "text": "Now, this is how you can write comments in C++ if you give double backslash, you"
+    },
+    {
+      "start": 793.04,
+      "duration": 7.2,
+      "text": "can write any comment. So, integer, what this comment means, those lines of"
+    },
+    {
+      "start": 797.64,
+      "duration": 5.6,
+      "text": "code will not be executed. So, this line will not be executed when the program is"
+    },
+    {
+      "start": 802.0,
+      "duration": 6.12,
+      "text": "executed. So, int is the data type. In order to"
+    },
+    {
+      "start": 805.88,
+      "duration": 6.16,
+      "text": "assign anything to integer data type, you have to write the data type and then"
+    },
+    {
+      "start": 810.08,
+      "duration": 5.84,
+      "text": "a variable name. Variable name can be anything. It can be Raj, it can be X, it"
+    },
+    {
+      "start": 814.44,
+      "duration": 7.12,
+      "text": "cannot be a number. It cannot be a number. Okay. So, it can be Raj1. That"
+    },
+    {
+      "start": 818.4,
+      "duration": 7.32,
+      "text": "is okay. But, it has to be something which has a character. So, something"
+    },
+    {
+      "start": 823.0,
+      "duration": 7.36,
+      "text": "like let's say I say X equal to 10. So, this is how you assign something"
+    },
+    {
+      "start": 828.12,
+      "duration": 6.88,
+      "text": "into an integer data type. But, integer has certain restrictions. It can only"
+    },
+    {
+      "start": 832.4,
+      "duration": 7.84,
+      "text": "store numbers from this range to this range. Beyond this, it cannot store."
+    },
+    {
+      "start": 838.68,
+      "duration": 5.88,
+      "text": "Beyond this, what will help you? Something like a long data type will"
+    },
+    {
+      "start": 841.84,
+      "duration": 8.08,
+      "text": "help you. If you try to use long, it has a wider range. Same concept, you can use"
+    },
+    {
+      "start": 847.8,
+      "duration": 5.96,
+      "text": "the same concept to store uh variables in long. If you want to"
+    },
+    {
+      "start": 851.88,
+      "duration": 6.28,
+      "text": "take an input, this is how you take an input. If you write seen of X, the first"
+    },
+    {
+      "start": 856.0,
+      "duration": 6.2,
+      "text": "number 10 will go into X. Okay. Now, what if you want to store"
+    },
+    {
+      "start": 860.32,
+      "duration": 5.24,
+      "text": "bigger numbers than this? This is where something like long long will come in."
+    },
+    {
+      "start": 864.04,
+      "duration": 6.48,
+      "text": "So, if you're saying long long, it will give you a wider range. Again, the same"
+    },
+    {
+      "start": 867.96,
+      "duration": 6.76,
+      "text": "way, you can store it like this or maybe you can go ahead and store"
+    },
+    {
+      "start": 872.56,
+      "duration": 7.88,
+      "text": "a very large number as well. So, usually, we will be using these three"
+    },
+    {
+      "start": 877.4,
+      "duration": 6.68,
+      "text": "things to store any type of integers between a certain ranges. Okay. Now,"
+    },
+    {
+      "start": 882.56,
+      "duration": 6.24,
+      "text": "what are the next data types that we will be using? We were talking about"
+    },
+    {
+      "start": 886.0,
+      "duration": 9.32,
+      "text": "integers. What if we have something like let's say 5.6, something like this. So,"
+    },
+    {
+      "start": 892.24,
+      "duration": 8.08,
+      "text": "it is having something after the decimal point. This is where something like"
+    },
+    {
+      "start": 898.32,
+      "duration": 7.08,
+      "text": "we will be specifically using two data types, float and double. Again, they"
+    },
+    {
+      "start": 902.92,
+      "duration": 6.28,
+      "text": "have ranges. Depending on the range that you use, you'll be using float or"
+    },
+    {
+      "start": 907.36,
+      "duration": 5.76,
+      "text": "double. The ranges are visible on the screen. So,"
+    },
+    {
+      "start": 911.12,
+      "duration": 8.4,
+      "text": "we can use something like float. Again, same way."
+    },
+    {
+      "start": 915.64,
+      "duration": 10.76,
+      "text": "Float X equal to 5.6. Again, you can always store float Y equal to 5 as well."
+    },
+    {
+      "start": 923.76,
+      "duration": 7.12,
+      "text": "It doesn't mean that like if I'm saying that it has to store decimal, it doesn't"
+    },
+    {
+      "start": 928.76,
+      "duration": 8.72,
+      "text": "mean you can store an integer. If you go and say see out of y"
+    },
+    {
+      "start": 933.4,
+      "duration": 7.28,
+      "text": "like value of y and then you say, \"Okay, let's print this one. Let's see what it"
+    },
+    {
+      "start": 938.92,
+      "duration": 5.44,
+      "text": "prints, okay?\" So, if you see the value of Okay, it"
+    },
+    {
+      "start": 942.48,
+      "duration": 6.48,
+      "text": "does give you an error. Okay, by the way, let's erase this because we have"
+    },
+    {
+      "start": 946.16,
+      "duration": 7.56,
+      "text": "defined x twice. Okay, let's now compile this. You see, it is getting printed."
+    },
+    {
+      "start": 951.76,
+      "duration": 5.24,
+      "text": "Similarly, if you want to define this as double,"
+    },
+    {
+      "start": 955.32,
+      "duration": 6.0,
+      "text": "it says still okay. If we define this double, an integer can"
+    },
+    {
+      "start": 959.04,
+      "duration": 6.16,
+      "text": "also be stored in a double, okay? So, in data types, you have learned how to"
+    },
+    {
+      "start": 962.64,
+      "duration": 8.2,
+      "text": "store numbers and numbers with decimal points. Now, what if you have a string"
+    },
+    {
+      "start": 968.76,
+      "duration": 7.32,
+      "text": "or a character? How do you store that? So, for that, what we will be using is"
+    },
+    {
+      "start": 972.92,
+      "duration": 6.52,
+      "text": "something like a string and get line. So, you have to learn these couple of"
+    },
+    {
+      "start": 977.36,
+      "duration": 7.08,
+      "text": "things, okay? Now, imagine I write hey striver."
+    },
+    {
+      "start": 981.64,
+      "duration": 8.92,
+      "text": "So, this is an entire string and the same way I'll say string s and I'll say"
+    },
+    {
+      "start": 986.96,
+      "duration": 8.28,
+      "text": "cn of s. I'll say c out of s. Okay. Ideally, what should happen is"
+    },
+    {
+      "start": 992.96,
+      "duration": 5.72,
+      "text": "this entire hey striver should go inside this string and this should be printed."
+    },
+    {
+      "start": 997.4,
+      "duration": 4.84,
+      "text": "But, let's see what will happen. If I run this,"
+    },
+    {
+      "start": 999.96,
+      "duration": 6.8,
+      "text": "you will see just hey being picked up. And if you want to pick up striver, what"
+    },
+    {
+      "start": 1004.0,
+      "duration": 7.44,
+      "text": "you have to do is you have to define two strings. If you want to define two"
+    },
+    {
+      "start": 1008.96,
+      "duration": 7.4,
+      "text": "strings in a same line, comma will be the thing or you can go ahead and say"
+    },
+    {
+      "start": 1013.12,
+      "duration": 8.24,
+      "text": "string s2 and over here s1 and then you can say s2 and over here s1 and then you"
+    },
+    {
+      "start": 1018.96,
+      "duration": 6.119,
+      "text": "can give a space and then s2. So, what will happen?"
+    },
+    {
+      "start": 1022.48,
+      "duration": 6.92,
+      "text": "Now, if you do, first s1 is picked up as hey, then s2 is picked up as striver,"
+    },
+    {
+      "start": 1028.04,
+      "duration": 4.279,
+      "text": "then both of them are printed with a space."
+    },
+    {
+      "start": 1030.48,
+      "duration": 6.2,
+      "text": "Right. So, if you're saying string, then what"
+    },
+    {
+      "start": 1034.12,
+      "duration": 5.52,
+      "text": "happens is it only picks up anything before the space."
+    },
+    {
+      "start": 1038.199,
+      "duration": 6.64,
+      "text": "And after the space, it's a new string. So, you have to again give a C in. Now,"
+    },
+    {
+      "start": 1042.6,
+      "duration": 6.08,
+      "text": "in case you want to take everything together in a string, how do you do"
+    },
+    {
+      "start": 1046.839,
+      "duration": 4.841,
+      "text": "that? In order to do that, you have to probably define a string."
+    },
+    {
+      "start": 1050.64,
+      "duration": 5.2,
+      "text": "And then you have to use something like get line. Inside the get line, you have"
+    },
+    {
+      "start": 1053.76,
+      "duration": 5.68,
+      "text": "to write C in. What is get line again? Do not need to dig deep. It's an"
+    },
+    {
+      "start": 1057.8,
+      "duration": 4.0,
+      "text": "internal function. You have to write C in."
+    },
+    {
+      "start": 1060.2,
+      "duration": 4.8,
+      "text": "And then you have to give this variable over here."
+    },
+    {
+      "start": 1062.88,
+      "duration": 6.92,
+      "text": "And then you go ahead and say C out of STR. So, what will happen is this get"
+    },
+    {
+      "start": 1066.96,
+      "duration": 8.4,
+      "text": "line will take the entire line and put it into the STR. And now if you print,"
+    },
+    {
+      "start": 1072.52,
+      "duration": 9.16,
+      "text": "you will see this hey driver is printed or maybe hey driver, I am school."
+    },
+    {
+      "start": 1080.32,
+      "duration": 6.04,
+      "text": "And if you print this, you will see the entire line is getting printed. But if"
+    },
+    {
+      "start": 1083.56,
+      "duration": 7.0,
+      "text": "you go to the next line, hey Raj, will the entire line be picked up? Let's run"
+    },
+    {
+      "start": 1088.16,
+      "duration": 7.56,
+      "text": "this. No, the next line is not picked up. Only this particular line is picked"
+    },
+    {
+      "start": 1093.44,
+      "duration": 6.68,
+      "text": "up. So, the moment you click enter, the next line will not be picked picked up."
+    },
+    {
+      "start": 1097.64,
+      "duration": 9.52,
+      "text": "So, it just picks up till the line break. So, string and get line is used"
+    },
+    {
+      "start": 1103.8,
+      "duration": 6.96,
+      "text": "to take any of the string. So, you have talked about string and get"
+    },
+    {
+      "start": 1109.36,
+      "duration": 7.64,
+      "text": "line. Now, it's time to talk about character. Now, there are 256 characters"
+    },
+    {
+      "start": 1113.92,
+      "duration": 8.08,
+      "text": "in English dictionary. So, character can store all of them. Yes, character can"
+    },
+    {
+      "start": 1119.52,
+      "duration": 6.96,
+      "text": "store all of them. So, imagine if you have something like an H. So, you can"
+    },
+    {
+      "start": 1123.84,
+      "duration": 7.76,
+      "text": "just go ahead and declare char CH. And you can take C in of CH. Okay? And then"
+    },
+    {
+      "start": 1129.64,
+      "duration": 6.76,
+      "text": "you can say C out of CH. So, what will happen is this H will go inside this and"
+    },
+    {
+      "start": 1134.76,
+      "duration": 6.4,
+      "text": "it will be printed over here. If you want to declare a character, you can go"
+    },
+    {
+      "start": 1138.2,
+      "duration": 7.28,
+      "text": "ahead and declare this as G. So, single quotes is what will be used to declare a"
+    },
+    {
+      "start": 1144.28,
+      "duration": 5.28,
+      "text": "character. You can also declare it as string, but"
+    },
+    {
+      "start": 1147.56,
+      "duration": 6.56,
+      "text": "usually string will be within double quotes. That is also okay. But string"
+    },
+    {
+      "start": 1151.64,
+      "duration": 7.68,
+      "text": "ends up taking uh much more space. That is why if it's a single character, we"
+    },
+    {
+      "start": 1156.0,
+      "duration": 8.36,
+      "text": "tend to use something like a cat. So, okay, do we have Okay, so these are the"
+    },
+    {
+      "start": 1161.48,
+      "duration": 8.08,
+      "text": "data types that I have used till now to solve all the problems in DS algo. Did I"
+    },
+    {
+      "start": 1167.12,
+      "duration": 5.92,
+      "text": "require anything else? No. In case I've required for a single problem like one"
+    },
+    {
+      "start": 1171.4,
+      "duration": 5.08,
+      "text": "problem here or there, I have done a Google search and I've used that, but I"
+    },
+    {
+      "start": 1174.76,
+      "duration": 5.84,
+      "text": "can assure you that if you know this, that is more than enough. Now, you must"
+    },
+    {
+      "start": 1178.28,
+      "duration": 6.16,
+      "text": "be having a lot of questions. So, if we have something like a 10, and that 10"
+    },
+    {
+      "start": 1182.44,
+      "duration": 4.76,
+      "text": "can be stored in all the three or all the five,"
+    },
+    {
+      "start": 1185.48,
+      "duration": 6.28,
+      "text": "why can't we use simply long long or maybe double? Now, the thing is"
+    },
+    {
+      "start": 1189.68,
+      "duration": 6.56,
+      "text": "everything takes up a certain space in your uh computer. Now, you can't be like"
+    },
+    {
+      "start": 1194.12,
+      "duration": 6.0,
+      "text": "you can you can't use long long to store 10. That will not make sense because it"
+    },
+    {
+      "start": 1198.24,
+      "duration": 5.36,
+      "text": "will end up eating up a lot more memory space. So, integer takes a certain"
+    },
+    {
+      "start": 1202.08,
+      "duration": 4.76,
+      "text": "memory, long does take a certain memory. So,"
+    },
+    {
+      "start": 1205.2,
+      "duration": 7.08,
+      "text": "everything will take a certain memory. So, depending on that, we decide what to"
+    },
+    {
+      "start": 1209.8,
+      "duration": 7.52,
+      "text": "use. Now, integer has a range. Now, those numbers you can't uh remember. So,"
+    },
+    {
+      "start": 1214.88,
+      "duration": 6.72,
+      "text": "what I usually do is I keep a rounding off number. Like I know integer will be"
+    },
+    {
+      "start": 1219.4,
+      "duration": 6.32,
+      "text": "from -10^9 to 10^9, like rounding off. Long will be"
+    },
+    {
+      "start": 1224.16,
+      "duration": 7.92,
+      "text": "-10^12 to 10^12. Long long will be -10^18 to"
+    },
+    {
+      "start": 1230.0,
+      "duration": 7.2,
+      "text": "10^18. So, whenever there is something as 10^13, I switch to long long. Don't"
+    },
+    {
+      "start": 1234.68,
+      "duration": 6.28,
+      "text": "have to remember exact exact numbers because you will not remember that much"
+    },
+    {
+      "start": 1238.92,
+      "duration": 5.52,
+      "text": "when you go on the longer run. Okay, so that is how I usually do it, and you can"
+    },
+    {
+      "start": 1242.72,
+      "duration": 5.32,
+      "text": "also follow the same process. So, we have completed data types. Now, the data"
+    },
+    {
+      "start": 1246.8,
+      "duration": 6.92,
+      "text": "types that I've covered that are more than enough. Again, very crucial point."
+    },
+    {
+      "start": 1250.68,
+      "duration": 7.68,
+      "text": "Do not do not dig deep because eventually, when you keep on coding,"
+    },
+    {
+      "start": 1255.8,
+      "duration": 8.08,
+      "text": "you'll learn everything. Okay? First, uh third thing, if else statements. Let's"
+    },
+    {
+      "start": 1261.08,
+      "duration": 6.52,
+      "text": "go. So, till now we know the skeleton of the code. We know the data types. Now,"
+    },
+    {
+      "start": 1265.8,
+      "duration": 7.16,
+      "text": "let's write some program. So, the first program is write a program that takes an"
+    },
+    {
+      "start": 1269.36,
+      "duration": 7.68,
+      "text": "input of a age and prints if you are an adult or not. So, the skeleton is"
+    },
+    {
+      "start": 1275.8,
+      "duration": 5.84,
+      "text": "something which I've written and this is the program. So, let's break down the"
+    },
+    {
+      "start": 1279.12,
+      "duration": 6.36,
+      "text": "problem. It states write a program. Maybe I've written the skeleton."
+    },
+    {
+      "start": 1283.2,
+      "duration": 7.92,
+      "text": "That takes an input of age. Now, you know one thing. Age will be"
+    },
+    {
+      "start": 1287.6,
+      "duration": 8.44,
+      "text": "what? An integer? 18 or maybe double. Imagine the age we are talking in terms"
+    },
+    {
+      "start": 1292.96,
+      "duration": 8.16,
+      "text": "of integer. And we know you're called an adult when you're greater than 18."
+    },
+    {
+      "start": 1298.76,
+      "duration": 6.8,
+      "text": "Correct? So, imagine I enter something like 19. In that case, you have to print"
+    },
+    {
+      "start": 1303.72,
+      "duration": 6.0,
+      "text": "adult. Imagine I enter something like 17. You have to say not an adult. We"
+    },
+    {
+      "start": 1308.08,
+      "duration": 7.32,
+      "text": "have print 18. Uh adult. Right? If I print 10, not an"
+    },
+    {
+      "start": 1312.28,
+      "duration": 6.64,
+      "text": "adult. So, I need an age. So, maybe I can go ahead and say, \"Okay, I need"
+    },
+    {
+      "start": 1317.08,
+      "duration": 5.68,
+      "text": "age.\" So, you need the age from the user. So,"
+    },
+    {
+      "start": 1321.32,
+      "duration": 4.68,
+      "text": "see in Hey, give me the age. So, maybe if I"
+    },
+    {
+      "start": 1324.36,
+      "duration": 6.16,
+      "text": "give the age over here or something like this, this will be"
+    },
+    {
+      "start": 1327.64,
+      "duration": 8.56,
+      "text": "picked up into this age. Now, this is where something like if else statement"
+    },
+    {
+      "start": 1333.12,
+      "duration": 8.84,
+      "text": "comes in. What is it saying? Print if you're adult or not. Can I say"
+    },
+    {
+      "start": 1338.72,
+      "duration": 10.36,
+      "text": "if you are greater than equal to 18, then I can say you are an adult. You are"
+    },
+    {
+      "start": 1344.6,
+      "duration": 9.16,
+      "text": "an adult. Yes. Or if you are lesser than 18, you are not an adult. Can I say"
+    },
+    {
+      "start": 1351.36,
+      "duration": 6.12,
+      "text": "this? So, this is something which you are speaking in very layman terms. If"
+    },
+    {
+      "start": 1356.52,
+      "duration": 5.24,
+      "text": "you want to convert this into programming language, this is where"
+    },
+    {
+      "start": 1359.76,
+      "duration": 5.12,
+      "text": "something like if else comes in. There is something as if."
+    },
+    {
+      "start": 1363.32,
+      "duration": 7.88,
+      "text": "This is the block. And there is something like else. This is the block."
+    },
+    {
+      "start": 1367.64,
+      "duration": 6.64,
+      "text": "So, inside this, you perform stating, \"Okay,"
+    },
+    {
+      "start": 1372.24,
+      "duration": 6.56,
+      "text": "if something happens, perform these lines of code. If that thing doesn't"
+    },
+    {
+      "start": 1376.2,
+      "duration": 7.16,
+      "text": "happens, go and perform these lines of Okay? So, I'm saying if"
+    },
+    {
+      "start": 1380.64,
+      "duration": 7.6,
+      "text": "the age is greater than or to 18, then go and perform this. And if it is not,"
+    },
+    {
+      "start": 1385.64,
+      "duration": 6.56,
+      "text": "go and perform this else. Very simple. And if I'm saying if the age is greater"
+    },
+    {
+      "start": 1389.68,
+      "duration": 6.8,
+      "text": "than 18, what am I doing? I'm saying print you're an adult. So, the print"
+    },
+    {
+      "start": 1394.48,
+      "duration": 8.0,
+      "text": "line is very simple. You are an adult. Simple."
+    },
+    {
+      "start": 1400.12,
+      "duration": 5.84,
+      "text": "Like you can just capitalize this. And if you are not, then go ahead go ahead"
+    },
+    {
+      "start": 1404.44,
+      "duration": 6.72,
+      "text": "and print this. You are not an adult."
+    },
+    {
+      "start": 1408.16,
+      "duration": 7.44,
+      "text": "So, basically first line says 20 will go on to age, then it will say 20 greater"
+    },
+    {
+      "start": 1413.56,
+      "duration": 5.04,
+      "text": "than equal to 18, yes. It will go"
+    },
+    {
+      "start": 1416.44,
+      "duration": 6.76,
+      "text": "inside this and print this. So, let's run this and see what happens. So, I'm"
+    },
+    {
+      "start": 1420.32,
+      "duration": 9.68,
+      "text": "taking 20, yes, you are an adult. If I take 15, what will happen? It will say"
+    },
+    {
+      "start": 1427.12,
+      "duration": 9.24,
+      "text": "you are not an adult. Simple. Now, this is the basic if else statement. Now, you"
+    },
+    {
+      "start": 1434.24,
+      "duration": 5.48,
+      "text": "can modify this as well. Now, imagine you are saying"
+    },
+    {
+      "start": 1437.64,
+      "duration": 6.52,
+      "text": "for an example, you are saying 18, yes, 18, no."
+    },
+    {
+      "start": 1442.2,
+      "duration": 9.04,
+      "text": "I can also write this as this. This is okay. This is saying"
+    },
+    {
+      "start": 1448.2,
+      "duration": 8.28,
+      "text": "age is greater than equal to 18. If not, go to the else. But only get into the"
+    },
+    {
+      "start": 1453.76,
+      "duration": 7.12,
+      "text": "else if the condition satisfied. Over here, it will, but eventually you will"
+    },
+    {
+      "start": 1458.2,
+      "duration": 6.92,
+      "text": "learn. Is it mandatory to write an else statement always? You can omit the else"
+    },
+    {
+      "start": 1463.16,
+      "duration": 6.0,
+      "text": "statement as well. So, if you omit the else statement, what will happen is"
+    },
+    {
+      "start": 1467.16,
+      "duration": 6.12,
+      "text": "the 15 will be taken as the input and the if will not be executed and it will"
+    },
+    {
+      "start": 1471.6,
+      "duration": 7.12,
+      "text": "not find an else. So, nothing to be executed, complete it. So, it is not"
+    },
+    {
+      "start": 1475.56,
+      "duration": 8.56,
+      "text": "mandatory to have an else statement. If you're having a if, it is not mandatory"
+    },
+    {
+      "start": 1481.12,
+      "duration": 7.84,
+      "text": "to have a else statement. So, coming back to the else if, what happens if"
+    },
+    {
+      "start": 1485.92,
+      "duration": 6.2,
+      "text": "you're giving 15? The if is false, it states"
+    },
+    {
+      "start": 1490.0,
+      "duration": 7.0,
+      "text": "no, not greater than equal to 18. So, go to the else, but else says, wait, before"
+    },
+    {
+      "start": 1495.0,
+      "duration": 7.36,
+      "text": "going into me, you have to pass my condition. My condition states, are you"
+    },
+    {
+      "start": 1499.76,
+      "duration": 7.52,
+      "text": "lesser than 18? And it says, yes, I'm lesser than 18, so I will go. If this"
+    },
+    {
+      "start": 1505.36,
+      "duration": 6.12,
+      "text": "was lesser than 10, see what will happen. You're giving 15, I'm taking 15,"
+    },
+    {
+      "start": 1510.36,
+      "duration": 4.48,
+      "text": "false. Goes to else."
+    },
+    {
+      "start": 1512.88,
+      "duration": 6.68,
+      "text": "And else condition says lesser than 10. When I run,"
+    },
+    {
+      "start": 1516.0,
+      "duration": 8.2,
+      "text": "it doesn't runs. Why? False. Again false. No execution. But the moment you"
+    },
+    {
+      "start": 1522.36,
+      "duration": 6.2,
+      "text": "give something as nine, see what will happen."
+    },
+    {
+      "start": 1525.76,
+      "duration": 6.28,
+      "text": "When you give it nine, it prints Y. Goes here, false."
+    },
+    {
+      "start": 1530.04,
+      "duration": 7.24,
+      "text": "Goes to the else, and he says, nine lesser than 10? Yes. Goes ahead and"
+    },
+    {
+      "start": 1534.96,
+      "duration": 8.12,
+      "text": "prints this. This is how something like a if and an else if block works. Got it?"
+    },
+    {
+      "start": 1541.28,
+      "duration": 6.12,
+      "text": "So let's now move on to a complex problem so that you can understand the"
+    },
+    {
+      "start": 1544.56,
+      "duration": 7.24,
+      "text": "conditional statements in depth. So this is how you can write the multi-line"
+    },
+    {
+      "start": 1549.32,
+      "duration": 6.68,
+      "text": "comments. Since I had an entire problem statement, I put them under multi-line"
+    },
+    {
+      "start": 1554.44,
+      "duration": 6.36,
+      "text": "comment. So backslash asterisk is how you can do it."
+    },
+    {
+      "start": 1558.8,
+      "duration": 7.24,
+      "text": "For single-line, it is very simple, double backslash. But front slash or"
+    },
+    {
+      "start": 1564.04,
+      "duration": 5.08,
+      "text": "backslash, whatever you call it call it. So this is how you can write the"
+    },
+    {
+      "start": 1567.08,
+      "duration": 5.48,
+      "text": "multi-line comment. So the problem is very simple. A school has following"
+    },
+    {
+      "start": 1570.72,
+      "duration": 7.64,
+      "text": "rules for grading system. Below 25, grade F. 25 to 44, grade D. 45 to 49,"
+    },
+    {
+      "start": 1576.28,
+      "duration": 7.2,
+      "text": "grade D and so on. So your task is to ask user to enter marks and print the"
+    },
+    {
+      "start": 1580.48,
+      "duration": 6.76,
+      "text": "corresponding grade. Okay. So what is the first stating?"
+    },
+    {
+      "start": 1584.92,
+      "duration": 5.68,
+      "text": "Get the marks. So imagine I have to take the marks. So this is how"
+    },
+    {
+      "start": 1588.48,
+      "duration": 6.84,
+      "text": "I'll take the marks. This is something which we know. What is the next line?"
+    },
+    {
+      "start": 1592.92,
+      "duration": 8.12,
+      "text": "Below 25, very very importantly, below 25. So I'm saying, if the marks are"
+    },
+    {
+      "start": 1598.36,
+      "duration": 7.04,
+      "text": "below 25, can I say the grade is for sure That is something which I"
+    },
+    {
+      "start": 1602.64,
+      "duration": 8.0,
+      "text": "definitely know. If the marks are below 25, I know the grade is F. If the mark"
+    },
+    {
+      "start": 1608.88,
+      "duration": 5.84,
+      "text": "is between this, can I write if the marks Now over here"
+    },
+    {
+      "start": 1613.24,
+      "duration": 8.32,
+      "text": "there are two conditions. Should be from 25 and should be till 44."
+    },
+    {
+      "start": 1618.48,
+      "duration": 8.12,
+      "text": "So, can I say should be greater than 25 and and if you have multiple conditions,"
+    },
+    {
+      "start": 1625.16,
+      "duration": 6.76,
+      "text": "if you want to satisfy multiple conditions, you say and and marks lesser"
+    },
+    {
+      "start": 1630.32,
+      "duration": 7.68,
+      "text": "than equal to 44. This is how you satisfy multiple first condition and and"
+    },
+    {
+      "start": 1636.28,
+      "duration": 6.72,
+      "text": "second condition. And then you say see out E. Similarly,"
+    },
+    {
+      "start": 1641.16,
+      "duration": 6.4,
+      "text": "you can go ahead and write all the if conditions. So, what I've done is I've"
+    },
+    {
+      "start": 1645.0,
+      "duration": 6.2,
+      "text": "written all the conditions. You see, all the conditions are written. Let's take"
+    },
+    {
+      "start": 1649.44,
+      "duration": 5.36,
+      "text": "uh the marks as 85 and see which condition is getting executed. So, if"
+    },
+    {
+      "start": 1653.0,
+      "duration": 5.92,
+      "text": "you take the marks as 85, this is executed. If you take something like 24,"
+    },
+    {
+      "start": 1657.0,
+      "duration": 7.0,
+      "text": "let's see what is executed. You see, everything is running fine. But, is this"
+    },
+    {
+      "start": 1660.96,
+      "duration": 6.92,
+      "text": "the correct way to write? No. Why? What happens is the marks is going and"
+    },
+    {
+      "start": 1666.56,
+      "duration": 6.8,
+      "text": "checking this if. Imagine the marks is something like 86."
+    },
+    {
+      "start": 1671.12,
+      "duration": 7.88,
+      "text": "This if is false. Again, goes and checks this. False. Again, goes and checks"
+    },
+    {
+      "start": 1675.88,
+      "duration": 7.36,
+      "text": "this. False. Again, goes and checks it. False. Again, goes and checks this."
+    },
+    {
+      "start": 1681.36,
+      "duration": 8.52,
+      "text": "False. Again, goes and checks this. False. So, at the end this is executed"
+    },
+    {
+      "start": 1686.64,
+      "duration": 8.72,
+      "text": "and A is printed over here. Okay. Now, imagine if I give 24."
+    },
+    {
+      "start": 1692.84,
+      "duration": 8.16,
+      "text": "What will happen? F will be printed, right?"
+    },
+    {
+      "start": 1698.24,
+      "duration": 7.48,
+      "text": "So, this is executed. True, prints it. But, then goes ahead, this is executed"
+    },
+    {
+      "start": 1702.96,
+      "duration": 7.72,
+      "text": "false. This is executed false. Executed false. Executed false. Executed false."
+    },
+    {
+      "start": 1708.16,
+      "duration": 5.72,
+      "text": "Only this was true. But, all the ifs got executed."
+    },
+    {
+      "start": 1711.96,
+      "duration": 6.32,
+      "text": "Hence, you ended up taking a lot of time. This is where Yes, this is where"
+    },
+    {
+      "start": 1716.48,
+      "duration": 6.08,
+      "text": "something like an else if comes in. So, if you write else if, see what happens."
+    },
+    {
+      "start": 1720.44,
+      "duration": 7.4,
+      "text": "Else if. You can write else if. You can write"
+    },
+    {
+      "start": 1725.08,
+      "duration": 8.56,
+      "text": "else if. You can write else if. So, if you write else if, what will happen is"
+    },
+    {
+      "start": 1730.08,
+      "duration": 8.48,
+      "text": "if 24 is true over here, none of these lines will be executed because it states"
+    },
+    {
+      "start": 1736.24,
+      "duration": 5.64,
+      "text": "else, it will never go there and it will not be executed. So, you'll be saving a"
+    },
+    {
+      "start": 1740.28,
+      "duration": 6.04,
+      "text": "lot of time. Previously, in every if was executed."
+    },
+    {
+      "start": 1744.32,
+      "duration": 4.28,
+      "text": "So, this is why else if will be written. Now,"
+    },
+    {
+      "start": 1747.28,
+      "duration": 5.8,
+      "text": "another thing. You're having 24. Imagine if you have"
+    },
+    {
+      "start": 1751.0,
+      "duration": 5.84,
+      "text": "something like let's say 30."
+    },
+    {
+      "start": 1754.24,
+      "duration": 7.76,
+      "text": "So, you're saying if not lesser than 20. So, this is false."
+    },
+    {
+      "start": 1760.04,
+      "duration": 7.32,
+      "text": "This is definitely false. Do you need to check again for greater"
+    },
+    {
+      "start": 1764.52,
+      "duration": 7.84,
+      "text": "than equal to 25? Because you are sure that it is not lesser than 25. You are"
+    },
+    {
+      "start": 1769.64,
+      "duration": 6.4,
+      "text": "sure because this is false. You are sure that it will definitely go here. So, you"
+    },
+    {
+      "start": 1774.32,
+      "duration": 5.48,
+      "text": "don't need to write this anymore. You don't need to write this anymore"
+    },
+    {
+      "start": 1777.6,
+      "duration": 7.72,
+      "text": "because if it is lesser than 25 and if it is lesser than equal to 44,"
+    },
+    {
+      "start": 1781.36,
+      "duration": 8.8,
+      "text": "that means it is between 25 to 44. It means that. And if this is also false,"
+    },
+    {
+      "start": 1788.0,
+      "duration": 7.28,
+      "text": "that means it is not lesser than equal to 44. You can also omit this."
+    },
+    {
+      "start": 1792.92,
+      "duration": 6.76,
+      "text": "See, you can also omit this. Same way because 49 is checked, 59 is"
+    },
+    {
+      "start": 1798.36,
+      "duration": 5.92,
+      "text": "checked, so you can omit checking greater than 60 and eventually you can"
+    },
+    {
+      "start": 1801.36,
+      "duration": 6.44,
+      "text": "do this. So, you saw how easily I trimmed it down."
+    },
+    {
+      "start": 1806.16,
+      "duration": 6.0,
+      "text": "This is how you will be trimming it down. So, if I now feel, you see 30 is"
+    },
+    {
+      "start": 1810.56,
+      "duration": 5.64,
+      "text": "printing E. If you give something like 40,"
+    },
+    {
+      "start": 1813.48,
+      "duration": 7.72,
+      "text": "that will be printing D. So, every line is executed properly because if all"
+    },
+    {
+      "start": 1819.04,
+      "duration": 7.88,
+      "text": "these are false, which means the number is never lesser than 49. And if it is"
+    },
+    {
+      "start": 1823.92,
+      "duration": 7.68,
+      "text": "true, it means 50 to 59. Super simple. Got it? This is how you trim down"
+    },
+    {
+      "start": 1829.16,
+      "duration": 6.76,
+      "text": "multiple conditional statements and multiple if statements. So, this is the"
+    },
+    {
+      "start": 1833.92,
+      "duration": 6.08,
+      "text": "last question for conditional statements and over here we will be learning"
+    },
+    {
+      "start": 1837.16,
+      "duration": 6.68,
+      "text": "something about nested if else. So, Well, problem is pretty simple."
+    },
+    {
+      "start": 1842.0,
+      "duration": 7.36,
+      "text": "Take the age from the user and then decide accordingly. So, if the age is"
+    },
+    {
+      "start": 1846.4,
+      "duration": 7.68,
+      "text": "smaller than 18, you can print this and all the conditions are given to you. So,"
+    },
+    {
+      "start": 1851.48,
+      "duration": 8.56,
+      "text": "something we know for sure is we need age, right? So, we can take the scene of"
+    },
+    {
+      "start": 1856.52,
+      "duration": 11.84,
+      "text": "age. Now, we know something if age is smaller than 18, then we got to print"
+    },
+    {
+      "start": 1863.92,
+      "duration": 11.24,
+      "text": "something like not eligible for job, right? This is what we will be"
+    },
+    {
+      "start": 1871.72,
+      "duration": 9.48,
+      "text": "printing, correct? Then it states else if the age is greater than equal to 18,"
+    },
+    {
+      "start": 1878.92,
+      "duration": 5.24,
+      "text": "you will be printing eligible for job. If it is greater than equal to 18,"
+    },
+    {
+      "start": 1882.4,
+      "duration": 8.84,
+      "text": "you'll be printing eligible for job. Okay, but if it is somewhere between"
+    },
+    {
+      "start": 1886.04,
+      "duration": 9.56,
+      "text": "this, which means anywhere between this,"
+    },
+    {
+      "start": 1893.48,
+      "duration": 8.48,
+      "text": "it's eligible for job. But anywhere between 55 and 57, eligible for the job,"
+    },
+    {
+      "start": 1898.68,
+      "duration": 8.84,
+      "text": "but retirement soon. That is what you have to print. Got it? So, what I will"
+    },
+    {
+      "start": 1905.2,
+      "duration": 10.76,
+      "text": "go ahead and do is I'll say okay, else if age is greater than 18 and and age is"
+    },
+    {
+      "start": 1911.76,
+      "duration": 9.92,
+      "text": "lesser than equal to 54. And you can say see out eligible for the job. So, I'll"
+    },
+    {
+      "start": 1918.56,
+      "duration": 7.72,
+      "text": "just copy paste this and print. Perfect. Again, do you need to write"
+    },
+    {
+      "start": 1923.76,
+      "duration": 7.56,
+      "text": "greater than 18? No, because if this is false, it is definitely greater than"
+    },
+    {
+      "start": 1928.96,
+      "duration": 5.64,
+      "text": "equal to 18, so let's remove. Simple."
+    },
+    {
+      "start": 1932.8,
+      "duration": 5.2,
+      "text": "What else? If"
+    },
+    {
+      "start": 1935.56,
+      "duration": 6.52,
+      "text": "if these two are false, that means it's not lesser than equal to 54."
+    },
+    {
+      "start": 1940.4,
+      "duration": 6.0,
+      "text": "So, you just need to check if it is lesser than 57."
+    },
+    {
+      "start": 1943.76,
+      "duration": 6.12,
+      "text": "If it is lesser than 57, you go ahead and print see out"
+    },
+    {
+      "start": 1948.84,
+      "duration": 5.08,
+      "text": "of this statement."
+    },
+    {
+      "start": 1951.44,
+      "duration": 6.24,
+      "text": "Very simple. You go ahead and print this statement."
+    },
+    {
+      "start": 1955.28,
+      "duration": 7.0,
+      "text": "Super simple. And if it is not less than equal to 57, it's greater. And if it is"
+    },
+    {
+      "start": 1960.24,
+      "duration": 6.92,
+      "text": "greater, it will always go to else. It will always go to else. And if it is"
+    },
+    {
+      "start": 1964.6,
+      "duration": 7.04,
+      "text": "going always to else, you can always say see out"
+    },
+    {
+      "start": 1969.04,
+      "duration": 7.52,
+      "text": "retirement time. Very simple. This is how you can easily write it. So, if else"
+    },
+    {
+      "start": 1974.52,
+      "duration": 6.76,
+      "text": "if else if and the last can be written you can write the conditional of greater"
+    },
+    {
+      "start": 1978.08,
+      "duration": 7.12,
+      "text": "than 57 or you can just leave it as it is. So, imagine I give you something"
+    },
+    {
+      "start": 1983.4,
+      "duration": 5.36,
+      "text": "like 55. Let's see if it is working fine."
+    },
+    {
+      "start": 1986.08,
+      "duration": 6.16,
+      "text": "55 says eligible for job but retirement soon. Now,"
+    },
+    {
+      "start": 1990.16,
+      "duration": 6.0,
+      "text": "if I want to convert this into an S data just to explain you an S data. Something"
+    },
+    {
+      "start": 1994.64,
+      "duration": 8.12,
+      "text": "to figure out. So, over here it states"
+    },
+    {
+      "start": 1999.24,
+      "duration": 10.36,
+      "text": "18 to 54 is eligible for job. Even 55 to 57 is eligible for the job."
+    },
+    {
+      "start": 2006.44,
+      "duration": 7.56,
+      "text": "But retirement is soon. That's the extra addition that I have to tell the user."
+    },
+    {
+      "start": 2011.72,
+      "duration": 6.04,
+      "text": "Just retirement is soon as what I have to tell the user. So, can I write"
+    },
+    {
+      "start": 2015.56,
+      "duration": 6.64,
+      "text": "something like this? Hey, wait. Can I write 57?"
+    },
+    {
+      "start": 2019.84,
+      "duration": 6.28,
+      "text": "And can I omit this? So, if I omit this, what will happen?"
+    },
+    {
+      "start": 2023.32,
+      "duration": 6.64,
+      "text": "For everything less than equal to 57 and greater than 80"
+    },
+    {
+      "start": 2027.88,
+      "duration": 5.44,
+      "text": "I'll always say eligible for job. Inside this, can I say"
+    },
+    {
+      "start": 2032.16,
+      "duration": 7.6,
+      "text": "if if the age is greater than 55 because I"
+    },
+    {
+      "start": 2037.68,
+      "duration": 5.8,
+      "text": "know if it is coming inside, it's greater than 18. That is something I"
+    },
+    {
+      "start": 2041.4,
+      "duration": 6.04,
+      "text": "surely know it's greater than 18 and less than 57. If it is going inside"
+    },
+    {
+      "start": 2045.48,
+      "duration": 6.32,
+      "text": "these blocks, and it will definitely print eligible because I know for"
+    },
+    {
+      "start": 2049.72,
+      "duration": 7.24,
+      "text": "everyone from 18 to 57, they're eligible. But if the age by chance"
+    },
+    {
+      "start": 2054.32,
+      "duration": 6.2,
+      "text": "exceeds 55, and I know it will always be less than 57,"
+    },
+    {
+      "start": 2058.36,
+      "duration": 6.4,
+      "text": "then only I go ahead and say, \"Hey, if it is exceeding, then can you go ahead"
+    },
+    {
+      "start": 2062.6,
+      "duration": 6.72,
+      "text": "and say retirement soon, but retirement soon.\""
+    },
+    {
+      "start": 2067.96,
+      "duration": 5.8,
+      "text": "That is the extra thing that you need to print, right? But retirement soon. So,"
+    },
+    {
+      "start": 2071.879,
+      "duration": 6.841,
+      "text": "this is how you can also write it. So, this is what you call as nested if. So,"
+    },
+    {
+      "start": 2076.24,
+      "duration": 6.399,
+      "text": "what happened was you just took out the if from here and you put it over here."
+    },
+    {
+      "start": 2080.48,
+      "duration": 7.76,
+      "text": "Does it save time? No. I just wanted to tell you that inside if inside else if"
+    },
+    {
+      "start": 2085.919,
+      "duration": 5.96,
+      "text": "you can also write conditional. Inside this if you can go ahead and write"
+    },
+    {
+      "start": 2089.879,
+      "duration": 6.641,
+      "text": "another conditional. So, it can go nested. These are called nested if else"
+    },
+    {
+      "start": 2093.84,
+      "duration": 6.64,
+      "text": "statements. Inside if one if, so nested ifs. Got it? So, you can write"
+    },
+    {
+      "start": 2098.52,
+      "duration": 5.76,
+      "text": "conditions according to your choice and eventually when you go across time and"
+    },
+    {
+      "start": 2102.72,
+      "duration": 5.68,
+      "text": "you solve tougher problems you'll see that you'll be writing multiple such"
+    },
+    {
+      "start": 2106.6,
+      "duration": 5.8,
+      "text": "conditions. Okay. So, we have completed the if else statements now. What's the"
+    },
+    {
+      "start": 2110.64,
+      "duration": 6.12,
+      "text": "next thing? We'll be completing the switch statement. We are talking about"
+    },
+    {
+      "start": 2114.88,
+      "duration": 6.32,
+      "text": "switch statement, so we will be taking this problem in order to understand the"
+    },
+    {
+      "start": 2118.44,
+      "duration": 6.88,
+      "text": "switch. It is similar to if else. We generally don't use switch that much,"
+    },
+    {
+      "start": 2123.04,
+      "duration": 6.24,
+      "text": "but it is handy to know the switch statements as well. So, what is the"
+    },
+    {
+      "start": 2127.04,
+      "duration": 5.84,
+      "text": "problem stating? Take the day number and print the corresponding day. For one, if"
+    },
+    {
+      "start": 2131.68,
+      "duration": 4.72,
+      "text": "they're giving the day number as one you have to print Monday. For two, you have"
+    },
+    {
+      "start": 2134.48,
+      "duration": 5.2,
+      "text": "to print Tuesday and so on. For seven, you have to print Sunday. So, they'll be"
+    },
+    {
+      "start": 2137.76,
+      "duration": 7.4,
+      "text": "giving you a number between one and seven. So, the syntax of switch is super"
+    },
+    {
+      "start": 2142.44,
+      "duration": 6.96,
+      "text": "simple. So, you take the let's say the number the day number."
+    },
+    {
+      "start": 2147.36,
+      "duration": 4.92,
+      "text": "Same day. So, whatever variable you're taking"
+    },
+    {
+      "start": 2150.8,
+      "duration": 4.88,
+      "text": "on that you have to write the switch. It's kind of a switch. So, you say"
+    },
+    {
+      "start": 2153.72,
+      "duration": 5.96,
+      "text": "switch day. Okay? And then you open the braces. So,"
+    },
+    {
+      "start": 2157.96,
+      "duration": 5.92,
+      "text": "on the basis of the day you the switch will be triggered. Okay."
+    },
+    {
+      "start": 2162.04,
+      "duration": 5.6,
+      "text": "So, you know the switch will be between one to seven because they're saying the"
+    },
+    {
+      "start": 2166.2,
+      "duration": 6.32,
+      "text": "input will always be between one to seven. So, you write case one."
+    },
+    {
+      "start": 2170.0,
+      "duration": 5.32,
+      "text": "Okay? So, case and then if this is an integer you write the integer. If this"
+    },
+    {
+      "start": 2174.08,
+      "duration": 6.16,
+      "text": "was a character then you could have write uh written a character like this."
+    },
+    {
+      "start": 2178.04,
+      "duration": 6.32,
+      "text": "Whatever is your switch, you write the same switch over here. So, case one is"
+    },
+    {
+      "start": 2182.84,
+      "duration": 4.64,
+      "text": "the switch. And then you go ahead to write case two"
+    },
+    {
+      "start": 2185.84,
+      "duration": 7.04,
+      "text": "is the switch. And then you go ahead to write case three is a switch and so on."
+    },
+    {
+      "start": 2191.24,
+      "duration": 4.6,
+      "text": "So what I've done is So what I've done is I've written down"
+    },
+    {
+      "start": 2194.04,
+      "duration": 6.0,
+      "text": "all the cases because those are the cases. Now, I know one thing, for case"
+    },
+    {
+      "start": 2197.96,
+      "duration": 8.12,
+      "text": "one, I have to print what? I have to print see out of nothing but Monday. So"
+    },
+    {
+      "start": 2203.76,
+      "duration": 5.4,
+      "text": "go ahead and print Monday. Similarly, Tuesday, Wednesday, please print out"
+    },
+    {
+      "start": 2207.88,
+      "duration": 4.8,
+      "text": "everything. So this is how you'll write down all the"
+    },
+    {
+      "start": 2210.76,
+      "duration": 5.12,
+      "text": "cases. In order to understand switch better, let me give you an example."
+    },
+    {
+      "start": 2213.92,
+      "duration": 6.2,
+      "text": "Imagine you enter five. So what will happen is it will take the input as"
+    },
+    {
+      "start": 2217.48,
+      "duration": 8.12,
+      "text": "five. Switch says five. It will directly go to case five and print Friday. But"
+    },
+    {
+      "start": 2223.92,
+      "duration": 6.44,
+      "text": "see what happens. It prints Friday, Saturday."
+    },
+    {
+      "start": 2228.0,
+      "duration": 6.32,
+      "text": "So it went to the case five and it executed all the corresponding"
+    },
+    {
+      "start": 2233.04,
+      "duration": 4.96,
+      "text": "cases. But it started from case five. Imagine"
+    },
+    {
+      "start": 2236.36,
+      "duration": 6.4,
+      "text": "you give two. It will start from case two and it will"
+    },
+    {
+      "start": 2240.08,
+      "duration": 7.36,
+      "text": "execute everything. So how do you prevent this? Something for sure is when"
+    },
+    {
+      "start": 2244.96,
+      "duration": 6.52,
+      "text": "you trigger two, it reaches here. It doesn't execute this. So once it reaches"
+    },
+    {
+      "start": 2249.64,
+      "duration": 8.24,
+      "text": "here, there is something as break statement in C++. What break does is it"
+    },
+    {
+      "start": 2254.84,
+      "duration": 7.52,
+      "text": "breaks out of all the conditional statements that you have written. So"
+    },
+    {
+      "start": 2260.16,
+      "duration": 5.72,
+      "text": "over here, the cases are conditional statements. It will break out. The"
+    },
+    {
+      "start": 2264.12,
+      "duration": 6.16,
+      "text": "switch is a conditional statement. So it will break out. See what will happen. If"
+    },
+    {
+      "start": 2267.8,
+      "duration": 7.36,
+      "text": "you give a break everywhere. So make sure you give a break everywhere after"
+    },
+    {
+      "start": 2272.0,
+      "duration": 3.16,
+      "text": "every condition."
+    },
+    {
+      "start": 2277.96,
+      "duration": 5.8,
+      "text": "If you give a break after every condition and after all the cases are"
+    },
+    {
+      "start": 2281.16,
+      "duration": 6.2,
+      "text": "executed and if I just give a see out to check, see what will happen. And I'll"
+    },
+    {
+      "start": 2285.56,
+      "duration": 7.28,
+      "text": "also give a see out to check after all the cases have been executed. Okay,"
+    },
+    {
+      "start": 2289.52,
+      "duration": 8.44,
+      "text": "check inside switch. So ideally what should happen is two means Tuesday"
+    },
+    {
+      "start": 2295.32,
+      "duration": 7.32,
+      "text": "should be executed. Break means all the cases, and as as I said, all the"
+    },
+    {
+      "start": 2300.04,
+      "duration": 7.68,
+      "text": "condition, this will also be broken out and it will reach the line number 36."
+    },
+    {
+      "start": 2304.84,
+      "duration": 8.76,
+      "text": "See. So, if I give it, it reaches the line number 36 check and not over here."
+    },
+    {
+      "start": 2311.16,
+      "duration": 7.96,
+      "text": "Very important to understand this. Okay. Now, there is something as a default."
+    },
+    {
+      "start": 2316.36,
+      "duration": 6.72,
+      "text": "Imagine I give you something like 19. Then, what happens? So, if I"
+    },
+    {
+      "start": 2320.88,
+      "duration": 5.84,
+      "text": "execute, if I give 19, none of the cases gets executed because"
+    },
+    {
+      "start": 2324.96,
+      "duration": 5.8,
+      "text": "there is no case as 19. So, you you can probably give something"
+    },
+    {
+      "start": 2328.6,
+      "duration": 7.24,
+      "text": "as a default case. Imagine none of the cases is executed,"
+    },
+    {
+      "start": 2333.96,
+      "duration": 6.2,
+      "text": "then it falls back on the default. So, if you give something like as 19, it"
+    },
+    {
+      "start": 2338.2,
+      "duration": 6.76,
+      "text": "falls back on the default and you can say as invalid. So, this is the last"
+    },
+    {
+      "start": 2342.92,
+      "duration": 6.08,
+      "text": "executed step. They don't need to give a break because after this, it"
+    },
+    {
+      "start": 2347.12,
+      "duration": 6.72,
+      "text": "automatically breaks out. So, imagine you give you if you give 19, what will"
+    },
+    {
+      "start": 2351.16,
+      "duration": 7.12,
+      "text": "happen is it will go ahead and say invalid and then go over here. If you"
+    },
+    {
+      "start": 2356.2,
+      "duration": 7.88,
+      "text": "don't give a break here, and if you give something like see out invalid check."
+    },
+    {
+      "start": 2361.24,
+      "duration": 5.32,
+      "text": "Can you guess what will happen? Because you're not giving a break."
+    },
+    {
+      "start": 2365.72,
+      "duration": 5.52,
+      "text": "See what happen. Invalid and then the last line of the"
+    },
+    {
+      "start": 2369.56,
+      "duration": 6.44,
+      "text": "switch is also executed. But, the moment you write break,"
+    },
+    {
+      "start": 2372.68,
+      "duration": 6.96,
+      "text": "it breaks out. It doesn't execute this. So, whenever you write break, it will"
+    },
+    {
+      "start": 2377.96,
+      "duration": 7.76,
+      "text": "take you out from all the conditional loops or all"
+    },
+    {
+      "start": 2382.24,
+      "duration": 7.0,
+      "text": "the conditional braces that it has above it. Got it?"
+    },
+    {
+      "start": 2387.24,
+      "duration": 6.28,
+      "text": "By the way, we will be using break a lot of times in the upcoming problems. So,"
+    },
+    {
+      "start": 2391.72,
+      "duration": 4.88,
+      "text": "uh your concept about break will get more and more clear as we will be"
+    },
+    {
+      "start": 2395.28,
+      "duration": 5.88,
+      "text": "solving problems in the upcoming lectures. So, this was about the switch"
+    },
+    {
+      "start": 2399.08,
+      "duration": 6.36,
+      "text": "statement. It is kind of similar to if else. So, that is why people tend to use"
+    },
+    {
+      "start": 2403.48,
+      "duration": 5.96,
+      "text": "if else because that is more readable. But, yeah, it is handy to know switch."
+    },
+    {
+      "start": 2407.4,
+      "duration": 4.28,
+      "text": "So, just uh just in order to know, just know it."
+    },
+    {
+      "start": 2410.52,
+      "duration": 5.92,
+      "text": "So, we are done with the switch statement. Now, we will be knowing the"
+    },
+    {
+      "start": 2413.48,
+      "duration": 8.64,
+      "text": "basics of arrays and strings. Now, arrays will be covered in depth. Over"
+    },
+    {
+      "start": 2418.88,
+      "duration": 7.72,
+      "text": "here, we'll be covering 41 problems and strings will be covered uh on the"
+    },
+    {
+      "start": 2424.28,
+      "duration": 6.84,
+      "text": "upcoming lectures, but as of now, we just need to know the basics of arrays"
+    },
+    {
+      "start": 2428.92,
+      "duration": 6.2,
+      "text": "and strings. So, let's uh start with arrays and strings."
+    },
+    {
+      "start": 2432.76,
+      "duration": 7.76,
+      "text": "So, when do we use arrays is a very big question. When you have a similar data"
+    },
+    {
+      "start": 2437.72,
+      "duration": 9.24,
+      "text": "type being stored multiple times. For an example, over here, I'm giving you four"
+    },
+    {
+      "start": 2443.92,
+      "duration": 8.24,
+      "text": "uh datas. So, you can see that uh these are integer data types, right? 3 4 5 7,"
+    },
+    {
+      "start": 2449.72,
+      "duration": 6.56,
+      "text": "these are integers. So, one of the ways you can store them is by the way,"
+    },
+    {
+      "start": 2454.16,
+      "duration": 7.88,
+      "text": "template, yeah. One of the ways you can store them is a b c d and you can say c"
+    },
+    {
+      "start": 2460.0,
+      "duration": 6.16,
+      "text": "in of a, a will take three. Then you can say b, b will take four, c will take"
+    },
+    {
+      "start": 2464.24,
+      "duration": 7.12,
+      "text": "five, and then d. So, actually, all these four integers, one by one will go"
+    },
+    {
+      "start": 2468.84,
+      "duration": 8.92,
+      "text": "into these four variables. But imagine if you have 50 variable uh 50 data, you"
+    },
+    {
+      "start": 2474.76,
+      "duration": 7.32,
+      "text": "can't have 50 variable names because to name 50 variables, it's going to take a"
+    },
+    {
+      "start": 2479.84,
+      "duration": 7.6,
+      "text": "lot of effort. That is where something like an array is used. So, what I say"
+    },
+    {
+      "start": 2484.32,
+      "duration": 8.24,
+      "text": "is, I know the entire data is of similar type, which is integer. Why can't I"
+    },
+    {
+      "start": 2490.24,
+      "duration": 7.08,
+      "text": "define an array? So, what I do is I say I N T array of, let's uh for an example,"
+    },
+    {
+      "start": 2495.24,
+      "duration": 7.28,
+      "text": "say five numbers are there. I N T array of five. So, what this does is, I'll"
+    },
+    {
+      "start": 2500.12,
+      "duration": 5.8,
+      "text": "give you a diagrammatic representation. This creates an array of size"
+    },
+    {
+      "start": 2505.0,
+      "duration": 6.64,
+      "text": "five. Now, this size five array looks"
+    },
+    {
+      "start": 2508.16,
+      "duration": 7.32,
+      "text": "something like boxes. Every box can store an integer. The zeroth index can"
+    },
+    {
+      "start": 2513.64,
+      "duration": 5.92,
+      "text": "store an integer. The first index can store an integer. The second index can"
+    },
+    {
+      "start": 2517.32,
+      "duration": 8.52,
+      "text": "store an integer. And all the index can store an integer. What is an index? This"
+    },
+    {
+      "start": 2521.88,
+      "duration": 9.44,
+      "text": "first guy is referenced by zeroth index. The second guy is referenced by first"
+    },
+    {
+      "start": 2528.92,
+      "duration": 8.2,
+      "text": "index, one less. So, if the size is five, the last index will be four. So,"
+    },
+    {
+      "start": 2534.76,
+      "duration": 8.24,
+      "text": "this is how an array will look. And depending on the data type that you have"
+    },
+    {
+      "start": 2538.92,
+      "duration": 8.68,
+      "text": "given, every box or every location of that array or that index is going to"
+    },
+    {
+      "start": 2545.64,
+      "duration": 6.48,
+      "text": "store an integer. If you would have defined it as, let's say, long long, it"
+    },
+    {
+      "start": 2550.4,
+      "duration": 5.0,
+      "text": "would have stored long long in that index. If you would have defined it as"
+    },
+    {
+      "start": 2553.56,
+      "duration": 6.88,
+      "text": "character, it would have stored character in that index. So, over here,"
+    },
+    {
+      "start": 2557.88,
+      "duration": 8.12,
+      "text": "our use case is defining it as an integer. So, I will define it as an"
+    },
+    {
+      "start": 2562.8,
+      "duration": 9.24,
+      "text": "integer. Now, I'll say seen of array of zero, seen of array of one,"
+    },
+    {
+      "start": 2569.72,
+      "duration": 8.52,
+      "text": "seen of Oh, my bad. I'm taking the other one. Array of two. Then I'll say array"
+    },
+    {
+      "start": 2574.92,
+      "duration": 7.92,
+      "text": "of three. Then I say array of four. So, what happens is the zeroth index takes"
+    },
+    {
+      "start": 2580.64,
+      "duration": 6.88,
+      "text": "three and everything is stored. Now, imagine I want to print seven. I want to"
+    },
+    {
+      "start": 2585.04,
+      "duration": 6.84,
+      "text": "print seven. So, what you can say is see out of array of"
+    },
+    {
+      "start": 2590.04,
+      "duration": 7.08,
+      "text": "Where is seven stored? Seven will be stored at the zeroth zeroth index, first"
+    },
+    {
+      "start": 2594.4,
+      "duration": 6.16,
+      "text": "index, second index, third index. I can say three."
+    },
+    {
+      "start": 2598.64,
+      "duration": 6.88,
+      "text": "Yes. And if you print this, let's see if seven was stored. You saw? So, what"
+    },
+    {
+      "start": 2602.8,
+      "duration": 8.64,
+      "text": "happened was these five numbers went in and were stored in these places"
+    },
+    {
+      "start": 2608.4,
+      "duration": 6.92,
+      "text": "consecutively. So, when you access the third index, it means the fourth element"
+    },
+    {
+      "start": 2613.36,
+      "duration": 6.6,
+      "text": "got accessed and you got the fourth element. Can you modify these? Yes, you"
+    },
+    {
+      "start": 2617.72,
+      "duration": 9.0,
+      "text": "can. If you want to do operations on them, you can. Imagine I say array of"
+    },
+    {
+      "start": 2622.24,
+      "duration": 9.04,
+      "text": "three. Can you go ahead and add yourself 10? So, if it adds 10 to itself, seven"
+    },
+    {
+      "start": 2629.92,
+      "duration": 5.92,
+      "text": "should become 70. Let's see if it become."
+    },
+    {
+      "start": 2632.88,
+      "duration": 7.8,
+      "text": "It does. So, you can modify. So, it is exactly as a data type. You Like"
+    },
+    {
+      "start": 2638.72,
+      "duration": 6.32,
+      "text": "whatever you wish to do, you can do it. If you want to do something like, \"Hey,"
+    },
+    {
+      "start": 2642.64,
+      "duration": 8.4,
+      "text": "array of three, replace yourself with 16. Change your value to 16.\" It can as"
+    },
+    {
+      "start": 2648.2,
+      "duration": 8.76,
+      "text": "well. You can do whatever you wish to with this particular"
+    },
+    {
+      "start": 2654.12,
+      "duration": 7.56,
+      "text": "array. You can treat it similarly to an integer data type. Got it? So, this is"
+    },
+    {
+      "start": 2659.04,
+      "duration": 7.12,
+      "text": "how you can store similar data like together. And the container used is"
+    },
+    {
+      "start": 2664.68,
+      "duration": 6.04,
+      "text": "array. There are multiple other containers as well. I have talked about"
+    },
+    {
+      "start": 2668.28,
+      "duration": 7.28,
+      "text": "that in the C++ STL video. You can definitely check it out as well. So, we"
+    },
+    {
+      "start": 2673.24,
+      "duration": 8.2,
+      "text": "got to know what is an array. And the most important thing is everything has"
+    },
+    {
+      "start": 2677.96,
+      "duration": 9.2,
+      "text": "to be of a similar data type. You can't be saying 7.7."
+    },
+    {
+      "start": 2683.96,
+      "duration": 9.52,
+      "text": "If you say 7.7, what will happen is since you declared this to be an integer"
+    },
+    {
+      "start": 2689.88,
+      "duration": 8.12,
+      "text": "data type, this 7.7 will trim itself to an integer and hence it will be stored"
+    },
+    {
+      "start": 2695.44,
+      "duration": 6.96,
+      "text": "as seven. Got it? If there is a double data type, maybe"
+    },
+    {
+      "start": 2700.56,
+      "duration": 6.76,
+      "text": "you can store double. And if you say double, then 7.7 is stored. Whatever"
+    },
+    {
+      "start": 2705.68,
+      "duration": 6.16,
+      "text": "data type you give, that has to be constant for all the elements. That is"
+    },
+    {
+      "start": 2709.48,
+      "duration": 6.32,
+      "text": "the key point. Okay. So, that was about the array. Now, where is the array"
+    },
+    {
+      "start": 2713.8,
+      "duration": 8.16,
+      "text": "stored? We know it is zero at the next first index. But, the entire thing is"
+    },
+    {
+      "start": 2718.96,
+      "duration": 7.16,
+      "text": "taken and stored in a memory location. Yes, the entire thing is taken and"
+    },
+    {
+      "start": 2723.64,
+      "duration": 8.52,
+      "text": "stored in a memory location. So, this guy, zero at index, is stored at a"
+    },
+    {
+      "start": 2728.6,
+      "duration": 8.08,
+      "text": "particular memory. And that memory at can be of any address. That address is"
+    },
+    {
+      "start": 2734.28,
+      "duration": 6.8,
+      "text": "very random. I cannot say that it is stored in let's say India. Like, there's"
+    },
+    {
+      "start": 2739.04,
+      "duration": 5.24,
+      "text": "nothing like at this memory address it is stored."
+    },
+    {
+      "start": 2742.36,
+      "duration": 5.44,
+      "text": "Throughout the CPU, it can be stored anywhere."
+    },
+    {
+      "start": 2745.64,
+      "duration": 8.28,
+      "text": "Now, the second, the first index. Now, that one I can definitely say will"
+    },
+    {
+      "start": 2750.96,
+      "duration": 6.56,
+      "text": "be stored right after the zero at guy. Right after the zero at guy's memory"
+    },
+    {
+      "start": 2755.52,
+      "duration": 6.2,
+      "text": "address. Right the consecutive one. Then the first the second guy will be stored"
+    },
+    {
+      "start": 2759.44,
+      "duration": 6.36,
+      "text": "right after that. So, the zero at guy, we're not sure. But, we are sure about"
+    },
+    {
+      "start": 2763.44,
+      "duration": 5.24,
+      "text": "the next guys because they will always be in"
+    },
+    {
+      "start": 2766.92,
+      "duration": 8.92,
+      "text": "consecutive. So remember, array elements are stored"
+    },
+    {
+      "start": 2772.16,
+      "duration": 7.48,
+      "text": "in consecutive memory address, but I'm not sure where the first one will It can"
+    },
+    {
+      "start": 2778.16,
+      "duration": 5.68,
+      "text": "be at any randomized location. Very, very"
+    },
+    {
+      "start": 2781.76,
+      "duration": 7.04,
+      "text": "important point to remember, but will it be required in DSL go? I don't think so."
+    },
+    {
+      "start": 2786.2,
+      "duration": 6.68,
+      "text": "But it is a point which is important and you should keep in your mind. So till"
+    },
+    {
+      "start": 2790.6,
+      "duration": 7.8,
+      "text": "now we did learn about the one D array. Now we will be learning about the 2D"
+    },
+    {
+      "start": 2795.36,
+      "duration": 7.24,
+      "text": "array. What is a 2D array? Again, I'll be giving you very basic idea about 2D"
+    },
+    {
+      "start": 2801.0,
+      "duration": 6.2,
+      "text": "array over here. Eventually, when we move across the playlist, we will be"
+    },
+    {
+      "start": 2804.16,
+      "duration": 6.64,
+      "text": "learning about 2D array in depth. If this was declared,"
+    },
+    {
+      "start": 2808.8,
+      "duration": 5.56,
+      "text": "this was something like five"
+    },
+    {
+      "start": 2811.68,
+      "duration": 8.08,
+      "text": "guys or five boxes. Indexing from 0 1 2 3 4. Correct? Now,"
+    },
+    {
+      "start": 2818.16,
+      "duration": 5.24,
+      "text": "the moment I say I need five boxes, but I need them three"
+    },
+    {
+      "start": 2822.24,
+      "duration": 6.32,
+      "text": "times. I'll add three."
+    },
+    {
+      "start": 2825.12,
+      "duration": 9.68,
+      "text": "What it means is I'll have three five boxes. If I show you diagrammatically,"
+    },
+    {
+      "start": 2830.88,
+      "duration": 10.08,
+      "text": "this is what I'll have. Three 1 2 3 five boxes 1 2 3 4 three five boxes as what"
+    },
+    {
+      "start": 2838.44,
+      "duration": 6.04,
+      "text": "I'll have. So this is what it means. This is the row number. We generally"
+    },
+    {
+      "start": 2842.84,
+      "duration": 4.76,
+      "text": "call this as row and this is column."
+    },
+    {
+      "start": 2845.92,
+      "duration": 4.76,
+      "text": "And if I talk about the indexing over here,"
+    },
+    {
+      "start": 2848.28,
+      "duration": 5.2,
+      "text": "again, the indexing starts from zero. And this is how the indexing goes. You"
+    },
+    {
+      "start": 2852.16,
+      "duration": 5.08,
+      "text": "see zero 1 2 and this is zero."
+    },
+    {
+      "start": 2855.64,
+      "duration": 7.56,
+      "text": "So this guy this guy is known as 0 0."
+    },
+    {
+      "start": 2860.48,
+      "duration": 9.48,
+      "text": "This guy is known as 0 1. This guy is known as 0 2. This guy is known as 0 3."
+    },
+    {
+      "start": 2866.84,
+      "duration": 9.84,
+      "text": "So this is how the naming or the row and column goes. If I say 1 {comma} 3, so"
+    },
+    {
+      "start": 2873.56,
+      "duration": 10.2,
+      "text": "here is 1 and here is 3. 76. The value will be 76. If I say give me the value"
+    },
+    {
+      "start": 2880.0,
+      "duration": 9.16,
+      "text": "at 1, 3, the value will be 76. Again, if you want to assign, like it'll be like"
+    },
+    {
+      "start": 2885.72,
+      "duration": 9.88,
+      "text": "A13 equal to you can say 78, and then you can go ahead and say C out of A13."
+    },
+    {
+      "start": 2892.68,
+      "duration": 6.36,
+      "text": "We will be seeing the use of 2D matrix a lot. We'll be solving a bunch of"
+    },
+    {
+      "start": 2897.4,
+      "duration": 4.84,
+      "text": "problems. Don't worry about that. So, this will be array, and this will be"
+    },
+    {
+      "start": 2900.68,
+      "duration": 6.16,
+      "text": "array. So, if you go ahead and print this, you'll be seeing that we actually"
+    },
+    {
+      "start": 2904.16,
+      "duration": 6.48,
+      "text": "getting 78 at this location. And for the locations that you have not defined,"
+    },
+    {
+      "start": 2908.72,
+      "duration": 6.0,
+      "text": "they'll be assigning themselves some garbage value. It can be any value. Like"
+    },
+    {
+      "start": 2913.08,
+      "duration": 5.8,
+      "text": "if you try to define try to print print 1, 2, you'll see it"
+    },
+    {
+      "start": 2917.12,
+      "duration": 5.16,
+      "text": "is having a garbage value. Like if you try to print it again, it will have"
+    },
+    {
+      "start": 2920.44,
+      "duration": 6.24,
+      "text": "different different values. Every time you print, it has some garbage value"
+    },
+    {
+      "start": 2924.72,
+      "duration": 6.92,
+      "text": "that comes in from the system because you did not initialize. The only guy"
+    },
+    {
+      "start": 2929.2,
+      "duration": 7.64,
+      "text": "that you initialized one was the first row and the"
+    },
+    {
+      "start": 2934.28,
+      "duration": 7.68,
+      "text": "third column in terms of zero-based indexing. Very important. In arrays, we"
+    },
+    {
+      "start": 2939.36,
+      "duration": 6.72,
+      "text": "have zero-based indexing. Okay? Where is 2D array used? It is used to solve a lot"
+    },
+    {
+      "start": 2944.12,
+      "duration": 6.12,
+      "text": "of matrix problems, a lot of graph problems, which you'll be dealing with"
+    },
+    {
+      "start": 2948.16,
+      "duration": 7.16,
+      "text": "in the future. Okay? As of now, just know this is what we know as 2D array."
+    },
+    {
+      "start": 2953.04,
+      "duration": 6.28,
+      "text": "This is the row. This is the column, and it goes as row and column. That's it."
+    },
+    {
+      "start": 2957.92,
+      "duration": 4.68,
+      "text": "That is what you have to keep in your head as of now."
+    },
+    {
+      "start": 2961.08,
+      "duration": 5.28,
+      "text": "So, in the STL video, I've talked about a lot of functions related to arrays,"
+    },
+    {
+      "start": 2964.56,
+      "duration": 6.84,
+      "text": "vectors, lists, and a lot of other things. So, you can definitely check the"
+    },
+    {
+      "start": 2968.6,
+      "duration": 7.08,
+      "text": "check that video after this one. So, we have known about arrays in basics. Now,"
+    },
+    {
+      "start": 2973.84,
+      "duration": 5.6,
+      "text": "let's talk about string. So, imagine this is the string that I'm having."
+    },
+    {
+      "start": 2977.56,
+      "duration": 4.8,
+      "text": "String S equal to string. And now,"
+    },
+    {
+      "start": 2980.52,
+      "duration": 6.8,
+      "text": "I want to access I. So, the string also stores every"
+    },
+    {
+      "start": 2984.56,
+      "duration": 7.16,
+      "text": "character in terms of indexes. So, S will be at the zeroth index. So,"
+    },
+    {
+      "start": 2989.88,
+      "duration": 7.2,
+      "text": "if If try to print something like C out of S of zero, what will happen? See."
+    },
+    {
+      "start": 2994.8,
+      "duration": 6.68,
+      "text": "S will be printed. If you say S of one, see what happens. T will be printed. If"
+    },
+    {
+      "start": 2999.52,
+      "duration": 6.32,
+      "text": "you say S of two, you know what will be printed. R. So,"
+    },
+    {
+      "start": 3004.36,
+      "duration": 6.8,
+      "text": "every character is stored at an index. And the"
+    },
+    {
+      "start": 3008.24,
+      "duration": 7.6,
+      "text": "first index is the zeroth index. And what will be the last index? Whatever is"
+    },
+    {
+      "start": 3013.12,
+      "duration": 7.36,
+      "text": "the length. So, can I say the length is This is how you find the length. Length"
+    },
+    {
+      "start": 3018.16,
+      "duration": 6.84,
+      "text": "equal to S.size. Or there is another function as length which you can use."
+    },
+    {
+      "start": 3023.08,
+      "duration": 6.56,
+      "text": "So, if I say length minus one, because I know last index, because everything"
+    },
+    {
+      "start": 3027.32,
+      "duration": 5.4,
+      "text": "works in zero-based indexing. The last index will be n minus I know it. If I"
+    },
+    {
+      "start": 3031.52,
+      "duration": 7.12,
+      "text": "print this, what will be printed? Driver R. Because"
+    },
+    {
+      "start": 3035.6,
+      "duration": 8.36,
+      "text": "this is what happens at the last index. That's how you can easily access the"
+    },
+    {
+      "start": 3041.32,
+      "duration": 6.32,
+      "text": "string. If you want to change any value, imagine you want to say, \"Hey, I'm not"
+    },
+    {
+      "start": 3045.8,
+      "duration": 7.6,
+      "text": "interested in this. Please make it Z.\" S.try Z."
+    },
+    {
+      "start": 3050.76,
+      "duration": 7.56,
+      "text": "And I do it. It gets changed to Z. So, you can also change it. Remember, these"
+    },
+    {
+      "start": 3056.24,
+      "duration": 6.88,
+      "text": "are characters. Characters at every index."
+    },
+    {
+      "start": 3059.64,
+      "duration": 6.84,
+      "text": "And characters when gets added makes up a string. So, all of these are"
+    },
+    {
+      "start": 3064.68,
+      "duration": 6.68,
+      "text": "characters. You can't do something like this and expect this to work. If you do"
+    },
+    {
+      "start": 3068.48,
+      "duration": 8.24,
+      "text": "this, it will not work and it will give you errors. You see errors. So, since it"
+    },
+    {
+      "start": 3075.08,
+      "duration": 7.04,
+      "text": "is a character, you have to assign it with a character. So, string is storing"
+    },
+    {
+      "start": 3079.52,
+      "duration": 6.88,
+      "text": "characters within itself. So, if you know about this and the length function,"
+    },
+    {
+      "start": 3084.28,
+      "duration": 7.28,
+      "text": "eventually we will be solving a lot of string problems. And there you can"
+    },
+    {
+      "start": 3088.52,
+      "duration": 6.76,
+      "text": "easily get on with strings. So, we are done with arrays and strings. Now, it's"
+    },
+    {
+      "start": 3093.2,
+      "duration": 6.96,
+      "text": "time to do for loops and while loops. And as of now, I'll be talking about"
+    },
+    {
+      "start": 3097.36,
+      "duration": 7.76,
+      "text": "basics. Eventually, we'll be solving a bunch of patterns. A bunch of patterns."
+    },
+    {
+      "start": 3102.92,
+      "duration": 7.72,
+      "text": "And once you end up solving all these patterns using for loops, trust me, your"
+    },
+    {
+      "start": 3108.32,
+      "duration": 6.04,
+      "text": "logical thinking, your concept of for loops will be super strong. And then"
+    },
+    {
+      "start": 3112.52,
+      "duration": 5.32,
+      "text": "we'll move on to solving maths and everything using the for loops and while"
+    },
+    {
+      "start": 3115.84,
+      "duration": 5.96,
+      "text": "loops. And eventually, in the entire DSA, for loops"
+    },
+    {
+      "start": 3120.64,
+      "duration": 6.6,
+      "text": "If you don't know for loops, you can't do anything. So, please stay focused."
+    },
+    {
+      "start": 3124.44,
+      "duration": 5.64,
+      "text": "So, what is for loops? Why is it used? Imagine I say you, \"Hey, print your"
+    },
+    {
+      "start": 3129.16,
+      "duration": 4.24,
+      "text": "name.\" I'll be like, \"Uh see out.\" Okay, what's"
+    },
+    {
+      "start": 3132.56,
+      "duration": 4.16,
+      "text": "my My name is Priyo."
+    },
+    {
+      "start": 3134.72,
+      "duration": 4.92,
+      "text": "And I'll print it. Print it five times."
+    },
+    {
+      "start": 3141.8,
+      "duration": 6.08,
+      "text": "Done. Five times printed."
+    },
+    {
+      "start": 3143.88,
+      "duration": 6.8,
+      "text": "Print it 500 times. 500? That's a lot."
+    },
+    {
+      "start": 3149.2,
+      "duration": 4.6,
+      "text": "This is where for loop comes. For loop says,"
+    },
+    {
+      "start": 3151.72,
+      "duration": 5.52,
+      "text": "\"Same line of code. Why do you want to write it again and"
+    },
+    {
+      "start": 3155.24,
+      "duration": 6.84,
+      "text": "again? I'll do it for you.\" So, what for loop says is, \"Hey,"
+    },
+    {
+      "start": 3159.76,
+      "duration": 7.4,
+      "text": "same line of code, right? Write it once. And then enclose it"
+    },
+    {
+      "start": 3165.56,
+      "duration": 6.12,
+      "text": "inside me enclose it.\" And the for loop says, \"Okay, my syntax"
+    },
+    {
+      "start": 3169.08,
+      "duration": 6.72,
+      "text": "is very simple. Say for What is the variable that you want to go"
+    },
+    {
+      "start": 3173.8,
+      "duration": 5.16,
+      "text": "across? How many times you want to run? Put over variable for that.\" I'll be"
+    },
+    {
+      "start": 3177.04,
+      "duration": 6.48,
+      "text": "like, \"I'm going to run it for five times or 500 times.\""
+    },
+    {
+      "start": 3181.88,
+      "duration": 6.52,
+      "text": "What is the initial? First, I equal to one. Variable"
+    },
+    {
+      "start": 3186.2,
+      "duration": 8.44,
+      "text": "declaration, I equal to one. Variable declaration. This only gets executed for"
+    },
+    {
+      "start": 3191.72,
+      "duration": 8.64,
+      "text": "the first iteration. Only gets executed for the first iteration. Then,"
+    },
+    {
+      "start": 3197.32,
+      "duration": 7.76,
+      "text": "condition at which I'll stop. The for loop will stop. The looping will stop."
+    },
+    {
+      "start": 3202.84,
+      "duration": 5.12,
+      "text": "So, I'll be like, the condition is 10. I'm saying,"
+    },
+    {
+      "start": 3206.08,
+      "duration": 6.64,
+      "text": "\"Till I don't reach 10, I'll not stop. And at every step, I have to do"
+    },
+    {
+      "start": 3210.32,
+      "duration": 6.56,
+      "text": "something. If I don't do, I will forever stay one. And if I stays"
+    },
+    {
+      "start": 3215.48,
+      "duration": 5.32,
+      "text": "forever one, this condition will always be true. And"
+    },
+    {
+      "start": 3219.08,
+      "duration": 6.28,
+      "text": "if it is always true, that line of code will run run, run,"
+    },
+    {
+      "start": 3222.96,
+      "duration": 6.72,
+      "text": "run, run run at 11. This is where"
+    },
+    {
+      "start": 3226.52,
+      "duration": 8.08,
+      "text": "something like increment or decrement, your wish, comes in. And I say"
+    },
+    {
+      "start": 3232.6,
+      "duration": 6.2,
+      "text": "this is the line that I use I want to execute."
+    },
+    {
+      "start": 3236.08,
+      "duration": 6.36,
+      "text": "And I go ahead and write this line. Now, what happens is see what will"
+    },
+    {
+      "start": 3240.44,
+      "duration": 5.08,
+      "text": "happen. I'll tell you how it happens. Oh,"
+    },
+    {
+      "start": 3243.36,
+      "duration": 7.68,
+      "text": "10 times, exactly 10 times driver code printed. What happened was"
+    },
+    {
+      "start": 3247.92,
+      "duration": 6.36,
+      "text": "first, initialization, I equal to one. First time,"
+    },
+    {
+      "start": 3252.92,
+      "duration": 7.52,
+      "text": "I is one. I less than 10? Yes. Goes,"
+    },
+    {
+      "start": 3257.52,
+      "duration": 6.12,
+      "text": "prints. Printed, comes back to this line."
+    },
+    {
+      "start": 3261.56,
+      "duration": 6.68,
+      "text": "I gets two. Next, goes here."
+    },
+    {
+      "start": 3266.2,
+      "duration": 6.32,
+      "text": "Two less than equal to 10? Yes. Goes here. Prints."
+    },
+    {
+      "start": 3269.76,
+      "duration": 6.96,
+      "text": "Goes again here. I equal to three. After here, goes here."
+    },
+    {
+      "start": 3274.8,
+      "duration": 4.68,
+      "text": "Three less than equal to 10? Yes. Prints."
+    },
+    {
+      "start": 3278.12,
+      "duration": 5.0,
+      "text": "Then goes here. I equal to equal to four."
+    },
+    {
+      "start": 3281.44,
+      "duration": 6.64,
+      "text": "Imagine this is five for an example, so that I can explain. I equal to four."
+    },
+    {
+      "start": 3285.48,
+      "duration": 6.8,
+      "text": "Prints. Goes again here. I becomes five."
+    },
+    {
+      "start": 3290.8,
+      "duration": 7.28,
+      "text": "Prints. Goes here. I becomes five. Checks."
+    },
+    {
+      "start": 3294.84,
+      "duration": 7.0,
+      "text": "Prints. Goes again here. I becomes six."
+    },
+    {
+      "start": 3299.76,
+      "duration": 4.8,
+      "text": "The moment I becomes six, six less than equal to five?"
+    },
+    {
+      "start": 3303.36,
+      "duration": 5.44,
+      "text": "No, no. Stop."
+    },
+    {
+      "start": 3305.6,
+      "duration": 6.52,
+      "text": "So, it will get executed five times. But if you try to print the value of I,"
+    },
+    {
+      "start": 3310.8,
+      "duration": 5.64,
+      "text": "imagine you want to print the value of I. Something very important to notice."
+    },
+    {
+      "start": 3314.4,
+      "duration": 6.68,
+      "text": "If you print it like this, it will not be able to find I. Why?"
+    },
+    {
+      "start": 3318.88,
+      "duration": 6.04,
+      "text": "Because the scope of the I, the I was declared inside this."
+    },
+    {
+      "start": 3323.4,
+      "duration": 5.8,
+      "text": "So, the scope, wherever you declare I, the scope is"
+    },
+    {
+      "start": 3327.16,
+      "duration": 5.96,
+      "text": "limited to that. So, the other way you can do is"
+    },
+    {
+      "start": 3331.12,
+      "duration": 4.44,
+      "text": "you can say I, and you can write something like this. So, you declared"
+    },
+    {
+      "start": 3334.52,
+      "duration": 5.2,
+      "text": "the I here, and then you have initialized it here. So, if you print I"
+    },
+    {
+      "start": 3337.64,
+      "duration": 6.0,
+      "text": "over here, see what happens. So, I print I,"
+    },
+    {
+      "start": 3340.52,
+      "duration": 7.72,
+      "text": "the last value of I is six, where it got truncated. You can run the for loop in"
+    },
+    {
+      "start": 3346.4,
+      "duration": 8.6,
+      "text": "the reverse order as well. Something like, hey, maybe start from five."
+    },
+    {
+      "start": 3351.88,
+      "duration": 3.12,
+      "text": "Maybe go on till"
+    },
+    {
+      "start": 3355.12,
+      "duration": 6.84,
+      "text": "and maybe decrease it. So, if you do this, and if you print the"
+    },
+    {
+      "start": 3358.72,
+      "duration": 7.4,
+      "text": "value of I, you can see the value of I. Oh, sorry, my bad."
+    },
+    {
+      "start": 3364.12,
+      "duration": 5.52,
+      "text": "You want to print the value of I? Maybe go like this. Oh, sorry, maybe"
+    },
+    {
+      "start": 3368.32,
+      "duration": 4.76,
+      "text": "like this and yeah. Let's see what you got."
+    },
+    {
+      "start": 3370.68,
+      "duration": 6.12,
+      "text": "See the value of I. Five for the first, and fourth, and third, and second, and"
+    },
+    {
+      "start": 3374.36,
+      "duration": 6.8,
+      "text": "first, and zero. Got it? So, you can write the for loop as you"
+    },
+    {
+      "start": 3378.84,
+      "duration": 6.44,
+      "text": "wish to. Is it mandatory that you reduce by two? No."
+    },
+    {
+      "start": 3382.72,
+      "duration": 6.88,
+      "text": "I want to run this for five times. How I run it for five times is my choice. I"
+    },
+    {
+      "start": 3387.64,
+      "duration": 8.28,
+      "text": "can be like, one, I can be like, I need for five times, I"
+    },
+    {
+      "start": 3392.2,
+      "duration": 11.0,
+      "text": "will go till 25. I will do I into or maybe I plus five."
+    },
+    {
+      "start": 3399.76,
+      "duration": 9.36,
+      "text": "My choice. I can go like one, six, 11, 16, 21. My choice. That's my choice. No"
+    },
+    {
+      "start": 3406.72,
+      "duration": 8.16,
+      "text": "one is here to stay. How I run doesn't matter. How many times I run is what"
+    },
+    {
+      "start": 3411.8,
+      "duration": 5.72,
+      "text": "matters. This condition depends on you. What you need to make sure is, if you"
+    },
+    {
+      "start": 3416.12,
+      "duration": 5.12,
+      "text": "want it for five, if you want it for 10, if you want it for 20, make sure the"
+    },
+    {
+      "start": 3419.76,
+      "duration": 8.0,
+      "text": "condition is written in such a way that it runs for that many number of times."
+    },
+    {
+      "start": 3424.28,
+      "duration": 9.12,
+      "text": "That is the core concept of for loops. Do we have nested for loops? Similar to"
+    },
+    {
+      "start": 3430.6,
+      "duration": 6.64,
+      "text": "if? Yes, we do have. And the nested for loops is something which I'll be"
+    },
+    {
+      "start": 3434.48,
+      "duration": 8.2,
+      "text": "teaching you while printing patterns. As of now, this is what you need to know."
+    },
+    {
+      "start": 3440.04,
+      "duration": 6.76,
+      "text": "Can we write if conditions inside the for loop? Yes, you can go ahead and"
+    },
+    {
+      "start": 3444.48,
+      "duration": 8.12,
+      "text": "write if. Any line of code can be written inside any for or any while"
+    },
+    {
+      "start": 3449.72,
+      "duration": 7.92,
+      "text": "loop. So, this is how you write a for loop. Now"
+    },
+    {
+      "start": 3454.92,
+      "duration": 7.04,
+      "text": "I want to convert this exact similar for loop. I'll just comment it out. I want"
+    },
+    {
+      "start": 3459.64,
+      "duration": 6.84,
+      "text": "to convert this exact similar for loop into a while loop."
+    },
+    {
+      "start": 3463.76,
+      "duration": 7.48,
+      "text": "So the while loop does the same thing. The task is same. Whenever I attach"
+    },
+    {
+      "start": 3468.72,
+      "duration": 8.04,
+      "text": "something like loop, the task remains same. Executing some lines of code for"
+    },
+    {
+      "start": 3474.72,
+      "duration": 5.24,
+      "text": "some number of times. We do the same thing. I need here."
+    },
+    {
+      "start": 3478.32,
+      "duration": 6.64,
+      "text": "The only difference is the syntax changes. While executes like"
+    },
+    {
+      "start": 3482.8,
+      "duration": 6.88,
+      "text": "this. Whatever is the condition, whatever is the condition will go here."
+    },
+    {
+      "start": 3487.92,
+      "duration": 6.64,
+      "text": "And whatever is the increment goes at the end. Goes at the last line."
+    },
+    {
+      "start": 3492.52,
+      "duration": 6.2,
+      "text": "Whatever is the increment goes at the last line. Okay? And the initialization"
+    },
+    {
+      "start": 3497.48,
+      "duration": 7.72,
+      "text": "goes over here. First time initialization happens. While"
+    },
+    {
+      "start": 3501.24,
+      "duration": 11.0,
+      "text": "says 1 is lesser than equal to 5. Fine. Go ahead and do see out of driver."
+    },
+    {
+      "start": 3510.08,
+      "duration": 5.4,
+      "text": "And if you want to print I's value, you can also check it out. So if I go ahead"
+    },
+    {
+      "start": 3514.24,
+      "duration": 6.36,
+      "text": "and do end L, you will see the value. See?"
+    },
+    {
+      "start": 3517.6,
+      "duration": 8.56,
+      "text": "Perfect. So what happens? Check, print, increase, check, print, increase."
+    },
+    {
+      "start": 3523.84,
+      "duration": 8.36,
+      "text": "First check, goes inside, increases, comes back, checks, prints, increases."
+    },
+    {
+      "start": 3529.2,
+      "duration": 9.24,
+      "text": "Very simple. This is how a while loop executes. So this is about while loop."
+    },
+    {
+      "start": 3534.88,
+      "duration": 9.36,
+      "text": "Now while has one more concept. And that concept is do while loop. Okay. Now what"
+    },
+    {
+      "start": 3541.56,
+      "duration": 7.8,
+      "text": "does do while mean? So can I say if I keep I equal to 2 and I keep something"
+    },
+    {
+      "start": 3546.8,
+      "duration": 6.72,
+      "text": "like this, will it execute? The answer to that is"
+    },
+    {
+      "start": 3550.68,
+      "duration": 9.84,
+      "text": "no. Because I is 2, the condition is false, never executes, goes to this,"
+    },
+    {
+      "start": 3557.28,
+      "duration": 8.0,
+      "text": "ends the program. So do while says you you don't know the condition because"
+    },
+    {
+      "start": 3562.56,
+      "duration": 7.32,
+      "text": "when you are writing code in industry or maybe you are solving a problem, you a"
+    },
+    {
+      "start": 3568.0,
+      "duration": 5.0,
+      "text": "lot of times the condition might be user dependent or you might have such use"
+    },
+    {
+      "start": 3571.8,
+      "duration": 3.76,
+      "text": "cases. So,"
+    },
+    {
+      "start": 3574.04,
+      "duration": 6.88,
+      "text": "you always want one thing to happen, that is you want your line of code to be"
+    },
+    {
+      "start": 3577.56,
+      "duration": 7.32,
+      "text": "executed minimum for one time. Minimum for one time."
+    },
+    {
+      "start": 3582.16,
+      "duration": 6.52,
+      "text": "That is one That is when you say, \"Okay, we want it to be executed for minimum of"
+    },
+    {
+      "start": 3586.56,
+      "duration": 4.92,
+      "text": "one time. I will write it something like do"
+    },
+    {
+      "start": 3589.56,
+      "duration": 5.8,
+      "text": "and then I'll put this condition for over here"
+    },
+    {
+      "start": 3593.04,
+      "duration": 6.04,
+      "text": "at the end and then I'll be doing the same thing."
+    },
+    {
+      "start": 3597.36,
+      "duration": 6.44,
+      "text": "I'll be doing the same thing. So, what will happen is even if the while even if"
+    },
+    {
+      "start": 3602.04,
+      "duration": 5.56,
+      "text": "the INDI is defined as two and the condition doesn't executes because it"
+    },
+    {
+      "start": 3605.76,
+      "duration": 6.24,
+      "text": "doesn't allows me. And then you end it with a semicolon. Even if the condition"
+    },
+    {
+      "start": 3609.92,
+      "duration": 5.52,
+      "text": "doesn't allows me, do says, \"Do it for the first.\""
+    },
+    {
+      "start": 3612.96,
+      "duration": 7.64,
+      "text": "Go ahead, do it for the first, then increment, then check, then do. So, if"
+    },
+    {
+      "start": 3617.28,
+      "duration": 3.32,
+      "text": "you see I equal to two, see what will"
+    },
+    {
+      "start": 3620.68,
+      "duration": 6.76,
+      "text": "Striver two gets printed. And then if you see the value of I at"
+    },
+    {
+      "start": 3624.68,
+      "duration": 6.36,
+      "text": "the end of the while loop, let's print what will happen."
+    },
+    {
+      "start": 3629.08,
+      "duration": 5.72,
+      "text": "The value of I was two. You printed Striver. I increased to"
+    },
+    {
+      "start": 3633.76,
+      "duration": 4.6,
+      "text": "three and three was lesser than equal to one"
+    },
+    {
+      "start": 3636.52,
+      "duration": 7.68,
+      "text": "and it got ex- ended. But do will make sure the first"
+    },
+    {
+      "start": 3641.24,
+      "duration": 8.36,
+      "text": "time it gets executed irrespective of what condition you are given. So, the"
+    },
+    {
+      "start": 3646.84,
+      "duration": 6.28,
+      "text": "this is the basic like you can define it here, you can define it before this,"
+    },
+    {
+      "start": 3650.88,
+      "duration": 7.52,
+      "text": "that is your choice. But this is the basic of for and while loops. So, I can"
+    },
+    {
+      "start": 3656.12,
+      "duration": 8.0,
+      "text": "say this is the basic of for and while loops. Eventually, when we solve"
+    },
+    {
+      "start": 3661.4,
+      "duration": 6.88,
+      "text": "these amazing set of patterns, the concept of the for and while loops will"
+    },
+    {
+      "start": 3666.28,
+      "duration": 5.84,
+      "text": "get more and more into your head and you'll be very strong in logical"
+    },
+    {
+      "start": 3670.36,
+      "duration": 7.24,
+      "text": "thinking and eventually you can apply for loops in maths, recursion and all"
+    },
+    {
+      "start": 3675.44,
+      "duration": 7.24,
+      "text": "the other problems, okay? What's the next thing? Functions, pass by reference"
+    },
+    {
+      "start": 3680.56,
+      "duration": 6.24,
+      "text": "and pass by value. Functions is very, very important because we'll be using"
+    },
+    {
+      "start": 3684.64,
+      "duration": 6.08,
+      "text": "functions throughout Yes, throughout to solve any problems, we will be writing"
+    },
+    {
+      "start": 3689.0,
+      "duration": 6.24,
+      "text": "functions. So, please make sure you understand functions in a proper depth."
+    },
+    {
+      "start": 3693.48,
+      "duration": 7.92,
+      "text": "So, let's start with functions. What are functions? Functions are a set of code"
+    },
+    {
+      "start": 3698.24,
+      "duration": 8.2,
+      "text": "which performs something for you. Now, if I want someone to do something for"
+    },
+    {
+      "start": 3704.16,
+      "duration": 8.88,
+      "text": "me, like for an example, if I want to order food, I can say I can deliver food"
+    },
+    {
+      "start": 3709.48,
+      "duration": 7.6,
+      "text": "from a food delivery app and that will bring me in food. So, you can say"
+    },
+    {
+      "start": 3714.68,
+      "duration": 6.16,
+      "text": "functions are similar. You want it to do something, you'll give it or maybe"
+    },
+    {
+      "start": 3718.64,
+      "duration": 6.48,
+      "text": "something and it will do that for you. That is the role of a function. Why are"
+    },
+    {
+      "start": 3722.92,
+      "duration": 7.12,
+      "text": "functions used? Functions are used to modularize code. Now, a lot of times"
+    },
+    {
+      "start": 3728.04,
+      "duration": 7.04,
+      "text": "you'll be having hundreds and hundreds of lines of code and it's it becomes"
+    },
+    {
+      "start": 3732.32,
+      "duration": 7.0,
+      "text": "very clumsy. So, in order to modularize because every portion of the code will"
+    },
+    {
+      "start": 3736.96,
+      "duration": 6.44,
+      "text": "be doing something. So, that something will be"
+    },
+    {
+      "start": 3740.6,
+      "duration": 7.68,
+      "text": "put into a function, okay? Functions are used to increase readability. Now,"
+    },
+    {
+      "start": 3745.96,
+      "duration": 6.88,
+      "text": "imagine you are writing code and you have like 1,000 lines of code."
+    },
+    {
+      "start": 3750.88,
+      "duration": 5.24,
+      "text": "You know you know what every line is doing, but if someone from outside is"
+    },
+    {
+      "start": 3754.76,
+      "duration": 6.16,
+      "text": "reading your code, you might not understand. So, what you do is every"
+    },
+    {
+      "start": 3758.44,
+      "duration": 7.64,
+      "text": "step you put it into a function. Name the function in such a way that it is"
+    },
+    {
+      "start": 3762.88,
+      "duration": 9.12,
+      "text": "understandable what it is doing. Got it? And functions are used to same are used"
+    },
+    {
+      "start": 3768.92,
+      "duration": 8.56,
+      "text": "to use the same code multiple time. So, if you are performing same like if you"
+    },
+    {
+      "start": 3774.32,
+      "duration": 7.04,
+      "text": "are using the same set of code again and again, it's not good to write the same"
+    },
+    {
+      "start": 3779.72,
+      "duration": 6.04,
+      "text": "code again and again. So, you can put them into functions and use the"
+    },
+    {
+      "start": 3783.08,
+      "duration": 5.76,
+      "text": "function, okay? So, I'll be showing you all these things."
+    },
+    {
+      "start": 3787.2,
+      "duration": 6.0,
+      "text": "So, there are basically So, there are a lot of kind of"
+    },
+    {
+      "start": 3789.96,
+      "duration": 6.6,
+      "text": "functions, but usually we do use like four kind of functions. One is the void"
+    },
+    {
+      "start": 3794.88,
+      "duration": 6.36,
+      "text": "function, the other one is the return function, the other one is where we"
+    },
+    {
+      "start": 3798.44,
+      "duration": 9.16,
+      "text": "carry a lot of parameters. The other one is where we do not carry any parameter."
+    },
+    {
+      "start": 3804.64,
+      "duration": 7.04,
+      "text": "Okay? So, non-parameterized functions. So, let's uh talk about the first one,"
+    },
+    {
+      "start": 3810.32,
+      "duration": 6.04,
+      "text": "void function. The void function is something which"
+    },
+    {
+      "start": 3814.0,
+      "duration": 7.6,
+      "text": "does not returns anything. Very important. It doesn't returns anything."
+    },
+    {
+      "start": 3819.76,
+      "duration": 6.08,
+      "text": "So, imagine imagine I'm saying print your name."
+    },
+    {
+      "start": 3824.08,
+      "duration": 5.72,
+      "text": "You know that is easy. You'll come across and say, \"Hey, see out.\""
+    },
+    {
+      "start": 3828.24,
+      "duration": 5.32,
+      "text": "Hey, stream out. Printed."
+    },
+    {
+      "start": 3831.24,
+      "duration": 5.76,
+      "text": "So, you know one thing. If I'm saying, \"Hey, stream out.\""
+    },
+    {
+      "start": 3835.32,
+      "duration": 5.04,
+      "text": "That is something which I know. But if someone is coming from outside and is"
+    },
+    {
+      "start": 3838.68,
+      "duration": 5.36,
+      "text": "reading this, like, \"What does see out mean?\" I don't know."
+    },
+    {
+      "start": 3842.04,
+      "duration": 7.16,
+      "text": "I don't know what see out means. This is where readability comes in. If I do not"
+    },
+    {
+      "start": 3847.0,
+      "duration": 6.64,
+      "text": "know C++, I will not be knowing what see out means. That is where we say, \"Okay."
+    },
+    {
+      "start": 3851.88,
+      "duration": 5.52,
+      "text": "Let me write a function.\" So, what function I'll write is I'll say, \"Okay,"
+    },
+    {
+      "start": 3856.0,
+      "duration": 6.44,
+      "text": "void.\" That is the keyword. It means it will do"
+    },
+    {
+      "start": 3860.12,
+      "duration": 4.84,
+      "text": "something, but it will not give me something. It will not give me"
+    },
+    {
+      "start": 3863.56,
+      "duration": 4.24,
+      "text": "something. And then I'll write the function name. I have to print the"
+    },
+    {
+      "start": 3866.8,
+      "duration": 6.2,
+      "text": "names. So, I'll just write print name."
+    },
+    {
+      "start": 3869.44,
+      "duration": 7.84,
+      "text": "And in that, I'll put this. So, it did not return me anything. It's"
+    },
+    {
+      "start": 3875.32,
+      "duration": 7.24,
+      "text": "a void. It will never return you anything. And this is the function name,"
+    },
+    {
+      "start": 3880.24,
+      "duration": 6.76,
+      "text": "and this is a non-parameter. It will not carry any parameter. Whenever you"
+    },
+    {
+      "start": 3884.72,
+      "duration": 6.08,
+      "text": "enclose it within parentheses and there is nothing inside it, it doesn't carries"
+    },
+    {
+      "start": 3889.52,
+      "duration": 6.16,
+      "text": "a parameter. So, it does this. Now, over here, if you"
+    },
+    {
+      "start": 3893.48,
+      "duration": 7.12,
+      "text": "just run this, this will not be executing this function because this is"
+    },
+    {
+      "start": 3898.0,
+      "duration": 7.12,
+      "text": "outside the main. You know the skeleton of the code is executing anything that"
+    },
+    {
+      "start": 3902.76,
+      "duration": 7.32,
+      "text": "is inside the int main, and the function is outside. So, what do you do is you"
+    },
+    {
+      "start": 3907.6,
+      "duration": 5.28,
+      "text": "say, \"Print the name.\" And you execute this. Now, what will happen is int main"
+    },
+    {
+      "start": 3911.84,
+      "duration": 5.12,
+      "text": "will print the name will happen, and then it"
+    },
+    {
+      "start": 3914.8,
+      "duration": 5.76,
+      "text": "will go across and execute the line of code."
+    },
+    {
+      "start": 3918.08,
+      "duration": 6.08,
+      "text": "See, hey Striver, executed. Now imagine I say"
+    },
+    {
+      "start": 3921.64,
+      "duration": 4.88,
+      "text": "take an input and print the name. So you'll be like, okay, this is the"
+    },
+    {
+      "start": 3925.6,
+      "duration": 5.16,
+      "text": "line of maybe I'll take int name"
+    },
+    {
+      "start": 3928.64,
+      "duration": 5.84,
+      "text": "and I'll say cin name. And now I want to print this name. I"
+    },
+    {
+      "start": 3932.24,
+      "duration": 6.24,
+      "text": "want to say, hey this name. And this name might be Raj."
+    },
+    {
+      "start": 3936.08,
+      "duration": 7.44,
+      "text": "So if I say just print name, what will happen? See, it'll still print hey"
+    },
+    {
+      "start": 3940.64,
+      "duration": 7.84,
+      "text": "Striver. I want you to print hey Raj. This is where something like a"
+    },
+    {
+      "start": 3945.36,
+      "duration": 6.44,
+      "text": "parameterized void function comes in. I know I have to take this name. Maybe"
+    },
+    {
+      "start": 3950.28,
+      "duration": 5.28,
+      "text": "I'll pass this name. So I'm saying print the name, take this"
+    },
+    {
+      "start": 3954.64,
+      "duration": 5.52,
+      "text": "name. Print name will say, okay, please give"
+    },
+    {
+      "start": 3957.12,
+      "duration": 7.44,
+      "text": "me this. What Oh, by the way, string. What is the data type of this name? It"
+    },
+    {
+      "start": 3962.36,
+      "duration": 6.8,
+      "text": "says string. I'm passing the name, but it gives you red. Why?"
+    },
+    {
+      "start": 3966.32,
+      "duration": 6.64,
+      "text": "Because this guy is not taking any parameters. But I'm giving it name. I'll"
+    },
+    {
+      "start": 3971.64,
+      "duration": 3.72,
+      "text": "say, okay, what are you giving me? You're giving me a string. I'll take the"
+    },
+    {
+      "start": 3974.48,
+      "duration": 5.28,
+      "text": "string. I'll take the string. When I've taken"
+    },
+    {
+      "start": 3976.96,
+      "duration": 6.6,
+      "text": "the string, now I'll say, hey can I say name?"
+    },
+    {
+      "start": 3982.24,
+      "duration": 5.24,
+      "text": "See what will happen. This function took this name and"
+    },
+    {
+      "start": 3985.72,
+      "duration": 6.52,
+      "text": "printed. Now this moment when you say Raj, see what happened."
+    },
+    {
+      "start": 3989.76,
+      "duration": 5.16,
+      "text": "Hey Raj. If you say Striver,"
+    },
+    {
+      "start": 3995.6,
+      "duration": 6.24,
+      "text": "it will say, hey Striver. If you say Aman,"
+    },
+    {
+      "start": 3999.0,
+      "duration": 8.04,
+      "text": "it will say, hey Aman. Simple. This function, what is the"
+    },
+    {
+      "start": 4004.2,
+      "duration": 6.84,
+      "text": "function of this function? Takes a name and prints a name."
+    },
+    {
+      "start": 4008.84,
+      "duration": 7.4,
+      "text": "Very simple. It can take any name. So you can maybe use it again. See, string"
+    },
+    {
+      "start": 4013.96,
+      "duration": 7.16,
+      "text": "name two. And you can maybe take name two. And you can say print name. See,"
+    },
+    {
+      "start": 4018.84,
+      "duration": 7.48,
+      "text": "reusability of codes. I'm using the code again and again. And"
+    },
+    {
+      "start": 4023.72,
+      "duration": 6.2,
+      "text": "I can say, okay, Aman and then Raj. And then maybe over here let's give an end"
+    },
+    {
+      "start": 4027.92,
+      "duration": 6.92,
+      "text": "line so that every time it sees hey, you like see what happens. Hey Aman, hey"
+    },
+    {
+      "start": 4032.28,
+      "duration": 7.0,
+      "text": "Raj. Now, had you written this line, you'd have written it again and again"
+    },
+    {
+      "start": 4036.28,
+      "duration": 7.28,
+      "text": "and again. But this is where reusability of code comes in. Now, this is not under"
+    },
+    {
+      "start": 4041.64,
+      "duration": 6.8,
+      "text": "like you can maybe put it under for loop, that is okay. But if there there"
+    },
+    {
+      "start": 4046.52,
+      "duration": 6.48,
+      "text": "will be cases where you cannot use for loops, but you have to use shuttle lines"
+    },
+    {
+      "start": 4051.0,
+      "duration": 5.72,
+      "text": "of code again again at different different places. That is where"
+    },
+    {
+      "start": 4054.72,
+      "duration": 6.0,
+      "text": "something like a function comes. So, I can call this as a void function and as"
+    },
+    {
+      "start": 4058.96,
+      "duration": 4.28,
+      "text": "well as a parameter phrase function. So, you have understood void, you have"
+    },
+    {
+      "start": 4061.96,
+      "duration": 5.84,
+      "text": "understood parameterized, you have understood non-parameterized. Okay. Now,"
+    },
+    {
+      "start": 4065.88,
+      "duration": 7.12,
+      "text": "the next question that we will do is take two numbers and print its sum. So,"
+    },
+    {
+      "start": 4071.4,
+      "duration": 6.12,
+      "text": "what I'll do is I'll take two numbers. The two numbers are on the input. So,"
+    },
+    {
+      "start": 4075.12,
+      "duration": 7.4,
+      "text": "let's do this. I need num one, num two. Let's take the two numbers,"
+    },
+    {
+      "start": 4080.04,
+      "duration": 7.96,
+      "text": "num one and num two. Now, I'll say see out of num one plus"
+    },
+    {
+      "start": 4086.04,
+      "duration": 6.36,
+      "text": "num two. Or maybe you can do it something like I need num three equal to"
+    },
+    {
+      "start": 4090.12,
+      "duration": 5.8,
+      "text": "num one plus num two. I can say let's print num three."
+    },
+    {
+      "start": 4094.56,
+      "duration": 5.84,
+      "text": "Perfect. What will happen?"
+    },
+    {
+      "start": 4097.0,
+      "duration": 7.6,
+      "text": "5 + 6 11 will be printed. Imagine this addition operation you have to do it"
+    },
+    {
+      "start": 4102.319,
+      "duration": 6.801,
+      "text": "multiple times. Imagine you're writing a program for calculator. A lot of times"
+    },
+    {
+      "start": 4107.2,
+      "duration": 6.4,
+      "text": "addition operator will be done. Can you always just keep on writing plus plus"
+    },
+    {
+      "start": 4111.04,
+      "duration": 7.16,
+      "text": "plus plus? No. That's when you have to modularize the code and make it"
+    },
+    {
+      "start": 4115.48,
+      "duration": 5.279,
+      "text": "readable. So, one thing you can do is like"
+    },
+    {
+      "start": 4120.839,
+      "duration": 8.041,
+      "text": "you can say, okay. What is this doing? I'm giving two numbers and I'm saying"
+    },
+    {
+      "start": 4126.88,
+      "duration": 4.84,
+      "text": "sum. We will always have two numbers to take."
+    },
+    {
+      "start": 4129.759,
+      "duration": 7.281,
+      "text": "So, if you're trying to write a return function, it will always be like integer"
+    },
+    {
+      "start": 4134.759,
+      "duration": 4.961,
+      "text": "sum. Again, the name of the function can be anything. It always takes two"
+    },
+    {
+      "start": 4138.48,
+      "duration": 4.4,
+      "text": "numbers. So, there can be two parameters. They can be any number of"
+    },
+    {
+      "start": 4141.68,
+      "duration": 4.32,
+      "text": "parameters. Multiple data types."
+    },
+    {
+      "start": 4144.6,
+      "duration": 4.759,
+      "text": "You can have something like char c as well. That is okay."
+    },
+    {
+      "start": 4147.92,
+      "duration": 6.879,
+      "text": "num2 This is num3"
+    },
+    {
+      "start": 4151.44,
+      "duration": 8.839,
+      "text": "equal to num1 plus num2. And you can say return"
+    },
+    {
+      "start": 4156.96,
+      "duration": 8.12,
+      "text": "num3. And over here what you can say is I've taken the inputs."
+    },
+    {
+      "start": 4162.48,
+      "duration": 8.799,
+      "text": "And I can say the result will be I'll say the sum guy to take num1"
+    },
+    {
+      "start": 4168.279,
+      "duration": 7.721,
+      "text": "and to take num2. So the sum guy is called. What happens? Let's understand"
+    },
+    {
+      "start": 4173.64,
+      "duration": 5.04,
+      "text": "the line of executions. So what happens? Let's understand the"
+    },
+    {
+      "start": 4177.44,
+      "duration": 7.2,
+      "text": "execution. So the main says, okay, num1 num2."
+    },
+    {
+      "start": 4181.68,
+      "duration": 7.32,
+      "text": "Take it as input, five and six. Five goes to num1. Six goes to num2."
+    },
+    {
+      "start": 4187.2,
+      "duration": 5.84,
+      "text": "And then I call sum. This is where the program stops. The"
+    },
+    {
+      "start": 4190.839,
+      "duration": 7.121,
+      "text": "program stops at the line 21. Program stops at line 21. And now it goes to"
+    },
+    {
+      "start": 4195.2,
+      "duration": 9.16,
+      "text": "line 13. At 13 it is taking num1 which is five. It is"
+    },
+    {
+      "start": 4200.96,
+      "duration": 8.6,
+      "text": "taking num2 which is six. So five and six are passed over here. And it states"
+    },
+    {
+      "start": 4207.0,
+      "duration": 9.68,
+      "text": "5 + 6. And then num3 takes 5 + 6 which is 11."
+    },
+    {
+      "start": 4213.56,
+      "duration": 7.64,
+      "text": "And it says, return. Return the value. So it returns 11. And this function Now"
+    },
+    {
+      "start": 4219.56,
+      "duration": 6.2,
+      "text": "this function gives you 11. Because this function was"
+    },
+    {
+      "start": 4223.76,
+      "duration": 8.56,
+      "text": "called. This function gave you 11. And that 11 goes and gets stored into res."
+    },
+    {
+      "start": 4230.04,
+      "duration": 7.04,
+      "text": "And then the line 21 which was stopped will be executed. And then this line 22"
+    },
+    {
+      "start": 4235.48,
+      "duration": 4.68,
+      "text": "will be performed. What is the value of res now?"
+    },
+    {
+      "start": 4238.12,
+      "duration": 6.16,
+      "text": "It is 11. So it gets printed. So whenever you're calling a function,"
+    },
+    {
+      "start": 4242.0,
+      "duration": 6.6,
+      "text": "first the function will be executed. Whatever value the function gives, if it"
+    },
+    {
+      "start": 4246.2,
+      "duration": 6.72,
+      "text": "is a return, that will be stored here. Then the remaining lines will be"
+    },
+    {
+      "start": 4250.52,
+      "duration": 6.52,
+      "text": "executed. On a function call, the flow will go to the function. The flow will"
+    },
+    {
+      "start": 4254.36,
+      "duration": 6.56,
+      "text": "go to the function. Got it? This is what you call as a return"
+    },
+    {
+      "start": 4258.68,
+      "duration": 5.64,
+      "text": "function. This will return something. You could have done it as a void"
+    },
+    {
+      "start": 4262.44,
+      "duration": 5.52,
+      "text": "function, void parameter space, and you could have done see out now. That is"
+    },
+    {
+      "start": 4265.76,
+      "duration": 5.48,
+      "text": "also okay. In that case, you don't have to do this, and you don't have to do"
+    },
+    {
+      "start": 4269.72,
+      "duration": 6.04,
+      "text": "this. Different ways of writing code. A lot of"
+    },
+    {
+      "start": 4273.04,
+      "duration": 8.08,
+      "text": "people write code in different ways. You can write it as you wish. My main idea"
+    },
+    {
+      "start": 4278.72,
+      "duration": 6.44,
+      "text": "is to teach you what are functions, what different kind of functions you can"
+    },
+    {
+      "start": 4282.84,
+      "duration": 8.28,
+      "text": "have. Now, remember one thing. If you are writing as this and this"
+    },
+    {
+      "start": 4289.24,
+      "duration": 5.56,
+      "text": "This can be anything. This can be an integer, can be a double, can be a long"
+    },
+    {
+      "start": 4293.04,
+      "duration": 5.72,
+      "text": "long, can be a string, can be an array, can be a vector, can be a list, can be"
+    },
+    {
+      "start": 4296.52,
+      "duration": 7.12,
+      "text": "anything. Can be anything. And you will see eventually in the DSA playlist, we"
+    },
+    {
+      "start": 4302.04,
+      "duration": 6.28,
+      "text": "will be writing functions where we'll be returning vectors, arrays, 2D arrays."
+    },
+    {
+      "start": 4306.72,
+      "duration": 4.96,
+      "text": "There'll be a lot of things returned from here. And we will learn throughout"
+    },
+    {
+      "start": 4310.6,
+      "duration": 5.56,
+      "text": "the course. So, please make sure you watch all the videos of this playlist"
+    },
+    {
+      "start": 4313.64,
+      "duration": 6.44,
+      "text": "because I'm going to go in super depth. Since we're talking about functions,"
+    },
+    {
+      "start": 4318.12,
+      "duration": 5.96,
+      "text": "let's take these couple of numbers again. And there are a lot of internal"
+    },
+    {
+      "start": 4322.12,
+      "duration": 6.12,
+      "text": "functions. Remember, at the start I said there is something as math.h."
+    },
+    {
+      "start": 4326.24,
+      "duration": 6.44,
+      "text": "So, there is an inbuilt function which says, \"Give me minimum.\" And if you"
+    },
+    {
+      "start": 4330.2,
+      "duration": 7.68,
+      "text": "write min and you give them num one, num two, and then you"
+    },
+    {
+      "start": 4334.48,
+      "duration": 7.16,
+      "text": "print minimum, see what will happen. The five is the minimum. Similarly,"
+    },
+    {
+      "start": 4339.28,
+      "duration": 7.4,
+      "text": "there's max as well. And there are a lot of inbuilt functions as well. Now, these"
+    },
+    {
+      "start": 4344.52,
+      "duration": 5.88,
+      "text": "functions are similarly written. So, if you have to write a max function, how"
+    },
+    {
+      "start": 4348.56,
+      "duration": 6.0,
+      "text": "will you write? It'll be very simple. It'll be like num one,"
+    },
+    {
+      "start": 4352.4,
+      "duration": 9.24,
+      "text": "num two. And I know if I'm looking for max, if num one conditional statement"
+    },
+    {
+      "start": 4358.52,
+      "duration": 11.44,
+      "text": "greater than num two, I can say that my max is num one. So, right? Or else I"
+    },
+    {
+      "start": 4366.44,
+      "duration": 6.88,
+      "text": "can say is my max is num two. Now, there is something"
+    },
+    {
+      "start": 4371.32,
+      "duration": 6.64,
+      "text": "you cannot name the function with the same name. So, make it max max, okay?"
+    },
+    {
+      "start": 4376.68,
+      "duration": 5.72,
+      "text": "So, because inbuilt max function exists, so you have"
+    },
+    {
+      "start": 4379.96,
+      "duration": 5.32,
+      "text": "to give the function such a name that the inbuilt"
+    },
+    {
+      "start": 4383.76,
+      "duration": 7.4,
+      "text": "there is no such inbuilt functions. There cannot be repetition of function"
+    },
+    {
+      "start": 4386.72,
+      "duration": 9.4,
+      "text": "names. Okay. So, max now, will it work? It should because"
+    },
+    {
+      "start": 4392.8,
+      "duration": 5.48,
+      "text": "data type returns returns returns. Let's see."
+    },
+    {
+      "start": 4397.24,
+      "duration": 7.84,
+      "text": "Will it work? It does return. Does return. Okay. Now,"
+    },
+    {
+      "start": 4401.48,
+      "duration": 6.92,
+      "text": "for an example, let's omit this line. For an example, just for an instance,"
+    },
+    {
+      "start": 4406.72,
+      "duration": 4.52,
+      "text": "let's omit this line. This is an integer. This has a return"
+    },
+    {
+      "start": 4410.32,
+      "duration": 3.8,
+      "text": "statement. Will it work?"
+    },
+    {
+      "start": 4412.8,
+      "duration": 5.6,
+      "text": "No, it didn't. It did throw some random value. Why did"
+    },
+    {
+      "start": 4417.28,
+      "duration": 4.96,
+      "text": "this happen? Can you please tell me why did this"
+    },
+    {
+      "start": 4419.88,
+      "duration": 7.8,
+      "text": "happen? The reason this happened was let's understand one thing over here."
+    },
+    {
+      "start": 4425.16,
+      "duration": 6.16,
+      "text": "What did I say? I said number one greater than equal to number two. So,"
+    },
+    {
+      "start": 4430.24,
+      "duration": 5.48,
+      "text": "five was greater than equal to six?"
+    },
+    {
+      "start": 4433.2,
+      "duration": 7.56,
+      "text": "No. So, there was no if. Since this if did not execute itself, by"
+    },
+    {
+      "start": 4438.4,
+      "duration": 6.16,
+      "text": "the way, since there is one line, you can always write it without braces."
+    },
+    {
+      "start": 4443.0,
+      "duration": 5.4,
+      "text": "Since this if was not executed because I was stating"
+    },
+    {
+      "start": 4446.68,
+      "duration": 6.36,
+      "text": "is five greater than equal to six, and that was false. So, the if"
+    },
+    {
+      "start": 4450.48,
+      "duration": 6.84,
+      "text": "never got executed. And since the if did not get executed, the return line was"
+    },
+    {
+      "start": 4455.32,
+      "duration": 5.44,
+      "text": "not executed. And since the return line was not executed, this function was"
+    },
+    {
+      "start": 4459.48,
+      "duration": 7.08,
+      "text": "looking for a return line. It was looking for a return"
+    },
+    {
+      "start": 4463.92,
+      "duration": 7.24,
+      "text": "line. And it did not find one. Thereby,"
+    },
+    {
+      "start": 4468.12,
+      "duration": 7.36,
+      "text": "it did give you like garbage stuff. So, the program did not compile properly."
+    },
+    {
+      "start": 4473.8,
+      "duration": 6.08,
+      "text": "It's very important that if you are writing an int data type stating that it"
+    },
+    {
+      "start": 4477.92,
+      "duration": 5.64,
+      "text": "will always have a return, you make sure you write a return."
+    },
+    {
+      "start": 4481.32,
+      "duration": 6.88,
+      "text": "You make sure you write a return. That is very very important. Every"
+    },
+    {
+      "start": 4485.96,
+      "duration": 6.32,
+      "text": "function which with a return data type must have a return one."
+    },
+    {
+      "start": 4490.16,
+      "duration": 5.76,
+      "text": "Right? Make sure you do that. So, we did learn about functions, but in the"
+    },
+    {
+      "start": 4493.84,
+      "duration": 8.16,
+      "text": "bracket it is written pass by reference and value. Let's understand what that"
+    },
+    {
+      "start": 4498.24,
+      "duration": 7.16,
+      "text": "means. So, let's just take a number just in order to understand"
+    },
+    {
+      "start": 4503.44,
+      "duration": 5.04,
+      "text": "and do something. And we write a function do something and pass the"
+    },
+    {
+      "start": 4507.0,
+      "duration": 6.72,
+      "text": "number. Okay. And we go over here and write"
+    },
+    {
+      "start": 4511.44,
+      "duration": 5.28,
+      "text": "void. You know this is a function. So, write do something."
+    },
+    {
+      "start": 4515.12,
+      "duration": 7.44,
+      "text": "And to take this number"
+    },
+    {
+      "start": 4519.52,
+      "duration": 3.04,
+      "text": "and maybe print it."
+    },
+    {
+      "start": 4524.2,
+      "duration": 9.4,
+      "text": "And go ahead change this number, let's say add five to it. Again, print it."
+    },
+    {
+      "start": 4531.8,
+      "duration": 8.16,
+      "text": "And maybe again add a five to it and again print it."
+    },
+    {
+      "start": 4537.52,
+      "duration": 7.56,
+      "text": "So, what will be the expected value? I'm sending 10. So, 10 will be printed."
+    },
+    {
+      "start": 4542.56,
+      "duration": 8.8,
+      "text": "Then plus five 15, then 20. So, ideally it should be 10, 15, 20. It is. But"
+    },
+    {
+      "start": 4549.44,
+      "duration": 6.12,
+      "text": "what did I say about the execution? How does the execution works? So, it is like"
+    },
+    {
+      "start": 4553.52,
+      "duration": 6.64,
+      "text": "the first line is executed. Then it calls it. So, it goes here. This is"
+    },
+    {
+      "start": 4557.96,
+      "duration": 6.84,
+      "text": "executed. This is executed. This is then this, then this and then the line 21,"
+    },
+    {
+      "start": 4563.12,
+      "duration": 6.88,
+      "text": "then the 22, then ends at 23."
+    },
+    {
+      "start": 4566.28,
+      "duration": 8.2,
+      "text": "So, ideally if I printed here what should happen?"
+    },
+    {
+      "start": 4572.28,
+      "duration": 6.56,
+      "text": "Ideally, according to your number was 10 it went here."
+    },
+    {
+      "start": 4575.96,
+      "duration": 8.24,
+      "text": "10, 15, 20 finished 21."
+    },
+    {
+      "start": 4581.04,
+      "duration": 6.48,
+      "text": "At 21 it should be again 20 because the last value was 20. So, it should be 20,"
+    },
+    {
+      "start": 4586.08,
+      "duration": 6.48,
+      "text": "right? Let's do. We run this."
+    },
+    {
+      "start": 4589.12,
+      "duration": 8.52,
+      "text": "10, 15, 20 20 till here. But the moment it came to the line 21, the value was"
+    },
+    {
+      "start": 4595.6,
+      "duration": 9.2,
+      "text": "10 again. Why? This is what we call as"
+    },
+    {
+      "start": 4599.84,
+      "duration": 7.96,
+      "text": "pass by value. What happens is when you call functions"
+    },
+    {
+      "start": 4606.32,
+      "duration": 7.24,
+      "text": "and you pass number"
+    },
+    {
+      "start": 4609.08,
+      "duration": 8.64,
+      "text": "it goes by value. A copy goes. Then the original number did not go. The"
+    },
+    {
+      "start": 4616.04,
+      "duration": 6.72,
+      "text": "original number did not go. This original number must be somewhere. Must"
+    },
+    {
+      "start": 4621.04,
+      "duration": 8.32,
+      "text": "be somewhere in the memory. That original memory did not go. What it"
+    },
+    {
+      "start": 4626.68,
+      "duration": 7.0,
+      "text": "created was it said, \"You are 10. Let me create a copy. Send that copy. I'm not"
+    },
+    {
+      "start": 4632.2,
+      "duration": 4.32,
+      "text": "sending original. I'm not sending origin.\""
+    },
+    {
+      "start": 4635.0,
+      "duration": 6.16,
+      "text": "This guy took the original. Took the original. He"
+    },
+    {
+      "start": 4638.28,
+      "duration": 6.24,
+      "text": "said, \"You are 10. Copy. Copy.\" Take the copy and give it to the"
+    },
+    {
+      "start": 4642.84,
+      "duration": 6.56,
+      "text": "function. And the function took the copy. Did everything with the copy. Did"
+    },
+    {
+      "start": 4647.12,
+      "duration": 7.32,
+      "text": "everything with the copy. They changed. They modified the copy. So, since they"
+    },
+    {
+      "start": 4651.84,
+      "duration": 9.8,
+      "text": "modified the copy, the original value still stayed the same. This is what we"
+    },
+    {
+      "start": 4656.92,
+      "duration": 8.0,
+      "text": "call as pass by value. Okay? This does work with everything. Like, let's assign"
+    },
+    {
+      "start": 4663.32,
+      "duration": 7.2,
+      "text": "string. String S equal to Raj. And imagine you"
+    },
+    {
+      "start": 4668.16,
+      "duration": 10.04,
+      "text": "pass the string S. And let's comment this. And let's say string S again."
+    },
+    {
+      "start": 4674.96,
+      "duration": 8.84,
+      "text": "And over here, assume you say S zero equal to instead of Raj I say Taj. T."
+    },
+    {
+      "start": 4681.24,
+      "duration": 7.84,
+      "text": "And I print the string S. And over here also I print the string S. So, ideally"
+    },
+    {
+      "start": 4685.72,
+      "duration": 9.8,
+      "text": "over here, if I'm changing S zero to T, Raj will become Taj."
+    },
+    {
+      "start": 4692.16,
+      "duration": 6.52,
+      "text": "Right? And then when it comes back, S is again printed. So,"
+    },
+    {
+      "start": 4697.2,
+      "duration": 8.16,
+      "text": "what should happen? Yes. First, it got changed. But since I"
+    },
+    {
+      "start": 4703.16,
+      "duration": 7.24,
+      "text": "did not pass the original, I passed the copy. Since I passed the copy, what"
+    },
+    {
+      "start": 4708.88,
+      "duration": 4.8,
+      "text": "happened was only the copy got changed and the"
+    },
+    {
+      "start": 4711.52,
+      "duration": 8.28,
+      "text": "original still stayed the same. This is what we call as pass by value. Now,"
+    },
+    {
+      "start": 4716.88,
+      "duration": 7.12,
+      "text": "there's something as pass by reference. What is this pass by reference?"
+    },
+    {
+      "start": 4722.04,
+      "duration": 7.4,
+      "text": "I don't want to pass a copy. I want my function to make changes on"
+    },
+    {
+      "start": 4726.6,
+      "duration": 7.96,
+      "text": "the original one. That's when you just attach"
+    },
+    {
+      "start": 4730.6,
+      "duration": 7.48,
+      "text": "and do it. If you attach an and do it, it takes the address. It takes the"
+    },
+    {
+      "start": 4736.76,
+      "duration": 5.72,
+      "text": "address. So, what are we sending over here?"
+    },
+    {
+      "start": 4739.92,
+      "duration": 7.08,
+      "text": "It takes the original and sends it. So, this string, whenever you say S,"
+    },
+    {
+      "start": 4745.32,
+      "duration": 4.8,
+      "text": "it actually is dealing with the original."
+    },
+    {
+      "start": 4748.4,
+      "duration": 5.88,
+      "text": "Let's now compile and see. So, if you compile and see, you see"
+    },
+    {
+      "start": 4752.2,
+      "duration": 8.28,
+      "text": "it changed here, and the same prevailed over here. This is what you call as pass"
+    },
+    {
+      "start": 4757.8,
+      "duration": 7.36,
+      "text": "by reference. Understood? If you're passing like this"
+    },
+    {
+      "start": 4763.12,
+      "duration": 6.56,
+      "text": "and sign will say that, \"Okay, get it from the address. Get it from the"
+    },
+    {
+      "start": 4767.0,
+      "duration": 6.56,
+      "text": "address. Get the original value.\" Okay? Now, this pass by reference can be"
+    },
+    {
+      "start": 4771.08,
+      "duration": 7.48,
+      "text": "written in a lot of other ways, but I personally feel the other ways are very,"
+    },
+    {
+      "start": 4775.52,
+      "duration": 7.52,
+      "text": "very confusing. The easiest way is just attach"
+    },
+    {
+      "start": 4780.28,
+      "duration": 8.16,
+      "text": "a and sign, and that will make sure that it is passed by reference. The original"
+    },
+    {
+      "start": 4785.28,
+      "duration": 8.24,
+      "text": "value is passed. So, if you want to pass the integer, similarly, you can do"
+    },
+    {
+      "start": 4790.24,
+      "duration": 8.52,
+      "text": "integer num equal to 10, and you can pass the num here, and let's bring the"
+    },
+    {
+      "start": 4795.72,
+      "duration": 8.04,
+      "text": "num here, and again take INT. Again, this pass the num here, and you can go"
+    },
+    {
+      "start": 4800.92,
+      "duration": 7.72,
+      "text": "ahead and say, \"Let's do the same thing. See out of"
+    },
+    {
+      "start": 4806.0,
+      "duration": 6.28,
+      "text": "num and L.\" And over here, you can say num plus"
+    },
+    {
+      "start": 4810.0,
+      "duration": 8.2,
+      "text": "equal to five. Again, you can say see out of num and L. Again, you can say"
+    },
+    {
+      "start": 4815.84,
+      "duration": 8.52,
+      "text": "num plus equal to five, and again, you can say see out num and L. So, let's do."
+    },
+    {
+      "start": 4822.24,
+      "duration": 5.0,
+      "text": "So, if I run this, what should happen? See?"
+    },
+    {
+      "start": 4825.84,
+      "duration": 6.68,
+      "text": "Value got updated in the function three times, and then still the same value"
+    },
+    {
+      "start": 4829.0,
+      "duration": 6.08,
+      "text": "prevailed. Very simple. Now, uh"
+    },
+    {
+      "start": 4833.2,
+      "duration": 6.12,
+      "text": "thing that you have to keep in the mind. Imagine you're declaring the array. So,"
+    },
+    {
+      "start": 4837.44,
+      "duration": 6.28,
+      "text": "do you remember declaring the array? Till now you were declaring the array"
+    },
+    {
+      "start": 4840.8,
+      "duration": 11.0,
+      "text": "like five and imagine there are like five values, 10, 7, 12, 30."
+    },
+    {
+      "start": 4848.32,
+      "duration": 12.08,
+      "text": "Till now, all these values you were kind of taking like C and array of zero, C"
+    },
+    {
+      "start": 4856.12,
+      "duration": 10.4,
+      "text": "and array of one, C and array of two, C and array of three, C and array of four."
+    },
+    {
+      "start": 4864.64,
+      "duration": 9.2,
+      "text": "This is how you took and eventually you were printing it array of zero, array of"
+    },
+    {
+      "start": 4870.32,
+      "duration": 7.4,
+      "text": "one, and going on array of two"
+    },
+    {
+      "start": 4875.52,
+      "duration": 6.32,
+      "text": "and so on. You just printed it like this, right? So, if you run this, you"
+    },
+    {
+      "start": 4880.2,
+      "duration": 6.56,
+      "text": "saw all the values were getting printed like in front of end L"
+    },
+    {
+      "start": 4884.0,
+      "duration": 6.56,
+      "text": "in order to get a clarity. T. Oh, here also you can put a end L. Okay."
+    },
+    {
+      "start": 4889.0,
+      "duration": 4.64,
+      "text": "So, if you just put an end L and run, so yeah, the first three values are"
+    },
+    {
+      "start": 4891.76,
+      "duration": 7.84,
+      "text": "printed. But, is this a good way? Because there might be 500 numbers."
+    },
+    {
+      "start": 4896.92,
+      "duration": 8.4,
+      "text": "What did you learn? Looping array. Let's combine them. Yes. I mean, what are you"
+    },
+    {
+      "start": 4902.12,
+      "duration": 7.24,
+      "text": "thinking? Zero, one, two, three, four. Can I write something like this?"
+    },
+    {
+      "start": 4908.28,
+      "duration": 6.52,
+      "text": "Zero. I I know I have to go till four."
+    },
+    {
+      "start": 4911.44,
+      "duration": 6.4,
+      "text": "Okay. I know I have to do this. And if I know this,"
+    },
+    {
+      "start": 4916.12,
+      "duration": 6.0,
+      "text": "can I say C and array of I?"
+    },
+    {
+      "start": 4919.6,
+      "duration": 2.52,
+      "text": "Can I do this?"
+    },
+    {
+      "start": 4923.0,
+      "duration": 4.96,
+      "text": "Can I do this C and array of I? What will happen? What's the first value"
+    },
+    {
+      "start": 4926.44,
+      "duration": 4.8,
+      "text": "of I? Zero. So, zero. Array of zero will get in. So,"
+    },
+    {
+      "start": 4930.12,
+      "duration": 5.96,
+      "text": "five will get in. Then, what's the value of I? One. So, 10"
+    },
+    {
+      "start": 4933.68,
+      "duration": 5.32,
+      "text": "will get in array of one. Right? And then what's the value of I? So, if you"
+    },
+    {
+      "start": 4937.36,
+      "duration": 4.64,
+      "text": "try to print the value of I, if you remember for loops,"
+    },
+    {
+      "start": 4942.56,
+      "duration": 6.92,
+      "text": "Sorry, my bad. See what will happen."
+    },
+    {
+      "start": 4947.32,
+      "duration": 6.4,
+      "text": "The value of I is zero. So, array of zero is taken. Next, the value of I is"
+    },
+    {
+      "start": 4951.84,
+      "duration": 5.8,
+      "text": "one. Array of one is taken. Next, the value of I is two. So, array of two is"
+    },
+    {
+      "start": 4955.52,
+      "duration": 4.84,
+      "text": "taken. And similarly, it takes everything."
+    },
+    {
+      "start": 4959.12,
+      "duration": 4.6,
+      "text": "Perfect. If you want to print it, quite simple."
+    },
+    {
+      "start": 4962.4,
+      "duration": 4.2,
+      "text": "Same way, run a for loop."
+    },
+    {
+      "start": 4965.4,
+      "duration": 4.68,
+      "text": "You want to print everything, array zero, array one."
+    },
+    {
+      "start": 4969.08,
+      "duration": 5.28,
+      "text": "Why do you want to write everything again and again? Just write see out."
+    },
+    {
+      "start": 4972.72,
+      "duration": 4.92,
+      "text": "Give like this. Maybe put a space."
+    },
+    {
+      "start": 4976.36,
+      "duration": 4.6,
+      "text": "And just see. Everything got printed."
+    },
+    {
+      "start": 4979.04,
+      "duration": 6.0,
+      "text": "So, I combined array, loops, and everything. Now,"
+    },
+    {
+      "start": 4982.6,
+      "duration": 7.68,
+      "text": "a question comes up. Pass by reference. I said include and to everything, but"
+    },
+    {
+      "start": 4988.12,
+      "duration": 5.92,
+      "text": "this doesn't works for arrays. Arrays are generically passed by reference. So,"
+    },
+    {
+      "start": 4992.6,
+      "duration": 5.48,
+      "text": "if you write this, this is a how you pass an array. So,"
+    },
+    {
+      "start": 4996.16,
+      "duration": 5.72,
+      "text": "imagine this is the array I took as an input, and I said do something. And I"
+    },
+    {
+      "start": 5000.56,
+      "duration": 5.56,
+      "text": "said, \"Can you please take this array and maybe the size of the array? And the"
+    },
+    {
+      "start": 5004.2,
+      "duration": 4.88,
+      "text": "size of the array is five."
+    },
+    {
+      "start": 5007.2,
+      "duration": 4.68,
+      "text": "So, you can go ahead and maybe declare it in a better way."
+    },
+    {
+      "start": 5010.48,
+      "duration": 5.8,
+      "text": "This. Yeah, that's a better way. And maybe you"
+    },
+    {
+      "start": 5013.6,
+      "duration": 7.08,
+      "text": "can loop till n minus one, or you can loop till n. That is your choice."
+    },
+    {
+      "start": 5018.76,
+      "duration": 6.76,
+      "text": "You can do whatever you wish to. You can loop till n minus one because last index"
+    },
+    {
+      "start": 5023.6,
+      "duration": 6.6,
+      "text": "is n minus one, or you can write lesser than. Both the conditions are meaning"
+    },
+    {
+      "start": 5028.12,
+      "duration": 5.76,
+      "text": "the exact same thing. So, over here, I'll take everything."
+    },
+    {
+      "start": 5031.68,
+      "duration": 8.64,
+      "text": "Now, what I'll do is I will go across to every value of Maybe to just understand"
+    },
+    {
+      "start": 5037.32,
+      "duration": 8.56,
+      "text": "array of zero, I will go ahead and add plus equal to maybe 100 to it. And over"
+    },
+    {
+      "start": 5043.56,
+      "duration": 6.56,
+      "text": "here, I'll print array of uh"
+    },
+    {
+      "start": 5047.08,
+      "duration": 9.48,
+      "text": "value inside function, okay? And I'll say array of zero, please get"
+    },
+    {
+      "start": 5053.16,
+      "duration": 6.64,
+      "text": "printed. Okay? And I'll say value inside int main"
+    },
+    {
+      "start": 5057.92,
+      "duration": 5.04,
+      "text": "after the function. Okay?"
+    },
+    {
+      "start": 5060.76,
+      "duration": 6.08,
+      "text": "Value inside int main. Let's see"
+    },
+    {
+      "start": 5064.12,
+      "duration": 7.16,
+      "text": "if that got added. Do you see this? It stays 105. I did not pass it with"
+    },
+    {
+      "start": 5068.8,
+      "duration": 6.16,
+      "text": "reference, but array always goes with reference. So, please"
+    },
+    {
+      "start": 5073.24,
+      "duration": 7.24,
+      "text": "keep this in mind. If you're passing an array, it will always always go with"
+    },
+    {
+      "start": 5078.48,
+      "duration": 6.12,
+      "text": "reference. But apart from that, vector, maps, list, everything you have to pass"
+    },
+    {
+      "start": 5082.76,
+      "duration": 7.0,
+      "text": "that and sign to make sure that it is passed by reference. Got this?"
+    },
+    {
+      "start": 5088.0,
+      "duration": 6.2,
+      "text": "So, whatever you do over here with the arrays, that will be definitely modified"
+    },
+    {
+      "start": 5092.88,
+      "duration": 5.72,
+      "text": "throughout. So, with this we learn functions passed"
+    },
+    {
+      "start": 5096.6,
+      "duration": 4.72,
+      "text": "by reference and value. Time complexity is the next one which"
+    },
+    {
+      "start": 5100.08,
+      "duration": 5.96,
+      "text": "I'll be covering in the next video because time complexity in itself is a"
+    },
+    {
+      "start": 5103.88,
+      "duration": 6.72,
+      "text": "very very vast topic and I want you to understand this in proper depth with a"
+    },
+    {
+      "start": 5108.32,
+      "duration": 5.32,
+      "text": "lot of examples. Why? Because this is going to be the most important topics."
+    },
+    {
+      "start": 5112.64,
+      "duration": 4.64,
+      "text": "If you go for interviews, they'll be like, \"Do it in the least time"
+    },
+    {
+      "start": 5115.28,
+      "duration": 5.72,
+      "text": "complexity.\" So, we'll be doing that in the next one. And if you want to know"
+    },
+    {
+      "start": 5119.16,
+      "duration": 6.92,
+      "text": "more about C++ you can definitely watch out the C++ STL video. So, if you have"
+    },
+    {
+      "start": 5124.12,
+      "duration": 5.68,
+      "text": "seen the video till here, I think you should definitely hit that like button."
+    },
+    {
+      "start": 5127.96,
+      "duration": 4.84,
+      "text": "And if you've understood everything, please do consider subscribing to us"
+    },
+    {
+      "start": 5131.56,
+      "duration": 6.12,
+      "text": "because I was going through our channel statistics. Nearly 50% of the users who"
+    },
+    {
+      "start": 5135.36,
+      "duration": 7.2,
+      "text": "watch these kind of videos do not hit that subscribe button. I know these are"
+    },
+    {
+      "start": 5139.76,
+      "duration": 7.48,
+      "text": "educational videos, but if if you just click that subscribe button, that does"
+    },
+    {
+      "start": 5144.28,
+      "duration": 8.2,
+      "text": "motivate me to make such kind of videos. And yes, this is going to be a"
+    },
+    {
+      "start": 5149.28,
+      "duration": 7.08,
+      "text": "full-fledged playlist on data structures and algorithms. So, do stay tuned."
+    },
+    {
+      "start": 5154.6,
+      "duration": 6.28,
+      "text": "Follow me on Twitter, Instagram, LinkedIn so that you stay updated about"
+    },
+    {
+      "start": 5159.04,
+      "duration": 5.52,
+      "text": "this particular playlist and make sure you watch all the videos in this"
+    },
+    {
+      "start": 5162.8,
+      "duration": 6.08,
+      "text": "playlist. In case you haven't checked out other resources, you can definitely"
+    },
+    {
+      "start": 5166.96,
+      "duration": 5.56,
+      "text": "check out by diving deep into the playlist section of this particular"
+    },
+    {
+      "start": 5170.16,
+      "duration": 5.52,
+      "text": "channel. And you can also go through our Take You Forward website. With this I'll"
+    },
+    {
+      "start": 5174.4,
+      "duration": 5.36,
+      "text": "be wrapping up this video. Let's meet in some other video. Till then, bye-bye."
+    },
+    {
+      "start": 5176.92,
+      "duration": 7.68,
+      "text": "Take care. Whenever your heart is broken,"
+    },
+    {
+      "start": 5181.32,
+      "duration": 6.76,
+      "text": "don't ever forget you're golden. I will find the light in you."
+    }
+  ]
+}

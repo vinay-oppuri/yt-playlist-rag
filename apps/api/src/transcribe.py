@@ -32,9 +32,22 @@ def clean_text(text: str) -> str:
     return text.strip()
 
 
-def is_playlist_url(url: str) -> bool:
-    """Check if the given URL is a YouTube playlist URL."""
-    return "list=" in url and ("playlist?" in url or "watch?" in url)
+def is_playlist_url(url: str, force_playlist: bool = False) -> bool:
+    """
+    Check if the given URL is a YouTube playlist URL.
+    - If force_playlist is True and a playlist ID exists: True
+    - Pure playlist URL: 'youtube.com/playlist?list=...' -> True
+    - Playlist URL with list= and NO video ID (no v=) -> True
+    - Video URL with playlist context (watch?v=...&list=...): False by default,
+      because the user is usually targeting the specific video they are watching.
+    """
+    if force_playlist and extract_playlist_id(url):
+        return True
+    if "playlist?list=" in url:
+        return True
+    if "list=" in url and "v=" not in url:
+        return True
+    return False
 
 
 def extract_playlist_id(url: str) -> Optional[str]:
@@ -53,11 +66,19 @@ def extract_video_url(url: str) -> str:
     return match.group(1)
 
 
-def get_playlist_videos(playlist_url: str) -> List[Dict[str, str]]:
+def get_playlist_details(playlist_url: str) -> Dict[str, Any]:
     """
-    Extract video IDs and titles from a YouTube playlist without downloading content.
-    Returns a list of dicts: [{'video_id': ..., 'title': ..., 'url': ...}]
+    Extract playlist metadata and all video items without downloading content.
+    Returns:
+    {
+        "playlist_id": Optional[str],
+        "playlist_title": str,
+        "videos": List[Dict[str, str]] # [{'video_id': ..., 'title': ..., 'url': ...}]
+    }
     """
+    playlist_id = extract_playlist_id(playlist_url)
+    clean_target = f"https://www.youtube.com/playlist?list={playlist_id}" if playlist_id else playlist_url
+
     ydl_opts = {
         "extract_flat": True,
         "skip_download": True,
@@ -65,21 +86,60 @@ def get_playlist_videos(playlist_url: str) -> List[Dict[str, str]]:
         "no_warnings": True,
     }
     videos: List[Dict[str, str]] = []
-    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        info = ydl.extract_info(playlist_url, download=False)
-        entries = info.get("entries", []) if info else []
-        for entry in entries:
-            if not entry:
-                continue
-            video_id = entry.get("id")
-            title = entry.get("title", f"Video {video_id}")
-            if video_id:
+    playlist_title = "YouTube Playlist"
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            info = ydl.extract_info(clean_target, download=False)
+            if info:
+                playlist_title = info.get("title") or playlist_title
+                entries = info.get("entries", [])
+                for entry in entries:
+                    if not entry:
+                        continue
+                    video_id = entry.get("id")
+                    if not video_id:
+                        continue
+                    raw_title = entry.get("title")
+                    title = str(raw_title).strip() if (raw_title is not None and str(raw_title).strip()) else f"Video {video_id}"
+                    videos.append({
+                        "video_id": str(video_id),
+                        "title": title,
+                        "url": f"https://www.youtube.com/watch?v={video_id}",
+                    })
+    except Exception as e:
+        print(f"Warning: Failed to fetch playlist from {clean_target}: {e}")
+
+    # Fallback: if no playlist entries found, check if a single video was specified in playlist_url
+    if not videos:
+        try:
+            single_vid = extract_video_url(playlist_url)
+            if single_vid:
+                meta = get_video_metadata(playlist_url)
+                raw_title = meta.get("title")
+                title = str(raw_title).strip() if (raw_title is not None and str(raw_title).strip()) else f"Video {single_vid}"
                 videos.append({
-                    "video_id": video_id,
+                    "video_id": str(single_vid),
                     "title": title,
-                    "url": f"https://www.youtube.com/watch?v={video_id}",
+                    "url": f"https://www.youtube.com/watch?v={single_vid}",
                 })
-    return videos
+                playlist_title = title
+        except Exception:
+            pass
+
+    return {
+        "playlist_id": playlist_id,
+        "playlist_title": playlist_title,
+        "videos": videos,
+    }
+
+
+def get_playlist_videos(playlist_url: str) -> List[Dict[str, str]]:
+    """
+    Extract video IDs and titles from a YouTube playlist without downloading content.
+    Returns a list of dicts: [{'video_id': ..., 'title': ..., 'url': ...}]
+    """
+    return get_playlist_details(playlist_url)["videos"]
+
 
 
 def get_video_metadata(url: str) -> Dict[str, Any]:
@@ -97,16 +157,18 @@ def get_video_metadata(url: str) -> Dict[str, Any]:
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info = ydl.extract_info(clean_url, download=False)
+            raw_title = info.get("title") if info else None
+            title = str(raw_title).strip() if (raw_title is not None and str(raw_title).strip()) else f"YouTube Video {video_id}"
             return {
-                "video_id": video_id,
-                "title": info.get("title", f"YouTube Video {video_id}"),
-                "channel": info.get("uploader") or info.get("channel", "Unknown Channel"),
-                "duration": info.get("duration", 0),
+                "video_id": str(video_id),
+                "title": title,
+                "channel": (info.get("uploader") or info.get("channel", "Unknown Channel")) if info else "Unknown Channel",
+                "duration": info.get("duration", 0) if info else 0,
                 "url": clean_url,
             }
     except Exception as e:
         return {
-            "video_id": video_id,
+            "video_id": str(video_id),
             "title": f"YouTube Video {video_id}",
             "channel": "Unknown Channel",
             "duration": 0,
@@ -221,21 +283,40 @@ def get_transcript(url: str, force_refresh: bool = False) -> List[Dict[str, Any]
             # Filter out non-subtitle tracks like live_chat
             subs = {k: v for k, v in (info.get("subtitles") or {}).items() if k != "live_chat"}
             auto = {k: v for k, v in (info.get("automatic_captions") or {}).items() if k != "live_chat"}
+            # Manual subtitles take precedence over auto-generated ones (merge: auto first, subs overwrite)
             all_subs = {**auto, **subs}
 
             if not all_subs:
                 print(f"No captions found for video {video_id}.")
                 return []
 
-            # Prioritize English variants, then default to first available
-            preferred_keys = ["en", "en-US", "en-GB", "en-orig", "en-CA"]
+            # Priority order:
+            # 1. *-orig tracks — the raw original-language audio (most accurate for non-English content)
+            #    Sort by explicit preference: hi-orig > en-orig > other-orig
+            # 2. Manual subtitles in common Indian/Hinglish languages
+            # 3. English variants as fallback (may be auto-translated and lower quality for non-EN videos)
+            # 4. Any remaining track
+            _ORIG_PREF = ["hi-orig", "en-orig", "pa-orig", "ur-orig", "bn-orig", "mr-orig"]
+            orig_keys_raw = [k for k in all_subs if k.endswith("-orig")]
+            orig_keys = sorted(
+                orig_keys_raw,
+                key=lambda k: _ORIG_PREF.index(k) if k in _ORIG_PREF else len(_ORIG_PREF),
+            )
+            preferred_keys = (
+                orig_keys  # e.g. hi-orig, en-orig — always prefer original speech
+                + ["hi", "hi-IN", "pa", "ur", "bn", "mr", "te", "ta", "kn", "gu", "ml"]  # Indian languages
+                + ["en", "en-US", "en-GB", "en-CA"]  # English fallbacks (may be translated)
+            )
+            track_key = None
             track_list = None
             for key in preferred_keys:
                 if key in all_subs:
+                    track_key = key
                     track_list = all_subs[key]
                     break
             if not track_list:
-                track_list = next(iter(all_subs.values()))
+                track_key, track_list = next(iter(all_subs.items()))
+            print(f"  -> Selected caption track: '{track_key}' (from {len(all_subs)} available: {list(all_subs.keys())[:8]}{'...' if len(all_subs) > 8 else ''})")  # noqa: E501
 
             # 1. Look for json3 format first (standard for Android client)
             json3_track = next((t for t in track_list if t.get("ext") == "json3"), None)

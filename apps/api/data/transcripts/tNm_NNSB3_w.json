@@ -1,0 +1,4832 @@
+{
+  "video_id": "tNm_NNSB3_w",
+  "title": "Solve any Pattern Question - Trick Explained | 22 Patterns in 1 Shot | Strivers A2Z DSA Course",
+  "total_segments": 965,
+  "segments": [
+    {
+      "start": 3.179,
+      "duration": 5.701,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.48,
+      "duration": 6.6,
+      "text": "so this is another lecture of the scribers A to Z DSA course and the"
+    },
+    {
+      "start": 11.76,
+      "duration": 6.18,
+      "text": "previous lectures we have completed step 1.1 so we'll be starting off with step"
+    },
+    {
+      "start": 15.059,
+      "duration": 6.541,
+      "text": "1.2 and this is nothing but do all these patterns so you can see that this page"
+    },
+    {
+      "start": 19.8,
+      "duration": 5.7,
+      "text": "contains all the patterns that you have to do before starting off data"
+    },
+    {
+      "start": 23.52,
+      "duration": 7.44,
+      "text": "structures and algorithms now when I talk about patterns why are they"
+    },
+    {
+      "start": 27.779,
+      "duration": 8.701,
+      "text": "important in order to start off with DSA whenever I talk about DSA whatever topic"
+    },
+    {
+      "start": 33.66,
+      "duration": 8.82,
+      "text": "be dynamic programming graphs phrase arrays binary search one thing is common"
+    },
+    {
+      "start": 39.719,
+      "duration": 7.68,
+      "text": "in them that is the loops if you do not understand Loops in depth if you cannot"
+    },
+    {
+      "start": 44.7,
+      "duration": 8.42,
+      "text": "improvise with loops then there will be a problem in order to do like there will"
+    },
+    {
+      "start": 50.16,
+      "duration": 7.68,
+      "text": "be a problem when you do DSA that is why patterns are so important because if you"
+    },
+    {
+      "start": 55.8,
+      "duration": 6.66,
+      "text": "want to master something like Loops you want to understand how loops work if you"
+    },
+    {
+      "start": 59.879,
+      "duration": 6.841,
+      "text": "know how to play around it then you can get very very good at data structures"
+    },
+    {
+      "start": 64.32,
+      "duration": 7.619,
+      "text": "and algorithms and for Loops you have to do patterns this is the reason we will"
+    },
+    {
+      "start": 68.939,
+      "duration": 7.981,
+      "text": "be solving a bunch of patterns are they asked in interviews the answer to that"
+    },
+    {
+      "start": 74.22,
+      "duration": 7.56,
+      "text": "is no I have never seen an interview ask a pattern based question until I said"
+    },
+    {
+      "start": 79.92,
+      "duration": 6.72,
+      "text": "it's a TCS interview or something like a service based company so patterns are"
+    },
+    {
+      "start": 84.06,
+      "duration": 6.12,
+      "text": "not asked in interviews of the top tier companies but patents do play a"
+    },
+    {
+      "start": 88.799,
+      "duration": 6.421,
+      "text": "significant role when you are starting off with data structures and algorithms"
+    },
+    {
+      "start": 92.88,
+      "duration": 6.66,
+      "text": "so let's look at the first battle the first pattern is something like this so"
+    },
+    {
+      "start": 97.86,
+      "duration": 5.82,
+      "text": "if I draw that in our iPad it is something like this now before moving on"
+    },
+    {
+      "start": 102.18,
+      "duration": 5.16,
+      "text": "to pattern I'm going to teach you four steps I'm going to teach you four steps"
+    },
+    {
+      "start": 105.6,
+      "duration": 8.46,
+      "text": "that will help you to print any pattern in the world yes and the first point is"
+    },
+    {
+      "start": 111.42,
+      "duration": 7.5,
+      "text": "so generically all the patterns that you will be printing will have nested Loops"
+    },
+    {
+      "start": 116.939,
+      "duration": 6.901,
+      "text": "again very important to remember will have nested loops and most of the"
+    },
+    {
+      "start": 122.1,
+      "duration": 6.78,
+      "text": "pattern most of the pattern will have two Loops whereas the outer loop and"
+    },
+    {
+      "start": 126.78,
+      "duration": 7.98,
+      "text": "there is the inner loop okay now the outer loop is specifically for the lines"
+    },
+    {
+      "start": 132.36,
+      "duration": 7.98,
+      "text": "the outer loop is specifically for the lines and the inner loop is specifically"
+    },
+    {
+      "start": 137.52,
+      "duration": 7.56,
+      "text": "for the columns if I can say these are the rows and these are the columns so"
+    },
+    {
+      "start": 142.92,
+      "duration": 7.2,
+      "text": "the four rules are based on it so the first rule states for the outer loop yes"
+    },
+    {
+      "start": 147.84,
+      "duration": 6.66,
+      "text": "for the outer loop count the number of lines"
+    },
+    {
+      "start": 152.34,
+      "duration": 8.28,
+      "text": "found the rows found the number of lines whatever you can write count the number"
+    },
+    {
+      "start": 157.08,
+      "duration": 8.7,
+      "text": "of lines and this will determine what your outer loop is going to be the point"
+    },
+    {
+      "start": 162.78,
+      "duration": 9.0,
+      "text": "number two what did I say pattern means nested Loops nested means outer and"
+    },
+    {
+      "start": 168.84,
+      "duration": 7.8,
+      "text": "inner so for the inner loop for the inner loop"
+    },
+    {
+      "start": 174.42,
+      "duration": 6.959,
+      "text": "what you have to do is you have to focus on the columns"
+    },
+    {
+      "start": 178.319,
+      "duration": 7.681,
+      "text": "focus on the columns and connect them"
+    },
+    {
+      "start": 184.08,
+      "duration": 5.4,
+      "text": "and connect them somehow"
+    },
+    {
+      "start": 187.8,
+      "duration": 6.299,
+      "text": "to the Rose that's the rule number two you have to"
+    },
+    {
+      "start": 191.819,
+      "duration": 6.961,
+      "text": "focus on the columns and connect them somehow to the rows I'll understand"
+    },
+    {
+      "start": 195.54,
+      "duration": 8.52,
+      "text": "others afterwards now whatever you're printing print them inside the inner"
+    },
+    {
+      "start": 201.06,
+      "duration": 5.7,
+      "text": "loop whatever you're printing print the let's say over here it's a"
+    },
+    {
+      "start": 205.62,
+      "duration": 5.28,
+      "text": "star the other places can be one two can be a"
+    },
+    {
+      "start": 208.56,
+      "duration": 8.88,
+      "text": "b c d whatever you're printing print them"
+    },
+    {
+      "start": 212.4,
+      "duration": 9.199,
+      "text": "inside the inner for Loop and I'll show you an example everything"
+    },
+    {
+      "start": 219.06,
+      "duration": 7.5,
+      "text": "will get clarified the fourth one is observe symmetry in case of some"
+    },
+    {
+      "start": 224.099,
+      "duration": 9.42,
+      "text": "patterns observe symmetry so this is an optional one this"
+    },
+    {
+      "start": 230.28,
+      "duration": 7.86,
+      "text": "step is an optional step why because this step will be only applicable to"
+    },
+    {
+      "start": 236.22,
+      "duration": 6.72,
+      "text": "certain patterns not to all the patterns so this is an optional step but the"
+    },
+    {
+      "start": 240.84,
+      "duration": 6.959,
+      "text": "first three steps are mandatory the fourth step is an optional one we will"
+    },
+    {
+      "start": 245.459,
+      "duration": 6.181,
+      "text": "solve patterns which will be requiring uh observing symmetry so let's come to"
+    },
+    {
+      "start": 250.2,
+      "duration": 6.06,
+      "text": "the first pattern I'll be explaining this in depth and then the next patterns"
+    },
+    {
+      "start": 253.98,
+      "duration": 7.56,
+      "text": "we will be moving faster if you look at this pattern let's cut the first rule"
+    },
+    {
+      "start": 259.38,
+      "duration": 8.879,
+      "text": "for the outer loop count the number of lines so if you see it is actually doing"
+    },
+    {
+      "start": 265.44,
+      "duration": 7.92,
+      "text": "some tasks for four times right it is exactly doing the task for"
+    },
+    {
+      "start": 270.54,
+      "duration": 7.98,
+      "text": "two times so the outer loop will be running for four times or you can say"
+    },
+    {
+      "start": 275.759,
+      "duration": 7.5,
+      "text": "it'll be like I equal to 0 I lesser than 4 and I plus plus can I say this is what"
+    },
+    {
+      "start": 281.34,
+      "duration": 6.96,
+      "text": "the outer loop will be so this is going to be your outer loop pretty simple and"
+    },
+    {
+      "start": 286.199,
+      "duration": 6.541,
+      "text": "straightforward this is your outer loop so I can say I have somehow done the"
+    },
+    {
+      "start": 291.0,
+      "duration": 6.0,
+      "text": "step one which is printing for the outer loop okay so we"
+    },
+    {
+      "start": 296.16,
+      "duration": 5.4,
+      "text": "have we are moving for the outer Loops now"
+    },
+    {
+      "start": 299.16,
+      "duration": 8.039,
+      "text": "the next step comes for the inner loop focus on the columns for the inner loop"
+    },
+    {
+      "start": 304.5,
+      "duration": 8.82,
+      "text": "focus on the columns and connect them somehow to the rows Let's see we have"
+    },
+    {
+      "start": 310.139,
+      "duration": 6.361,
+      "text": "four rows and what is happening at every line"
+    },
+    {
+      "start": 314.34,
+      "duration": 5.34,
+      "text": "at every line what is happening we are printing four stars"
+    },
+    {
+      "start": 317.94,
+      "duration": 5.52,
+      "text": "at every line what is happening we are printing four stars at every line what"
+    },
+    {
+      "start": 321.9,
+      "duration": 6.84,
+      "text": "is happening we are printing four stars so can I see if I try to write it can I"
+    },
+    {
+      "start": 326.039,
+      "duration": 6.241,
+      "text": "see for the zeroth row I am printing four stars for the first row I'm"
+    },
+    {
+      "start": 330.419,
+      "duration": 5.521,
+      "text": "printing four stars for the second round printing four stars from the third row"
+    },
+    {
+      "start": 333.96,
+      "duration": 7.62,
+      "text": "I'm printing fourth star like if I take zero based indexing"
+    },
+    {
+      "start": 337.44,
+      "duration": 10.08,
+      "text": "can I say I'm printing four four four can I connect it somehow"
+    },
+    {
+      "start": 343.919,
+      "duration": 10.141,
+      "text": "to the rows yes the total number of rows were four and at every line we are"
+    },
+    {
+      "start": 350.52,
+      "duration": 7.44,
+      "text": "printing those many stars so can I say the inner loop will be very"
+    },
+    {
+      "start": 356.039,
+      "duration": 6.66,
+      "text": "straightforward and it will be running for J"
+    },
+    {
+      "start": 360.12,
+      "duration": 10.019,
+      "text": "do not take a dive okay because I is the outer loop J equal to zero J lesser than"
+    },
+    {
+      "start": 365.88,
+      "duration": 13.14,
+      "text": "4 J plus plus can I see this this will be your inner loop so can I say whenever"
+    },
+    {
+      "start": 372.9,
+      "duration": 15.9,
+      "text": "I is 0 J will be 0 1 2 3. whenever I is 1 J will be 0 1 2 3 can I say whenever I"
+    },
+    {
+      "start": 384.18,
+      "duration": 11.1,
+      "text": "is 2 J will be 0 1 2 3 whenever I is 3 there will be 0 1 2 3 it will be so step"
+    },
+    {
+      "start": 392.759,
+      "duration": 8.401,
+      "text": "number two is also completed because we have connected at every line or whatever"
+    },
+    {
+      "start": 397.979,
+      "duration": 7.321,
+      "text": "at every column whatever is happening to the number of rows somehow I've"
+    },
+    {
+      "start": 403.44,
+      "duration": 5.94,
+      "text": "connected them now since I've connected them what's my next step"
+    },
+    {
+      "start": 406.74,
+      "duration": 6.84,
+      "text": "print whatever you're printing inside the inner for Loop you have determined"
+    },
+    {
+      "start": 411.539,
+      "duration": 8.94,
+      "text": "what has to be done now what are you printing stars go ahead and just print"
+    },
+    {
+      "start": 417.8,
+      "duration": 6.88,
+      "text": "those Stars that's it but there is a certain thing"
+    },
+    {
+      "start": 423.0,
+      "duration": 6.72,
+      "text": "that you have to keep in mind you print them inside the inner for Loop but make"
+    },
+    {
+      "start": 426.96,
+      "duration": 7.32,
+      "text": "sure since everyone is an individual line at every like once you have done"
+    },
+    {
+      "start": 432.3,
+      "duration": 5.04,
+      "text": "everything for the first line you have to actually go to the new line once"
+    },
+    {
+      "start": 436.319,
+      "duration": 6.0,
+      "text": "you've done everything for the next line you have to go to the new line so what"
+    },
+    {
+      "start": 439.74,
+      "duration": 6.48,
+      "text": "you will do is you'll just give away a print new line over here if you're using"
+    },
+    {
+      "start": 444.06,
+      "duration": 7.859,
+      "text": "Java it will be system.out.printellent if you're using uh C plus plus it'll be"
+    },
+    {
+      "start": 449.099,
+      "duration": 8.461,
+      "text": "C out and what this will do is now let's do a typical dry run let's see"
+    },
+    {
+      "start": 454.74,
+      "duration": 10.56,
+      "text": "what happens for the first time I is 0 whenever I is 0 what happens J is 0 so J"
+    },
+    {
+      "start": 461.52,
+      "duration": 11.28,
+      "text": "is 0 goes and prints the star right and then comes back J is 1 prints the star"
+    },
+    {
+      "start": 468.9,
+      "duration": 10.44,
+      "text": "comes back js2 prints the star comes back J is 3 prints the start once J is 3"
+    },
+    {
+      "start": 476.46,
+      "duration": 8.76,
+      "text": "and it comes back J becomes 4 and this condition is false and this for Loop is"
+    },
+    {
+      "start": 482.16,
+      "duration": 7.68,
+      "text": "done now what happens it goes to C out of endel so that means it goes to the"
+    },
+    {
+      "start": 487.319,
+      "duration": 7.561,
+      "text": "new line when it goes to the new line I is this time one and whenever I is 1 it"
+    },
+    {
+      "start": 492.78,
+      "duration": 7.68,
+      "text": "again starts J from it again starts J from"
+    },
+    {
+      "start": 497.28,
+      "duration": 6.9,
+      "text": "0 and again starts printing K becomes one again starts printing J become 2"
+    },
+    {
+      "start": 502.199,
+      "duration": 6.12,
+      "text": "again starts spreading J becomes three again starts Printing and then the end"
+    },
+    {
+      "start": 506.039,
+      "duration": 7.38,
+      "text": "happens and it goes to the next line then I becomes two again the same thing"
+    },
+    {
+      "start": 510.72,
+      "duration": 6.6,
+      "text": "will happen then I becomes three again the same thing will happen and"
+    },
+    {
+      "start": 515.159,
+      "duration": 4.62,
+      "text": "eventually I will become 4 and this particular condition will turn out to be"
+    },
+    {
+      "start": 518.94,
+      "duration": 7.8,
+      "text": "false and I can say my entire pattern is"
+    },
+    {
+      "start": 522.719,
+      "duration": 8.401,
+      "text": "printed on the screen quite easy so this was step number three do we have uh do"
+    },
+    {
+      "start": 529.26,
+      "duration": 5.639,
+      "text": "we have to observe symmetry no in this case no symmetrical observation has to"
+    },
+    {
+      "start": 533.399,
+      "duration": 4.801,
+      "text": "be done I'll show you patterns where you have to do it"
+    },
+    {
+      "start": 536.04,
+      "duration": 7.5,
+      "text": "so we'll be super quickly coding this up just a case for Loops in C plus plus and"
+    },
+    {
+      "start": 541.44,
+      "duration": 6.54,
+      "text": "for loops and Java are same so it doesn't matter which language I'm coding"
+    },
+    {
+      "start": 545.1,
+      "duration": 6.06,
+      "text": "in you can code it in Java as well I'll be leaving the notes Link in the"
+    },
+    {
+      "start": 549.72,
+      "duration": 5.16,
+      "text": "description which will also have the Java code so if you want the Java code"
+    },
+    {
+      "start": 553.019,
+      "duration": 6.181,
+      "text": "or the python code you can just open it up and you can keep it on the site just"
+    },
+    {
+      "start": 557.279,
+      "duration": 6.781,
+      "text": "to check out how everything works okay so we have int Main in C plus plus in"
+    },
+    {
+      "start": 561.959,
+      "duration": 7.261,
+      "text": "Java it will be public static void main so imagine imagine I I just write a"
+    },
+    {
+      "start": 567.6,
+      "duration": 6.78,
+      "text": "function which is going to do that task for me which is void print pattern one"
+    },
+    {
+      "start": 571.62,
+      "duration": 9.24,
+      "text": "I'll probably print pattern one and I see the pattern was something like zero"
+    },
+    {
+      "start": 577.04,
+      "duration": 9.22,
+      "text": "poor I plus plus and then I go like intj equal to uh"
+    },
+    {
+      "start": 582.72,
+      "duration": 11.16,
+      "text": "0 K less than 4 J plus plus and then I go like C out and this goes like star"
+    },
+    {
+      "start": 590.0,
+      "duration": 8.74,
+      "text": "and this is where C out handle happens and in order to execute this pattern I"
+    },
+    {
+      "start": 596.76,
+      "duration": 6.36,
+      "text": "have to call it from here correct and what I'll do is I'll go ahead and run"
+    },
+    {
+      "start": 601.2,
+      "duration": 6.48,
+      "text": "this task let's see on running what happens so when I run this you will see"
+    },
+    {
+      "start": 605.1,
+      "duration": 7.14,
+      "text": "this is getting printed but usually you do not do it like four or five what they"
+    },
+    {
+      "start": 610.26,
+      "duration": 7.74,
+      "text": "do is they give you an input so probably imagine I give you an input 5. so what"
+    },
+    {
+      "start": 614.7,
+      "duration": 7.8,
+      "text": "happens is you take n as the input and this input is passed over here you"
+    },
+    {
+      "start": 620.339,
+      "duration": 7.68,
+      "text": "remember function so you give n over here and if you write n over here"
+    },
+    {
+      "start": 625.5,
+      "duration": 7.019,
+      "text": "now what will happen is based on how many rows you want this pattern will get"
+    },
+    {
+      "start": 630.6,
+      "duration": 7.2,
+      "text": "printed so now again I'll go and run this task so you need five lines it's it"
+    },
+    {
+      "start": 635.339,
+      "duration": 8.641,
+      "text": "gets printed you need seven lines it will get printed so depending on however"
+    },
+    {
+      "start": 641.7,
+      "duration": 7.259,
+      "text": "lines uh you want you can just give it as an input and this function will make"
+    },
+    {
+      "start": 645.72,
+      "duration": 8.04,
+      "text": "sure this particular pattern is printed now we need to learn about the online"
+    },
+    {
+      "start": 651.54,
+      "duration": 6.78,
+      "text": "compiler so when you go for interviews or whenever you're preparing for"
+    },
+    {
+      "start": 655.26,
+      "duration": 9.12,
+      "text": "placements you will not be coding into main this is something you will not be"
+    },
+    {
+      "start": 660.48,
+      "duration": 8.52,
+      "text": "coding up okay in compilers or in coding rounds what you just need to do is you"
+    },
+    {
+      "start": 666.72,
+      "duration": 6.72,
+      "text": "just need to write this function now all of these things will be hidden so let's"
+    },
+    {
+      "start": 671.579,
+      "duration": 5.7,
+      "text": "go to an online compiler so this is code Studio by coding ninjas which I'll be"
+    },
+    {
+      "start": 675.18,
+      "duration": 6.54,
+      "text": "using for this particular video now this is similar to all the other compilers"
+    },
+    {
+      "start": 678.839,
+      "duration": 6.601,
+      "text": "and you have to use online compilers when you're preparing for coding"
+    },
+    {
+      "start": 682.98,
+      "duration": 7.44,
+      "text": "interviews you just can't code in your local compilers so get used to this as"
+    },
+    {
+      "start": 687.899,
+      "duration": 7.321,
+      "text": "of now so what I'll do is I'll just take this particular piece of code and I'll"
+    },
+    {
+      "start": 693.0,
+      "duration": 6.66,
+      "text": "try to copy this over here and see if it is running fine I'll try to run it the"
+    },
+    {
+      "start": 697.56,
+      "duration": 6.18,
+      "text": "moment I run it I see actually wrong and this is where you can actually check out"
+    },
+    {
+      "start": 701.579,
+      "duration": 7.021,
+      "text": "where it is running so they are saying they are given two three five now you"
+    },
+    {
+      "start": 706.26,
+      "duration": 5.759,
+      "text": "are saying but driver we just had one value now what they are doing is they're"
+    },
+    {
+      "start": 710.64,
+      "duration": 5.879,
+      "text": "probably doing it something like this I'll explain two it's saying the program"
+    },
+    {
+      "start": 714.54,
+      "duration": 8.039,
+      "text": "runs for two texts then they're giving something like uh three and five right"
+    },
+    {
+      "start": 719.399,
+      "duration": 7.201,
+      "text": "three and five so what they are saying is basically Hey listen this time we'll"
+    },
+    {
+      "start": 725.22,
+      "duration": 7.08,
+      "text": "take test cases our pattern function should run these"
+    },
+    {
+      "start": 729.48,
+      "duration": 6.72,
+      "text": "many times and what they do is they go ahead and probably divide something like"
+    },
+    {
+      "start": 734.82,
+      "duration": 7.139,
+      "text": "this T and I plus plus and inside this"
+    },
+    {
+      "start": 740.279,
+      "duration": 7.321,
+      "text": "inside this they take this particular n"
+    },
+    {
+      "start": 745.14,
+      "duration": 7.5,
+      "text": "and they call the function so basically two times you will have to print"
+    },
+    {
+      "start": 749.579,
+      "duration": 7.021,
+      "text": "patterns first time for three rows the next time for five rows so if you run it"
+    },
+    {
+      "start": 754.56,
+      "duration": 7.2,
+      "text": "in the local compiler see what happens let's run that uh in the local compiler"
+    },
+    {
+      "start": 759.12,
+      "duration": 7.019,
+      "text": "so the moment sorry my bad so the moment I run that in the local compiler you"
+    },
+    {
+      "start": 763.98,
+      "duration": 7.74,
+      "text": "will see what happens first just got printed next this so this is"
+    },
+    {
+      "start": 769.079,
+      "duration": 8.88,
+      "text": "the meaning of test cases test cases means your program internally is run for"
+    },
+    {
+      "start": 775.1,
+      "duration": 6.88,
+      "text": "multiple cases that they will never run it for one test case in in the real life"
+    },
+    {
+      "start": 780.48,
+      "duration": 6.539,
+      "text": "or in the coding World there will be thousands of test cases any program that"
+    },
+    {
+      "start": 784.56,
+      "duration": 5.7,
+      "text": "you run will be run on any program that you write will be run on thousands of"
+    },
+    {
+      "start": 788.519,
+      "duration": 7.021,
+      "text": "test cases like over here your program is run on two test cases and this is how"
+    },
+    {
+      "start": 793.139,
+      "duration": 6.961,
+      "text": "the backend looks in the back end they will write something into main they'll"
+    },
+    {
+      "start": 797.7,
+      "duration": 6.84,
+      "text": "take the test cases and they'll call your functions for every other test case"
+    },
+    {
+      "start": 802.26,
+      "duration": 6.84,
+      "text": "and your function has to perform the task for the first time three rows or"
+    },
+    {
+      "start": 806.639,
+      "duration": 7.081,
+      "text": "the next time five rows now you might be thinking okay but I was right why was it"
+    },
+    {
+      "start": 811.8,
+      "duration": 5.339,
+      "text": "wrong so if you see they're clearly showing that there has to be a space"
+    },
+    {
+      "start": 815.339,
+      "duration": 5.521,
+      "text": "because if you look at this they want space what you can just give is there's"
+    },
+    {
+      "start": 818.88,
+      "duration": 6.12,
+      "text": "a space and once you're given the space you can go ahead and run it again the"
+    },
+    {
+      "start": 823.38,
+      "duration": 5.699,
+      "text": "moment you give a space and run it again you see that it is running fine you can"
+    },
+    {
+      "start": 827.279,
+      "duration": 6.781,
+      "text": "go ahead and submit this code and you will see that this is giving you a"
+    },
+    {
+      "start": 831.06,
+      "duration": 6.36,
+      "text": "correct answer so from now onwards you should always practice on online coding"
+    },
+    {
+      "start": 836.22,
+      "duration": 6.0,
+      "text": "platforms because when you go for interviews this is where you will have"
+    },
+    {
+      "start": 839.579,
+      "duration": 6.661,
+      "text": "to give your online exams or whatever it is so please start practice so I hope"
+    },
+    {
+      "start": 844.32,
+      "duration": 6.78,
+      "text": "you have understood the test cases stuff and how the backend looks in an online"
+    },
+    {
+      "start": 848.639,
+      "duration": 5.461,
+      "text": "compiler what you have to write you don't have to write the entire code you"
+    },
+    {
+      "start": 852.42,
+      "duration": 5.58,
+      "text": "just have to write the function snippet because the other things they will be"
+    },
+    {
+      "start": 855.779,
+      "duration": 6.841,
+      "text": "taken care of let's look at the second pattern let's try to again implement"
+    },
+    {
+      "start": 860.16,
+      "duration": 7.619,
+      "text": "this same number of steps so the second pattern States okay we have one two"
+    },
+    {
+      "start": 865.44,
+      "duration": 8.82,
+      "text": "three four five five rows the first Loop is going to be"
+    },
+    {
+      "start": 871.26,
+      "duration": 7.199,
+      "text": "uh that straightforward so let's do one thing let's quickly uh copy paste this"
+    },
+    {
+      "start": 877.079,
+      "duration": 5.221,
+      "text": "stuff and"
+    },
+    {
+      "start": 880.019,
+      "duration": 6.841,
+      "text": "yeah let's do it pattern number two I'm going to do is I'll do a print pattern"
+    },
+    {
+      "start": 883.74,
+      "duration": 7.86,
+      "text": "number two I'll probably just yeah so what is the first Loop first Loop is"
+    },
+    {
+      "start": 888.72,
+      "duration": 6.78,
+      "text": "saying again n rows that is very obvious because we are seeing that it is for one"
+    },
+    {
+      "start": 893.76,
+      "duration": 5.819,
+      "text": "two three four five flows that's something which we are definitely seeing"
+    },
+    {
+      "start": 897.18,
+      "duration": 7.26,
+      "text": "let's look at the step one is done without a Looper start let's look at the"
+    },
+    {
+      "start": 901.44,
+      "duration": 8.579,
+      "text": "inner loop and try to connect it somehow so if I look at for the zeroth row I'm"
+    },
+    {
+      "start": 907.38,
+      "duration": 7.74,
+      "text": "just printing one star right and I say for the zero three printing one star"
+    },
+    {
+      "start": 912.42,
+      "duration": 7.74,
+      "text": "for the first row I'm printing two stars for the second row I am printing P stars"
+    },
+    {
+      "start": 918.6,
+      "duration": 7.02,
+      "text": "for the third row I'm printing four stars for the fourth I am printing five"
+    },
+    {
+      "start": 922.019,
+      "duration": 8.041,
+      "text": "star so can I say can I say I have to run it for once for the first line and"
+    },
+    {
+      "start": 928.079,
+      "duration": 5.581,
+      "text": "run it for twice in the second line to run it for Thrice in the second line"
+    },
+    {
+      "start": 932.22,
+      "duration": 8.82,
+      "text": "can I see if it is line zero it runs for"
+    },
+    {
+      "start": 937.68,
+      "duration": 10.86,
+      "text": "or or if it is line one it runs for once once twice price over five times very"
+    },
+    {
+      "start": 945.779,
+      "duration": 9.081,
+      "text": "simple isn't it so can I say if you're at the inner loop as idj equal to 0 and"
+    },
+    {
+      "start": 951.54,
+      "duration": 3.32,
+      "text": "J less than equal to y"
+    },
+    {
+      "start": 954.959,
+      "duration": 6.841,
+      "text": "and then inside this if I give something like C out of"
+    },
+    {
+      "start": 958.5,
+      "duration": 6.6,
+      "text": "star space and over here I ended will this run"
+    },
+    {
+      "start": 962.88,
+      "duration": 7.259,
+      "text": "this has to run isn't it this has to run so I've given the test cases everything"
+    },
+    {
+      "start": 967.079,
+      "duration": 5.88,
+      "text": "will it run let's give it a try and see if it is running fine let's run this"
+    },
+    {
+      "start": 972.12,
+      "duration": 7.86,
+      "text": "task so if you see over here this is this did"
+    },
+    {
+      "start": 976.079,
+      "duration": 3.901,
+      "text": "not run because why"
+    },
+    {
+      "start": 981.36,
+      "duration": 5.64,
+      "text": "because we are calling print one so we will call print two my bad"
+    },
+    {
+      "start": 985.139,
+      "duration": 8.221,
+      "text": "it's called print two and let's see if it is if it runs it did it's pretty"
+    },
+    {
+      "start": 990.3,
+      "duration": 8.82,
+      "text": "simple isn't it when I is 0 it runs from zero to zero when I is 1 it runs from"
+    },
+    {
+      "start": 996.3,
+      "duration": 8.88,
+      "text": "zero to one when I is 2 it runs from 0 to 2 so we just provide yes the step"
+    },
+    {
+      "start": 1002.779,
+      "duration": 6.781,
+      "text": "number two we just looked at the step number two and it was pretty simple the"
+    },
+    {
+      "start": 1007.399,
+      "duration": 6.841,
+      "text": "step number two clearly stated connect it somehow to the rows and we were"
+    },
+    {
+      "start": 1011.839,
+      "duration": 5.701,
+      "text": "seeing Zero row one row"
+    },
+    {
+      "start": 1015.8,
+      "duration": 6.3,
+      "text": "it was pretty simple just run it for zero one time two time three time and"
+    },
+    {
+      "start": 1020.18,
+      "duration": 6.54,
+      "text": "that was very evident to be connected to the outer eye Loop and the third step"
+    },
+    {
+      "start": 1024.559,
+      "duration": 6.0,
+      "text": "was print them inside the for Loop so the three steps were done and I was"
+    },
+    {
+      "start": 1028.699,
+      "duration": 5.521,
+      "text": "easily able to print this particular pattern"
+    },
+    {
+      "start": 1032.059,
+      "duration": 6.301,
+      "text": "again let's uh for the online compiler let's take this"
+    },
+    {
+      "start": 1036.439,
+      "duration": 7.62,
+      "text": "for the online compiler let's take this and try to take it over here and try to"
+    },
+    {
+      "start": 1041.959,
+      "duration": 7.801,
+      "text": "run it and see if it is running fine it is and let's Summit this so if I"
+    },
+    {
+      "start": 1047.0,
+      "duration": 7.08,
+      "text": "submit this uh this is running fine yes it is so that was the pattern number two"
+    },
+    {
+      "start": 1052.58,
+      "duration": 7.44,
+      "text": "and let's go to the next pattern that's the pattern number three it's something"
+    },
+    {
+      "start": 1056.36,
+      "duration": 8.76,
+      "text": "like uh one one two one two three again step number one for the outer loop count"
+    },
+    {
+      "start": 1062.78,
+      "duration": 6.899,
+      "text": "the number of lines one two three four five so it has five lines so the outer"
+    },
+    {
+      "start": 1067.7,
+      "duration": 5.16,
+      "text": "loop is going to be very very straightforward so let's again take this"
+    },
+    {
+      "start": 1071.48,
+      "duration": 6.3,
+      "text": "and copy this for the pattern number three so this is going to be pattern"
+    },
+    {
+      "start": 1075.02,
+      "duration": 8.039,
+      "text": "number three and the outer loop is going to be pretty straightforward"
+    },
+    {
+      "start": 1079.88,
+      "duration": 9.539,
+      "text": "0 to n and yeah let's take this off and this is going to be uh 3. so the outer"
+    },
+    {
+      "start": 1086.539,
+      "duration": 5.281,
+      "text": "loop is tracing but now let's try to connect"
+    },
+    {
+      "start": 1090.26,
+      "duration": 7.74,
+      "text": "the the inner loop like the columns to"
+    },
+    {
+      "start": 1095.48,
+      "duration": 6.84,
+      "text": "somehow the rows now I know this is row number zero"
+    },
+    {
+      "start": 1099.679,
+      "duration": 7.021,
+      "text": "for the order of Simplicity let's take this as row number one for the row"
+    },
+    {
+      "start": 1104.12,
+      "duration": 7.679,
+      "text": "number one I'm actually printing from just one for the rule number two I'm"
+    },
+    {
+      "start": 1109.64,
+      "duration": 6.06,
+      "text": "printing one two for the rule number three I'm printing one two three for the"
+    },
+    {
+      "start": 1114.26,
+      "duration": 6.779,
+      "text": "row number four I'm printing one two three four so can I say for every row"
+    },
+    {
+      "start": 1118.7,
+      "duration": 5.58,
+      "text": "number I'm actually printing from one to row number"
+    },
+    {
+      "start": 1122.059,
+      "duration": 7.141,
+      "text": "can I say for every row I'm printing from one to one second row one to two"
+    },
+    {
+      "start": 1126.02,
+      "duration": 7.62,
+      "text": "the fourth row one two four fifth row one to five can I say for every row"
+    },
+    {
+      "start": 1131.66,
+      "duration": 6.36,
+      "text": "because I know the outer loop runs for every row so can I say for every row and"
+    },
+    {
+      "start": 1136.16,
+      "duration": 6.18,
+      "text": "we are taking Simplicity like one so we will do one lesser than can I say for"
+    },
+    {
+      "start": 1140.78,
+      "duration": 8.7,
+      "text": "every row The Columns are going from one"
+    },
+    {
+      "start": 1145.58,
+      "duration": 6.599,
+      "text": "till the row itself and then J plus and what are we printing we are printing"
+    },
+    {
+      "start": 1151.28,
+      "duration": 5.34,
+      "text": "nothing but let's look at this what are we printing"
+    },
+    {
+      "start": 1153.74,
+      "duration": 7.26,
+      "text": "one two three that's nothing but the inner loop increment that's it let's go"
+    },
+    {
+      "start": 1159.62,
+      "duration": 6.48,
+      "text": "ahead and print G so if you print J will it work it"
+    },
+    {
+      "start": 1164.179,
+      "duration": 7.021,
+      "text": "ideally should let's quickly run this and see if it is running fine run task"
+    },
+    {
+      "start": 1168.559,
+      "duration": 7.141,
+      "text": "and compile and run let's see so we are seeing guy does it does run fine so what"
+    },
+    {
+      "start": 1174.5,
+      "duration": 4.559,
+      "text": "I'll do is I'll take it to the online compiler"
+    },
+    {
+      "start": 1177.02,
+      "duration": 5.7,
+      "text": "paste it over here and see if it is giving us the correct"
+    },
+    {
+      "start": 1181.82,
+      "duration": 5.76,
+      "text": "answer it is submit this and it will be giving"
+    },
+    {
+      "start": 1185.66,
+      "duration": 8.1,
+      "text": "you the correct answer so the third pattern is also done now"
+    },
+    {
+      "start": 1190.4,
+      "duration": 7.68,
+      "text": "let's look at the fourth part let's look at the fourth part what"
+    },
+    {
+      "start": 1195.98,
+      "duration": 6.24,
+      "text": "difference do you find it is quite similar to the previous part but the"
+    },
+    {
+      "start": 1200.179,
+      "duration": 6.601,
+      "text": "thing is on every row we are printing the row number we're not incrementing it"
+    },
+    {
+      "start": 1204.86,
+      "duration": 7.08,
+      "text": "like one two three can I see we're just printing the row numbers so if I go back"
+    },
+    {
+      "start": 1209.059,
+      "duration": 8.461,
+      "text": "to our stuff and do the pattern print of code this copy paste the same thing just"
+    },
+    {
+      "start": 1214.94,
+      "duration": 8.28,
+      "text": "uh yeah let's copy is the same thing and closes do this pattern fold and instead"
+    },
+    {
+      "start": 1220.4,
+      "duration": 6.84,
+      "text": "of this can I say on every column or on every row I'm just printing the row"
+    },
+    {
+      "start": 1225.02,
+      "duration": 5.94,
+      "text": "number in itself and I'll try to now run this and see if it is running fine if"
+    },
+    {
+      "start": 1228.919,
+      "duration": 7.981,
+      "text": "you ready to run this you will see that yes yes no it is not"
+    },
+    {
+      "start": 1233.299,
+      "duration": 10.38,
+      "text": "because why did oh sorry printful my bad let's do this run task and see is it"
+    },
+    {
+      "start": 1240.08,
+      "duration": 8.099,
+      "text": "running fine it is very simple you see one"
+    },
+    {
+      "start": 1245.419,
+      "duration": 7.861,
+      "text": "one method and all of them are running absolutely fine"
+    },
+    {
+      "start": 1249.679,
+      "duration": 7.5,
+      "text": "I'll just go over here and paste it and really try to submit it num super"
+    },
+    {
+      "start": 1255.44,
+      "duration": 5.28,
+      "text": "confidence I'll just directly submit it it is running fine the pattern number"
+    },
+    {
+      "start": 1258.799,
+      "duration": 6.781,
+      "text": "four is done now let's talk about the pattern number five so when I talk about"
+    },
+    {
+      "start": 1263.0,
+      "duration": 7.2,
+      "text": "the pattern number five step one very simple for the outer loop count the"
+    },
+    {
+      "start": 1267.919,
+      "duration": 9.181,
+      "text": "number of lines it's one two three four five that's n lines so without thinking"
+    },
+    {
+      "start": 1273.2,
+      "duration": 8.7,
+      "text": "anything go ahead and copy this and do the pattern number five"
+    },
+    {
+      "start": 1280.4,
+      "duration": 5.639,
+      "text": "erasers and let's be like okay this is running"
+    },
+    {
+      "start": 1283.58,
+      "duration": 7.44,
+      "text": "for five tips for sure without a loop is done let's now analyze for the inner"
+    },
+    {
+      "start": 1289.039,
+      "duration": 7.02,
+      "text": "loop for the inner loop can I say on the row number one there are five"
+    },
+    {
+      "start": 1293.539,
+      "duration": 9.901,
+      "text": "it's printing five tips so let's let's analyze one Prince five ten the first"
+    },
+    {
+      "start": 1299.6,
+      "duration": 8.939,
+      "text": "row prints five star the second row kind of prints"
+    },
+    {
+      "start": 1304.58,
+      "duration": 9.24,
+      "text": "four steps the third row kind of prints three stars the fourth row kind of"
+    },
+    {
+      "start": 1311.419,
+      "duration": 9.601,
+      "text": "Prince two stars the fifth true kind of Prince one star so if I have to somehow"
+    },
+    {
+      "start": 1318.44,
+      "duration": 11.16,
+      "text": "somehow connect them to the rules can I see can I see this the total rules"
+    },
+    {
+      "start": 1326.96,
+      "duration": 7.38,
+      "text": "minus the row number"
+    },
+    {
+      "start": 1331.34,
+      "duration": 9.54,
+      "text": "plus one is what you're printing on every row again observation very simple"
+    },
+    {
+      "start": 1336.98,
+      "duration": 8.04,
+      "text": "observation can I say this I can why because if it is one and the total are"
+    },
+    {
+      "start": 1344.179,
+      "duration": 5.341,
+      "text": "five 5 minus 1 plus 1 is 5 is what you're"
+    },
+    {
+      "start": 1348.5,
+      "duration": 6.36,
+      "text": "printing here if it is 2"
+    },
+    {
+      "start": 1351.2,
+      "duration": 8.52,
+      "text": "5 minus 2 plus 1. this is nothing but 4 is what you're printing so this is"
+    },
+    {
+      "start": 1357.86,
+      "duration": 6.059,
+      "text": "what you are printing these are the number of stars you're printing so can I"
+    },
+    {
+      "start": 1361.94,
+      "duration": 8.46,
+      "text": "say the inner loop is going to be very simple J equal to"
+    },
+    {
+      "start": 1366.44,
+      "duration": 11.52,
+      "text": "it could be like 0 and J can go till n minus I plus 1 J plus plus again I'm"
+    },
+    {
+      "start": 1374.78,
+      "duration": 7.259,
+      "text": "starting from 1 so my formula is this if you start from 0 your formula might be"
+    },
+    {
+      "start": 1379.7,
+      "duration": 9.06,
+      "text": "something else what matters is how many time you're running okay C out of star"
+    },
+    {
+      "start": 1386.96,
+      "duration": 6.0,
+      "text": "and then go ahead and see out of handle I will not be submitting this time on"
+    },
+    {
+      "start": 1391.1,
+      "duration": 6.72,
+      "text": "the online compiler all the problem links you will be"
+    },
+    {
+      "start": 1395.12,
+      "duration": 7.08,
+      "text": "finding it in the description or it did not work again print five"
+    },
+    {
+      "start": 1400.159,
+      "duration": 6.181,
+      "text": "let's quickly compile this I'll not be submitting this code on the"
+    },
+    {
+      "start": 1404.299,
+      "duration": 6.961,
+      "text": "online compile anymore all the problem links you can find it in the description"
+    },
+    {
+      "start": 1409.039,
+      "duration": 6.601,
+      "text": "and you can go ahead and submit them by yourself when you're practicing"
+    },
+    {
+      "start": 1412.88,
+      "duration": 7.679,
+      "text": "so the pattern number five is also done you see one rule solves almost all the"
+    },
+    {
+      "start": 1418.4,
+      "duration": 6.779,
+      "text": "problems let's look at this again very similar it's like one two three four"
+    },
+    {
+      "start": 1422.84,
+      "duration": 6.54,
+      "text": "five one two three four so it's like printing from one to that row number"
+    },
+    {
+      "start": 1427.039,
+      "duration": 8.52,
+      "text": "instead of this you have to print the numbers so it's pretty pretty easy I"
+    },
+    {
+      "start": 1433.159,
+      "duration": 8.041,
+      "text": "just copy paste and it goes like pattern six over here I can do a pattern six and"
+    },
+    {
+      "start": 1439.1,
+      "duration": 8.1,
+      "text": "this time you can just go ahead from here this is like this and you can be"
+    },
+    {
+      "start": 1443.96,
+      "duration": 8.76,
+      "text": "like okay J and this should be fine let's quickly run this for pattern six"
+    },
+    {
+      "start": 1450.14,
+      "duration": 7.62,
+      "text": "again pretty simple so we do this"
+    },
+    {
+      "start": 1454.22,
+      "duration": 7.26,
+      "text": "yeah it does run fine right so if you see by the way let's for easy"
+    },
+    {
+      "start": 1459.2,
+      "duration": 7.38,
+      "text": "understanding let's do one test case at only seven yeah that should be gig uh"
+    },
+    {
+      "start": 1464.299,
+      "duration": 7.74,
+      "text": "should give you an easy understanding so if I run this you see everything is"
+    },
+    {
+      "start": 1468.38,
+      "duration": 7.74,
+      "text": "running absolutely like this so this is also done"
+    },
+    {
+      "start": 1473.059,
+      "duration": 8.041,
+      "text": "now this one is where you have to think a bit so probably pause the video and"
+    },
+    {
+      "start": 1479.059,
+      "duration": 6.061,
+      "text": "think on how you can solve this so what is the first rule the first rule is very"
+    },
+    {
+      "start": 1482.72,
+      "duration": 7.439,
+      "text": "simple count the number of rows that's five first Loop is definitely"
+    },
+    {
+      "start": 1487.64,
+      "duration": 7.68,
+      "text": "going to be something from like I equal to let's say 0 until"
+    },
+    {
+      "start": 1493.22,
+      "duration": 4.92,
+      "text": "uh five which is like you can run it till four"
+    },
+    {
+      "start": 1496.34,
+      "duration": 7.86,
+      "text": "so this is something which I know so if I try to write down the row numbers it's"
+    },
+    {
+      "start": 1500.36,
+      "duration": 8.88,
+      "text": "like 0 1 2 3 4. that's very obvious what's the second rule the second rule"
+    },
+    {
+      "start": 1506.78,
+      "duration": 6.96,
+      "text": "states for the inner loop focus on the columns what is happening"
+    },
+    {
+      "start": 1511.28,
+      "duration": 7.44,
+      "text": "and connect them somehow to the rows first thing that I'll see is"
+    },
+    {
+      "start": 1516.08,
+      "duration": 11.339,
+      "text": "how many columns are there so can I say it's like one"
+    },
+    {
+      "start": 1521.12,
+      "duration": 14.22,
+      "text": "two three four five six seven eight nine so can I say in total in total there are"
+    },
+    {
+      "start": 1531.32,
+      "duration": 9.42,
+      "text": "nine columns right and if I carefully observe what are we printing we're going"
+    },
+    {
+      "start": 1537.98,
+      "duration": 5.6,
+      "text": "to printing space Stars space"
+    },
+    {
+      "start": 1542.179,
+      "duration": 5.0,
+      "text": "space Stars space space"
+    },
+    {
+      "start": 1548.779,
+      "duration": 7.561,
+      "text": "and stars space space so we are printing nothing but"
+    },
+    {
+      "start": 1554.779,
+      "duration": 4.26,
+      "text": "space Stars"
+    },
+    {
+      "start": 1557.9,
+      "duration": 7.56,
+      "text": "space so if we logically think inside it if we"
+    },
+    {
+      "start": 1562.94,
+      "duration": 7.5,
+      "text": "can print space and if after that we can print stars and after that if we can"
+    },
+    {
+      "start": 1567.559,
+      "duration": 8.641,
+      "text": "print space I think our job will be done now let's analyze for every row how many"
+    },
+    {
+      "start": 1573.86,
+      "duration": 5.64,
+      "text": "space we have to print how many stars we have to print and how many space you"
+    },
+    {
+      "start": 1577.64,
+      "duration": 6.12,
+      "text": "have to print if you are able to do this I think we will be able to write our"
+    },
+    {
+      "start": 1581.12,
+      "duration": 7.559,
+      "text": "inner Loops very easily isn't it so can I see"
+    },
+    {
+      "start": 1584.6,
+      "duration": 9.3,
+      "text": "but the zero uh zero column what are we printing printing one space two space"
+    },
+    {
+      "start": 1590.84,
+      "duration": 10.62,
+      "text": "three space four space it's like four space one star post piece"
+    },
+    {
+      "start": 1597.38,
+      "duration": 10.14,
+      "text": "right okay can I say over here it's like one two three three and three"
+    },
+    {
+      "start": 1604.76,
+      "duration": 6.96,
+      "text": "three comma three comma three can I say over here it's two comma"
+    },
+    {
+      "start": 1609.86,
+      "duration": 9.299,
+      "text": "five comma two okay can I say over here it's one comma"
+    },
+    {
+      "start": 1614.539,
+      "duration": 10.921,
+      "text": "seven comma one can I say oh yeah it's zero comma nine comma is it nine yeah it"
+    },
+    {
+      "start": 1622.94,
+      "duration": 7.2,
+      "text": "is zero can I say we're printing these many space these"
+    },
+    {
+      "start": 1627.62,
+      "duration": 9.36,
+      "text": "many stars and these many spaces yes we can now we need to find what's"
+    },
+    {
+      "start": 1633.98,
+      "duration": 7.74,
+      "text": "somehow connected somehow to the rules I think we can we know how to connect so"
+    },
+    {
+      "start": 1639.5,
+      "duration": 6.36,
+      "text": "if you look at this this is nothing but going in the reverse direction of the"
+    },
+    {
+      "start": 1643.88,
+      "duration": 6.779,
+      "text": "number of rows the number of rows are from zero to four so it's pretty"
+    },
+    {
+      "start": 1648.38,
+      "duration": 9.12,
+      "text": "can I see the formula for the first space is nothing but n minus I"
+    },
+    {
+      "start": 1655.279,
+      "duration": 9.661,
+      "text": "which is just imagine for the first case I will be zero so if n is 5 those are"
+    },
+    {
+      "start": 1661.88,
+      "duration": 9.24,
+      "text": "the five rules five minus I minus 1 is what this will be very"
+    },
+    {
+      "start": 1669.2,
+      "duration": 4.52,
+      "text": "obvious so I have figured out the space to be this"
+    },
+    {
+      "start": 1674.419,
+      "duration": 8.221,
+      "text": "you can just do some maths and you'll be able to figure it out assuming n is 5"
+    },
+    {
+      "start": 1678.74,
+      "duration": 9.059,
+      "text": "over here so this is very simple 5 minus 0 minus 1 for the first time next time 5"
+    },
+    {
+      "start": 1685.279,
+      "duration": 8.161,
+      "text": "minus 1 minus one next time five minus 2 minus one so so on so"
+    },
+    {
+      "start": 1690.98,
+      "duration": 7.26,
+      "text": "space has been computed but now we have to think about the stocks how do we"
+    },
+    {
+      "start": 1695.6,
+      "duration": 8.88,
+      "text": "compute the stars because the stars are like one three five"
+    },
+    {
+      "start": 1700.34,
+      "duration": 8.76,
+      "text": "it's somehow increasing because 0 is 1 for 1 it is three now four it is nine"
+    },
+    {
+      "start": 1707.24,
+      "duration": 8.7,
+      "text": "it's something like one more than twice can I see it's"
+    },
+    {
+      "start": 1712.159,
+      "duration": 12.721,
+      "text": "something like 2 into I plus 1 is what it is can I say this 2 into I Plus 1. 2"
+    },
+    {
+      "start": 1719.72,
+      "duration": 12.54,
+      "text": "into 0 plus 1 is 1. three two into three is six plus one is seven so can I say"
+    },
+    {
+      "start": 1729.38,
+      "duration": 7.32,
+      "text": "the stars is 2 into I plus I can so I've kind of figured out the relation somehow"
+    },
+    {
+      "start": 1734.36,
+      "duration": 6.24,
+      "text": "connected to the rows just run the inner loops the only difference is this time"
+    },
+    {
+      "start": 1739.22,
+      "duration": 5.28,
+      "text": "the inner loop will first print the space then the stars and then this so"
+    },
+    {
+      "start": 1743.059,
+      "duration": 5.761,
+      "text": "there will be three different inner Loops it refers this in a loop then this"
+    },
+    {
+      "start": 1746.659,
+      "duration": 9.0,
+      "text": "in a loop then this in a loop this one for space this one for star and this one"
+    },
+    {
+      "start": 1752.36,
+      "duration": 9.6,
+      "text": "for space very simple I just broke down the problem into simpler one once I've"
+    },
+    {
+      "start": 1758.899,
+      "duration": 9.181,
+      "text": "done this I think my job will be done so let's quickly write the pattern number"
+    },
+    {
+      "start": 1764.38,
+      "duration": 8.919,
+      "text": "seven right let's write the void print pattern number seven Let's Take N so I"
+    },
+    {
+      "start": 1771.44,
+      "duration": 7.02,
+      "text": "know one thing I will be starting from zero again I'm doing it in terms of zero"
+    },
+    {
+      "start": 1776.179,
+      "duration": 7.321,
+      "text": "base indexing you can go ahead and do with whatever B is indexing you feel"
+    },
+    {
+      "start": 1780.5,
+      "duration": 8.88,
+      "text": "like one basis let's print the space then the star"
+    },
+    {
+      "start": 1785.48,
+      "duration": 11.4,
+      "text": "and then the space okay so this one will be for J equal to you know the formula"
+    },
+    {
+      "start": 1792.559,
+      "duration": 11.22,
+      "text": "is n minus I so J is 0 J lesser than equal to n minus I minus 1 and then J"
+    },
+    {
+      "start": 1800.419,
+      "duration": 8.461,
+      "text": "can go as plus plus very obvious uh K let me just quickly check okay J lesser"
+    },
+    {
+      "start": 1806.179,
+      "duration": 4.98,
+      "text": "than because this should be fine and the similar thing will be at the last as"
+    },
+    {
+      "start": 1810.38,
+      "duration": 10.56,
+      "text": "well and for the stars is very obvious that"
+    },
+    {
+      "start": 1815.059,
+      "duration": 5.881,
+      "text": "you go from sorry j j goes from 0"
+    },
+    {
+      "start": 1821.179,
+      "duration": 9.6,
+      "text": "Jay goes on till 2 into I plus 1 and then G plus plus quite easy this will be"
+    },
+    {
+      "start": 1828.74,
+      "duration": 5.7,
+      "text": "space so you can just go ahead and print it something like this this will also be"
+    },
+    {
+      "start": 1832.94,
+      "duration": 7.2,
+      "text": "space and this will be Stars so go ahead and"
+    },
+    {
+      "start": 1837.74,
+      "duration": 6.96,
+      "text": "print the stars and once everything is printed you right before moving to the"
+    },
+    {
+      "start": 1842.179,
+      "duration": 7.921,
+      "text": "next row you move on to the next line so let's go ahead and print the part number"
+    },
+    {
+      "start": 1847.22,
+      "duration": 6.839,
+      "text": "seven my bad let's print the pattern number seven let's go to the terminal"
+    },
+    {
+      "start": 1851.899,
+      "duration": 7.201,
+      "text": "and run the test and see where it's running fine so if I run this you see"
+    },
+    {
+      "start": 1856.34,
+      "duration": 10.86,
+      "text": "that this particular pattern is indeed getting printed so the main task is to"
+    },
+    {
+      "start": 1862.399,
+      "duration": 9.481,
+      "text": "break down the problem into this into parts and then follow the rules that I"
+    },
+    {
+      "start": 1869.24,
+      "duration": 7.679,
+      "text": "have taught you okay this one pretty similar the inverted one can you"
+    },
+    {
+      "start": 1874.82,
+      "duration": 4.92,
+      "text": "do it in the inverted fashion I think you can"
+    },
+    {
+      "start": 1877.88,
+      "duration": 6.179,
+      "text": "what is the this time you start from"
+    },
+    {
+      "start": 1881.84,
+      "duration": 8.939,
+      "text": "this will be zero space this will be one space this will be two"
+    },
+    {
+      "start": 1886.94,
+      "duration": 8.88,
+      "text": "space so it goes in the opposite way the stars are in the opposite fashion as"
+    },
+    {
+      "start": 1893.6,
+      "duration": 5.1,
+      "text": "well so think on this pause away uh pause the video and think on this and"
+    },
+    {
+      "start": 1897.26,
+      "duration": 5.82,
+      "text": "let's see if you can do this so coming back to the pattern what's the first law"
+    },
+    {
+      "start": 1900.799,
+      "duration": 7.561,
+      "text": "the first law is very simple zero one two three four so the first Loop is"
+    },
+    {
+      "start": 1906.08,
+      "duration": 6.54,
+      "text": "going to be super easy to predict now we know we are printing space then we are"
+    },
+    {
+      "start": 1910.58,
+      "duration": 7.079,
+      "text": "printing stars and then we are again printing space this is something we know"
+    },
+    {
+      "start": 1915.08,
+      "duration": 7.56,
+      "text": "for sure now the question is how many space initially if we look at this"
+    },
+    {
+      "start": 1919.96,
+      "duration": 7.54,
+      "text": "initially for zero we're printing zero space and you're printing like nine"
+    },
+    {
+      "start": 1924.5,
+      "duration": 9.539,
+      "text": "stars and then zero space one it is something like one space Seven Stars One"
+    },
+    {
+      "start": 1931.279,
+      "duration": 8.341,
+      "text": "space for two it is like two space and then uh five and then two or three it is"
+    },
+    {
+      "start": 1937.46,
+      "duration": 8.16,
+      "text": "like three this is three and this is three for four it is like four this is"
+    },
+    {
+      "start": 1942.44,
+      "duration": 9.0,
+      "text": "one and this is nothing but four so the space is one is pretty simple it's"
+    },
+    {
+      "start": 1949.039,
+      "duration": 7.081,
+      "text": "pretty simple so if I just go back and we know uh the pattern 7 is kind of"
+    },
+    {
+      "start": 1953.72,
+      "duration": 5.64,
+      "text": "similar so we'll just copy paste and we'll just take this off and make this"
+    },
+    {
+      "start": 1958.279,
+      "duration": 6.481,
+      "text": "pattern something I know for sure is"
+    },
+    {
+      "start": 1961.399,
+      "duration": 7.621,
+      "text": "the space one is equivalent to the row if there are is"
+    },
+    {
+      "start": 1967.82,
+      "duration": 4.38,
+      "text": "the zero through there will be zero spaces so this won't run"
+    },
+    {
+      "start": 1970.82,
+      "duration": 5.099,
+      "text": "this is something which you know for sure"
+    },
+    {
+      "start": 1972.98,
+      "duration": 8.179,
+      "text": "the only problem is the Stars the formula is going to be super simple uh"
+    },
+    {
+      "start": 1978.2,
+      "duration": 8.459,
+      "text": "if n is 5 for 0 it'll be like 2N minus 2i plus 1 you can try doing it and if"
+    },
+    {
+      "start": 1984.919,
+      "duration": 7.081,
+      "text": "you apply this formula for the zero through it is going to be like 25 10"
+    },
+    {
+      "start": 1988.399,
+      "duration": 10.38,
+      "text": "minus 2 into 0 0 plus 1 it's like 10 minus 1 9 for this one it'll be like 2"
+    },
+    {
+      "start": 1994.519,
+      "duration": 9.841,
+      "text": "into 5 10 minus 2 into 2 which is 4 plus 1 which is 5 10 minus 5 is 5 so it's"
+    },
+    {
+      "start": 2002.559,
+      "duration": 6.96,
+      "text": "very simple what I did was in the previous problem I knew this was nothing"
+    },
+    {
+      "start": 2006.279,
+      "duration": 8.941,
+      "text": "but 2i Plus 1. and I saw it as reducing so reduce it from twice of n is quite"
+    },
+    {
+      "start": 2012.399,
+      "duration": 10.02,
+      "text": "simple so what I'll do is I'll go over here and I'll say 2 N minus 2 into I"
+    },
+    {
+      "start": 2018.82,
+      "duration": 7.26,
+      "text": "plus 1 again you can do it as as you prefer there is no hard and fast rule"
+    },
+    {
+      "start": 2024.7,
+      "duration": 6.54,
+      "text": "that you have to do it in this way only you can assign variables reduce them and"
+    },
+    {
+      "start": 2028.72,
+      "duration": 8.78,
+      "text": "do uh however you wish like so I'll go and print this print a terminal run task"
+    },
+    {
+      "start": 2034.48,
+      "duration": 3.02,
+      "text": "okay and run"
+    },
+    {
+      "start": 2039.94,
+      "duration": 7.56,
+      "text": "it looks like it is not getting printed in this way"
+    },
+    {
+      "start": 2044.14,
+      "duration": 9.6,
+      "text": "okay so it has to be 2 into n no I think it's shipping run task clean and run"
+    },
+    {
+      "start": 2051.099,
+      "duration": 7.08,
+      "text": "okay it does Sprint so this is how uh easily we can do the pattern number"
+    },
+    {
+      "start": 2056.26,
+      "duration": 6.24,
+      "text": "eight it's time to do pattern number nine where the fourth rule will come in"
+    },
+    {
+      "start": 2060.399,
+      "duration": 7.621,
+      "text": "so pause the video and maybe think how you can do on this pattern number nine"
+    },
+    {
+      "start": 2064.919,
+      "duration": 8.26,
+      "text": "looks a combination of seven under eight isn't it so what you can"
+    },
+    {
+      "start": 2071.379,
+      "duration": 8.22,
+      "text": "always do us you can go ahead and combine both of"
+    },
+    {
+      "start": 2075.639,
+      "duration": 9.0,
+      "text": "them so imagine I say let's first print print num pattern number seven according"
+    },
+    {
+      "start": 2082.419,
+      "duration": 5.94,
+      "text": "to this particular n and then print pattern number eight so if I do this"
+    },
+    {
+      "start": 2086.859,
+      "duration": 5.461,
+      "text": "will it run I hit logically it should and you will"
+    },
+    {
+      "start": 2091.119,
+      "duration": 7.441,
+      "text": "see it does so sometimes you have to be smart it's"
+    },
+    {
+      "start": 2095.379,
+      "duration": 6.96,
+      "text": "not necessary that you always write patterns you can always combine them as"
+    },
+    {
+      "start": 2100.9,
+      "duration": 6.84,
+      "text": "well you can combine two different patterns to generate one as well so keep"
+    },
+    {
+      "start": 2104.92,
+      "duration": 7.38,
+      "text": "that in mind and that's actually a good way to write patterns combining so the"
+    },
+    {
+      "start": 2110.56,
+      "duration": 6.9,
+      "text": "pattern number nine is completed uh time for the pattern number ten again this"
+    },
+    {
+      "start": 2114.28,
+      "duration": 9.18,
+      "text": "looks quite similar to one of the ones that we did isn't it but is it a flip"
+    },
+    {
+      "start": 2120.28,
+      "duration": 6.18,
+      "text": "pad like this one was a complete flip pattern like"
+    },
+    {
+      "start": 2124.42,
+      "duration": 7.86,
+      "text": "the same lines if you see this line and if you see this line they were similar"
+    },
+    {
+      "start": 2128.44,
+      "duration": 8.159,
+      "text": "right over here we have a we have a right angle triangle but the bottom one"
+    },
+    {
+      "start": 2134.26,
+      "duration": 9.24,
+      "text": "is like there are two same lines of equal number of stars here there is no"
+    },
+    {
+      "start": 2138.76,
+      "duration": 7.68,
+      "text": "so you cannot merge uh one like straight like"
+    },
+    {
+      "start": 2144.46,
+      "duration": 5.94,
+      "text": "straight triangle uh right angle triangle and the inverted right angle"
+    },
+    {
+      "start": 2147.7,
+      "duration": 8.1,
+      "text": "triangle you cannot do that over here so you can do it with some fluctuations but"
+    },
+    {
+      "start": 2153.4,
+      "duration": 6.719,
+      "text": "I'll still so let's look at this pattern so n is given as 5."
+    },
+    {
+      "start": 2158.38,
+      "duration": 6.36,
+      "text": "first thing to observe is the rule number four symmetrical now this pattern"
+    },
+    {
+      "start": 2162.88,
+      "duration": 5.82,
+      "text": "is a symmetrical pattern observe symmetry where does it get"
+    },
+    {
+      "start": 2167.02,
+      "duration": 5.579,
+      "text": "s this is the this is the point where it starts getting symmetry"
+    },
+    {
+      "start": 2170.26,
+      "duration": 7.26,
+      "text": "so whatever logic you have to write will be okay till here and then you have"
+    },
+    {
+      "start": 2175.119,
+      "duration": 8.761,
+      "text": "to flip the logic so observe symmetry you have observed symmetry that is done"
+    },
+    {
+      "start": 2179.859,
+      "duration": 10.74,
+      "text": "what is the outer loop let's see one two three four five six seven eight nine"
+    },
+    {
+      "start": 2187.859,
+      "duration": 7.72,
+      "text": "nine rows is what you have to run nine rows is what you have to run so can I"
+    },
+    {
+      "start": 2192.579,
+      "duration": 7.441,
+      "text": "say if you're running nine rows it's very obvious to saying you're running 2"
+    },
+    {
+      "start": 2197.5,
+      "duration": 7.859,
+      "text": "N minus 1 times that is what your outer loop runs so going back to the code the"
+    },
+    {
+      "start": 2202.599,
+      "duration": 8.461,
+      "text": "outer loop is pretty similar pretty straightforward two less than two again"
+    },
+    {
+      "start": 2209.079,
+      "duration": 7.081,
+      "text": "you can go one base indexing as well that is your choice"
+    },
+    {
+      "start": 2212.44,
+      "duration": 7.44,
+      "text": "done one less than 2 N minus 1 so this is what the outer loop will be so let's"
+    },
+    {
+      "start": 2217.839,
+      "duration": 6.661,
+      "text": "quickly write this one two three four five six seven eight nine so we have"
+    },
+    {
+      "start": 2223.359,
+      "duration": 7.98,
+      "text": "written the outer loop now let's talk about the"
+    },
+    {
+      "start": 2227.5,
+      "duration": 8.46,
+      "text": "inner loop now when I say inner loop what does that mean"
+    },
+    {
+      "start": 2233.32,
+      "duration": 7.259,
+      "text": "it means this one for the first time I'm printing one Stars second I'm printing"
+    },
+    {
+      "start": 2238.42,
+      "duration": 6.6,
+      "text": "two stars third I'm trading three stars both I'm printing four stars fifth time"
+    },
+    {
+      "start": 2243.04,
+      "duration": 7.44,
+      "text": "I'm printing five star something I'm sure is till here till the symmetrical"
+    },
+    {
+      "start": 2247.66,
+      "duration": 8.16,
+      "text": "portion the number of stars that I am printing is definitely equal to the row"
+    },
+    {
+      "start": 2253.359,
+      "duration": 6.301,
+      "text": "number so let's let's say number of stars that you're printing is equal to"
+    },
+    {
+      "start": 2257.68,
+      "duration": 7.439,
+      "text": "the row number which is I so we can go ahead and say ID J equal to one J less"
+    },
+    {
+      "start": 2261.7,
+      "duration": 9.18,
+      "text": "than equal to stars is 40 printing so we go ahead and say C out of star"
+    },
+    {
+      "start": 2268.0,
+      "duration": 7.079,
+      "text": "it's actually correct right and if you run this let's see what"
+    },
+    {
+      "start": 2273.099,
+      "duration": 6.0,
+      "text": "will happen okay go ahead and try to run this this will like print but this will"
+    },
+    {
+      "start": 2277.78,
+      "duration": 5.7,
+      "text": "print something like this whereas from the row number six you have"
+    },
+    {
+      "start": 2281.14,
+      "duration": 7.439,
+      "text": "to break the symmet from the rule number six you have to break the Symmetry let's"
+    },
+    {
+      "start": 2285.52,
+      "duration": 9.36,
+      "text": "try to analyze a formula for rule number six we need four stars"
+    },
+    {
+      "start": 2291.52,
+      "duration": 9.18,
+      "text": "seven we need three so eight we need two or nine we need one I think is pretty"
+    },
+    {
+      "start": 2298.359,
+      "duration": 8.941,
+      "text": "evident the formula the formula is crystal clear"
+    },
+    {
+      "start": 2302.079,
+      "duration": 10.5,
+      "text": "2N minus I is a Formula isn't it those many stars is what you require if you"
+    },
+    {
+      "start": 2310.3,
+      "duration": 7.2,
+      "text": "exceed the row if you exceed the fifth row because this is your symmetrical"
+    },
+    {
+      "start": 2314.28,
+      "duration": 8.44,
+      "text": "symmetrical position from six downwards these are the number of stars is what"
+    },
+    {
+      "start": 2319.54,
+      "duration": 7.38,
+      "text": "you will be printing so can I see if the rule exceeds"
+    },
+    {
+      "start": 2324.82,
+      "duration": 6.86,
+      "text": "the nth row if the road sees the anythrow then the stars that you will be"
+    },
+    {
+      "start": 2329.68,
+      "duration": 7.26,
+      "text": "printing will be nothing but 2 into n minus of the row number"
+    },
+    {
+      "start": 2334.78,
+      "duration": 6.9,
+      "text": "right can I say this ro means I over here can I say this I think I can"
+    },
+    {
+      "start": 2339.579,
+      "duration": 8.881,
+      "text": "go and run run the task well let's print this yes it does very"
+    },
+    {
+      "start": 2344.8,
+      "duration": 7.799,
+      "text": "simple if I try to write it uh in a much simple like you can just write it in"
+    },
+    {
+      "start": 2350.38,
+      "duration": 8.459,
+      "text": "other ways as well ternary operators whatever you wish to but this is how you"
+    },
+    {
+      "start": 2354.7,
+      "duration": 8.28,
+      "text": "can easily print the nested or loops so we are done with the pattern number"
+    },
+    {
+      "start": 2361.0,
+      "duration": 8.22,
+      "text": "10 as well let's look at the pattern number 11. okay"
+    },
+    {
+      "start": 2365.8,
+      "duration": 8.039,
+      "text": "we have done a similar pattern over here the right angle triangles"
+    },
+    {
+      "start": 2371.5,
+      "duration": 6.18,
+      "text": "uh I hope uh I don't remember if we call that so"
+    },
+    {
+      "start": 2375.4,
+      "duration": 10.98,
+      "text": "the row numbers are like five that is quite easy so going ahead void"
+    },
+    {
+      "start": 2381.16,
+      "duration": 9.959,
+      "text": "print 11 int n and you can say I know one thing I equal to 0 I lesser than n i"
+    },
+    {
+      "start": 2389.44,
+      "duration": 6.659,
+      "text": "plus plus this is definitely the Outer Loop there is no doubt with the audio"
+    },
+    {
+      "start": 2393.94,
+      "duration": 6.6,
+      "text": "let's look at the inner loop how's the inner loop working"
+    },
+    {
+      "start": 2397.359,
+      "duration": 8.461,
+      "text": "can I have the zero throw starts with for the second row it starts with one"
+    },
+    {
+      "start": 2403.359,
+      "duration": 6.781,
+      "text": "for the third row it starts with sorry for the fifth so it's like"
+    },
+    {
+      "start": 2408.04,
+      "duration": 6.42,
+      "text": "so can I say for the zero through it starts with one"
+    },
+    {
+      "start": 2411.46,
+      "duration": 7.92,
+      "text": "for uh the second row it starts with one now the fourth row it starts with one"
+    },
+    {
+      "start": 2416.5,
+      "duration": 6.48,
+      "text": "can I say for all the even rows but all the even rows it starts with one"
+    },
+    {
+      "start": 2421.9,
+      "duration": 5.06,
+      "text": "okay so I'll be like what's the start point"
+    },
+    {
+      "start": 2427.3,
+      "duration": 10.799,
+      "text": "let's keep start as one and can I say this if"
+    },
+    {
+      "start": 2434.38,
+      "duration": 7.26,
+      "text": "I am an even row if I'm at an even row a star is actually"
+    },
+    {
+      "start": 2440.38,
+      "duration": 6.42,
+      "text": "one or else"
+    },
+    {
+      "start": 2443.32,
+      "duration": 8.519,
+      "text": "the star is actually zero can I see this maybe you can Define this somewhere here"
+    },
+    {
+      "start": 2448.72,
+      "duration": 8.04,
+      "text": "and assign it some dummy value if you wish to so can I say if it's an even"
+    },
+    {
+      "start": 2454.9,
+      "duration": 6.0,
+      "text": "though the start is one as the start is zero that is something which we know for"
+    },
+    {
+      "start": 2458.5,
+      "duration": 7.2,
+      "text": "every column now what happens it prints for one time two time Three"
+    },
+    {
+      "start": 2462.82,
+      "duration": 8.82,
+      "text": "Time by flipping flipping flipping one zero one Flip Flip Flip so can I do this"
+    },
+    {
+      "start": 2468.7,
+      "duration": 6.419,
+      "text": "I think I can it's very easy what I'll do is I know how to print the right"
+    },
+    {
+      "start": 2473.26,
+      "duration": 5.04,
+      "text": "angle triangle that's something like this this this this this this"
+    },
+    {
+      "start": 2477.15,
+      "duration": 6.91,
+      "text": "[Music] and you just print the start"
+    },
+    {
+      "start": 2482.44,
+      "duration": 6.24,
+      "text": "isn't you just print the start"
+    },
+    {
+      "start": 2486.339,
+      "duration": 6.841,
+      "text": "and pause this your print handle but if the start is one it stays as one"
+    },
+    {
+      "start": 2491.02,
+      "duration": 7.2,
+      "text": "The Next Step it has to be zero it flips so you can say clip the flip is very"
+    },
+    {
+      "start": 2496.18,
+      "duration": 6.659,
+      "text": "easy you can write start equal to 1 minus star this line will flip 1 to 0"
+    },
+    {
+      "start": 2500.8,
+      "duration": 6.539,
+      "text": "and 0 to 1. you can do maths and you'll find now let's uh print pattern 11 yeah"
+    },
+    {
+      "start": 2506.02,
+      "duration": 5.7,
+      "text": "let's try to print it and see if it is running fine you see"
+    },
+    {
+      "start": 2509.38,
+      "duration": 5.76,
+      "text": "those three or four rules will actually print everything"
+    },
+    {
+      "start": 2513.04,
+      "duration": 7.62,
+      "text": "uh did we print it properly let's quickly you have a check"
+    },
+    {
+      "start": 2517.42,
+      "duration": 8.22,
+      "text": "I should have started from one looks like the first line was not printed"
+    },
+    {
+      "start": 2523.119,
+      "duration": 7.98,
+      "text": "okay my bad it should be this J less than equal to Y so run task and clean"
+    },
+    {
+      "start": 2528.64,
+      "duration": 6.66,
+      "text": "and this will be printing it one zero one the pattern is printed pretty easy"
+    },
+    {
+      "start": 2534.04,
+      "duration": 4.74,
+      "text": "isn't it let's look at the pattern 12 uh you can"
+    },
+    {
+      "start": 2537.46,
+      "duration": 6.06,
+      "text": "probably pause the video and try out the pattern yourself this pattern looks so"
+    },
+    {
+      "start": 2541.66,
+      "duration": 6.179,
+      "text": "this pattern uh so this pattern kind of looks similar to the pattern that we did"
+    },
+    {
+      "start": 2545.8,
+      "duration": 7.5,
+      "text": "uh if you remember yeah when there was space Stars space"
+    },
+    {
+      "start": 2551.079,
+      "duration": 7.621,
+      "text": "and over here can I say it is like number space numbers so if I try to"
+    },
+    {
+      "start": 2556.359,
+      "duration": 7.201,
+      "text": "write this pattern can I say that if I can figure out"
+    },
+    {
+      "start": 2560.079,
+      "duration": 8.52,
+      "text": "the way of numbers space"
+    },
+    {
+      "start": 2565.48,
+      "duration": 8.58,
+      "text": "numbers I think my job will be done that's racing but for the outer loop"
+    },
+    {
+      "start": 2570.76,
+      "duration": 8.28,
+      "text": "that's very easy you just figure out how many can I say I will be just running"
+    },
+    {
+      "start": 2576.16,
+      "duration": 9.06,
+      "text": "the outer loop for four type the outer loop is very simple it runs for four"
+    },
+    {
+      "start": 2582.64,
+      "duration": 7.86,
+      "text": "times the outer loop will be running for four times right so if the outer loop is"
+    },
+    {
+      "start": 2588.339,
+      "duration": 8.041,
+      "text": "running for four times let's look at this for the first row can"
+    },
+    {
+      "start": 2593.44,
+      "duration": 8.04,
+      "text": "I say I'm printing one number right and one number but between that"
+    },
+    {
+      "start": 2599.38,
+      "duration": 6.78,
+      "text": "I'm printing some spaces let's count the number of spaces one two three four five"
+    },
+    {
+      "start": 2604.72,
+      "duration": 6.42,
+      "text": "six is the number of spaces that I'm"
+    },
+    {
+      "start": 2608.079,
+      "duration": 7.441,
+      "text": "printing perfect let's look at the next one repeating two numbers two numbers"
+    },
+    {
+      "start": 2613.119,
+      "duration": 7.2,
+      "text": "and let's count the number of spaces one two three four okay depending four"
+    },
+    {
+      "start": 2617.5,
+      "duration": 11.88,
+      "text": "spaces let's count the next one three three and the spaces are one two"
+    },
+    {
+      "start": 2624.579,
+      "duration": 10.681,
+      "text": "next Port space 0 and then four something I'm sure is"
+    },
+    {
+      "start": 2631.54,
+      "duration": 8.34,
+      "text": "the number and this one are very easy because it's equivalent to the row"
+    },
+    {
+      "start": 2637.42,
+      "duration": 8.52,
+      "text": "number so what I'll do is I'll go ahead and first uh try to write this pattern"
+    },
+    {
+      "start": 2643.54,
+      "duration": 6.84,
+      "text": "and then we can figure out the other one so I'll take the int n"
+    },
+    {
+      "start": 2648.04,
+      "duration": 7.86,
+      "text": "I can do is I can just so print 12 and I know one thing you can"
+    },
+    {
+      "start": 2653.5,
+      "duration": 7.619,
+      "text": "just start from one again you can do zero base indexing that is your choice"
+    },
+    {
+      "start": 2657.46,
+      "duration": 9.06,
+      "text": "so first is numbers then a space and there is numbers so can"
+    },
+    {
+      "start": 2664.839,
+      "duration": 9.301,
+      "text": "I see the numbers are going to be very simple it can go from 1 till the I and J"
+    },
+    {
+      "start": 2670.72,
+      "duration": 9.3,
+      "text": "plus plus take it go ahead and say J and this not this yeah perfect and similarly"
+    },
+    {
+      "start": 2678.22,
+      "duration": 7.5,
+      "text": "you can just do it in the opposite fashion because if you look at this"
+    },
+    {
+      "start": 2683.74,
+      "duration": 6.96,
+      "text": "it's like three to one it goes in the opposite fashion so"
+    },
+    {
+      "start": 2687.579,
+      "duration": 9.24,
+      "text": "it's Sky easy you just go from I to one and you do J minus minus so this"
+    },
+    {
+      "start": 2694.42,
+      "duration": 8.1,
+      "text": "is what you do for the numbers but space is what you have to exactly"
+    },
+    {
+      "start": 2700.3,
+      "duration": 5.819,
+      "text": "determine the next thing that I need to do is I need to figure out a formula for"
+    },
+    {
+      "start": 2704.56,
+      "duration": 6.42,
+      "text": "space because if I can figure out a formula for space it can be very easy so"
+    },
+    {
+      "start": 2708.7,
+      "duration": 8.82,
+      "text": "can I see the formulas we start from 6 and then do you see a change"
+    },
+    {
+      "start": 2714.339,
+      "duration": 8.461,
+      "text": "it reduces by two it always reduces by 2 for sure right so if you can"
+    },
+    {
+      "start": 2721.42,
+      "duration": 5.82,
+      "text": "somehow figure out"
+    },
+    {
+      "start": 2724.18,
+      "duration": 6.96,
+      "text": "the first number and then you can just reduce it by two at every step I think"
+    },
+    {
+      "start": 2729.22,
+      "duration": 6.0,
+      "text": "the job will be done so can I say the first number"
+    },
+    {
+      "start": 2732.4,
+      "duration": 7.439,
+      "text": "first number is nothing but 2 into"
+    },
+    {
+      "start": 2736.24,
+      "duration": 7.5,
+      "text": "whatever is n minus 1. so first"
+    },
+    {
+      "start": 2740.98,
+      "duration": 7.5,
+      "text": "very soon because if n is 4 it's definitely six"
+    },
+    {
+      "start": 2745.48,
+      "duration": 8.04,
+      "text": "right if n was three it would have definitely been"
+    },
+    {
+      "start": 2749.8,
+      "duration": 8.64,
+      "text": "two sorry four so two into n minus 1 and that then at every step you just reduce"
+    },
+    {
+      "start": 2755.079,
+      "duration": 8.76,
+      "text": "it by two quite simple so what I do is I say Hey listen"
+    },
+    {
+      "start": 2760.18,
+      "duration": 7.86,
+      "text": "I know this the space initially that you have to give is this sorry oh my bad"
+    },
+    {
+      "start": 2766.24,
+      "duration": 4.74,
+      "text": "going to n minus one this is something which we know"
+    },
+    {
+      "start": 2769.18,
+      "duration": 6.96,
+      "text": "why don't you go ahead and say okay please go ahead and print those many"
+    },
+    {
+      "start": 2772.839,
+      "duration": 5.941,
+      "text": "spaces so it's like space and then you can do J plus plus and then you're going"
+    },
+    {
+      "start": 2777.7,
+      "duration": 5.94,
+      "text": "to see out perfect and right after every step you"
+    },
+    {
+      "start": 2781.839,
+      "duration": 5.221,
+      "text": "definitely are going to do an endl but at the same time you say space minus"
+    },
+    {
+      "start": 2785.079,
+      "duration": 4.981,
+      "text": "equal to 2 which is equivalent to space equal to space minus two and you can go"
+    },
+    {
+      "start": 2788.859,
+      "duration": 4.861,
+      "text": "ahead and say print pattern number 12 and okay you can go to the terminal and"
+    },
+    {
+      "start": 2792.46,
+      "duration": 4.98,
+      "text": "say run task clean and run"
+    },
+    {
+      "start": 2795.46,
+      "duration": 6.42,
+      "text": "if we click and run you actually see that this pattern is getting printed for"
+    },
+    {
+      "start": 2799.119,
+      "duration": 6.661,
+      "text": "the fifth one as well pretty easy isn't it so with this we"
+    },
+    {
+      "start": 2804.22,
+      "duration": 6.54,
+      "text": "will be wrapping up the pattern number 12 as well the next pattern is I think"
+    },
+    {
+      "start": 2808.9,
+      "duration": 5.939,
+      "text": "very easy you can try it on yourself so the pattern number 12 is done now time"
+    },
+    {
+      "start": 2812.8,
+      "duration": 6.72,
+      "text": "for pattern number 13. again a right angle triangle so should not be a big"
+    },
+    {
+      "start": 2816.76,
+      "duration": 9.839,
+      "text": "issue uh five rows so we'll be running it for five times for sure so let's go"
+    },
+    {
+      "start": 2822.4,
+      "duration": 9.419,
+      "text": "ahead and do it for pattern number 13. so void print pattern number 13 intn"
+    },
+    {
+      "start": 2829.78,
+      "duration": 7.799,
+      "text": "everyone knows what's the outer loop going to be it's going to be something"
+    },
+    {
+      "start": 2833.56,
+      "duration": 8.279,
+      "text": "like uh from let's see from one yeah we know it's going to run for end times"
+    },
+    {
+      "start": 2839.98,
+      "duration": 6.18,
+      "text": "now let's look what's happening because it goes like one and like two then like"
+    },
+    {
+      "start": 2844.0,
+      "duration": 6.9,
+      "text": "three something for sure is for the first word uh we need one"
+    },
+    {
+      "start": 2849.22,
+      "duration": 5.28,
+      "text": "for the secondary we need two elements for the third row we need three elements"
+    },
+    {
+      "start": 2852.52,
+      "duration": 6.78,
+      "text": "for the fourth row we need four elements so the Fifth Fifth group we need uh five"
+    },
+    {
+      "start": 2856.78,
+      "duration": 6.78,
+      "text": "elements something for sure is the out the inner loop is definitely going to"
+    },
+    {
+      "start": 2862.119,
+      "duration": 5.941,
+      "text": "run for the number of row times if it is first"
+    },
+    {
+      "start": 2865.9,
+      "duration": 6.3,
+      "text": "row one time if it is the second row two times if it is third row three times"
+    },
+    {
+      "start": 2869.319,
+      "duration": 7.5,
+      "text": "that is something which each of us know but coming back what am I printing it's"
+    },
+    {
+      "start": 2874.839,
+      "duration": 5.821,
+      "text": "like one two three four it's a number which starts from one so I"
+    },
+    {
+      "start": 2879.339,
+      "duration": 4.081,
+      "text": "know the printing is going to happen somewhere here"
+    },
+    {
+      "start": 2882.28,
+      "duration": 5.46,
+      "text": "this is why we're going to print something for sure and this is go where"
+    },
+    {
+      "start": 2885.4,
+      "duration": 5.88,
+      "text": "so we know the number starts from one so why don't we keep the number which"
+    },
+    {
+      "start": 2889.18,
+      "duration": 6.12,
+      "text": "starts from one and you can print it something like this and at every step"
+    },
+    {
+      "start": 2893.38,
+      "duration": 6.78,
+      "text": "it's getting printed we just increase it by one does this work first time one"
+    },
+    {
+      "start": 2898.119,
+      "duration": 4.74,
+      "text": "will come in print it'll go to the everyday in the printing occurs one two"
+    },
+    {
+      "start": 2901.78,
+      "duration": 5.4,
+      "text": "three four quite simple and this is pattern number"
+    },
+    {
+      "start": 2905.02,
+      "duration": 7.02,
+      "text": "13 for you so if I go ahead and say terminal run task and compile and run"
+    },
+    {
+      "start": 2909.88,
+      "duration": 7.02,
+      "text": "this will actually run it does and if you want some clarity"
+    },
+    {
+      "start": 2914.319,
+      "duration": 6.361,
+      "text": "probably we can give a space and if you give a space this is going to have much"
+    },
+    {
+      "start": 2919.0,
+      "duration": 5.04,
+      "text": "more clarity yeah all right so pattern number 13 done"
+    },
+    {
+      "start": 2922.3,
+      "duration": 7.26,
+      "text": "let's look at the pattern number 14. again a right angle triangle so the"
+    },
+    {
+      "start": 2926.74,
+      "duration": 9.359,
+      "text": "outer loop is pretty pretty it's going to be till n so what print pattern"
+    },
+    {
+      "start": 2932.44,
+      "duration": 8.7,
+      "text": "number 14 intn and this ml goes zero based indexing again you can go one way"
+    },
+    {
+      "start": 2937.96,
+      "duration": 6.24,
+      "text": "zero based the certain code will change as long as you're printing it it doesn't"
+    },
+    {
+      "start": 2942.579,
+      "duration": 6.901,
+      "text": "matter this is something which we will write now let's look at what are they"
+    },
+    {
+      "start": 2947.68,
+      "duration": 6.419,
+      "text": "printing it inside at every row depending One Two element"
+    },
+    {
+      "start": 2951.64,
+      "duration": 6.26,
+      "text": "Trail so number of rows equal to number same as right angle triangle but we are"
+    },
+    {
+      "start": 2956.319,
+      "duration": 6.721,
+      "text": "starting with a and we are going till three if it's a third row starting with"
+    },
+    {
+      "start": 2961.119,
+      "duration": 4.74,
+      "text": "the a we're going till 4 if it's the fourth row"
+    },
+    {
+      "start": 2964.06,
+      "duration": 6.84,
+      "text": "that is something for sure so can I see we can start with a now"
+    },
+    {
+      "start": 2969.22,
+      "duration": 6.899,
+      "text": "actually we can run uh something like character CH equal to a and we can say"
+    },
+    {
+      "start": 2973.3,
+      "duration": 9.24,
+      "text": "CH lesser than equal to a plus of I and you can do CH plus plus"
+    },
+    {
+      "start": 2979.359,
+      "duration": 8.161,
+      "text": "now a lot of you might not understand so it starts with a and it says a plus I"
+    },
+    {
+      "start": 2985.96,
+      "duration": 6.119,
+      "text": "so imagine I is something like two it's basically"
+    },
+    {
+      "start": 2990.46,
+      "duration": 8.1,
+      "text": "saying if I take you back to the iPad it's basically saying start with a go"
+    },
+    {
+      "start": 2995.26,
+      "duration": 8.16,
+      "text": "till a plus if I is 2 a plus 2 what does a plus 2 means"
+    },
+    {
+      "start": 3000.78,
+      "duration": 9.66,
+      "text": "in computer what happens is AC is okay two places ahead BC so let's actually"
+    },
+    {
+      "start": 3006.96,
+      "duration": 9.84,
+      "text": "see that Loops from a they'll see exactly if you're saying a plus 0 it"
+    },
+    {
+      "start": 3013.74,
+      "duration": 7.56,
+      "text": "Loops from a to a it looks from a to a and"
+    },
+    {
+      "start": 3018.06,
+      "duration": 10.74,
+      "text": "in ASCII or in computer it's stored like a b c d you can probably Google search"
+    },
+    {
+      "start": 3025.68,
+      "duration": 11.22,
+      "text": "about ascis and you'll get a better idea it's just too basic uh so if you give"
+    },
+    {
+      "start": 3033.119,
+      "duration": 9.0,
+      "text": "C out of character and he said this and you go ahead and"
+    },
+    {
+      "start": 3039.119,
+      "duration": 6.601,
+      "text": "say C out of endel let's see what happens and I go over"
+    },
+    {
+      "start": 3044.099,
+      "duration": 5.701,
+      "text": "here and I say terminal run compiler well this get printed yeah"
+    },
+    {
+      "start": 3048.96,
+      "duration": 6.18,
+      "text": "it does because the looping is done on the"
+    },
+    {
+      "start": 3052.02,
+      "duration": 8.46,
+      "text": "character this time so so the pattern number 14 is completed uh time for the"
+    },
+    {
+      "start": 3057.18,
+      "duration": 7.02,
+      "text": "pattern number 15. it's similar to an inverted right uh angle triangle which I"
+    },
+    {
+      "start": 3063.119,
+      "duration": 7.861,
+      "text": "think we have done in the pattern number five yes we have so it's we just have to"
+    },
+    {
+      "start": 3068.46,
+      "duration": 8.22,
+      "text": "print like a b c d e and then a b c d the first time it has to be uh for the"
+    },
+    {
+      "start": 3074.099,
+      "duration": 7.801,
+      "text": "zero throw it has to be n times then n minus 1 times then n minus two times"
+    },
+    {
+      "start": 3078.599,
+      "duration": 9.661,
+      "text": "then n minus three it times then n minus uh four times so it's it's pretty simple"
+    },
+    {
+      "start": 3084.9,
+      "duration": 6.719,
+      "text": "so what I can do is I so what I can do is I'll go over here you know the outer"
+    },
+    {
+      "start": 3090.24,
+      "duration": 6.48,
+      "text": "loop is definitely going to be something like I equal to 0 and I lesser than n"
+    },
+    {
+      "start": 3093.66,
+      "duration": 9.72,
+      "text": "and I plus plus and about the inner loop it's something like character CH a CH"
+    },
+    {
+      "start": 3100.5,
+      "duration": 8.04,
+      "text": "lesser than equal to for the first time if it is 0"
+    },
+    {
+      "start": 3104.76,
+      "duration": 10.02,
+      "text": "if you see it prints all the five it's like a plus"
+    },
+    {
+      "start": 3110.28,
+      "duration": 10.74,
+      "text": "five times is it no four why because it's like if I just write it it's like a"
+    },
+    {
+      "start": 3117.72,
+      "duration": 12.359,
+      "text": "b c d e is what you're printing so this is a plus 4 so it has to be a plus 4 not"
+    },
+    {
+      "start": 3126.18,
+      "duration": 13.919,
+      "text": "5. be careful about this so it's like this is n next time it will be a b c d"
+    },
+    {
+      "start": 3135.059,
+      "duration": 12.661,
+      "text": "such like a plus three got it it's like a plus whatever n is minus this is the"
+    },
+    {
+      "start": 3144.54,
+      "duration": 7.86,
+      "text": "0th row this is the first row N minus rho minus 1. please"
+    },
+    {
+      "start": 3150.18,
+      "duration": 7.82,
+      "text": "pretty simple got it into the maths afterwards"
+    },
+    {
+      "start": 3154.559,
+      "duration": 3.441,
+      "text": "it's like a plus"
+    },
+    {
+      "start": 3158.099,
+      "duration": 8.821,
+      "text": "n minus this this and then you can do a character plus plus"
+    },
+    {
+      "start": 3164.339,
+      "duration": 5.881,
+      "text": "you can go ahead and do this and then this"
+    },
+    {
+      "start": 3168.059,
+      "duration": 8.641,
+      "text": "and then you can go ahead and do a c out of endel this once you've done this go"
+    },
+    {
+      "start": 3173.4,
+      "duration": 7.62,
+      "text": "ahead and print this and you will see that this is giving you a character"
+    },
+    {
+      "start": 3179.22,
+      "duration": 7.2,
+      "text": "so with this we have completed the pattern number 15 as well again the"
+    },
+    {
+      "start": 3183.18,
+      "duration": 10.439,
+      "text": "pattern number 16 is a right angle triangle but this time it's like a b b c"
+    },
+    {
+      "start": 3189.059,
+      "duration": 8.941,
+      "text": "c d d and then Pi V is pretty simple you start with a and then you go to B and"
+    },
+    {
+      "start": 3195.96,
+      "duration": 6.54,
+      "text": "then you go to C it's like for the zero throw the character will be a for the"
+    },
+    {
+      "start": 3200.64,
+      "duration": 5.88,
+      "text": "first row the character will be B now the third row the character will be C"
+    },
+    {
+      "start": 3203.819,
+      "duration": 8.221,
+      "text": "it's like a plus the road number right isn't it because for the first row for"
+    },
+    {
+      "start": 3209.819,
+      "duration": 7.8,
+      "text": "the zero throw it's a it's something like a plus I if the first row is just P"
+    },
+    {
+      "start": 3215.339,
+      "duration": 9.061,
+      "text": "it's something like a plus I because a plus 1 will be B correct so again pretty"
+    },
+    {
+      "start": 3220.98,
+      "duration": 10.859,
+      "text": "simple I'll just go ahead and write void print 16 in the n and then"
+    },
+    {
+      "start": 3228.599,
+      "duration": 7.74,
+      "text": "for inti equal to 0 I less than n i plus plus and the character that you will be"
+    },
+    {
+      "start": 3234.54,
+      "duration": 7.68,
+      "text": "printing will be definitely a plus I and how many times"
+    },
+    {
+      "start": 3240.599,
+      "duration": 7.201,
+      "text": "in a right angled triangle I don't need to say it anymore now"
+    },
+    {
+      "start": 3244.02,
+      "duration": 9.059,
+      "text": "everyone knows this now see out CH and then you go ahead this and then you go"
+    },
+    {
+      "start": 3249.78,
+      "duration": 7.44,
+      "text": "ahead of n l once oh my bad it's like zero okay once you've done this you can"
+    },
+    {
+      "start": 3254.88,
+      "duration": 7.739,
+      "text": "go ahead and say pattern print 16 and this will"
+    },
+    {
+      "start": 3259.38,
+      "duration": 8.04,
+      "text": "get printed oh sorry I think a did not get printed"
+    },
+    {
+      "start": 3265.26,
+      "duration": 5.12,
+      "text": "why because this now you're good"
+    },
+    {
+      "start": 3270.78,
+      "duration": 8.48,
+      "text": "a b b c c triple D Triple E Done so a second"
+    },
+    {
+      "start": 3281.16,
+      "duration": 8.159,
+      "text": "number 16 is done let's look at the pattern number 17. the pattern number 17"
+    },
+    {
+      "start": 3285.059,
+      "duration": 7.981,
+      "text": "is again similar to uh if you remember I think"
+    },
+    {
+      "start": 3290.099,
+      "duration": 8.76,
+      "text": "yeah this one where you have space star please"
+    },
+    {
+      "start": 3294.42,
+      "duration": 7.98,
+      "text": "so it's like space alphabets space but it has some cement so you have to"
+    },
+    {
+      "start": 3300.9,
+      "duration": 4.8,
+      "text": "observe Symmetry and then you have to print it"
+    },
+    {
+      "start": 3303.78,
+      "duration": 8.579,
+      "text": "so the outer loop is again very straightforward but with the outer loop"
+    },
+    {
+      "start": 3307.44,
+      "duration": 10.86,
+      "text": "obviously 0 1 2 3 4 without a loop is going to run for n times the outer loop"
+    },
+    {
+      "start": 3314.88,
+      "duration": 11.4,
+      "text": "transfer n times what are these spaces spaces spaces spaces spaces so it's like"
+    },
+    {
+      "start": 3323.64,
+      "duration": 6.3,
+      "text": "first you have to figure out spaces then alphabets"
+    },
+    {
+      "start": 3328.02,
+      "duration": 8.94,
+      "text": "and then spaces again so if you remember from the pattern"
+    },
+    {
+      "start": 3333.359,
+      "duration": 7.5,
+      "text": "number as I said it was this one pattern number seven let's go to pattern number"
+    },
+    {
+      "start": 3338.52,
+      "duration": 7.74,
+      "text": "seven and look at the formula so it was like the spaces was n minus I minus 1."
+    },
+    {
+      "start": 3344.339,
+      "duration": 5.161,
+      "text": "so I can say those pieces as n minus I minus 1."
+    },
+    {
+      "start": 3348.119,
+      "duration": 5.641,
+      "text": "that is something which we can copy probably let's copy this entire thing"
+    },
+    {
+      "start": 3351.96,
+      "duration": 4.52,
+      "text": "and paste it"
+    },
+    {
+      "start": 3357.78,
+      "duration": 6.539,
+      "text": "and the slip pattern number 70. so instead of this we have to somehow"
+    },
+    {
+      "start": 3362.28,
+      "duration": 7.2,
+      "text": "figure out the characters because as of now we have printed the"
+    },
+    {
+      "start": 3366.78,
+      "duration": 6.96,
+      "text": "spaces we printed the rows but we have to figure out the characters"
+    },
+    {
+      "start": 3371.4,
+      "duration": 7.62,
+      "text": "so if you go to pattern number seven we know the number of characters are going"
+    },
+    {
+      "start": 3375.66,
+      "duration": 8.76,
+      "text": "to be C that's 2 I plus 1. the number of characters are going to be 2 into I plus"
+    },
+    {
+      "start": 3382.5,
+      "duration": 4.8,
+      "text": "1 that's for sure because this is one character"
+    },
+    {
+      "start": 3385.44,
+      "duration": 7.2,
+      "text": "because this is one character this is three characters this is five characters"
+    },
+    {
+      "start": 3389.88,
+      "duration": 7.199,
+      "text": "which is like two into two plus one so we know the number of characters are C"
+    },
+    {
+      "start": 3394.559,
+      "duration": 6.901,
+      "text": "can I see can I say one thing for sure if I am having five characters in this"
+    },
+    {
+      "start": 3400.619,
+      "duration": 5.281,
+      "text": "room out of which if I start with character a"
+    },
+    {
+      "start": 3404.22,
+      "duration": 5.06,
+      "text": "what happens if I have five"
+    },
+    {
+      "start": 3407.64,
+      "duration": 8.52,
+      "text": "if I have five symmetry of sub symmetry If You observe"
+    },
+    {
+      "start": 3412.859,
+      "duration": 9.781,
+      "text": "symmetry it breaks at half right it breaks that tree so can I see"
+    },
+    {
+      "start": 3420.9,
+      "duration": 5.459,
+      "text": "if it does five five by two plus one"
+    },
+    {
+      "start": 3424.859,
+      "duration": 8.341,
+      "text": "till this I'll have a plus plus I'll have a plus"
+    },
+    {
+      "start": 3429.66,
+      "duration": 9.419,
+      "text": "post this I love a minus minus isn't it if I start with character a I printed"
+    },
+    {
+      "start": 3435.96,
+      "duration": 7.68,
+      "text": "for whenever I am at the first time whenever I'm at the first time I print"
+    },
+    {
+      "start": 3441.18,
+      "duration": 6.84,
+      "text": "character then I do a plus plus whenever I'm at the second time it prints P then"
+    },
+    {
+      "start": 3445.38,
+      "duration": 7.739,
+      "text": "I do a plus whenever at the third time it's C and then I start doing minus fine"
+    },
+    {
+      "start": 3450.54,
+      "duration": 7.92,
+      "text": "so that it becomes B and it gets printed at the fourth again to a minus minus at"
+    },
+    {
+      "start": 3455.16,
+      "duration": 9.24,
+      "text": "the fifth it prints a so can I just can I just assign a character I think I can"
+    },
+    {
+      "start": 3461.04,
+      "duration": 9.48,
+      "text": "so what I'll do is I will go and say hey can you please assign a character to"
+    },
+    {
+      "start": 3467.28,
+      "duration": 9.299,
+      "text": "yours it'll be like okay let's do it if you're assigning a character"
+    },
+    {
+      "start": 3472.2,
+      "duration": 11.28,
+      "text": "can you go ahead and you know how many times you have to print"
+    },
+    {
+      "start": 3478.2,
+      "duration": 10.619,
+      "text": "that's 2 into I plus 1 that's the number of times you have to print so let's at"
+    },
+    {
+      "start": 3485.46,
+      "duration": 9.42,
+      "text": "first print CH and see if it is getting printed correctly or not it's pattern"
+    },
+    {
+      "start": 3491.46,
+      "duration": 8.34,
+      "text": "number 17 I'll go ahead and see as of now we have not decremented it"
+    },
+    {
+      "start": 3497.099,
+      "duration": 7.5,
+      "text": "it's printing correctly the space and everything is correct if I do a"
+    },
+    {
+      "start": 3501.9,
+      "duration": 6.24,
+      "text": "character plus plus and if I try to run it"
+    },
+    {
+      "start": 3505.74,
+      "duration": 7.8,
+      "text": "it will be printed correctly but it's getting increment so I need to"
+    },
+    {
+      "start": 3510.359,
+      "duration": 8.161,
+      "text": "decrement it so I know I know what is the breakpoint the break"
+    },
+    {
+      "start": 3516.299,
+      "duration": 7.081,
+      "text": "point is this"
+    },
+    {
+      "start": 3520.859,
+      "duration": 8.101,
+      "text": "whatever is the number of points it's like 2 into this these are the number of"
+    },
+    {
+      "start": 3526.14,
+      "duration": 8.699,
+      "text": "characters why two till here it increases if you carefully observe"
+    },
+    {
+      "start": 3532.14,
+      "duration": 8.28,
+      "text": "to carefully observed it is 5 5 by 2 is 2 till 2 8 increases positive to"
+    },
+    {
+      "start": 3538.38,
+      "duration": 8.459,
+      "text": "decrease so that in the next step it is decreased so can I see"
+    },
+    {
+      "start": 3542.88,
+      "duration": 8.76,
+      "text": "break point will be this so if your character J your character J again uh"
+    },
+    {
+      "start": 3549.96,
+      "duration": 5.46,
+      "text": "probably just to have a better understanding you can just do it like"
+    },
+    {
+      "start": 3552.96,
+      "duration": 10.32,
+      "text": "this one base indexing if your character J is lesser than equal to the breakpoint"
+    },
+    {
+      "start": 3560.52,
+      "duration": 6.66,
+      "text": "it's fine do a character plus plus if it is not then do a character minus minus"
+    },
+    {
+      "start": 3565.02,
+      "duration": 6.12,
+      "text": "quite simple and now I'll go ahead and say hey can you now run and see if it is"
+    },
+    {
+      "start": 3569.579,
+      "duration": 7.921,
+      "text": "running fine it is this is running absolutely fine so"
+    },
+    {
+      "start": 3575.579,
+      "duration": 6.841,
+      "text": "very simple you just have to do a bit of mathematics bit of observation bit of"
+    },
+    {
+      "start": 3579.48,
+      "duration": 7.2,
+      "text": "symmetry and the four rules that works so we are done with one more part"
+    },
+    {
+      "start": 3584.46,
+      "duration": 8.28,
+      "text": "nice let's look at the next pattern pattern 18 it's like e and d e c d e"
+    },
+    {
+      "start": 3590.4,
+      "duration": 7.62,
+      "text": "that starts from e and then it's like d and it's like c d e"
+    },
+    {
+      "start": 3595.68,
+      "duration": 7.439,
+      "text": "then it's like b c d e and it's like a b c d e so how do you do it probably pause"
+    },
+    {
+      "start": 3601.619,
+      "duration": 5.841,
+      "text": "the video and think it because this is interesting so that's right in the"
+    },
+    {
+      "start": 3605.04,
+      "duration": 2.42,
+      "text": "Triangle again"
+    },
+    {
+      "start": 3607.76,
+      "duration": 4.49,
+      "text": "[Music]"
+    },
+    {
+      "start": 3621.619,
+      "duration": 10.381,
+      "text": "very easy we're actually going from E is definitely the last one and before this"
+    },
+    {
+      "start": 3627.599,
+      "duration": 4.401,
+      "text": "we're going from E minus I isn't it"
+    },
+    {
+      "start": 3641.059,
+      "duration": 7.421,
+      "text": "what I'll do is this is pattern number 18 so I'll go ahead and code void print"
+    },
+    {
+      "start": 3647.04,
+      "duration": 6.779,
+      "text": "18. idn and I know the"
+    },
+    {
+      "start": 3651.18,
+      "duration": 7.52,
+      "text": "outer loop is this I know the inner loop will be from"
+    },
+    {
+      "start": 3659.16,
+      "duration": 7.98,
+      "text": "character CH will be e minus I character will"
+    },
+    {
+      "start": 3664.799,
+      "duration": 7.381,
+      "text": "definitely go until e character plus plus"
+    },
+    {
+      "start": 3669.02,
+      "duration": 7.12,
+      "text": "and you can definitely print the character"
+    },
+    {
+      "start": 3673.98,
+      "duration": 9.18,
+      "text": "and going ahead you can definitely do an end l so print 18 is what you have to do"
+    },
+    {
+      "start": 3680.54,
+      "duration": 5.44,
+      "text": "and I'll go ahead and run this and see if it's running fine"
+    },
+    {
+      "start": 3684.54,
+      "duration": 5.16,
+      "text": "it does so I can say one more pattern done as"
+    },
+    {
+      "start": 3688.2,
+      "duration": 6.96,
+      "text": "well let's come to the next pattern which is pattern number 19. now this is"
+    },
+    {
+      "start": 3693.0,
+      "duration": 7.68,
+      "text": "again an interesting pattern but I guess you as of now have an idea"
+    },
+    {
+      "start": 3697.98,
+      "duration": 10.68,
+      "text": "how to do it so if you carefully look at this we see a symmetry the Symmetry is"
+    },
+    {
+      "start": 3704.099,
+      "duration": 8.641,
+      "text": "something uh like this this isn't outside one and this is the downside one"
+    },
+    {
+      "start": 3711.599,
+      "duration": 6.301,
+      "text": "so let's first solve this one and then we"
+    },
+    {
+      "start": 3715.68,
+      "duration": 7.08,
+      "text": "can solve the downside one okay so I'll I'll just be drawing the symmetry line"
+    },
+    {
+      "start": 3720.839,
+      "duration": 7.02,
+      "text": "some of the yellow line is what we will be solving at first and then we can"
+    },
+    {
+      "start": 3724.68,
+      "duration": 7.8,
+      "text": "solve the bottom one as well so above the yellow line what are we printing"
+    },
+    {
+      "start": 3729.299,
+      "duration": 8.881,
+      "text": "let's look at this we are printing Stars right we are printing uh spaces"
+    },
+    {
+      "start": 3735.66,
+      "duration": 8.76,
+      "text": "and again printing Stars and the outer loop is definitely very"
+    },
+    {
+      "start": 3740.52,
+      "duration": 9.42,
+      "text": "obvious if ns5 that's the number of times the outer loop will run Stars"
+    },
+    {
+      "start": 3747.359,
+      "duration": 6.901,
+      "text": "spaces Stars so that is something which you have figured out for the pattern"
+    },
+    {
+      "start": 3751.079,
+      "duration": 9.181,
+      "text": "number 16 sorry 19. so you can go ahead and say IND and we"
+    },
+    {
+      "start": 3756.9,
+      "duration": 9.659,
+      "text": "know that this is going to run for end times for sure so we can be like first"
+    },
+    {
+      "start": 3763.44,
+      "duration": 9.06,
+      "text": "we gotta print some Stars then spaces then again starts that's for"
+    },
+    {
+      "start": 3770.819,
+      "duration": 5.221,
+      "text": "us to look how many stars how many spaces and how many stars so if I look"
+    },
+    {
+      "start": 3774.839,
+      "duration": 7.381,
+      "text": "at this for zero through I'm actually printing"
+    },
+    {
+      "start": 3778.92,
+      "duration": 8.76,
+      "text": "five stars and five stars which is"
+    },
+    {
+      "start": 3784.2,
+      "duration": 10.32,
+      "text": "for zero I'm printing five five and zero spaces for the first column"
+    },
+    {
+      "start": 3790.799,
+      "duration": 7.8,
+      "text": "we're actually printing four four and two"
+    },
+    {
+      "start": 3795.66,
+      "duration": 9.78,
+      "text": "depending four four and two for the second column we're actually printing"
+    },
+    {
+      "start": 3800.52,
+      "duration": 12.24,
+      "text": "three three and four spaces isn't it for the third we are printing two and six"
+    },
+    {
+      "start": 3809.22,
+      "duration": 8.28,
+      "text": "spaces and two for the fourth so zero one two three four four four we are"
+    },
+    {
+      "start": 3814.38,
+      "duration": 11.04,
+      "text": "printing one one and one two three four five six seven eight"
+    },
+    {
+      "start": 3820.26,
+      "duration": 11.16,
+      "text": "that's easy that is super easy isn't it what is this"
+    },
+    {
+      "start": 3826.98,
+      "duration": 9.48,
+      "text": "it's like n minus I so can I say the stars is n minus I"
+    },
+    {
+      "start": 3834.059,
+      "duration": 7.8,
+      "text": "number of stars is what I'm printing I am n minus I is the number of stars and"
+    },
+    {
+      "start": 3838.98,
+      "duration": 7.68,
+      "text": "printing and can I support spaces we can start with 0 and we can keep on"
+    },
+    {
+      "start": 3843.42,
+      "duration": 8.639,
+      "text": "upgrading them with Plus 2. as simple as that so I'll go back to the"
+    },
+    {
+      "start": 3849.119,
+      "duration": 8.101,
+      "text": "code and I know for stars is something like I and DJ equal to 1 and we just now"
+    },
+    {
+      "start": 3854.04,
+      "duration": 9.48,
+      "text": "figured out n minus I is what we are printing so go ahead and say start"
+    },
+    {
+      "start": 3859.98,
+      "duration": 10.8,
+      "text": "so we can just go ahead and Ctrl C stars is done for spaces we know uh initial"
+    },
+    {
+      "start": 3867.24,
+      "duration": 10.379,
+      "text": "spaces is nothing but zero so you can go with the initial spaces and there will"
+    },
+    {
+      "start": 3873.839,
+      "duration": 10.381,
+      "text": "be no command line int J equal to 0 and really J less than any space and G"
+    },
+    {
+      "start": 3882.059,
+      "duration": 8.161,
+      "text": "plus plus and you can go ahead and say for rather C out base and once"
+    },
+    {
+      "start": 3887.94,
+      "duration": 7.26,
+      "text": "everything is done my bad once everything is done you can just increase"
+    },
+    {
+      "start": 3891.54,
+      "duration": 8.64,
+      "text": "the spaces y equal to 2 and you can do a c out of end L by the way initial spaces"
+    },
+    {
+      "start": 3898.619,
+      "duration": 5.421,
+      "text": "what you have to increase perfect once you've done this this is"
+    },
+    {
+      "start": 3902.7,
+      "duration": 8.34,
+      "text": "pattern number 19. let's see if this gets printed the"
+    },
+    {
+      "start": 3907.799,
+      "duration": 7.56,
+      "text": "terminal run task component let's see so if you try it uh so this will be J by"
+    },
+    {
+      "start": 3913.38,
+      "duration": 6.419,
+      "text": "the way uh that there was a type of four if you try to run this we will actually"
+    },
+    {
+      "start": 3917.52,
+      "duration": 8.94,
+      "text": "see that it's getting printed properly the first thing is printed now let's"
+    },
+    {
+      "start": 3923.52,
+      "duration": 6.96,
+      "text": "look at the second and that's again easy that is again easy"
+    },
+    {
+      "start": 3928.68,
+      "duration": 7.52,
+      "text": "so if I try to again write the star spaces combo"
+    },
+    {
+      "start": 3931.98,
+      "duration": 10.44,
+      "text": "Stars pieces Stars it's like one star for again we can we can re start it it's"
+    },
+    {
+      "start": 3940.38,
+      "duration": 7.38,
+      "text": "we can just start it from one two three four five it's like one star one star"
+    },
+    {
+      "start": 3944.819,
+      "duration": 7.5,
+      "text": "one two three four five six seven eight spaces there'll be six spaces two stars"
+    },
+    {
+      "start": 3950.04,
+      "duration": 6.48,
+      "text": "two stars three spaces four stars you can just"
+    },
+    {
+      "start": 3954.0,
+      "duration": 6.38,
+      "text": "do the second half as well second half will"
+    },
+    {
+      "start": 3957.66,
+      "duration": 9.78,
+      "text": "one base indexing will be a better way and then we know the initial space we"
+    },
+    {
+      "start": 3965.339,
+      "duration": 9.121,
+      "text": "can again just initial space equal to eight is what we can keep and then we"
+    },
+    {
+      "start": 3970.38,
+      "duration": 9.54,
+      "text": "can just copy paste this entire stuff because it's symmetrical and over here"
+    },
+    {
+      "start": 3978.18,
+      "duration": 6.06,
+      "text": "instead of n minus I this will be exactly I"
+    },
+    {
+      "start": 3982.319,
+      "duration": 6.961,
+      "text": "and this will be minus equal to 2 because it's reducing by 2. I'll go"
+    },
+    {
+      "start": 3987.18,
+      "duration": 4.98,
+      "text": "ahead and try to run this and see if it is running fine"
+    },
+    {
+      "start": 3990.78,
+      "duration": 6.72,
+      "text": "you see so what I can say is the pattern 19 is"
+    },
+    {
+      "start": 3994.619,
+      "duration": 8.641,
+      "text": "also completed now it's about the next pattern which is the pattern 20."
+    },
+    {
+      "start": 4000.859,
+      "duration": 8.22,
+      "text": "so can I see over here it's again the same pattern but this time can you break"
+    },
+    {
+      "start": 4006.319,
+      "duration": 7.441,
+      "text": "down into symmetry you cannot because there is just if I if I carefully show"
+    },
+    {
+      "start": 4011.359,
+      "duration": 6.901,
+      "text": "you there is this one line over here you could because it was exactly"
+    },
+    {
+      "start": 4015.74,
+      "duration": 6.48,
+      "text": "symmetrically opposite but this is not symmetrically there is just a single"
+    },
+    {
+      "start": 4019.819,
+      "duration": 7.381,
+      "text": "line had this line been twice we could have done it accordingly but no issues"
+    },
+    {
+      "start": 4024.799,
+      "duration": 8.04,
+      "text": "maybe we can figure out a way and we can do it because these are nothing but"
+    },
+    {
+      "start": 4030.38,
+      "duration": 7.08,
+      "text": "similar to right angle time isn't it similar to writing"
+    },
+    {
+      "start": 4034.7,
+      "duration": 9.839,
+      "text": "so we will first have a look in over here assume it's fine it's like"
+    },
+    {
+      "start": 4040.88,
+      "duration": 9.54,
+      "text": "one two three four five six seven eight nine something I know for sure is 2 and"
+    },
+    {
+      "start": 4047.359,
+      "duration": 7.621,
+      "text": "minus 1 times is what the outer loop will run 2N minus 1 times is what the"
+    },
+    {
+      "start": 4053.48,
+      "duration": 4.26,
+      "text": "outer loop it run this is something for sure"
+    },
+    {
+      "start": 4055.76,
+      "duration": 6.96,
+      "text": "so if I look at this we're actually printing like one start"
+    },
+    {
+      "start": 4059.72,
+      "duration": 8.16,
+      "text": "a lot of spaces how many let's count one two three four five six seven eight"
+    },
+    {
+      "start": 4064.76,
+      "duration": 8.819,
+      "text": "spaces to start of it one star eight space one star"
+    },
+    {
+      "start": 4069.38,
+      "duration": 11.459,
+      "text": "two star two star six piece three star three star full specs four star four"
+    },
+    {
+      "start": 4076.76,
+      "duration": 10.5,
+      "text": "star two space and then five star zero space five star and then"
+    },
+    {
+      "start": 4083.119,
+      "duration": 8.341,
+      "text": "post our poster so can I see after"
+    },
+    {
+      "start": 4088.819,
+      "duration": 7.98,
+      "text": "can I say after the fifth row can I say after the fifth row there will"
+    },
+    {
+      "start": 4093.799,
+      "duration": 8.701,
+      "text": "be a subtle change the moment you are at the Rope"
+    },
+    {
+      "start": 4098.319,
+      "duration": 8.44,
+      "text": "five or maybe n by 2. the moment you are at the row N by 2 on The Next Step there"
+    },
+    {
+      "start": 4104.779,
+      "duration": 6.721,
+      "text": "will be a change and the change is very subtle"
+    },
+    {
+      "start": 4108.38,
+      "duration": 7.319,
+      "text": "this the space will increase till here it was decreasing the space was"
+    },
+    {
+      "start": 4113.239,
+      "duration": 8.58,
+      "text": "decreasing but whenever we reach here the space the space starts to increase"
+    },
+    {
+      "start": 4119.06,
+      "duration": 9.659,
+      "text": "the space will start to increase right and what happens to the rows"
+    },
+    {
+      "start": 4125.48,
+      "duration": 8.16,
+      "text": "you're just printing four then three we had done this yes we have done this if"
+    },
+    {
+      "start": 4131.779,
+      "duration": 8.101,
+      "text": "we go ahead we have done this in the pattern 10 so we'll go ahead and look at"
+    },
+    {
+      "start": 4137.06,
+      "duration": 7.679,
+      "text": "the pattern 10 how are we doing it we were saying the Stars will be 2N minus I"
+    },
+    {
+      "start": 4142.46,
+      "duration": 7.08,
+      "text": "the moment it crosses"
+    },
+    {
+      "start": 4146.06,
+      "duration": 9.659,
+      "text": "the nth guy right so this is what people do over here as well the moment it"
+    },
+    {
+      "start": 4151.88,
+      "duration": 8.04,
+      "text": "crosses this guy it's going to be nothing but"
+    },
+    {
+      "start": 4157.819,
+      "duration": 6.121,
+      "text": "the number of stars till here it was very simple whatever is"
+    },
+    {
+      "start": 4161.96,
+      "duration": 7.08,
+      "text": "the rule number that's the start at the moment it crosses it will be 2N minus I"
+    },
+    {
+      "start": 4166.4,
+      "duration": 8.279,
+      "text": "again very obvious for the six two into five minus six that's four stars"
+    },
+    {
+      "start": 4171.92,
+      "duration": 9.74,
+      "text": "done so I have figured out all the formulas everything now it's time to go"
+    },
+    {
+      "start": 4177.98,
+      "duration": 3.68,
+      "text": "and quickly code this up"
+    },
+    {
+      "start": 4183.799,
+      "duration": 12.541,
+      "text": "it's like void print 20 int n and I know one thing for sure this is going to run"
+    },
+    {
+      "start": 4192.799,
+      "duration": 8.94,
+      "text": "till 2 into n minus 1 and I plus plus that's something which we know now what"
+    },
+    {
+      "start": 4198.5,
+      "duration": 9.96,
+      "text": "are we printing stars at first spaces and then steps let's print the"
+    },
+    {
+      "start": 4205.4,
+      "duration": 9.06,
+      "text": "Stars either Stars the number of stars are very simple the number of stars"
+    },
+    {
+      "start": 4210.94,
+      "duration": 11.68,
+      "text": "depends like it will be rows but if if the eye has crossed the N then the Stars"
+    },
+    {
+      "start": 4219.199,
+      "duration": 8.161,
+      "text": "will be through in the sense I Stars will be"
+    },
+    {
+      "start": 4223.88,
+      "duration": 9.779,
+      "text": "2 into n minus the root number you can just print the stars now"
+    },
+    {
+      "start": 4229.52,
+      "duration": 7.94,
+      "text": "for INT J equal to 1 we can go ahead and print those many stars"
+    },
+    {
+      "start": 4235.58,
+      "duration": 7.86,
+      "text": "and we can go ahead and do J plus plus and C out of star that's it and over"
+    },
+    {
+      "start": 4241.699,
+      "duration": 5.281,
+      "text": "here you can just copy B is the same thing and you can see this so this will"
+    },
+    {
+      "start": 4245.42,
+      "duration": 5.34,
+      "text": "print all the stars what about the spaces you know those pieces how they"
+    },
+    {
+      "start": 4249.199,
+      "duration": 6.721,
+      "text": "increase so maybe you can keep the spaces initially as if you remember the"
+    },
+    {
+      "start": 4253.28,
+      "duration": 6.959,
+      "text": "initial space was eight so instead of keeping it as eight you can say 2 N"
+    },
+    {
+      "start": 4257.659,
+      "duration": 8.161,
+      "text": "minus two I think we did a mistake here by keeping the space as"
+    },
+    {
+      "start": 4263.36,
+      "duration": 6.24,
+      "text": "initial space as okay it was right it was Zero"
+    },
+    {
+      "start": 4266.96,
+      "duration": 8.16,
+      "text": "this will not be eight instead of this this will be 2 into n minus 2 my bad I"
+    },
+    {
+      "start": 4272.719,
+      "duration": 7.261,
+      "text": "did a mistake there but uh nevertheless so"
+    },
+    {
+      "start": 4277.4,
+      "duration": 8.7,
+      "text": "okay 2N minus 2 is the initial spaces that we start off with and then while"
+    },
+    {
+      "start": 4282.199,
+      "duration": 9.02,
+      "text": "going we can do like J equal to 1 and we need these many spaces so J plus plus"
+    },
+    {
+      "start": 4289.04,
+      "duration": 10.56,
+      "text": "and you can just go ahead and say space at the end of the day you can see out"
+    },
+    {
+      "start": 4293.9,
+      "duration": 11.1,
+      "text": "and L and if I is lesser than equal to like lesser than sorry lesser than n"
+    },
+    {
+      "start": 4302.659,
+      "duration": 8.401,
+      "text": "then you say spaces will be increased by two L spaces will be decreased by two"
+    },
+    {
+      "start": 4308.42,
+      "duration": 6.96,
+      "text": "this is what you will do to the spaces and this is pattern number 20 so let's"
+    },
+    {
+      "start": 4313.699,
+      "duration": 5.121,
+      "text": "go ahead and print this and see if it is running fine or not"
+    },
+    {
+      "start": 4319.58,
+      "duration": 6.42,
+      "text": "okay we have an issue looks like there was an issue while"
+    },
+    {
+      "start": 4324.56,
+      "duration": 5.659,
+      "text": "printing it why did it happen let's quickly have a"
+    },
+    {
+      "start": 4328.1,
+      "duration": 2.119,
+      "text": "look"
+    },
+    {
+      "start": 4331.9,
+      "duration": 7.24,
+      "text": "and this is where the space increases uh okay let's run it quickly let's compile"
+    },
+    {
+      "start": 4338.06,
+      "duration": 6.0,
+      "text": "and see look at this time it's both so so"
+    },
+    {
+      "start": 4342.199,
+      "duration": 5.46,
+      "text": "another pattern done"
+    },
+    {
+      "start": 4345.92,
+      "duration": 5.34,
+      "text": "isn't the pattern printing super easy so we're done with the pattern number 20 we"
+    },
+    {
+      "start": 4349.219,
+      "duration": 6.121,
+      "text": "will start with the pattern number 21. the image is wrong I'll get it fixed the"
+    },
+    {
+      "start": 4353.84,
+      "duration": 6.54,
+      "text": "correct image is this because you have to print a square so if you look at the"
+    },
+    {
+      "start": 4357.739,
+      "duration": 6.96,
+      "text": "pattern a given four so it's a four size Square"
+    },
+    {
+      "start": 4363.14,
+      "duration": 6.18,
+      "text": "so for a square you know the number the outer loop is very easy"
+    },
+    {
+      "start": 4366.98,
+      "duration": 8.52,
+      "text": "outer loop is going to print for n times that is for sure but if I look at the"
+    },
+    {
+      "start": 4372.38,
+      "duration": 7.319,
+      "text": "square it will Stars where does it have stars"
+    },
+    {
+      "start": 4376.52,
+      "duration": 9.659,
+      "text": "obviously in the boundaries that is easy fill the stars in the boundaries only"
+    },
+    {
+      "start": 4383.48,
+      "duration": 6.239,
+      "text": "can I say I'll run for all the time I'll run for all the times I'll run for all"
+    },
+    {
+      "start": 4388.1,
+      "duration": 4.98,
+      "text": "the times that means I'll run for four times every time I'll run for four times"
+    },
+    {
+      "start": 4391.82,
+      "duration": 6.48,
+      "text": "every time I start from something like 0 and then"
+    },
+    {
+      "start": 4395.48,
+      "duration": 7.14,
+      "text": "go on till one I'll run it and then I'll have a loop which again"
+    },
+    {
+      "start": 4400.34,
+      "duration": 8.22,
+      "text": "runs from 0 to n I'll have a loop I transfer 0 to n so"
+    },
+    {
+      "start": 4405.38,
+      "duration": 7.56,
+      "text": "can I see this that I'll just fill the boundaries"
+    },
+    {
+      "start": 4409.94,
+      "duration": 8.82,
+      "text": "and if I try to if I try to write the index six let's write the indexings"
+    },
+    {
+      "start": 4416.78,
+      "duration": 10.379,
+      "text": "it's very simple but did you write down the indexing it's like 0 1 2 3 0 1 2 3."
+    },
+    {
+      "start": 4422.659,
+      "duration": 11.0,
+      "text": "so can I see whenever I is 0 which is this or whenever I is equal to n minus 1"
+    },
+    {
+      "start": 4430.46,
+      "duration": 10.739,
+      "text": "which is this or whenever J is 0 or whenever J is n minus 1 can I"
+    },
+    {
+      "start": 4439.76,
+      "duration": 5.88,
+      "text": "say these are the cases of the boundaries these are the cases of the"
+    },
+    {
+      "start": 4443.179,
+      "duration": 8.221,
+      "text": "boundaries because whenever I is 0 it runs J runs 0 1 2 3 whenever I is 1 J"
+    },
+    {
+      "start": 4448.52,
+      "duration": 7.44,
+      "text": "run 0 1 2 3 whenever I is 2 J run 0 1 2 3 whenever I is 3 J runs 0 1 to 3. so"
+    },
+    {
+      "start": 4453.739,
+      "duration": 9.98,
+      "text": "can I say these are the cases when we know we have to fill the Stars"
+    },
+    {
+      "start": 4459.44,
+      "duration": 4.279,
+      "text": "as simple as that so"
+    },
+    {
+      "start": 4463.88,
+      "duration": 6.859,
+      "text": "so what are you so what are you waiting for let's go ahead and print this"
+    },
+    {
+      "start": 4468.32,
+      "duration": 2.419,
+      "text": "pattern"
+    },
+    {
+      "start": 4471.02,
+      "duration": 8.659,
+      "text": "it's like void print 21 idn and then you say okay I know I have to print these"
+    },
+    {
+      "start": 4477.5,
+      "duration": 2.179,
+      "text": "many"
+    },
+    {
+      "start": 4480.739,
+      "duration": 3.141,
+      "text": "I and DJ equal to 0"
+    },
+    {
+      "start": 4483.92,
+      "duration": 4.86,
+      "text": "and then you say Hey listen I know if you're this"
+    },
+    {
+      "start": 4487.52,
+      "duration": 7.8,
+      "text": "or he does"
+    },
+    {
+      "start": 4491.179,
+      "duration": 7.581,
+      "text": "or URLs or the others then only I'll print a star"
+    },
+    {
+      "start": 4499.04,
+      "duration": 6.9,
+      "text": "if not then I know"
+    },
+    {
+      "start": 4502.52,
+      "duration": 6.9,
+      "text": "you will have a space and over here I can say handle as simple as that and I"
+    },
+    {
+      "start": 4508.34,
+      "duration": 3.92,
+      "text": "can say 21."
+    },
+    {
+      "start": 4512.36,
+      "duration": 6.2,
+      "text": "run task let's run"
+    },
+    {
+      "start": 4515.84,
+      "duration": 2.72,
+      "text": "and this is"
+    },
+    {
+      "start": 4525.8,
+      "duration": 8.28,
+      "text": "this will be space uh now let's run it quickly run it and see if it is running"
+    },
+    {
+      "start": 4531.739,
+      "duration": 9.0,
+      "text": "fine yeah yes it's printing a square of the size 5. so what I can say is I'm"
+    },
+    {
+      "start": 4537.739,
+      "duration": 8.221,
+      "text": "done with the pattern number 21 as well the last pattern finally my my voice is"
+    },
+    {
+      "start": 4544.34,
+      "duration": 6.18,
+      "text": "giving up now so the first step that I will do is"
+    },
+    {
+      "start": 4548.06,
+      "duration": 6.3,
+      "text": "again it's very observation it will not come to you for the first"
+    },
+    {
+      "start": 4552.08,
+      "duration": 7.02,
+      "text": "time so to not worry if it doesn't comes to your head so what I'll do is"
+    },
+    {
+      "start": 4556.88,
+      "duration": 7.319,
+      "text": "I know there are seven rows and I know there are seven columns for something"
+    },
+    {
+      "start": 4560.42,
+      "duration": 10.44,
+      "text": "like n equal to 4. so what I will do is at first I will subtract 4 from every"
+    },
+    {
+      "start": 4568.34,
+      "duration": 9.48,
+      "text": "value and I'll get a new Matrix the new Matrix will be like zero zero zero zero"
+    },
+    {
+      "start": 4573.92,
+      "duration": 10.259,
+      "text": "zero zero zero and then zero zero zero zero zero zero zero zero zero zero zero"
+    },
+    {
+      "start": 4581.239,
+      "duration": 7.861,
+      "text": "zero zero zero zero so once I have subtracted 4 from everything like 4"
+    },
+    {
+      "start": 4586.04,
+      "duration": 9.84,
+      "text": "minus 1 this gives you 3. 4 minus 3 this gives you one so you just"
+    },
+    {
+      "start": 4593.12,
+      "duration": 7.92,
+      "text": "subtract 4 from every value so let's solve this and once you get the answer"
+    },
+    {
+      "start": 4598.219,
+      "duration": 7.141,
+      "text": "you again subtract 4 to get a very standard process so what I've done is I"
+    },
+    {
+      "start": 4603.679,
+      "duration": 8.581,
+      "text": "have subtracted n from it which is nothing but the four"
+    },
+    {
+      "start": 4608.6,
+      "duration": 8.94,
+      "text": "the value to get the new Matrix okay once you get this new Matrix you"
+    },
+    {
+      "start": 4615.08,
+      "duration": 6.72,
+      "text": "can again subtract the new Matrix to get the value"
+    },
+    {
+      "start": 4618.38,
+      "duration": 6.839,
+      "text": "right it's it's nothing but like this was the current value this is the"
+    },
+    {
+      "start": 4623.3,
+      "duration": 7.26,
+      "text": "current value and this is the new Matrix so again if you just take it to the"
+    },
+    {
+      "start": 4627.26,
+      "duration": 7.56,
+      "text": "other side it'll be n minus Nu Matrix equal to current value pretty very"
+    },
+    {
+      "start": 4633.08,
+      "duration": 6.36,
+      "text": "obvious pretty obvious so I need to generate this generating"
+    },
+    {
+      "start": 4637.4,
+      "duration": 9.6,
+      "text": "this is very easy let's understand how so I know in the"
+    },
+    {
+      "start": 4642.26,
+      "duration": 10.5,
+      "text": "matrix it's like 0 1 2 3 4 5 6 0 1 2 3 4 5 6. 2D Matrix back step 1.1 I've taught"
+    },
+    {
+      "start": 4650.719,
+      "duration": 6.241,
+      "text": "you to demand this is how the indexing goes like"
+    },
+    {
+      "start": 4654.02,
+      "duration": 7.139,
+      "text": "seven rows seven columns so the outer loop runs for seven times the inner loop"
+    },
+    {
+      "start": 4659.48,
+      "duration": 6.719,
+      "text": "runs for seven times this is something very sure because we've got a print"
+    },
+    {
+      "start": 4663.14,
+      "duration": 8.82,
+      "text": "seven seven how is seven related to four very very standard maths"
+    },
+    {
+      "start": 4668.36,
+      "duration": 8.64,
+      "text": "two into n minus 1 is how it is related so if I go back to the code I know the"
+    },
+    {
+      "start": 4674.42,
+      "duration": 9.0,
+      "text": "inner I know the outer loop which is 200 minus one"
+    },
+    {
+      "start": 4678.739,
+      "duration": 11.521,
+      "text": "I know sorry it'll go from 0 to 2 into n minus 1. and I plus b and I know the"
+    },
+    {
+      "start": 4686.42,
+      "duration": 9.12,
+      "text": "inner loop will go from 0 to 2 into n minus 1 and G plus plus this is"
+    },
+    {
+      "start": 4693.739,
+      "duration": 6.721,
+      "text": "something we know for sure now let's have some observation what is this value"
+    },
+    {
+      "start": 4698.12,
+      "duration": 7.86,
+      "text": "something to observe is if I take this the distance is 1 the distance is 2 the"
+    },
+    {
+      "start": 4703.46,
+      "duration": 6.54,
+      "text": "distance is 5 the distance is 4 so you take always the always the minimal"
+    },
+    {
+      "start": 4708.02,
+      "duration": 7.08,
+      "text": "distance which is one and you place it here let's take one more example three"
+    },
+    {
+      "start": 4712.1,
+      "duration": 8.82,
+      "text": "the distance is three three three three if you take the minimal from this"
+    },
+    {
+      "start": 4718.1,
+      "duration": 8.34,
+      "text": "portion when I say this portion this portion is nothing but the row"
+    },
+    {
+      "start": 4723.32,
+      "duration": 6.359,
+      "text": "number three the column number three and in order to find it you find the top"
+    },
+    {
+      "start": 4728.3,
+      "duration": 5.28,
+      "text": "distance left distance right distance bottom distance and you take the minimal"
+    },
+    {
+      "start": 4731.659,
+      "duration": 5.221,
+      "text": "of it and once you take the minimal you actually find this value this 2 is"
+    },
+    {
+      "start": 4735.44,
+      "duration": 4.739,
+      "text": "nothing but the distance from the bottom this one is nothing but the distance"
+    },
+    {
+      "start": 4738.38,
+      "duration": 4.74,
+      "text": "from the bottom the zero is nothing but the distance from the top you have to"
+    },
+    {
+      "start": 4741.98,
+      "duration": 5.94,
+      "text": "find the distance and you know how to find the distance"
+    },
+    {
+      "start": 4744.8,
+      "duration": 7.859,
+      "text": "it's very very simple so if it if I talk uh my bad if I talk about this guy"
+    },
+    {
+      "start": 4750.38,
+      "duration": 5.88,
+      "text": "what's this distance it's nothing but the row number"
+    },
+    {
+      "start": 4754.1,
+      "duration": 6.78,
+      "text": "so can I say the top distance is nothing but the row number I"
+    },
+    {
+      "start": 4757.88,
+      "duration": 7.56,
+      "text": "can I say the uh left is nothing but the column number J why because if I'm"
+    },
+    {
+      "start": 4763.58,
+      "duration": 6.84,
+      "text": "talking about this this 3 is the distance isn't and if I talk about the"
+    },
+    {
+      "start": 4768.26,
+      "duration": 7.68,
+      "text": "right what's right if I'm standing here this is the"
+    },
+    {
+      "start": 4772.58,
+      "duration": 9.54,
+      "text": "distance it's like six the last index is definitely"
+    },
+    {
+      "start": 4778.58,
+      "duration": 8.94,
+      "text": "2N minus 1 minus 1 is the last like seven minus 1 6 is the last index"
+    },
+    {
+      "start": 4785.719,
+      "duration": 7.321,
+      "text": "and then in order to find the distance whatever is G"
+    },
+    {
+      "start": 4790.34,
+      "duration": 8.58,
+      "text": "and the bottom similarly the last index is 2N minus 1 minus 1 minus I why this"
+    },
+    {
+      "start": 4796.88,
+      "duration": 5.64,
+      "text": "distance if this is the case we take this 6 and then you might"
+    },
+    {
+      "start": 4800.84,
+      "duration": 6.66,
+      "text": "so once you have got this you can actually get all the values once you've"
+    },
+    {
+      "start": 4804.679,
+      "duration": 7.861,
+      "text": "got all the values you subtract n and you get your answer"
+    },
+    {
+      "start": 4809.9,
+      "duration": 10.2,
+      "text": "so we know one thing for sure uh the top distance is I the left distance is the"
+    },
+    {
+      "start": 4817.159,
+      "duration": 11.301,
+      "text": "column G and we know the bottom distance or the right distance is 2 into n minus"
+    },
+    {
+      "start": 4823.82,
+      "duration": 10.98,
+      "text": "1 minus 1 which is minus 2 subsequently minus of the column number okay and we"
+    },
+    {
+      "start": 4833.179,
+      "duration": 5.821,
+      "text": "know the bottom distance or the down distance is"
+    },
+    {
+      "start": 4836.179,
+      "duration": 7.261,
+      "text": "2 into n minus 2 that's the last index minus"
+    },
+    {
+      "start": 4840.739,
+      "duration": 6.061,
+      "text": "I and once you've got this you know what you have to print the value the value"
+    },
+    {
+      "start": 4845.36,
+      "duration": 5.7,
+      "text": "will be subtracted by n because previously you also subtracted and the"
+    },
+    {
+      "start": 4849.199,
+      "duration": 7.98,
+      "text": "Min of all of these so Min of top down and mean of left"
+    },
+    {
+      "start": 4856.34,
+      "duration": 4.74,
+      "text": "right the minimum function only accepts two"
+    },
+    {
+      "start": 4859.1,
+      "duration": 7.46,
+      "text": "variables that's why and you can do a end l is it right okay"
+    },
+    {
+      "start": 4864.32,
+      "duration": 9.48,
+      "text": "let's let's go ahead and see if it is running fine"
+    },
+    {
+      "start": 4869.78,
+      "duration": 9.12,
+      "text": "yeah it is it does very easy isn't it so"
+    },
+    {
+      "start": 4875.06,
+      "duration": 9.659,
+      "text": "we have completed 22 and all the patents are finally completed so guys I hope"
+    },
+    {
+      "start": 4881.719,
+      "duration": 8.52,
+      "text": "you've enjoyed the entire lecture it took everything out of me so please"
+    },
+    {
+      "start": 4887.3,
+      "duration": 6.18,
+      "text": "consider hitting that like button and to follow our ritual do comment understood"
+    },
+    {
+      "start": 4892.219,
+      "duration": 4.621,
+      "text": "so that I get an idea that you understood everything if you have any"
+    },
+    {
+      "start": 4895.219,
+      "duration": 5.041,
+      "text": "doubts put it into the comment section I will be replying back or the community"
+    },
+    {
+      "start": 4898.4,
+      "duration": 6.12,
+      "text": "will definitely help you if you're new to our Channel what are you waiting for"
+    },
+    {
+      "start": 4901.659,
+      "duration": 8.02,
+      "text": "hit that subscribe button follow stripers A to Z DSA course share your"
+    },
+    {
+      "start": 4907.76,
+      "duration": 7.919,
+      "text": "learnings using the hashtags drivers A to Z DSA and yeah with this I'll be"
+    },
+    {
+      "start": 4913.34,
+      "duration": 6.44,
+      "text": "wrapping up this video let's meet in the next lecture till then bye-bye take care"
+    },
+    {
+      "start": 4919.81,
+      "duration": 7.889,
+      "text": "[Music]"
+    }
+  ]
+}

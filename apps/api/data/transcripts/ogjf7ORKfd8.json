@@ -1,0 +1,2727 @@
+{
+  "video_id": "ogjf7ORKfd8",
+  "title": "Merge Sort | Algorithm | Pseudocode | Dry Run | Code | Strivers A2Z DSA Course",
+  "total_segments": 544,
+  "segments": [
+    {
+      "start": 3.159,
+      "duration": 4.2,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.12,
+      "duration": 5.96,
+      "text": "so this is another lecture from the Strivers a toz course in case you're for"
+    },
+    {
+      "start": 10.32,
+      "duration": 6.959,
+      "text": "the first time here this is India's most in-depth DS algo course why do I say"
+    },
+    {
+      "start": 14.32,
+      "duration": 7.959,
+      "text": "that because this course has 456 modules and we will be solving more than 400"
+    },
+    {
+      "start": 19.64,
+      "duration": 6.559,
+      "text": "plus problems in this particular DS algo course you can buy any of the paid"
+    },
+    {
+      "start": 23.88,
+      "duration": 6.239,
+      "text": "courses on the market you can check out all the free courses on YouTube you will"
+    },
+    {
+      "start": 28.039,
+      "duration": 7.481,
+      "text": "not find such a comprehensive course on DS algo throughout the market so in case"
+    },
+    {
+      "start": 34.04,
+      "duration": 5.08,
+      "text": "you haven't checked it out there's a link in the description you can check"
+    },
+    {
+      "start": 36.719,
+      "duration": 6.761,
+      "text": "out the entire course so in the previous video we have covered uh the step 2.1"
+    },
+    {
+      "start": 41.32,
+      "duration": 7.0,
+      "text": "module in this uh video we will be covering the algorithm merge sort but"
+    },
+    {
+      "start": 46.239,
+      "duration": 7.441,
+      "text": "there is a slight prerequisite to this algorithm you should have covered the"
+    },
+    {
+      "start": 50.6,
+      "duration": 8.439,
+      "text": "step 1.5 module just in case you haven't please go and check it out and guys we"
+    },
+    {
+      "start": 56.16,
+      "duration": 6.6,
+      "text": "are attaching the notes to all the problems and the video solution will be"
+    },
+    {
+      "start": 61.0,
+      "duration": 6.0,
+      "text": "coming over here like if you see this one the video Solutions are attached and"
+    },
+    {
+      "start": 64.879,
+      "duration": 6.24,
+      "text": "we'll soon be attaching all the notes so please make sure you follow this"
+    },
+    {
+      "start": 68.92,
+      "duration": 6.16,
+      "text": "particular sheet the link will be in the description so without waiting let's get"
+    },
+    {
+      "start": 72.92,
+      "duration": 8.64,
+      "text": "started with the problem merge short so what is merge sort it is nothing but one"
+    },
+    {
+      "start": 78.96,
+      "duration": 7.08,
+      "text": "of the other sorting algorithms you must be thinking but striver till now you"
+    },
+    {
+      "start": 83.52,
+      "duration": 8.2,
+      "text": "have taught us bubble short insertion sort selection sort so why this another"
+    },
+    {
+      "start": 89.56,
+      "duration": 7.44,
+      "text": "algor Alm if you remember all of these three algorithms we're taking B go of n"
+    },
+    {
+      "start": 93.96,
+      "duration": 8.56,
+      "text": "squ in order to sort an array this is where M short is better mot takes a much"
+    },
+    {
+      "start": 100.32,
+      "duration": 5.799,
+      "text": "much better time complexity we will be discussing the time complexity at the"
+    },
+    {
+      "start": 104.04,
+      "duration": 8.119,
+      "text": "end of this video but as of now you need to understand that mot is a much more"
+    },
+    {
+      "start": 109.24,
+      "duration": 7.199,
+      "text": "optimized sorting algorithm now you know sorting algorithm is nothing but it will"
+    },
+    {
+      "start": 114.159,
+      "duration": 5.161,
+      "text": "sort a given data structure if it has numbers it will sort it according to"
+    },
+    {
+      "start": 117.96,
+      "duration": 5.439,
+      "text": "Numbers if it has characters it will sort it according to characters if it"
+    },
+    {
+      "start": 121.36,
+      "duration": 6.8,
+      "text": "has strings it will sort it according to the strings so as of now we know that"
+    },
+    {
+      "start": 125.399,
+      "duration": 6.761,
+      "text": "mot is a sorting algorithm so what will be the flow of the lecture the flow of"
+    },
+    {
+      "start": 129.879,
+      "duration": 9.201,
+      "text": "the lecture will be first I'll explain the algorithm completely then I'll go to"
+    },
+    {
+      "start": 135.64,
+      "duration": 9.12,
+      "text": "the pseudo code and since this is a recursive algorithm I will go to dry run"
+    },
+    {
+      "start": 142.28,
+      "duration": 7.0,
+      "text": "the recursion so that it gets into your head so after this three steps you will"
+    },
+    {
+      "start": 147.68,
+      "duration": 5.279,
+      "text": "be able to code this particular algorithm in any of the languages"
+    },
+    {
+      "start": 151.12,
+      "duration": 6.399,
+      "text": "because I will be writing the pseudo code post this I'll be taking one of the"
+    },
+    {
+      "start": 155.2,
+      "duration": 6.88,
+      "text": "languages and I'll be writing the main code again this is something which is"
+    },
+    {
+      "start": 159.72,
+      "duration": 6.519,
+      "text": "not that important I will be focusing more on the first three steps so without"
+    },
+    {
+      "start": 164.68,
+      "duration": 4.52,
+      "text": "waiting let's get started with the first step that is the explanation of the"
+    },
+    {
+      "start": 167.8,
+      "duration": 6.32,
+      "text": "algorithm so in order to explain the algorithm I will take this particular"
+    },
+    {
+      "start": 170.959,
+      "duration": 8.681,
+      "text": "example of an array which has a size of nine I need to remember two words in M"
+    },
+    {
+      "start": 177.12,
+      "duration": 12.16,
+      "text": "short please remember that the algorithm means means divide and merge please"
+    },
+    {
+      "start": 184.56,
+      "duration": 9.679,
+      "text": "remember this divide and merge so as as you can see that this array consists of"
+    },
+    {
+      "start": 191.799,
+      "duration": 7.321,
+      "text": "nine elements if I have to ask you a question how do you divide nine elements"
+    },
+    {
+      "start": 196.799,
+      "duration": 9.041,
+      "text": "into two parts you'll be like okay there are two ways in which I can do it one is"
+    },
+    {
+      "start": 201.68,
+      "duration": 10.24,
+      "text": "I'll say four numbers and five numbers that's one of the ways the other way you"
+    },
+    {
+      "start": 208.12,
+      "duration": 10.64,
+      "text": "can say is five numbers numers and four numbers that's two ways in which you can"
+    },
+    {
+      "start": 214.92,
+      "duration": 8.399,
+      "text": "divide nine why because nine is a odd number so that cannot be splitted into"
+    },
+    {
+      "start": 221.159,
+      "duration": 8.08,
+      "text": "two equal parts that's why either you have to go 4X 5 or 5 by4 now you can"
+    },
+    {
+      "start": 227.2,
+      "duration": 7.679,
+      "text": "follow any of the path I'll follow the 5x4 path so if I follow the 5x4 path"
+    },
+    {
+      "start": 232.0,
+      "duration": 7.799,
+      "text": "what happens is this algorithm divides the array hypothetically very important"
+    },
+    {
+      "start": 237.0,
+      "duration": 7.36,
+      "text": "word this algorithm divides the array hypothetically into two parts and says 3"
+    },
+    {
+      "start": 242.319,
+      "duration": 8.0,
+      "text": "1 2 4 1 and 5 2 6 4 what do you mean by"
+    },
+    {
+      "start": 248.959,
+      "duration": 5.441,
+      "text": "hypothetically when I will write the pseudo code I'll explain you okay so as"
+    },
+    {
+      "start": 252.519,
+      "duration": 7.201,
+      "text": "of now this algorithm has divided the array into two parts one which has five"
+    },
+    {
+      "start": 257.199,
+      "duration": 6.681,
+      "text": "elements and the other which has four elements I can say left part and the"
+    },
+    {
+      "start": 261.519,
+      "duration": 6.201,
+      "text": "right part now what I will do is I'll always take the left part and I'll try"
+    },
+    {
+      "start": 265.759,
+      "duration": 6.761,
+      "text": "to divide it again so let's try to divide it again if I try to divide div"
+    },
+    {
+      "start": 269.919,
+      "duration": 7.081,
+      "text": "it again what happens is it has five numbers remember this it has five"
+    },
+    {
+      "start": 274.479,
+      "duration": 10.601,
+      "text": "numbers so you can divide it like 2x 3 or 3x2 now since since in the first step"
+    },
+    {
+      "start": 281.0,
+      "duration": 8.4,
+      "text": "I divided N9 into five and four bigger smaller I'll follow the same pattern"
+    },
+    {
+      "start": 287.68,
+      "duration": 6.239,
+      "text": "I'll follow the same pattern so that I can easily write a repetitive code now"
+    },
+    {
+      "start": 292.44,
+      "duration": 7.28,
+      "text": "what I'll do is I'll try to divide it something like 312 and"
+    },
+    {
+      "start": 296.88,
+      "duration": 7.68,
+      "text": "41 remember one thing you can also div divide it as smaller greater that is"
+    },
+    {
+      "start": 302.639,
+      "duration": 6.801,
+      "text": "completely okay how you divide it doesn't matter as long as you divide it"
+    },
+    {
+      "start": 306.8,
+      "duration": 7.92,
+      "text": "okay but make sure you follow the same pattern like over here it was like over"
+    },
+    {
+      "start": 312.12,
+      "duration": 6.96,
+      "text": "here if you see it was 54 it is greater smaller so follow the same pattern of"
+    },
+    {
+      "start": 316.72,
+      "duration": 7.96,
+      "text": "division in the future as well for odd numbers okay so next 312 go ahead and"
+    },
+    {
+      "start": 322.68,
+      "duration": 9.44,
+      "text": "divide it I follow the same pattern and let's say 31 and two so it's like 2/ one"
+    },
+    {
+      "start": 329.919,
+      "duration": 9.161,
+      "text": "again I'll try to divide it and this time it has two numbers it's even so it"
+    },
+    {
+      "start": 336.12,
+      "duration": 9.56,
+      "text": "gets divided into two equal parts so I'll divide it something like three and"
+    },
+    {
+      "start": 342.28,
+      "duration": 7.68,
+      "text": "one now tell me one thing can this be divide it further the answer to that is"
+    },
+    {
+      "start": 348.12,
+      "duration": 7.76,
+      "text": "no we cannot because it's a single number and you cannot divide a single"
+    },
+    {
+      "start": 352.479,
+      "duration": 9.081,
+      "text": "number so this is where you stop you say the moment I get a single number I stop"
+    },
+    {
+      "start": 359.639,
+      "duration": 7.96,
+      "text": "and you perform the second half of the algorithm that states please merge them"
+    },
+    {
+      "start": 364.84,
+      "duration": 6.759,
+      "text": "so what do you mean by merge it is three I'll write"
+    },
+    {
+      "start": 368.56,
+      "duration": 8.56,
+      "text": "three it's one so they are basically two hypothetical array consisting of one"
+    },
+    {
+      "start": 374.72,
+      "duration": 7.56,
+      "text": "numbers so if there are two hypothetical arrays of one numbers and I want to make"
+    },
+    {
+      "start": 379.68,
+      "duration": 9.16,
+      "text": "it a single array what will I do I'll say okay let's merge it and you try to"
+    },
+    {
+      "start": 385.24,
+      "duration": 9.12,
+      "text": "merge it into a single array consisting of the two numbers but in a sorted way"
+    },
+    {
+      "start": 392.199,
+      "duration": 7.081,
+      "text": "so if I have to say okay I have three I have one and if I have to fill the first"
+    },
+    {
+      "start": 396.599,
+      "duration": 7.961,
+      "text": "position I have to make it sorted whom will I take will I take one will I take"
+    },
+    {
+      "start": 401.96,
+      "duration": 8.56,
+      "text": "three the answer to that is I will take one so I take one next who is remaining"
+    },
+    {
+      "start": 407.68,
+      "duration": 7.32,
+      "text": "three I've merged it I'll explain merge in detail as the array gets bigger but"
+    },
+    {
+      "start": 412.88,
+      "duration": 6.879,
+      "text": "as of now what you can say is okay we come back we come back whenever it's a"
+    },
+    {
+      "start": 417.68,
+      "duration": 7.519,
+      "text": "single element in both sides we come back we take them and we merge and on"
+    },
+    {
+      "start": 422.639,
+      "duration": 10.201,
+      "text": "merging this will become 1 three this will become 1 three perfect now this 312"
+    },
+    {
+      "start": 429.479,
+      "duration": 10.4,
+      "text": "was divided into this portion and was divided into this portion can I say the"
+    },
+    {
+      "start": 436.24,
+      "duration": 8.92,
+      "text": "left portion got itself sorted and now the right portion has a single element"
+    },
+    {
+      "start": 442.479,
+      "duration": 8.44,
+      "text": "can a single element be further divided the answer to that is no so your next"
+    },
+    {
+      "start": 447.8,
+      "duration": 9.519,
+      "text": "step will be very simple you will take 1A 3 and two so can I say these are two"
+    },
+    {
+      "start": 454.44,
+      "duration": 7.599,
+      "text": "hypothetical arrays one is 1A 3 on the left one is two on the right and you'll"
+    },
+    {
+      "start": 459.72,
+      "duration": 8.039,
+      "text": "try to merge them into a single because there are two hypothetical arrays and if"
+    },
+    {
+      "start": 464.24,
+      "duration": 9.919,
+      "text": "you carefully observe the left array in itself is sorted and the right array in"
+    },
+    {
+      "start": 471.28,
+      "duration": 8.44,
+      "text": "itself is sorted so now I will go across and hypothetically try to merge them if"
+    },
+    {
+      "start": 476.96,
+      "duration": 7.32,
+      "text": "I try to merge them they will give me three elements in the sorted order now"
+    },
+    {
+      "start": 481.68,
+      "duration": 8.12,
+      "text": "tell me one thing do you take one or do you take two in order to fill this first"
+    },
+    {
+      "start": 487.0,
+      "duration": 9.28,
+      "text": "position you'll be like hey dri I will take one so you took one and you did not"
+    },
+    {
+      "start": 493.4,
+      "duration": 8.32,
+      "text": "take two so the moment you've taken one the next you will say do I take three do"
+    },
+    {
+      "start": 498.879,
+      "duration": 7.521,
+      "text": "I take two like I'll take two so you took two next you just left with one so"
+    },
+    {
+      "start": 504.639,
+      "duration": 5.641,
+      "text": "you will take three again I'll explain this algorithm in depth do not worry so"
+    },
+    {
+      "start": 509.039,
+      "duration": 8.961,
+      "text": "we basically merge them again merge them so"
+    },
+    {
+      "start": 513.68,
+      "duration": 11.24,
+      "text": "we get 1 2 3 the merging has completed so can I say initially when I"
+    },
+    {
+      "start": 521.44,
+      "duration": 10.48,
+      "text": "went to the left we had 1 2 3 and when we went to the right we had 41 so the"
+    },
+    {
+      "start": 527.399,
+      "duration": 10.56,
+      "text": "left portion has divided and merged itself into a single sorted array it has"
+    },
+    {
+      "start": 535.959,
+      "duration": 8.761,
+      "text": "it's time to go to the right let's go to the right so the moment you look at the"
+    },
+    {
+      "start": 539.88,
+      "duration": 10.88,
+      "text": "right it has 41 so we again try to uh divide it so if you try to divide it it"
+    },
+    {
+      "start": 546.76,
+      "duration": 8.04,
+      "text": "will be four and one can I say we can stop over here because they are single"
+    },
+    {
+      "start": 552.839,
+      "duration": 6.881,
+      "text": "elements and they cannot be further divided yes we cannot further divide"
+    },
+    {
+      "start": 557.44,
+      "duration": 9.6,
+      "text": "them so what we do is we stop now if it is four if it is one and"
+    },
+    {
+      "start": 563.839,
+      "duration": 8.081,
+      "text": "if you have to merge them into a single sorted array first one will come then"
+    },
+    {
+      "start": 569.68,
+      "duration": 8.159,
+      "text": "four will come so what will happen is they will try to merge them and you will"
+    },
+    {
+      "start": 573.839,
+      "duration": 9.961,
+      "text": "get one comma four so can I say can I say that this one went got it sorted"
+    },
+    {
+      "start": 581.32,
+      "duration": 6.959,
+      "text": "this one went and got it sorted so basically now they both will come back"
+    },
+    {
+      "start": 586.04,
+      "duration": 8.239,
+      "text": "because the left half is sorted and the right half is sorted if both of them are"
+    },
+    {
+      "start": 591.2,
+      "duration": 9.28,
+      "text": "completely sorted what will happen so can I say it went left and it got itself"
+    },
+    {
+      "start": 597.56,
+      "duration": 10.279,
+      "text": "sorted it went right it got itself sorted it's time to come back so they"
+    },
+    {
+      "start": 604.16,
+      "duration": 11.32,
+      "text": "will get merged very simple let's write it again 1 2 3 and 1 4 and they will try"
+    },
+    {
+      "start": 612.44,
+      "duration": 8.6,
+      "text": "to merge themsel into how many elements definitely yes five elements so let's"
+    },
+    {
+      "start": 619.399,
+      "duration": 5.801,
+      "text": "kind of now try to get into the algorithm now you know this is the"
+    },
+    {
+      "start": 622.959,
+      "duration": 6.681,
+      "text": "smallest element on the left half if I say there are two hypothetical arrays"
+    },
+    {
+      "start": 627.399,
+      "duration": 6.68,
+      "text": "can I say on the left the small smallest element is definitely on the beginning"
+    },
+    {
+      "start": 631.76,
+      "duration": 8.24,
+      "text": "because both the arrays are sorted so we will take one we will take one we have"
+    },
+    {
+      "start": 637.519,
+      "duration": 8.32,
+      "text": "one over here we have one over here but I have to ask you which one will occupy"
+    },
+    {
+      "start": 643.0,
+      "duration": 8.8,
+      "text": "this it can be any of the ones I take any of the ones and maybe I'll just move"
+    },
+    {
+      "start": 648.16,
+      "duration": 9.44,
+      "text": "it now if I have to ask you out of two out of one which will occupy this you"
+    },
+    {
+      "start": 655.44,
+      "duration": 7.88,
+      "text": "know the answer it's one so you now move the pointer next next if I ask you out"
+    },
+    {
+      "start": 660.639,
+      "duration": 7.76,
+      "text": "of two out of four which one will occupy this you will be saying two so I'll move"
+    },
+    {
+      "start": 666.04,
+      "duration": 8.64,
+      "text": "the pointer next if I ask you out of three out of four which one does occupy"
+    },
+    {
+      "start": 672.12,
+      "duration": 6.719,
+      "text": "this particular guy it like three and this will move out next if I ask which"
+    },
+    {
+      "start": 676.959,
+      "duration": 7.68,
+      "text": "one will occupy this you'll be like four and this moves out so apparently you got"
+    },
+    {
+      "start": 681.639,
+      "duration": 13.401,
+      "text": "this entire thing sorted so can I say this will become 1 1 2 3 4 done"
+    },
+    {
+      "start": 691.12,
+      "duration": 11.92,
+      "text": "so this half is sorted so we started with nine numbers we splitted them into"
+    },
+    {
+      "start": 699.24,
+      "duration": 9.039,
+      "text": "five on this side four on this side five guys are have been sorted by the"
+    },
+    {
+      "start": 705.72,
+      "duration": 7.4,
+      "text": "algorithm divide divide divide and merge merge merge they got themselves sorted"
+    },
+    {
+      "start": 710.839,
+      "duration": 8.161,
+      "text": "now it's about these four elements can I perform the same algorithm of divide and"
+    },
+    {
+      "start": 715.68,
+      "duration": 9.0,
+      "text": "merge on these four I can so what I'll do is I'll again start because now it's"
+    },
+    {
+      "start": 721.839,
+      "duration": 7.201,
+      "text": "the right half turn to get sorted so I'll not again divide the four elements"
+    },
+    {
+      "start": 726.88,
+      "duration": 7.959,
+      "text": "and if there are even elements how do they get divided into equal number of"
+    },
+    {
+      "start": 730.959,
+      "duration": 12.32,
+      "text": "elements so it will become 5 comma 2 and 6 comma 4 5 comma 2 will become 5 2 so"
+    },
+    {
+      "start": 740.76,
+      "duration": 8.56,
+      "text": "again can I say they will be sorted back into"
+    },
+    {
+      "start": 745.519,
+      "duration": 12.32,
+      "text": "25 and now this one will take place so be like 6 4 again it will come back I'll"
+    },
+    {
+      "start": 754.079,
+      "duration": 8.801,
+      "text": "say 4 6 perfect now can I say this portion is sorted this portion is sorted"
+    },
+    {
+      "start": 760.6,
+      "duration": 8.52,
+      "text": "so now they will come back and how will they come back let's write it out 25 4 6"
+    },
+    {
+      "start": 766.8,
+      "duration": 9.719,
+      "text": "so both of them will get merged into how many elements four elements two or four"
+    },
+    {
+      "start": 772.92,
+      "duration": 8.2,
+      "text": "which one goes at the first two four or five four or five four"
+    },
+    {
+      "start": 781.32,
+      "duration": 14.44,
+      "text": "sorry uh now six or five yes 5 next six it's like 2 456 very simple so this"
+    },
+    {
+      "start": 792.199,
+      "duration": 7.721,
+      "text": "becomes 2 456 we can go ahead and erase this as well got a bit clumsier but I'm"
+    },
+    {
+      "start": 798.88,
+      "duration": 6.519,
+      "text": "I'm assuming you're getting the explanation now where are we can I say"
+    },
+    {
+      "start": 803.519,
+      "duration": 7.041,
+      "text": "we went to the left we got everything sorted we went to the right we got"
+    },
+    {
+      "start": 807.68,
+      "duration": 7.44,
+      "text": "everything sorted the left left the left five elements are sorted the right four"
+    },
+    {
+      "start": 812.48,
+      "duration": 7.32,
+      "text": "elements are sorted what is that we need to do need to merge them you need to"
+    },
+    {
+      "start": 817.399,
+      "duration": 11.921,
+      "text": "perform the last step that is merge so these 1 1 2 3 4 1 1 2 3 4 and on the"
+    },
+    {
+      "start": 825.48,
+      "duration": 9.919,
+      "text": "right we have 2 4 5 6 we have 2 4 5 six they will get merged into nine elements"
+    },
+    {
+      "start": 832.6,
+      "duration": 7.76,
+      "text": "and that will be my ultimate sorted array how do we merge let's Now"
+    },
+    {
+      "start": 838.36,
+      "duration": 8.44,
+      "text": "understand the algorithm in depth so what we do is we keep couple of pointers"
+    },
+    {
+      "start": 843.12,
+      "duration": 12.639,
+      "text": "one here one here okay and then we create an array of size let's say nine 1"
+    },
+    {
+      "start": 850.8,
+      "duration": 9.24,
+      "text": "2 3 4 5 6 we created an array of size 9 or you can create an Mt and keep on"
+    },
+    {
+      "start": 857.8,
+      "duration": 7.599,
+      "text": "piling it up that's your choice we will take care of that during the"
+    },
+    {
+      "start": 861.639,
+      "duration": 8.841,
+      "text": "implementation so we know this entire left array is sorted we know the entire"
+    },
+    {
+      "start": 867.48,
+      "duration": 8.479,
+      "text": "right array is sorted so so we have to combine them to get a sorted array so"
+    },
+    {
+      "start": 873.48,
+      "duration": 7.12,
+      "text": "out of one and out of two because both of them are smallest I know I've taken"
+    },
+    {
+      "start": 878.279,
+      "duration": 8.321,
+      "text": "the two smallest guys from left from right which one will take this place you"
+    },
+    {
+      "start": 883.32,
+      "duration": 6.84,
+      "text": "say one so you take one and you place it and the moment you've taken someone"
+    },
+    {
+      "start": 888.199,
+      "duration": 6.241,
+      "text": "you'll just move the pointer let's start start moving the pointer got it and you"
+    },
+    {
+      "start": 892.32,
+      "duration": 6.56,
+      "text": "take one or you take two again you take one and you move the pointer you take"
+    },
+    {
+      "start": 896.72,
+      "duration": 6.16,
+      "text": "two or you take two you can take two and you you can move the pointer you'll take"
+    },
+    {
+      "start": 900.6,
+      "duration": 5.72,
+      "text": "three or you'll take two you'll take two and you'll move the pointer now will you"
+    },
+    {
+      "start": 904.519,
+      "duration": 5.161,
+      "text": "take four will you take three you'll take three and you'll move the pointer"
+    },
+    {
+      "start": 907.92,
+      "duration": 7.839,
+      "text": "now will you take four or will you take four you can take four and you can move"
+    },
+    {
+      "start": 911.48,
+      "duration": 10.12,
+      "text": "the pointer so we can say the left array has been exhausted please hear me"
+    },
+    {
+      "start": 918.399,
+      "duration": 8.44,
+      "text": "properly I can say that the left array is completed it doesn't have any more"
+    },
+    {
+      "start": 924.12,
+      "duration": 7.8,
+      "text": "elements that can go over here so what I will do is without doing any further"
+    },
+    {
+      "start": 929.6,
+      "duration": 7.919,
+      "text": "comparisons I'll pick up everyone from the right and I'll just put it over here"
+    },
+    {
+      "start": 934.959,
+      "duration": 8.081,
+      "text": "I'll pick up everyone from the right and I'll put it over here cuz there is no"
+    },
+    {
+      "start": 939.36,
+      "duration": 8.24,
+      "text": "one left on the left got it if something similar happened that the right element"
+    },
+    {
+      "start": 945.68,
+      "duration": 7.32,
+      "text": "got completed then you would have taken this and you have put it it doesn't"
+    },
+    {
+      "start": 949.44,
+      "duration": 7.879,
+      "text": "matter so it's very simple if I have to define the merge algorithm it's very"
+    },
+    {
+      "start": 954.959,
+      "duration": 7.641,
+      "text": "simple you take two pointers compare put put put one gets comp completed the"
+    },
+    {
+      "start": 959.92,
+      "duration": 7.76,
+      "text": "other one gets put we will implement this do not worry"
+    },
+    {
+      "start": 964.88,
+      "duration": 8.28,
+      "text": "so we have done the Sorting so the last step what will happen they come back"
+    },
+    {
+      "start": 969.72,
+      "duration": 14.32,
+      "text": "they come back and this will be 1 1 2 2 3 4 1 1 2 2"
+    },
+    {
+      "start": 977.199,
+      "duration": 12.08,
+      "text": "3 4 4 5 6 4 4 5 6 so can I see after I have completed all the steps of divide"
+    },
+    {
+      "start": 987.0,
+      "duration": 7.399,
+      "text": "and merge if you carefully notice the last step was merge in the entire"
+    },
+    {
+      "start": 992.079,
+      "duration": 9.12,
+      "text": "algorithm so once I performed both of them completely on all the parts of the"
+    },
+    {
+      "start": 997.16,
+      "duration": 8.64,
+      "text": "array the array that I get will always be sorted this was the algorithm I hope"
+    },
+    {
+      "start": 1004.44,
+      "duration": 6.48,
+      "text": "you have understood the expl okay so I hope you have understood the explanation"
+    },
+    {
+      "start": 1008.319,
+      "duration": 7.96,
+      "text": "it's time to understand the pseudo code first thing that we have to observe is"
+    },
+    {
+      "start": 1013.72,
+      "duration": 7.599,
+      "text": "what are we doing we are dividing we dividing the array into two halves but"
+    },
+    {
+      "start": 1019.12,
+      "duration": 7.079,
+      "text": "logically speaking if you're going to break the uh break the array down into"
+    },
+    {
+      "start": 1023.399,
+      "duration": 7.92,
+      "text": "two new arrays and then again this array into two new arrays again this array"
+    },
+    {
+      "start": 1028.24,
+      "duration": 11.12,
+      "text": "into two new arrays will it makes sense no this is where in the pseudo code we"
+    },
+    {
+      "start": 1035.12,
+      "duration": 9.48,
+      "text": "will try to play around with index instead of breaking them down into two"
+    },
+    {
+      "start": 1042.16,
+      "duration": 7.2,
+      "text": "new arrays we will try to play around with indexes okay so in order to write"
+    },
+    {
+      "start": 1047.64,
+      "duration": 5.96,
+      "text": "the pseudo code what I've done is is I've taken a very small array of size"
+    },
+    {
+      "start": 1051.559,
+      "duration": 8.041,
+      "text": "five now you know the array indexing starts from zero and it will go till"
+    },
+    {
+      "start": 1055.72,
+      "duration": 12.56,
+      "text": "four if the size is five so what I will say is see this index will be referred"
+    },
+    {
+      "start": 1063.36,
+      "duration": 9.28,
+      "text": "as my low this index will be referred as high so what does low and high means is"
+    },
+    {
+      "start": 1070.48,
+      "duration": 7.92,
+      "text": "a starting point of an hypothetical array and high is the ending point of an"
+    },
+    {
+      "start": 1075.6,
+      "duration": 8.12,
+      "text": "hypothetical AR so initially we have an entire aray that has to be sorted so low"
+    },
+    {
+      "start": 1081.6,
+      "duration": 6.959,
+      "text": "is the starting point of that entire array and high is the ending point of"
+    },
+    {
+      "start": 1086.44,
+      "duration": 5.599,
+      "text": "that hypothetical array got it okay so let's try writing the pseudo code for"
+    },
+    {
+      "start": 1089.919,
+      "duration": 7.921,
+      "text": "this merge short algorithm so I'll go ahead and write the function name as"
+    },
+    {
+      "start": 1094.52,
+      "duration": 10.159,
+      "text": "merge sort and initially I'll pass the array and I will"
+    },
+    {
+      "start": 1100.6,
+      "duration": 8.4,
+      "text": "say in this array initially please consider the entire array that you have"
+    },
+    {
+      "start": 1106.799,
+      "duration": 7.281,
+      "text": "to sort so the hypothetical starting point of this array is low and this is"
+    },
+    {
+      "start": 1111.28,
+      "duration": 9.36,
+      "text": "high which means take the entire array so I'll pass him low and I'll pass him"
+    },
+    {
+      "start": 1117.48,
+      "duration": 10.0,
+      "text": "high and initially when this is called Low will be passed as zero high will be"
+    },
+    {
+      "start": 1123.159,
+      "duration": 10.481,
+      "text": "passed as four very simple let's go on and as of now I'll not write any"
+    },
+    {
+      "start": 1129.799,
+      "duration": 9.281,
+      "text": "condition I'll keep conditions apart so how do I write this algorithm let's try"
+    },
+    {
+      "start": 1136.039,
+      "duration": 8.561,
+      "text": "to observe something what are we doing repeatedly are we doing something"
+    },
+    {
+      "start": 1140.52,
+      "duration": 8.84,
+      "text": "repeatedly yeah divide divide divide divide kind of doing divide divide"
+    },
+    {
+      "start": 1146.76,
+      "duration": 7.0,
+      "text": "divide divide and at the last step we're trying to come back come back does it"
+    },
+    {
+      "start": 1151.919,
+      "duration": 6.081,
+      "text": "give you an idea that you have to apply something like a recursion like you have"
+    },
+    {
+      "start": 1155.64,
+      "duration": 5.6,
+      "text": "to go divide divide divide and then you have to come back that's kind of like"
+    },
+    {
+      "start": 1159.6,
+      "duration": 5.52,
+      "text": "recursion backtracking if you have seen the lectures you can try to relate it"
+    },
+    {
+      "start": 1163.32,
+      "duration": 6.52,
+      "text": "with recursion and backtracking that's what we will be using so what I will say"
+    },
+    {
+      "start": 1167.24,
+      "duration": 7.48,
+      "text": "is okay now now what is the thing that I'll do I'll try to take this array and"
+    },
+    {
+      "start": 1172.52,
+      "duration": 6.2,
+      "text": "try to break it down into two parts that is what I'm doing I'll try to take this"
+    },
+    {
+      "start": 1176.72,
+      "duration": 8.72,
+      "text": "aray and I'll try to break it down into two parts where I will take the first"
+    },
+    {
+      "start": 1182.559,
+      "duration": 6.321,
+      "text": "one to be 3 to 4 that's how I was doing the greater like the three numbers at"
+    },
+    {
+      "start": 1187.08,
+      "duration": 5.64,
+      "text": "the first and then the two numbers at the back so I'll say I'll divide it into"
+    },
+    {
+      "start": 1190.84,
+      "duration": 6.88,
+      "text": "two parts the left and the right that's what I'm doing and then I'll ask can you"
+    },
+    {
+      "start": 1195.44,
+      "duration": 8.0,
+      "text": "please sort this can you please sort this once both of them are sorted I can"
+    },
+    {
+      "start": 1200.84,
+      "duration": 8.88,
+      "text": "actually again merge them that's what the algorithm was so I'll be like okay"
+    },
+    {
+      "start": 1206.2,
+      "duration": 8.44,
+      "text": "do I need to make a new array no this is where low and high comes in I say Hey"
+    },
+    {
+      "start": 1212.48,
+      "duration": 7.92,
+      "text": "listen this is array indexing so can I say this array is"
+    },
+    {
+      "start": 1217.48,
+      "duration": 8.96,
+      "text": "nothing but an array where the low is at zero an array where the high is at two"
+    },
+    {
+      "start": 1222.48,
+      "duration": 9.4,
+      "text": "can I see this I can so if I have to look properly the low is at zero"
+    },
+    {
+      "start": 1229.32,
+      "duration": 8.08,
+      "text": "the high is at two that's what I'm doing so I'll go and say that Hey listen maybe"
+    },
+    {
+      "start": 1234.6,
+      "duration": 8.439,
+      "text": "find a middle index so middle is going to be low plus High by two very"
+    },
+    {
+      "start": 1240.72,
+      "duration": 10.6,
+      "text": "simple so if you see over here what will be this 0 + 4 by 2 will give you 2 so"
+    },
+    {
+      "start": 1248.48,
+      "duration": 9.439,
+      "text": "where is the first half of the array it's from 0 till 2 and where is the"
+    },
+    {
+      "start": 1254.84,
+      "duration": 11.52,
+      "text": "second half it's from 3 to 4 so can I say hey please go ahead"
+    },
+    {
+      "start": 1261.799,
+      "duration": 10.0,
+      "text": "and try to sort this array sort this array which starts from zero which is"
+    },
+    {
+      "start": 1269.48,
+      "duration": 7.079,
+      "text": "apparently low and which goes on till two which is apparently middle because"
+    },
+    {
+      "start": 1274.24,
+      "duration": 9.799,
+      "text": "in the first time the middle is two and can I say okay this means I'm I'm asking"
+    },
+    {
+      "start": 1280.76,
+      "duration": 7.96,
+      "text": "him to do for this one right but I have to also ask him to do for this one"
+    },
+    {
+      "start": 1285.679,
+      "duration": 6.6,
+      "text": "because if he sorts this if it doesn't sorts this how will I"
+    },
+    {
+      "start": 1290.48,
+      "duration": 8.16,
+      "text": "merge them because both of them have to be sorted in order to be merged so what"
+    },
+    {
+      "start": 1294.76,
+      "duration": 10.08,
+      "text": "I will do is I will again say mer short I'll say array can I get the right"
+    },
+    {
+      "start": 1302.84,
+      "duration": 6.4,
+      "text": "half of the array sof I'll be like okay in this array which portion are you"
+    },
+    {
+      "start": 1307.12,
+      "duration": 8.679,
+      "text": "telling me to sort I'm saying from 3 to 4 what is three that's nothing but mid +"
+    },
+    {
+      "start": 1312.08,
+      "duration": 13.0,
+      "text": "1 because mid was two till high so what I've done is instead of making two new"
+    },
+    {
+      "start": 1320.559,
+      "duration": 9.201,
+      "text": "arrays I told the indexes I told in this array take from low to mid which is take"
+    },
+    {
+      "start": 1327.32,
+      "duration": 7.68,
+      "text": "from 0 to two which is this in this array take from 3 to four which is this"
+    },
+    {
+      "start": 1332.919,
+      "duration": 7.921,
+      "text": "instead of dividing them into two arrays I passed on the indexes and set them to"
+    },
+    {
+      "start": 1337.159,
+      "duration": 10.041,
+      "text": "set them to sort themselves now assuming that these functions are getting sorted"
+    },
+    {
+      "start": 1343.32,
+      "duration": 9.52,
+      "text": "by themselves once the portion from low to mid once once the portion from low to"
+    },
+    {
+      "start": 1350.4,
+      "duration": 7.279,
+      "text": "mid is sorted once the portion from mid one to high is sorted what is the next"
+    },
+    {
+      "start": 1355.44,
+      "duration": 10.76,
+      "text": "step if you remember the next step is merge so probably I can say that hey"
+    },
+    {
+      "start": 1361.76,
+      "duration": 9.399,
+      "text": "please go ahead and merge the array the first half of the array is very simple"
+    },
+    {
+      "start": 1368.84,
+      "duration": 7.36,
+      "text": "it goes from low to mid and the second half will be from mid plus one to high"
+    },
+    {
+      "start": 1373.32,
+      "duration": 7.479,
+      "text": "so take these things and can you please merge this particular array that's what"
+    },
+    {
+      "start": 1379.0,
+      "duration": 6.559,
+      "text": "I'm saying that's what I'm saying very simple now when do we stop when do we"
+    },
+    {
+      "start": 1383.559,
+      "duration": 7.521,
+      "text": "stop is my question we have to write that over here because if you know if"
+    },
+    {
+      "start": 1388.44,
+      "duration": 8.599,
+      "text": "this is nothing but a recursion mot calling itself mot calling itself it's a"
+    },
+    {
+      "start": 1393.919,
+      "duration": 8.721,
+      "text": "recursion in order to stop recursion you write something as base case I hope you"
+    },
+    {
+      "start": 1400.36,
+      "duration": 6.52,
+      "text": "know that in order to stop recursion you write something as base case so you have"
+    },
+    {
+      "start": 1404.64,
+      "duration": 6.6,
+      "text": "to write that base case let's analyze what is the base case let's go back to"
+    },
+    {
+      "start": 1408.72,
+      "duration": 9.0,
+      "text": "this example what is the Beast case can I say when your array has one element"
+    },
+    {
+      "start": 1415.12,
+      "duration": 8.12,
+      "text": "when your array has one element so if I have to index it can I say this is index"
+    },
+    {
+      "start": 1420.2,
+      "duration": 12.76,
+      "text": "zero this is index one this is index 3 2 3 4 5 6 7 8 can I say these are the last"
+    },
+    {
+      "start": 1429.279,
+      "duration": 10.28,
+      "text": "indexes and if I have to ask what array is this you'll be like this array"
+    },
+    {
+      "start": 1435.72,
+      "duration": 8.559,
+      "text": "is something like from index one to index one where index one is the low"
+    },
+    {
+      "start": 1442.159,
+      "duration": 7.441,
+      "text": "index one is the high can I say this is the array that represents this yes"
+    },
+    {
+      "start": 1447.039,
+      "duration": 8.64,
+      "text": "because we are not creating a new array I am saying this array is from index one"
+    },
+    {
+      "start": 1452.6,
+      "duration": 8.12,
+      "text": "to index one which is this right so can I say the moment we have the low the"
+    },
+    {
+      "start": 1458.36,
+      "duration": 7.84,
+      "text": "left point we have the high the right point to be same that's when we do not"
+    },
+    {
+      "start": 1463.96,
+      "duration": 10.16,
+      "text": "go and divide we do not divide we just go back so that's what the base case"
+    },
+    {
+      "start": 1468.2,
+      "duration": 13.56,
+      "text": "will be we write he if at any moment the low tends to be equal to equal to high"
+    },
+    {
+      "start": 1478.52,
+      "duration": 7.8,
+      "text": "or exceeds high for that reason or maybe it's some how like it will never but"
+    },
+    {
+      "start": 1484.08,
+      "duration": 6.64,
+      "text": "still this for safety reasons if it exceeds High please do not because"
+    },
+    {
+      "start": 1488.84,
+      "duration": 6.52,
+      "text": "there's no need to do any of the further algorithms it's a single element array"
+    },
+    {
+      "start": 1493.52,
+      "duration": 6.8,
+      "text": "and it will always be sorted please go back please go back so this is how the"
+    },
+    {
+      "start": 1497.72,
+      "duration": 6.439,
+      "text": "pseudo code will look like might seem a bit confusing but now when I'll dry run"
+    },
+    {
+      "start": 1502.36,
+      "duration": 6.88,
+      "text": "by taking an example it straight away get to your head okay so we can see that"
+    },
+    {
+      "start": 1506.559,
+      "duration": 7.36,
+      "text": "the pseudo code has been completed but in order to understand this algorithm"
+    },
+    {
+      "start": 1511.32,
+      "duration": 8.44,
+      "text": "with Clarity we have to do a dryon of this recursive algorithm then only it"
+    },
+    {
+      "start": 1515.72,
+      "duration": 9.52,
+      "text": "will get clarified so let's try to do a dryon by taking this particular example"
+    },
+    {
+      "start": 1523.039,
+      "duration": 6.88,
+      "text": "so remember one thing whenever this algorithm is called it is called with"
+    },
+    {
+      "start": 1527.52,
+      "duration": 6.279,
+      "text": "the complete AR AR so the entire array is always been passed with this"
+    },
+    {
+      "start": 1531.64,
+      "duration": 6.32,
+      "text": "algorithm and the initial low and high will be 0 and four because that's what"
+    },
+    {
+      "start": 1536.039,
+      "duration": 7.321,
+      "text": "for this particular example it will be because initially I will pass on this"
+    },
+    {
+      "start": 1540.12,
+      "duration": 8.84,
+      "text": "entire array and ask mot to sort it so what will happen will this first base"
+    },
+    {
+      "start": 1545.679,
+      "duration": 8.36,
+      "text": "case operate because no low is still smaller than high so it doesn't mid"
+    },
+    {
+      "start": 1551.159,
+      "duration": 7.76,
+      "text": "comes out what will be the value of mid can I say the value of mid will be two"
+    },
+    {
+      "start": 1556.64,
+      "duration": 7.519,
+      "text": "so what happens is it goes goes ahead and calls the M shot it goes ahead and"
+    },
+    {
+      "start": 1561.399,
+      "duration": 8.041,
+      "text": "calls the mer shot so let's copy paste the same algorithm let's do"
+    },
+    {
+      "start": 1567.0,
+      "duration": 7.559,
+      "text": "it so I've copy pasted so what we can say is this"
+    },
+    {
+      "start": 1572.24,
+      "duration": 7.08,
+      "text": "particular recursion call will call this particular function again but this time"
+    },
+    {
+      "start": 1577.2,
+      "duration": 7.839,
+      "text": "it will pass the low as zero and pass the high as two so apparently what"
+    },
+    {
+      "start": 1581.72,
+      "duration": 8.76,
+      "text": "happens is it calls for this guy remember how recursion works is first"
+    },
+    {
+      "start": 1587.48,
+      "duration": 7.4,
+      "text": "this will get oper ated comes back then this line gets operated that's how"
+    },
+    {
+      "start": 1592.399,
+      "duration": 6.76,
+      "text": "recursion works so that's why first the left portion will get operated so the"
+    },
+    {
+      "start": 1597.159,
+      "duration": 7.441,
+      "text": "recursion call for zero to goes now what happens does this line operate no this"
+    },
+    {
+      "start": 1601.72,
+      "duration": 10.04,
+      "text": "line doesn't operates what happens tries to find the mid and this time the mid"
+    },
+    {
+      "start": 1606.799,
+      "duration": 10.48,
+      "text": "comes out to be 1 because 0 + 2 is 2 and 2 by2 is one so one comes out so this"
+    },
+    {
+      "start": 1614.72,
+      "duration": 7.319,
+      "text": "time again this SM shot gets called but if the M shot gets called called what"
+    },
+    {
+      "start": 1619.2,
+      "duration": 7.76,
+      "text": "will happen it gets called For What from 0 to 1 so it's like 3 to 2 is what it is"
+    },
+    {
+      "start": 1625.2,
+      "duration": 7.719,
+      "text": "getting called and then it will be called for the only number four which is"
+    },
+    {
+      "start": 1629.799,
+      "duration": 7.841,
+      "text": "just two so we will go ahead and maybe again call this recursion let's go ahead"
+    },
+    {
+      "start": 1635.559,
+      "duration": 6.801,
+      "text": "and call the recursion again so the recursion is again called what happens"
+    },
+    {
+      "start": 1639.72,
+      "duration": 9.16,
+      "text": "this time the mot is called with 01 which means this particular example"
+    },
+    {
+      "start": 1645.96,
+      "duration": 9.52,
+      "text": "right so this time the lower is 0 the high is one so what happens the mid is 0"
+    },
+    {
+      "start": 1651.799,
+      "duration": 9.6,
+      "text": "+ 1 by 2 which is nothing but Zer so again the M shot is called so let's"
+    },
+    {
+      "start": 1658.96,
+      "duration": 8.959,
+      "text": "again copy paste this same algorithm the M shot this time is called"
+    },
+    {
+      "start": 1664.399,
+      "duration": 8.321,
+      "text": "for 0 0 if I go into the diagram it's something like for three and something"
+    },
+    {
+      "start": 1670.159,
+      "duration": 8.24,
+      "text": "like for just one so this time it's called for three so what happens is it's"
+    },
+    {
+      "start": 1675.24,
+      "duration": 9.72,
+      "text": "called for 0 and zero so apparently this particular base case gets executed and"
+    },
+    {
+      "start": 1681.36,
+      "duration": 10.439,
+      "text": "it returns so I can say the it's done it's done so if I have to go back into"
+    },
+    {
+      "start": 1687.48,
+      "duration": 9.24,
+      "text": "the chart this goes back similarly another more shot will be called let's"
+    },
+    {
+      "start": 1695.08,
+      "duration": 8.24,
+      "text": "try to write this as well and this time it will be called for"
+    },
+    {
+      "start": 1699.72,
+      "duration": 11.199,
+      "text": "from mid + one to high so mid was zero so it'll be like 1 comma 1 because high"
+    },
+    {
+      "start": 1706.519,
+      "duration": 10.081,
+      "text": "was one mid was was zero so bit + 1 is 1 high is 1 so high is 1 it's called for"
+    },
+    {
+      "start": 1713.039,
+      "duration": 10.48,
+      "text": "1A 1 again the low the base case operates and it calls back apparently"
+    },
+    {
+      "start": 1720.279,
+      "duration": 8.76,
+      "text": "both of these recursive functions are completed once both of these recursion"
+    },
+    {
+      "start": 1725.919,
+      "duration": 7.88,
+      "text": "functions are completed can I say this that I'm going back from here and now we"
+    },
+    {
+      "start": 1732.08,
+      "duration": 6.68,
+      "text": "have this as sorted we have this as sorted it's two sorted arrays it's two"
+    },
+    {
+      "start": 1736.36,
+      "duration": 8.679,
+      "text": "sorted arrays what will happen happen let's go back here this merge happens so"
+    },
+    {
+      "start": 1741.84,
+      "duration": 8.079,
+      "text": "it takes a three it takes a two and it tries to merge it now we will write the"
+    },
+    {
+      "start": 1747.279,
+      "duration": 6.24,
+      "text": "merge algorithm afterwards but let's understand just imagine merges merging"
+    },
+    {
+      "start": 1752.08,
+      "duration": 6.599,
+      "text": "two arrays that's it that's a very simple algorithm just understand this so"
+    },
+    {
+      "start": 1755.76,
+      "duration": 9.399,
+      "text": "2A 3 happens so what would have happened 2A 3 right so this would have become 2"
+    },
+    {
+      "start": 1762.279,
+      "duration": 9.4,
+      "text": "comma 3 perfect let's go back to the recursion so can I say now we can go"
+    },
+    {
+      "start": 1769.12,
+      "duration": 8.96,
+      "text": "back from here to here and we can say the 01 is sorted so this time this"
+    },
+    {
+      "start": 1776.0,
+      "duration": 9.88,
+      "text": "recursion will again be called let's try to write it so what will be this"
+    },
+    {
+      "start": 1780.799,
+      "duration": 11.041,
+      "text": "recursion if 01 is done sorry my bad if 01 is done what's the next mid + 1"
+    },
+    {
+      "start": 1789.44,
+      "duration": 6.92,
+      "text": "that's two I is two so you'll call it for 2 comma 2 and if you call it for 2"
+    },
+    {
+      "start": 1794.519,
+      "duration": 7.441,
+      "text": "comma 2 what will happen yes they are the same numbers so it will will return"
+    },
+    {
+      "start": 1799.559,
+      "duration": 8.521,
+      "text": "and if it returns this time what will happen it called for 2 comma 2 this guy"
+    },
+    {
+      "start": 1806.2,
+      "duration": 7.319,
+      "text": "has done the recursion and this guy has done the recursion so apparently again"
+    },
+    {
+      "start": 1811.08,
+      "duration": 9.64,
+      "text": "the merge happens this time the merge happens from 0 to 1 till the two the"
+    },
+    {
+      "start": 1817.2,
+      "duration": 10.4,
+      "text": "merge this time happens for 2 comma 3 and maybe four or whatever it"
+    },
+    {
+      "start": 1823.279,
+      "duration": 11.12,
+      "text": "is yes and this will become 2 comma 3A 4 I hope you getting the gist so can I say"
+    },
+    {
+      "start": 1830.919,
+      "duration": 9.88,
+      "text": "after this I'll again go back and when I go back now I'll try to just come back"
+    },
+    {
+      "start": 1837.12,
+      "duration": 9.679,
+      "text": "yes when I go back can I see this that 0 comma 2 would have been sorted and if 0a"
+    },
+    {
+      "start": 1843.84,
+      "duration": 7.12,
+      "text": "2 is sorted I'm done with this I'll go to the right part which is having this"
+    },
+    {
+      "start": 1848.96,
+      "duration": 8.04,
+      "text": "and similarly this is done so this will call"
+    },
+    {
+      "start": 1853.84,
+      "duration": 8.36,
+      "text": "it right and how will it call it let's copy paste and show it"
+    },
+    {
+      "start": 1858.6,
+      "duration": 9.079,
+      "text": "if 0a 2 has been done so can I say next is mid + 1 so this is nothing but three"
+    },
+    {
+      "start": 1865.32,
+      "duration": 8.88,
+      "text": "highest four this time it goes and calls for 3 comma 4 again the same thing will"
+    },
+    {
+      "start": 1870.76,
+      "duration": 8.759,
+      "text": "happen the mid will be like 3 + 4 7 by 23 so it will be called for 3 comma 3"
+    },
+    {
+      "start": 1877.559,
+      "duration": 7.441,
+      "text": "and then it'll come back this will be called for 4 comma 4 it'll be come back"
+    },
+    {
+      "start": 1882.279,
+      "duration": 7.64,
+      "text": "and then this will merge both of these two elements it's like it'll be called"
+    },
+    {
+      "start": 1887.08,
+      "duration": 9.559,
+      "text": "for one it'll be called for three then they will be merged as 1 three and once"
+    },
+    {
+      "start": 1893.559,
+      "duration": 10.6,
+      "text": "this is done what do we have we have 0a 2 sorted we have 3A 4 sorted so the last"
+    },
+    {
+      "start": 1900.24,
+      "duration": 11.84,
+      "text": "merge takes place between this 0a 2 that is 2A 3A 4 and 1A 3 so apparently they"
+    },
+    {
+      "start": 1908.799,
+      "duration": 9.641,
+      "text": "are merged together when merged you'll get 1 2 3 3 4 that is what happens at"
+    },
+    {
+      "start": 1915.6,
+      "duration": 8.319,
+      "text": "the last step I hope that does make sense so so I hope the dry run"
+    },
+    {
+      "start": 1921.36,
+      "duration": 7.319,
+      "text": "is clear in terms of the pseudo code it was very simple first the entire array"
+    },
+    {
+      "start": 1926.279,
+      "duration": 7.36,
+      "text": "goes to the left goes to the left goes to the left goes to the left and then"
+    },
+    {
+      "start": 1930.159,
+      "duration": 8.0,
+      "text": "merges it always performs this recursion first this recursion first this"
+    },
+    {
+      "start": 1935.919,
+      "duration": 7.081,
+      "text": "recursion first once this is completed then this once both are completed then"
+    },
+    {
+      "start": 1940.799,
+      "duration": 6.6,
+      "text": "the merge happens need to understand that this is how the flow Works in order"
+    },
+    {
+      "start": 1944.919,
+      "duration": 7.681,
+      "text": "to understand this in much more depth what I'll recommend you is take a pen"
+    },
+    {
+      "start": 1949.279,
+      "duration": 8.841,
+      "text": "and paper write this code try doing it all over again got it so what have we"
+    },
+    {
+      "start": 1955.44,
+      "duration": 8.04,
+      "text": "completed we have completed the dryon the pseudo code as well but before going"
+    },
+    {
+      "start": 1960.6,
+      "duration": 6.84,
+      "text": "into the code we still are left with the merge pseudo code if we are able to"
+    },
+    {
+      "start": 1965.519,
+      "duration": 7.12,
+      "text": "write the merge pseudo code I think we will be done so let's take a bigger"
+    },
+    {
+      "start": 1970.32,
+      "duration": 8.599,
+      "text": "example in order to understand the merch pseudo code can I say the indexing is"
+    },
+    {
+      "start": 1974.44,
+      "duration": 12.28,
+      "text": "like 0 1 2 3 4 5 6 7 7 8 and this is like 0 1 2 3 4 and this is like 5 6 7"
+    },
+    {
+      "start": 1982.799,
+      "duration": 9.201,
+      "text": "and 8 and if the merch will happen I will call it like merge these two arrays"
+    },
+    {
+      "start": 1989.36,
+      "duration": 9.199,
+      "text": "because if you know this array when goes into depth goes into depth it will be"
+    },
+    {
+      "start": 1994.44,
+      "duration": 8.839,
+      "text": "sorted it'll be sorted like 1 1 2 3 4 and this also will go into the depth and"
+    },
+    {
+      "start": 2000.799,
+      "duration": 7.48,
+      "text": "it will be sorted like 24 56 this is something which all of us know for sure"
+    },
+    {
+      "start": 2005.44,
+      "duration": 9.04,
+      "text": "that both of them will be sorted and and both of the array will be something like"
+    },
+    {
+      "start": 2010.12,
+      "duration": 10.0,
+      "text": "1 1 2 3 4 and this will be like 2 4 5 6 this is something we know and this will"
+    },
+    {
+      "start": 2017.279,
+      "duration": 8.161,
+      "text": "be index from 0 to 4 this will be from 5 to 8 that's something we know we just"
+    },
+    {
+      "start": 2022.32,
+      "duration": 8.04,
+      "text": "have to write an algorithm to do it so we're writing the algorithm okay so"
+    },
+    {
+      "start": 2027.919,
+      "duration": 2.441,
+      "text": "we're saying"
+    },
+    {
+      "start": 2031.279,
+      "duration": 7.961,
+      "text": "merge I'll give you the array and I'm stating you that the first half is from"
+    },
+    {
+      "start": 2036.919,
+      "duration": 5.88,
+      "text": "low to mid and then you can go from mid plus one to high so I'm giving you all"
+    },
+    {
+      "start": 2040.919,
+      "duration": 7.92,
+      "text": "the three parameters required what I'll do is maybe I'll just"
+    },
+    {
+      "start": 2045.76,
+      "duration": 8.44,
+      "text": "keep an empty data structure it can be a vector it can be a list as of now just"
+    },
+    {
+      "start": 2051.639,
+      "duration": 11.161,
+      "text": "imagine this is an empty data structure where we can add elements okay now can I"
+    },
+    {
+      "start": 2058.399,
+      "duration": 9.52,
+      "text": "say that the left array will be from low to mid and can I say the right array"
+    },
+    {
+      "start": 2065.56,
+      "duration": 10.519,
+      "text": "will be from mid plus one to high I I can so I will keep couple of pointers so"
+    },
+    {
+      "start": 2071.079,
+      "duration": 10.28,
+      "text": "I'll say okay left pointer is at the low so that means left comes over here and"
+    },
+    {
+      "start": 2078.679,
+      "duration": 9.641,
+      "text": "I'll say right pointer is nothing but at Mid + one so what happened I'll say WR"
+    },
+    {
+      "start": 2084.24,
+      "duration": 10.0,
+      "text": "is here now what will I do I will try to compare these two and try to fill in"
+    },
+    {
+      "start": 2091.32,
+      "duration": 8.0,
+      "text": "this bigger array the bigger array I'll try to compare these two and try to fill"
+    },
+    {
+      "start": 2096.159,
+      "duration": 8.801,
+      "text": "in the bigger array so what I will do is I will now try to iterate till what till"
+    },
+    {
+      "start": 2102.68,
+      "duration": 8.0,
+      "text": "we have elements on the left or till we have elements on the right can I say"
+    },
+    {
+      "start": 2107.48,
+      "duration": 10.72,
+      "text": "that means I will say while left is smaller than equal to Mid which means I"
+    },
+    {
+      "start": 2114.24,
+      "duration": 11.04,
+      "text": "still have element and I'll say and and right is lesser than equal to high which"
+    },
+    {
+      "start": 2121.92,
+      "duration": 8.0,
+      "text": "means I still have elements on the right very simple now what I'll do is"
+    },
+    {
+      "start": 2128.2,
+      "duration": 6.0,
+      "text": "okay this is what I'll do till I have elements on the left till I have"
+    },
+    {
+      "start": 2131.44,
+      "duration": 7.52,
+      "text": "elements on the left on the right so I'll not try to compare I will say Hey"
+    },
+    {
+      "start": 2136.2,
+      "duration": 8.12,
+      "text": "listen if array of left is smaller than equal to array of"
+    },
+    {
+      "start": 2142.079,
+      "duration": 9.121,
+      "text": "right so what happens this and this gets compared and"
+    },
+    {
+      "start": 2148.04,
+      "duration": 8.92,
+      "text": "if one is smaller than two I'll take one and I'll add it to our resultant guy"
+    },
+    {
+      "start": 2154.839,
+      "duration": 6.28,
+      "text": "I'll add it to our resultant guy so I'll say okay maybe uh we can name this as"
+    },
+    {
+      "start": 2159.72,
+      "duration": 6.599,
+      "text": "something else let's go and name this as maybe"
+    },
+    {
+      "start": 2163.52,
+      "duration": 8.079,
+      "text": "let's say temporary that's a better name as a temporary can you please add"
+    },
+    {
+      "start": 2168.599,
+      "duration": 7.401,
+      "text": "yourself the smaller guy array of left and once you have done this can you move"
+    },
+    {
+      "start": 2173.839,
+      "duration": 7.52,
+      "text": "ahead the pointer which means the left pointer goes to the next again so"
+    },
+    {
+      "start": 2179.64,
+      "duration": 6.64,
+      "text": "basically what will happen is now temporary will have one with itself"
+    },
+    {
+      "start": 2184.72,
+      "duration": 6.119,
+      "text": "again the comparison between one and two will happen and this one will come here"
+    },
+    {
+      "start": 2188.56,
+      "duration": 6.44,
+      "text": "the temporary again takes it and now the left moves here again the comparison"
+    },
+    {
+      "start": 2193.64,
+      "duration": 6.439,
+      "text": "between two and two will happen and it comes here and the left moves here this"
+    },
+    {
+      "start": 2197.599,
+      "duration": 7.52,
+      "text": "time when you compare three and two when you compare three and two the two will"
+    },
+    {
+      "start": 2202.0,
+      "duration": 9.16,
+      "text": "come but the if only Compares for lesser so there will be a else so else will"
+    },
+    {
+      "start": 2207.92,
+      "duration": 8.48,
+      "text": "state can you please add the right guy can you please add the right guy that is"
+    },
+    {
+      "start": 2213.64,
+      "duration": 8.32,
+      "text": "take from the array and add the right guy and once you have added can you move"
+    },
+    {
+      "start": 2219.28,
+      "duration": 8.559,
+      "text": "the right Plus+ so what I'll do is I'll move the right to ahead now that's how"
+    },
+    {
+      "start": 2226.24,
+      "duration": 6.72,
+      "text": "this will work and you'll keep on comparing and you'll keep on adding till"
+    },
+    {
+      "start": 2230.4,
+      "duration": 6.28,
+      "text": "this is not completed so what will happen this two will come and the right"
+    },
+    {
+      "start": 2234.839,
+      "duration": 7.28,
+      "text": "will move here now the comparison between four and three happens so three"
+    },
+    {
+      "start": 2239.16,
+      "duration": 9.04,
+      "text": "comes and the left moves here now four comes and the left is exhausted left"
+    },
+    {
+      "start": 2245.319,
+      "duration": 8.121,
+      "text": "exceeds mid left exceeds mid so we see that the left has exceeded mid there is"
+    },
+    {
+      "start": 2250.44,
+      "duration": 8.28,
+      "text": "no one on the left so what I will say is after the end if there"
+    },
+    {
+      "start": 2255.68,
+      "duration": 9.2,
+      "text": "is anyone on the left which means if there is anyone on the left because if"
+    },
+    {
+      "start": 2262.2,
+      "duration": 8.6,
+      "text": "this while if this while loop is false either it will be false because this is"
+    },
+    {
+      "start": 2266.72,
+      "duration": 9.76,
+      "text": "true or this is true so if there are on the left if there are on the left I will"
+    },
+    {
+      "start": 2273.8,
+      "duration": 11.08,
+      "text": "still add it I just take everyone from the left and add it to my"
+    },
+    {
+      "start": 2281.92,
+      "duration": 8.199,
+      "text": "stuff and if there are people on the right because anyone will be true either"
+    },
+    {
+      "start": 2288.359,
+      "duration": 5.48,
+      "text": "there will be on the left either there will be on the right if there are people"
+    },
+    {
+      "start": 2292.119,
+      "duration": 9.881,
+      "text": "on the right which will be right high and then"
+    },
+    {
+      "start": 2298.0,
+      "duration": 9.599,
+      "text": "I'll say temporary do add array of right and I'll do right Plus+ quite"
+    },
+    {
+      "start": 2305.48,
+      "duration": 11.0,
+      "text": "simple if that means if on left copy them if on"
+    },
+    {
+      "start": 2312.68,
+      "duration": 8.72,
+      "text": "right copy them as simple as that so can I say at the end of the day I would have"
+    },
+    {
+      "start": 2318.839,
+      "duration": 8.121,
+      "text": "four 4 5 six all of them in the temporary area now we need to place them"
+    },
+    {
+      "start": 2324.16,
+      "duration": 8.48,
+      "text": "into the original array so what have we completed till this step we can say the"
+    },
+    {
+      "start": 2330.52,
+      "duration": 8.72,
+      "text": "left sorted array and the right sorted array have been put into a third array"
+    },
+    {
+      "start": 2335.92,
+      "duration": 7.56,
+      "text": "temporary but we actually need to put it from low to high because that's the"
+    },
+    {
+      "start": 2341.4,
+      "duration": 6.88,
+      "text": "original array because the original array is from 0 to 8 and you take these"
+    },
+    {
+      "start": 2345.88,
+      "duration": 8.08,
+      "text": "elements and put it there because it is in temporary so what I'll do is I will"
+    },
+    {
+      "start": 2351.2,
+      "duration": 8.44,
+      "text": "probably Loop yes let's Loop I'll say for I from low to high is where I Loop"
+    },
+    {
+      "start": 2357.599,
+      "duration": 6.921,
+      "text": "please loop from there and I'll say array of I that means who is the first"
+    },
+    {
+      "start": 2362.64,
+      "duration": 6.92,
+      "text": "element temporary temporary must be keeping"
+    },
+    {
+      "start": 2367.4,
+      "duration": 6.4,
+      "text": "because it's a temporary array it will always keep in the zero index so I'll"
+    },
+    {
+      "start": 2371.92,
+      "duration": 7.56,
+      "text": "always say temporary I minus"
+    },
+    {
+      "start": 2376.4,
+      "duration": 8.28,
+      "text": "low that's it first time I will be low so what will this happen low minus low"
+    },
+    {
+      "start": 2382.4,
+      "duration": 7.36,
+      "text": "that will be zero next time I will be low + one so low + 1 minus low that'll"
+    },
+    {
+      "start": 2387.8,
+      "duration": 7.279,
+      "text": "be one next time I will be low plus 2 low plus 2 minus low that'll be two so"
+    },
+    {
+      "start": 2391.96,
+      "duration": 7.119,
+      "text": "it will get all these indexes because it will be stored in a temporary array"
+    },
+    {
+      "start": 2396.92,
+      "duration": 9.28,
+      "text": "it'll pick up all these indexes and store in the correct order so it'll pick"
+    },
+    {
+      "start": 2402.48,
+      "duration": 8.04,
+      "text": "up all these indexes at 0 1 2 and store it in the correct order from low to high"
+    },
+    {
+      "start": 2408.76,
+      "duration": 6.68,
+      "text": "because because this was low to mid this was mid"
+    },
+    {
+      "start": 2413.079,
+      "duration": 7.921,
+      "text": "plus one to high and they CAU together from low to high that was the original"
+    },
+    {
+      "start": 2417.88,
+      "duration": 7.56,
+      "text": "array got it this is how the merge will look like I hope that does make sense so"
+    },
+    {
+      "start": 2423.68,
+      "duration": 6.24,
+      "text": "now I can confidently say that You' have understood the explanation the pseudo"
+    },
+    {
+      "start": 2427.119,
+      "duration": 8.401,
+      "text": "code and the dryon so you can code it in C++ Java and python so I'll just go"
+    },
+    {
+      "start": 2432.599,
+      "duration": 6.601,
+      "text": "across and code it in C++ but the Java and python codes you can find them in"
+    },
+    {
+      "start": 2437.4,
+      "duration": 5.56,
+      "text": "the links in the description it will be updated very very soon just in case it"
+    },
+    {
+      "start": 2441.28,
+      "duration": 5.2,
+      "text": "is not there as of now let's come to the compiler and try to code it so we have"
+    },
+    {
+      "start": 2444.599,
+      "duration": 7.681,
+      "text": "given a function we given the array and we given this so assume we are going to"
+    },
+    {
+      "start": 2448.96,
+      "duration": 8.08,
+      "text": "write this function and we say void uh M short and I'll say let's take the array"
+    },
+    {
+      "start": 2455.119,
+      "duration": 7.48,
+      "text": "which is this please make sure you pass it reference low and high that's what we"
+    },
+    {
+      "start": 2460.04,
+      "duration": 6.84,
+      "text": "require and we know one thing if low is equal to equal to high we're going to"
+    },
+    {
+      "start": 2464.64,
+      "duration": 9.84,
+      "text": "return that's it otherwise we are going to find a middle which is low plus High"
+    },
+    {
+      "start": 2471.0,
+      "duration": 13.68,
+      "text": "by 2 and then we will be calling the MS with array comma low comma mid and"
+    },
+    {
+      "start": 2480.56,
+      "duration": 9.48,
+      "text": "Ms aray comma mid + one comma high and then we will be calling something like"
+    },
+    {
+      "start": 2486.04,
+      "duration": 10.319,
+      "text": "merge Where will passing array low mid and high that's what the algorithm will"
+    },
+    {
+      "start": 2492.56,
+      "duration": 8.72,
+      "text": "be and we can call Ms with the array and 0 comma n minus one because that's the"
+    },
+    {
+      "start": 2498.839,
+      "duration": 6.201,
+      "text": "initial starting and the end position of the entire array just have to write the"
+    },
+    {
+      "start": 2503.319,
+      "duration": 7.201,
+      "text": "merge function and I think we will be done so let's write the void merge and"
+    },
+    {
+      "start": 2508.119,
+      "duration": 7.321,
+      "text": "again make sure you take everything by reference array and then low and then"
+    },
+    {
+      "start": 2513.359,
+      "duration": 8.081,
+      "text": "you can take mid and then you can take High"
+    },
+    {
+      "start": 2518.319,
+      "duration": 8.361,
+      "text": "so can I just take a temporary array we can and we can take the left pointer to"
+    },
+    {
+      "start": 2523.24,
+      "duration": 7.64,
+      "text": "be low plus one uh sorry low rather and we can take the right pointer to be mid"
+    },
+    {
+      "start": 2528.48,
+      "duration": 7.119,
+      "text": "+ one because we know the first array will be like if I have to commented it"
+    },
+    {
+      "start": 2533.44,
+      "duration": 8.679,
+      "text": "will be from low to mid and the second array if you remember it will be mid +"
+    },
+    {
+      "start": 2537.68,
+      "duration": 11.639,
+      "text": "one till high so let's see uh let's write this so we say left is lesser than"
+    },
+    {
+      "start": 2544.52,
+      "duration": 11.599,
+      "text": "equal to Mid and and M and and write is lesser than equal to high very"
+    },
+    {
+      "start": 2553.839,
+      "duration": 7.801,
+      "text": "simple but we need a temporary array that is defined over here we say hey"
+    },
+    {
+      "start": 2558.88,
+      "duration": 9.8,
+      "text": "array of left are you smaller than array of right if you"
+    },
+    {
+      "start": 2565.28,
+      "duration": 10.68,
+      "text": "are can you please go ahead and get attached push"
+    },
+    {
+      "start": 2571.04,
+      "duration": 8.519,
+      "text": "back to array of left very simple at the same time we can do a left Plus plus and"
+    },
+    {
+      "start": 2578.16,
+      "duration": 9.56,
+      "text": "you can write an else and you can temporary do push back array of right"
+    },
+    {
+      "start": 2584.599,
+      "duration": 7.641,
+      "text": "and you can say right Plus+ this is what you will do for comparing and putting it"
+    },
+    {
+      "start": 2589.88,
+      "duration": 7.76,
+      "text": "after that if there are still elements left on the left please take it because"
+    },
+    {
+      "start": 2594.96,
+      "duration": 8.2,
+      "text": "if this is false then this must be having some elements on the left so go"
+    },
+    {
+      "start": 2599.839,
+      "duration": 9.881,
+      "text": "ahead and just copy paste this perfect and if there are still elements"
+    },
+    {
+      "start": 2606.28,
+      "duration": 8.52,
+      "text": "on the right then go ahead and copy paste everything from the right quite"
+    },
+    {
+      "start": 2612.359,
+      "duration": 8.48,
+      "text": "simple once you have done this make sure you put them into the array which is for"
+    },
+    {
+      "start": 2616.88,
+      "duration": 12.32,
+      "text": "in I equal to low I less than equal to high and I ++ and you can say array"
+    },
+    {
+      "start": 2624.72,
+      "duration": 8.56,
+      "text": "of I will be temporary of I minus low so once you've done this since everything"
+    },
+    {
+      "start": 2630.52,
+      "duration": 6.799,
+      "text": "is by reference the the numbers will rearrange themselves in the array itself"
+    },
+    {
+      "start": 2635.68,
+      "duration": 6.159,
+      "text": "now I can go ahead I can go ahead and run this and see if it is running fine I"
+    },
+    {
+      "start": 2639.92,
+      "duration": 10.0,
+      "text": "hope it does it does and now I'll quickly submit this I write codes in one"
+    },
+    {
+      "start": 2645.72,
+      "duration": 9.44,
+      "text": "go W nice no syntax errors so we have understood everything but there's only"
+    },
+    {
+      "start": 2652.04,
+      "duration": 9.2,
+      "text": "one thing that is left which is the time complexity of this merge short algorithm"
+    },
+    {
+      "start": 2658.48,
+      "duration": 8.44,
+      "text": "remember one thing what's happening there's an N size array which is getting"
+    },
+    {
+      "start": 2663.76,
+      "duration": 10.44,
+      "text": "divided to n by2 n by2 then this n by2 is getting divided to n by4 n by4 n by4"
+    },
+    {
+      "start": 2670.76,
+      "duration": 8.599,
+      "text": "and n by4 so at every step they're getting divided by two by two by two by"
+    },
+    {
+      "start": 2677.599,
+      "duration": 7.76,
+      "text": "two and if you remember the time complexity lecture I have already told"
+    },
+    {
+      "start": 2682.44,
+      "duration": 8.2,
+      "text": "whenever it gets divided by by two the time complexity is log base to n"
+    },
+    {
+      "start": 2687.72,
+      "duration": 8.2,
+      "text": "remember this now you might ask me but D why you're dividing it by by 2 by 2 but"
+    },
+    {
+      "start": 2693.2,
+      "duration": 6.6,
+      "text": "why it is log base 10 it's very simple if I have to write 16"
+    },
+    {
+      "start": 2697.72,
+      "duration": 8.28,
+      "text": "and I have to divide it by two it'll be like 8 and 8 it'll be like four and four"
+    },
+    {
+      "start": 2704.2,
+      "duration": 6.119,
+      "text": "right like if there are four like if there are 16 array elements gets divided"
+    },
+    {
+      "start": 2708.4,
+      "duration": 6.8,
+      "text": "into 8 and8 eight gets divided into four and four four gets into two and two and"
+    },
+    {
+      "start": 2712.559,
+      "duration": 11.401,
+      "text": "then two gets into one and one so apparently this is nothing but one step"
+    },
+    {
+      "start": 2719.319,
+      "duration": 10.881,
+      "text": "two step three step four step and 16 is nothing but 2 to the^ 4 and that's"
+    },
+    {
+      "start": 2727.04,
+      "duration": 10.039,
+      "text": "nothing but four steps right four steps log base 26 is nothing but four steps so"
+    },
+    {
+      "start": 2733.76,
+      "duration": 7.559,
+      "text": "it's approximately logarithmic number of times the division happens it's"
+    },
+    {
+      "start": 2739.28,
+      "duration": 6.88,
+      "text": "approximately logarithmic number of times that the division happens that"
+    },
+    {
+      "start": 2743.319,
+      "duration": 9.76,
+      "text": "means it gets broken down into logarithmic of end time and you're also"
+    },
+    {
+      "start": 2749.44,
+      "duration": 10.56,
+      "text": "performing something like a merge every time so every time division by like this"
+    },
+    {
+      "start": 2756.24,
+      "duration": 10.359,
+      "text": "is div this is half and this is half this half Will Go On Till log base 2 N"
+    },
+    {
+      "start": 2764.2,
+      "duration": 7.52,
+      "text": "near about again everything is in terms of nearabout okay time complexities goes"
+    },
+    {
+      "start": 2769.4,
+      "duration": 7.24,
+      "text": "till near about log base 2 and then there is a merge happening how much is"
+    },
+    {
+      "start": 2773.72,
+      "duration": 8.2,
+      "text": "merge taking if I have to think of the extremest case if I have to think of the"
+    },
+    {
+      "start": 2779.44,
+      "duration": 8.28,
+      "text": "extremest case can I say this is of size three this is of size two so in order to"
+    },
+    {
+      "start": 2785.04,
+      "duration": 7.76,
+      "text": "merge three and two elements I'm going to require five steps at"
+    },
+    {
+      "start": 2790.079,
+      "duration": 8.0,
+      "text": "minimum one comparison that's like everyone is comparing in itself it's"
+    },
+    {
+      "start": 2794.559,
+      "duration": 9.721,
+      "text": "like a near about B go of n that's the worst case because for this I'll end up"
+    },
+    {
+      "start": 2800.88,
+      "duration": 7.92,
+      "text": "taking at minimum of five steps because every element is compared one by one and"
+    },
+    {
+      "start": 2806.559,
+      "duration": 6.401,
+      "text": "then it is put over here it takes minimum of five steps which is nothing"
+    },
+    {
+      "start": 2810.96,
+      "duration": 8.72,
+      "text": "but the length of the array at the worst case so can I say the merge I have to go"
+    },
+    {
+      "start": 2817.319,
+      "duration": 7.081,
+      "text": "back to this uh there's so many things written man I have to go back this can I"
+    },
+    {
+      "start": 2821.8,
+      "duration": 7.96,
+      "text": "say this at the worst case takes B of n this time over here it might take B of n"
+    },
+    {
+      "start": 2827.16,
+      "duration": 7.28,
+      "text": "by two over here it might take n by4 something like this but at the worst"
+    },
+    {
+      "start": 2831.24,
+      "duration": 11.2,
+      "text": "case it is taking n thereby I can actually say that the time complexity is"
+    },
+    {
+      "start": 2837.599,
+      "duration": 11.321,
+      "text": "nothing but n into log base 2 N now you might ask me qu a question but St wait"
+    },
+    {
+      "start": 2846.52,
+      "duration": 8.0,
+      "text": "once step two step three step four step who will be counting these steps wait"
+    },
+    {
+      "start": 2852.119,
+      "duration": 8.881,
+      "text": "that is actually compensated how because the merge over here takes"
+    },
+    {
+      "start": 2858.319,
+      "duration": 7.921,
+      "text": "big of n the merge over here takes n by2 the merge over here will take n by4 the"
+    },
+    {
+      "start": 2862.88,
+      "duration": 9.12,
+      "text": "merge is taking lesser so in overall if you try to add it up in mathematical you"
+    },
+    {
+      "start": 2868.839,
+      "duration": 10.321,
+      "text": "will actually get somewhere near about n into log base 2 N as the mer shorts time"
+    },
+    {
+      "start": 2876.52,
+      "duration": 7.2,
+      "text": "complex so n log is the best average and the worst case but if I have to ask hey"
+    },
+    {
+      "start": 2882.16,
+      "duration": 6.159,
+      "text": "what is the space complexity of the algorithm how much extra space are we"
+    },
+    {
+      "start": 2885.92,
+      "duration": 7.76,
+      "text": "using so if you remember the algorithm the algorithm is actually using indexes"
+    },
+    {
+      "start": 2891.04,
+      "duration": 6.84,
+      "text": "no separate Ares is this the given array that they are using are they using any"
+    },
+    {
+      "start": 2895.52,
+      "duration": 7.2,
+      "text": "extra additional space they are during merge in every merge step they're"
+    },
+    {
+      "start": 2900.4,
+      "duration": 7.84,
+      "text": "creating a temporary array which at the worst case might take B of in so the"
+    },
+    {
+      "start": 2905.4,
+      "duration": 8.919,
+      "text": "space complexity at the worst case is beo of n near about beo of n for this"
+    },
+    {
+      "start": 2912.16,
+      "duration": 8.36,
+      "text": "particular algorithm so with this I will be completing M short and the time is uh"
+    },
+    {
+      "start": 2917.76,
+      "duration": 6.4,
+      "text": "3:28 a.m. in the morning as you can see I cannot record in the day because"
+    },
+    {
+      "start": 2921.8,
+      "duration": 6.759,
+      "text": "there's a lot of background noise so just in case you understood everything"
+    },
+    {
+      "start": 2926.839,
+      "duration": 6.0,
+      "text": "please please consider hitting that like button and if you haven't checked out"
+    },
+    {
+      "start": 2930.319,
+      "duration": 6.161,
+      "text": "sters a to DSA course the link will be in the description please make sure to"
+    },
+    {
+      "start": 2934.0,
+      "duration": 7.319,
+      "text": "check it out because we have notes for every everything we will be attaching"
+    },
+    {
+      "start": 2938.599,
+      "duration": 6.52,
+      "text": "video solutions to everything yes most of the advanced topics have been covered"
+    },
+    {
+      "start": 2943.599,
+      "duration": 5.52,
+      "text": "previously I'm starting to cover the basic topics now so you can definitely"
+    },
+    {
+      "start": 2947.04,
+      "duration": 5.84,
+      "text": "proceed ahead with the advanced topics in case you need for Advance as well so"
+    },
+    {
+      "start": 2951.559,
+      "duration": 4.161,
+      "text": "guys if you're new to our Channel please do consider hitting that subscribe"
+    },
+    {
+      "start": 2954.079,
+      "duration": 4.961,
+      "text": "button because that is the only thing that keeps you motivated to make these"
+    },
+    {
+      "start": 2957.24,
+      "duration": 5.119,
+      "text": "kind of videos and and yeah to follow our tradition please make sure you"
+    },
+    {
+      "start": 2960.64,
+      "duration": 5.04,
+      "text": "comment understood in the comments so that I get a VI that you guys are"
+    },
+    {
+      "start": 2964.28,
+      "duration": 4.44,
+      "text": "understanding everything so with this I'll be wrapping up this video if you"
+    },
+    {
+      "start": 2967.0,
+      "duration": 4.96,
+      "text": "haven't followed me on Instagram Twitter LinkedIn the links will be in the"
+    },
+    {
+      "start": 2970.28,
+      "duration": 3.64,
+      "text": "description with this let's wrap up this video and meet in some other video till"
+    },
+    {
+      "start": 2973.2,
+      "duration": 6.56,
+      "text": "then byebye your heart is"
+    },
+    {
+      "start": 2977.799,
+      "duration": 6.081,
+      "text": "broken your golden I will"
+    }
+  ]
+}

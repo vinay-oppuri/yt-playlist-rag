@@ -1,0 +1,1152 @@
+{
+  "video_id": "nP_ns3uSh80",
+  "title": "Majority Element I | Brute-Better-Optimal | Moore's Voting Algorithm | Intuition 🔥|Brute to Optimal",
+  "total_segments": 229,
+  "segments": [
+    {
+      "start": 2.94,
+      "duration": 4.319,
+      "text": "hey if you're welcome back to the channel I hope you guys are doing"
+    },
+    {
+      "start": 5.339,
+      "duration": 5.941,
+      "text": "extremely well so this is another video from the Strivers A to Z DSA course just"
+    },
+    {
+      "start": 9.96,
+      "duration": 5.759,
+      "text": "in case you're for the first time here this is world's most in-depth course in"
+    },
+    {
+      "start": 13.2,
+      "duration": 6.9,
+      "text": "DS algo why do I see that this cost us 456 modules by the end of the post you"
+    },
+    {
+      "start": 18.06,
+      "duration": 5.82,
+      "text": "would have sold more than 400 plus problems in DS algo and you can go"
+    },
+    {
+      "start": 22.38,
+      "duration": 5.88,
+      "text": "across the entire internet you can buy any of the paid courses none of them"
+    },
+    {
+      "start": 25.8,
+      "duration": 6.42,
+      "text": "will be covering DS algo in such step so one thing that I can assure you is once"
+    },
+    {
+      "start": 30.84,
+      "duration": 6.18,
+      "text": "you complete the entire post you can actually clear any of the DS algorithms"
+    },
+    {
+      "start": 34.44,
+      "duration": 7.74,
+      "text": "in any of the companies in any part of the world so till now we have covered uh"
+    },
+    {
+      "start": 39.54,
+      "duration": 7.5,
+      "text": "dell certain arrays of certain array of zeros ones and twos and in this video"
+    },
+    {
+      "start": 44.34,
+      "duration": 6.66,
+      "text": "I'll be covering majority element so what does the problem majority element"
+    },
+    {
+      "start": 48.539,
+      "duration": 8.34,
+      "text": "States it states that you'll be given an array of integers now your task is to"
+    },
+    {
+      "start": 53.52,
+      "duration": 9.9,
+      "text": "find me the element that appears more than n by two times very important"
+    },
+    {
+      "start": 59.48,
+      "duration": 8.92,
+      "text": "lining more than n by 2 not equal to two it has to be more than n by 2. Imagine n"
+    },
+    {
+      "start": 66.299,
+      "duration": 8.581,
+      "text": "is eight then it should appear more than four times imagine n is 9 in that case 9"
+    },
+    {
+      "start": 72.54,
+      "duration": 7.619,
+      "text": "by 2 will take the floor value it is four so it should appear more than four"
+    },
+    {
+      "start": 76.86,
+      "duration": 7.56,
+      "text": "times got it so in this array if I ask you which is the majority element how"
+    },
+    {
+      "start": 82.439,
+      "duration": 7.201,
+      "text": "many like what's the length of the array three four five six seven seven is the"
+    },
+    {
+      "start": 87.479,
+      "duration": 10.32,
+      "text": "length of the array can I say two appears for four times which is greater"
+    },
+    {
+      "start": 93.479,
+      "duration": 8.82,
+      "text": "than n by 2 so 4 over here is your answer and this is what you have to tell"
+    },
+    {
+      "start": 99.96,
+      "duration": 7.38,
+      "text": "me given an array tell me the element that appears more than n by 2 times so"
+    },
+    {
+      "start": 105.54,
+      "duration": 5.579,
+      "text": "what will be the Brute Force solution to this particular problem it's going to be"
+    },
+    {
+      "start": 108.84,
+      "duration": 6.36,
+      "text": "very simple I'll pick up an element and then I'll scan through the entire array"
+    },
+    {
+      "start": 112.86,
+      "duration": 7.079,
+      "text": "basically do a searching through the entire array and I'll count plus plus"
+    },
+    {
+      "start": 117.18,
+      "duration": 6.899,
+      "text": "and if at the end of the day the count appears to be greater than n by 2 for"
+    },
+    {
+      "start": 122.399,
+      "duration": 6.0,
+      "text": "any of the element that is my answer first I'll pick up two next I'll pick up"
+    },
+    {
+      "start": 126.36,
+      "duration": 5.94,
+      "text": "two next I'll pick up 3 and scan through the entire array next I'll pick up 3 and"
+    },
+    {
+      "start": 130.44,
+      "duration": 5.159,
+      "text": "scan through the entire array this is what the Brute Force solution will be"
+    },
+    {
+      "start": 134.34,
+      "duration": 5.52,
+      "text": "and the code will look something like this so it's very simple you just"
+    },
+    {
+      "start": 137.94,
+      "duration": 6.18,
+      "text": "iterate through the entire array for the first time pick up two and scan through"
+    },
+    {
+      "start": 141.72,
+      "duration": 7.56,
+      "text": "the entire array and keep a check and count after you have scanned through the"
+    },
+    {
+      "start": 146.4,
+      "duration": 7.86,
+      "text": "entire array by taking array of I you check it the count is greater than n by"
+    },
+    {
+      "start": 151.319,
+      "duration": 6.721,
+      "text": "2 if it is then you return array of I and"
+    },
+    {
+      "start": 155.58,
+      "duration": 6.9,
+      "text": "forward like out of the for Loop you can return -1 just in case there is no"
+    },
+    {
+      "start": 160.68,
+      "duration": 6.3,
+      "text": "majority element so this is how the Brute Force solution will look like what"
+    },
+    {
+      "start": 164.819,
+      "duration": 6.78,
+      "text": "will be the time complexity obviously we are using couple of Loops so it is we go"
+    },
+    {
+      "start": 169.68,
+      "duration": 4.86,
+      "text": "of n square and when you give the solution to the interviewer the"
+    },
+    {
+      "start": 172.98,
+      "duration": 5.64,
+      "text": "interviewer will not be happy and will ask you to optimize it this is when"
+    },
+    {
+      "start": 176.22,
+      "duration": 7.08,
+      "text": "you'll be giving the better solution so what will be the better solution"
+    },
+    {
+      "start": 180.959,
+      "duration": 5.941,
+      "text": "The Brute is taking n Square so we know one thing for sure the better solution"
+    },
+    {
+      "start": 184.68,
+      "duration": 8.04,
+      "text": "will be somewhere of the order n log n or B go of n or 2N but it is definitely"
+    },
+    {
+      "start": 189.54,
+      "duration": 7.86,
+      "text": "going to be better than n n Square so if I have to think what are we actually"
+    },
+    {
+      "start": 194.459,
+      "duration": 7.92,
+      "text": "doing we are counting we are counting and we're looking for which element"
+    },
+    {
+      "start": 199.019,
+      "duration": 9.121,
+      "text": "appears more than n by two times so yes yes we can use hashing it's very"
+    },
+    {
+      "start": 205.8,
+      "duration": 7.74,
+      "text": "simple if there is a count we have to keep a track of how many times a Dockers"
+    },
+    {
+      "start": 210.659,
+      "duration": 8.281,
+      "text": "the only technique that comes up to my mind is hashing that is what I will be"
+    },
+    {
+      "start": 216.48,
+      "duration": 9.179,
+      "text": "doing so what I'll do is I will declare a hashma with the element and the count"
+    },
+    {
+      "start": 222.599,
+      "duration": 9.961,
+      "text": "where the element is my key and the count is my value so this will be the"
+    },
+    {
+      "start": 230.0,
+      "duration": 7.48,
+      "text": "representation in the map for a clear n value now what I'll do is I'll be like"
+    },
+    {
+      "start": 234.659,
+      "duration": 7.681,
+      "text": "let's scan through the array it is two so I'll put that 2 and I'll probably"
+    },
+    {
+      "start": 239.58,
+      "duration": 7.799,
+      "text": "tell him you okay once then I'll move and then I'll say you okay twice then"
+    },
+    {
+      "start": 245.04,
+      "duration": 7.619,
+      "text": "I'll move and there's a three I'll say a doctors once then I'll move and there's"
+    },
+    {
+      "start": 250.379,
+      "duration": 8.64,
+      "text": "a three it occurs twice then I'll move one occurs once then I'll move two"
+    },
+    {
+      "start": 256.26,
+      "duration": 9.12,
+      "text": "occurs twice then I'll move two occurs four times so once you have completed"
+    },
+    {
+      "start": 262.199,
+      "duration": 8.581,
+      "text": "the entire iteration now it's time to iterate in the map yes it's time to"
+    },
+    {
+      "start": 268.08,
+      "duration": 8.88,
+      "text": "iterate in the map so if I iterate in the map you will see that"
+    },
+    {
+      "start": 273.0,
+      "duration": 8.94,
+      "text": "this particular Guy 2 occurs four times which is greater than n by 2 which is"
+    },
+    {
+      "start": 279.24,
+      "duration": 6.6,
+      "text": "three so two is your answer so just I trade in the map and see which element"
+    },
+    {
+      "start": 283.86,
+      "duration": 4.559,
+      "text": "is occurring more than n by two times so let's quickly quote the better solution"
+    },
+    {
+      "start": 287.04,
+      "duration": 5.7,
+      "text": "of the problem link will be in the description so we need a map to keep the"
+    },
+    {
+      "start": 290.759,
+      "duration": 6.601,
+      "text": "count cell declare a map okay what is the next thing we have to iterate so"
+    },
+    {
+      "start": 294.66,
+      "duration": 7.02,
+      "text": "let's quickly iterate and now once am I trading I'll say ma what's the element"
+    },
+    {
+      "start": 299.34,
+      "duration": 7.68,
+      "text": "vfi do a plus plus so with this iteration I will be marking it in the"
+    },
+    {
+      "start": 304.74,
+      "duration": 8.04,
+      "text": "map now what is the next job I trading the map and see which is more than n by"
+    },
+    {
+      "start": 309.84,
+      "duration": 6.9,
+      "text": "two times so this is how you iterate in the map in C plus plus the Java port"
+    },
+    {
+      "start": 315.18,
+      "duration": 6.54,
+      "text": "and the python code is in the description and now you say ID dot"
+    },
+    {
+      "start": 318.96,
+      "duration": 9.48,
+      "text": "second because that is the value is greater than are you greater than V"
+    },
+    {
+      "start": 324.479,
+      "duration": 8.461,
+      "text": "Dot size Y2 if you are then near the majority element and you know the key is"
+    },
+    {
+      "start": 330.479,
+      "duration": 7.021,
+      "text": "very simple it's at the first place so the key will be the first place if after"
+    },
+    {
+      "start": 334.8,
+      "duration": 6.239,
+      "text": "this there was no one you can simply say return -1"
+    },
+    {
+      "start": 338.94,
+      "duration": 7.199,
+      "text": "and now we will quickly go and run this off and see if it is running fine okay"
+    },
+    {
+      "start": 343.139,
+      "duration": 6.9,
+      "text": "looks like it is not why is it not tap was not declared let's quickly go and"
+    },
+    {
+      "start": 348.12,
+      "duration": 5.46,
+      "text": "declare hashing clue everything is running absolutely fine now it's over"
+    },
+    {
+      "start": 351.96,
+      "duration": 6.54,
+      "text": "the time complexity can I say the first Loop is running for bego of N and"
+    },
+    {
+      "start": 356.28,
+      "duration": 6.96,
+      "text": "there's a ordered map used which is which is going to take logarithmic of n"
+    },
+    {
+      "start": 360.479,
+      "duration": 9.121,
+      "text": "if you use something like unordered map then this logarithmic of n will go off"
+    },
+    {
+      "start": 366.24,
+      "duration": 6.959,
+      "text": "only in case of average and best case in case of worst case"
+    },
+    {
+      "start": 370.979,
+      "duration": 6.961,
+      "text": "another map ends up taking the ego of end time within itself so that is an N"
+    },
+    {
+      "start": 375.539,
+      "duration": 6.841,
+      "text": "login and what is how many elements are there in the map imagine you're given an"
+    },
+    {
+      "start": 380.039,
+      "duration": 7.081,
+      "text": "array something like this then each of these elements will be in the map so"
+    },
+    {
+      "start": 384.66,
+      "duration": 6.96,
+      "text": "thereby the worst case the map might end up taking n so what is the total time"
+    },
+    {
+      "start": 389.4,
+      "duration": 6.299,
+      "text": "complexity can I say it as we go of n log n again depending on which map"
+    },
+    {
+      "start": 393.479,
+      "duration": 6.78,
+      "text": "you're using and a big go of N2 Traverse in the"
+    },
+    {
+      "start": 397.259,
+      "duration": 6.72,
+      "text": "map ever the space complexity we go of n because you are storing all the elements"
+    },
+    {
+      "start": 401.94,
+      "duration": 8.16,
+      "text": "in a map data structure so this will only happen if the array contains all"
+    },
+    {
+      "start": 406.8,
+      "duration": 5.88,
+      "text": "unique elements remember this so the moment you give this hashing"
+    },
+    {
+      "start": 411.36,
+      "duration": 5.58,
+      "text": "solution to the interview he'll be like hey wait you are using an additional"
+    },
+    {
+      "start": 414.84,
+      "duration": 7.5,
+      "text": "space complexity can you please optimize this that's when you'll be talking about"
+    },
+    {
+      "start": 419.039,
+      "duration": 7.801,
+      "text": "the most optimal algorithm and that will be using something as the Moose voting"
+    },
+    {
+      "start": 425.4,
+      "duration": 4.859,
+      "text": "algorithm now sitting in an interview you cannot"
+    },
+    {
+      "start": 428.759,
+      "duration": 5.461,
+      "text": "invent this algorithm so you have to know this algorithm beforehand so you"
+    },
+    {
+      "start": 432.3,
+      "duration": 7.619,
+      "text": "might be thinking but does that mean we have to mark it up no the interviewer"
+    },
+    {
+      "start": 436.62,
+      "duration": 7.139,
+      "text": "will be grilling you on thought process and intuition if you mug up the"
+    },
+    {
+      "start": 441.84,
+      "duration": 5.16,
+      "text": "algorithm and you just present it line by line you'll understand that you have"
+    },
+    {
+      "start": 445.38,
+      "duration": 5.879,
+      "text": "marked up the algorithm so please make sure you understand the thought process"
+    },
+    {
+      "start": 448.8,
+      "duration": 5.519,
+      "text": "intuition and the algorithm in depth so please make sure you watch the video"
+    },
+    {
+      "start": 452.819,
+      "duration": 5.22,
+      "text": "till the end because you're going to take away a lot of things when the video"
+    },
+    {
+      "start": 456.84,
+      "duration": 4.259,
+      "text": "ends so how will I be explaining this"
+    },
+    {
+      "start": 459.479,
+      "duration": 6.66,
+      "text": "particular algorithm what I'll do is I'll do a Dryden of the algorithm and"
+    },
+    {
+      "start": 463.38,
+      "duration": 7.98,
+      "text": "during The Dryden I'll be sharing the thought process and the intuition behind"
+    },
+    {
+      "start": 468.66,
+      "duration": 7.56,
+      "text": "every step that this algorithm does so that it sticks to your mind okay"
+    },
+    {
+      "start": 473.639,
+      "duration": 6.96,
+      "text": "so what is the algorithm all about it's very simple it's about two variables"
+    },
+    {
+      "start": 479.039,
+      "duration": 7.021,
+      "text": "element and Dot initially count is zero and you"
+    },
+    {
+      "start": 483.9,
+      "duration": 7.38,
+      "text": "can say initially the element is not initialized and we start iterating so"
+    },
+    {
+      "start": 488.94,
+      "duration": 7.379,
+      "text": "whenever we are iterating and we are the first element or whatever if the count"
+    },
+    {
+      "start": 493.5,
+      "duration": 7.44,
+      "text": "is zero that means we haven't taken any array please hear this out properly we"
+    },
+    {
+      "start": 498.66,
+      "duration": 6.36,
+      "text": "still haven't taken any array so you will be like okay I will take seven and"
+    },
+    {
+      "start": 503.22,
+      "duration": 6.0,
+      "text": "I'll increase the count to 1. so what I did was I said I will consider this 7 to"
+    },
+    {
+      "start": 507.66,
+      "duration": 5.58,
+      "text": "be my answer I'm just taking a hypothetical assumption that 7 is my"
+    },
+    {
+      "start": 511.379,
+      "duration": 6.78,
+      "text": "answer and the Countess one and now let's start moving we again move to"
+    },
+    {
+      "start": 515.039,
+      "duration": 6.24,
+      "text": "seven like seven now this occurs twice five"
+    },
+    {
+      "start": 519.36,
+      "duration": 6.06,
+      "text": "no it is not seven so you reduce the count remember this"
+    },
+    {
+      "start": 523.68,
+      "duration": 5.52,
+      "text": "count is not storing how many times seven appears it doesn't"
+    },
+    {
+      "start": 527.58,
+      "duration": 8.699,
+      "text": "have some other significance which I'll say next again seven"
+    },
+    {
+      "start": 531.899,
+      "duration": 9.06,
+      "text": "increase next again five degrees next one degrees"
+    },
+    {
+      "start": 538.68,
+      "duration": 7.26,
+      "text": "so whenever you find 7 you increase because 7 was your element whenever you"
+    },
+    {
+      "start": 544.32,
+      "duration": 6.42,
+      "text": "find anything apart from Seven you decrease now you are reaching zero until"
+    },
+    {
+      "start": 548.64,
+      "duration": 9.96,
+      "text": "how much till this portion let's understand what so if you take seven"
+    },
+    {
+      "start": 552.98,
+      "duration": 11.62,
+      "text": "seven five seven five one this is an array rather this is an array and the"
+    },
+    {
+      "start": 562.38,
+      "duration": 6.72,
+      "text": "count over here is zero what does the count signify so you took the element"
+    },
+    {
+      "start": 566.88,
+      "duration": 6.78,
+      "text": "seven how many times does it appear three times"
+    },
+    {
+      "start": 571.68,
+      "duration": 6.18,
+      "text": "how many times the author elements appears where other includes five and"
+    },
+    {
+      "start": 575.399,
+      "duration": 6.781,
+      "text": "one the other element appears three times this is the reason when there was"
+    },
+    {
+      "start": 579.899,
+      "duration": 7.62,
+      "text": "a seven you did a plus plus so there were three plus plus done and when there"
+    },
+    {
+      "start": 584.519,
+      "duration": 9.241,
+      "text": "was five five one there was a minus minus minus 10. so 3 plus 3 minus ended"
+    },
+    {
+      "start": 591.06,
+      "duration": 8.1,
+      "text": "up giving you a count of zero can I say something for sure if I just consider"
+    },
+    {
+      "start": 596.22,
+      "duration": 7.679,
+      "text": "this array just consider this array 7 is definitely not my major retirement why"
+    },
+    {
+      "start": 601.32,
+      "duration": 7.56,
+      "text": "if seven was my majority element how can you cancel because for if an"
+    },
+    {
+      "start": 606.3,
+      "duration": 6.42,
+      "text": "element appears more than n by two times there is only one limit which appears"
+    },
+    {
+      "start": 610.98,
+      "duration": 7.44,
+      "text": "more than n by two times and you cannot cancel it all if there are six elements"
+    },
+    {
+      "start": 615.06,
+      "duration": 8.7,
+      "text": "and seven appears four times can you cancel four to cancel 4 you need four"
+    },
+    {
+      "start": 620.58,
+      "duration": 7.62,
+      "text": "more so it's not possible since 7 appeared three times in a six length"
+    },
+    {
+      "start": 625.86,
+      "duration": 6.479,
+      "text": "array which is not greater than n by 2 it is equal to equal to n by 2 so it got"
+    },
+    {
+      "start": 630.54,
+      "duration": 7.14,
+      "text": "canceled so something that I can assurely say is till here 7 is not my"
+    },
+    {
+      "start": 635.82,
+      "duration": 6.06,
+      "text": "majority element till here it's not so this cannot be considered as an answer"
+    },
+    {
+      "start": 639.36,
+      "duration": 8.88,
+      "text": "but what I will do is I'll move ahead and I'll move to 5 okay the moment I"
+    },
+    {
+      "start": 644.519,
+      "duration": 9.721,
+      "text": "move to 5 I find count is zero so what I'll do is I will just quickly say okay"
+    },
+    {
+      "start": 650.579,
+      "duration": 7.801,
+      "text": "listen count is 0 so can you please take this as my new majority element and"
+    },
+    {
+      "start": 656.82,
+      "duration": 6.66,
+      "text": "probably I'll start checking from here and my count will be one perfect so I"
+    },
+    {
+      "start": 660.779,
+      "duration": 7.201,
+      "text": "will take five I'll make the count one let's move seven it's not equivalent so"
+    },
+    {
+      "start": 666.18,
+      "duration": 6.12,
+      "text": "I'll just make it zero I just make it back zero so this time the array"
+    },
+    {
+      "start": 669.839,
+      "duration": 6.961,
+      "text": "finishes here and the count becomes zero again eminent if I just take this"
+    },
+    {
+      "start": 674.16,
+      "duration": 7.14,
+      "text": "particular array can 5 be the majority no that's why next we'll move ahead"
+    },
+    {
+      "start": 679.68,
+      "duration": 4.92,
+      "text": "the moment we move ahead what will happen"
+    },
+    {
+      "start": 682.32,
+      "duration": 6.72,
+      "text": "since count is 0 it will again initialize count to 1 and element to be"
+    },
+    {
+      "start": 686.88,
+      "duration": 7.76,
+      "text": "five and we will start the array again from here and this time again let's move"
+    },
+    {
+      "start": 691.079,
+      "duration": 9.301,
+      "text": "it's five increment it is seven decrement it is seven decrement so can I"
+    },
+    {
+      "start": 699.66,
+      "duration": 5.52,
+      "text": "see in this particular array what happened"
+    },
+    {
+      "start": 702.06,
+      "duration": 7.92,
+      "text": "five five seven seven what I can say is hey 5 was occurring twice seven hours"
+    },
+    {
+      "start": 708.899,
+      "duration": 7.201,
+      "text": "occurring twice so it brought cancer thereby count"
+    },
+    {
+      "start": 712.56,
+      "duration": 9.839,
+      "text": "was Zero thereby 5 also cannot be my answer so till now whoever I have"
+    },
+    {
+      "start": 718.68,
+      "duration": 7.8,
+      "text": "considered as a majority got canceled by similar elements so till now no one has"
+    },
+    {
+      "start": 724.38,
+      "duration": 6.3,
+      "text": "dominated we are still looking for someone who is dominating got it"
+    },
+    {
+      "start": 728.279,
+      "duration": 6.961,
+      "text": "everyone has still no cancer let's go ahead what is the count value Crown's"
+    },
+    {
+      "start": 733.079,
+      "duration": 8.101,
+      "text": "value is zero now so let's move it we are at account zero so again we start"
+    },
+    {
+      "start": 738.66,
+      "duration": 6.9,
+      "text": "the count will again become one and this element still stays as five this time"
+    },
+    {
+      "start": 743.339,
+      "duration": 6.781,
+      "text": "we'll move ahead count becomes 2 7 will move out count becomes three this term"
+    },
+    {
+      "start": 747.24,
+      "duration": 8.339,
+      "text": "will move ahead count becomes four and we can say we have ended the iteration"
+    },
+    {
+      "start": 752.7,
+      "duration": 6.48,
+      "text": "we have ended the iteration so since we have ended the iteration there is an"
+    },
+    {
+      "start": 757.38,
+      "duration": 6.72,
+      "text": "element five this count has no significance but we have an element five"
+    },
+    {
+      "start": 761.1,
+      "duration": 8.22,
+      "text": "this element 5 will be your maturity element if there exists a majority"
+    },
+    {
+      "start": 767.1,
+      "duration": 6.66,
+      "text": "element why because everyone else got canceled off within itself so if there"
+    },
+    {
+      "start": 771.66,
+      "duration": 6.9,
+      "text": "is someone still remaining who did not got canceled then that is my answer but"
+    },
+    {
+      "start": 776.459,
+      "duration": 6.301,
+      "text": "am I sure that element 5 is the majority element what I said if there exists a"
+    },
+    {
+      "start": 780.959,
+      "duration": 5.88,
+      "text": "majority limit it will be five and no one else if if there is a majority"
+    },
+    {
+      "start": 785.279,
+      "duration": 6.12,
+      "text": "element it will be five and no one else if there doesn't then okay fine for"
+    },
+    {
+      "start": 788.94,
+      "duration": 7.5,
+      "text": "example if the last portion was something like one one one"
+    },
+    {
+      "start": 794.399,
+      "duration": 6.12,
+      "text": "in that case you'd have bought one and the count would have been four but is"
+    },
+    {
+      "start": 798.24,
+      "duration": 6.899,
+      "text": "one the majority element if you see one just appears four times maybe five"
+    },
+    {
+      "start": 802.56,
+      "duration": 6.6,
+      "text": "that's it one app is five times and when you look at the length of the array it"
+    },
+    {
+      "start": 806.519,
+      "duration": 7.081,
+      "text": "is six two four and four which is eight plus four twelve it's a 16 length array"
+    },
+    {
+      "start": 811.44,
+      "duration": 8.28,
+      "text": "someone has to appear more than eight times to be majority and since it is"
+    },
+    {
+      "start": 817.32,
+      "duration": 9.56,
+      "text": "five let's see 5 is so let's see how many times five is once twice twice four"
+    },
+    {
+      "start": 823.26,
+      "duration": 8.879,
+      "text": "five six seven eight nine five appears nine times out of which four times when"
+    },
+    {
+      "start": 830.1,
+      "duration": 7.32,
+      "text": "not canceled four times when not canceled but the other times it was"
+    },
+    {
+      "start": 835.38,
+      "duration": 6.72,
+      "text": "canceled so the other five times zeros canceled got it so I can say five is my"
+    },
+    {
+      "start": 840.18,
+      "duration": 9.839,
+      "text": "major element it's a very simple process the first process is to apply moose"
+    },
+    {
+      "start": 847.339,
+      "duration": 9.101,
+      "text": "voting algo okay about the second process verify if"
+    },
+    {
+      "start": 854.339,
+      "duration": 7.8,
+      "text": "the element that you got the element that you got is the majority or not how"
+    },
+    {
+      "start": 859.68,
+      "duration": 6.719,
+      "text": "do you do it whatever the element is in this case the element was 5 just iterate"
+    },
+    {
+      "start": 864.6,
+      "duration": 6.479,
+      "text": "through the array again and see how many times 5 appears this time it will come"
+    },
+    {
+      "start": 868.8,
+      "duration": 8.039,
+      "text": "out to be 9 which is greater than the length 16 by 2. so that's why the 5 is"
+    },
+    {
+      "start": 874.2,
+      "duration": 6.72,
+      "text": "if it doesn't then it is not got it so I hope you've understood the intuition"
+    },
+    {
+      "start": 878.1,
+      "duration": 7.2,
+      "text": "it's very simple if someone appears more than n by two times it will not get"
+    },
+    {
+      "start": 882.959,
+      "duration": 6.481,
+      "text": "canceled quite simple right that's the intuition so coming back to the code"
+    },
+    {
+      "start": 887.459,
+      "duration": 5.88,
+      "text": "editor again the problem link will be in the description so what do we need we"
+    },
+    {
+      "start": 891.42,
+      "duration": 7.68,
+      "text": "need account zero and we can keep an element normally now let's quickly start"
+    },
+    {
+      "start": 896.16,
+      "duration": 8.82,
+      "text": "off with zero and probably V Dot size yes and how can I say first thing that I"
+    },
+    {
+      "start": 902.459,
+      "duration": 5.581,
+      "text": "will check is what if the count is 0. if the count is 0 I know for sure this is"
+    },
+    {
+      "start": 907.079,
+      "duration": 6.241,
+      "text": "where I'm starting a check for a new section"
+    },
+    {
+      "start": 911.279,
+      "duration": 7.321,
+      "text": "so ground will be one and the element will be V of I right but what if the"
+    },
+    {
+      "start": 916.38,
+      "duration": 7.5,
+      "text": "count is not zero in that case I will check if V of I is equal to equal to the"
+    },
+    {
+      "start": 921.72,
+      "duration": 7.559,
+      "text": "element that I was thinking it's it's the majority if it is please increase if"
+    },
+    {
+      "start": 926.94,
+      "duration": 9.06,
+      "text": "it is not okay let's reduce simple three lines if the count is zero"
+    },
+    {
+      "start": 932.88,
+      "duration": 9.42,
+      "text": "we just assign and we move I plus plus if it is equal equivalent we just"
+    },
+    {
+      "start": 938.579,
+      "duration": 6.661,
+      "text": "increase count and we move if it is not then we decrease and then we move so"
+    },
+    {
+      "start": 944.279,
+      "duration": 6.24,
+      "text": "what will happen is when you're decreasing if the curve becomes 0 when"
+    },
+    {
+      "start": 948.6,
+      "duration": 5.7,
+      "text": "you increase and when you come back the count will be checked with 0 and it will"
+    },
+    {
+      "start": 952.079,
+      "duration": 6.481,
+      "text": "be replaced with the newer limit and it will start a new section quite simple"
+    },
+    {
+      "start": 956.399,
+      "duration": 9.601,
+      "text": "and once you've got the element just iterate over here"
+    },
+    {
+      "start": 961.56,
+      "duration": 10.98,
+      "text": "and V Dot size all right plus plus and you say Hey listen if V of I is"
+    },
+    {
+      "start": 969.24,
+      "duration": 6.48,
+      "text": "equivalent to element probably you can keep"
+    },
+    {
+      "start": 973.74,
+      "duration": 7.26,
+      "text": "something like counter one equal to zero and you can"
+    },
+    {
+      "start": 978.779,
+      "duration": 9.06,
+      "text": "say counter one plus plus if at the end of the day counter one is greater than V"
+    },
+    {
+      "start": 984.42,
+      "duration": 7.74,
+      "text": "Dot size by 2 again you can store B dot size in some variable this particular"
+    },
+    {
+      "start": 990.18,
+      "duration": 6.12,
+      "text": "element is the answer or else you can say the answer is minus one or whatever"
+    },
+    {
+      "start": 993.66,
+      "duration": 5.88,
+      "text": "they are asking you to return so what I'll do is now I'll quickly go and run"
+    },
+    {
+      "start": 998.16,
+      "duration": 5.52,
+      "text": "this off and see if it is running fine no it does or it'll be counter one plus"
+    },
+    {
+      "start": 1001.339,
+      "duration": 7.62,
+      "text": "plus counter one done and let's quickly submit this off I hope it does run now"
+    },
+    {
+      "start": 1006.92,
+      "duration": 6.479,
+      "text": "remember one thing whatever is the value of counter at the end it doesn't"
+    },
+    {
+      "start": 1010.699,
+      "duration": 6.361,
+      "text": "represents anything so we have to talk about the time complexity how much a"
+    },
+    {
+      "start": 1015.92,
+      "duration": 5.46,
+      "text": "single Loop and three Fields so it's a single Loop"
+    },
+    {
+      "start": 1019.699,
+      "duration": 7.5,
+      "text": "so whenever it's a single Loop you know the time complexity is very simple it's"
+    },
+    {
+      "start": 1024.439,
+      "duration": 8.221,
+      "text": "we go off n for the burst iteration of the most voting algo and if they are"
+    },
+    {
+      "start": 1029.54,
+      "duration": 7.44,
+      "text": "stating that the the array might have or might not have a majority limit then you"
+    },
+    {
+      "start": 1034.52,
+      "duration": 7.38,
+      "text": "go and verify this step will not be done if the problem states that their own"
+    },
+    {
+      "start": 1039.559,
+      "duration": 7.5,
+      "text": "ways exist a majority element then this step will never be done okay you only do"
+    },
+    {
+      "start": 1044.299,
+      "duration": 6.601,
+      "text": "the step if the prop if the array might not have a majority element got it so"
+    },
+    {
+      "start": 1049.22,
+      "duration": 5.76,
+      "text": "this will be the time complexity and we are not using any extra space so this"
+    },
+    {
+      "start": 1052.88,
+      "duration": 5.4,
+      "text": "will be the space complexity of the most optimal solution coming back to the"
+    },
+    {
+      "start": 1057.14,
+      "duration": 4.08,
+      "text": "sheet I can say that this particular problem is done and if you understood"
+    },
+    {
+      "start": 1059.66,
+      "duration": 4.139,
+      "text": "everything please please do with that like button is just one like it won't"
+    },
+    {
+      "start": 1062.66,
+      "duration": 3.96,
+      "text": "cost you anything please do consider hitting that like button and look at"
+    },
+    {
+      "start": 1065.059,
+      "duration": 4.441,
+      "text": "your tradition do comment understood so that I understand that you understanding"
+    },
+    {
+      "start": 1067.94,
+      "duration": 5.4,
+      "text": "everything and if you're new to our Channel please please do consider"
+    },
+    {
+      "start": 1070.94,
+      "duration": 6.0,
+      "text": "subscribing to us because it's like 1 23 am in the morning and after my office"
+    },
+    {
+      "start": 1075.32,
+      "duration": 5.219,
+      "text": "hours I'm recording this video so if you if you consider subscribing to me that"
+    },
+    {
+      "start": 1078.74,
+      "duration": 4.1,
+      "text": "will motivate me to make such more videos"
+    },
+    {
+      "start": 1085.82,
+      "duration": 7.82,
+      "text": "is broken don't ever forget you're golden I will find"
+    }
+  ]
+}

@@ -1,0 +1,2497 @@
+{
+  "video_id": "37E9ckMDdTk",
+  "title": "Find Second Largest Element in Array | Remove duplicates from Sorted Array | Arrays Intro Video",
+  "total_segments": 498,
+  "segments": [
+    {
+      "start": 3.199,
+      "duration": 4.521,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.319,
+      "duration": 6.081,
+      "text": "so this is another lecture from the sters A2Z DSA course so just in case"
+    },
+    {
+      "start": 11.08,
+      "duration": 7.0,
+      "text": "you're for the first time here this is world's most in-depth DS algo course why"
+    },
+    {
+      "start": 15.879,
+      "duration": 7.4,
+      "text": "do I say that because you can go over the entire internet buy any of the paid"
+    },
+    {
+      "start": 19.84,
+      "duration": 9.48,
+      "text": "courses none of them will have 456 modules in this course alone we will be"
+    },
+    {
+      "start": 25.519,
+      "duration": 7.321,
+      "text": "solving 400 plus problems on DS algo so at the end of the course you will be so"
+    },
+    {
+      "start": 31.039,
+      "duration": 5.761,
+      "text": "well vered with Ds algo that you can clear any of the DS algo rounds in any"
+    },
+    {
+      "start": 35.559,
+      "duration": 5.961,
+      "text": "of the interviews in any of the companies in any part of the world so"
+    },
+    {
+      "start": 39.04,
+      "duration": 6.359,
+      "text": "till now we have completed till step two today we will be starting with step"
+    },
+    {
+      "start": 43.44,
+      "duration": 6.56,
+      "text": "three which is nothing but arrays so in order to understand arrays what we will"
+    },
+    {
+      "start": 47.32,
+      "duration": 8.68,
+      "text": "be doing is we will be solving 41 different problems so before moving into"
+    },
+    {
+      "start": 52.559,
+      "duration": 8.761,
+      "text": "the problems let's understand some basic stuffs about array so when I say array"
+    },
+    {
+      "start": 58.76,
+      "duration": 9.48,
+      "text": "what is an array so array is nothing but a data structure which contains similar"
+    },
+    {
+      "start": 65.439,
+      "duration": 10.161,
+      "text": "elements now what do I mean by similar elements it can be integers but remember"
+    },
+    {
+      "start": 72.479,
+      "duration": 8.761,
+      "text": "one thing if it's a data structure it has to contain integers only it cannot"
+    },
+    {
+      "start": 78.439,
+      "duration": 9.081,
+      "text": "contain integers string it has to contain one particular type of data so"
+    },
+    {
+      "start": 85.079,
+      "duration": 10.441,
+      "text": "imagine I integers so the array can contain all of them as integers or maybe"
+    },
+    {
+      "start": 90.92,
+      "duration": 11.479,
+      "text": "as character or maybe as string or maybe as pair so array is a data structure"
+    },
+    {
+      "start": 98.88,
+      "duration": 9.12,
+      "text": "which can contain any kind of data type but one thing has to be clear that all"
+    },
+    {
+      "start": 105.0,
+      "duration": 7.56,
+      "text": "of those elements has to be of the same data type so now moving to the next"
+    },
+    {
+      "start": 109.92,
+      "duration": 7.239,
+      "text": "Point how does an array look generically if I have to draw an array array is"
+    },
+    {
+      "start": 114.68,
+      "duration": 8.68,
+      "text": "represented like this now what is the size of this array 1 2 3 4 5 5 six so"
+    },
+    {
+      "start": 120.84,
+      "duration": 6.68,
+      "text": "the size of this array is six in order to declare an array of size six what"
+    },
+    {
+      "start": 125.64,
+      "duration": 7.4,
+      "text": "what you can do is you can write int array six that will do if you're"
+    },
+    {
+      "start": 130.28,
+      "duration": 9.48,
+      "text": "following Java it should be int array something like this new int and size six"
+    },
+    {
+      "start": 137.2,
+      "duration": 7.16,
+      "text": "this is how you can Define in Java now if you're defining an array of size six"
+    },
+    {
+      "start": 142.2,
+      "duration": 8.759,
+      "text": "whenever you define something like this what happens is an array of some garbage"
+    },
+    {
+      "start": 147.84,
+      "duration": 9.52,
+      "text": "values is defined if you're defining it inside the main function like if you're"
+    },
+    {
+      "start": 154.28,
+      "duration": 7.679,
+      "text": "writing something like int array and six so all of these six positions like this"
+    },
+    {
+      "start": 159.68,
+      "duration": 6.68,
+      "text": "position this position this position all of them will be stored with some garbage"
+    },
+    {
+      "start": 164.2,
+      "duration": 8.319,
+      "text": "values you cannot predict those garbage values but in case instead of declaring"
+    },
+    {
+      "start": 169.76,
+      "duration": 6.92,
+      "text": "it inside the int main if you decide that Hey listen I'm not going to declare"
+    },
+    {
+      "start": 174.76,
+      "duration": 7.399,
+      "text": "it inside the inter main I will be declaring it before the in main this is"
+    },
+    {
+      "start": 179.44,
+      "duration": 7.6,
+      "text": "what we call call AS Global this is what we call AS Global so if you're going to"
+    },
+    {
+      "start": 184.4,
+      "duration": 8.759,
+      "text": "define the array globally then all of them will be filled with zeros this is"
+    },
+    {
+      "start": 190.04,
+      "duration": 6.199,
+      "text": "what happens in C++ Java okay I am not sure about python but should be"
+    },
+    {
+      "start": 194.64,
+      "duration": 8.319,
+      "text": "something similar now you might be thinking then stver you have defined an"
+    },
+    {
+      "start": 199.04,
+      "duration": 9.08,
+      "text": "array of size six what is the maximum size of array that we can Define so the"
+    },
+    {
+      "start": 206.04,
+      "duration": 9.919,
+      "text": "maximum size of array that you can Define is 10 to the power 6 you can go"
+    },
+    {
+      "start": 212.04,
+      "duration": 8.52,
+      "text": "ahead and say int array of 10 the^ 6 this is the maximum length of array that"
+    },
+    {
+      "start": 218.72,
+      "duration": 9.599,
+      "text": "you can Define but there's a catch over here this is the maximum size when you"
+    },
+    {
+      "start": 223.4,
+      "duration": 10.36,
+      "text": "declare it inside yes inside inter main this is the maximum size imagine you say"
+    },
+    {
+      "start": 231.799,
+      "duration": 7.481,
+      "text": "that okay listen I'm going to declare the array globally so if I go ahead and"
+    },
+    {
+      "start": 236.159,
+      "duration": 8.481,
+      "text": "say okay over here is where I'll declare the array so if I declare the array"
+    },
+    {
+      "start": 241.319,
+      "duration": 11.041,
+      "text": "globally then it will be 10 to the^ 7 it will be 10 to the^ 7 so the max size is"
+    },
+    {
+      "start": 248.4,
+      "duration": 9.519,
+      "text": "10 ^ 7 if you go ahead and declare it globally remember this now the next"
+    },
+    {
+      "start": 255.2,
+      "duration": 8.559,
+      "text": "thing how do you access an array so there is something known as index so in"
+    },
+    {
+      "start": 260.44,
+      "duration": 8.24,
+      "text": "an array the first index is zero followed by one then two then three then"
+    },
+    {
+      "start": 266.0,
+      "duration": 8.0,
+      "text": "four so the last index is nothing but size minus one 1 and the first index is"
+    },
+    {
+      "start": 271.16,
+      "duration": 9.64,
+      "text": "nothing but zero so the array indexing is from 0 to N - 1 in order to access"
+    },
+    {
+      "start": 279.08,
+      "duration": 6.76,
+      "text": "any of the elements of the array what you can do is you can just loop from I"
+    },
+    {
+      "start": 283.4,
+      "duration": 7.079,
+      "text": "equal to 0 because 0 is the first index you can go ahead till n minus one"
+    },
+    {
+      "start": 288.479,
+      "duration": 7.201,
+      "text": "because n minus one is the last index and you can run the loop as I ++ so if"
+    },
+    {
+      "start": 292.8,
+      "duration": 8.119,
+      "text": "you go ahead and do a print of array of I what will happen is this will one by"
+    },
+    {
+      "start": 298.8,
+      "duration": 6.239,
+      "text": "one first the value of this will be array of zero so whatever you have"
+    },
+    {
+      "start": 302.88,
+      "duration": 7.92,
+      "text": "stored at array of zero imagine this is an array of integers and I'm storing"
+    },
+    {
+      "start": 306.919,
+      "duration": 8.201,
+      "text": "like 2 3 1 4 7 six so what will happen is first two will get printed then three"
+    },
+    {
+      "start": 313.16,
+      "duration": 7.72,
+      "text": "will get printed then one then four then 7 six this is how you can easily access"
+    },
+    {
+      "start": 318.88,
+      "duration": 7.159,
+      "text": "an array so before moving on to the problem solving let's understand where"
+    },
+    {
+      "start": 322.8,
+      "duration": 8.6,
+      "text": "is array stored in the computer memory so can you predict it no can I predict"
+    },
+    {
+      "start": 329.039,
+      "duration": 7.841,
+      "text": "it no so whenever you declare an array something like this it basically goes"
+    },
+    {
+      "start": 334.16,
+      "duration": 10.44,
+      "text": "into the computer's memory creates a block of like size six block and the"
+    },
+    {
+      "start": 340.28,
+      "duration": 9.84,
+      "text": "first block is stored in some random X address location so this address"
+    },
+    {
+      "start": 346.88,
+      "duration": 9.68,
+      "text": "location no one can predict random X address location and this x is where it"
+    },
+    {
+      "start": 353.16,
+      "duration": 10.0,
+      "text": "stores the zeroth index element but something we can predict is if this is X"
+    },
+    {
+      "start": 359.919,
+      "duration": 11.28,
+      "text": "the next first index will be stored at x + one memory address the next as x+2 the"
+    },
+    {
+      "start": 367.4,
+      "duration": 9.96,
+      "text": "next at x + 3 the next at X+ 4 and the next at x + 5 so contigous memory"
+    },
+    {
+      "start": 374.039,
+      "duration": 8.56,
+      "text": "locations is where all the corresponding indexes will be stored but we cannot"
+    },
+    {
+      "start": 379.639,
+      "duration": 9.96,
+      "text": "predict X thereby accessing an array by address is not possible hence we address"
+    },
+    {
+      "start": 385.84,
+      "duration": 7.4,
+      "text": "it by an index so this was about the basics of the array now let's move on to"
+    },
+    {
+      "start": 391.319,
+      "duration": 7.561,
+      "text": "the problem solving so coming to step 3.1 the first problem is largest element"
+    },
+    {
+      "start": 396.72,
+      "duration": 6.319,
+      "text": "in an array so before moving on to the problem I want you to tell something now"
+    },
+    {
+      "start": 401.039,
+      "duration": 6.641,
+      "text": "whenever you go to an interview the interviewer will give you a question but"
+    },
+    {
+      "start": 405.199,
+      "duration": 6.881,
+      "text": "if you know the solution should you say the solution directly the answer to that"
+    },
+    {
+      "start": 409.599,
+      "duration": 6.44,
+      "text": "is no there is a reason why you're preparing you might know the solution"
+    },
+    {
+      "start": 414.0,
+      "duration": 5.879,
+      "text": "but you should not tell it you should build the interview it's you who should"
+    },
+    {
+      "start": 418.199,
+      "duration": 5.921,
+      "text": "drive the interview when when I say Drive the interview now this is a very"
+    },
+    {
+      "start": 421.84,
+      "duration": 6.56,
+      "text": "easy question but when I say Drive the interview imagine you have been asked a"
+    },
+    {
+      "start": 425.96,
+      "duration": 6.4,
+      "text": "hard question and you know the optimized like the most optimized solution in"
+    },
+    {
+      "start": 430.68,
+      "duration": 7.239,
+      "text": "terms of time complexity and space complexity should you say it directly"
+    },
+    {
+      "start": 435.56,
+      "duration": 6.0,
+      "text": "whenever you have given the question no you should drive the interviewer at"
+    },
+    {
+      "start": 439.84,
+      "duration": 6.16,
+      "text": "first you should ask him about test cases then once you've understood the"
+    },
+    {
+      "start": 444.12,
+      "duration": 7.079,
+      "text": "question properly you should give him the brute for solution which is the like"
+    },
+    {
+      "start": 448.319,
+      "duration": 7.201,
+      "text": "the most normal solution that comes to your brain at first that is what you"
+    },
+    {
+      "start": 453.24,
+      "duration": 7.16,
+      "text": "call as a Brute Force solution then you go ahead and maybe optimize it and maybe"
+    },
+    {
+      "start": 458.16,
+      "duration": 7.36,
+      "text": "get something as a better solution now for every problem better might exist"
+    },
+    {
+      "start": 462.96,
+      "duration": 8.28,
+      "text": "might not exist but a brute usually does exist you get a better one by optimizing"
+    },
+    {
+      "start": 468.52,
+      "duration": 9.239,
+      "text": "The Brute then you optimize the better to get the most optimal solution so"
+    },
+    {
+      "start": 475.4,
+      "duration": 7.4,
+      "text": "again there can be several other flows as well like brood better more better"
+    },
+    {
+      "start": 480.319,
+      "duration": 7.041,
+      "text": "optimal it's you who will drive the interview it's you who will decide how"
+    },
+    {
+      "start": 485.44,
+      "duration": 5.719,
+      "text": "that 30 minutes or how that 1 hour is driven so if you know the solution and"
+    },
+    {
+      "start": 489.919,
+      "duration": 6.521,
+      "text": "you're just saying it in the first two minutes it might be an issue so please"
+    },
+    {
+      "start": 493.84,
+      "duration": 6.4,
+      "text": "drive the interview show that you can think right from the scratch you can"
+    },
+    {
+      "start": 498.039,
+      "duration": 7.081,
+      "text": "build it sometimes you have to fake it but that is how the interviews go in DS"
+    },
+    {
+      "start": 503.0,
+      "duration": 6.0,
+      "text": "algorithms so in harder problems you have to follow this for easier problems"
+    },
+    {
+      "start": 507.039,
+      "duration": 6.48,
+      "text": "do not follow it but in all the easier problems I'll also be following this"
+    },
+    {
+      "start": 511.28,
+      "duration": 6.52,
+      "text": "pattern why so that you get used to this pattern and this gets into your blood so"
+    },
+    {
+      "start": 515.919,
+      "duration": 6.761,
+      "text": "that when you get into an interview you actually are kind of always speaking"
+    },
+    {
+      "start": 520.08,
+      "duration": 6.6,
+      "text": "brute better optimal okay so coming to coming back to the problem finding the"
+    },
+    {
+      "start": 524.6,
+      "duration": 8.2,
+      "text": "largest element in an array what does the problem mean obviously given an"
+    },
+    {
+      "start": 529.56,
+      "duration": 8.2,
+      "text": "array of integers give me the largest integer in it so over here the largest"
+    },
+    {
+      "start": 534.959,
+      "duration": 8.241,
+      "text": "integer is five so I want you to give me five how can you do this very simple if"
+    },
+    {
+      "start": 541.519,
+      "duration": 5.721,
+      "text": "I have to ask you what is the Brute Force solution that comes to your mind"
+    },
+    {
+      "start": 545.399,
+      "duration": 6.721,
+      "text": "you'll be like St The Brute Force solution is I will be sorting it and if"
+    },
+    {
+      "start": 550.079,
+      "duration": 9.161,
+      "text": "I sort it what will happen is it will be looking like 1 2 2 3 5 the moment I"
+    },
+    {
+      "start": 555.399,
+      "duration": 9.56,
+      "text": "sorted the last element did I tell you what is the index of the last element I"
+    },
+    {
+      "start": 561.839,
+      "duration": 10.361,
+      "text": "did so if the size over here is five the last will be array of n minus one can I"
+    },
+    {
+      "start": 568.839,
+      "duration": 8.961,
+      "text": "say if I print this after sorting this will be my largest element obviously"
+    },
+    {
+      "start": 575.56,
+      "duration": 6.719,
+      "text": "because once you have sorted it it is sorted in an ascending order so the"
+    },
+    {
+      "start": 580.32,
+      "duration": 7.04,
+      "text": "smallest will be at first and the largest will be at last so if you sort"
+    },
+    {
+      "start": 584.92,
+      "duration": 7.28,
+      "text": "it and you print it you'll be getting the largest element now what will be the"
+    },
+    {
+      "start": 589.76,
+      "duration": 7.8,
+      "text": "time complexity of this solution you know in order to sort if you apply M"
+    },
+    {
+      "start": 594.64,
+      "duration": 8.4,
+      "text": "short quick sort anyone any one of them the time complexity will take and"
+    },
+    {
+      "start": 600.04,
+      "duration": 8.479,
+      "text": "login and the space complexity if you apply quick sort will be be go of one"
+    },
+    {
+      "start": 605.88,
+      "duration": 8.199,
+      "text": "and I'm I'm ignoring the recursive stack space but I'm still taking a Time"
+    },
+    {
+      "start": 611.12,
+      "duration": 7.88,
+      "text": "complexity of n login to sort it so this is why this is a Brute Force solution"
+    },
+    {
+      "start": 616.16,
+      "duration": 6.239,
+      "text": "because this is the most like normal solution that comes to your hand this is"
+    },
+    {
+      "start": 621.04,
+      "duration": 5.32,
+      "text": "why this is the Brute Force solution because this is the most like generic"
+    },
+    {
+      "start": 625.079,
+      "duration": 4.681,
+      "text": "solution that will come to your head when you hear this problem so once"
+    },
+    {
+      "start": 628.36,
+      "duration": 5.36,
+      "text": "you've given uh the the brw to the interview you can have a better solution"
+    },
+    {
+      "start": 631.92,
+      "duration": 5.56,
+      "text": "or you might not so in this case we do not have a better solution so we'll move"
+    },
+    {
+      "start": 635.44,
+      "duration": 7.16,
+      "text": "to the optimal solution now what is the most optimal solution for this one"
+    },
+    {
+      "start": 640.12,
+      "duration": 7.36,
+      "text": "obviously we have to optimize n login so what we will do is we will say okay"
+    },
+    {
+      "start": 644.36,
+      "duration": 7.32,
+      "text": "let's let's keep a largest variable and I'll say largest to be the first element"
+    },
+    {
+      "start": 649.48,
+      "duration": 7.799,
+      "text": "because I know one of the elements of the ARR will always be largest so I will"
+    },
+    {
+      "start": 654.279,
+      "duration": 8.401,
+      "text": "say first element you are the largest assume you are the largest and then I"
+    },
+    {
+      "start": 659.0,
+      "duration": 7.279,
+      "text": "start traversing I say okay three you can travel from three or you can travel"
+    },
+    {
+      "start": 664.32,
+      "duration": 6.44,
+      "text": "from two as well that is okay I said three are you greater than the largest"
+    },
+    {
+      "start": 668.88,
+      "duration": 6.92,
+      "text": "so largest is currently stored as three three are you greater than three it says"
+    },
+    {
+      "start": 672.8,
+      "duration": 8.76,
+      "text": "no so I say okay move ahead two are you greater than three he says no move one"
+    },
+    {
+      "start": 679.399,
+      "duration": 8.961,
+      "text": "are you greater than three no he says move five are you greater than three yes"
+    },
+    {
+      "start": 685.04,
+      "duration": 8.96,
+      "text": "this will be five next two are you greater than five no so after this the"
+    },
+    {
+      "start": 691.6,
+      "duration": 8.0,
+      "text": "iteration is over once the iteration is over the largest is storing the largest"
+    },
+    {
+      "start": 696.76,
+      "duration": 8.36,
+      "text": "element and it's very simple if I have to code it it'll be like largest is a of"
+    },
+    {
+      "start": 702.44,
+      "duration": 10.639,
+      "text": "Z and then you start the for loop from I equal to zero you go something like I n"
+    },
+    {
+      "start": 708.72,
+      "duration": 8.64,
+      "text": "i ++ and you say if array of I again I am writing the pseudo code can be"
+    },
+    {
+      "start": 715.04,
+      "duration": 6.44,
+      "text": "written in any of the languages array of I"
+    },
+    {
+      "start": 719.959,
+      "duration": 7.32,
+      "text": "that's it and at the end of the day you can say"
+    },
+    {
+      "start": 722.44,
+      "duration": 11.36,
+      "text": "print array of sorry print largest is what you'll print simple as that now you"
+    },
+    {
+      "start": 730.48,
+      "duration": 7.4,
+      "text": "can also run the loop from one because you have stored the largest of a of zero"
+    },
+    {
+      "start": 735.6,
+      "duration": 7.039,
+      "text": "doesn't matter not not a big optimization what is the time complexity"
+    },
+    {
+      "start": 740.24,
+      "duration": 7.56,
+      "text": "we're just running a loop for B go of n so can I say the time complexity over"
+    },
+    {
+      "start": 744.92,
+      "duration": 6.479,
+      "text": "here is B go of n now this is much much better than the Brute Force solution"
+    },
+    {
+      "start": 749.519,
+      "duration": 7.241,
+      "text": "this is why this will be categorized as an optimal solution because you kind of"
+    },
+    {
+      "start": 754.199,
+      "duration": 8.2,
+      "text": "optimize the time complexity somewhere because B of n is definitely better than"
+    },
+    {
+      "start": 759.32,
+      "duration": 6.4,
+      "text": "b go of n login so this is how you can easily solve this problem in case you"
+    },
+    {
+      "start": 764.199,
+      "duration": 5.08,
+      "text": "want to submit this problem the problem link will be in the description so"
+    },
+    {
+      "start": 767.519,
+      "duration": 6.361,
+      "text": "remember one thing we're talking about arrays but in a lot of places you might"
+    },
+    {
+      "start": 771.56,
+      "duration": 7.639,
+      "text": "find something like a vector and in Java you might find array list or list so as"
+    },
+    {
+      "start": 776.399,
+      "duration": 7.201,
+      "text": "long as it's a data structure it's stores similar elements like vector is"
+    },
+    {
+      "start": 781.279,
+      "duration": 7.68,
+      "text": "also a data structure which stores similar elements it is okay like it will"
+    },
+    {
+      "start": 786.44,
+      "duration": 7.92,
+      "text": "be considered like it's not an array but the problems can be solved using arrays"
+    },
+    {
+      "start": 791.72,
+      "duration": 6.359,
+      "text": "using list using vectors because it's a data structure which is storing similar"
+    },
+    {
+      "start": 796.199,
+      "duration": 6.041,
+      "text": "integers you might find something like a vector got it but the problem link is in"
+    },
+    {
+      "start": 800.279,
+      "duration": 5.521,
+      "text": "the description so when you go to online compilers you don't have to print it"
+    },
+    {
+      "start": 804.199,
+      "duration": 6.361,
+      "text": "usually they will be asking you to return it so you can easily go ahead and"
+    },
+    {
+      "start": 808.04,
+      "duration": 7.52,
+      "text": "return it like this so going to the next problem it states second largest element"
+    },
+    {
+      "start": 813.48,
+      "duration": 5.84,
+      "text": "in an array without sorting this question might look very very simple but"
+    },
+    {
+      "start": 817.639,
+      "duration": 5.64,
+      "text": "this question is very very commonly asked in an interview because a lot of"
+    },
+    {
+      "start": 820.88,
+      "duration": 6.12,
+      "text": "people do not know how to solve it so they might ask you second largest or"
+    },
+    {
+      "start": 825.12,
+      "duration": 6.36,
+      "text": "they might ask you second smallest so the pattern that you have to answer in"
+    },
+    {
+      "start": 828.92,
+      "duration": 6.919,
+      "text": "an interview is you start from grot then you go to better then you go to Optimal"
+    },
+    {
+      "start": 833.8,
+      "duration": 6.039,
+      "text": "that's how you will be solving it when I talk about Groot and you have to find"
+    },
+    {
+      "start": 838.0,
+      "duration": 5.88,
+      "text": "second largest ele what will be the Brute Force The Brute"
+    },
+    {
+      "start": 841.88,
+      "duration": 6.36,
+      "text": "Force is going to be very simple I will say hey I'll be sorting the array and if"
+    },
+    {
+      "start": 846.72,
+      "duration": 10.4,
+      "text": "I sort the array it will looks something like 1 2 4 5 7 and I know one thing for"
+    },
+    {
+      "start": 852.12,
+      "duration": 11.12,
+      "text": "sure my largest element will be array of n minus one that is something which I'm"
+    },
+    {
+      "start": 860.44,
+      "duration": 8.199,
+      "text": "very very sure about but can I say that the second largest element will be array"
+    },
+    {
+      "start": 865.199,
+      "duration": 8.401,
+      "text": "of n minus 2 can I say this I cannot because the largest is seven and yeah"
+    },
+    {
+      "start": 871.92,
+      "duration": 7.599,
+      "text": "there is another seven but that's not second largest that is largest the"
+    },
+    {
+      "start": 875.68,
+      "duration": 11.2,
+      "text": "second largest is five so what you have to do is you have to start from the N"
+    },
+    {
+      "start": 883.0,
+      "duration": 9.399,
+      "text": "minus 2 index and you have to kind of go like okay seven are you equivalent to"
+    },
+    {
+      "start": 890.88,
+      "duration": 4.92,
+      "text": "largest because as of now largest is seven that is what you have stored"
+    },
+    {
+      "start": 894.12,
+      "duration": 6.8,
+      "text": "because you've got this and youve stored it in largest now you go at seven and"
+    },
+    {
+      "start": 898.16,
+      "duration": 7.96,
+      "text": "you say are are you same as seven he says yes so definitely you're not second"
+    },
+    {
+      "start": 903.56,
+      "duration": 8.279,
+      "text": "largest he then goes back five are you same as largest no so you are my second"
+    },
+    {
+      "start": 908.8,
+      "duration": 7.08,
+      "text": "largest so you are my second largest that's how you can do it so it's it's"
+    },
+    {
+      "start": 914.36,
+      "duration": 7.399,
+      "text": "more like you have to start from the back since I know that the largest is"
+    },
+    {
+      "start": 918.759,
+      "duration": 8.041,
+      "text": "area of n minus one I can probably start from n minus to because that is the"
+    },
+    {
+      "start": 924.0,
+      "duration": 10.72,
+      "text": "second last index and I can go like greater than equal to Z iusus and what I"
+    },
+    {
+      "start": 929.519,
+      "duration": 10.521,
+      "text": "can say is if array of I is not equal to largest can I say this will be my second"
+    },
+    {
+      "start": 937.199,
+      "duration": 6.801,
+      "text": "largest second largest equal to array of I and then probably I can break out"
+    },
+    {
+      "start": 942.68,
+      "duration": 8.399,
+      "text": "because there's no need to go any further can I said this will be my code"
+    },
+    {
+      "start": 947.399,
+      "duration": 9.201,
+      "text": "so at first what did I do at first I did something like a sorting so sorting"
+    },
+    {
+      "start": 953.319,
+      "duration": 7.041,
+      "text": "ended up taking a n logarithmic of n correct because sorting is sorting"
+    },
+    {
+      "start": 958.399,
+      "duration": 8.641,
+      "text": "definitely Tak that much of time and then this at the worst case what is the"
+    },
+    {
+      "start": 963.519,
+      "duration": 10.361,
+      "text": "worst case if I think properly if I give you an array something like this 1 7"
+    },
+    {
+      "start": 971.36,
+      "duration": 8.08,
+      "text": "7777 then what will happen you will start from here no this is equivalent to"
+    },
+    {
+      "start": 977.199,
+      "duration": 6.2,
+      "text": "largest this is also equivalent to largest this is also equivalent to"
+    },
+    {
+      "start": 981.519,
+      "duration": 8.601,
+      "text": "largest this is also equivalent to larest and this is also equivalent sorry"
+    },
+    {
+      "start": 986.079,
+      "duration": 10.12,
+      "text": "this is not so you Traverse the end Tire right from the end like n minus 2 until"
+    },
+    {
+      "start": 993.399,
+      "duration": 8.201,
+      "text": "the beginning so this at the worst case can go for a beo of n there might be a"
+    },
+    {
+      "start": 999.319,
+      "duration": 7.721,
+      "text": "case where your second largest might not exist might not exist"
+    },
+    {
+      "start": 1005.6,
+      "duration": 6.599,
+      "text": "in that case you can keep it as minus one might not like if this is seven"
+    },
+    {
+      "start": 1009.48,
+      "duration": 6.88,
+      "text": "there is no second largest element in an but that is that might not happen you"
+    },
+    {
+      "start": 1014.68,
+      "duration": 6.32,
+      "text": "you should tell the interviewer by yourself these cases so I can say the"
+    },
+    {
+      "start": 1018.92,
+      "duration": 6.48,
+      "text": "the total overall complexity of the Brute Force solution is first I sought"
+    },
+    {
+      "start": 1023.56,
+      "duration": 8.6,
+      "text": "and the worst case I might travel the entire way in order just in case all of"
+    },
+    {
+      "start": 1028.48,
+      "duration": 7.079,
+      "text": "them are largest elements so that's how you'll be telling the Brute Force"
+    },
+    {
+      "start": 1033.6,
+      "duration": 8.839,
+      "text": "approach so what will be a better solution a better solution will be like"
+    },
+    {
+      "start": 1037.919,
+      "duration": 8.92,
+      "text": "we will do a first yes first pass and we'll find out the largest element if"
+    },
+    {
+      "start": 1045.16,
+      "duration": 7.28,
+      "text": "you remember we did find out the largest element before this problem so what I"
+    },
+    {
+      "start": 1049.12,
+      "duration": 9.64,
+      "text": "will do is I'll at first keep largest as one which is this guy then I'll start"
+    },
+    {
+      "start": 1056.12,
+      "duration": 7.4,
+      "text": "from two I'll be like two are you greater than one he says yes then I'll"
+    },
+    {
+      "start": 1061.24,
+      "duration": 7.679,
+      "text": "go to four four are you greater than two he says yes then I go to seven seven are"
+    },
+    {
+      "start": 1066.52,
+      "duration": 6.68,
+      "text": "you greater than four he says yes then I again go to seven seven are you greater"
+    },
+    {
+      "start": 1070.72,
+      "duration": 7.92,
+      "text": "than seven he says no Then I go to five five are you greater than seven no so"
+    },
+    {
+      "start": 1075.08,
+      "duration": 8.28,
+      "text": "the largest on the first pass is stored as seven and the code will be similar to"
+    },
+    {
+      "start": 1081.32,
+      "duration": 7.32,
+      "text": "the first one so you have figured out the largest over here by doing a first"
+    },
+    {
+      "start": 1086.44,
+      "duration": 8.92,
+      "text": "pass now what you will do is you'll say okay let's keep second"
+    },
+    {
+      "start": 1091.28,
+      "duration": 9.48,
+      "text": "largest as minus one and let's again try the same thing"
+    },
+    {
+      "start": 1097.64,
+      "duration": 9.0,
+      "text": "one hey one are you greater than minus one he says yes and are you not largest"
+    },
+    {
+      "start": 1103.679,
+      "duration": 8.441,
+      "text": "he says yes so I'll take one and that will be my second largest okay let's go"
+    },
+    {
+      "start": 1109.12,
+      "duration": 9.799,
+      "text": "ahead he says two are you greater than one he says yes but are you not largest"
+    },
+    {
+      "start": 1115.12,
+      "duration": 9.24,
+      "text": "he says yes so thereby I take two then I go to four and I ask four are you"
+    },
+    {
+      "start": 1121.44,
+      "duration": 9.84,
+      "text": "greater than two he says yes but four you are not largest now he says no so"
+    },
+    {
+      "start": 1127.96,
+      "duration": 9.12,
+      "text": "four next seven seven are you greater than four yes but are you largest yes I"
+    },
+    {
+      "start": 1134.36,
+      "duration": 7.48,
+      "text": "am largest so do not take me do not take me so he'll not take him next X go seven"
+    },
+    {
+      "start": 1139.96,
+      "duration": 10.12,
+      "text": "seven are you greater yes but I am largest five are you greater than four"
+    },
+    {
+      "start": 1145.4,
+      "duration": 10.24,
+      "text": "yes are you largest no so five comes up in the second pass you got the second"
+    },
+    {
+      "start": 1152.64,
+      "duration": 7.88,
+      "text": "largest as five so if I have to write the code can I say the code is very"
+    },
+    {
+      "start": 1157.6,
+      "duration": 10.28,
+      "text": "simple I start from zero I go until the end i++ and I say listen if array of I"
+    },
+    {
+      "start": 1165.559,
+      "duration": 6.281,
+      "text": "maybe you can store second largest as minus one"
+    },
+    {
+      "start": 1169.4,
+      "duration": 7.48,
+      "text": "just in case there is none and you can say second"
+    },
+    {
+      "start": 1172.84,
+      "duration": 11.6,
+      "text": "largest if it's greater and if array of I is not equal to"
+    },
+    {
+      "start": 1181.52,
+      "duration": 9.159,
+      "text": "largest then you can say second largest equal to array of I quite simple"
+    },
+    {
+      "start": 1188.44,
+      "duration": 7.4,
+      "text": "this will be a second pass first you write this this piece of code then you"
+    },
+    {
+      "start": 1193.799,
+      "duration": 6.081,
+      "text": "can write this piece of code and at the end of the day you can easily go ahead"
+    },
+    {
+      "start": 1197.76,
+      "duration": 8.039,
+      "text": "and print second largest if I have to ask you the"
+    },
+    {
+      "start": 1202.72,
+      "duration": 7.079,
+      "text": "time complexity of this now you can say that it's a b off n but you should not"
+    },
+    {
+      "start": 1207.559,
+      "duration": 10.441,
+      "text": "in an interview you should say okay the first pass takes beo of n the second"
+    },
+    {
+      "start": 1213.24,
+      "duration": 11.28,
+      "text": "pass takes beo of n so the algorithm is taking two passes and it's like n + n"
+    },
+    {
+      "start": 1222.0,
+      "duration": 9.96,
+      "text": "it's actually running for two passes so it's a bigo of 2 N approach so we have"
+    },
+    {
+      "start": 1228.84,
+      "duration": 6.959,
+      "text": "got a better approach of big go of 2 N where we have to run twice through the"
+    },
+    {
+      "start": 1233.919,
+      "duration": 5.721,
+      "text": "array and we can get the largest in the first pass and we can get the second"
+    },
+    {
+      "start": 1237.6,
+      "duration": 7.68,
+      "text": "largest in the second pass now it's time to understand the optimal approach so in"
+    },
+    {
+      "start": 1242.52,
+      "duration": 9.12,
+      "text": "the optimal approach what you will do is you will say hey my largest will be the"
+    },
+    {
+      "start": 1248.48,
+      "duration": 9.76,
+      "text": "first guy which is aray of zero and my second largest will be nothing but"
+    },
+    {
+      "start": 1255.039,
+      "duration": 9.321,
+      "text": "minus1 so I'm saying okay the first guy is my largest for sure so I'm kind of"
+    },
+    {
+      "start": 1261.48,
+      "duration": 8.559,
+      "text": "taking one as my largest and I'm saying second largest is minus one assuming"
+    },
+    {
+      "start": 1267.039,
+      "duration": 6.921,
+      "text": "that this array does not contains any negative numbers that is an assumption"
+    },
+    {
+      "start": 1272.24,
+      "duration": 6.4,
+      "text": "I'm working at in case the array contains negative numbers you can"
+    },
+    {
+      "start": 1275.96,
+      "duration": 6.959,
+      "text": "probably take this as integer minimum integer minimum in all the cases that I"
+    },
+    {
+      "start": 1280.96,
+      "duration": 7.64,
+      "text": "have told in case the array contains negative numbers you can take it as some"
+    },
+    {
+      "start": 1286.039,
+      "duration": 8.281,
+      "text": "very small number like integer minimum or a very very negative number got it so"
+    },
+    {
+      "start": 1291.6,
+      "duration": 8.72,
+      "text": "have largest is assigned as one and second largest is assigned as minus one"
+    },
+    {
+      "start": 1297.24,
+      "duration": 9.24,
+      "text": "now what you do is you simply go ahead and say okay fine let's Traverse so we"
+    },
+    {
+      "start": 1304.12,
+      "duration": 5.72,
+      "text": "know the first guy we should not do anything why because that's the largest"
+    },
+    {
+      "start": 1308.2,
+      "duration": 9.12,
+      "text": "as of now so we will not do anything to it we'll go to the two we have two so"
+    },
+    {
+      "start": 1313.72,
+      "duration": 8.959,
+      "text": "two is like hey two are you greater than largest he says I I am dude I am greater"
+    },
+    {
+      "start": 1320.0,
+      "duration": 7.84,
+      "text": "than largest for sure I'm like okay you greater than largest so"
+    },
+    {
+      "start": 1325.039,
+      "duration": 9.12,
+      "text": "definitely you should be the largest but can I say if someone becomes the largest"
+    },
+    {
+      "start": 1331.52,
+      "duration": 9.12,
+      "text": "hear me out properly If someone becomes the largest then the previous largest"
+    },
+    {
+      "start": 1337.24,
+      "duration": 9.799,
+      "text": "will go second isn't it if you are in a class and you are always first and if"
+    },
+    {
+      "start": 1343.919,
+      "duration": 7.921,
+      "text": "someone comes up and says gets better marks than you then he'll be the first"
+    },
+    {
+      "start": 1348.88,
+      "duration": 8.039,
+      "text": "guy and you'll be the second right the same logic if two is greater than"
+    },
+    {
+      "start": 1354.039,
+      "duration": 7.361,
+      "text": "largest what will happen is this will go to the second largest right because"
+    },
+    {
+      "start": 1359.32,
+      "duration": 8.04,
+      "text": "there is someone who is now the largest and we will replace the largest by two"
+    },
+    {
+      "start": 1363.6,
+      "duration": 9.48,
+      "text": "perfect now we go to four four says am I greater than largest yes you are so now"
+    },
+    {
+      "start": 1370.279,
+      "duration": 8.52,
+      "text": "the largest goes to second largest it goes to second largest and this one"
+    },
+    {
+      "start": 1374.919,
+      "duration": 8.921,
+      "text": "becomes four now I have seven seven says I'm the largest so this will take the"
+    },
+    {
+      "start": 1381.24,
+      "duration": 8.76,
+      "text": "largest and this will become the largest again seven nothing to do because we"
+    },
+    {
+      "start": 1387.36,
+      "duration": 7.76,
+      "text": "need to be very careful we have a seven which is equivalent to largest so do not"
+    },
+    {
+      "start": 1392.44,
+      "duration": 8.08,
+      "text": "do anything if it's equivalent to larges do not do anything next we have five"
+    },
+    {
+      "start": 1399.12,
+      "duration": 7.439,
+      "text": "this is why you have to understand one thing we got five now this five is not"
+    },
+    {
+      "start": 1404.279,
+      "duration": 8.801,
+      "text": "greater than largest but we need to check is it greater than second he says"
+    },
+    {
+      "start": 1409.32,
+      "duration": 8.479,
+      "text": "yes I am just replace the second largest so apparently you got the largest as"
+    },
+    {
+      "start": 1414.6,
+      "duration": 9.48,
+      "text": "seven and the second largest as five very simple make sure do not do anything"
+    },
+    {
+      "start": 1421.32,
+      "duration": 7.08,
+      "text": "in terms of equivalent do not if it's lesser then only compare with second"
+    },
+    {
+      "start": 1426.2,
+      "duration": 6.16,
+      "text": "largest otherwise do not so let's now Cote this up by the way you can find the"
+    },
+    {
+      "start": 1430.039,
+      "duration": 6.801,
+      "text": "problem Link in the description so over here what they're asking is you have to"
+    },
+    {
+      "start": 1434.4,
+      "duration": 5.68,
+      "text": "return the second largest and the second smallest so you have to find both both"
+    },
+    {
+      "start": 1438.64,
+      "duration": 5.56,
+      "text": "of them so something like you have to find second"
+    },
+    {
+      "start": 1441.72,
+      "duration": 4.959,
+      "text": "largest right and then you have to find second"
+    },
+    {
+      "start": 1446.96,
+      "duration": 8.88,
+      "text": "smallest and then you have to return the array of this and in what order yeah"
+    },
+    {
+      "start": 1452.12,
+      "duration": 7.72,
+      "text": "first the largest and then the smallest this is what you have to do so maybe we"
+    },
+    {
+      "start": 1457.64,
+      "duration": 7.68,
+      "text": "can write a function which Finds Me second largest where I pass in the array"
+    },
+    {
+      "start": 1463.24,
+      "duration": 7.439,
+      "text": "and the n and similarly I can write a function which finds me the second"
+    },
+    {
+      "start": 1467.399,
+      "duration": 9.52,
+      "text": "smallest remember in your coding interviews or rounds you have to code"
+    },
+    {
+      "start": 1475.0,
+      "duration": 7.08,
+      "text": "using these kind of variable namings you cannot give X Y AB BC you have to have"
+    },
+    {
+      "start": 1480.0,
+      "duration": 5.84,
+      "text": "proper variable namings you have to have proper function namings so that you"
+    },
+    {
+      "start": 1484.039,
+      "duration": 8.801,
+      "text": "stand out in an interview so let's quickly write the second largest second"
+    },
+    {
+      "start": 1488.76,
+      "duration": 7.24,
+      "text": "largest is taking the array and the end so what did I say at first what do you"
+    },
+    {
+      "start": 1494.52,
+      "duration": 8.36,
+      "text": "need to do you have to kind of say someone as the largest and maybe we can"
+    },
+    {
+      "start": 1498.0,
+      "duration": 11.279,
+      "text": "call it as a of0 and we can say second largest and we can say second largest as"
+    },
+    {
+      "start": 1505.919,
+      "duration": 9.281,
+      "text": "minus one now let's quickly see if they're stating anything about uh like"
+    },
+    {
+      "start": 1513.039,
+      "duration": 6.681,
+      "text": "okay they have clearly stated the array will be of minimum of length two so we"
+    },
+    {
+      "start": 1517.799,
+      "duration": 6.921,
+      "text": "are sure that every array will have two numbers that is something which we are"
+    },
+    {
+      "start": 1522.039,
+      "duration": 8.12,
+      "text": "sure about and the other thing if we read properly it states that it has"
+    },
+    {
+      "start": 1527.36,
+      "duration": 8.0,
+      "text": "unique unique non- negative integers so it's kind of saying that it doesn't have"
+    },
+    {
+      "start": 1532.399,
+      "duration": 8.16,
+      "text": "duplicates so if the array size is two and it doesn't have duplicates so every"
+    },
+    {
+      "start": 1537.679,
+      "duration": 7.841,
+      "text": "array will have a second largest element every array will have a second largest"
+    },
+    {
+      "start": 1541.96,
+      "duration": 12.319,
+      "text": "element got it so we can just go across from 1 till n and we can say Hey listen"
+    },
+    {
+      "start": 1550.159,
+      "duration": 9.721,
+      "text": "if a of I is greater than largest then the second largest guy will clearly yes"
+    },
+    {
+      "start": 1557.679,
+      "duration": 6.921,
+      "text": "there's no doubt in this we'll we'll take the largest guy and the largest"
+    },
+    {
+      "start": 1562.159,
+      "duration": 6.801,
+      "text": "will be replaced by aray of I make sure you first take the largest and then"
+    },
+    {
+      "start": 1567.48,
+      "duration": 7.12,
+      "text": "replace the largest otherwise there will be a problem and then we can say Hey"
+    },
+    {
+      "start": 1570.88,
+      "duration": 9.88,
+      "text": "listen if a ofi is greater than largest and an a ofi because it has to be it has"
+    },
+    {
+      "start": 1577.64,
+      "duration": 8.639,
+      "text": "to be lesser than largest by the way and a ofi is greater than very important is"
+    },
+    {
+      "start": 1584.0,
+      "duration": 7.559,
+      "text": "greater than second largest in that case you a second largest can you please take"
+    },
+    {
+      "start": 1588.44,
+      "duration": 8.2,
+      "text": "care of this is that's it and you can return second largest similarly let's"
+    },
+    {
+      "start": 1594.08,
+      "duration": 8.76,
+      "text": "write the second smallest as well the second smallest will again take the same"
+    },
+    {
+      "start": 1599.32,
+      "duration": 10.32,
+      "text": "vector and the n and you can say smallest equal to array of zero and"
+    },
+    {
+      "start": 1607.159,
+      "duration": 7.201,
+      "text": "against the second smallest the name is kind of weird not"
+    },
+    {
+      "start": 1612.44,
+      "duration": 6.76,
+      "text": "an issue over here please make sure you give int Max why int Max the reason"
+    },
+    {
+      "start": 1617.24,
+      "duration": 6.039,
+      "text": "being you're finding smallest so it has to be a very big number as the array"
+    },
+    {
+      "start": 1621.44,
+      "duration": 5.76,
+      "text": "will be from zero so minus one will work for minimals like for largest it will"
+    },
+    {
+      "start": 1625.48,
+      "duration": 5.24,
+      "text": "work but for this you have to give int Max because it's 10 to the^ 9 had this"
+    },
+    {
+      "start": 1629.48,
+      "duration": 6.559,
+      "text": "been greater than you have to take a bigger number than this got it and now"
+    },
+    {
+      "start": 1633.2,
+      "duration": 7.28,
+      "text": "now let's start with one and let's go till here that's something which we know"
+    },
+    {
+      "start": 1638.279,
+      "duration": 8.681,
+      "text": "and now we know one thing we need the smallest if a ofi is smaller than the"
+    },
+    {
+      "start": 1644.0,
+      "duration": 9.039,
+      "text": "smallest then the second smallest takes the smallest"
+    },
+    {
+      "start": 1648.84,
+      "duration": 11.839,
+      "text": "quite obvious and and the smallest takes the array of I and what"
+    },
+    {
+      "start": 1655.96,
+      "duration": 11.439,
+      "text": "if array of I is not equal to smallest that means it's not but it is smaller"
+    },
+    {
+      "start": 1664.919,
+      "duration": 7.201,
+      "text": "than the second smallest I'm like okay if you're are smaller than the second"
+    },
+    {
+      "start": 1668.519,
+      "duration": 3.601,
+      "text": "smallest then that's"
+    },
+    {
+      "start": 1672.679,
+      "duration": 8.84,
+      "text": "perfect the second smallest will just take array of I and once have done"
+    },
+    {
+      "start": 1679.2,
+      "duration": 6.479,
+      "text": "this return smallest once you have done"
+    },
+    {
+      "start": 1684.32,
+      "duration": 5.199,
+      "text": "everything you can just go ahead and run it and it should be running absolutely"
+    },
+    {
+      "start": 1687.159,
+      "duration": 6.921,
+      "text": "fine does and let's quickly submit this and see if it is submitted or not but"
+    },
+    {
+      "start": 1692.12,
+      "duration": 5.2,
+      "text": "the problem link is in the description make sure you try it out by the way what"
+    },
+    {
+      "start": 1695.64,
+      "duration": 7.72,
+      "text": "is the time complexity of this B go of n because you're just doing"
+    },
+    {
+      "start": 1700.519,
+      "duration": 9.961,
+      "text": "one pass for finding second largest it is beo of n the optimal solution to find"
+    },
+    {
+      "start": 1707.24,
+      "duration": 7.799,
+      "text": "second largest has just takes one pass and the time complexity is B go of n"
+    },
+    {
+      "start": 1713.0,
+      "duration": 6.12,
+      "text": "that is why it is better than the better solution and hence it's called the"
+    },
+    {
+      "start": 1717.279,
+      "duration": 6.201,
+      "text": "optimal solution so we done with the second problem as well let's go on to"
+    },
+    {
+      "start": 1721.24,
+      "duration": 8.24,
+      "text": "the next problem which says check if the array is sorted so coming to the problem"
+    },
+    {
+      "start": 1726.519,
+      "duration": 10.0,
+      "text": "check if the array is sorted very simple problem given an array you have to see"
+    },
+    {
+      "start": 1732.12,
+      "duration": 11.24,
+      "text": "if it's sorted in a non-descending order what does it mean 1 okay two two is kind"
+    },
+    {
+      "start": 1741.24,
+      "duration": 6.4,
+      "text": "of greater than equal to 1 two is greater than equal to two 3 is greater"
+    },
+    {
+      "start": 1745.64,
+      "duration": 6.639,
+      "text": "than equal to 2 3 is greater than equal to 3 and four is greater than equal to"
+    },
+    {
+      "start": 1750.159,
+      "duration": 10.041,
+      "text": "so it's okay let's check out the next array one okay two okay because greater"
+    },
+    {
+      "start": 1757.0,
+      "duration": 10.559,
+      "text": "than equal to 1 1 not greater than equal to two not this is not sorted this is"
+    },
+    {
+      "start": 1763.96,
+      "duration": 7.319,
+      "text": "sorted how will you do it very simple just Trav"
+    },
+    {
+      "start": 1768.799,
+      "duration": 6.401,
+      "text": "in the array from the first element do we have a brw better optimal for this I"
+    },
+    {
+      "start": 1773.399,
+      "duration": 4.681,
+      "text": "don't think we need a bro better optimal for this it's a very straightforward"
+    },
+    {
+      "start": 1776.799,
+      "duration": 6.0,
+      "text": "problem so what you'll do is you'll start from the first index and you'll be"
+    },
+    {
+      "start": 1780.44,
+      "duration": 7.2,
+      "text": "like let's check with the previous is the previous smaller than equal to it is"
+    },
+    {
+      "start": 1786.2,
+      "duration": 4.92,
+      "text": "then you'll go to the next and again you'll check with the previous is it"
+    },
+    {
+      "start": 1789.36,
+      "duration": 6.64,
+      "text": "smaller than equal to then you'll go to the next then you'll go to the next and"
+    },
+    {
+      "start": 1793.519,
+      "duration": 7.0,
+      "text": "similarly you can check for everyone very obvious isn't it so it's like"
+    },
+    {
+      "start": 1798.559,
+      "duration": 6.561,
+      "text": "if I have to write the pseudo code it'll go from one it'll go to n you don't need"
+    },
+    {
+      "start": 1803.72,
+      "duration": 8.4,
+      "text": "to check for the first element no need to check for the first element you say"
+    },
+    {
+      "start": 1807.159,
+      "duration": 8.64,
+      "text": "Hey listen if array of I is actually greater"
+    },
+    {
+      "start": 1813.159,
+      "duration": 5.841,
+      "text": "than equal to array of IUS one that should be the case but non descending"
+    },
+    {
+      "start": 1818.039,
+      "duration": 7.52,
+      "text": "nones descending it's okay but if it is not"
+    },
+    {
+      "start": 1823.279,
+      "duration": 8.52,
+      "text": "then there is a problem you say return false stating"
+    },
+    {
+      "start": 1828.08,
+      "duration": 9.24,
+      "text": "that is not sorted and if the entire iteration is over if the entire"
+    },
+    {
+      "start": 1834.0,
+      "duration": 8.32,
+      "text": "iteration is over and I completes the entire iteration and reaches the step"
+    },
+    {
+      "start": 1840.24,
+      "duration": 8.319,
+      "text": "which means the end of the follow Loop then you can say return true in the"
+    },
+    {
+      "start": 1844.399,
+      "duration": 9.561,
+      "text": "function stating this this array is sorted so if I try the same code in the"
+    },
+    {
+      "start": 1852.36,
+      "duration": 4.799,
+      "text": "online compiler by the way again the problem link will be in the description"
+    },
+    {
+      "start": 1855.6,
+      "duration": 7.4,
+      "text": "you can see you can simply write like this and we can leave the if as blank"
+    },
+    {
+      "start": 1860.24,
+      "duration": 6.36,
+      "text": "and we can in the else just return the moment you find someone who has a"
+    },
+    {
+      "start": 1864.76,
+      "duration": 5.48,
+      "text": "problem that means that is not sorted just return a false if it completes the"
+    },
+    {
+      "start": 1868.76,
+      "duration": 7.24,
+      "text": "fall Loop which is the step then you return a true this is how easy it is in"
+    },
+    {
+      "start": 1873.039,
+      "duration": 8.401,
+      "text": "order to write if an array is sorted or not what is the time complexity again"
+    },
+    {
+      "start": 1878.12,
+      "duration": 8.36,
+      "text": "takes a single pass so B go of n is the time complexity in order to check if the"
+    },
+    {
+      "start": 1883.919,
+      "duration": 7.36,
+      "text": "array is sorted let's move to the next problem which is remove remove"
+    },
+    {
+      "start": 1888.36,
+      "duration": 8.199,
+      "text": "duplicates from a sorted array so coming to the problem remove duplicates in"
+    },
+    {
+      "start": 1893.88,
+      "duration": 7.96,
+      "text": "place from the sorted array what does the problem tell you about so you'll be"
+    },
+    {
+      "start": 1899.279,
+      "duration": 8.36,
+      "text": "given an array which is definitely a sorted one and it will be containing"
+    },
+    {
+      "start": 1904.519,
+      "duration": 7.4,
+      "text": "integers if you see there are duplicates over here and you need to remove it so"
+    },
+    {
+      "start": 1910.32,
+      "duration": 7.239,
+      "text": "if I ask you what are the unique elements in this array it be like 1 2"
+    },
+    {
+      "start": 1915.24,
+      "duration": 7.319,
+      "text": "and three that's what you have to write the first three places if there are"
+    },
+    {
+      "start": 1920.399,
+      "duration": 7.321,
+      "text": "three unique elements then you take up the first three places and put those"
+    },
+    {
+      "start": 1925.44,
+      "duration": 8.04,
+      "text": "unique elements over there like 1 comma 2 comma 3 and the remaining places they"
+    },
+    {
+      "start": 1930.919,
+      "duration": 8.0,
+      "text": "do not care what you're putting they do not care you can put whatever you wish"
+    },
+    {
+      "start": 1935.84,
+      "duration": 7.76,
+      "text": "to you cannot put that as your choice but what they care is if there are three"
+    },
+    {
+      "start": 1941.519,
+      "duration": 6.88,
+      "text": "unique elements sorry if there are if there are three unique elements then the"
+    },
+    {
+      "start": 1945.48,
+      "duration": 7.12,
+      "text": "first three places should be filled up with those three unique elements once"
+    },
+    {
+      "start": 1950.6,
+      "duration": 7.52,
+      "text": "you fill up like once you modify the given array again you cannot create any"
+    },
+    {
+      "start": 1955.36,
+      "duration": 7.88,
+      "text": "new array you have to modify the given array itself once you have modified the"
+    },
+    {
+      "start": 1960.559,
+      "duration": 7.161,
+      "text": "given array you just tell them how many unique elements are there so you have to"
+    },
+    {
+      "start": 1965.679,
+      "duration": 6.681,
+      "text": "return so over here there are three so you have to return three modify and"
+    },
+    {
+      "start": 1970.36,
+      "duration": 7.64,
+      "text": "return the number of unique elements that is what the problem us is asking"
+    },
+    {
+      "start": 1975.24,
+      "duration": 6.799,
+      "text": "you to do so whenever this question now this question has been asked in a lot of"
+    },
+    {
+      "start": 1979.76,
+      "duration": 7.919,
+      "text": "interviews if this question comes up to you should you be saying the optimal"
+    },
+    {
+      "start": 1984.799,
+      "duration": 9.12,
+      "text": "approach directly the answer to that is no drive the interview and the first"
+    },
+    {
+      "start": 1990.799,
+      "duration": 8.6,
+      "text": "approach that you should always say is the Brute Force what is the brute force"
+    },
+    {
+      "start": 1996.519,
+      "duration": 9.12,
+      "text": "that comes in into your head it's like I need unique elements whenever I hear the"
+    },
+    {
+      "start": 2001.96,
+      "duration": 6.319,
+      "text": "term unique what comes into my head set kind of a set data structure I'm like"
+    },
+    {
+      "start": 2007.559,
+      "duration": 7.12,
+      "text": "yes so let's define a set data structure so"
+    },
+    {
+      "start": 2011.799,
+      "duration": 9.84,
+      "text": "I'll be defining a set data structure let's iterate in the"
+    },
+    {
+      "start": 2016.519,
+      "duration": 10.961,
+      "text": "are one put it into the set again one if you take this one and you put it into"
+    },
+    {
+      "start": 2023.639,
+      "duration": 9.081,
+      "text": "the set will the set except one no it already has a one there will be no new"
+    },
+    {
+      "start": 2029.799,
+      "duration": 6.921,
+      "text": "addition in the set next go to two if you take this two and you put it into"
+    },
+    {
+      "start": 2034.36,
+      "duration": 6.279,
+      "text": "the set there will be a new addition perfect next go to two if you take this"
+    },
+    {
+      "start": 2038.88,
+      "duration": 7.919,
+      "text": "two and you put it into the set will there be a new addition no take this two"
+    },
+    {
+      "start": 2044.08,
+      "duration": 7.559,
+      "text": "no new addition take this three and put it into the set there will be a new"
+    },
+    {
+      "start": 2048.76,
+      "duration": 9.839,
+      "text": "addition take this three and put it into the set no new addition so at the end of"
+    },
+    {
+      "start": 2054.76,
+      "duration": 8.879,
+      "text": "the day the set after one iteration very very important after one iteration the"
+    },
+    {
+      "start": 2061.159,
+      "duration": 6.68,
+      "text": "set will be containing three elements so this is how the code will look like"
+    },
+    {
+      "start": 2065.839,
+      "duration": 7.08,
+      "text": "after one iteration like very simple declare a set and then pass on and"
+    },
+    {
+      "start": 2070.04,
+      "duration": 7.639,
+      "text": "insert everything the set will be something like this after one iteration"
+    },
+    {
+      "start": 2075.8,
+      "duration": 7.68,
+      "text": "now what you will do is you will say okay I need to put everything into the"
+    },
+    {
+      "start": 2081.48,
+      "duration": 7.919,
+      "text": "like the unique elements in the starting of the array fine let's go to the set"
+    },
+    {
+      "start": 2087.119,
+      "duration": 9.24,
+      "text": "let's keep a pointer here which is the zero index like if I have to write the"
+    },
+    {
+      "start": 2091.2,
+      "duration": 10.52,
+      "text": "index it's like 0 1 2 3 4 5 6 let's keep an index"
+    },
+    {
+      "start": 2098.4,
+      "duration": 8.84,
+      "text": "at the zeroth index and let's go to the first element of the set and that's one"
+    },
+    {
+      "start": 2104.76,
+      "duration": 8.359,
+      "text": "let's take that one and place it into the zeroth index done once I've done"
+    },
+    {
+      "start": 2110.04,
+      "duration": 8.799,
+      "text": "this let's move index one step ahead because my first place is occupied let's"
+    },
+    {
+      "start": 2116.4,
+      "duration": 5.92,
+      "text": "take the next element of the set and put it into the first index once I've done"
+    },
+    {
+      "start": 2121.079,
+      "duration": 7.401,
+      "text": "that let's move it next three put it done that let's"
+    },
+    {
+      "start": 2126.96,
+      "duration": 7.8,
+      "text": "move does the set have any more elements no"
+    },
+    {
+      "start": 2132.2,
+      "duration": 7.28,
+      "text": "the set doesn't have any more elements if the set doesn't have any more"
+    },
+    {
+      "start": 2136.2,
+      "duration": 7.48,
+      "text": "elements what will happen obviously there'll be no further insertion into"
+    },
+    {
+      "start": 2142.16,
+      "duration": 6.439,
+      "text": "the array if there is no further insertion thereby you can say wherever"
+    },
+    {
+      "start": 2146.24,
+      "duration": 6.839,
+      "text": "the index stops because it's a zero based indexing array this will be the"
+    },
+    {
+      "start": 2150.8,
+      "duration": 6.319,
+      "text": "size of this particular array and you can return this particular index and"
+    },
+    {
+      "start": 2155.16,
+      "duration": 5.64,
+      "text": "this is what the brute force will be so if I have to write the code I'll quickly"
+    },
+    {
+      "start": 2158.68,
+      "duration": 8.399,
+      "text": "just show you the code code is very simple decare index as zero this is how"
+    },
+    {
+      "start": 2164.2,
+      "duration": 7.44,
+      "text": "you iterate in the set just an iterator auto is something which is automatically"
+    },
+    {
+      "start": 2169.8,
+      "duration": 6.559,
+      "text": "assigning it to integer because the set is containing integers by the way the"
+    },
+    {
+      "start": 2173.76,
+      "duration": 7.359,
+      "text": "set stores everything in ascending order the first it will be storing one then"
+    },
+    {
+      "start": 2177.96,
+      "duration": 7.96,
+      "text": "two then three okay so iterator so every time you get one gets into the index"
+    },
+    {
+      "start": 2183.359,
+      "duration": 8.401,
+      "text": "then index Plus+ very simple code if I have to analyze the time complexity what"
+    },
+    {
+      "start": 2187.96,
+      "duration": 11.76,
+      "text": "will it be so the set in order to insert takes logarithmic of n the set okay so"
+    },
+    {
+      "start": 2195.64,
+      "duration": 11.0,
+      "text": "it will be like n logarithmic of n for this particular first pass again this"
+    },
+    {
+      "start": 2203.24,
+      "duration": 9.839,
+      "text": "one is n so the overall time complexity for The Brute Force approach is n login"
+    },
+    {
+      "start": 2209.8,
+      "duration": 8.279,
+      "text": "to insert into the set and a b go of N and what space are you using using a b"
+    },
+    {
+      "start": 2216.0,
+      "duration": 7.319,
+      "text": "go of n space Y in space imagine all of those were"
+    },
+    {
+      "start": 2221.2,
+      "duration": 7.52,
+      "text": "unique elements all of those were unique elements so the set would have taken"
+    },
+    {
+      "start": 2226.079,
+      "duration": 7.641,
+      "text": "everything into it that's why that's why the extra space is there there's an"
+    },
+    {
+      "start": 2230.48,
+      "duration": 8.48,
+      "text": "extra space of B of n being used as well so this is the TC this is the space"
+    },
+    {
+      "start": 2236.359,
+      "duration": 6.881,
+      "text": "complexity so definitely this is a brute for solution let's try to improve on it"
+    },
+    {
+      "start": 2241.24,
+      "duration": 7.04,
+      "text": "in order to optimize this Brute Force solution you have to apply something as"
+    },
+    {
+      "start": 2245.8,
+      "duration": 8.039,
+      "text": "a two-pointer approach very simple and then you will get the"
+    },
+    {
+      "start": 2251.319,
+      "duration": 10.161,
+      "text": "optimal approach why did I say very simple let's think so the array is"
+    },
+    {
+      "start": 2258.44,
+      "duration": 8.48,
+      "text": "sorted right and we know one thing for sure first element is"
+    },
+    {
+      "start": 2264.319,
+      "duration": 7.721,
+      "text": "this and the next El like the first element will always be at its first"
+    },
+    {
+      "start": 2269.319,
+      "duration": 8.28,
+      "text": "place because that's unique in itself the next place will be taken by someone"
+    },
+    {
+      "start": 2275.2,
+      "duration": 7.159,
+      "text": "who is not equivalent to one because we are talking about unique right so the"
+    },
+    {
+      "start": 2279.839,
+      "duration": 9.721,
+      "text": "next element will be someone who will be not equivalent to this one so can I say"
+    },
+    {
+      "start": 2286.0,
+      "duration": 8.16,
+      "text": "I will go go and check which element is not equivalent to this first and I'll"
+    },
+    {
+      "start": 2291.88,
+      "duration": 7.16,
+      "text": "get this the moment I get this I'll just put it into the next index and then"
+    },
+    {
+      "start": 2296.359,
+      "duration": 7.921,
+      "text": "again I'll go and find who is the next who is not equivalent to this guy and"
+    },
+    {
+      "start": 2302.52,
+      "duration": 7.599,
+      "text": "then I'll put it into the next and then again I'll try but I'll not find so this"
+    },
+    {
+      "start": 2306.319,
+      "duration": 9.52,
+      "text": "is how you can easily enter everything got the thought process it's about you"
+    },
+    {
+      "start": 2312.4,
+      "duration": 7.36,
+      "text": "know one thing for sure this guy will always be at its first place so you"
+    },
+    {
+      "start": 2318.079,
+      "duration": 8.441,
+      "text": "don't need to change it you don't need to change it you just keep a pointer"
+    },
+    {
+      "start": 2322.8,
+      "duration": 9.519,
+      "text": "here stating I and now you go right and say who's the guy who's different than"
+    },
+    {
+      "start": 2329.68,
+      "duration": 8.639,
+      "text": "one that's it so you probably can keep a point A J and you say one are you"
+    },
+    {
+      "start": 2335.319,
+      "duration": 9.641,
+      "text": "different than one he says no so I'll go ahead I said J are you"
+    },
+    {
+      "start": 2342.44,
+      "duration": 7.28,
+      "text": "different than one he says yes yes I am so I"
+    },
+    {
+      "start": 2346.48,
+      "duration": 9.2,
+      "text": "says you can take the place in front of me so he will take the place here and"
+    },
+    {
+      "start": 2353.24,
+      "duration": 6.76,
+      "text": "since he has taken the place here the ey pointer will move here I'll just erase"
+    },
+    {
+      "start": 2358.28,
+      "duration": 7.839,
+      "text": "this so that you have better Clarity ey pointer will move here now this is done"
+    },
+    {
+      "start": 2364.4,
+      "duration": 9.32,
+      "text": "so what you'll do is you'll move j and you'll say two are you equivalent"
+    },
+    {
+      "start": 2369.119,
+      "duration": 10.72,
+      "text": "he says yes H not no use you'll say again two are equivalent he says yes ah"
+    },
+    {
+      "start": 2377.96,
+      "duration": 8.6,
+      "text": "no use three are equivalent no another"
+    },
+    {
+      "start": 2384.28,
+      "duration": 8.44,
+      "text": "unique if you get another unique where will it go in front of two if it goes in"
+    },
+    {
+      "start": 2390.2,
+      "duration": 6.36,
+      "text": "front of two this three will uh no need to Omit this three will come here"
+    },
+    {
+      "start": 2394.52,
+      "duration": 6.92,
+      "text": "perfect and if this three comes here what will happen to I"
+    },
+    {
+      "start": 2397.839,
+      "duration": 7.081,
+      "text": "the ey will also move from here to here now again you'll find the next guy who"
+    },
+    {
+      "start": 2403.4,
+      "duration": 7.0,
+      "text": "is not equivalent to three that's"
+    },
+    {
+      "start": 2407.04,
+      "duration": 9.279,
+      "text": "equivalent and then over the iteration is over once the iteration is over do"
+    },
+    {
+      "start": 2413.4,
+      "duration": 8.08,
+      "text": "you notice the first three places are filled with the three unique elements"
+    },
+    {
+      "start": 2418.48,
+      "duration": 7.92,
+      "text": "and your I is standing at which index if I write the indexing 012 is standing at"
+    },
+    {
+      "start": 2424.24,
+      "duration": 5.32,
+      "text": "the second index so what will be the size of the"
+    },
+    {
+      "start": 2427.839,
+      "duration": 7.681,
+      "text": "unique like what will be the number of the unique elements definitely I + 1"
+    },
+    {
+      "start": 2433.2,
+      "duration": 7.639,
+      "text": "quite simple so if I have to write the code how will the pseudo code look like"
+    },
+    {
+      "start": 2438.079,
+      "duration": 8.921,
+      "text": "can I say I know one thing the first unique element is I equal to C and then"
+    },
+    {
+      "start": 2444.119,
+      "duration": 8.96,
+      "text": "I know I'll start from one and I'll go until end that's for sure and I need to"
+    },
+    {
+      "start": 2449.48,
+      "duration": 8.68,
+      "text": "figure out someone who is not equivalent to my current"
+    },
+    {
+      "start": 2454.4,
+      "duration": 10.4,
+      "text": "one if array of J is not equivalent to Ari oh not"
+    },
+    {
+      "start": 2462.359,
+      "duration": 6.72,
+      "text": "equivalent take my take my front position take my front position so I'll"
+    },
+    {
+      "start": 2467.0,
+      "duration": 8.72,
+      "text": "be like okay let's give him the front position front position I + one please"
+    },
+    {
+      "start": 2473.28,
+      "duration": 7.16,
+      "text": "take your front position once you have taken your front position what will you"
+    },
+    {
+      "start": 2477.44,
+      "duration": 6.8,
+      "text": "do okay let me go to that front position because now if I go to the front"
+    },
+    {
+      "start": 2482.24,
+      "duration": 7.0,
+      "text": "position if I go here then only I can now do the future I can get the next"
+    },
+    {
+      "start": 2487.359,
+      "duration": 6.161,
+      "text": "future element which is not equivalent got it so this is how it will work so"
+    },
+    {
+      "start": 2491.48,
+      "duration": 6.44,
+      "text": "I'll go to the front position done very simple two point once this follow Loop"
+    },
+    {
+      "start": 2495.48,
+      "duration": 6.92,
+      "text": "is complete I know the size will be I + 1 because I at the end of the day will"
+    },
+    {
+      "start": 2500.319,
+      "duration": 7.241,
+      "text": "be here which is two but the size will be one more thereby we will be returning"
+    },
+    {
+      "start": 2505.079,
+      "duration": 7.721,
+      "text": "I + 1 this is how the two- pointer approach will look like and if I have to"
+    },
+    {
+      "start": 2509.839,
+      "duration": 9.361,
+      "text": "ask you the optimals time complexity simple one pass we go in space"
+    },
+    {
+      "start": 2515.48,
+      "duration": 9.359,
+      "text": "complexity B go one why because one pass and you're doing everything in that"
+    },
+    {
+      "start": 2521.04,
+      "duration": 7.6,
+      "text": "particular array as it was being asked in the like if you remember the problem"
+    },
+    {
+      "start": 2526.24,
+      "duration": 6.52,
+      "text": "statement it's stated in place and that is been done this is the optimal"
+    },
+    {
+      "start": 2531.079,
+      "duration": 5.04,
+      "text": "solution for this problem just in case you want to submit the problem the"
+    },
+    {
+      "start": 2533.96,
+      "duration": 5.879,
+      "text": "problem link will be in the description and I've written the same code now let's"
+    },
+    {
+      "start": 2537.8,
+      "duration": 6.88,
+      "text": "quickly submit this and see if it is running fine or not yeah it does run so"
+    },
+    {
+      "start": 2542.72,
+      "duration": 7.52,
+      "text": "with this I can say that I've have completed the fourth problem as well so"
+    },
+    {
+      "start": 2547.559,
+      "duration": 6.321,
+      "text": "for this video we will be keeping it till here because I don't want to solve"
+    },
+    {
+      "start": 2552.359,
+      "duration": 6.081,
+      "text": "a lot of problems and make the video long because that might scare you in the"
+    },
+    {
+      "start": 2556.079,
+      "duration": 7.641,
+      "text": "next uh video again we'll be solving probably the next five problems that is"
+    },
+    {
+      "start": 2561.64,
+      "duration": 7.04,
+      "text": "what we will be targeting in the next video so with this uh I will be wrapping"
+    },
+    {
+      "start": 2566.28,
+      "duration": 6.279,
+      "text": "up this video but if you have understood everything that I've taught in this"
+    },
+    {
+      "start": 2570.04,
+      "duration": 6.84,
+      "text": "particular video to follow our tradition do comment understood if you are new to"
+    },
+    {
+      "start": 2574.839,
+      "duration": 4.961,
+      "text": "our Channel what are you waiting for please please please consider"
+    },
+    {
+      "start": 2578.319,
+      "duration": 6.081,
+      "text": "subscribing to us because that is the only thing that keeps you motivated to"
+    },
+    {
+      "start": 2581.88,
+      "duration": 6.84,
+      "text": "make these kind of content and yeah hit that like button and and yeah if you"
+    },
+    {
+      "start": 2586.24,
+      "duration": 6.92,
+      "text": "haven't followed me on Instagram the IDE is over here do follow me on Instagram"
+    },
+    {
+      "start": 2590.68,
+      "duration": 5.72,
+      "text": "LinkedIn and whatever social media links you'll find in the description with this"
+    },
+    {
+      "start": 2595.079,
+      "duration": 4.721,
+      "text": "I'll be wrapping up this video Let's be in some other video till then bye-bye"
+    },
+    {
+      "start": 2597.64,
+      "duration": 2.16,
+      "text": "take"
+    },
+    {
+      "start": 2600.72,
+      "duration": 6.76,
+      "text": "careen forget your golden I will"
+    }
+  ]
+}

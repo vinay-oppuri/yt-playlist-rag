@@ -1,0 +1,2232 @@
+{
+  "video_id": "HGk_ypEuS24",
+  "title": "Sorting - Part 1 | Selection Sort, Bubble Sort, Insertion Sort | Strivers A2Z DSA Course",
+  "total_segments": 445,
+  "segments": [
+    {
+      "start": 3.32,
+      "duration": 5.08,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.56,
+      "duration": 7.199,
+      "text": "so this will be another lecture from the Strivers a toz DSA course just in case"
+    },
+    {
+      "start": 11.519,
+      "duration": 8.201,
+      "text": "you for the first time here this course is India's most yes most indepth course"
+    },
+    {
+      "start": 17.039,
+      "duration": 9.16,
+      "text": "on DS algo why do I say that the course has 4506 module you can go to the market"
+    },
+    {
+      "start": 24.119,
+      "duration": 7.761,
+      "text": "buy any of the paid courses check out any of the free courses none of those"
+    },
+    {
+      "start": 28.4,
+      "duration": 9.999,
+      "text": "courses on DS algo will have 456 problems or modules solved so this is"
+    },
+    {
+      "start": 35.8,
+      "duration": 6.12,
+      "text": "definitely by far one of the most comprehensive course on DS algo and this"
+    },
+    {
+      "start": 40.719,
+      "duration": 5.52,
+      "text": "is the only thing that you'll be requiring if you are preparing for"
+    },
+    {
+      "start": 44.2,
+      "duration": 6.32,
+      "text": "placements so in the previous videos we have covered the step one and now we"
+    },
+    {
+      "start": 48.719,
+      "duration": 5.401,
+      "text": "will be going to step two now the step two states you have to learn important"
+    },
+    {
+      "start": 52.199,
+      "duration": 7.081,
+      "text": "sorting techniques in order to start your journey with Ds algo sorting is"
+    },
+    {
+      "start": 57.32,
+      "duration": 6.76,
+      "text": "something which you have to know even if you're going for placements they might"
+    },
+    {
+      "start": 61.519,
+      "duration": 8.041,
+      "text": "ask you sorting algorithms and the Sorting one which is Step 2.1 we have"
+    },
+    {
+      "start": 66.68,
+      "duration": 7.0,
+      "text": "three algorithms selection sort bubble short insertion sort so if you're"
+    },
+    {
+      "start": 72.04,
+      "duration": 5.64,
+      "text": "appearing for placements they might ask you hey can you please tell me the code"
+    },
+    {
+      "start": 75.2,
+      "duration": 7.4,
+      "text": "for insertion sort and you have to tell them right and sorting two will be based"
+    },
+    {
+      "start": 80.799,
+      "duration": 7.041,
+      "text": "on recursion so we'll be covering that in the next lecture so without waiting"
+    },
+    {
+      "start": 85.159,
+      "duration": 5.361,
+      "text": "let's start with selection sort so before moving in the video let me tell"
+    },
+    {
+      "start": 89.119,
+      "duration": 4.401,
+      "text": "you about learn base so learn B is an Tech platform that offers you data"
+    },
+    {
+      "start": 92.32,
+      "duration": 5.159,
+      "text": "science and full stack development programs dedicated to professionals only"
+    },
+    {
+      "start": 95.68,
+      "duration": 5.439,
+      "text": "so at learn B you will be getting 100% live online classes where you can"
+    },
+    {
+      "start": 99.119,
+      "duration": 6.561,
+      "text": "interact with the faculties directly and get your doubt Result One Is to one one"
+    },
+    {
+      "start": 104.0,
+      "duration": 6.32,
+      "text": "thing I did like about learn is you'll be getting an opportunity to work on"
+    },
+    {
+      "start": 107.88,
+      "duration": 6.879,
+      "text": "industry based Capstone projects which will be certified by IBM so you're going"
+    },
+    {
+      "start": 112.64,
+      "duration": 6.04,
+      "text": "to get a global accreditation which will be beneficial whenever you present that"
+    },
+    {
+      "start": 116.6,
+      "duration": 6.76,
+      "text": "project anywhere that's going to be very very helpful you Al get an one is to one"
+    },
+    {
+      "start": 121.399,
+      "duration": 5.76,
+      "text": "personal mentorship and you also get a one is to one daily doubt session where"
+    },
+    {
+      "start": 125.6,
+      "duration": 4.84,
+      "text": "you can actually get all your doubts resolved also they have project"
+    },
+    {
+      "start": 128.759,
+      "duration": 5.361,
+      "text": "innovation Labs across the country in Kolkata Pune Bangalore Hyderabad and a"
+    },
+    {
+      "start": 132.68,
+      "duration": 5.32,
+      "text": "lot of other places so you can go over there and create your projects in the"
+    },
+    {
+      "start": 135.879,
+      "duration": 5.041,
+      "text": "offline mode as well once you enroll for any of the courses you three years of"
+    },
+    {
+      "start": 139.44,
+      "duration": 5.24,
+      "text": "subscription so you can have all the learning modules and all the videos for"
+    },
+    {
+      "start": 142.68,
+      "duration": 6.559,
+      "text": "3 years in this program you'll also be getting 100% job assistance by their"
+    },
+    {
+      "start": 146.879,
+      "duration": 6.521,
+      "text": "dedicated placement cell and in the past people have got got hikes up to 250% and"
+    },
+    {
+      "start": 151.76,
+      "duration": 6.36,
+      "text": "they have partnered with more than 250 companies like UI Intel sap and a lot"
+    },
+    {
+      "start": 156.239,
+      "duration": 5.761,
+      "text": "others Lear B alies have also got placed in top companies like Amazon t cap gini"
+    },
+    {
+      "start": 160.56,
+      "duration": 4.959,
+      "text": "Etc so what are you waiting for there's a link in the description click it and"
+    },
+    {
+      "start": 163.68,
+      "duration": 9.36,
+      "text": "get your free 1 is to one career counseling session the question what is"
+    },
+    {
+      "start": 168.92,
+      "duration": 11.08,
+      "text": "selection sort does the name recommends selection what do you select we select"
+    },
+    {
+      "start": 177.36,
+      "duration": 8.32,
+      "text": "minimums remember this as the name name recommends what do you select we select"
+    },
+    {
+      "start": 183.04,
+      "duration": 7.279,
+      "text": "minimums so as the name recommends select minimums so what you will do is"
+    },
+    {
+      "start": 188.519,
+      "duration": 7.161,
+      "text": "you look at the entire array and you will say who is the minimum and it"
+    },
+    {
+      "start": 192.56,
+      "duration": 10.64,
+      "text": "states nine is the minimum so you'll take that nine and you'll place it here"
+    },
+    {
+      "start": 199.12,
+      "duration": 8.64,
+      "text": "perfect I place the nine here and if this nine is the minimum and you're"
+    },
+    {
+      "start": 205.159,
+      "duration": 8.72,
+      "text": "placing it at the first place where will 13 go 13 says okay no issues I will go"
+    },
+    {
+      "start": 211.599,
+      "duration": 8.041,
+      "text": "to your place because n has to come at first and now I'll write the remaining"
+    },
+    {
+      "start": 216.36,
+      "duration": 8.4,
+      "text": "guys over here that's how you do it so that is the step one of the algorithm"
+    },
+    {
+      "start": 221.599,
+      "duration": 6.961,
+      "text": "the step one States get the minimum from the"
+    },
+    {
+      "start": 225.4,
+      "duration": 8.759,
+      "text": "entire and youve got the minimum you place it at the first whoever is at the"
+    },
+    {
+      "start": 231.2,
+      "duration": 10.0,
+      "text": "first goes to that minimum simple as that so swapping select minimums and"
+    },
+    {
+      "start": 237.68,
+      "duration": 8.36,
+      "text": "swap is what the algorithm is all about this is step one remember this this is"
+    },
+    {
+      "start": 243.12,
+      "duration": 9.679,
+      "text": "step one what is step two let's see so the step two states okay I know the"
+    },
+    {
+      "start": 249.079,
+      "duration": 9.961,
+      "text": "first I know the extreme smallest guy is at the first now we should select the"
+    },
+    {
+      "start": 256.0,
+      "duration": 8.88,
+      "text": "next minimum we know one thing if the minimum is over here this array is"
+    },
+    {
+      "start": 261.72,
+      "duration": 8.96,
+      "text": "sorted which portion of the array is not sorted that is this let's find the"
+    },
+    {
+      "start": 267.56,
+      "duration": 8.8,
+      "text": "minimum can I say in this 13 is the minimum so if 13 is the minimum I know 9"
+    },
+    {
+      "start": 273.96,
+      "duration": 8.84,
+      "text": "will stay where 9 is if 13 is the minimum 13 will come at the first place"
+    },
+    {
+      "start": 279.16,
+      "duration": 11.72,
+      "text": "it will and if 13 comes here where will 46 go 46 will go to 13 so 46 goes here"
+    },
+    {
+      "start": 287.36,
+      "duration": 7.8,
+      "text": "and the rest remains as it is perfect step two done let's do step three so can"
+    },
+    {
+      "start": 294.12,
+      "duration": 5.88,
+      "text": "I say after two steps I got the first two"
+    },
+    {
+      "start": 298.479,
+      "duration": 7.881,
+      "text": "minimums and this portion of the AR sorted I can"
+    },
+    {
+      "start": 303.24,
+      "duration": 7.32,
+      "text": "now we are left with this portion what to do get the next minimum who's the X"
+    },
+    {
+      "start": 308.84,
+      "duration": 10.12,
+      "text": "minimum 20 as usual 930 stays 20 comes in if 20"
+    },
+    {
+      "start": 315.84,
+      "duration": 10.32,
+      "text": "is coming in here where will 24 Go 24 will go to 20 so take it to there and"
+    },
+    {
+      "start": 322.36,
+      "duration": 9.399,
+      "text": "550 to 46 stays step three is completed let's do step four at step four can you"
+    },
+    {
+      "start": 329.319,
+      "duration": 8.641,
+      "text": "say that that this portion of the array is sorted you can which portion is not"
+    },
+    {
+      "start": 335.319,
+      "duration": 13.041,
+      "text": "this one so in this which is does minimum 24 place it 9 13 20 24 52 goes"
+    },
+    {
+      "start": 344.319,
+      "duration": 10.681,
+      "text": "at its place 46 let's do the step five so can I say at step four this is sorted"
+    },
+    {
+      "start": 351.68,
+      "duration": 10.44,
+      "text": "and this is unsorted who is the minimum 46 so 9 13 20"
+    },
+    {
+      "start": 358.52,
+      "duration": 12.16,
+      "text": "24 uh sorry 46 will come here and 52 will go here now at step"
+    },
+    {
+      "start": 366.68,
+      "duration": 8.56,
+      "text": "five if this is done do you need to look like do you need to sort one element one"
+    },
+    {
+      "start": 373.24,
+      "duration": 8.6,
+      "text": "element will always be sort so apparently can I say the entire array is"
+    },
+    {
+      "start": 377.68,
+      "duration": 11.4,
+      "text": "sorted at step five 1 2 3 4 5 six six elements but actually took five steps to"
+    },
+    {
+      "start": 385.72,
+      "duration": 7.72,
+      "text": "sort the entire array what I did was get the minimum"
+    },
+    {
+      "start": 390.24,
+      "duration": 9.32,
+      "text": "and swap it and swap it then what I did was get the minimum and swap it then"
+    },
+    {
+      "start": 396.56,
+      "duration": 10.16,
+      "text": "what I did was get the minimum and swap it so get the minimum and swap is the"
+    },
+    {
+      "start": 403.96,
+      "duration": 8.079,
+      "text": "algorithm now the question comes okay we've understood the algorithm but how"
+    },
+    {
+      "start": 408.759,
+      "duration": 7.681,
+      "text": "do I implement this in code I'll be writing the pseudo code so that you can"
+    },
+    {
+      "start": 413.479,
+      "duration": 7.521,
+      "text": "write it in C++ as well as in Java as well as in Python so in order to"
+    },
+    {
+      "start": 418.44,
+      "duration": 8.199,
+      "text": "implement algorithms you have to have something like observing power let's"
+    },
+    {
+      "start": 423.52,
+      "duration": 9.28,
+      "text": "start observing what the first observation in the entire array very"
+    },
+    {
+      "start": 429.72,
+      "duration": 7.56,
+      "text": "very in the entire array we figured out the minimum can I say figured out the"
+    },
+    {
+      "start": 434.72,
+      "duration": 8.159,
+      "text": "minimum and whichever index the minimum appeared whichever index the minimum"
+    },
+    {
+      "start": 439.319,
+      "duration": 8.641,
+      "text": "appeared I swapped it with the first guy zero"
+    },
+    {
+      "start": 443.759,
+      "duration": 10.201,
+      "text": "thing that's what I did that's why 13 is here and 9 is here"
+    },
+    {
+      "start": 450.24,
+      "duration": 10.0,
+      "text": "the 0 to 5 is what I went next I took this which is from index one"
+    },
+    {
+      "start": 457.319,
+      "duration": 10.88,
+      "text": "to index 5 and I got the minimum which is 13 and I swapped it with 46 thereby I"
+    },
+    {
+      "start": 464.199,
+      "duration": 9.161,
+      "text": "got so I went from 1 to five and the swapping happened with one and the"
+    },
+    {
+      "start": 472.0,
+      "duration": 8.12,
+      "text": "minimum minimum next in this I got the minimum"
+    },
+    {
+      "start": 478.36,
+      "duration": 12.64,
+      "text": "and the swapping happened from two so can I say first time swap"
+    },
+    {
+      "start": 485.08,
+      "duration": 15.839,
+      "text": "happened at index zero and minimum index next time swap happened at index"
+    },
+    {
+      "start": 496.039,
+      "duration": 10.241,
+      "text": "one and minimum index and this minimum index is from the array 0 to n minus one"
+    },
+    {
+      "start": 504.039,
+      "duration": 6.0,
+      "text": "this minimum index is from the array 1 to n minus one next time can I say"
+    },
+    {
+      "start": 508.56,
+      "duration": 6.68,
+      "text": "swapping happened at index two"
+    },
+    {
+      "start": 511.719,
+      "duration": 10.161,
+      "text": "because till that 0 and one are sorted and minimum Index this time is from 2 to"
+    },
+    {
+      "start": 518.719,
+      "duration": 10.12,
+      "text": "n minus one so can I generalize this and can I say this will go like 0 1 2 till"
+    },
+    {
+      "start": 525.76,
+      "duration": 8.84,
+      "text": "what are you doing for the last guy are you swapping the last guy is just still"
+    },
+    {
+      "start": 531.519,
+      "duration": 9.44,
+      "text": "here you got 46 and you swapped can I say you'll go till n minus 2 index why n"
+    },
+    {
+      "start": 537.92,
+      "duration": 10.84,
+      "text": "minus 2 index why because the last index is n minus one in arrays so can I say"
+    },
+    {
+      "start": 545.56,
+      "duration": 10.399,
+      "text": "okay spping is happening zero 1 2 and it'll go till n minus 2 thereby can I"
+    },
+    {
+      "start": 552.68,
+      "duration": 7.839,
+      "text": "write this as like this a pseudo code okay zero first time it will go zero"
+    },
+    {
+      "start": 558.8,
+      "duration": 10.279,
+      "text": "next time one next time two next time three and it goes on till n-2 and I ++"
+    },
+    {
+      "start": 565.2,
+      "duration": 12.759,
+      "text": "can I see this the first and whenever I is 0 I find the minimum from 0 to n"
+    },
+    {
+      "start": 574.32,
+      "duration": 10.16,
+      "text": "minus one whenever is I is one I find it from 1 to n minus one whenever I is 2 I"
+    },
+    {
+      "start": 581.8,
+      "duration": 7.96,
+      "text": "find it from 2 to n minus one so can I say you need to find the minimum guy"
+    },
+    {
+      "start": 587.6,
+      "duration": 7.359,
+      "text": "minimum so we know one thing I will be 0o 1 2 and there has to be an internal"
+    },
+    {
+      "start": 593.12,
+      "duration": 6.959,
+      "text": "Loop why because you have to find the minimum in this range minimum in this"
+    },
+    {
+      "start": 597.68,
+      "duration": 7.12,
+      "text": "range minimum in this range so the internal Loop Can You observe something"
+    },
+    {
+      "start": 602.839,
+      "duration": 5.721,
+      "text": "from 2 to n minus one write the internal Loop what are you waiting for write the"
+    },
+    {
+      "start": 606.56,
+      "duration": 7.519,
+      "text": "internal Loop so can I say the internal Loop will be from Jal to"
+    },
+    {
+      "start": 610.959,
+      "duration": 9.041,
+      "text": "I till J lesser than n minus one because that is the last"
+    },
+    {
+      "start": 616.519,
+      "duration": 8.76,
+      "text": "index until j++ and you need to find the minimum I know the internal loop as well"
+    },
+    {
+      "start": 622.6,
+      "duration": 7.44,
+      "text": "I know the internal loop as well now what is the next thing you have to do in"
+    },
+    {
+      "start": 628.12,
+      "duration": 7.2,
+      "text": "this range in this range you have to find the"
+    },
+    {
+      "start": 631.76,
+      "duration": 9.24,
+      "text": "minimum how do you do it very simple can I say initially I will keep the mini"
+    },
+    {
+      "start": 638.92,
+      "duration": 8.56,
+      "text": "just imagine just imagine since your array is from 0 to n minus one I will"
+    },
+    {
+      "start": 643.639,
+      "duration": 8.76,
+      "text": "say okay while we start let's consider this guy to be the small while we start"
+    },
+    {
+      "start": 650.16,
+      "duration": 6.64,
+      "text": "for this let's consider this guy to be Min while we start for this let's"
+    },
+    {
+      "start": 654.959,
+      "duration": 8.201,
+      "text": "consider this guy to be minimum so I will say hey my minimum PS at index I"
+    },
+    {
+      "start": 660.36,
+      "duration": 8.52,
+      "text": "itself at index I whoever is the first guy let let's assume he's the minimum"
+    },
+    {
+      "start": 665.04,
+      "duration": 10.2,
+      "text": "I'm like okay then I'm saying if array of J is smaller than array of whatever"
+    },
+    {
+      "start": 673.72,
+      "duration": 7.239,
+      "text": "minimum index you are considering what does this mean when I'm"
+    },
+    {
+      "start": 678.12,
+      "duration": 9.2,
+      "text": "iterating when I'm iterating element by element I'm saying hey element are you"
+    },
+    {
+      "start": 684.079,
+      "duration": 7.961,
+      "text": "smaller than what I considered if you are can I say minimum"
+    },
+    {
+      "start": 690.079,
+      "duration": 9.041,
+      "text": "okay you are smaller so my minimum appears at the J index not at this guy I"
+    },
+    {
+      "start": 696.24,
+      "duration": 6.76,
+      "text": "updated so can I say once you have iterated can I say once you have"
+    },
+    {
+      "start": 700.92,
+      "duration": 9.52,
+      "text": "iterated in the entire thing you will get the minimum index stored at the mini"
+    },
+    {
+      "start": 706.48,
+      "duration": 8.359,
+      "text": "variable you will you will right so once this is completed what did we do let's"
+    },
+    {
+      "start": 712.839,
+      "duration": 7.56,
+      "text": "go back to the algo what did we do so if you're iterating over here what"
+    },
+    {
+      "start": 717.959,
+      "duration": 7.201,
+      "text": "will happen let's see minimum initially is zero the index right the minimum is"
+    },
+    {
+      "start": 723.24,
+      "duration": 8.48,
+      "text": "zero what happened let's see in iteration we're taking 13 it's like 13"
+    },
+    {
+      "start": 728.68,
+      "duration": 10.839,
+      "text": "lesser than 13 because minimum is zero what happens array of zero lesser than"
+    },
+    {
+      "start": 735.0,
+      "duration": 10.44,
+      "text": "array of mini because mini is zero it's not there so it doesn't works next it"
+    },
+    {
+      "start": 742.04,
+      "duration": 11.28,
+      "text": "goes here array of one lesser than array of many it's like 46 lesser than"
+    },
+    {
+      "start": 749.68,
+      "duration": 9.959,
+      "text": "no next time 24 lesser than 13 next time 52 lesser than 13 no next time 20 lesser"
+    },
+    {
+      "start": 755.959,
+      "duration": 9.88,
+      "text": "than 13 no next time N9 lesser than 13 so the mini gets updated to five so you"
+    },
+    {
+      "start": 763.16,
+      "duration": 9.28,
+      "text": "know at the fifth index the mini is what did you do you took the mini index and"
+    },
+    {
+      "start": 769.16,
+      "duration": 10.2,
+      "text": "you took the ith index and you swab and you swab so you can just do a"
+    },
+    {
+      "start": 775.279,
+      "duration": 11.521,
+      "text": "swap you can just do a swap of whoever wherever is the mini whatever"
+    },
+    {
+      "start": 781.92,
+      "duration": 8.68,
+      "text": "is the value with the first guy because if you have to take that mini and place"
+    },
+    {
+      "start": 788.519,
+      "duration": 7.921,
+      "text": "it at the first first will go to that mini index the swap is also done simple"
+    },
+    {
+      "start": 794.199,
+      "duration": 10.601,
+      "text": "as that so by the way how do you swap two numbers it's very simple imagine I"
+    },
+    {
+      "start": 800.12,
+      "duration": 9.079,
+      "text": "have array of I and I have array of mini okay these are the two numbers that I"
+    },
+    {
+      "start": 806.72,
+      "duration": 8.0,
+      "text": "have to swap imagine this is 15 and and this is 12 so what I'll do is I will"
+    },
+    {
+      "start": 812.079,
+      "duration": 7.921,
+      "text": "take a temporary variable that's another third variable that I'll take and I'll"
+    },
+    {
+      "start": 816.519,
+      "duration": 10.041,
+      "text": "say array of mini to go there so what will array of mini what will temporary"
+    },
+    {
+      "start": 822.68,
+      "duration": 8.44,
+      "text": "have as of now 12 because array of mini is 12 and that was put in to the"
+    },
+    {
+      "start": 828.8,
+      "duration": 9.64,
+      "text": "temporary now what I'll do is I'll say array of mini can you replace yourself"
+    },
+    {
+      "start": 834.8,
+      "duration": 7.959,
+      "text": "to array of I so what will be the value of array of"
+    },
+    {
+      "start": 839.639,
+      "duration": 9.88,
+      "text": "will not be 12 this value will go here and this will become 15 right now I will"
+    },
+    {
+      "start": 845.56,
+      "duration": 8.8,
+      "text": "say array of I hey array of I can you take the value of array of many but it"
+    },
+    {
+      "start": 851.72,
+      "duration": 6.88,
+      "text": "is replaced to 15 this is where since you stored in the temporary that works"
+    },
+    {
+      "start": 856.68,
+      "duration": 7.88,
+      "text": "and he a temporary can you get it the temporary will get it and this will"
+    },
+    {
+      "start": 860.32,
+      "duration": 9.28,
+      "text": "become 12 that compl got 12 so this is the swap that you have to write this is"
+    },
+    {
+      "start": 866.92,
+      "duration": 7.2,
+      "text": "the pseudo code of swap function so if I had to code it up imagine I've given the"
+    },
+    {
+      "start": 871.6,
+      "duration": 7.799,
+      "text": "N I take it as the input then I take this array of N and then I go across and"
+    },
+    {
+      "start": 876.72,
+      "duration": 8.0,
+      "text": "I say this so this is basically nothing but the array input that I'm taking now"
+    },
+    {
+      "start": 882.32,
+      "duration": 7.48,
+      "text": "I have to write the selection sort so maybe I can say selection I'll just pass"
+    },
+    {
+      "start": 887.6,
+      "duration": 8.44,
+      "text": "it into the function I'll pass it let's write the selection s so void selection"
+    },
+    {
+      "start": 893.72,
+      "duration": 8.64,
+      "text": "and this will be sort and I'll say let's take the array and let's take the nend"
+    },
+    {
+      "start": 898.8,
+      "duration": 9.32,
+      "text": "so so I'm passing this and I'm assuming this will do it and post this what I'll"
+    },
+    {
+      "start": 904.44,
+      "duration": 9.68,
+      "text": "do is for I I equal to z i lesser than n i++ can I print the array values to see"
+    },
+    {
+      "start": 911.32,
+      "duration": 8.16,
+      "text": "if they are sorted or not okay let's see if they are sorted or"
+    },
+    {
+      "start": 917.16,
+      "duration": 6.76,
+      "text": "not and what we can do is we can take the same example that we took it had six"
+    },
+    {
+      "start": 921.759,
+      "duration": 11.281,
+      "text": "numbers 13 46 24 52 20 and 99 the same example over"
+    },
+    {
+      "start": 930.48,
+      "duration": 7.76,
+      "text": "here let's quickly write the code so whatever pseudo code I did write"
+    },
+    {
+      "start": 936.279,
+      "duration": 6.281,
+      "text": "that I've converted into code now over here and if I go across and run this"
+    },
+    {
+      "start": 941.0,
+      "duration": 6.6,
+      "text": "particular task you will see that this particular array is sorted over here in"
+    },
+    {
+      "start": 944.759,
+      "duration": 6.52,
+      "text": "the output.txt so you have understood the selection sort algorithm in depth"
+    },
+    {
+      "start": 949.519,
+      "duration": 6.361,
+      "text": "it's time to analyze the time complexity of this particular algorithm let's see"
+    },
+    {
+      "start": 953.519,
+      "duration": 11.081,
+      "text": "can I see for the first time when the loop gets inside this particular Loop"
+    },
+    {
+      "start": 959.519,
+      "duration": 10.201,
+      "text": "runs for n times exactly yes next time when it gets in then this actually runs"
+    },
+    {
+      "start": 967.04,
+      "duration": 8.159,
+      "text": "for one lesser it's it runs for 1 to n minus one so can I say it runs for n"
+    },
+    {
+      "start": 972.279,
+      "duration": 9.04,
+      "text": "minus one next time when it gets in it runs for one lesser so it's like nus 2"
+    },
+    {
+      "start": 979.199,
+      "duration": 9.801,
+      "text": "next time when it gets in runs for one lesser nus so so on it kind of runs for"
+    },
+    {
+      "start": 985.72,
+      "duration": 9.08,
+      "text": "till last last that we run for this is still here that's for two times so this"
+    },
+    {
+      "start": 991.6,
+      "duration": 10.239,
+      "text": "is kind of kind of if I just try to take it to some near near formula stuff can I"
+    },
+    {
+      "start": 998.44,
+      "duration": 8.28,
+      "text": "say it's something like 1 + 2 + 3 plus dot do dot till n which is nothing but"
+    },
+    {
+      "start": 1004.92,
+      "duration": 10.44,
+      "text": "the summation of the first n natural numbers which is n into n + 1 by 2 can I"
+    },
+    {
+      "start": 1012.279,
+      "duration": 8.92,
+      "text": "say this I can if I can say this what is this"
+    },
+    {
+      "start": 1017.0,
+      "duration": 9.88,
+      "text": "n² Plus n by 2 can I say this is how it looks like"
+    },
+    {
+      "start": 1024.76,
+      "duration": 5.4,
+      "text": "and if you remember the time complexity Remember the Time complexity leure we"
+    },
+    {
+      "start": 1029.24,
+      "duration": 7.52,
+      "text": "did we ignore smaller things because n by2 in"
+    },
+    {
+      "start": 1033.959,
+      "duration": 9.321,
+      "text": "comparison to n square is very small and we ignore constant thereby I can say"
+    },
+    {
+      "start": 1040.039,
+      "duration": 11.161,
+      "text": "that the time complexity is near about beo of n² and this is the best this is"
+    },
+    {
+      "start": 1048.439,
+      "duration": 8.48,
+      "text": "the worst first and this is the average time complexity for this particular"
+    },
+    {
+      "start": 1054.4,
+      "duration": 8.279,
+      "text": "algorithm so we can say that we have completed selection s successfully now"
+    },
+    {
+      "start": 1060.12,
+      "duration": 6.12,
+      "text": "it's time to understand bubble shot bubble shart so when we talk about"
+    },
+    {
+      "start": 1064.16,
+      "duration": 5.84,
+      "text": "Bubble shart you have to remember it pushes the maximum to the last and"
+    },
+    {
+      "start": 1068.52,
+      "duration": 5.88,
+      "text": "opposite to the selection because selection s was taking the minimum at"
+    },
+    {
+      "start": 1072.08,
+      "duration": 8.24,
+      "text": "the front if you remember pushes the maximum to the last how does it do it by"
+    },
+    {
+      "start": 1077.559,
+      "duration": 8.681,
+      "text": "adjacent spping adjacent swapping is the key over here how how does the algorithm"
+    },
+    {
+      "start": 1083.28,
+      "duration": 8.6,
+      "text": "work let's understand first two elements Compares are they in the sorted order 13"
+    },
+    {
+      "start": 1089.44,
+      "duration": 9.2,
+      "text": "and 46 they are because 13 is smaller than 46 do not do anything go to the"
+    },
+    {
+      "start": 1095.08,
+      "duration": 11.36,
+      "text": "next two are they in the sorted order 46 before 24 no swap it"
+    },
+    {
+      "start": 1104.24,
+      "duration": 9.04,
+      "text": "okay 24 24 4"
+    },
+    {
+      "start": 1109.28,
+      "duration": 11.48,
+      "text": "perfect let's go to the next 4652 are they in the SED order yeah they are why"
+    },
+    {
+      "start": 1116.559,
+      "duration": 10.961,
+      "text": "will you do anything next 50 to 20 are they in the S order no 20 should be"
+    },
+    {
+      "start": 1123.559,
+      "duration": 12.801,
+      "text": "before take 20 here take 52 here so 20 52 let's go to the next 50 to"
+    },
+    {
+      "start": 1133.32,
+      "duration": 13.28,
+      "text": "19 are they in the sorted no so take here take here so let's 2 9 and then 52"
+    },
+    {
+      "start": 1141.24,
+      "duration": 12.64,
+      "text": "so can I say after adjacent swaps like this like this like this like this like"
+    },
+    {
+      "start": 1150.52,
+      "duration": 11.12,
+      "text": "this one complete round of adjacent swap checkings Do You observe something the"
+    },
+    {
+      "start": 1156.88,
+      "duration": 11.88,
+      "text": "max 52 is at the last the max 52 is at the last done so the max 52 is at the"
+    },
+    {
+      "start": 1164.799,
+      "duration": 9.721,
+      "text": "last what should be your next step this this portion of the array is kind of"
+    },
+    {
+      "start": 1171.6,
+      "duration": 11.24,
+      "text": "sorted so I need to work on this perform the same algorithm again let's do it"
+    },
+    {
+      "start": 1177.6,
+      "duration": 12.199,
+      "text": "1324 is it okay it is 24 46 is it okay is"
+    },
+    {
+      "start": 1184.32,
+      "duration": 15.76,
+      "text": "4620 no no no no swap 46 here take 20 here let's swap it 20 46 let's go to the"
+    },
+    {
+      "start": 1194.52,
+      "duration": 12.08,
+      "text": "next 469 are they no no take 9 here take 46"
+    },
+    {
+      "start": 1201.76,
+      "duration": 11.36,
+      "text": "here 9 46 do you compare the last two there's no point because 52 is already"
+    },
+    {
+      "start": 1209.919,
+      "duration": 9.401,
+      "text": "in the sorted F there's no need you only do it till here can I say no in this"
+    },
+    {
+      "start": 1216.72,
+      "duration": 10.48,
+      "text": "particular array 46 was the maximum and it's at the last thereby after two steps"
+    },
+    {
+      "start": 1223.36,
+      "duration": 9.0,
+      "text": "the last two are in the correct orders so Step One is done step two is done"
+    },
+    {
+      "start": 1230.039,
+      "duration": 7.601,
+      "text": "let's do the step three so this is done this is done let's do the step three"
+    },
+    {
+      "start": 1234.48,
+      "duration": 10.88,
+      "text": "step three means this portion should be making sure that the maximum is over"
+    },
+    {
+      "start": 1240.24,
+      "duration": 15.6,
+      "text": "here let's do it 1324 are they they are 2420 no no no drop"
+    },
+    {
+      "start": 1249.039,
+      "duration": 16.481,
+      "text": "it 2024 next 249 no no drop it done in this 24 was the maximum eight"
+    },
+    {
+      "start": 1260.84,
+      "duration": 12.319,
+      "text": "at the last step three done step four can I say step three means last three"
+    },
+    {
+      "start": 1267.84,
+      "duration": 14.12,
+      "text": "elements done this is left 1320 correct 29 no SWAP SWAP SWAP 920 can I say for"
+    },
+    {
+      "start": 1279.08,
+      "duration": 10.04,
+      "text": "this 20 was the largest and it's at the last so thereby post step"
+    },
+    {
+      "start": 1285.799,
+      "duration": 12.401,
+      "text": "four this is done next step five what is step"
+    },
+    {
+      "start": 1292.2,
+      "duration": 12.64,
+      "text": "five this let's do a comparation no ST 913 for this portion 13 was the maximum"
+    },
+    {
+      "start": 1301.919,
+      "duration": 7.36,
+      "text": "and it's at the last so for this portion 13 was the maximum and it's at the last"
+    },
+    {
+      "start": 1307.679,
+      "duration": 7.801,
+      "text": "so thereby this portion is sorted post step"
+    },
+    {
+      "start": 1313.12,
+      "duration": 8.28,
+      "text": "five do you need to do for a single element you do not thereby the entire"
+    },
+    {
+      "start": 1318.24,
+      "duration": 7.28,
+      "text": "array is sorted if you see so uh so you have understood the algorithm but now"
+    },
+    {
+      "start": 1323.279,
+      "duration": 8.321,
+      "text": "the key factor comes in which is implementing this two code because that"
+    },
+    {
+      "start": 1328.559,
+      "duration": 10.881,
+      "text": "is where the key lies let's try to do that what are we doing observation is"
+    },
+    {
+      "start": 1334.159,
+      "duration": 13.721,
+      "text": "the key 0 1 2 3 4 5 we're going till the first step we went everywhere and we"
+    },
+    {
+      "start": 1343.64,
+      "duration": 10.96,
+      "text": "did adjacent component so the for the first time we can kind of went till 0"
+    },
+    {
+      "start": 1351.52,
+      "duration": 11.519,
+      "text": "till n minus one and we did adjacent swaps if if it was not in the order next"
+    },
+    {
+      "start": 1358.159,
+      "duration": 17.561,
+      "text": "time we went like 0 to n minus 2 because the last was s next time we went from 0"
+    },
+    {
+      "start": 1368.36,
+      "duration": 13.199,
+      "text": "to nus 3 next time we went to 0 to nus 4 can I say this is what we are doing and"
+    },
+    {
+      "start": 1378.0,
+      "duration": 9.76,
+      "text": "the next time time 0 to nus 5 and so on can I say I will just do till 0 to 1 not"
+    },
+    {
+      "start": 1385.559,
+      "duration": 8.521,
+      "text": "till 0 to 0 because one element will not matter to me if you carefully observe"
+    },
+    {
+      "start": 1391.08,
+      "duration": 7.92,
+      "text": "first Loop should run from here to next Loop should run from here to here so"
+    },
+    {
+      "start": 1396.279,
+      "duration": 12.961,
+      "text": "kind of can I say I can probably keep the value of I from nus one till I can I"
+    },
+    {
+      "start": 1403.44,
+      "duration": 9.239,
+      "text": "keep I can so if I do it I = to N - 1 I greater than 1 and IUS one this is"
+    },
+    {
+      "start": 1411.799,
+      "duration": 7.321,
+      "text": "what I have and internally I can always run the"
+    },
+    {
+      "start": 1416.559,
+      "duration": 8.561,
+      "text": "loop from J equal to Z till J lesser than I and"
+    },
+    {
+      "start": 1421.12,
+      "duration": 10.24,
+      "text": "j++ is it similar is it similar observe 0 to n minus1 0 to n minus1 for the"
+    },
+    {
+      "start": 1428.64,
+      "duration": 8.96,
+      "text": "first time next time I is nus 2 so 0 to n minus 2 next time I is nus 3 so 0 to"
+    },
+    {
+      "start": 1434.24,
+      "duration": 7.96,
+      "text": "nus 3 so I have made sure the looping is done what is the next thing that you"
+    },
+    {
+      "start": 1439.6,
+      "duration": 6.64,
+      "text": "doing the next thing is very simple you take up two elements and you compare you"
+    },
+    {
+      "start": 1444.279,
+      "duration": 6.64,
+      "text": "take up two elements and you compare so when you're looping from 0 to n minus"
+    },
+    {
+      "start": 1447.96,
+      "duration": 8.76,
+      "text": "one it's kind of this is J so you're comparing J with"
+    },
+    {
+      "start": 1453.72,
+      "duration": 6.16,
+      "text": "J + 1 and if they're not then you swep right so you're kind of comparing what"
+    },
+    {
+      "start": 1458.76,
+      "duration": 7.32,
+      "text": "are you comparing if a of J is kind of greater"
+    },
+    {
+      "start": 1463.559,
+      "duration": 6.12,
+      "text": "than J + 1 it's not in the correct order then you're saying swap then you're"
+    },
+    {
+      "start": 1467.6,
+      "duration": 6.76,
+      "text": "saying swap both of them a key thing to notice over a very key"
+    },
+    {
+      "start": 1472.48,
+      "duration": 8.16,
+      "text": "important thing if you are going from here to here"
+    },
+    {
+      "start": 1478.0,
+      "duration": 8.24,
+      "text": "that is wrong because for 52 it will have no one to compare with you actually"
+    },
+    {
+      "start": 1483.44,
+      "duration": 8.4,
+      "text": "go from here to here because of"
+    },
+    {
+      "start": 1488.64,
+      "duration": 6.96,
+      "text": "46 gets compared with J + 1 which is this you actually Loop till here so what"
+    },
+    {
+      "start": 1494.559,
+      "duration": 5.48,
+      "text": "you can do is you can go over here and say instead"
+    },
+    {
+      "start": 1498.799,
+      "duration": 9.561,
+      "text": "of going till I exactly I will go till I minus"
+    },
+    {
+      "start": 1503.72,
+      "duration": 8.959,
+      "text": "one because if I go till here if I go this will compare this will compare this"
+    },
+    {
+      "start": 1510.039,
+      "duration": 6.721,
+      "text": "will compare this will compare and 4652 will be compared because I'm doing j+"
+    },
+    {
+      "start": 1515.2,
+      "duration": 6.44,
+      "text": "I'm taking the next index I don't need to go till so you can just go till one"
+    },
+    {
+      "start": 1519.32,
+      "duration": 8.28,
+      "text": "lesser in and if you do not do that what will happen for 52 it will look for the"
+    },
+    {
+      "start": 1524.76,
+      "duration": 7.519,
+      "text": "next index which is not present and if you are accessing ing an index which is"
+    },
+    {
+      "start": 1529.52,
+      "duration": 8.639,
+      "text": "not present it will throw a runtime error remember this if you are accessing"
+    },
+    {
+      "start": 1535.48,
+      "duration": 8.0,
+      "text": "an index which is not present it will say runtime I did not it's a runtime"
+    },
+    {
+      "start": 1542.2,
+      "duration": 7.0,
+      "text": "that's why it's very important to run your Loops perfectly that's when you"
+    },
+    {
+      "start": 1545.96,
+      "duration": 8.959,
+      "text": "swap and once you have done this all steps at the end of the day the array"
+    },
+    {
+      "start": 1551.44,
+      "duration": 10.68,
+      "text": "will be sorted so what we will do is now we will write void bubble sort we'll do"
+    },
+    {
+      "start": 1558.679,
+      "duration": 8.801,
+      "text": "the same thing array and n and instead of calling the selection sort we will"
+    },
+    {
+      "start": 1564.559,
+      "duration": 7.761,
+      "text": "say hey bubble so I will just quickly go and write the same pseudo"
+    },
+    {
+      "start": 1569.84,
+      "duration": 9.319,
+      "text": "code so if you remember this was kind of array of"
+    },
+    {
+      "start": 1574.2,
+      "duration": 9.32,
+      "text": "J if greater than array of J + 1 then you"
+    },
+    {
+      "start": 1581.08,
+      "duration": 10.12,
+      "text": "swap and in order to swap I've already taught you how to do that swapping you"
+    },
+    {
+      "start": 1586.64,
+      "duration": 10.08,
+      "text": "do this and then you say Okay array of J + 1 can you store array of J and in"
+    },
+    {
+      "start": 1594.24,
+      "duration": 7.36,
+      "text": "Array of J can you take the value of the array of J which is j+ one which is"
+    },
+    {
+      "start": 1598.559,
+      "duration": 6.48,
+      "text": "stored in temporary once you have done this entire thing the array will be"
+    },
+    {
+      "start": 1603.039,
+      "duration": 8.441,
+      "text": "sorted I'll just go ahead erase this output.txt and now go across and say to"
+    },
+    {
+      "start": 1608.679,
+      "duration": 8.921,
+      "text": "run it and see if the bubble shot is actually producing it it is it is"
+    },
+    {
+      "start": 1614.44,
+      "duration": 7.4,
+      "text": "producing so if I have to analyze the time complex lexity can you analyze the"
+    },
+    {
+      "start": 1619.96,
+      "duration": 7.079,
+      "text": "time complexity for me for this particular case is quite similar to The"
+    },
+    {
+      "start": 1624.52,
+      "duration": 8.72,
+      "text": "Selection s first time the algorithm kind of runs for n then for n minus one"
+    },
+    {
+      "start": 1630.48,
+      "duration": 8.6,
+      "text": "then for n minus 2 then for n minus 3 so kind of it's similar to selection sort"
+    },
+    {
+      "start": 1635.52,
+      "duration": 10.279,
+      "text": "where I say it's n + n minus1 + n minus 2 plus so on the last is two it's"
+    },
+    {
+      "start": 1643.6,
+      "duration": 8.799,
+      "text": "something if you just add a one to it it's similar to sum of N natural numbers"
+    },
+    {
+      "start": 1648.24,
+      "duration": 13.439,
+      "text": "so again n into n + 1 by 2 which is n 2 by 2 + n by 2 smaller constants"
+    },
+    {
+      "start": 1657.159,
+      "duration": 12.441,
+      "text": "dissolved so the complexity is B go of n² can it be optimized that's my yes it"
+    },
+    {
+      "start": 1665.679,
+      "duration": 8.521,
+      "text": "can be it can be optimized this is the worst"
+    },
+    {
+      "start": 1671.48,
+      "duration": 6.28,
+      "text": "complexity this is the worst complexity and you can also call it as the average"
+    },
+    {
+      "start": 1675.96,
+      "duration": 6.12,
+      "text": "complexity in most of the cases this will be the"
+    },
+    {
+      "start": 1679.039,
+      "duration": 10.441,
+      "text": "most of but imagine if I give you a array which is something like 2 3 5 15"
+    },
+    {
+      "start": 1686.88,
+      "duration": 7.279,
+      "text": "and 20 if I give you an AR L you'll be like tror this is sorted yeah it is"
+    },
+    {
+      "start": 1691.72,
+      "duration": 7.439,
+      "text": "sorted so do you run the loop for n Square do you go across every time every"
+    },
+    {
+      "start": 1696.399,
+      "duration": 7.841,
+      "text": "time no so what is the"
+    },
+    {
+      "start": 1701.6,
+      "duration": 10.959,
+      "text": "algorithm correct order no swaps correct order no swaps correct"
+    },
+    {
+      "start": 1708.2,
+      "duration": 8.959,
+      "text": "order no swaps correct order no swap dude if everything is in the correct"
+    },
+    {
+      "start": 1714.88,
+      "duration": 7.399,
+      "text": "order and you're not performing a swap if everything is in the correct order"
+    },
+    {
+      "start": 1719.08,
+      "duration": 8.04,
+      "text": "what does it signify the array is in the ascending order if everything is in the"
+    },
+    {
+      "start": 1724.399,
+      "duration": 10.601,
+      "text": "correct order the array is in the ascending order so in the first check"
+    },
+    {
+      "start": 1731.159,
+      "duration": 8.12,
+      "text": "you did not find a swap to be done because everything was in the correct"
+    },
+    {
+      "start": 1737.039,
+      "duration": 8.561,
+      "text": "order so can I say if I do not do any swaps if I do not do any"
+    },
+    {
+      "start": 1741.6,
+      "duration": 11.48,
+      "text": "swaps that's when I stop I do not per so it's kind of if no swaps done I don't"
+    },
+    {
+      "start": 1749.399,
+      "duration": 8.28,
+      "text": "need to go if on the first check no swap is done I don't need to go for this for"
+    },
+    {
+      "start": 1755.08,
+      "duration": 8.479,
+      "text": "this for this for this we stop so the loop the best case will run for B go of"
+    },
+    {
+      "start": 1760.6,
+      "duration": 7.919,
+      "text": "n if we do some optimizations let's go and do some"
+    },
+    {
+      "start": 1765.679,
+      "duration": 9.201,
+      "text": "optimization can I say if I say in did swap equal to zero and"
+    },
+    {
+      "start": 1773.0,
+      "duration": 9.279,
+      "text": "over here if I just can say did swap equal to one which means if any if at"
+    },
+    {
+      "start": 1778.88,
+      "duration": 12.159,
+      "text": "any moment a swap happened then it's okay but if did swap at any time"
+    },
+    {
+      "start": 1786.84,
+      "duration": 9.24,
+      "text": "is there was no swap then I break out I will not go if the array is sorted it"
+    },
+    {
+      "start": 1793.84,
+      "duration": 7.719,
+      "text": "will just check for the first time and it will break post"
+    },
+    {
+      "start": 1798.88,
+      "duration": 7.799,
+      "text": "it right this also runs I'll I'll prove you uh this one"
+    },
+    {
+      "start": 1805.08,
+      "duration": 9.8,
+      "text": "I'll prove you this one so I'll give you an example see 6 5 4 3 2 1 now what I'll"
+    },
+    {
+      "start": 1811.559,
+      "duration": 8.24,
+      "text": "do is I will just go ahead and print this how many times the array runs okay"
+    },
+    {
+      "start": 1818.0,
+      "duration": 7.0,
+      "text": "and runs and I'll just give it and you can"
+    },
+    {
+      "start": 1822.679,
+      "duration": 6.6,
+      "text": "see how many times it runs now terminal and I'll go to run task this is a"
+    },
+    {
+      "start": 1827.36,
+      "duration": 6.76,
+      "text": "descending order and it runs for five times because the size is six it runs"
+    },
+    {
+      "start": 1831.799,
+      "duration": 10.161,
+      "text": "for five but if I just change it to something like 1 2 3 4 5 six and now see"
+    },
+    {
+      "start": 1837.799,
+      "duration": 4.161,
+      "text": "how many times the first fall Loop let's"
+    },
+    {
+      "start": 1842.44,
+      "duration": 13.32,
+      "text": "see uh did it one just a minute SL one okay let's run"
+    },
+    {
+      "start": 1851.08,
+      "duration": 9.24,
+      "text": "it run it did you see something it never came to this because it it did break"
+    },
+    {
+      "start": 1858.0,
+      "duration": 10.039,
+      "text": "over here so it just ran for the first did not Swap and broke so can I say can"
+    },
+    {
+      "start": 1864.399,
+      "duration": 10.321,
+      "text": "I say the best time complexity will be nothing but B go of n the time"
+    },
+    {
+      "start": 1871.159,
+      "duration": 9.441,
+      "text": "complexity for the best of bubble shot is beo ofen this might be asked in an"
+    },
+    {
+      "start": 1878.24,
+      "duration": 6.399,
+      "text": "interview you have to critically tell them the use case you have to explain"
+    },
+    {
+      "start": 1882.639,
+      "duration": 6.201,
+      "text": "them in the dry and tell them the worst and the average might be n square or if"
+    },
+    {
+      "start": 1887.12,
+      "duration": 5.96,
+      "text": "the AR is sorted out I will break out and I will end up getting a linear time"
+    },
+    {
+      "start": 1890.76,
+      "duration": 7.08,
+      "text": "complexity because the array is already so so the bubble shot is done now let's"
+    },
+    {
+      "start": 1895.76,
+      "duration": 7.2,
+      "text": "move on to the next one that is the insertion sort algorithm so talking"
+    },
+    {
+      "start": 1900.44,
+      "duration": 9.76,
+      "text": "about insertion sort you need to remember one thing it always takes an"
+    },
+    {
+      "start": 1906.0,
+      "duration": 10.72,
+      "text": "element and places it in its correct position takes an element and places it"
+    },
+    {
+      "start": 1913.159,
+      "duration": 8.801,
+      "text": "in its correct let's start yeah the algorithm starts with looking at the"
+    },
+    {
+      "start": 1919.519,
+      "duration": 10.481,
+      "text": "first element as an array and you will say that if this much is the array the"
+    },
+    {
+      "start": 1925.32,
+      "duration": 11.0,
+      "text": "element 14 in a size one array is at the correct if I look at this much and I ask"
+    },
+    {
+      "start": 1933.6,
+      "duration": 7.319,
+      "text": "you is nine at the correct position you'll be like no nine apparently should"
+    },
+    {
+      "start": 1939.0,
+      "duration": 7.76,
+      "text": "have been here and 14 should have been here this is what you do you go to the"
+    },
+    {
+      "start": 1944.6,
+      "duration": 8.319,
+      "text": "next element and you ask on the left side where 9 should have been and that"
+    },
+    {
+      "start": 1950.159,
+      "duration": 6.041,
+      "text": "is where you take so you basically do it like this"
+    },
+    {
+      "start": 1954.639,
+      "duration": 7.88,
+      "text": "940 perfect so then you go ahead to this one"
+    },
+    {
+      "start": 1960.2,
+      "duration": 8.12,
+      "text": "and you ask is 15 at the correct position for a size three and you say"
+    },
+    {
+      "start": 1966.08,
+      "duration": 9.319,
+      "text": "then you go ahead and say is 12 at the correct position for a size four and you"
+    },
+    {
+      "start": 1970.76,
+      "duration": 7.879,
+      "text": "say no app 12 should have been here 14 should have been here 15 should have"
+    },
+    {
+      "start": 1977.559,
+      "duration": 8.321,
+      "text": "been here so do you see a pattern it's like 14"
+    },
+    {
+      "start": 1982.559,
+      "duration": 9.84,
+      "text": "will come here and 15 will come every one right shifts by one and 12 kind of"
+    },
+    {
+      "start": 1989.36,
+      "duration": 9.12,
+      "text": "goes in its correct qu so what you can do is you can take 12 and you can say"
+    },
+    {
+      "start": 1995.6,
+      "duration": 8.6,
+      "text": "Okay 12 15 15 will come here 12 will go here then you can say 12 14 so you can"
+    },
+    {
+      "start": 2001.799,
+      "duration": 6.48,
+      "text": "12 here and you can pass 14 here you can go to the left and SWAP SWAP SWAP till"
+    },
+    {
+      "start": 2006.72,
+      "duration": 8.48,
+      "text": "it can be swapped till it can be swep so if you do like"
+    },
+    {
+      "start": 2010.88,
+      "duration": 10.88,
+      "text": "this 12 goes here it's like 12 and 15 then 12 14 so 12 goes here and 14 comes"
+    },
+    {
+      "start": 2019.44,
+      "duration": 7.44,
+      "text": "go to the left till it can be can 12 be swapped with 9 no because that will"
+    },
+    {
+      "start": 2024.0,
+      "duration": 7.96,
+      "text": "distort the order it just goes till here simple so what will happen it'll be like"
+    },
+    {
+      "start": 2030.44,
+      "duration": 9.64,
+      "text": "12 14 15 perfect next is six if you look at"
+    },
+    {
+      "start": 2036.559,
+      "duration": 10.041,
+      "text": "six where ideally should be six in this array it should be here 9 should be here"
+    },
+    {
+      "start": 2043.44,
+      "duration": 8.399,
+      "text": "12 should be here 14 should be here 15 should be here so can I do this can I"
+    },
+    {
+      "start": 2049.56,
+      "duration": 8.24,
+      "text": "take this six here but I have to I have to write shift every one by one how do"
+    },
+    {
+      "start": 2054.28,
+      "duration": 9.399,
+      "text": "you do it you take six you take 15 and you say Okay swap your sir what happens"
+    },
+    {
+      "start": 2060.32,
+      "duration": 10.039,
+      "text": "is six goes here 15 goes here swept next you take six 14 14 comes here and six"
+    },
+    {
+      "start": 2067.44,
+      "duration": 9.28,
+      "text": "goes here here next you take 6 12 12 comes here six goes here next you take"
+    },
+    {
+      "start": 2072.44,
+      "duration": 10.679,
+      "text": "six and 9 six goes here 9 comes here simp if I have to do it it's like 6 15"
+    },
+    {
+      "start": 2080.72,
+      "duration": 13.199,
+      "text": "not in the correct order let's swap it 15 comes here and 6 goes here 14 6 no 6"
+    },
+    {
+      "start": 2089.079,
+      "duration": 13.721,
+      "text": "comes here 14 goes 6 12 no 12 comes here six goes 69 No 9 comes here six Co"
+    },
+    {
+      "start": 2099.44,
+      "duration": 12.28,
+      "text": "perfect it's like 6 9 12 14 15 so I have to write it by raising it's like 6 9 12"
+    },
+    {
+      "start": 2107.88,
+      "duration": 11.16,
+      "text": "14 15 perfect I just went down to the left till it could have been SWAP SWAP"
+    },
+    {
+      "start": 2114.359,
+      "duration": 9.48,
+      "text": "SWAP right next eight in this particular array where does eight will go where"
+    },
+    {
+      "start": 2121.92,
+      "duration": 7.64,
+      "text": "will eight go in this particular array where will eight go ask yourself the"
+    },
+    {
+      "start": 2126.0,
+      "duration": 8.64,
+      "text": "answer to that is eight will go here so if8 has to go here 9 has to go here 12"
+    },
+    {
+      "start": 2132.079,
+      "duration": 11.161,
+      "text": "has to go here 14 has to go here 15 has to go here so again what do you do 8 15"
+    },
+    {
+      "start": 2138.48,
+      "duration": 11.08,
+      "text": "you say Okay 8 goes here 15 so left can 8 14 can8 go till 14 yes 14 comes here 8"
+    },
+    {
+      "start": 2146.92,
+      "duration": 7.399,
+      "text": "goes here can it go more left yes it can 8 goes here 12 goes here can it go more"
+    },
+    {
+      "start": 2151.839,
+      "duration": 6.841,
+      "text": "left yes 9 goes here8 goes here is it in the correct to yes how do you know it"
+    },
+    {
+      "start": 2156.72,
+      "duration": 14.119,
+      "text": "because when you compareed 8 with six it was not compared D and dusted 689 12"
+    },
+    {
+      "start": 2162.599,
+      "duration": 15.361,
+      "text": "145 689 12 145 remember this 6 8 9 12 14 15 next 13 is the next guy that you are"
+    },
+    {
+      "start": 2174.28,
+      "duration": 11.52,
+      "text": "comparing can I say 13 ideally over here should have been here so do it again 13"
+    },
+    {
+      "start": 2182.04,
+      "duration": 9.88,
+      "text": "goes here 15 comes here 13 goes here 14 comes here can I do a 13 12"
+    },
+    {
+      "start": 2188.16,
+      "duration": 9.0,
+      "text": "no stop can I say post the last the array is sorted why because you picked"
+    },
+    {
+      "start": 2195.079,
+      "duration": 6.561,
+      "text": "up every element and you did put it into its"
+    },
+    {
+      "start": 2197.92,
+      "duration": 7.88,
+      "text": "correct so how did it work I picked up one first time I picked up the first guy"
+    },
+    {
+      "start": 2204.28,
+      "duration": 3.88,
+      "text": "next time I picked up the second next time the third next time the fourth next"
+    },
+    {
+      "start": 2206.96,
+      "duration": 6.92,
+      "text": "time the fifth next time the sixth next time the seventh picked up every guy I'm"
+    },
+    {
+      "start": 2211.119,
+      "duration": 9.881,
+      "text": "running from index 0 to n minus one that's for sure that's something for"
+    },
+    {
+      "start": 2216.64,
+      "duration": 11.56,
+      "text": "sure I'm running from 0 to n minus one and what am I doing what am I doing"
+    },
+    {
+      "start": 2225.68,
+      "duration": 9.32,
+      "text": "every guy I'm looking at the left are you greater swap are you greater Swap"
+    },
+    {
+      "start": 2231.079,
+      "duration": 9.881,
+      "text": "and until I can do it like for 13 I could do till here till it is possible"
+    },
+    {
+      "start": 2237.359,
+      "duration": 11.921,
+      "text": "on the left so I'll be like okay maybe J is I and I can keep while J greater than"
+    },
+    {
+      "start": 2245.56,
+      "duration": 10.36,
+      "text": "zero and I can say and and okay hey left J minus one because the last that you"
+    },
+    {
+      "start": 2251.88,
+      "duration": 8.479,
+      "text": "can compare is still here is still here that's the last you can compare so"
+    },
+    {
+      "start": 2257.599,
+      "duration": 10.52,
+      "text": "imagine this was not 13 I'll give you an example if this was like 14 15 and this"
+    },
+    {
+      "start": 2264.24,
+      "duration": 9.96,
+      "text": "is seven the seven would have last gone here or imagine this was five for an"
+    },
+    {
+      "start": 2270.88,
+      "duration": 9.4,
+      "text": "example if this was five what would have happened five would have gone like till"
+    },
+    {
+      "start": 2278.2,
+      "duration": 6.68,
+      "text": "here and then five would have got compared with six five standing here"
+    },
+    {
+      "start": 2283.319,
+      "duration": 5.961,
+      "text": "five standing here would have compared it on the left that's why you don't go"
+    },
+    {
+      "start": 2287.079,
+      "duration": 6.321,
+      "text": "till zero because right before zero you do the last comparison that's why and"
+    },
+    {
+      "start": 2291.52,
+      "duration": 8.839,
+      "text": "that's why J minus one the last comparison if it is greater than a of J"
+    },
+    {
+      "start": 2297.119,
+      "duration": 8.321,
+      "text": "if it is greater that means can you please swap so I'm not writing the swap"
+    },
+    {
+      "start": 2303.319,
+      "duration": 9.04,
+      "text": "you know how to write you say a of J minus one and a of G that's what you say"
+    },
+    {
+      "start": 2309.16,
+      "duration": 8.959,
+      "text": "right and that's when it ends and you can just do a j minus minus over here"
+    },
+    {
+      "start": 2315.4,
+      "duration": 8.28,
+      "text": "because what am I doing is I'm taking the element and I'm saying left CH left"
+    },
+    {
+      "start": 2320.079,
+      "duration": 9.04,
+      "text": "small left small okay and go left again come back left small slap again go left"
+    },
+    {
+      "start": 2326.44,
+      "duration": 10.24,
+      "text": "left small go the moment it's not small stop and go to the next guy why simp so"
+    },
+    {
+      "start": 2333.8,
+      "duration": 6.799,
+      "text": "now time to write insertion s right so void in"
+    },
+    {
+      "start": 2337.96,
+      "duration": 10.96,
+      "text": "insertion sort in Array and in N so as usual we can just"
+    },
+    {
+      "start": 2345.44,
+      "duration": 6.44,
+      "text": "do this as insertion s okay and I'll quickly write the"
+    },
+    {
+      "start": 2352.44,
+      "duration": 7.879,
+      "text": "code until here you know the pseudo code why J greater than Z why not greater"
+    },
+    {
+      "start": 2357.16,
+      "duration": 10.439,
+      "text": "than equal to imagine if J goes equal to Z this J minus one like when J is zero J"
+    },
+    {
+      "start": 2363.839,
+      "duration": 11.48,
+      "text": "minus one will be minus time that's all right so over here you can go ahead and"
+    },
+    {
+      "start": 2369.72,
+      "duration": 11.76,
+      "text": "swap it in temporary equal to AR of J minus one and then array of J minus one"
+    },
+    {
+      "start": 2378.4,
+      "duration": 7.919,
+      "text": "is array of J and then you can go ahead and say array of J is equal to Temporary"
+    },
+    {
+      "start": 2384.28,
+      "duration": 7.88,
+      "text": "and once you have swapped let's go more left so J minus minus now let's go ahead"
+    },
+    {
+      "start": 2389.0,
+      "duration": 8.079,
+      "text": "and quickly run this and see if this is sorting this particular thing yeah it is"
+    },
+    {
+      "start": 2393.839,
+      "duration": 7.0,
+      "text": "sorting done simple if we analyze the time time"
+    },
+    {
+      "start": 2398.839,
+      "duration": 9.361,
+      "text": "complexity what will be the time complexity imagine for"
+    },
+    {
+      "start": 2403.72,
+      "duration": 14.879,
+      "text": "a reversed array like something like five 4 3 2 1 What's happen for the first"
+    },
+    {
+      "start": 2413.28,
+      "duration": 11.68,
+      "text": "time five no swaps next time it comes to four and does a swap it's like four five"
+    },
+    {
+      "start": 2422.839,
+      "duration": 8.041,
+      "text": "next time it comes to three does a complete like three goes here then three"
+    },
+    {
+      "start": 2427.04,
+      "duration": 9.52,
+      "text": "goes here next time it so it's like 3 4 5 2 1 next time it comes to two two goes"
+    },
+    {
+      "start": 2434.4,
+      "duration": 7.8,
+      "text": "here two goes here two goes here two kind of goes here it's like 2 3 4 5 1"
+    },
+    {
+      "start": 2440.04,
+      "duration": 6.52,
+      "text": "next time it comes to one one goes here one goes here one goes here one goes"
+    },
+    {
+      "start": 2443.8,
+      "duration": 11.039,
+      "text": "here so it's like 1 2 3 4 5 it's kind of going extreme left to the to the extreme"
+    },
+    {
+      "start": 2449.2,
+      "duration": 11.76,
+      "text": "left this Loop for the first time ran for zero times when it was at five"
+    },
+    {
+      "start": 2458.079,
+      "duration": 9.401,
+      "text": "when it was at five when it went to four it sted one place next when it was at"
+    },
+    {
+      "start": 2464.72,
+      "duration": 9.0,
+      "text": "three it swapped two places next when it was at two it spped three places next it"
+    },
+    {
+      "start": 2470.52,
+      "duration": 7.839,
+      "text": "was when it was at one it went left four places it's kind of again going into the"
+    },
+    {
+      "start": 2476.24,
+      "duration": 7.2,
+      "text": "similar direction of summation of natural numbers which is n cross at n +"
+    },
+    {
+      "start": 2481.079,
+      "duration": 7.481,
+      "text": "1 by two makes it near about the time complexity of n squ if you remember the"
+    },
+    {
+      "start": 2485.16,
+      "duration": 12.159,
+      "text": "time complexity class so I can see the kind of worst case is"
+    },
+    {
+      "start": 2492.68,
+      "duration": 12.48,
+      "text": "n² the average case is also n s but what about the best case imagine I give you"
+    },
+    {
+      "start": 2499.839,
+      "duration": 11.681,
+      "text": "something like 1 2 3 4 5 1 2 3 4 5 and I go back to the code and I go back to the"
+    },
+    {
+      "start": 2508.319,
+      "duration": 9.321,
+      "text": "code so imagine it give you a completely sorted and I go back to the code and"
+    },
+    {
+      "start": 2513.64,
+      "duration": 8.92,
+      "text": "let's see how many times this Loop runs go to the terminal and try to print it"
+    },
+    {
+      "start": 2520.2,
+      "duration": 6.159,
+      "text": "this Loop will not run a single time because for one there's no one on the"
+    },
+    {
+      "start": 2524.64,
+      "duration": 4.679,
+      "text": "left for two there's no one on the left three is already in its correct position"
+    },
+    {
+      "start": 2527.839,
+      "duration": 5.361,
+      "text": "four is already in its correct position five is already in its correct position"
+    },
+    {
+      "start": 2531.0,
+      "duration": 6.48,
+      "text": "six is already so this putting them into the correct"
+    },
+    {
+      "start": 2535.2,
+      "duration": 9.84,
+      "text": "position never happens so apparently only this Loop runs for check a be it's"
+    },
+    {
+      "start": 2541.359,
+      "duration": 12.361,
+      "text": "a b ofen the best case for this is nothing but beo of n complexity because"
+    },
+    {
+      "start": 2551.319,
+      "duration": 7.441,
+      "text": "there is no swaps that happen everyone is at its correct order just go to"
+    },
+    {
+      "start": 2555.92,
+      "duration": 9.0,
+      "text": "everyone that is what the time is taken for in case of insertion s so so with"
+    },
+    {
+      "start": 2562.44,
+      "duration": 8.84,
+      "text": "this I can tick mark insertion sort and it is completed uh the time is"
+    },
+    {
+      "start": 2568.76,
+      "duration": 8.44,
+      "text": "5:29 yes because I do take a lot of retakes while recording because I want"
+    },
+    {
+      "start": 2574.0,
+      "duration": 8.599,
+      "text": "it to be perfect like a lot of times I teach two or three times so please uh"
+    },
+    {
+      "start": 2580.16,
+      "duration": 7.199,
+      "text": "please for this effort if you understood everything do consider hitting that like"
+    },
+    {
+      "start": 2584.4,
+      "duration": 6.64,
+      "text": "button and to follow our ritual please do comment understood if you understood"
+    },
+    {
+      "start": 2589.359,
+      "duration": 5.881,
+      "text": "everything and if you have doubts you can definitely put that into the comment"
+    },
+    {
+      "start": 2592.559,
+      "duration": 6.481,
+      "text": "section I'll be uh replying to them and if you're new to our Channel what are"
+    },
+    {
+      "start": 2596.839,
+      "duration": 8.201,
+      "text": "you waiting for hit that subscribe button and follow sters A2Z DSA course"
+    },
+    {
+      "start": 2602.76,
+      "duration": 6.24,
+      "text": "share your learnings with the hashtag and yes if you haven't followed me on"
+    },
+    {
+      "start": 2606.559,
+      "duration": 5.76,
+      "text": "Instagram Twitter LinkedIn all the links will be in the description make sure you"
+    },
+    {
+      "start": 2610.48,
+      "duration": 5.52,
+      "text": "follow me with this I'll be wrapping up this video let's put in some other video"
+    },
+    {
+      "start": 2613.92,
+      "duration": 6.919,
+      "text": "till then bye-bye take care whenever your heart is"
+    },
+    {
+      "start": 2617.559,
+      "duration": 7.76,
+      "text": "broken don't ever forget your golden I will find a light"
+    }
+  ]
+}

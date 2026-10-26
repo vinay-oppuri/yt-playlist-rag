@@ -1,0 +1,1452 @@
+{
+  "video_id": "un6PLygfXrA",
+  "title": "Re 2. Problems on Recursion | Strivers A2Z DSA Course",
+  "total_segments": 289,
+  "segments": [
+    {
+      "start": 0.0,
+      "duration": 5.04,
+      "text": "so before starting this video i'd love to thank the sponsor of this video which"
+    },
+    {
+      "start": 2.96,
+      "duration": 5.84,
+      "text": "is code studio now if you are willing to practice uh interview problems topic"
+    },
+    {
+      "start": 7.12,
+      "duration": 5.76,
+      "text": "wise this is the place where you should look for because core studio has over"
+    },
+    {
+      "start": 10.639,
+      "duration": 6.64,
+      "text": "2000 plus problems and has all the problem solution in c plus java as well"
+    },
+    {
+      "start": 15.28,
+      "duration": 6.48,
+      "text": "as python if you're looking for a guided path then you can find for python for"
+    },
+    {
+      "start": 19.68,
+      "duration": 6.0,
+      "text": "dbms for object oriented programming operating system computer networks"
+    },
+    {
+      "start": 23.359,
+      "duration": 5.361,
+      "text": "system design web development any other thing that you're looking for you'll"
+    },
+    {
+      "start": 26.56,
+      "duration": 6.48,
+      "text": "find guided paths for every other thing over here also also if you're looking"
+    },
+    {
+      "start": 30.64,
+      "duration": 5.84,
+      "text": "for any top company questions let's say if you have an interview at amazon if"
+    },
+    {
+      "start": 35.12,
+      "duration": 5.279,
+      "text": "you're looking for amazon questions you can get all the top amazon coding"
+    },
+    {
+      "start": 38.48,
+      "duration": 5.919,
+      "text": "questions via tag and all the solutions in c plus java as well as python also if"
+    },
+    {
+      "start": 43.04,
+      "duration": 5.679,
+      "text": "you have an interview schedule you can read their interview experiences where"
+    },
+    {
+      "start": 46.48,
+      "duration": 6.8,
+      "text": "there are 600 plus interview experiences from companies like amazon microsoft"
+    },
+    {
+      "start": 50.559,
+      "duration": 5.68,
+      "text": "adobe google etc so what are you waiting for code studio has a lot of free"
+    },
+    {
+      "start": 54.719,
+      "duration": 5.761,
+      "text": "resources for interview preparation the link will be in the description make"
+    },
+    {
+      "start": 57.76,
+      "duration": 2.72,
+      "text": "sure you check it out"
+    },
+    {
+      "start": 63.76,
+      "duration": 5.6,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well"
+    },
+    {
+      "start": 67.119,
+      "duration": 7.761,
+      "text": "so today will be the lecture two of recursion playlist which is basic"
+    },
+    {
+      "start": 72.479,
+      "duration": 7.601,
+      "text": "recursion problems now in the previous video we did learn about recursion in"
+    },
+    {
+      "start": 77.36,
+      "duration": 6.72,
+      "text": "depth what is like so please make sure you watch out the previous video"
+    },
+    {
+      "start": 82.159,
+      "duration": 6.401,
+      "text": "and after that only you start this video so in this video we are going to solve"
+    },
+    {
+      "start": 86.0,
+      "duration": 6.72,
+      "text": "uh some problems the first one being a print name five times i'm assuming you"
+    },
+    {
+      "start": 91.52,
+      "duration": 4.8,
+      "text": "can do that print uh"
+    },
+    {
+      "start": 93.84,
+      "duration": 6.959,
+      "text": "linearly from one to n using recursion definitely"
+    },
+    {
+      "start": 97.439,
+      "duration": 8.161,
+      "text": "print linearly from n to one then print linearly from one to n but in"
+    },
+    {
+      "start": 103.6,
+      "duration": 6.559,
+      "text": "some backtracking over here i'll teach you how can you do stuffs"
+    },
+    {
+      "start": 107.6,
+      "duration": 8.799,
+      "text": "uh using backtrack kind of backtrack and print from end to one again using"
+    },
+    {
+      "start": 113.119,
+      "duration": 7.841,
+      "text": "back cracking okay so i'm assuming you can do the first three"
+    },
+    {
+      "start": 119.119,
+      "duration": 5.841,
+      "text": "but still i'll recommend you to watch the entire video because"
+    },
+    {
+      "start": 122.96,
+      "duration": 6.56,
+      "text": "the concepts gets more clear the more you watch the videos so let's uh take"
+    },
+    {
+      "start": 126.799,
+      "duration": 9.921,
+      "text": "the first problem and do it that is uh print name"
+    },
+    {
+      "start": 131.84,
+      "duration": 10.64,
+      "text": "n times let's keep it n times okay so the generic way is definitely uh"
+    },
+    {
+      "start": 139.76,
+      "duration": 8.24,
+      "text": "to run a for loop and print the name n times but i want you to print your name"
+    },
+    {
+      "start": 145.36,
+      "duration": 7.76,
+      "text": "n times using recursion yes that's that's a catch here using recursion"
+    },
+    {
+      "start": 151.04,
+      "duration": 7.52,
+      "text": "so how can you do this you know there will definitely be a main"
+    },
+    {
+      "start": 155.519,
+      "duration": 7.36,
+      "text": "which will uh be calling print okay so i'm saying n times so what you"
+    },
+    {
+      "start": 161.36,
+      "duration": 5.92,
+      "text": "can do is you can take the n from the user"
+    },
+    {
+      "start": 164.16,
+      "duration": 6.799,
+      "text": "yes you can take the n from the user so"
+    },
+    {
+      "start": 168.48,
+      "duration": 8.0,
+      "text": "input as n in java it will be integer dot parsi and n"
+    },
+    {
+      "start": 173.04,
+      "duration": 3.44,
+      "text": "and then you can say a function"
+    },
+    {
+      "start": 176.8,
+      "duration": 5.76,
+      "text": "with uh probably 0 and n so over here i'm"
+    },
+    {
+      "start": 180.879,
+      "duration": 5.521,
+      "text": "gonna teach you something which is very important uh one"
+    },
+    {
+      "start": 184.4,
+      "duration": 6.0,
+      "text": "and then so this is the first time and i'm saying till new printed okay okay"
+    },
+    {
+      "start": 188.8,
+      "duration": 6.0,
+      "text": "i'm gonna teach you something change of parameters which is very"
+    },
+    {
+      "start": 191.92,
+      "duration": 7.039,
+      "text": "important so i'm writing a void f okay no global variables this time i'm taking"
+    },
+    {
+      "start": 197.04,
+      "duration": 4.64,
+      "text": "an integer i and i'm taking an integer n"
+    },
+    {
+      "start": 200.879,
+      "duration": 7.041,
+      "text": "okay over here i know the base cases"
+    },
+    {
+      "start": 204.56,
+      "duration": 9.28,
+      "text": "if i start from yes if i start from 1 i have to go till n that's for sure"
+    },
+    {
+      "start": 211.519,
+      "duration": 7.36,
+      "text": "like i have to print it n times so i know the base case is definitely going"
+    },
+    {
+      "start": 215.519,
+      "duration": 7.521,
+      "text": "to be till i haven't printed n times so if at any moment i"
+    },
+    {
+      "start": 221.44,
+      "duration": 6.4,
+      "text": "exceeds n i am going to say return because"
+    },
+    {
+      "start": 225.84,
+      "duration": 4.72,
+      "text": "i'm going to just print it n times that's very simple"
+    },
+    {
+      "start": 229.12,
+      "duration": 5.759,
+      "text": "uh coming from the previous class it's very very simple this is what we call it"
+    },
+    {
+      "start": 232.799,
+      "duration": 6.08,
+      "text": "as the base case remember"
+    },
+    {
+      "start": 236.56,
+      "duration": 6.399,
+      "text": "so base case is decided on the problem statement so this is the base case"
+    },
+    {
+      "start": 242.159,
+      "duration": 4.241,
+      "text": "okay what after that"
+    },
+    {
+      "start": 244.319,
+      "duration": 7.601,
+      "text": "after that i will be like okay let's print it so you will simply say print"
+    },
+    {
+      "start": 250.0,
+      "duration": 5.2,
+      "text": "let's assume my name is raj so i'll print raj"
+    },
+    {
+      "start": 253.36,
+      "duration": 7.68,
+      "text": "and then i'll call f i've printed it once i did came up as"
+    },
+    {
+      "start": 258.16,
+      "duration": 8.56,
+      "text": "one so the next time i will call it as i plus one comma n okay"
+    },
+    {
+      "start": 264.08,
+      "duration": 5.76,
+      "text": "so let's understand how does the flow works so that you get a better"
+    },
+    {
+      "start": 268.479,
+      "duration": 4.481,
+      "text": "perspective so initially uh you will be taking"
+    },
+    {
+      "start": 271.84,
+      "duration": 7.76,
+      "text": "integer n assume n is given as 3 assuming n is"
+    },
+    {
+      "start": 276.479,
+      "duration": 6.641,
+      "text": "given as 3 and again i'll put the output screen over here"
+    },
+    {
+      "start": 281.28,
+      "duration": 6.0,
+      "text": "assuming n is given as 3 so n becomes 3"
+    },
+    {
+      "start": 285.12,
+      "duration": 9.84,
+      "text": "function says 1 and n so this guy calls this particular guy"
+    },
+    {
+      "start": 291.199,
+      "duration": 8.72,
+      "text": "with i's value as 1 n's value as 3 so the function call yes the first function"
+    },
+    {
+      "start": 297.6,
+      "duration": 7.439,
+      "text": "call that you make is of f of 1 comma 3 that's the first function"
+    },
+    {
+      "start": 303.6,
+      "duration": 6.96,
+      "text": "call you made is the base case true no because"
+    },
+    {
+      "start": 308.0,
+      "duration": 10.32,
+      "text": "1 is not greater than three one is not greater than three no"
+    },
+    {
+      "start": 313.759,
+      "duration": 10.321,
+      "text": "thereby you say print raj so raj gets printed okay next you're saying function"
+    },
+    {
+      "start": 321.6,
+      "duration": 8.879,
+      "text": "of i plus one so this guy calls a function with i plus 1 i was"
+    },
+    {
+      "start": 327.12,
+      "duration": 8.16,
+      "text": "1 over here i gets incremented by 1 and calls the function by"
+    },
+    {
+      "start": 332.08,
+      "duration": 6.48,
+      "text": "2 and n is still 3 and over here you write the same line of code i greater"
+    },
+    {
+      "start": 337.52,
+      "duration": 5.119,
+      "text": "than n because it's the same function which is"
+    },
+    {
+      "start": 340.479,
+      "duration": 5.041,
+      "text": "being called so in memory it's the same one"
+    },
+    {
+      "start": 343.759,
+      "duration": 5.28,
+      "text": "print raj and"
+    },
+    {
+      "start": 346.32,
+      "duration": 5.68,
+      "text": "then f of i plus one comma n okay"
+    },
+    {
+      "start": 349.919,
+      "duration": 8.4,
+      "text": "this time let's understand if this base case is executed i is 2"
+    },
+    {
+      "start": 355.36,
+      "duration": 6.48,
+      "text": "n is 3 so this will not be executed print raj"
+    },
+    {
+      "start": 359.68,
+      "duration": 8.079,
+      "text": "again you print raj right remember this function of 1 of 3"
+    },
+    {
+      "start": 365.12,
+      "duration": 6.639,
+      "text": "called this f 2 3 so in recursion tree it will be f of 2 comma 3"
+    },
+    {
+      "start": 369.84,
+      "duration": 7.52,
+      "text": "this is how you create the recursion tree now f of 2 3 this is printed"
+    },
+    {
+      "start": 375.039,
+      "duration": 8.88,
+      "text": "and now this portion so this guy goes and again calls f of i plus 1 so 3 comma"
+    },
+    {
+      "start": 380.88,
+      "duration": 6.879,
+      "text": "3 and again you write the same lines is i greater than n"
+    },
+    {
+      "start": 386.0,
+      "duration": 6.84,
+      "text": "then you say return definitely uh this is false so thereby"
+    },
+    {
+      "start": 390.88,
+      "duration": 5.759,
+      "text": "you again go and say print raj"
+    },
+    {
+      "start": 395.199,
+      "duration": 6.881,
+      "text": "and is f of i plus 1 comma n"
+    },
+    {
+      "start": 398.96,
+      "duration": 8.32,
+      "text": "so this is false so this gets executed so raj is again printed"
+    },
+    {
+      "start": 404.0,
+      "duration": 6.72,
+      "text": "f of i plus 1 so this time f like f of 2 3 called f of 3 3"
+    },
+    {
+      "start": 409.36,
+      "duration": 5.76,
+      "text": "so i can just draw that f of 2 3 called f of 3 3."
+    },
+    {
+      "start": 413.36,
+      "duration": 6.48,
+      "text": "now f of 3 3 calls"
+    },
+    {
+      "start": 416.479,
+      "duration": 9.921,
+      "text": "i plus 1 which is f of 4 comma 3 and this moment i can say if i greater"
+    },
+    {
+      "start": 423.12,
+      "duration": 7.28,
+      "text": "than n then return becomes true why because because"
+    },
+    {
+      "start": 428.88,
+      "duration": 6.879,
+      "text": "i is4 n is 3 and this guy comes out to be true"
+    },
+    {
+      "start": 433.919,
+      "duration": 7.361,
+      "text": "thereby you are returning so the moment you're returning these lines will be of"
+    },
+    {
+      "start": 438.319,
+      "duration": 9.041,
+      "text": "no use anymore these lines will be of no use anymore so you return now this is"
+    },
+    {
+      "start": 444.88,
+      "duration": 8.719,
+      "text": "done now remember f of 3 3 called f of 4 3 so you can do it in the recursion tree"
+    },
+    {
+      "start": 449.599,
+      "duration": 7.121,
+      "text": "as well f of 3 3 called f of 4 3 okay so"
+    },
+    {
+      "start": 455.12,
+      "duration": 6.72,
+      "text": "this is done this is over so i can say this function"
+    },
+    {
+      "start": 459.199,
+      "duration": 7.761,
+      "text": "is over thereby you can return this is done so this function is over"
+    },
+    {
+      "start": 464.479,
+      "duration": 8.0,
+      "text": "there by this is over you can return thereby this is over you can definitely"
+    },
+    {
+      "start": 469.68,
+      "duration": 7.76,
+      "text": "return back to where it was called and now the function"
+    },
+    {
+      "start": 474.24,
+      "duration": 8.799,
+      "text": "the program terminates so this is how easily the recursion did work and we did"
+    },
+    {
+      "start": 480.08,
+      "duration": 8.239,
+      "text": "it in the parameters and not using any global variables so i was able to print"
+    },
+    {
+      "start": 485.52,
+      "duration": 8.0,
+      "text": "my name n number of times is i was able to print my name n number of times and"
+    },
+    {
+      "start": 490.72,
+      "duration": 6.8,
+      "text": "at f of 4 3 i returned so this got completed this return so this got"
+    },
+    {
+      "start": 495.28,
+      "duration": 8.16,
+      "text": "completed this return so during the course this guy printed one raj this guy"
+    },
+    {
+      "start": 500.4,
+      "duration": 9.519,
+      "text": "printed one raj this guy printed one raj and this guy hit the base condition and"
+    },
+    {
+      "start": 506.8,
+      "duration": 7.28,
+      "text": "returned so this is how you can easily uh do the first problem which is print"
+    },
+    {
+      "start": 513.039,
+      "duration": 6.721,
+      "text": "the name n times using recursion"
+    },
+    {
+      "start": 517.12,
+      "duration": 6.64,
+      "text": "right i hope you have understood this so"
+    },
+    {
+      "start": 521.279,
+      "duration": 7.68,
+      "text": "if i talk about the time complexity uh space complexity it's very very simple"
+    },
+    {
+      "start": 526.32,
+      "duration": 6.8,
+      "text": "i can say the time complexity uh to be big o of n"
+    },
+    {
+      "start": 530.72,
+      "duration": 7.04,
+      "text": "because inside the functions yes inside the functions uh these lines"
+    },
+    {
+      "start": 535.279,
+      "duration": 6.401,
+      "text": "are like we go off one like they don't take any time so apparently uh you're"
+    },
+    {
+      "start": 540.16,
+      "duration": 5.76,
+      "text": "calling one function that guy calls one more function that"
+    },
+    {
+      "start": 543.839,
+      "duration": 5.201,
+      "text": "guy calls one more function so you're calling n functions if you carefully"
+    },
+    {
+      "start": 547.839,
+      "duration": 6.161,
+      "text": "observe one two three four so you're calling n"
+    },
+    {
+      "start": 551.76,
+      "duration": 6.8,
+      "text": "functions like here about n functions so i can say the time complexity to be big"
+    },
+    {
+      "start": 556.08,
+      "duration": 6.72,
+      "text": "o of n yes i can say the time complexity to be b co of n"
+    },
+    {
+      "start": 560.16,
+      "duration": 7.28,
+      "text": "and what is the stack space so in space complexity we generally assume the stack"
+    },
+    {
+      "start": 565.519,
+      "duration": 4.241,
+      "text": "space now this guy would have been in the stack"
+    },
+    {
+      "start": 568.56,
+      "duration": 4.64,
+      "text": "when you called f of 1 comma 3 would have been in the"
+    },
+    {
+      "start": 571.279,
+      "duration": 5.041,
+      "text": "stack then f of 2 comma 3 would have been in the stack then f of 3 comma"
+    },
+    {
+      "start": 574.959,
+      "duration": 6.081,
+      "text": "three would have been in the stack so they were they were waiting in the stack"
+    },
+    {
+      "start": 578.48,
+      "duration": 7.84,
+      "text": "till this base case returned they were waiting to be completed so thereby i can"
+    },
+    {
+      "start": 583.68,
+      "duration": 7.04,
+      "text": "say the space complexity is also big o of n now this space complexity is"
+    },
+    {
+      "start": 588.88,
+      "duration": 9.2,
+      "text": "hypothetical like you're not using an array internal the computer's internal"
+    },
+    {
+      "start": 593.44,
+      "duration": 9.12,
+      "text": "memory uses the stack space so thereby making the time complexity and the space"
+    },
+    {
+      "start": 600.16,
+      "duration": 6.48,
+      "text": "complexity to be big o of n and b go often i hope that makes sense"
+    },
+    {
+      "start": 606.88,
+      "duration": 7.12,
+      "text": "so guys we have done the first problem which is print the name ten times or"
+    },
+    {
+      "start": 611.04,
+      "duration": 7.359,
+      "text": "five times okay now let's do the next problem which is print linearly"
+    },
+    {
+      "start": 616.88,
+      "duration": 4.16,
+      "text": "from one to n"
+    },
+    {
+      "start": 628.64,
+      "duration": 8.16,
+      "text": "so basically if n is given as four i want you to print one two three four yes"
+    },
+    {
+      "start": 634.399,
+      "duration": 7.521,
+      "text": "this is what i want as the output okay so how will you do this again very"
+    },
+    {
+      "start": 639.68,
+      "duration": 8.0,
+      "text": "much similar to the previous problem if i write down the function it's going to"
+    },
+    {
+      "start": 643.68,
+      "duration": 7.76,
+      "text": "be i comma n and it's going to be i greater than n"
+    },
+    {
+      "start": 649.36,
+      "duration": 6.08,
+      "text": "and you are saying return and this time the print statement will"
+    },
+    {
+      "start": 653.68,
+      "duration": 8.0,
+      "text": "be executing i and then you can call f of i plus 1 and"
+    },
+    {
+      "start": 658.72,
+      "duration": 7.84,
+      "text": "is a similar one just in place of the name you can print i"
+    },
+    {
+      "start": 663.76,
+      "duration": 6.24,
+      "text": "right so that in the main yes so that in the main"
+    },
+    {
+      "start": 668.0,
+      "duration": 6.0,
+      "text": "when you call the function like you can take the input of n"
+    },
+    {
+      "start": 672.079,
+      "duration": 5.681,
+      "text": "you can take the input of n and then when you call the function with one"
+    },
+    {
+      "start": 676.0,
+      "duration": 4.0,
+      "text": "comma n first time"
+    },
+    {
+      "start": 678.959,
+      "duration": 3.841,
+      "text": "prince i which is"
+    },
+    {
+      "start": 683.839,
+      "duration": 7.201,
+      "text": "one next time goes i plus one so two similarly you can just"
+    },
+    {
+      "start": 688.56,
+      "duration": 7.12,
+      "text": "go on printing till whatever your n is so it was quite similar to the previous"
+    },
+    {
+      "start": 692.8,
+      "duration": 7.76,
+      "text": "one where i'm easily able to print one"
+    },
+    {
+      "start": 696.64,
+      "duration": 8.0,
+      "text": "to n correct now it's a time to uh think it in the reverse order and do the next"
+    },
+    {
+      "start": 703.04,
+      "duration": 5.44,
+      "text": "problem which is print"
+    },
+    {
+      "start": 705.6,
+      "duration": 6.08,
+      "text": "in the opposite fashion print in uh terms of"
+    },
+    {
+      "start": 712.639,
+      "duration": 5.2,
+      "text": "n to one so"
+    },
+    {
+      "start": 715.36,
+      "duration": 8.64,
+      "text": "like if i give you n equal to 4 you're going to print me 4 3 2 1. now can you"
+    },
+    {
+      "start": 720.88,
+      "duration": 8.48,
+      "text": "do this can you do this i think you can yes you can uh it's very simple"
+    },
+    {
+      "start": 727.04,
+      "duration": 7.359,
+      "text": "as of now the code that we wrote started from i equal to 1 and then you did i"
+    },
+    {
+      "start": 732.0,
+      "duration": 7.279,
+      "text": "plus 1 then you did again i plus 1 and you kept on calling so if i'm if i have"
+    },
+    {
+      "start": 736.639,
+      "duration": 6.0,
+      "text": "to print from 4 i can understand that the first"
+    },
+    {
+      "start": 740.48,
+      "duration": 6.96,
+      "text": "i has to be 4 and the last has to be a one"
+    },
+    {
+      "start": 746.0,
+      "duration": 5.6,
+      "text": "after one before one you don't print so i can say"
+    },
+    {
+      "start": 749.519,
+      "duration": 6.721,
+      "text": "i'll just write the function in the opposite order it's going to be"
+    },
+    {
+      "start": 753.76,
+      "duration": 5.519,
+      "text": "same i comma n but this time it's going to be if i"
+    },
+    {
+      "start": 758.079,
+      "duration": 7.921,
+      "text": "becomes lesser than 1 then i don't need to print"
+    },
+    {
+      "start": 762.88,
+      "duration": 8.72,
+      "text": "and i can print the i and this time i can call it i minus 1"
+    },
+    {
+      "start": 769.92,
+      "duration": 7.039,
+      "text": "comma n and during the start yes i repeat during"
+    },
+    {
+      "start": 774.56,
+      "duration": 7.76,
+      "text": "the start of main i can take the input of n definitely"
+    },
+    {
+      "start": 780.32,
+      "duration": 7.92,
+      "text": "i can take the input of n and i can say f of n comma n to be"
+    },
+    {
+      "start": 785.279,
+      "duration": 7.441,
+      "text": "called yes i can say f of n comma n to be called so that if if assume n is"
+    },
+    {
+      "start": 791.2,
+      "duration": 7.879,
+      "text": "given as 4 the first time or assume the n is given"
+    },
+    {
+      "start": 794.959,
+      "duration": 4.12,
+      "text": "as 3 to have a better understanding"
+    },
+    {
+      "start": 800.0,
+      "duration": 6.639,
+      "text": "the first time you call it three comma three and this goes"
+    },
+    {
+      "start": 805.12,
+      "duration": 5.92,
+      "text": "calls it like three comma three correct"
+    },
+    {
+      "start": 809.2,
+      "duration": 6.96,
+      "text": "this line doesn't executes print three so the output screen will"
+    },
+    {
+      "start": 813.92,
+      "duration": 8.479,
+      "text": "definitely have something like three and then you call it as f of two comma three"
+    },
+    {
+      "start": 819.76,
+      "duration": 7.04,
+      "text": "and again then you will call it as f of one comma three and again at the end"
+    },
+    {
+      "start": 824.399,
+      "duration": 6.56,
+      "text": "you'll call it f of zero comma three and this 0 comma 3 will be executed and"
+    },
+    {
+      "start": 829.12,
+      "duration": 6.56,
+      "text": "you'll come back you'll come back and you'll come back so automatically you"
+    },
+    {
+      "start": 833.199,
+      "duration": 7.841,
+      "text": "print 3 2 1 as simple as that so it's the main stuff"
+    },
+    {
+      "start": 838.72,
+      "duration": 7.119,
+      "text": "is you just change it over here where do you say i'm going to do a i minus 1"
+    },
+    {
+      "start": 847.68,
+      "duration": 7.04,
+      "text": "this is the main step where you change that you say i'm going to do a i minus 1"
+    },
+    {
+      "start": 852.0,
+      "duration": 5.76,
+      "text": "correct so again we have also done the next problem which is print in terms of"
+    },
+    {
+      "start": 856.88,
+      "duration": 2.48,
+      "text": "n is"
+    },
+    {
+      "start": 858.56,
+      "duration": 3.04,
+      "text": "to one"
+    },
+    {
+      "start": 864.16,
+      "duration": 6.239,
+      "text": "so three problems have been done now"
+    },
+    {
+      "start": 868.079,
+      "duration": 5.681,
+      "text": "these were very basic i want to do i want you to change it and think it in"
+    },
+    {
+      "start": 872.16,
+      "duration": 5.76,
+      "text": "the reverse order what if i"
+    },
+    {
+      "start": 875.44,
+      "duration": 7.839,
+      "text": "want to print from 1 to 1 but i don't want to do i plus 1 instead i say that"
+    },
+    {
+      "start": 880.8,
+      "duration": 6.56,
+      "text": "the recursion call starts from n comma and usually like uh to give a better"
+    },
+    {
+      "start": 886.32,
+      "duration": 6.319,
+      "text": "brief let me just explain i am saying print"
+    },
+    {
+      "start": 889.839,
+      "duration": 2.8,
+      "text": "from 1 to n"
+    },
+    {
+      "start": 893.36,
+      "duration": 6.719,
+      "text": "print from 1 to n but i am not going to allow you"
+    },
+    {
+      "start": 898.56,
+      "duration": 7.6,
+      "text": "to use plus 1 like generally from 1 to n was"
+    },
+    {
+      "start": 903.04,
+      "duration": 6.88,
+      "text": "meaning f of i plus 1 comma n was the function call was the recursive function"
+    },
+    {
+      "start": 908.399,
+      "duration": 6.24,
+      "text": "call that you are making i'm not allowing you to do that i'm not allowing"
+    },
+    {
+      "start": 912.639,
+      "duration": 4.161,
+      "text": "you to do plus one so how will you do this"
+    },
+    {
+      "start": 915.44,
+      "duration": 6.0,
+      "text": "so over here i'm going to teach you something as backtracking okay so let's"
+    },
+    {
+      "start": 919.199,
+      "duration": 6.401,
+      "text": "understand backtracking since i'm not allowing you to use plus"
+    },
+    {
+      "start": 923.68,
+      "duration": 7.92,
+      "text": "you have to use minus so what i'll do is i comma n okay as usual this time it'll"
+    },
+    {
+      "start": 928.88,
+      "duration": 6.56,
+      "text": "be like if i at any time goes lesser than one"
+    },
+    {
+      "start": 932.639,
+      "duration": 7.921,
+      "text": "uh you return f of i minus one comma n"
+    },
+    {
+      "start": 938.48,
+      "duration": 4.4,
+      "text": "and right after that i'm writing print of"
+    },
+    {
+      "start": 941.44,
+      "duration": 4.319,
+      "text": "i okay so over here i'm writing the main"
+    },
+    {
+      "start": 944.56,
+      "duration": 4.079,
+      "text": "function over here i'm writing the main function"
+    },
+    {
+      "start": 947.839,
+      "duration": 6.401,
+      "text": "and what i'm writing is okay mean"
+    },
+    {
+      "start": 951.199,
+      "duration": 8.241,
+      "text": "let's take the input of n and let's call f of n comma n"
+    },
+    {
+      "start": 956.959,
+      "duration": 6.88,
+      "text": "so basically what i did was i said that you cannot use this plus thereby"
+    },
+    {
+      "start": 962.16,
+      "duration": 6.239,
+      "text": "you can use minus one why because i wanted to i wanted you i"
+    },
+    {
+      "start": 966.48,
+      "duration": 6.159,
+      "text": "wanted me to teach you what if i write the print line after the"
+    },
+    {
+      "start": 970.32,
+      "duration": 7.36,
+      "text": "recursion call what happens let's understand so again let's uh quickly"
+    },
+    {
+      "start": 975.279,
+      "duration": 8.48,
+      "text": "give the output screen and uh assume n is given as three so the"
+    },
+    {
+      "start": 980.8,
+      "duration": 6.24,
+      "text": "first call is 3 comma 3 thereby the first call goes as"
+    },
+    {
+      "start": 985.6,
+      "duration": 7.12,
+      "text": "3 comma 3 the first call goes as 3 comma 3 now"
+    },
+    {
+      "start": 990.16,
+      "duration": 9.76,
+      "text": "let's understand this does this line execute i lesser than 1 no because"
+    },
+    {
+      "start": 996.399,
+      "duration": 6.081,
+      "text": "i is 3 and it doesn't executes perfect"
+    },
+    {
+      "start": 1001.519,
+      "duration": 6.081,
+      "text": "next i am saying f of i minus 1"
+    },
+    {
+      "start": 1005.6,
+      "duration": 5.76,
+      "text": "so this function call will go remember this"
+    },
+    {
+      "start": 1008.72,
+      "duration": 6.64,
+      "text": "the print line will not be executed the function call will go perfect let's"
+    },
+    {
+      "start": 1013.92,
+      "duration": 6.8,
+      "text": "call the function call and i'm saying i minus 1 that's 2 comma 3"
+    },
+    {
+      "start": 1018.0,
+      "duration": 8.48,
+      "text": "and again let's write if i is lesser than 1 then return"
+    },
+    {
+      "start": 1023.759,
+      "duration": 7.361,
+      "text": "let's say f of i minus 1 comma n and then let's write the print of i"
+    },
+    {
+      "start": 1028.72,
+      "duration": 7.04,
+      "text": "and then this okay so let's see if the first line executes again no because i"
+    },
+    {
+      "start": 1033.36,
+      "duration": 7.439,
+      "text": "is 2 this time again you call the function"
+    },
+    {
+      "start": 1037.679,
+      "duration": 6.561,
+      "text": "with i minus 1 which is 2 minus 1 1 1 comma 3"
+    },
+    {
+      "start": 1042.0,
+      "duration": 4.88,
+      "text": "and this time you write if i is lesser than 1"
+    },
+    {
+      "start": 1045.439,
+      "duration": 7.681,
+      "text": "you return and you say f of i minus 1 comma n"
+    },
+    {
+      "start": 1050.48,
+      "duration": 6.0,
+      "text": "print off i okay"
+    },
+    {
+      "start": 1054.4,
+      "duration": 6.399,
+      "text": "let's see what happens this time f of one comma three"
+    },
+    {
+      "start": 1058.48,
+      "duration": 7.52,
+      "text": "i is one doesn't executes f of i minus one"
+    },
+    {
+      "start": 1063.2,
+      "duration": 6.719,
+      "text": "goes and calls this with f of i minus one means zero comma three"
+    },
+    {
+      "start": 1068.88,
+      "duration": 6.32,
+      "text": "if i lesser than one return i'm not writing"
+    },
+    {
+      "start": 1072.88,
+      "duration": 8.4,
+      "text": "the remaining couple of lines i is zero so this line this time is"
+    },
+    {
+      "start": 1079.12,
+      "duration": 6.64,
+      "text": "indeed true is indeed true and if this line"
+    },
+    {
+      "start": 1084.799,
+      "duration": 5.681,
+      "text": "is true what happens"
+    },
+    {
+      "start": 1087.52,
+      "duration": 7.92,
+      "text": "you basically say return executes so you return"
+    },
+    {
+      "start": 1091.6,
+      "duration": 7.68,
+      "text": "so this function line has been executed correct now the print comes over here"
+    },
+    {
+      "start": 1097.679,
+      "duration": 6.24,
+      "text": "because after this the line of execution comes over here"
+    },
+    {
+      "start": 1101.76,
+      "duration": 5.919,
+      "text": "and it says print i what's the value of i"
+    },
+    {
+      "start": 1105.36,
+      "duration": 5.04,
+      "text": "one so the output will be one next"
+    },
+    {
+      "start": 1108.4,
+      "duration": 6.24,
+      "text": "the execution line comes over here which means the function has been executed"
+    },
+    {
+      "start": 1113.12,
+      "duration": 5.04,
+      "text": "correct go back"
+    },
+    {
+      "start": 1116.4,
+      "duration": 6.159,
+      "text": "went back this line has been executed"
+    },
+    {
+      "start": 1120.72,
+      "duration": 8.4,
+      "text": "thereby the function line comes to the next"
+    },
+    {
+      "start": 1124.799,
+      "duration": 8.0,
+      "text": "this print is i what's the value of i do print it"
+    },
+    {
+      "start": 1130.799,
+      "duration": 6.321,
+      "text": "next the line of execution goes here which means this function has been"
+    },
+    {
+      "start": 1134.64,
+      "duration": 8.399,
+      "text": "executed go back this line this has been executed you go"
+    },
+    {
+      "start": 1139.52,
+      "duration": 7.68,
+      "text": "to the next print i i's value is 3 thereby this line has been executed"
+    },
+    {
+      "start": 1146.16,
+      "duration": 3.28,
+      "text": "go here hence go back"
+    },
+    {
+      "start": 1148.559,
+      "duration": 3.681,
+      "text": "so even by"
+    },
+    {
+      "start": 1150.559,
+      "duration": 6.321,
+      "text": "starting from 3 even by starting from 3"
+    },
+    {
+      "start": 1154.4,
+      "duration": 6.96,
+      "text": "i was able to output in the linearly increasing order so it's"
+    },
+    {
+      "start": 1159.6,
+      "duration": 5.04,
+      "text": "not necessary that you have to start from"
+    },
+    {
+      "start": 1162.16,
+      "duration": 7.12,
+      "text": "1 in order to print from one two three you can start from the back and you can"
+    },
+    {
+      "start": 1166.72,
+      "duration": 6.079,
+      "text": "do the task after the function call so basically"
+    },
+    {
+      "start": 1170.48,
+      "duration": 7.04,
+      "text": "by doing this what you did was you made it mandatory that"
+    },
+    {
+      "start": 1175.2,
+      "duration": 5.52,
+      "text": "this line this print line is executed at the first"
+    },
+    {
+      "start": 1178.72,
+      "duration": 5.44,
+      "text": "because you kept it after the function call you kept it after the function call"
+    },
+    {
+      "start": 1183.28,
+      "duration": 4.72,
+      "text": "so unless until this function call is over"
+    },
+    {
+      "start": 1186.08,
+      "duration": 6.8,
+      "text": "this line would have never been executed so you made sure the last guy has been"
+    },
+    {
+      "start": 1190.559,
+      "duration": 6.321,
+      "text": "executed first why how did you make sure that the last"
+    },
+    {
+      "start": 1195.12,
+      "duration": 6.32,
+      "text": "guy because this was the last guy has been executed first how was this"
+    },
+    {
+      "start": 1199.039,
+      "duration": 6.801,
+      "text": "function completed first by making sure the print line is after the function"
+    },
+    {
+      "start": 1203.2,
+      "duration": 7.92,
+      "text": "call because this will only be executed if the base case is true thereby this"
+    },
+    {
+      "start": 1208.159,
+      "duration": 7.441,
+      "text": "gets executed this then then this gets executed then this that's the opposite"
+    },
+    {
+      "start": 1213.76,
+      "duration": 5.44,
+      "text": "way you made it by writing after the function"
+    },
+    {
+      "start": 1216.799,
+      "duration": 9.281,
+      "text": "got it so this is how you print from one is to n now i will be asking you to"
+    },
+    {
+      "start": 1223.919,
+      "duration": 6.0,
+      "text": "do the other one so this is what i've done but by backtrack"
+    },
+    {
+      "start": 1228.08,
+      "duration": 4.76,
+      "text": "this has been done i want you to do the other way"
+    },
+    {
+      "start": 1230.96,
+      "duration": 6.4,
+      "text": "i want you to print from end to end basically if i give you as n equal to"
+    },
+    {
+      "start": 1236.159,
+      "duration": 5.681,
+      "text": "3 i want you to print 3 to 1 but i don't"
+    },
+    {
+      "start": 1240.08,
+      "duration": 8.32,
+      "text": "want you to use this i minus 1 comma n i don't want to"
+    },
+    {
+      "start": 1244.72,
+      "duration": 7.68,
+      "text": "do i don't want you to use this okay so i'm not solve this i want you people to"
+    },
+    {
+      "start": 1250.72,
+      "duration": 4.56,
+      "text": "answer in the comment section about this let's see if you have understood the"
+    },
+    {
+      "start": 1253.52,
+      "duration": 4.72,
+      "text": "entire concept you should be able to do it"
+    },
+    {
+      "start": 1256.24,
+      "duration": 5.04,
+      "text": "yes you should be able to do it so remember uh"
+    },
+    {
+      "start": 1259.52,
+      "duration": 6.56,
+      "text": "if i write this as a recursion tree it's very simple you started with f of three"
+    },
+    {
+      "start": 1263.84,
+      "duration": 6.8,
+      "text": "comma three then you went to f of two comma three then you went to f of one"
+    },
+    {
+      "start": 1268.24,
+      "duration": 6.0,
+      "text": "comma three then you went to f of uh zero comma three which indirectly stated"
+    },
+    {
+      "start": 1273.12,
+      "duration": 4.88,
+      "text": "a mover then the print line executed of one"
+    },
+    {
+      "start": 1276.88,
+      "duration": 6.159,
+      "text": "then you said after this the print of two was executed"
+    },
+    {
+      "start": 1280.96,
+      "duration": 5.28,
+      "text": "and right at so this the print of three was executed so this is how the"
+    },
+    {
+      "start": 1284.48,
+      "duration": 5.24,
+      "text": "recursion tree will look like for this particular stuff"
+    },
+    {
+      "start": 1290.799,
+      "duration": 6.641,
+      "text": "so i hope guys you have understood all the problems and you have understood the"
+    },
+    {
+      "start": 1294.64,
+      "duration": 7.12,
+      "text": "recursion in depth for the basic kind of problems of one 1d recursion so just in"
+    },
+    {
+      "start": 1300.24,
+      "duration": 4.24,
+      "text": "case you did please please please make sure you like this video and if you're"
+    },
+    {
+      "start": 1303.12,
+      "duration": 4.24,
+      "text": "new to this channel please do consider subscribing and yeah if you haven't"
+    },
+    {
+      "start": 1305.919,
+      "duration": 4.081,
+      "text": "checked out our striver ssd sheet the link is in the description please make"
+    },
+    {
+      "start": 1308.559,
+      "duration": 5.041,
+      "text": "sure to check it out with this let's wrap up this video and meet in the next"
+    },
+    {
+      "start": 1311.679,
+      "duration": 5.88,
+      "text": "one where i'll be discussing some other interesting problems bye"
+    },
+    {
+      "start": 1318.24,
+      "duration": 4.76,
+      "text": "don't ever forget your golden"
+    }
+  ]
+}

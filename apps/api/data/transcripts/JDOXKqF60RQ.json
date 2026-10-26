@@ -1,0 +1,1812 @@
+{
+  "video_id": "JDOXKqF60RQ",
+  "title": "Next Permutation - Intuition in Detail 🔥 | Brute to Optimal",
+  "total_segments": 361,
+  "segments": [
+    {
+      "start": 2.94,
+      "duration": 4.74,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.12,
+      "duration": 4.92,
+      "text": "so this is another video from the stripers A to Z DSA course just in case"
+    },
+    {
+      "start": 9.78,
+      "duration": 4.5,
+      "text": "here for the first time here this is world's most in-depth course when it"
+    },
+    {
+      "start": 12.719,
+      "duration": 6.06,
+      "text": "comes to DSL though why do I say that because this course has 456 modules by"
+    },
+    {
+      "start": 17.46,
+      "duration": 5.22,
+      "text": "the end of the course you would have sold more than 400 plus problems when it"
+    },
+    {
+      "start": 20.64,
+      "duration": 5.399,
+      "text": "comes to DS I'll go you can go across the entire internet you can buy any of"
+    },
+    {
+      "start": 24.24,
+      "duration": 5.4,
+      "text": "the paid courses in the market none of them will be teaching you DSL go in such"
+    },
+    {
+      "start": 27.9,
+      "duration": 4.98,
+      "text": "step one thing that I can give you as Assurance is if you complete this"
+    },
+    {
+      "start": 31.56,
+      "duration": 5.1,
+      "text": "particular course you can hear any of the DS algorithms in any of the"
+    },
+    {
+      "start": 34.559,
+      "duration": 5.701,
+      "text": "companies in any part of the world so till now we have covered till this"
+    },
+    {
+      "start": 38.7,
+      "duration": 5.519,
+      "text": "particular problem and this video I'll be covering the next permutation problem"
+    },
+    {
+      "start": 42.36,
+      "duration": 6.719,
+      "text": "so what does the problem next permutation stay it states that you'll"
+    },
+    {
+      "start": 46.32,
+      "duration": 7.8,
+      "text": "be given an array of integers it can be repetitive integers as well now you have"
+    },
+    {
+      "start": 51.66,
+      "duration": 6.6,
+      "text": "to find the next permutation of this particular array but in order to"
+    },
+    {
+      "start": 56.039,
+      "duration": 6.84,
+      "text": "understand next permutation what you need to First understand is what is"
+    },
+    {
+      "start": 60.68,
+      "duration": 7.66,
+      "text": "permutation now you're given an array and the array is containing integers"
+    },
+    {
+      "start": 65.46,
+      "duration": 7.26,
+      "text": "over here there are three integers these three integers can be rearranged in"
+    },
+    {
+      "start": 70.5,
+      "duration": 6.84,
+      "text": "themselves now imagine if I rearrange three one two can I write them as one"
+    },
+    {
+      "start": 74.939,
+      "duration": 6.0,
+      "text": "two three I can if I bring the one to the first place if I bring the 2 to the"
+    },
+    {
+      "start": 79.02,
+      "duration": 6.419,
+      "text": "second place if I bring the 3 to the third place I can write them as one two"
+    },
+    {
+      "start": 83.159,
+      "duration": 7.14,
+      "text": "three I can also rearrange three one two and write it as three to one I can also"
+    },
+    {
+      "start": 88.5,
+      "duration": 6.54,
+      "text": "rearrange three one two and write it as two one three so I've asked you how many"
+    },
+    {
+      "start": 93.18,
+      "duration": 6.479,
+      "text": "possible rearrangements are possible it'll be like for three one two since"
+    },
+    {
+      "start": 97.259,
+      "duration": 8.161,
+      "text": "there are three numbers three factorial many basic maths six possible ways"
+    },
+    {
+      "start": 103.56,
+      "duration": 8.04,
+      "text": "I can rearrange them in six possible ways now all of these ways are called"
+    },
+    {
+      "start": 108.86,
+      "duration": 7.42,
+      "text": "permutation now the question is asking you to find the next permutation now"
+    },
+    {
+      "start": 114.18,
+      "duration": 7.259,
+      "text": "what does next permutation means when I say permutation all the possible ways"
+    },
+    {
+      "start": 118.86,
+      "duration": 6.719,
+      "text": "all the possible ways have to be written in the sorted order so if you see one"
+    },
+    {
+      "start": 123.42,
+      "duration": 5.88,
+      "text": "two three is before one three two now what do you mean by sorted order if you"
+    },
+    {
+      "start": 127.56,
+      "duration": 5.94,
+      "text": "go to the dictionary can I say one two three will always be smaller than one"
+    },
+    {
+      "start": 131.58,
+      "duration": 6.36,
+      "text": "three two one three two will always be smaller than two one three dictionary"
+    },
+    {
+      "start": 135.239,
+      "duration": 5.941,
+      "text": "order because one two three like one two three smaller than one three two so we"
+    },
+    {
+      "start": 139.739,
+      "duration": 6.121,
+      "text": "have to write them in dictionary order in the sorted order ascending way now"
+    },
+    {
+      "start": 143.819,
+      "duration": 8.401,
+      "text": "you have to find where is three one two can I see three one two appears here"
+    },
+    {
+      "start": 149.22,
+      "duration": 6.9,
+      "text": "it does in the sorted permutation now you have to find the next permutation"
+    },
+    {
+      "start": 154.56,
+      "duration": 5.399,
+      "text": "after three one two and the next permutation is three to one so the"
+    },
+    {
+      "start": 158.58,
+      "duration": 6.18,
+      "text": "answer to this that you have to return will be three to one yes this is what"
+    },
+    {
+      "start": 162.78,
+      "duration": 5.819,
+      "text": "you have to return as an answer now you might be thinking of a possible Edge"
+    },
+    {
+      "start": 166.08,
+      "duration": 6.299,
+      "text": "case what if the array was given as three to one so can I say put three to"
+    },
+    {
+      "start": 171.599,
+      "duration": 5.22,
+      "text": "one these will be the possible permutations"
+    },
+    {
+      "start": 174.18,
+      "duration": 8.58,
+      "text": "but if I have to write the next permutation three to one Lies over here"
+    },
+    {
+      "start": 179.819,
+      "duration": 6.42,
+      "text": "and if I carefully observe there is no one after three to one"
+    },
+    {
+      "start": 184.26,
+      "duration": 7.8,
+      "text": "so what will be the next because there is no one in such cases you will fall"
+    },
+    {
+      "start": 189.12,
+      "duration": 9.06,
+      "text": "back to the first possible rearrangement in the sorted order hence the answer"
+    },
+    {
+      "start": 194.7,
+      "duration": 8.039,
+      "text": "will be one two three if there is no one after this particular Arrangement it'll"
+    },
+    {
+      "start": 201.48,
+      "duration": 4.979,
+      "text": "fall back to the first and the answer will be one two three if this question"
+    },
+    {
+      "start": 204.78,
+      "duration": 5.28,
+      "text": "comes up in an interview the first solution that will tell the interviewer"
+    },
+    {
+      "start": 207.84,
+      "duration": 6.66,
+      "text": "will be of Brute Force solution now what is a brutusation it is generically doing"
+    },
+    {
+      "start": 212.28,
+      "duration": 7.8,
+      "text": "what the problem States the problem was stating uh to generate like if you"
+    },
+    {
+      "start": 218.22,
+      "duration": 6.72,
+      "text": "normally think it's basically generating all the permutations science generate"
+    },
+    {
+      "start": 222.48,
+      "duration": 7.2,
+      "text": "all the possible permutations once you have done that can I say you'll get all"
+    },
+    {
+      "start": 226.92,
+      "duration": 6.06,
+      "text": "of them you will then you'll be like where does three one two lie and make"
+    },
+    {
+      "start": 231.54,
+      "duration": 5.759,
+      "text": "sure you generate all of them in the sorted order"
+    },
+    {
+      "start": 234.48,
+      "duration": 8.1,
+      "text": "then it is like why does tree want to lie so probably I can do a linear search"
+    },
+    {
+      "start": 239.94,
+      "duration": 6.84,
+      "text": "I can I trade I can find that three one two lies over here so do a linear search"
+    },
+    {
+      "start": 244.68,
+      "duration": 6.6,
+      "text": "in order to find where does three want to lie once you've figured out where it"
+    },
+    {
+      "start": 248.7,
+      "duration": 7.08,
+      "text": "lies can I say the next index permutation like this one the next"
+    },
+    {
+      "start": 253.86,
+      "duration": 6.36,
+      "text": "permutation this one will be your answer yes that will be my answer if there"
+    },
+    {
+      "start": 258.12,
+      "duration": 6.299,
+      "text": "doesn't exist next then the first one will be my answer can I say the brute"
+    },
+    {
+      "start": 262.079,
+      "duration": 6.84,
+      "text": "force will be comprising of these three particular steps yes but now you'll be"
+    },
+    {
+      "start": 267.0,
+      "duration": 4.979,
+      "text": "thinking but how do I generate all the possible permutations in order to"
+    },
+    {
+      "start": 270.479,
+      "duration": 6.0,
+      "text": "generate all the possible permutations you will be using recursion and I've"
+    },
+    {
+      "start": 274.74,
+      "duration": 5.58,
+      "text": "already made couple of videos on it so there are two approaches if you see the"
+    },
+    {
+      "start": 278.34,
+      "duration": 6.0,
+      "text": "lecture 12 and lecture 13 from the recursion playlist you'll get to know"
+    },
+    {
+      "start": 282.12,
+      "duration": 7.26,
+      "text": "how to generate all the possible permutations now in an interview you"
+    },
+    {
+      "start": 287.04,
+      "duration": 6.12,
+      "text": "just have to mention these steps usually in an interview you don't have to"
+    },
+    {
+      "start": 290.58,
+      "duration": 6.36,
+      "text": "because if you start coding the code for generating all the permutations and"
+    },
+    {
+      "start": 294.84,
+      "duration": 7.079,
+      "text": "recursion that will eat up a lot of time that is why in an interview you"
+    },
+    {
+      "start": 299.46,
+      "duration": 6.06,
+      "text": "generally we have to just say that this is what I'm thinking generator or do a"
+    },
+    {
+      "start": 303.66,
+      "duration": 4.62,
+      "text": "linear search and that's it and that that is when the interviewer will ask"
+    },
+    {
+      "start": 306.78,
+      "duration": 5.88,
+      "text": "you okay what do you think will be the time complexity I'm not diving deep into"
+    },
+    {
+      "start": 311.1,
+      "duration": 4.56,
+      "text": "the time complexity I'll find that in lecture 12 and lecture 13 of the"
+    },
+    {
+      "start": 314.16,
+      "duration": 5.28,
+      "text": "recursion playlist let's just hypothetically analyze the time"
+    },
+    {
+      "start": 317.1,
+      "duration": 6.36,
+      "text": "complexity I know one thing there are three numbers and there were three"
+    },
+    {
+      "start": 321.12,
+      "duration": 8.16,
+      "text": "factorial which is six possible permutations so can I say if there are n"
+    },
+    {
+      "start": 325.86,
+      "duration": 10.08,
+      "text": "numbers there will be at minimum of n factorial at a minimum of n factorial"
+    },
+    {
+      "start": 332.78,
+      "duration": 7.78,
+      "text": "permutations generated and every every permutation is of n length so can I say"
+    },
+    {
+      "start": 338.699,
+      "duration": 6.541,
+      "text": "at the minimum um I do not know the algorithm at the"
+    },
+    {
+      "start": 342.6,
+      "duration": 6.84,
+      "text": "minimum if I go across to generate all I'll end up taking n factorial to"
+    },
+    {
+      "start": 347.4,
+      "duration": 8.519,
+      "text": "generate all and each one of them is of length n so this is what I'll at minimum"
+    },
+    {
+      "start": 351.9,
+      "duration": 9.359,
+      "text": "Take N factorial into n and if I say if I give you an array of length 5 n"
+    },
+    {
+      "start": 358.5,
+      "duration": 7.74,
+      "text": "factorial is 120 if I give you an array of length 15 n factorial is near about"
+    },
+    {
+      "start": 363.96,
+      "duration": 7.799,
+      "text": "10 to the power 12 near above imagine the time it will take 10 to the power 12"
+    },
+    {
+      "start": 368.699,
+      "duration": 7.981,
+      "text": "iterations this is why this complexities of extremely high order and that is when"
+    },
+    {
+      "start": 374.639,
+      "duration": 6.361,
+      "text": "you'll see that we will not be using it because it will end up taking a lot of"
+    },
+    {
+      "start": 378.9,
+      "duration": 6.72,
+      "text": "time so remember one thing whenever you are in an interview never ever Deep dive"
+    },
+    {
+      "start": 383.58,
+      "duration": 6.3,
+      "text": "into a group 4 solution always tell it from a very high level like generate all"
+    },
+    {
+      "start": 387.9,
+      "duration": 6.0,
+      "text": "linear search the next will be man so because that is what the interviewer"
+    },
+    {
+      "start": 391.44,
+      "duration": 5.58,
+      "text": "wants uh to listen you should not start writing the board because that will end"
+    },
+    {
+      "start": 395.22,
+      "duration": 5.64,
+      "text": "up wasting your time once you've told the steps on a very high level just tell"
+    },
+    {
+      "start": 399.3,
+      "duration": 6.6,
+      "text": "him that this is going to take a Time complexity of a very high order that is"
+    },
+    {
+      "start": 403.44,
+      "duration": 5.759,
+      "text": "why I'll try to optimize it now does there exist a better solution it doesn't"
+    },
+    {
+      "start": 407.88,
+      "duration": 7.08,
+      "text": "like there doesn't exist in a better solution but still for C plus plus user"
+    },
+    {
+      "start": 411.6,
+      "duration": 8.28,
+      "text": "you can say that I can use the SQL Library so if if you use the STL there"
+    },
+    {
+      "start": 417.78,
+      "duration": 7.919,
+      "text": "is an stls next underscore permutation over which if you pass the list it will"
+    },
+    {
+      "start": 423.3,
+      "duration": 6.6,
+      "text": "automatically change the array to the next permuted array got it and then you"
+    },
+    {
+      "start": 428.039,
+      "duration": 6.78,
+      "text": "can return that as an answer but this is an STL which is an inbuilt function now"
+    },
+    {
+      "start": 432.84,
+      "duration": 7.56,
+      "text": "the interview might ask you can you please Implement that inbuilt STL like I"
+    },
+    {
+      "start": 438.72,
+      "duration": 6.06,
+      "text": "know there is an inbuilt next underscore permutation but can you please implement"
+    },
+    {
+      "start": 442.5,
+      "duration": 5.819,
+      "text": "it and that is when you'll jump to the most optimal solution if your job or a"
+    },
+    {
+      "start": 446.88,
+      "duration": 5.52,
+      "text": "python user what you can do is you can skip this part if you are a C plus plus"
+    },
+    {
+      "start": 450.24,
+      "duration": 5.82,
+      "text": "user I highly recommend you to see this STL so that the interview gets an idea"
+    },
+    {
+      "start": 454.139,
+      "duration": 5.941,
+      "text": "that you have a knowledge about STL as well okay so time to understand the most"
+    },
+    {
+      "start": 457.919,
+      "duration": 6.12,
+      "text": "optimal solution and knowing what happens when that next underscore"
+    },
+    {
+      "start": 461.58,
+      "duration": 6.78,
+      "text": "permutation in C plus plus STL so the flow of the lecture will be first some"
+    },
+    {
+      "start": 466.44,
+      "duration": 6.12,
+      "text": "observation using this particular example and then we build our intuition"
+    },
+    {
+      "start": 470.16,
+      "duration": 7.259,
+      "text": "once you've done that we move on to the algorithm and then we move on to the dry"
+    },
+    {
+      "start": 475.259,
+      "duration": 7.321,
+      "text": "run once you have done all the three steps we move on to writing the code so"
+    },
+    {
+      "start": 480.36,
+      "duration": 6.059,
+      "text": "at any moment you feel like jumping over you'll find the timestamps in the video"
+    },
+    {
+      "start": 484.44,
+      "duration": 6.96,
+      "text": "and you can jump over so before taking this example and doing some observations"
+    },
+    {
+      "start": 489.06,
+      "duration": 7.759,
+      "text": "for a moment let's go into the English dictionary and imagine I've given it"
+    },
+    {
+      "start": 494.759,
+      "duration": 8.461,
+      "text": "three words Raj racks RBX now we know one thing in"
+    },
+    {
+      "start": 501.06,
+      "duration": 7.68,
+      "text": "English dictionary Raj will appear before racks and racks will appear"
+    },
+    {
+      "start": 505.259,
+      "duration": 8.64,
+      "text": "before RBX now why does that happen now the pretty obvious answer is"
+    },
+    {
+      "start": 511.02,
+      "duration": 7.68,
+      "text": "R A and R A matches so so there is a very long prefix that match and then"
+    },
+    {
+      "start": 516.06,
+      "duration": 7.399,
+      "text": "there is a difference of jnx that is the reason Rax tends to appear"
+    },
+    {
+      "start": 523.88,
+      "duration": 14.26,
+      "text": "but it appears after RHA and RBX appears after RX node before RX because over"
+    },
+    {
+      "start": 533.64,
+      "duration": 10.199,
+      "text": "here just one one character is Magic and that is the reason it doesn't appears in"
+    },
+    {
+      "start": 541.2,
+      "duration": 8.16,
+      "text": "between so something we have seen in dictionary is the next elements or next"
+    },
+    {
+      "start": 546.899,
+      "duration": 7.861,
+      "text": "elements tends to have a longer prefix match tends to have a"
+    },
+    {
+      "start": 552.66,
+      "duration": 7.619,
+      "text": "longer prefix match so this is the first thing on which I'll start observing on"
+    },
+    {
+      "start": 557.22,
+      "duration": 8.52,
+      "text": "the example that we have taken so longer prefix match is what I'm looking for"
+    },
+    {
+      "start": 562.339,
+      "duration": 8.201,
+      "text": "longer prefix match because I know the next elements tends to have a very"
+    },
+    {
+      "start": 568.2,
+      "duration": 6.84,
+      "text": "longer prefix match now over here we know something we don't have all like"
+    },
+    {
+      "start": 572.64,
+      "duration": 6.66,
+      "text": "all the possible combos like if you go to an English dictionary you'll find all"
+    },
+    {
+      "start": 577.2,
+      "duration": 8.759,
+      "text": "the possible words but over here we are very restricted to these seven integers"
+    },
+    {
+      "start": 582.779,
+      "duration": 7.381,
+      "text": "so we cannot exactly say that what will be the next because we are restricted we"
+    },
+    {
+      "start": 588.06,
+      "duration": 6.6,
+      "text": "do not have everything in the world so we know one thing in order to get the"
+    },
+    {
+      "start": 592.14,
+      "duration": 6.0,
+      "text": "longer prefix match we have to kind of keep a very long prefix match that's"
+    },
+    {
+      "start": 596.82,
+      "duration": 6.06,
+      "text": "something we know from the English dictionary so the first thing"
+    },
+    {
+      "start": 600.48,
+      "duration": 8.46,
+      "text": "if I try to match everything what will we get we will get the same array so"
+    },
+    {
+      "start": 606.779,
+      "duration": 7.74,
+      "text": "this is definitely not something which will do but if I try to just match this"
+    },
+    {
+      "start": 612.0,
+      "duration": 7.2,
+      "text": "much what will happen two one five four three zero there's only one number left"
+    },
+    {
+      "start": 617.459,
+      "duration": 7.081,
+      "text": "that I can rearrange and mix something I'll again get the same so not pursue if"
+    },
+    {
+      "start": 622.68,
+      "duration": 8.099,
+      "text": "I try to match all of them maybe like two one two one"
+    },
+    {
+      "start": 627.779,
+      "duration": 7.921,
+      "text": "five four three so I have two numbers if I had something other like nine eight I"
+    },
+    {
+      "start": 633.3,
+      "duration": 5.7,
+      "text": "could have written 98 but we just have 0 0"
+    },
+    {
+      "start": 636.66,
+      "duration": 5.82,
+      "text": "which we have to rearrange so if I try to rearrange"
+    },
+    {
+      "start": 640.56,
+      "duration": 6.839,
+      "text": "this will stay constant because prefix match if you try to rearrange 0 0 it"
+    },
+    {
+      "start": 645.06,
+      "duration": 6.6,
+      "text": "cannot at match be zero zero so the number like the array still stays the C"
+    },
+    {
+      "start": 649.26,
+      "duration": 7.759,
+      "text": "perfect so we'll try to match four maybe four as possible two one five four if I"
+    },
+    {
+      "start": 654.54,
+      "duration": 8.1,
+      "text": "match four I will have three numbers three zero zero which I can rearrange"
+    },
+    {
+      "start": 660.54,
+      "duration": 6.66,
+      "text": "I can probably put zero here and then three zero but this will be smaller so"
+    },
+    {
+      "start": 665.279,
+      "duration": 8.101,
+      "text": "that's not possible that's not possible maybe I can put zero zero three that"
+    },
+    {
+      "start": 670.14,
+      "duration": 8.1,
+      "text": "small whatever you try to do with these three numbers you will not get"
+    },
+    {
+      "start": 675.66,
+      "duration": 5.52,
+      "text": "anything that's bigger than that so that is not possible maybe I can try to match"
+    },
+    {
+      "start": 680.279,
+      "duration": 6.661,
+      "text": "three two one five three prefixes much and"
+    },
+    {
+      "start": 684.06,
+      "duration": 7.08,
+      "text": "then I have four three double zero you can try out all combos like you can take"
+    },
+    {
+      "start": 688.86,
+      "duration": 8.099,
+      "text": "three four double zero smaller you can take four three double zero same you can"
+    },
+    {
+      "start": 694.26,
+      "duration": 8.579,
+      "text": "take zero zero four three smaller you can take zero four three zero smaller no"
+    },
+    {
+      "start": 700.38,
+      "duration": 7.56,
+      "text": "one is greater than this so three prefix match is not possible okay I'll try to"
+    },
+    {
+      "start": 705.3,
+      "duration": 5.88,
+      "text": "make two fix match two one and now we have this"
+    },
+    {
+      "start": 709.14,
+      "duration": 5.819,
+      "text": "if I write the same that will give me the C not possible"
+    },
+    {
+      "start": 712.74,
+      "duration": 6.659,
+      "text": "Right four five three double zero not possible if I write three four five"
+    },
+    {
+      "start": 716.7,
+      "duration": 7.319,
+      "text": "double zero not possible so you can again try rearranging all the five"
+    },
+    {
+      "start": 721.62,
+      "duration": 6.959,
+      "text": "numbers will not get anything greater and why why is that happening because"
+    },
+    {
+      "start": 726.18,
+      "duration": 7.26,
+      "text": "you have a five you need someone greater than five hear me out properly again you"
+    },
+    {
+      "start": 730.98,
+      "duration": 6.12,
+      "text": "have five in order to get Greater by keeping two prefixes same you need"
+    },
+    {
+      "start": 735.54,
+      "duration": 4.32,
+      "text": "probably a six or seven over here in order to get greater that's not possible"
+    },
+    {
+      "start": 738.779,
+      "duration": 5.941,
+      "text": "because among all the five numbers you have"
+    },
+    {
+      "start": 742.38,
+      "duration": 7.199,
+      "text": "among all the five numbers you have no one is greater than five sorry whatever"
+    },
+    {
+      "start": 746.399,
+      "duration": 7.741,
+      "text": "you rearrange will always be small two prefix matches not possible can I just"
+    },
+    {
+      "start": 751.86,
+      "duration": 7.68,
+      "text": "do one prefix match let's do this now I have one five four three double zero can"
+    },
+    {
+      "start": 757.44,
+      "duration": 7.5,
+      "text": "I put something like five four three one double zero I can"
+    },
+    {
+      "start": 761.279,
+      "duration": 8.221,
+      "text": "and can I say this is definitely after this but is it right after this is my"
+    },
+    {
+      "start": 767.16,
+      "duration": 5.94,
+      "text": "question I can also have two four five three one double zero and this is also"
+    },
+    {
+      "start": 771.959,
+      "duration": 7.56,
+      "text": "after this but this one is before this so I have to"
+    },
+    {
+      "start": 776.04,
+      "duration": 8.52,
+      "text": "kind of find what is right after this so I know one thing I'll have one prefix"
+    },
+    {
+      "start": 781.98,
+      "duration": 7.38,
+      "text": "match I will have one prefix match now there can be five over here and then"
+    },
+    {
+      "start": 787.139,
+      "duration": 8.64,
+      "text": "four one three double zero there can be five one four three double zero there"
+    },
+    {
+      "start": 791.88,
+      "duration": 8.88,
+      "text": "can be five three four one double zero there can be a lot of arrangements that"
+    },
+    {
+      "start": 798.48,
+      "duration": 7.38,
+      "text": "you can make lot of arrangements that you can make but can you write something"
+    },
+    {
+      "start": 802.5,
+      "duration": 8.339,
+      "text": "like this zero zero four five three one you cannot because this 0 is"
+    },
+    {
+      "start": 809.399,
+      "duration": 4.74,
+      "text": "smaller than this so this is not possible so what is the thing that you"
+    },
+    {
+      "start": 812.579,
+      "duration": 5.461,
+      "text": "have to take care your matching till here this is where"
+    },
+    {
+      "start": 816.36,
+      "duration": 6.3,
+      "text": "you're changing from this is where you're changing from so your target will"
+    },
+    {
+      "start": 820.56,
+      "duration": 6.6,
+      "text": "be to get someone who is greater than one get someone who's greater than one"
+    },
+    {
+      "start": 824.459,
+      "duration": 7.081,
+      "text": "that is for sure so who will be that Creator guy you you you want the next"
+    },
+    {
+      "start": 829.5,
+      "duration": 6.6,
+      "text": "you don't want the very very next because if you take two five it's way"
+    },
+    {
+      "start": 833.88,
+      "duration": 6.3,
+      "text": "ahead because we can also take to four we can also take two three which one"
+    },
+    {
+      "start": 838.32,
+      "duration": 6.959,
+      "text": "will you prefer taking will you prefer taking two five two four two three two"
+    },
+    {
+      "start": 843.06,
+      "duration": 5.339,
+      "text": "zero is out of question two zero is out of question two one is out of question"
+    },
+    {
+      "start": 846.54,
+      "duration": 6.9,
+      "text": "because 0 is smaller one is smaller which one will you take it'll be like"
+    },
+    {
+      "start": 850.32,
+      "duration": 9.0,
+      "text": "someone who's greater than one but the smallest sort of three four five were"
+    },
+    {
+      "start": 856.8,
+      "duration": 8.339,
+      "text": "greater than one was the smallest three so you'll end up taking three"
+    },
+    {
+      "start": 862.74,
+      "duration": 5.159,
+      "text": "got it so this is the observation that I'm forming this is the observation that"
+    },
+    {
+      "start": 866.579,
+      "duration": 5.76,
+      "text": "I'm forming so before going to the next set of observations let's try to"
+    },
+    {
+      "start": 869.94,
+      "duration": 7.32,
+      "text": "conclude on this first observation and try to build that algorithm that gives"
+    },
+    {
+      "start": 874.32,
+      "duration": 6.66,
+      "text": "me that okay that's just one element of probably gives me something out of this"
+    },
+    {
+      "start": 878.94,
+      "duration": 6.48,
+      "text": "observation so why was"
+    },
+    {
+      "start": 883.56,
+      "duration": 6.48,
+      "text": "this not possible why was this not possible the simple"
+    },
+    {
+      "start": 887.459,
+      "duration": 6.12,
+      "text": "answer is we have four and we need someone greater than four we need"
+    },
+    {
+      "start": 891.899,
+      "duration": 5.401,
+      "text": "someone greater than four and no one out of these elements were greater than four"
+    },
+    {
+      "start": 895.68,
+      "duration": 5.279,
+      "text": "and no one are of these elements were greater than four thereby it was not"
+    },
+    {
+      "start": 898.92,
+      "duration": 6.24,
+      "text": "possible thereby it was not possible so I knew this"
+    },
+    {
+      "start": 902.519,
+      "duration": 6.601,
+      "text": "why was to one not possible because we need someone greater than 5 and there"
+    },
+    {
+      "start": 906.839,
+      "duration": 8.641,
+      "text": "was no one greater than 5 but y was 2 possible because we had so many greater"
+    },
+    {
+      "start": 912.24,
+      "duration": 8.7,
+      "text": "than one something Did You observe zero so we're trying to draw the graph 0 0 3"
+    },
+    {
+      "start": 919.199,
+      "duration": 5.341,
+      "text": "4 and then five so do you see a graph"
+    },
+    {
+      "start": 923.339,
+      "duration": 4.461,
+      "text": "forming and then there's one here"
+    },
+    {
+      "start": 927.959,
+      "duration": 6.06,
+      "text": "so there is a certain breakpoint a certain"
+    },
+    {
+      "start": 932.399,
+      "duration": 5.581,
+      "text": "breakpoint and that's what you have to figure out the break point you have to"
+    },
+    {
+      "start": 935.82,
+      "duration": 6.72,
+      "text": "figure out the breakpoint why because if you everything is increasing so you you"
+    },
+    {
+      "start": 940.8,
+      "duration": 6.0,
+      "text": "have nothing on the right that smaller the moment you find the breakpoint"
+    },
+    {
+      "start": 944.22,
+      "duration": 6.72,
+      "text": "you're sure on that on the right of one everything is smaller so you have to"
+    },
+    {
+      "start": 948.899,
+      "duration": 5.521,
+      "text": "figure out the breakpoint so what you do is you'll try to run a loop and you'll"
+    },
+    {
+      "start": 952.56,
+      "duration": 5.16,
+      "text": "try to figure out the pre so this will be your I and this will be your I plus"
+    },
+    {
+      "start": 955.74,
+      "duration": 7.2,
+      "text": "one and I can say the break point will be whenever a of I tends to be smaller"
+    },
+    {
+      "start": 961.079,
+      "duration": 5.161,
+      "text": "than a or five plus one very simple observation we need to figure out the"
+    },
+    {
+      "start": 964.74,
+      "duration": 6.599,
+      "text": "breakpoint so the conclusion from the first set of observation is find the"
+    },
+    {
+      "start": 968.76,
+      "duration": 6.6,
+      "text": "breakpoint once you have done that then let's move on to the next set of"
+    },
+    {
+      "start": 973.68,
+      "duration": 8.58,
+      "text": "observation what was the next set of observation we say two will stay but"
+    },
+    {
+      "start": 979.139,
+      "duration": 8.661,
+      "text": "instead of one whom did we take did we take five did we take four did we take"
+    },
+    {
+      "start": 985.38,
+      "duration": 9.48,
+      "text": "three whom do Tweety we did take three why so if you look at the right of one"
+    },
+    {
+      "start": 991.86,
+      "duration": 8.099,
+      "text": "now these two elements are smaller than one and these three elements are greater"
+    },
+    {
+      "start": 998.22,
+      "duration": 8.64,
+      "text": "than one can I say this and if you take five it's far if you"
+    },
+    {
+      "start": 1004.1,
+      "duration": 8.7,
+      "text": "take four it's close if you take three it's further closed so what did you try"
+    },
+    {
+      "start": 1009.86,
+      "duration": 8.099,
+      "text": "to take you will try to take someone who is slightly greater than one"
+    },
+    {
+      "start": 1015.38,
+      "duration": 6.78,
+      "text": "so that's three so what you'll do is since you know this is increasing you"
+    },
+    {
+      "start": 1020.12,
+      "duration": 6.24,
+      "text": "know this is an increasing order you'll start iterating zero are you greater"
+    },
+    {
+      "start": 1024.319,
+      "duration": 7.5,
+      "text": "than one zero are you greater than one three oh three are you you are greater"
+    },
+    {
+      "start": 1028.4,
+      "duration": 8.48,
+      "text": "so I will take this 3 here I will take this three year that's what my"
+    },
+    {
+      "start": 1033.559,
+      "duration": 10.081,
+      "text": "observation is second one will be find someone greater than one"
+    },
+    {
+      "start": 1040.339,
+      "duration": 5.941,
+      "text": "but the smallest one but the smallest one"
+    },
+    {
+      "start": 1044.9,
+      "duration": 5.22,
+      "text": "because you have to find greater than one so three four five was greater but"
+    },
+    {
+      "start": 1048.38,
+      "duration": 6.659,
+      "text": "you have to find the small list so that you stay close so that you stay close so"
+    },
+    {
+      "start": 1052.88,
+      "duration": 7.26,
+      "text": "the observation is so that you stay close got it"
+    },
+    {
+      "start": 1057.62,
+      "duration": 7.799,
+      "text": "so the second step is kind of clear so I'll take three I'll I'll take three and"
+    },
+    {
+      "start": 1062.72,
+      "duration": 8.04,
+      "text": "what I'll do certainly is I've taken three Okay so"
+    },
+    {
+      "start": 1068.6,
+      "duration": 7.56,
+      "text": "first two places are filled a what are we left we are left with can I say five"
+    },
+    {
+      "start": 1073.1,
+      "duration": 7.8,
+      "text": "four one and double zero these are the numbers that we are left with five four"
+    },
+    {
+      "start": 1078.38,
+      "duration": 9.659,
+      "text": "zero zero one how would you like to place it on these places just think and"
+    },
+    {
+      "start": 1084.44,
+      "duration": 9.84,
+      "text": "tell me now can I say 2 3 is now greater than 2 1. 2 3 is now greater than 2 1 so"
+    },
+    {
+      "start": 1091.039,
+      "duration": 7.861,
+      "text": "what should be a third priority to keep this thing as small as possible"
+    },
+    {
+      "start": 1096.919,
+      "duration": 6.901,
+      "text": "and how can you do this how can you do this you'll be like"
+    },
+    {
+      "start": 1100.34,
+      "duration": 7.74,
+      "text": "now since 2 3 is greater than 2 1 how you place them doesn't matter but you"
+    },
+    {
+      "start": 1105.799,
+      "duration": 8.581,
+      "text": "need to keep it small so will you prefer placing it like this 10 Me 0 0 1 4 5 yes"
+    },
+    {
+      "start": 1112.1,
+      "duration": 8.819,
+      "text": "because that will keep the number small it's already greater here so I'll try to"
+    },
+    {
+      "start": 1117.38,
+      "duration": 7.1,
+      "text": "place in a sorted order in a sorted order so try to place"
+    },
+    {
+      "start": 1124.64,
+      "duration": 9.36,
+      "text": "try to place remaining in sorted order so this three"
+    },
+    {
+      "start": 1130.58,
+      "duration": 6.24,
+      "text": "observation these three observation will build the indication for the algorithm"
+    },
+    {
+      "start": 1135.44,
+      "duration": 6.359,
+      "text": "that I'm going to write I hope you've got the indication very simple try to"
+    },
+    {
+      "start": 1139.1,
+      "duration": 8.459,
+      "text": "get as long prefix match as possible so I cut the longest prefix match by"
+    },
+    {
+      "start": 1144.559,
+      "duration": 7.081,
+      "text": "finding the break next Once you figure out the break point"
+    },
+    {
+      "start": 1148.94,
+      "duration": 7.68,
+      "text": "after the longest prefix try to put someone who is slightly greater than"
+    },
+    {
+      "start": 1154.4,
+      "duration": 8.58,
+      "text": "this perfect this guy and this was three in this support once you've made this"
+    },
+    {
+      "start": 1159.08,
+      "duration": 10.38,
+      "text": "greater fill this out as small as small so that it's right next got the three"
+    },
+    {
+      "start": 1166.64,
+      "duration": 7.26,
+      "text": "intuitions or observations now it's time to think of the algorithm so it is now"
+    },
+    {
+      "start": 1172.1,
+      "duration": 5.939,
+      "text": "time to design the algorithm on the basis of the three observations we did"
+    },
+    {
+      "start": 1176.179,
+      "duration": 7.38,
+      "text": "and you know the intentions Behind These observations so coming to the first"
+    },
+    {
+      "start": 1181.0,
+      "duration": 7.84,
+      "text": "observation find the longest prefix match I know the smudge matched and this"
+    },
+    {
+      "start": 1186.14,
+      "duration": 7.08,
+      "text": "was the breaking point where we increased 0 3 4 5 and there was a dip"
+    },
+    {
+      "start": 1191.66,
+      "duration": 5.58,
+      "text": "over here can I say there was a dip over here because after five there was a"
+    },
+    {
+      "start": 1195.74,
+      "duration": 7.14,
+      "text": "smaller number one so let's take an array like one two"
+    },
+    {
+      "start": 1200.539,
+      "duration": 7.26,
+      "text": "three four five can I see if I've been given an array of one two three four"
+    },
+    {
+      "start": 1204.62,
+      "duration": 8.34,
+      "text": "five in this case this is the smallest permutation and the largest like the"
+    },
+    {
+      "start": 1211.4,
+      "duration": 6.6,
+      "text": "last permutation will be this can I say and over here if you see there's an"
+    },
+    {
+      "start": 1215.48,
+      "duration": 7.86,
+      "text": "upward curve like the numbers increase one two three four five and there's no"
+    },
+    {
+      "start": 1220.1,
+      "duration": 7.98,
+      "text": "dip why is there no D because this is the last so no prefix cap you can match"
+    },
+    {
+      "start": 1225.86,
+      "duration": 8.28,
+      "text": "but over here if you see right here right here there's a dip yes"
+    },
+    {
+      "start": 1231.2,
+      "duration": 7.26,
+      "text": "because 5 is increasing like five is the starting and there's a so I'm going to"
+    },
+    {
+      "start": 1235.64,
+      "duration": 6.779,
+      "text": "do four so the dip is here why because then you can say one two three will"
+    },
+    {
+      "start": 1240.02,
+      "duration": 6.48,
+      "text": "match and the five and four you can just take someone greater than you can just"
+    },
+    {
+      "start": 1244.7,
+      "duration": 6.06,
+      "text": "take someone greater than four so you have taken that's why but in a way you"
+    },
+    {
+      "start": 1248.539,
+      "duration": 5.64,
+      "text": "cannot thereby there was no tip so there was a dip here"
+    },
+    {
+      "start": 1252.02,
+      "duration": 6.48,
+      "text": "so which is the last index where you can have a dip so it's like n minus 2 is the"
+    },
+    {
+      "start": 1257.0,
+      "duration": 5.64,
+      "text": "last index where you can have a dip where you can have a dip I can say that"
+    },
+    {
+      "start": 1260.48,
+      "duration": 7.319,
+      "text": "so what you will say is first step is very short"
+    },
+    {
+      "start": 1263.78,
+      "duration": 11.7,
+      "text": "find out this particular index find out this particular index so you can see"
+    },
+    {
+      "start": 1269.78,
+      "duration": 13.16,
+      "text": "that 4 I is equal to n minus 2 I greater than 0 I minus minus if at any moment"
+    },
+    {
+      "start": 1279.14,
+      "duration": 8.82,
+      "text": "array of I comes down to be a dip value then you can see"
+    },
+    {
+      "start": 1285.14,
+      "duration": 5.6,
+      "text": "index can you store the value of I and can you break down"
+    },
+    {
+      "start": 1290.9,
+      "duration": 8.159,
+      "text": "and what you can do is you can keep the initial index as maybe minus one and if"
+    },
+    {
+      "start": 1296.48,
+      "duration": 5.939,
+      "text": "it is minus one if it is minus 1 then you don't need to do anything you can"
+    },
+    {
+      "start": 1300.919,
+      "duration": 4.321,
+      "text": "say that this particular array is your answer you can just reverse this"
+    },
+    {
+      "start": 1303.919,
+      "duration": 5.941,
+      "text": "particular array and that will be your answer if you see if there is no dip"
+    },
+    {
+      "start": 1307.88,
+      "duration": 6.179,
+      "text": "then this is the like next geographically the biggest one"
+    },
+    {
+      "start": 1312.14,
+      "duration": 5.22,
+      "text": "so you just reverse it you'll get your answer so that is a very simple"
+    },
+    {
+      "start": 1315.38,
+      "duration": 6.779,
+      "text": "algorithm if there is no dip which means index is"
+    },
+    {
+      "start": 1319.64,
+      "duration": 5.88,
+      "text": "minus one then you just reverse the array and that will be your answer so"
+    },
+    {
+      "start": 1324.02,
+      "duration": 6.6,
+      "text": "this is The Edge case that you have to take care whenever the given array is"
+    },
+    {
+      "start": 1327.799,
+      "duration": 9.181,
+      "text": "the last one okay so we have our index pointed here what so I can say I've done"
+    },
+    {
+      "start": 1333.799,
+      "duration": 8.521,
+      "text": "the first observation what is the second find out someone greater than 1 but the"
+    },
+    {
+      "start": 1340.039,
+      "duration": 6.361,
+      "text": "smallest of that like someone greater than 1 5 is greater 4 is"
+    },
+    {
+      "start": 1344.539,
+      "duration": 6.0,
+      "text": "greater 3 is great but you need someone who's the smallest what greater than one"
+    },
+    {
+      "start": 1348.38,
+      "duration": 8.58,
+      "text": "smaller spread greater than one so you'll be like zero zero three four five"
+    },
+    {
+      "start": 1354.02,
+      "duration": 7.2,
+      "text": "so there's a increasing curve so you can start from the back zero are you greater"
+    },
+    {
+      "start": 1359.179,
+      "duration": 6.421,
+      "text": "zero are you greater 3 are you greater he says M yes and greater so I'll be"
+    },
+    {
+      "start": 1363.679,
+      "duration": 7.141,
+      "text": "like cool do that so what you'll do is you'll find this greater and you'll swap"
+    },
+    {
+      "start": 1367.7,
+      "duration": 9.359,
+      "text": "it you will swap it why swap I'll tell you you just swap it swap done"
+    },
+    {
+      "start": 1374.299,
+      "duration": 7.86,
+      "text": "so I'll go across and say I it is equal to n minus 1 and I can go until the"
+    },
+    {
+      "start": 1379.94,
+      "duration": 6.3,
+      "text": "index the breakpoint and I can go on like this and if"
+    },
+    {
+      "start": 1384.039,
+      "duration": 7.241,
+      "text": "array of I is greater than array of"
+    },
+    {
+      "start": 1388.7,
+      "duration": 11.479,
+      "text": "the break point which is index you will see can you please swap array of I and"
+    },
+    {
+      "start": 1396.679,
+      "duration": 8.581,
+      "text": "array of index once you have done that can you please break and this will be"
+    },
+    {
+      "start": 1402.74,
+      "duration": 6.9,
+      "text": "under the if and the for Loop ends right now I've swapped it so after swapping"
+    },
+    {
+      "start": 1408.14,
+      "duration": 6.12,
+      "text": "one will come here three will go here why did I swap I'll tell you so the"
+    },
+    {
+      "start": 1411.86,
+      "duration": 6.96,
+      "text": "second point is also done so I can say 2 3 got placed 2 3 got placed in the"
+    },
+    {
+      "start": 1417.02,
+      "duration": 5.94,
+      "text": "correct order what about the next previous leaders to one so now we have"
+    },
+    {
+      "start": 1421.159,
+      "duration": 7.38,
+      "text": "two three two three is greater than two one what do we have five four one double"
+    },
+    {
+      "start": 1425.179,
+      "duration": 9.841,
+      "text": "zero I know I'm already greater so I need small I need small so what is my"
+    },
+    {
+      "start": 1430.7,
+      "duration": 9.479,
+      "text": "thing 0 0 1 4 5 how can you get this either you sort this but you knew one"
+    },
+    {
+      "start": 1437.78,
+      "duration": 6.3,
+      "text": "thing it was always in the increasing order and if you snap three and one it"
+    },
+    {
+      "start": 1442.64,
+      "duration": 5.64,
+      "text": "will still stay in the increasing order so if it's an increasing order you need"
+    },
+    {
+      "start": 1446.36,
+      "duration": 8.22,
+      "text": "the reverse now you need the reverse Now isn't it so can I see I will reverse can"
+    },
+    {
+      "start": 1451.46,
+      "duration": 8.76,
+      "text": "I sell reverse from here to here if I reverse what will happen"
+    },
+    {
+      "start": 1456.38,
+      "duration": 8.279,
+      "text": "what will happen zero zero one four five because I need as small because 2 3 is"
+    },
+    {
+      "start": 1462.919,
+      "duration": 6.541,
+      "text": "already greater than 2 1 so I can just make it as small as possible so what"
+    },
+    {
+      "start": 1466.82,
+      "duration": 8.94,
+      "text": "I'll say is can you please reverse the array from the index like the break"
+    },
+    {
+      "start": 1471.74,
+      "duration": 9.78,
+      "text": "point plus one till the last Index this is what you'll see please reverse it and"
+    },
+    {
+      "start": 1478.7,
+      "duration": 8.339,
+      "text": "this will complete the third observation part can I say once you've done this you"
+    },
+    {
+      "start": 1484.34,
+      "duration": 7.74,
+      "text": "actually have your next permutation yes you do have and this will be your"
+    },
+    {
+      "start": 1489.02,
+      "duration": 6.72,
+      "text": "algorithm I have also done the dry run with the algorithm let's quickly code it"
+    },
+    {
+      "start": 1494.419,
+      "duration": 5.581,
+      "text": "up make sure you cry out the problem from the problem Link in the description"
+    },
+    {
+      "start": 1497.48,
+      "duration": 6.78,
+      "text": "so coming back to the code enter we are given the list what was the first thing"
+    },
+    {
+      "start": 1502.4,
+      "duration": 7.8,
+      "text": "we did we figured out yes let's try from the back so probably"
+    },
+    {
+      "start": 1507.62,
+      "duration": 8.22,
+      "text": "we can just store the size and that's a DOT size and we know we will be starting"
+    },
+    {
+      "start": 1512.6,
+      "duration": 7.98,
+      "text": "off from this and we can go on let's go ahead and I know one thing if"
+    },
+    {
+      "start": 1517.88,
+      "duration": 6.36,
+      "text": "array of I is smaller than array of I plus 1 that means it's a break so I go"
+    },
+    {
+      "start": 1522.98,
+      "duration": 6.299,
+      "text": "ahead and say hey this is my break index and you can pick"
+    },
+    {
+      "start": 1526.279,
+      "duration": 7.561,
+      "text": "but if there was no break index if there was no break index the given one was the"
+    },
+    {
+      "start": 1531.62,
+      "duration": 7.26,
+      "text": "last the given one was the last so I'll say reverse so in C plus plus we have"
+    },
+    {
+      "start": 1536.779,
+      "duration": 5.041,
+      "text": "this function again the Java code will be in the"
+    },
+    {
+      "start": 1540.38,
+      "duration": 5.82,
+      "text": "description make sure you check it out and away you can just write a letter"
+    },
+    {
+      "start": 1543.38,
+      "duration": 9.299,
+      "text": "quite simple you end it over here if it is not what do you do from the back you"
+    },
+    {
+      "start": 1549.32,
+      "duration": 7.2,
+      "text": "find out which is the first grader or the least greater end so let's start"
+    },
+    {
+      "start": 1554.539,
+      "duration": 6.781,
+      "text": "from the back again so I'll say let's start from the back and probably I can"
+    },
+    {
+      "start": 1558.919,
+      "duration": 9.481,
+      "text": "just go on till the index and I can go on like this and if I know a of I"
+    },
+    {
+      "start": 1564.4,
+      "duration": 8.44,
+      "text": "is greater than a of index that means we got someone who's greater I was the"
+    },
+    {
+      "start": 1570.26,
+      "duration": 6.72,
+      "text": "first guy I will swap and if I'll swap it I will just go off that's the step"
+    },
+    {
+      "start": 1575.36,
+      "duration": 7.5,
+      "text": "two so what I can say is uh the second step is also done what is the third step"
+    },
+    {
+      "start": 1579.14,
+      "duration": 8.1,
+      "text": "you have to reverse why because see you have five four one double zero but two"
+    },
+    {
+      "start": 1585.44,
+      "duration": 7.2,
+      "text": "three is greater now you want this to be as small so the simple job is you say"
+    },
+    {
+      "start": 1589.94,
+      "duration": 6.719,
+      "text": "reverse again in C plus plus STL is there java Port is in the description so"
+    },
+    {
+      "start": 1595.039,
+      "duration": 5.64,
+      "text": "you reverse from this particular index till the end"
+    },
+    {
+      "start": 1598.94,
+      "duration": 4.979,
+      "text": "and once you've done this you can return the array now we will quickly go and run"
+    },
+    {
+      "start": 1602.539,
+      "duration": 5.221,
+      "text": "this and see if this is running fine should be running fine so as we can see"
+    },
+    {
+      "start": 1605.96,
+      "duration": 8.099,
+      "text": "that this particular Port is accepted now if we talk about the time complexity"
+    },
+    {
+      "start": 1610.1,
+      "duration": 9.059,
+      "text": "we go of n plus we go of N and plus b go of n at the worst case so the time"
+    },
+    {
+      "start": 1616.039,
+      "duration": 6.721,
+      "text": "complexity at the worst case may be near about big of three and will be near"
+    },
+    {
+      "start": 1620.659,
+      "duration": 6.721,
+      "text": "about big of three and yes you are modifying the array so if the"
+    },
+    {
+      "start": 1625.34,
+      "duration": 6.12,
+      "text": "interviewer says that that is considered in the time a space complexity will be"
+    },
+    {
+      "start": 1629.299,
+      "duration": 6.0,
+      "text": "big open otherwise it is bigger fund because I am not using any extra space"
+    },
+    {
+      "start": 1633.559,
+      "duration": 5.581,
+      "text": "in order to solve this problem yes I'm modifying the array but I'm not using"
+    },
+    {
+      "start": 1636.679,
+      "duration": 6.721,
+      "text": "anything from myself so coming back to the sheet I can mark this as done I hope"
+    },
+    {
+      "start": 1641.299,
+      "duration": 5.581,
+      "text": "you have understood the observation the intuition because see algorithm every"
+    },
+    {
+      "start": 1645.62,
+      "duration": 4.26,
+      "text": "one everyone can just write the algorithm and do the trial but the"
+    },
+    {
+      "start": 1648.62,
+      "duration": 4.02,
+      "text": "thought process the observation the intuition the designing of the algorithm"
+    },
+    {
+      "start": 1651.32,
+      "duration": 4.859,
+      "text": "that is the key and I hope I've understood it and it took me like two"
+    },
+    {
+      "start": 1654.62,
+      "duration": 5.1,
+      "text": "hours to record this lecture and it's like three nine am in the morning so in"
+    },
+    {
+      "start": 1658.22,
+      "duration": 4.68,
+      "text": "case in case you watching this video till here please please do consider"
+    },
+    {
+      "start": 1661.7,
+      "duration": 5.339,
+      "text": "giving that like and if you're new to our Channel please please do consider"
+    },
+    {
+      "start": 1664.46,
+      "duration": 5.28,
+      "text": "giving us a subscribe because 45 of the users who watch our videos do not"
+    },
+    {
+      "start": 1668.36,
+      "duration": 4.5,
+      "text": "subscribe and I understand it's an education channel so most of the people"
+    },
+    {
+      "start": 1670.94,
+      "duration": 5.04,
+      "text": "do not press it but please do consider pressing that subscribe because it does"
+    },
+    {
+      "start": 1674.059,
+      "duration": 4.381,
+      "text": "highly motivate me to make subscribe of content and yes to continue our"
+    },
+    {
+      "start": 1677.48,
+      "duration": 3.42,
+      "text": "tradition make sure you comment understood as well and if you haven't"
+    },
+    {
+      "start": 1679.88,
+      "duration": 3.659,
+      "text": "followed me on Instagram Twitter LinkedIn the links will be in the"
+    },
+    {
+      "start": 1682.22,
+      "duration": 3.66,
+      "text": "description with this I'll be wrapping up this video that's been in some other"
+    },
+    {
+      "start": 1684.44,
+      "duration": 9.239,
+      "text": "videos whenever your heart is broken don't ever"
+    },
+    {
+      "start": 1689.96,
+      "duration": 5.839,
+      "text": "forget your golden I I will find a light in"
+    }
+  ]
+}
