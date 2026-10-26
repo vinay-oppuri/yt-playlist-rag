@@ -5,6 +5,8 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
+    "dev:web": "turbo run dev --filter=web",
+    "dev:docs": "turbo run dev --filter=docs",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"
   },
@@ -19,7 +21,7 @@
   "devEngines": {
     "packageManager": {
       "name": "npm",
-      "version": "12.0.2"
+      "version": "^11.0.0"
     }
   },
   "workspaces": [
