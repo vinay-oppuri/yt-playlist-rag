@@ -21,7 +21,7 @@ export const IngestModal: React.FC<IngestModalProps> = ({
   const [overlapWords, setOverlapWords] = useState(35);
   const [collectionName, setCollectionName] = useState("yt_transcripts");
   const [showAdvanced, setShowAdvanced] = useState(false);
-  const [ingestMode, setIngestMode] = useState<"video" | "playlist">("video");
+  const [ingestMode, setIngestMode] = useState<"video" | "playlist">("playlist");
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<{ type: "success" | "error"; text: string } | null>(null);
 
@@ -62,7 +62,7 @@ export const IngestModal: React.FC<IngestModalProps> = ({
       setResult({
         type: "success",
         text: isHierarchical
-          ? `⚡ Registered all ${data.videos_total} playlist videos instantly! (${data.total_chunks_stored} chunks ready for lecture playback). Remaining lecture transcripts will index on-demand.`
+          ? `⚡ Registered all ${data.videos_total} playlist videos! Initial video is ready for playback (${data.total_chunks_stored} chunks). Background chunking started for remaining lectures and will automatically pause/stop whenever you ask a search or chat query.`
           : `Successfully indexed ${data.videos_indexed} of ${data.videos_total} video(s) • ${data.total_chunks_stored} vector embeddings created.`,
       });
 

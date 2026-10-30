@@ -155,21 +155,31 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({
         </div>
 
         {/* Video Query Scope Selector (Entire Playlist vs Selected Video) */}
-        <div style={styles.scopeSelectorContainer}>
-          <label style={styles.scopeLabel}>Search Scope:</label>
-          <select
-            value={selectedScope}
-            onChange={(e) => setSelectedScope(e.target.value)}
-            style={styles.scopeSelect}
-          >
-            <option value="all">📚 Entire Playlist (All Lectures)</option>
-            {playlistVideos.map((v) => (
-              <option key={v.video_id} value={v.video_id}>
-                🎬 {v.title ? (v.title.length > 40 ? v.title.slice(0, 38) + "..." : v.title) : v.video_id}
-              </option>
-            ))}
-          </select>
-        </div>
+        {(() => {
+          const hasActualPlaylist = playlistVideos.some(
+            (v) => (v as any).playlist_id && (v as any).playlist_id !== "standalone"
+          );
+
+          return (
+            <div style={styles.scopeSelectorContainer}>
+              <label style={styles.scopeLabel}>Search Scope:</label>
+              <select
+                value={selectedScope}
+                onChange={(e) => setSelectedScope(e.target.value)}
+                style={styles.scopeSelect}
+              >
+                {hasActualPlaylist && (
+                  <option value="all">📚 Entire Playlist (All Lectures)</option>
+                )}
+                {playlistVideos.map((v) => (
+                  <option key={v.video_id} value={v.video_id}>
+                    🎬 {v.title ? (v.title.length > 40 ? v.title.slice(0, 38) + "..." : v.title) : v.video_id}
+                  </option>
+                ))}
+              </select>
+            </div>
+          );
+        })()}
       </div>
 
       <div style={styles.messageList}>

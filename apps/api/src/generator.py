@@ -177,6 +177,8 @@ def generate_answer(
         }
 
     store = get_vector_store()
+    # Halt background chunking so query retrieval gets immediate priority
+    store.stop_background_ingest(reason=f"chat_query: {clean_question[:30]}")
     raw_hits = store.search(
         query=clean_question,
         collection_name=collection_name,

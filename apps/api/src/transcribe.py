@@ -34,18 +34,20 @@ def clean_text(text: str) -> str:
 
 def is_playlist_url(url: str, force_playlist: bool = False) -> bool:
     """
-    Check if the given URL is a YouTube playlist URL.
+    Check if the given URL is a YouTube playlist or contains playlist context.
     - If force_playlist is True and a playlist ID exists: True
     - Pure playlist URL: 'youtube.com/playlist?list=...' -> True
-    - Playlist URL with list= and NO video ID (no v=) -> True
-    - Video URL with playlist context (watch?v=...&list=...): False by default,
-      because the user is usually targeting the specific video they are watching.
+    - Video URL with playlist context (watch?v=...&list=...): True if valid playlist ID exists,
+      allowing the system to index the full playlist library while loading the specific video.
     """
-    if force_playlist and extract_playlist_id(url):
-        return True
-    if "playlist?list=" in url:
-        return True
-    if "list=" in url and "v=" not in url:
+    p_id = extract_playlist_id(url)
+    if not p_id:
+        return False
+    # If explicitly forced or pure playlist URL or URL has list= parameter
+    if force_playlist or "playlist?list=" in url or "list=" in url:
+        # Exclude common YouTube non-playlist auto-lists like WL (Watch Later) or LL (Liked)
+        if p_id in ("WL", "LL"):
+            return False
         return True
     return False
 

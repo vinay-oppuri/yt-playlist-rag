@@ -1,5 +1,7 @@
 import os
 import sys
+import threading
+import time
 import uuid
 from typing import Any, Dict, List, Optional
 from fastembed import TextEmbedding
@@ -9,6 +11,7 @@ from qdrant_client.http.exceptions import UnexpectedResponse
 
 from src.chunker import TranscriptChunk, chunk_transcript
 from src.transcribe import (
+    extract_video_url,
     get_playlist_details,
     get_playlist_videos,
     get_transcript,
@@ -53,6 +56,21 @@ class VectorStore:
 
         # 2. Connect to Qdrant (server or local disk fallback)
         self.client = self._init_qdrant_client()
+
+        # 3. Background playlist ingestion management
+        self._bg_thread: Optional[threading.Thread] = None
+        self._bg_stop_event = threading.Event()
+        self._bg_lock = threading.Lock()
+        self._transcribe_lock = threading.RLock()
+        self._bg_status: Dict[str, Any] = {
+            "is_running": False,
+            "playlist_id": None,
+            "playlist_title": None,
+            "current_video": None,
+            "completed": 0,
+            "total": 0,
+            "stopped_reason": None,
+        }
 
     def _init_qdrant_client(self) -> QdrantClient:
         """Connect to Qdrant server if running, otherwise fallback to local on-disk storage."""
@@ -298,6 +316,115 @@ class VectorStore:
         except Exception:
             return False
 
+    def start_background_playlist_ingest(
+        self,
+        videos: List[Dict[str, Any]],
+        collection_name: str = DEFAULT_TRANSCRIPTS_COLLECTION,
+        videos_collection: str = DEFAULT_VIDEOS_COLLECTION,
+        target_words: int = 180,
+        overlap_words: int = 35,
+        playlist_id: Optional[str] = None,
+        playlist_title: Optional[str] = None,
+    ) -> None:
+        """
+        Start a background daemon thread that sequentially transcribes, chunks, and indexes
+        remaining videos in the playlist until complete or interrupted by a user query.
+        """
+        # Stop any existing background ingestion first
+        self.stop_background_ingest(reason="new_playlist_ingest_started")
+
+        with self._bg_lock:
+            self._bg_stop_event.clear()
+            self._bg_status = {
+                "is_running": True,
+                "playlist_id": playlist_id,
+                "playlist_title": playlist_title,
+                "current_video": None,
+                "completed": 0,
+                "total": len(videos),
+                "stopped_reason": None,
+            }
+
+        def _worker():
+            print(f"[Background Ingest] Worker started for '{playlist_title or playlist_id}' ({len(videos)} videos queued)...")
+            try:
+                for idx, vid in enumerate(videos):
+                    if self._bg_stop_event.is_set():
+                        print(f"[Background Ingest] Stop event detected before video #{idx+1}. Halting worker immediately.")
+                        break
+
+                    v_id = vid.get("video_id")
+                    if not v_id:
+                        continue
+
+                    # If already transcribed, count it and proceed
+                    if self.is_video_transcribed(v_id, collection_name=collection_name):
+                        with self._bg_lock:
+                            self._bg_status["completed"] += 1
+                        continue
+
+                    title = vid.get("title", f"Video {v_id}")
+                    v_url = vid.get("url", f"https://www.youtube.com/watch?v={v_id}")
+                    with self._bg_lock:
+                        self._bg_status["current_video"] = title
+
+                    if self._bg_stop_event.is_set():
+                        print(f"[Background Ingest] Stop event detected before fetching {v_id}. Halting.")
+                        break
+
+                    print(f"[Background Ingest] [{idx+1}/{len(videos)}] Chunking video {v_id} ('{title}')...")
+                    jit_res = self.ensure_video_transcribed(
+                        video_id=v_id,
+                        title=title,
+                        url=v_url,
+                        transcripts_collection=collection_name,
+                        videos_collection=videos_collection,
+                        target_words=target_words,
+                        overlap_words=overlap_words,
+                    )
+                    with self._bg_lock:
+                        self._bg_status["completed"] += 1
+                    print(f"[Background Ingest] Video {v_id} indexed ({jit_res.get('chunks', 0)} chunks).")
+
+                    # Brief pause between videos to yield CPU and check stop event
+                    time.sleep(0.05)
+            except Exception as e:
+                print(f"[Background Ingest] Error during ingestion: {e}")
+            finally:
+                with self._bg_lock:
+                    was_stopped = self._bg_stop_event.is_set()
+                    self._bg_status["is_running"] = False
+                    self._bg_status["current_video"] = None
+                    if was_stopped:
+                        print(f"[Background Ingest] Halted. Reason: {self._bg_status.get('stopped_reason', 'stopped')}")
+                    else:
+                        self._bg_status["stopped_reason"] = "completed"
+                        print(f"[Background Ingest] All {len(videos)} playlist videos indexed successfully.")
+
+        self._bg_thread = threading.Thread(target=_worker, daemon=True, name="bg-playlist-ingest")
+        self._bg_thread.start()
+
+    def stop_background_ingest(self, reason: str = "query_received") -> bool:
+        """
+        Stop any running background playlist ingestion immediately.
+        Signals the worker thread to halt at the earliest checkpoint.
+        """
+        with self._bg_lock:
+            if self._bg_thread and self._bg_thread.is_alive():
+                print(f"[Background Ingest] Stop signal received ('{reason}'). Halting background chunking immediately!")
+                self._bg_status["stopped_reason"] = reason
+                self._bg_stop_event.set()
+                return True
+        return False
+
+    def get_background_ingest_status(self) -> Dict[str, Any]:
+        """Return the current background ingestion status."""
+        with self._bg_lock:
+            is_alive = bool(self._bg_thread and self._bg_thread.is_alive())
+            status = dict(self._bg_status)
+            status["is_running"] = is_alive
+            return status
+
     def ensure_video_transcribed(
         self,
         video_id: str,
@@ -312,6 +439,7 @@ class VectorStore:
         Just-In-Time (JIT) transcript extraction and chunking.
         If video is already transcribed in Qdrant, returns immediately without network calls.
         Otherwise fetches captions, chunks text, and embeds into Qdrant on the fly.
+        Thread-safe via self._transcribe_lock.
         """
         if self.is_video_transcribed(video_id, collection_name=transcripts_collection):
             chunk_cnt = 0
@@ -328,48 +456,53 @@ class VectorStore:
                 chunk_cnt = 1
             return {"status": "success", "video_id": video_id, "chunks": chunk_cnt, "already_indexed": True}
 
-        target_url = url or f"https://www.youtube.com/watch?v={video_id}"
-        print(f"[JIT] Fetching on-demand transcript for video {video_id} ('{title or target_url}')...")
-        segments = get_transcript(target_url)
+        with self._transcribe_lock:
+            # Double check in case another thread just completed it
+            if self.is_video_transcribed(video_id, collection_name=transcripts_collection):
+                return {"status": "success", "video_id": video_id, "chunks": 1, "already_indexed": True}
 
-        point_uuid = str(uuid.uuid5(uuid.NAMESPACE_DNS, f"video_{video_id}"))
+            target_url = url or f"https://www.youtube.com/watch?v={video_id}"
+            print(f"[JIT] Fetching on-demand transcript for video {video_id} ('{title or target_url}')...")
+            segments = get_transcript(target_url)
 
-        if not segments:
-            print(f"[JIT] No transcript available for {video_id}.")
+            point_uuid = str(uuid.uuid5(uuid.NAMESPACE_DNS, f"video_{video_id}"))
+
+            if not segments:
+                print(f"[JIT] No transcript available for {video_id}.")
+                try:
+                    self.ensure_collection(videos_collection)
+                    self.client.set_payload(
+                        collection_name=videos_collection,
+                        payload={"status": "no_captions", "is_transcribed": False},
+                        points=[point_uuid],
+                    )
+                except Exception:
+                    pass
+                return {"status": "no_captions", "video_id": video_id, "chunks": 0}
+
+            resolved_title = title or f"Video {video_id}"
+            chunks = chunk_transcript(
+                segments=segments,
+                video_id=video_id,
+                video_title=resolved_title,
+                target_words=target_words,
+                overlap_words=overlap_words,
+            )
+
+            upserted = self.upsert_chunks(chunks=chunks, collection_name=transcripts_collection)
+            print(f"[JIT] Successfully indexed {upserted} chunks for video {video_id}.")
+
             try:
                 self.ensure_collection(videos_collection)
                 self.client.set_payload(
                     collection_name=videos_collection,
-                    payload={"status": "no_captions", "is_transcribed": False},
+                    payload={"status": "success", "is_transcribed": True, "chunks_count": upserted},
                     points=[point_uuid],
                 )
             except Exception:
                 pass
-            return {"status": "no_captions", "video_id": video_id, "chunks": 0}
 
-        resolved_title = title or f"Video {video_id}"
-        chunks = chunk_transcript(
-            segments=segments,
-            video_id=video_id,
-            video_title=resolved_title,
-            target_words=target_words,
-            overlap_words=overlap_words,
-        )
-
-        upserted = self.upsert_chunks(chunks=chunks, collection_name=transcripts_collection)
-        print(f"[JIT] Successfully indexed {upserted} chunks for video {video_id}.")
-
-        try:
-            self.ensure_collection(videos_collection)
-            self.client.set_payload(
-                collection_name=videos_collection,
-                payload={"status": "success", "is_transcribed": True, "chunks_count": upserted},
-                points=[point_uuid],
-            )
-        except Exception:
-            pass
-
-        return {"status": "success", "video_id": video_id, "chunks": upserted}
+            return {"status": "success", "video_id": video_id, "chunks": upserted}
 
     def search(
         self,
@@ -384,11 +517,15 @@ class VectorStore:
         """
         Search Qdrant for transcript chunks most semantically relevant to the query.
         Incorporates Hierarchical Two-Tier RAG:
-        1. If filter_video_id is provided, ensures that video's transcript is loaded JIT.
-        2. If no filter_video_id is provided, routes query against video titles in Tier 1
-           and JIT-transcribes top matching videos before searching chunks.
-        3. Returns matching chunks with relevance score, text, and timestamp links.
+        1. Signals background ingestion to halt immediately so all CPU/network goes to the query.
+        2. If filter_video_id is provided, ensures that video's transcript is loaded and chunked JIT.
+        3. If no filter_video_id is provided, routes query against video titles in Tier 1
+           and JIT-transcribes top matching unindexed videos before searching chunks.
+        4. Returns matching chunks with relevance score, text, and timestamp links.
         """
+        # Halt background playlist chunking immediately when a query arrives
+        self.stop_background_ingest(reason=f"query_search: {query[:30]}")
+
         self.ensure_collection(collection_name)
 
         if enable_jit:
@@ -405,11 +542,18 @@ class VectorStore:
                     top_candidates = self.search_videos(
                         query=query,
                         collection_name=videos_collection,
-                        limit=3,
+                        limit=4,
                     )
-                    for cand in top_candidates:
-                        # If video is not yet transcribed and has reasonable title relevance
-                        if cand.get("score", 0.0) >= 0.35 and not cand.get("is_transcribed"):
+                    for idx, cand in enumerate(top_candidates):
+                        score = cand.get("score", 0.0)
+                        is_transcribed = cand.get("is_transcribed", False)
+                        # Check top candidate if score >= 0.20, or subsequent candidate if score >= 0.28
+                        threshold = 0.20 if idx == 0 else 0.28
+                        if score >= threshold and not is_transcribed:
+                            print(
+                                f"[Query JIT] Query '{query}' matched unindexed lecture '{cand.get('title')}' "
+                                f"(relevance={score:.3f}). Fetching transcript and chunking on-demand..."
+                            )
                             self.ensure_video_transcribed(
                                 video_id=cand["video_id"],
                                 title=cand.get("title"),
@@ -539,14 +683,32 @@ class VectorStore:
         results_summary = []
         total_chunks_stored = 0
 
-        # If it's a playlist and NOT deep_ingest: JIT transcribe only the first video
+        # If it's a playlist and NOT deep_ingest: JIT transcribe the requested video (or 1st video)
         if is_playlist and not deep_ingest:
-            first_vid = videos_to_process[0]
-            v_id = first_vid["video_id"]
-            title = first_vid.get("title", f"Video {v_id}")
-            v_url = first_vid.get("url", f"https://www.youtube.com/watch?v={v_id}")
+            target_vid_id = None
+            try:
+                target_vid_id = extract_video_url(url)
+            except Exception:
+                pass
 
-            print(f"Hierarchical fast-path: JIT indexing first video {v_id} ('{title}')...")
+            # Find matching video in list if URL had a specific video, else use 1st
+            target_vid = None
+            target_idx = 0
+            if target_vid_id:
+                for idx, v in enumerate(videos_to_process):
+                    if v.get("video_id") == target_vid_id:
+                        target_vid = v
+                        target_idx = idx
+                        break
+            if not target_vid:
+                target_vid = videos_to_process[0]
+                target_idx = 0
+
+            v_id = target_vid["video_id"]
+            title = target_vid.get("title", f"Video {v_id}")
+            v_url = target_vid.get("url", f"https://www.youtube.com/watch?v={v_id}")
+
+            print(f"Hierarchical fast-path: JIT indexing target video {v_id} ('{title}')...")
             jit_res = self.ensure_video_transcribed(
                 video_id=v_id,
                 title=title,
@@ -566,14 +728,32 @@ class VectorStore:
                 "chunks": total_chunks_stored,
             })
 
-            # Mark all remaining videos as registered in Tier 1 (on-demand)
-            for vid in videos_to_process[1:]:
+            # Following videos in the playlist (ordered: subsequent videos first, then previous videos)
+            following_videos = [
+                v for v in (videos_to_process[target_idx + 1 :] + videos_to_process[:target_idx])
+                if v.get("video_id") and v.get("video_id") != v_id
+            ]
+
+            # Mark all remaining videos as registered in Tier 1
+            for vid in following_videos:
                 results_summary.append({
                     "video_id": vid["video_id"],
                     "title": vid.get("title", f"Video {vid['video_id']}"),
                     "status": "registered",
                     "chunks": 0,
                 })
+
+            # Start background ingestion for the following videos until a query is asked
+            if following_videos:
+                self.start_background_playlist_ingest(
+                    videos=following_videos,
+                    collection_name=collection_name,
+                    videos_collection=videos_collection,
+                    target_words=target_words,
+                    overlap_words=overlap_words,
+                    playlist_id=playlist_id,
+                    playlist_title=playlist_title,
+                )
 
             return {
                 "success": True,
@@ -587,10 +767,12 @@ class VectorStore:
                 "videos_registered": len(videos_to_process),
                 "videos_indexed": 1 if total_chunks_stored > 0 else 0,
                 "total_chunks_stored": total_chunks_stored,
+                "background_ingestion": bool(following_videos),
+                "queued_background_videos": len(following_videos),
                 "details": results_summary,
                 "message": (
-                    f"Registered all {len(videos_to_process)} videos instantly! "
-                    "First video is loaded for playback; remaining lecture transcripts are indexed on-demand."
+                    f"Target video '{title}' indexed instantly for playback. "
+                    f"Background chunking started for {len(following_videos)} remaining video(s) and will run until a query is asked."
                 ),
             }
 

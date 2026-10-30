@@ -161,160 +161,249 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       ) : (
         <div style={styles.playlistGroupsContainer}>
           {(() => {
-            // Group videos by playlist_id or title
-            const groups: { [key: string]: { id: string; title: string; videos: IngestedVideo[] } } = {};
+            // Group videos: true playlists have a valid playlist_id
+            const playlists: { [key: string]: { id: string; title: string; videos: IngestedVideo[] } } = {};
+            const standaloneVideos: IngestedVideo[] = [];
+
             filteredVideos.forEach((v) => {
-              const pId = v.playlist_id || (v.playlist_title ? v.playlist_title : "standalone");
-              const pTitle = v.playlist_title || (v.playlist_id ? `Playlist ${v.playlist_id}` : "Individual Lectures");
-              if (!groups[pId]) {
-                groups[pId] = { id: pId, title: pTitle, videos: [] };
+              if (v.playlist_id && v.playlist_id !== "standalone") {
+                const pId = v.playlist_id;
+                const pTitle = v.playlist_title || `Playlist ${v.playlist_id}`;
+                if (!playlists[pId]) {
+                  playlists[pId] = { id: pId, title: pTitle, videos: [] };
+                }
+                playlists[pId].videos.push(v);
+              } else {
+                standaloneVideos.push(v);
               }
-              groups[pId].videos.push(v);
             });
 
-            return Object.values(groups).map((group) => {
-              if (!group.videos || group.videos.length === 0) return null;
-              const isPlaylist = group.id !== "standalone" || group.videos.length > 1;
-              const firstVid = group.videos[0]!;
-              const totalPlaylistChunks = group.videos.reduce((sum, v) => sum + (v.chunks || 0), 0);
-              const playlistThumb = `https://img.youtube.com/vi/${firstVid.video_id}/hqdefault.jpg`;
+            return (
+              <>
+                {/* 1. Real YouTube Playlists */}
+                {Object.values(playlists).map((group) => {
+                  if (!group.videos || group.videos.length === 0) return null;
+                  const firstVid = group.videos[0]!;
+                  const totalPlaylistChunks = group.videos.reduce((sum, v) => sum + (v.chunks || 0), 0);
+                  const playlistThumb = `https://img.youtube.com/vi/${firstVid.video_id}/hqdefault.jpg`;
 
-              return (
-                <div key={group.id} className="glass-panel" style={styles.playlistContainerCard}>
-                  {/* Playlist Header Banner (YouTube Playlist style) */}
-                  <div style={styles.playlistBanner}>
-                    <div style={styles.playlistBannerLeft}>
-                      <div style={styles.playlistThumbStack}>
-                        <img
-                          src={playlistThumb}
-                          alt={group.title}
-                          style={styles.playlistHeroThumb}
-                          onError={(e) => {
-                            (e.target as HTMLElement).style.display = "none";
-                          }}
-                        />
-                        <div style={styles.playlistStackOverlay}>
-                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                            <line x1="8" y1="6" x2="21" y2="6" />
-                            <line x1="8" y1="12" x2="21" y2="12" />
-                            <line x1="8" y1="18" x2="21" y2="18" />
-                            <line x1="3" y1="6" x2="3.01" y2="6" />
-                            <line x1="3" y1="12" x2="3.01" y2="12" />
-                            <line x1="3" y1="18" x2="3.01" y2="18" />
-                          </svg>
-                          <span style={styles.playlistCountBadge}>
-                            {group.videos.length} VIDEOS
-                          </span>
+                  return (
+                    <div key={group.id} className="glass-panel" style={styles.playlistContainerCard}>
+                      {/* Playlist Header Banner (YouTube Playlist style) */}
+                      <div style={styles.playlistBanner}>
+                        <div style={styles.playlistBannerLeft}>
+                          <div style={styles.playlistThumbStack}>
+                            <img
+                              src={playlistThumb}
+                              alt={group.title}
+                              style={styles.playlistHeroThumb}
+                              onError={(e) => {
+                                (e.target as HTMLElement).style.display = "none";
+                              }}
+                            />
+                            <div style={styles.playlistStackOverlay}>
+                              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                <line x1="8" y1="6" x2="21" y2="6" />
+                                <line x1="8" y1="12" x2="21" y2="12" />
+                                <line x1="8" y1="18" x2="21" y2="18" />
+                                <line x1="3" y1="6" x2="3.01" y2="6" />
+                                <line x1="3" y1="12" x2="3.01" y2="12" />
+                                <line x1="3" y1="18" x2="3.01" y2="18" />
+                              </svg>
+                              <span style={styles.playlistCountBadge}>
+                                {group.videos.length} VIDEOS
+                              </span>
+                            </div>
+                          </div>
+
+                          <div style={styles.playlistInfoCol}>
+                            <div style={styles.playlistMetaBadgeRow}>
+                              <span className="badge badge-primary">
+                                YouTube Playlist
+                              </span>
+                              <span className="badge badge-success">
+                                {totalPlaylistChunks} Total Chunks
+                              </span>
+                            </div>
+                            <h3 style={styles.playlistHeadingTitle}>{group.title}</h3>
+                            <p style={styles.playlistSubtext}>
+                              Ask questions about this entire playlist at once, or select any specific lecture below to focus queries on that single video.
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Chat with Entire Playlist CTA */}
+                        <div style={styles.playlistActionsCol}>
+                          <button
+                            className="btn-primary"
+                            style={styles.askEntirePlaylistBtn}
+                            onClick={() => {
+                              // Opens studio with Chat scope explicitly set to entire playlist ("all")
+                              onSelectVideoForStudio(firstVid.video_id, firstVid.title, "all");
+                            }}
+                            title="Open studio with Chat scope set to entire playlist"
+                          >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                            </svg>
+                            <span>Chat About Entire Playlist</span>
+                          </button>
+
+                          {onOpenExplorerWithQuery && (
+                            <button
+                              className="btn-secondary"
+                              style={styles.explorePlaylistBtn}
+                              onClick={() => onOpenExplorerWithQuery("", "")}
+                              title="Search chunks across all lectures in playlist"
+                            >
+                              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                              </svg>
+                              <span>Search Transcripts</span>
+                            </button>
+                          )}
                         </div>
                       </div>
 
-                      <div style={styles.playlistInfoCol}>
-                        <div style={styles.playlistMetaBadgeRow}>
-                          <span className="badge badge-primary">
-                            {isPlaylist ? "YouTube Playlist" : "Video Lecture"}
+                      {/* Horizontal Scroll / Grid of Lectures inside this Playlist */}
+                      <div style={styles.playlistVideosSection}>
+                        <div style={styles.playlistVideosSectionHeader}>
+                          <span style={styles.playlistVideosLabel}>
+                            Lectures in this Playlist ({group.videos.length})
                           </span>
-                          <span className="badge badge-success">
-                            {totalPlaylistChunks} Total Chunks
+                          <span style={styles.playlistVideosHint}>
+                            Select any lecture to study individually & ask video-specific questions
                           </span>
                         </div>
-                        <h3 style={styles.playlistHeadingTitle}>{group.title}</h3>
-                        <p style={styles.playlistSubtext}>
-                          Ask questions about this entire playlist at once, or select any specific lecture below to focus queries on that single video.
-                        </p>
+
+                        <div style={styles.playlistVideosScroll}>
+                          {group.videos.map((vid, idx) => {
+                            const thumbUrl = `https://img.youtube.com/vi/${vid.video_id}/hqdefault.jpg`;
+                            return (
+                              <div
+                                key={vid.video_id}
+                                style={styles.lectureCard}
+                                onClick={() => onSelectVideoForStudio(vid.video_id, vid.title)}
+                              >
+                                <div style={styles.lectureThumbWrapper}>
+                                  <img
+                                    src={thumbUrl}
+                                    alt={vid.title}
+                                    style={styles.lectureThumbImg}
+                                    onError={(e) => {
+                                      (e.target as HTMLElement).style.display = "none";
+                                    }}
+                                  />
+                                  <div style={styles.lectureIndexBadge}>
+                                    #{idx + 1}
+                                  </div>
+                                  <div style={styles.lectureChunksBadge}>
+                                    {vid.chunks || 0} Chunks
+                                  </div>
+                                </div>
+
+                                <div style={styles.lectureCardBody}>
+                                  <h5 style={styles.lectureCardTitle} title={vid.title}>
+                                    {vid.title}
+                                  </h5>
+                                  <div style={styles.lectureCardFooter}>
+                                    <span style={styles.lectureIdText}>ID: {vid.video_id}</span>
+                                    <button
+                                      className="btn-primary"
+                                      style={styles.lecturePlayBtn}
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        onSelectVideoForStudio(vid.video_id, vid.title);
+                                      }}
+                                      title="Study this video & ask targeted questions"
+                                    >
+                                      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                        <polygon points="5 3 19 12 5 21 5 3" />
+                                      </svg>
+                                      <span>Study Video</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
                       </div>
                     </div>
+                  );
+                })}
 
-                    {/* Chat with Entire Playlist CTA */}
-                    <div style={styles.playlistActionsCol}>
-                      <button
-                        className="btn-primary"
-                        style={styles.askEntirePlaylistBtn}
-                        onClick={() => {
-                          // Opens studio with Chat scope explicitly set to entire playlist ("all")
-                          onSelectVideoForStudio(firstVid.video_id, firstVid.title, "all");
-                        }}
-                        title="Open studio with Chat scope set to entire playlist"
-                      >
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                        </svg>
-                        <span>Chat About Entire Playlist</span>
-                      </button>
-
-                      {onOpenExplorerWithQuery && (
-                        <button
-                          className="btn-secondary"
-                          style={styles.explorePlaylistBtn}
-                          onClick={() => onOpenExplorerWithQuery("", "")}
-                          title="Search chunks across all lectures in playlist"
-                        >
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <circle cx="11" cy="11" r="8" />
-                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                          </svg>
-                          <span>Search Transcripts</span>
-                        </button>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Horizontal Scroll / Grid of Lectures inside this Playlist */}
-                  <div style={styles.playlistVideosSection}>
+                {/* 2. Standalone Individual Videos (Shown as standard standalone cards, NOT a playlist) */}
+                {standaloneVideos.length > 0 && (
+                  <div style={styles.standaloneSection}>
                     <div style={styles.playlistVideosSectionHeader}>
                       <span style={styles.playlistVideosLabel}>
-                        Lectures in this Playlist ({group.videos.length})
+                        Individual Videos ({standaloneVideos.length})
                       </span>
                       <span style={styles.playlistVideosHint}>
-                        Select any lecture to study individually & ask video-specific questions
+                        Standalone videos not part of any playlist
                       </span>
                     </div>
 
-                    <div style={styles.playlistVideosScroll}>
-                      {group.videos.map((vid, idx) => {
+                    <div style={styles.videoGrid}>
+                      {standaloneVideos.map((vid) => {
                         const thumbUrl = `https://img.youtube.com/vi/${vid.video_id}/hqdefault.jpg`;
                         return (
-                          <div
-                            key={vid.video_id}
-                            style={styles.lectureCard}
-                            onClick={() => onSelectVideoForStudio(vid.video_id, vid.title)}
-                          >
-                            <div style={styles.lectureThumbWrapper}>
+                          <div key={vid.video_id} className="glass-panel" style={styles.videoCard}>
+                            <div style={styles.thumbWrapper}>
                               <img
                                 src={thumbUrl}
                                 alt={vid.title}
-                                style={styles.lectureThumbImg}
+                                style={styles.thumbImg}
                                 onError={(e) => {
                                   (e.target as HTMLElement).style.display = "none";
                                 }}
                               />
-                              <div style={styles.lectureIndexBadge}>
-                                #{idx + 1}
-                              </div>
-                              <div style={styles.lectureChunksBadge}>
-                                {vid.chunks || 0} Chunks
+                              <div style={styles.thumbOverlay}>
+                                <span className="badge badge-primary">
+                                  {vid.chunks || 0} Chunks
+                                </span>
+                                <span className="badge badge-success">
+                                  Indexed
+                                </span>
                               </div>
                             </div>
 
-                            <div style={styles.lectureCardBody}>
-                              <h5 style={styles.lectureCardTitle} title={vid.title}>
-                                {vid.title}
-                              </h5>
-                              <div style={styles.lectureCardFooter}>
-                                <span style={styles.lectureIdText}>ID: {vid.video_id}</span>
+                            <div style={styles.cardBody}>
+                              <h4 style={styles.cardTitle} title={vid.title}>{vid.title}</h4>
+                              <div style={styles.cardMeta}>
+                                <span style={styles.cardMetaItem}>
+                                  <span style={{ color: "var(--text-dim)" }}>ID:</span> {vid.video_id}
+                                </span>
+                                <span style={styles.cardMetaDot}>•</span>
+                                <span style={styles.cardMetaItem}>Single Video</span>
+                              </div>
+
+                              <div style={styles.cardActions}>
                                 <button
                                   className="btn-primary"
-                                  style={styles.lecturePlayBtn}
-                                  onClick={(e) => {
-                                    e.stopPropagation();
-                                    onSelectVideoForStudio(vid.video_id, vid.title);
-                                  }}
-                                  title="Study this video & ask targeted questions"
+                                  style={styles.cardActionPrimary}
+                                  onClick={() => onSelectVideoForStudio(vid.video_id, vid.title, vid.video_id)}
                                 >
-                                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                                    <polygon points="5 3 19 12 5 21 5 3" />
+                                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                    <polygon points="5 3 19 12 5 21 5 3" fill="currentColor" />
                                   </svg>
                                   <span>Study Video</span>
                                 </button>
+                                {onOpenExplorerWithQuery && (
+                                  <button
+                                    className="btn-secondary"
+                                    style={styles.cardActionSecondary}
+                                    onClick={() => onOpenExplorerWithQuery("", vid.video_id)}
+                                    title="Search vector chunks for this video"
+                                  >
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                      <circle cx="11" cy="11" r="8" />
+                                      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                    </svg>
+                                  </button>
+                                )}
                               </div>
                             </div>
                           </div>
@@ -322,9 +411,9 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                       })}
                     </div>
                   </div>
-                </div>
-              );
-            });
+                )}
+              </>
+            );
           })()}
         </div>
       )}
@@ -487,6 +576,12 @@ const styles: { [key: string]: React.CSSProperties } = {
     display: "flex",
     flexDirection: "column",
     gap: "32px",
+  },
+  standaloneSection: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "16px",
+    marginTop: "8px",
   },
   playlistContainerCard: {
     padding: "0",

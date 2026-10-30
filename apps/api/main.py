@@ -71,8 +71,15 @@ def root():
     return {
         "message": "YouTube Playlist RAG Assistant API is online",
         "docs": "/docs",
-        "architecture": "Hierarchical Two-Tier RAG",
-        "endpoints": ["/api/health", "/api/videos", "/api/ingest", "/api/search", "/api/chat"],
+        "endpoints": [
+            "/api/health",
+            "/api/videos",
+            "/api/ingest",
+            "/api/ingest/status",
+            "/api/ingest/stop",
+            "/api/search",
+            "/api/chat",
+        ],
     }
 
 
@@ -146,15 +153,43 @@ def ingest_url(request: IngestRequest):
         raise HTTPException(status_code=500, detail=f"Failed to ingest URL: {str(e)}")
 
 
+@app.get("/api/ingest/status")
+def get_background_ingest_status():
+    """
+    Check the current progress of background playlist ingestion.
+    Returns whether the worker is active, the video currently being chunked, and completion count.
+    """
+    try:
+        store = get_vector_store()
+        return store.get_background_ingest_status()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to fetch ingest status: {str(e)}")
+
+
+@app.post("/api/ingest/stop")
+def stop_background_ingestion():
+    """
+    Manually halt any active background playlist ingestion worker.
+    """
+    try:
+        store = get_vector_store()
+        stopped = store.stop_background_ingest(reason="manual_user_stop")
+        return {"stopped": stopped, "status": store.get_background_ingest_status()}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to stop ingestion: {str(e)}")
+
+
 @app.post("/api/search")
 def search_transcripts(request: SearchRequest):
     """
     Perform semantic vector search across ingested YouTube transcripts.
-    Uses Two-Tier routing: if query relates to an unindexed lecture, it transcribes JIT.
+    Halts background ingestion immediately upon arrival.
+    Uses Two-Tier routing: if query relates to an unindexed lecture, it transcribes and chunks JIT.
     Returns matched chunks with timestamps, lead-in links, and text preview.
     """
     try:
         store = get_vector_store()
+        store.stop_background_ingest(reason=f"search_query: {request.query[:30]}")
         hits = store.search(
             query=request.query,
             collection_name=request.collection_name,
@@ -179,14 +214,17 @@ def search_transcripts(request: SearchRequest):
 def chat_with_lectures(request: ChatRequest):
     """
     Full Grounded RAG Chat Endpoint:
-    - Hierarchical Two-Tier Routing: routes question across playlist titles and JIT fetches transcripts
-    - Retrieves relevant chunks from Qdrant
-    - Guardrail 1: Rejects off-topic questions without calling the LLM
-    - Generates grounded answers using Gemini or Groq
-    - Guardrail 2: Enforces refusal if excerpts are insufficient
-    - Guardrail 3: Filters and renumbers only cited timestamps
+    - Halts background ingestion immediately upon query arrival.
+    - Hierarchical Two-Tier Routing: routes question across playlist titles and JIT fetches/chunks transcripts.
+    - Retrieves relevant chunks from Qdrant.
+    - Guardrail 1: Rejects off-topic questions without calling the LLM.
+    - Generates grounded answers using Gemini or Groq.
+    - Guardrail 2: Enforces refusal if excerpts are insufficient.
+    - Guardrail 3: Filters and renumbers only cited timestamps.
     """
     try:
+        store = get_vector_store()
+        store.stop_background_ingest(reason=f"chat_query: {request.question[:30]}")
         result = generate_answer(
             question=request.question,
             collection_name=request.collection_name,
