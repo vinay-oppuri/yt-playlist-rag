@@ -1,0 +1,1262 @@
+{
+  "video_id": "-vu34sct1g8",
+  "title": "G-17. Bipartite Graph | BFS | C++ | Java",
+  "total_segments": 251,
+  "segments": [
+    {
+      "start": 3.52,
+      "duration": 4.48,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.56,
+      "duration": 8.88,
+      "text": "so in this video we are going to learn about bipartite graph and we're going to"
+    },
+    {
+      "start": 11.2,
+      "duration": 7.6,
+      "text": "uh solve this using the bfs technique so if you haven't watched the vfs video go"
+    },
+    {
+      "start": 17.119,
+      "duration": 6.32,
+      "text": "back and watch it out so what is the definition of vipertite graph it states"
+    },
+    {
+      "start": 21.68,
+      "duration": 5.679,
+      "text": "if you can color the graph with two colors"
+    },
+    {
+      "start": 24.96,
+      "duration": 6.479,
+      "text": "such that no adjacent nodes have same color like you are given a graph and you"
+    },
+    {
+      "start": 29.679,
+      "duration": 6.961,
+      "text": "can take any two colors black and white yellow and green any two"
+    },
+    {
+      "start": 34.32,
+      "duration": 7.28,
+      "text": "colors in the world and if you are able to color it with those two colors"
+    },
+    {
+      "start": 38.96,
+      "duration": 7.68,
+      "text": "such that none of the adjacent notes or you can call them as neighbor notes have"
+    },
+    {
+      "start": 44.239,
+      "duration": 6.8,
+      "text": "the same color so for an example if you uh see this particular graph you see"
+    },
+    {
+      "start": 48.879,
+      "duration": 6.561,
+      "text": "this right so let's take the color yellow and green and let's try to color"
+    },
+    {
+      "start": 52.96,
+      "duration": 6.16,
+      "text": "it so imagine i give this a color yellow definitely this is the adjacent node i"
+    },
+    {
+      "start": 57.36,
+      "duration": 4.96,
+      "text": "cannot color it with yellow color because"
+    },
+    {
+      "start": 60.0,
+      "duration": 6.64,
+      "text": "the condition clearly states no two adjacent nodes have the same color so i"
+    },
+    {
+      "start": 64.239,
+      "duration": 7.361,
+      "text": "have to color this with green so this is the next adjacent i cannot color it with"
+    },
+    {
+      "start": 69.2,
+      "duration": 5.44,
+      "text": "green i have to color it with yellow so i'll color that with yellow and"
+    },
+    {
+      "start": 73.119,
+      "duration": 7.36,
+      "text": "similarly green yellow green yellow green and over here"
+    },
+    {
+      "start": 78.4,
+      "duration": 6.24,
+      "text": "it will be yellow because the previous one was green so this cannot be green so"
+    },
+    {
+      "start": 82.479,
+      "duration": 6.401,
+      "text": "this will be a yellow and this will be a green and if you see for this particular"
+    },
+    {
+      "start": 87.28,
+      "duration": 6.56,
+      "text": "graph i was able to color this particular graph but just two colors do"
+    },
+    {
+      "start": 91.119,
+      "duration": 7.36,
+      "text": "you see that yes i took two colors and i was able to color this graph with two"
+    },
+    {
+      "start": 95.759,
+      "duration": 9.281,
+      "text": "colors so thereby i can say that this graph is nothing but a bipartite graph"
+    },
+    {
+      "start": 102.479,
+      "duration": 8.721,
+      "text": "yes this graph can be called as a bipartite graph"
+    },
+    {
+      "start": 107.68,
+      "duration": 8.32,
+      "text": "now let's look at the next example now if you see this example and i again"
+    },
+    {
+      "start": 113.439,
+      "duration": 6.561,
+      "text": "take the same color yellow and green and i try to color this will be yellow this"
+    },
+    {
+      "start": 118.159,
+      "duration": 5.121,
+      "text": "cannot be yellow so it will be green the next one cannot be green so it will be"
+    },
+    {
+      "start": 121.439,
+      "duration": 6.641,
+      "text": "yellow then it will be green then it will be yellow then it will be green so"
+    },
+    {
+      "start": 125.92,
+      "duration": 6.0,
+      "text": "if you go over here this is green so this cannot be green so this will be"
+    },
+    {
+      "start": 130.08,
+      "duration": 5.12,
+      "text": "yellow now the moment you try to color this with"
+    },
+    {
+      "start": 134.16,
+      "duration": 4.64,
+      "text": "green because you cannot color it with yellow"
+    },
+    {
+      "start": 137.12,
+      "duration": 5.36,
+      "text": "because this was yellow so you have to color it with the other color which is"
+    },
+    {
+      "start": 140.239,
+      "duration": 7.761,
+      "text": "green but if you try to color it with the other color green you see that the"
+    },
+    {
+      "start": 145.04,
+      "duration": 5.52,
+      "text": "next adjacent node also has a green so you need to color it with yellow but"
+    },
+    {
+      "start": 149.76,
+      "duration": 5.04,
+      "text": "wait this is having a yellow color so you are"
+    },
+    {
+      "start": 152.879,
+      "duration": 6.321,
+      "text": "somewhere in between where one of your adjacent notes has a green one of your"
+    },
+    {
+      "start": 156.879,
+      "duration": 5.841,
+      "text": "artisan notes has in yellow thereby you cannot color it"
+    },
+    {
+      "start": 160.64,
+      "duration": 7.04,
+      "text": "with any of the colors because the moment you color any of the two notes"
+    },
+    {
+      "start": 165.04,
+      "duration": 9.839,
+      "text": "will have the same color thereby i can say this graph is not a"
+    },
+    {
+      "start": 170.84,
+      "duration": 8.36,
+      "text": "bipartite graph i hope that makes sense something to observe something to"
+    },
+    {
+      "start": 176.56,
+      "duration": 7.759,
+      "text": "observe very deeply we can always color a graph which is a linear graph imagine"
+    },
+    {
+      "start": 181.519,
+      "duration": 7.201,
+      "text": "you're given a graph like this linear graphs now these are called linear"
+    },
+    {
+      "start": 186.239,
+      "duration": 6.72,
+      "text": "graphs which will never have a cycle which will never have a cycle so you can"
+    },
+    {
+      "start": 190.959,
+      "duration": 6.321,
+      "text": "always take two colors since they do not have a cycle you can"
+    },
+    {
+      "start": 194.56,
+      "duration": 8.64,
+      "text": "just go on coloring them so linear graphs with no cycles"
+    },
+    {
+      "start": 200.239,
+      "duration": 8.241,
+      "text": "are always bipartite are always pi per tight remember this they're"
+    },
+    {
+      "start": 205.84,
+      "duration": 8.72,
+      "text": "always bipartite graph now what is the next step the next step is uh"
+    },
+    {
+      "start": 210.84,
+      "duration": 8.679,
+      "text": "but this is a graph of the cycle but the cycle length let's count the cycle"
+    },
+    {
+      "start": 216.48,
+      "duration": 7.28,
+      "text": "length the cycle length is one two three four five six"
+    },
+    {
+      "start": 221.44,
+      "duration": 7.359,
+      "text": "so any graph with an even cycle length can also be vipetite very very important"
+    },
+    {
+      "start": 226.4,
+      "duration": 10.08,
+      "text": "any graph with the even cycle length any graph with a evil is a even cycle"
+    },
+    {
+      "start": 232.799,
+      "duration": 9.52,
+      "text": "length can also be pipette so i can say that any graph with the"
+    },
+    {
+      "start": 238.799,
+      "duration": 7.761,
+      "text": "even cycle length can also be bipartite so"
+    },
+    {
+      "start": 243.12,
+      "duration": 6.96,
+      "text": "which graphs cannot be vipetite yes any graph with"
+    },
+    {
+      "start": 248.48,
+      "duration": 6.959,
+      "text": "a length of odd if you count the length 1 two three"
+    },
+    {
+      "start": 254.08,
+      "duration": 7.119,
+      "text": "four five any graph which has an odd length cycle"
+    },
+    {
+      "start": 258.079,
+      "duration": 8.721,
+      "text": "can never be a bipartite any graph with odd length"
+    },
+    {
+      "start": 262.96,
+      "duration": 7.12,
+      "text": "cycle can never be a bipartite so"
+    },
+    {
+      "start": 267.6,
+      "duration": 6.879,
+      "text": "if you're checking for bipartiteness and the graph is not a bipartite graph then"
+    },
+    {
+      "start": 272.16,
+      "duration": 7.2,
+      "text": "you can say that the graph has a odd length cycle thereby it is a"
+    },
+    {
+      "start": 276.96,
+      "duration": 5.92,
+      "text": "non-bipartite graph i hope the definition of bipartite is clear to you"
+    },
+    {
+      "start": 281.919,
+      "duration": 5.201,
+      "text": "so we are going to check for bipediteness using the bfs algorithm and"
+    },
+    {
+      "start": 285.919,
+      "duration": 5.84,
+      "text": "you know what are the requirements of a bfs algorithm it requires a"
+    },
+    {
+      "start": 289.68,
+      "duration": 6.88,
+      "text": "queue data structure it requires a visited array but instead of visited we"
+    },
+    {
+      "start": 294.16,
+      "duration": 7.28,
+      "text": "will take a color array where we have all the eight notes and everything is"
+    },
+    {
+      "start": 298.639,
+      "duration": 7.201,
+      "text": "non-colored and minus one means not colored yet yes minus one means not"
+    },
+    {
+      "start": 303.919,
+      "duration": 5.921,
+      "text": "colored yet and what we will try to do is we will try to color it with color"
+    },
+    {
+      "start": 307.6,
+      "duration": 6.4,
+      "text": "zero or color one you can take any other colors as well but i'll try to color it"
+    },
+    {
+      "start": 311.68,
+      "duration": 6.079,
+      "text": "with color zero and color one these are my two different colors and for this"
+    },
+    {
+      "start": 316.08,
+      "duration": 6.559,
+      "text": "particular graph this is the corresponding adjacency list okay now"
+    },
+    {
+      "start": 320.8,
+      "duration": 5.52,
+      "text": "let's quickly start off you can start with any of the given notes what i'll do"
+    },
+    {
+      "start": 324.56,
+      "duration": 5.52,
+      "text": "is i'll start with this particular node one and i'll try to put that into the"
+    },
+    {
+      "start": 328.4,
+      "duration": 6.32,
+      "text": "queue now whenever i try to put that into the queue what i'll try to do is"
+    },
+    {
+      "start": 331.919,
+      "duration": 6.641,
+      "text": "i'll try to assign it a color so let's assume we start with color zero so i'll"
+    },
+    {
+      "start": 336.639,
+      "duration": 6.241,
+      "text": "go over here and say hey listen you have a color zero he's like okay fine i have"
+    },
+    {
+      "start": 340.479,
+      "duration": 6.961,
+      "text": "a color zero so apparently this guy has a color zero so that's the starting"
+    },
+    {
+      "start": 345.52,
+      "duration": 5.44,
+      "text": "that's the initial stuff now you start to iterate on the cube now you start to"
+    },
+    {
+      "start": 349.12,
+      "duration": 5.68,
+      "text": "iterate on the queue and you always get the top most element out is you always"
+    },
+    {
+      "start": 352.96,
+      "duration": 6.079,
+      "text": "get the top most element out so what is your node the node is now"
+    },
+    {
+      "start": 356.96,
+      "duration": 5.92,
+      "text": "one for you right the node is one so if i ask you who are the neighbor nodes of"
+    },
+    {
+      "start": 360.72,
+      "duration": 6.56,
+      "text": "one that's two and you can easily get that by the adjacency list so the"
+    },
+    {
+      "start": 365.12,
+      "duration": 7.6,
+      "text": "neighbor node is two now what we do is we check is the neighbor node colored"
+    },
+    {
+      "start": 369.759,
+      "duration": 7.521,
+      "text": "and we see that the neighbor node is yet not colored so according to the biper"
+    },
+    {
+      "start": 375.28,
+      "duration": 6.24,
+      "text": "tightness definition what is the definition"
+    },
+    {
+      "start": 379.039,
+      "duration": 8.401,
+      "text": "no adjacent notes must have same colors so if this node one has a color zero so"
+    },
+    {
+      "start": 385.44,
+      "duration": 7.12,
+      "text": "the adjacent node should have which color the opposite of it which is one so"
+    },
+    {
+      "start": 390.24,
+      "duration": 6.72,
+      "text": "what you do is you color it with one yes you color this with one and not minus"
+    },
+    {
+      "start": 395.039,
+      "duration": 5.921,
+      "text": "one you color this with one and you put that note into the queue"
+    },
+    {
+      "start": 398.639,
+      "duration": 7.441,
+      "text": "data structure once you've done this i can say that this particular node does"
+    },
+    {
+      "start": 403.84,
+      "duration": 6.4,
+      "text": "not have any further adjacent nodes thereby"
+    },
+    {
+      "start": 407.84,
+      "duration": 7.12,
+      "text": "it's done next again you get the next guy too so let's see the next guy too"
+    },
+    {
+      "start": 413.039,
+      "duration": 6.641,
+      "text": "and now let's check out for two for the adjacent notes of two for two the first"
+    },
+    {
+      "start": 417.52,
+      "duration": 6.48,
+      "text": "adjacent note that you get is one which is already colored so there is no need"
+    },
+    {
+      "start": 421.759,
+      "duration": 6.72,
+      "text": "of coloring this which is the next one three which is the next one six so there"
+    },
+    {
+      "start": 426.8,
+      "duration": 6.08,
+      "text": "are two adjacent notes which have not been colored one is three one is six"
+    },
+    {
+      "start": 431.039,
+      "duration": 6.0,
+      "text": "which color will you give three which color will you give three obviously the"
+    },
+    {
+      "start": 435.039,
+      "duration": 7.041,
+      "text": "color that this guy has the opposite of it so that is zero so you give the"
+    },
+    {
+      "start": 439.12,
+      "duration": 7.28,
+      "text": "opposite color zero and you just put that into the queue which is the next"
+    },
+    {
+      "start": 444.16,
+      "duration": 6.96,
+      "text": "adjacent node fix you give it the color zero and you put it into the cube so you"
+    },
+    {
+      "start": 448.8,
+      "duration": 7.04,
+      "text": "can just give 6 the color 0 and put that into the queue so i can see the"
+    },
+    {
+      "start": 453.199,
+      "duration": 6.801,
+      "text": "iteration for the node 2 is also completed let's get the next node which"
+    },
+    {
+      "start": 457.84,
+      "duration": 6.079,
+      "text": "is node 3. now let's check for node 3. who are the"
+    },
+    {
+      "start": 461.759,
+      "duration": 7.28,
+      "text": "adjacent nodes of node 3 let's quickly check it's 2 and 4 but we see 2 is"
+    },
+    {
+      "start": 466.56,
+      "duration": 7.44,
+      "text": "already colored and is the color correct is the color correct have a check"
+    },
+    {
+      "start": 471.44,
+      "duration": 7.68,
+      "text": "this node had a 3 0 color and the adjacent node has a color 1 so it's ok"
+    },
+    {
+      "start": 476.8,
+      "duration": 8.0,
+      "text": "the adjacent notes do not have the same color which is the next adjacent node"
+    },
+    {
+      "start": 481.919,
+      "duration": 7.84,
+      "text": "four does it have a color no please color it with which color opposite of it"
+    },
+    {
+      "start": 487.52,
+      "duration": 6.16,
+      "text": "so that will be one so you go to four and you say okay can i give it a color"
+    },
+    {
+      "start": 491.52,
+      "duration": 5.359,
+      "text": "one i will i will give it a color one and at the same time i'll put that into"
+    },
+    {
+      "start": 495.28,
+      "duration": 5.84,
+      "text": "the queue data structure so i can say the node three is completed"
+    },
+    {
+      "start": 499.52,
+      "duration": 6.079,
+      "text": "now i can see that the node three is completed now let's get the next node"
+    },
+    {
+      "start": 502.96,
+      "duration": 7.519,
+      "text": "which is node six they'll get the node so the note 6 is here which is already"
+    },
+    {
+      "start": 507.44,
+      "duration": 6.479,
+      "text": "colored with color 0. so note 6 says my adjacent node is 2"
+    },
+    {
+      "start": 512.08,
+      "duration": 6.24,
+      "text": "which is having an opposite color so that is ok"
+    },
+    {
+      "start": 515.44,
+      "duration": 7.599,
+      "text": "we have a node 5 which is yet not colored we have a note 5 which is yet"
+    },
+    {
+      "start": 520.719,
+      "duration": 6.24,
+      "text": "not colored so this is color 0 you need to color it with color 1 you need to"
+    },
+    {
+      "start": 524.64,
+      "duration": 7.12,
+      "text": "color it with color 1 so this takes the color 1 and you can just put on the note"
+    },
+    {
+      "start": 529.44,
+      "duration": 6.48,
+      "text": "5 perfect so i can say the note 6 is also done let's see the next one which"
+    },
+    {
+      "start": 533.92,
+      "duration": 6.8,
+      "text": "is node four this is the node four and here is"
+    },
+    {
+      "start": 539.04,
+      "duration": 6.0,
+      "text": "you see a problem but this is where the node four will come in and give and will"
+    },
+    {
+      "start": 543.12,
+      "duration": 7.92,
+      "text": "tell you that okay there was a problem so let's see for"
+    },
+    {
+      "start": 547.279,
+      "duration": 8.56,
+      "text": "note 4 note 4 has a color one note 4 has an adjacent node of 3 so this adjacent"
+    },
+    {
+      "start": 553.68,
+      "duration": 5.92,
+      "text": "node has an opposite color to this color which is okay"
+    },
+    {
+      "start": 557.2,
+      "duration": 7.52,
+      "text": "next note 4 has a 5 but this 5 which is already colored has"
+    },
+    {
+      "start": 563.12,
+      "duration": 6.08,
+      "text": "the same color has the same color"
+    },
+    {
+      "start": 566.32,
+      "duration": 7.519,
+      "text": "thereby i say hey wait this guy has an adjacent node which was"
+    },
+    {
+      "start": 571.76,
+      "duration": 5.759,
+      "text": "colored in some other direction and it apparently has the same color as i do"
+    },
+    {
+      "start": 576.16,
+      "duration": 5.359,
+      "text": "have not a bipartite graph and you straight"
+    },
+    {
+      "start": 580.24,
+      "duration": 4.96,
+      "text": "away say no"
+    },
+    {
+      "start": 582.24,
+      "duration": 8.56,
+      "text": "you straight away return false saying it is not a bipartite graph if at any"
+    },
+    {
+      "start": 588.08,
+      "duration": 7.12,
+      "text": "moment you find that any of the two adjacent notes are having"
+    },
+    {
+      "start": 593.2,
+      "duration": 7.04,
+      "text": "are having the same colors you straight away tell them go back"
+    },
+    {
+      "start": 597.12,
+      "duration": 7.68,
+      "text": "go back yes that is what you do so i will quickly take an example"
+    },
+    {
+      "start": 602.32,
+      "duration": 6.24,
+      "text": "to show you what if it had an even length of cycle so let's quickly take an"
+    },
+    {
+      "start": 606.56,
+      "duration": 6.32,
+      "text": "example four five perfect this is an even lens cycle"
+    },
+    {
+      "start": 611.2,
+      "duration": 6.4,
+      "text": "so if you would have done uh if you would have taken the q data structure"
+    },
+    {
+      "start": 614.56,
+      "duration": 7.04,
+      "text": "assuming you have this entire bfs algorithm into your head so node 1"
+    },
+    {
+      "start": 620.399,
+      "duration": 4.321,
+      "text": "color 0 node 1 will go to now"
+    },
+    {
+      "start": 625.76,
+      "duration": 5.759,
+      "text": "that is the node will be 2 color 1"
+    },
+    {
+      "start": 629.44,
+      "duration": 6.88,
+      "text": "node 1 is done and push is 2 so node 1 is done next"
+    },
+    {
+      "start": 633.839,
+      "duration": 2.481,
+      "text": "node 2"
+    },
+    {
+      "start": 636.64,
+      "duration": 7.6,
+      "text": "right node 2 says my adjacent is 1 which is color 0 okay"
+    },
+    {
+      "start": 641.519,
+      "duration": 9.841,
+      "text": "we have a 3 we have a 5 opposite colors opposite colors three and five done"
+    },
+    {
+      "start": 647.839,
+      "duration": 7.921,
+      "text": "next we get a note three the moment we get a note three no three"
+    },
+    {
+      "start": 653.519,
+      "duration": 6.801,
+      "text": "says our color zero i have an adjacent two which is an opposite color so okay i"
+    },
+    {
+      "start": 658.0,
+      "duration": 7.68,
+      "text": "have an adjacent four which is not colored color it with the opposite color"
+    },
+    {
+      "start": 662.8,
+      "duration": 5.92,
+      "text": "colored so now this 4 will go here perfect done"
+    },
+    {
+      "start": 667.68,
+      "duration": 4.399,
+      "text": "next node 5"
+    },
+    {
+      "start": 670.24,
+      "duration": 6.48,
+      "text": "so node 5 says i have two adjacent nodes and both of"
+    },
+    {
+      "start": 674.24,
+      "duration": 7.44,
+      "text": "them have opposite colors to what i have so that is okay so note 5 is done next"
+    },
+    {
+      "start": 680.16,
+      "duration": 7.2,
+      "text": "node 4 comes in now when node 4 comes in it says okay we"
+    },
+    {
+      "start": 684.24,
+      "duration": 7.2,
+      "text": "have one and this one has zero this one has zero only one is there which is"
+    },
+    {
+      "start": 689.279,
+      "duration": 7.68,
+      "text": "uncolored color it with zero and put that into the queue node four is done"
+    },
+    {
+      "start": 693.839,
+      "duration": 7.841,
+      "text": "next node six comes in and it says hey listen i have zero my"
+    },
+    {
+      "start": 699.68,
+      "duration": 8.0,
+      "text": "adjacent node has one and i don't have any further adjusted notes so i'm done"
+    },
+    {
+      "start": 704.16,
+      "duration": 7.28,
+      "text": "so ultimately ultimately yes the queue if you carefully see the queue becomes"
+    },
+    {
+      "start": 709.44,
+      "duration": 6.48,
+      "text": "empty and you are able to color the color sorry you were able to color the"
+    },
+    {
+      "start": 713.519,
+      "duration": 5.681,
+      "text": "graph and that will be stored in the color array and that will be stored in"
+    },
+    {
+      "start": 717.76,
+      "duration": 5.04,
+      "text": "the color array so if you are able to color the graph"
+    },
+    {
+      "start": 721.6,
+      "duration": 5.44,
+      "text": "and there is not a place where two adjacent nodes"
+    },
+    {
+      "start": 725.12,
+      "duration": 7.279,
+      "text": "have the same color you can say that that graph is a bipartite graph i hope"
+    },
+    {
+      "start": 730.72,
+      "duration": 6.64,
+      "text": "that makes sense so you might think okay bfs did work but"
+    },
+    {
+      "start": 735.279,
+      "duration": 7.041,
+      "text": "what is the intuition the intuition is very simple it has brute force"
+    },
+    {
+      "start": 739.76,
+      "duration": 7.44,
+      "text": "yes it is brute force what i did was very simple i started by coloring it uh"
+    },
+    {
+      "start": 745.279,
+      "duration": 5.601,
+      "text": "coloring it with zero and whenever i found an adjacent note i gave him an"
+    },
+    {
+      "start": 748.8,
+      "duration": 5.839,
+      "text": "opposite color at the next time whenever i had someone with color zero i give the"
+    },
+    {
+      "start": 752.72,
+      "duration": 7.84,
+      "text": "adjacent notes zero and during the traversal if at any moment any two"
+    },
+    {
+      "start": 757.12,
+      "duration": 8.64,
+      "text": "adjacent notes have been by mistakenly colored with the same colors i say it's"
+    },
+    {
+      "start": 763.04,
+      "duration": 6.56,
+      "text": "not bipartite simple brute force of filling up colors zero one just keeping"
+    },
+    {
+      "start": 768.0,
+      "duration": 5.44,
+      "text": "in mind two adjacent notes cannot have same color at any moment of traversal"
+    },
+    {
+      "start": 771.92,
+      "duration": 5.68,
+      "text": "you get two adjacent notes having same color that means there has been a"
+    },
+    {
+      "start": 774.959,
+      "duration": 6.241,
+      "text": "mistake and it's not a paper type simple there is no intuition it's a simple"
+    },
+    {
+      "start": 779.04,
+      "duration": 6.88,
+      "text": "brute force of filling up colors using the traversal technique so now let's"
+    },
+    {
+      "start": 783.36,
+      "duration": 6.8,
+      "text": "quickly get to the code so as usual i'll be writing the c plus plus code and the"
+    },
+    {
+      "start": 787.279,
+      "duration": 9.041,
+      "text": "java code is on the left so we're given the adjacency uh list and the number of"
+    },
+    {
+      "start": 793.36,
+      "duration": 7.44,
+      "text": "notes so we're going to follow a pfs technique so"
+    },
+    {
+      "start": 797.76,
+      "duration": 6.16,
+      "text": "q we can secure that push uh it's a zero based indexing so zero"
+    },
+    {
+      "start": 802.639,
+      "duration": 4.64,
+      "text": "we need a color so color of this"
+    },
+    {
+      "start": 805.6,
+      "duration": 4.32,
+      "text": "please make sure all of these are colored with"
+    },
+    {
+      "start": 810.32,
+      "duration": 6.319,
+      "text": "color of i equal to minus one so color is also done now let's quickly go on uh"
+    },
+    {
+      "start": 815.519,
+      "duration": 5.841,
+      "text": "to travis the queue i can say node equal to"
+    },
+    {
+      "start": 819.68,
+      "duration": 5.76,
+      "text": "q dot front right then i can secure that pop"
+    },
+    {
+      "start": 823.36,
+      "duration": 5.039,
+      "text": "up now let's quickly travel in the adjacent nodes which is these"
+    },
+    {
+      "start": 827.44,
+      "duration": 5.12,
+      "text": "guys and i say hey listen"
+    },
+    {
+      "start": 830.32,
+      "duration": 5.68,
+      "text": "if you're yet not colored very very important if you are yet not colored"
+    },
+    {
+      "start": 834.72,
+      "duration": 5.6,
+      "text": "that means this so at the first step make sure you color"
+    },
+    {
+      "start": 838.32,
+      "duration": 7.36,
+      "text": "the zeroth guy with initial color zero so remember if the"
+    },
+    {
+      "start": 842.48,
+      "duration": 8.4,
+      "text": "adjacent node is yet not color if the adjacent node is"
+    },
+    {
+      "start": 848.24,
+      "duration": 7.2,
+      "text": "yet not colored what will you do you will get the opposite color will give"
+    },
+    {
+      "start": 852.56,
+      "duration": 7.2,
+      "text": "the opposite color of the node"
+    },
+    {
+      "start": 857.04,
+      "duration": 7.76,
+      "text": "so can i say the adjacent node is i t so the opposite color of the node will be"
+    },
+    {
+      "start": 861.839,
+      "duration": 6.321,
+      "text": "not of this zero becomes one or one becomes zero but what if it has been"
+    },
+    {
+      "start": 867.279,
+      "duration": 5.12,
+      "text": "colored what if it has been colored you just"
+    },
+    {
+      "start": 870.24,
+      "duration": 8.399,
+      "text": "check hey adjacent note is your color"
+    },
+    {
+      "start": 873.839,
+      "duration": 10.24,
+      "text": "equal to michael k adjacent node check so you just go ahead and say hey"
+    },
+    {
+      "start": 881.04,
+      "duration": 5.68,
+      "text": "is the adjacent guy"
+    },
+    {
+      "start": 884.88,
+      "duration": 4.319,
+      "text": "having the same color if it is"
+    },
+    {
+      "start": 887.839,
+      "duration": 3.841,
+      "text": "that means someone would have colored before"
+    },
+    {
+      "start": 890.079,
+      "duration": 5.601,
+      "text": "someone did color it on some other"
+    },
+    {
+      "start": 894.24,
+      "duration": 5.68,
+      "text": "part like you saw in the example that we took"
+    },
+    {
+      "start": 897.92,
+      "duration": 6.479,
+      "text": "this was colored in this direction so someone would have colored it but if it"
+    },
+    {
+      "start": 902.0,
+      "duration": 6.88,
+      "text": "violates then i say it is not a bipartite and i say it is not a"
+    },
+    {
+      "start": 906.24,
+      "duration": 5.44,
+      "text": "bipartite remember this and over here if you're coloring just make sure you push"
+    },
+    {
+      "start": 910.56,
+      "duration": 5.839,
+      "text": "that node over here and once everything is"
+    },
+    {
+      "start": 914.48,
+      "duration": 5.84,
+      "text": "done and if you find that you have travis everyone and this never appeared"
+    },
+    {
+      "start": 919.44,
+      "duration": 4.16,
+      "text": "and you you're able to"
+    },
+    {
+      "start": 921.76,
+      "duration": 6.16,
+      "text": "put in colors that means it is a bipartite and you can just return a true"
+    },
+    {
+      "start": 925.92,
+      "duration": 6.24,
+      "text": "so let's quickly compile this and check if it is working fine it looks like our"
+    },
+    {
+      "start": 930.48,
+      "duration": 5.279,
+      "text": "code is failing on a very large test case now"
+    },
+    {
+      "start": 933.839,
+      "duration": 6.641,
+      "text": "since there is no mention that there can be different components as well so i'm"
+    },
+    {
+      "start": 938.72,
+      "duration": 7.119,
+      "text": "assuming that there are multiple components and we are just checking for"
+    },
+    {
+      "start": 943.279,
+      "duration": 6.641,
+      "text": "starting with zero so if you remember the components"
+    },
+    {
+      "start": 947.839,
+      "duration": 6.401,
+      "text": "code you just need to run a for loop and if we are able to run a for loop i think"
+    },
+    {
+      "start": 951.92,
+      "duration": 5.919,
+      "text": "we should be able to check it so public or we can do it private"
+    },
+    {
+      "start": 957.92,
+      "duration": 7.2,
+      "text": "bull check and we can just take the starting"
+    },
+    {
+      "start": 962.16,
+      "duration": 7.119,
+      "text": "node and we can take the same thing yes just make sure you take the same thing"
+    },
+    {
+      "start": 967.6,
+      "duration": 5.679,
+      "text": "so usually whenever it feels on larger test cases it's generally the component"
+    },
+    {
+      "start": 971.36,
+      "duration": 6.479,
+      "text": "thing so what you'll do is you'll just take it back if you'll just take it back"
+    },
+    {
+      "start": 975.92,
+      "duration": 6.24,
+      "text": "and over here instead of zero you'll say start"
+    },
+    {
+      "start": 978.88,
+      "duration": 6.8,
+      "text": "perfect and over here you'll say start and this color is something which you"
+    },
+    {
+      "start": 983.759,
+      "duration": 4.88,
+      "text": "can define maybe here perfect and"
+    },
+    {
+      "start": 987.36,
+      "duration": 5.039,
+      "text": "that's done so"
+    },
+    {
+      "start": 989.36,
+      "duration": 7.919,
+      "text": "this color is a component these colors are component individual right"
+    },
+    {
+      "start": 994.48,
+      "duration": 6.64,
+      "text": "individual component is what it now this particular bull check well just check"
+    },
+    {
+      "start": 999.04,
+      "duration": 6.159,
+      "text": "for component so now you can take the color away again these things uh"
+    },
+    {
+      "start": 1003.44,
+      "duration": 6.079,
+      "text": "component stuff i've already done in the previous videos please go back and watch"
+    },
+    {
+      "start": 1006.959,
+      "duration": 7.041,
+      "text": "it please please go back and watch it so over here it's very simple now you know"
+    },
+    {
+      "start": 1011.519,
+      "duration": 6.88,
+      "text": "the notes are from 0 to v so just go something like this and say if it is not"
+    },
+    {
+      "start": 1016.32,
+      "duration": 7.12,
+      "text": "colored it means this component has not yet been touched"
+    },
+    {
+      "start": 1019.839,
+      "duration": 9.761,
+      "text": "so check for the check whether not i and v adjacent and the color guy"
+    },
+    {
+      "start": 1026.559,
+      "duration": 7.601,
+      "text": "and once you have checked it if if this comes out to be false that means"
+    },
+    {
+      "start": 1031.919,
+      "duration": 5.28,
+      "text": "this is not a vipertide and you can return or else at the end of the day if"
+    },
+    {
+      "start": 1036.0,
+      "duration": 4.64,
+      "text": "you have checked for all the components you can just return a true it's the same"
+    },
+    {
+      "start": 1039.199,
+      "duration": 4.64,
+      "text": "for loop that i've been teaching you in connected components"
+    },
+    {
+      "start": 1042.16,
+      "duration": 5.84,
+      "text": "like sorry components that if there are multiple components you always write the"
+    },
+    {
+      "start": 1045.439,
+      "duration": 7.12,
+      "text": "logic inside of for loop so what i'll do is i'll just quickly uh run this off it"
+    },
+    {
+      "start": 1050.08,
+      "duration": 6.8,
+      "text": "does it does run fine so it was for the component so remember whenever your code"
+    },
+    {
+      "start": 1054.48,
+      "duration": 6.16,
+      "text": "usually fails for larger test cases uh try this stuff out check for all the"
+    },
+    {
+      "start": 1058.799,
+      "duration": 6.481,
+      "text": "components what you can do is you can always start off with writing like this"
+    },
+    {
+      "start": 1062.72,
+      "duration": 5.76,
+      "text": "just in order to be safe so this is how we can easily check for piper tightness"
+    },
+    {
+      "start": 1066.96,
+      "duration": 5.599,
+      "text": "so what is the time complexity in the space complexity of this particular"
+    },
+    {
+      "start": 1069.919,
+      "duration": 6.161,
+      "text": "approach it's a similar to the pfs algorithm whatever bfs algorithm takes"
+    },
+    {
+      "start": 1074.799,
+      "duration": 4.801,
+      "text": "it's a similar over here so if you haven't checked out our bfs video you"
+    },
+    {
+      "start": 1077.679,
+      "duration": 5.921,
+      "text": "can go back and check it out so guys i hope i was able to explain you what is a"
+    },
+    {
+      "start": 1081.039,
+      "duration": 6.081,
+      "text": "bipartite graph so just in case i was please please make sure you like this"
+    },
+    {
+      "start": 1085.039,
+      "duration": 5.281,
+      "text": "video and if you're new to our channel what are you waiting for hit that"
+    },
+    {
+      "start": 1088.799,
+      "duration": 4.801,
+      "text": "subscribe button please please do hit that subscribe button if you haven't"
+    },
+    {
+      "start": 1091.919,
+      "duration": 4.64,
+      "text": "checked out our dpc's and the hd sheet the links are in the description with"
+    },
+    {
+      "start": 1095.36,
+      "duration": 4.559,
+      "text": "this i'll be wrapping up this video let's read some other video till then"
+    },
+    {
+      "start": 1098.16,
+      "duration": 8.879,
+      "text": "bye bye take care whenever your heart is"
+    },
+    {
+      "start": 1102.01,
+      "duration": 2.51,
+      "text": "[Music]"
+    },
+    {
+      "start": 1107.039,
+      "duration": 0.0,
+      "text": "a light broken"
+    }
+  ]
+}

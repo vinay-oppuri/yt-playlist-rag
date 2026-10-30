@@ -95,12 +95,18 @@ class VectorStore:
         """Generate dense vector embeddings for a list of text strings."""
         if not texts:
             return []
-        embeddings_gen = self.embedder.embed(texts, batch_size=batch_size)
+        # FastEmbed requires pure strings (TypeError: TextEncodeInput must be Union[TextInputSequence...])
+        clean_texts = [
+            str(t).strip() if (t is not None and str(t).strip()) else " "
+            for t in texts
+        ]
+        embeddings_gen = self.embedder.embed(clean_texts, batch_size=batch_size)
         return [vec.tolist() for vec in embeddings_gen]
 
     def embed_query(self, query: str) -> List[float]:
         """Generate embedding vector for a single search query."""
-        results = self.embed_texts([query])
+        clean_q = str(query).strip() if query else " "
+        results = self.embed_texts([clean_q])
         return results[0] if results else []
 
     def upsert_chunks(
@@ -286,7 +292,7 @@ class VectorStore:
                         )
                     ]
                 ),
-                exact=False,
+                exact=True,
             )
             return cnt.count > 0
         except Exception:
@@ -315,7 +321,7 @@ class VectorStore:
                     count_filter=models.Filter(
                         must=[models.FieldCondition(key="video_id", match=models.MatchValue(value=video_id))]
                     ),
-                    exact=False,
+                    exact=True,
                 )
                 chunk_cnt = cnt.count
             except Exception:
@@ -399,7 +405,7 @@ class VectorStore:
                     top_candidates = self.search_videos(
                         query=query,
                         collection_name=videos_collection,
-                        limit=2,
+                        limit=3,
                     )
                     for cand in top_candidates:
                         # If video is not yet transcribed and has reasonable title relevance

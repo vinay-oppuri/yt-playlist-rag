@@ -28,13 +28,26 @@ interface ChatPanelProps {
   apiBaseUrl?: string;
   onSeek: (videoId: string, startSec: number, videoTitle: string) => void;
   activeVideoId?: string;
+  playlistVideos?: { video_id: string; title: string; chunks?: number }[];
+  initialScope?: string;
 }
 
 export const ChatPanel: React.FC<ChatPanelProps> = ({
   apiBaseUrl = "http://127.0.0.1:8000",
   onSeek,
   activeVideoId,
+  playlistVideos = [],
+  initialScope,
 }) => {
+  // "all" = search entire playlist, or specific video_id
+  const [selectedScope, setSelectedScope] = useState<string>(initialScope || "all");
+
+  useEffect(() => {
+    if (initialScope) {
+      setSelectedScope(initialScope);
+    }
+  }, [initialScope]);
+
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: "welcome",
@@ -71,15 +84,21 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({
     setIsSubmitting(true);
 
     try {
+      const requestPayload: Record<string, any> = {
+        question: q.trim(),
+        collection_name: "yt_transcripts",
+        top_k: 5,
+        min_score: 0.50,
+      };
+
+      if (selectedScope && selectedScope !== "all") {
+        requestPayload.video_id = selectedScope;
+      }
+
       const response = await fetch(`${apiBaseUrl}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          question: q.trim(),
-          collection_name: "yt_transcripts",
-          top_k: 5,
-          min_score: 0.50,
-        }),
+        body: JSON.stringify(requestPayload),
       });
 
       if (!response.ok) {
@@ -115,9 +134,9 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({
   };
 
   const samplePrompts = [
-    "What are the rules of love?",
-    "Where is commitment mentioned?",
-    "How does Kubernetes pod scheduling work?", // off-topic test for refusal
+    "What is this lecture about?",
+    "Explain the core algorithm step-by-step",
+    "Where is the time complexity discussed?",
   ];
 
   return (
@@ -133,6 +152,23 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({
             <h2 style={styles.headerTitle}>Grounded Lecture Q&A</h2>
             <p style={styles.headerSubtitle}>Zero hallucinations • Strict timestamp citations</p>
           </div>
+        </div>
+
+        {/* Video Query Scope Selector (Entire Playlist vs Selected Video) */}
+        <div style={styles.scopeSelectorContainer}>
+          <label style={styles.scopeLabel}>Search Scope:</label>
+          <select
+            value={selectedScope}
+            onChange={(e) => setSelectedScope(e.target.value)}
+            style={styles.scopeSelect}
+          >
+            <option value="all">📚 Entire Playlist (All Lectures)</option>
+            {playlistVideos.map((v) => (
+              <option key={v.video_id} value={v.video_id}>
+                🎬 {v.title ? (v.title.length > 40 ? v.title.slice(0, 38) + "..." : v.title) : v.video_id}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
 
@@ -271,14 +307,40 @@ const styles: { [key: string]: React.CSSProperties } = {
     backdropFilter: "blur(16px)",
   },
   header: {
-    padding: "16px 20px",
+    padding: "14px 18px",
     borderBottom: "1px solid var(--border-subtle)",
-    background: "rgba(0, 0, 0, 0.15)",
+    background: "rgba(0, 0, 0, 0.18)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    gap: "12px",
+    flexWrap: "wrap",
   },
   headerTitleWrapper: {
     display: "flex",
     alignItems: "center",
     gap: "12px",
+  },
+  scopeSelectorContainer: {
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
+  },
+  scopeLabel: {
+    fontSize: "0.72rem",
+    color: "var(--text-dim)",
+    fontWeight: 600,
+  },
+  scopeSelect: {
+    background: "rgba(255, 255, 255, 0.06)",
+    color: "var(--text-main)",
+    border: "1px solid var(--border-subtle)",
+    borderRadius: "var(--radius-sm)",
+    padding: "5px 10px",
+    fontSize: "0.78rem",
+    outline: "none",
+    maxWidth: "240px",
+    cursor: "pointer",
   },
   chatIcon: {
     width: "32px",

@@ -49,6 +49,8 @@ export default function Home() {
   const [activeVideoTitle, setActiveVideoTitle] = useState(
     "Sorry HackerR**k 😈 I Built a product That Takes Your Real Interview"
   );
+  // Initial Chat scope in Studio ("all" or specific video_id)
+  const [studioChatScope, setStudioChatScope] = useState<string>("all");
 
   // Query handoff to Explorer tab
   const [explorerQuery, setExplorerQuery] = useState("");
@@ -70,6 +72,8 @@ export default function Home() {
                     title: v.title,
                     chunks: v.chunks_count || 0,
                     status: v.is_transcribed ? "success" : v.status || "registered",
+                    playlist_id: v.playlist_id,
+                    playlist_title: v.playlist_title,
                   }))
                 );
               }
@@ -92,9 +96,10 @@ export default function Home() {
     }
   };
 
-  const handleSelectVideoForStudio = (videoId: string, title: string) => {
+  const handleSelectVideoForStudio = (videoId: string, title: string, scope?: string) => {
     setActiveVideoId(videoId);
     setActiveVideoTitle(title);
+    setStudioChatScope(scope !== undefined ? scope : videoId);
     playerRef.current?.loadVideo(videoId, 0);
     setActiveTab("studio");
   };
@@ -159,6 +164,7 @@ export default function Home() {
             activeVideoId={activeVideoId}
             activeVideoTitle={activeVideoTitle}
             playlistVideos={playlistVideos}
+            initialChatScope={studioChatScope}
             onSelectVideo={(id, title) => {
               setActiveVideoId(id);
               setActiveVideoTitle(title);

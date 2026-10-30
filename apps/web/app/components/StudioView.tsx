@@ -13,6 +13,7 @@ interface StudioViewProps {
   onSelectVideo: (videoId: string, title: string) => void;
   onSeek: (videoId: string, startSec: number, videoTitle: string) => void;
   apiBaseUrl?: string;
+  initialChatScope?: string;
 }
 
 export const StudioView: React.FC<StudioViewProps> = ({
@@ -23,6 +24,7 @@ export const StudioView: React.FC<StudioViewProps> = ({
   onSelectVideo,
   onSeek,
   apiBaseUrl = "http://127.0.0.1:8000",
+  initialChatScope,
 }) => {
   return (
     <div style={styles.grid}>
@@ -94,6 +96,8 @@ export const StudioView: React.FC<StudioViewProps> = ({
           apiBaseUrl={apiBaseUrl}
           onSeek={onSeek}
           activeVideoId={activeVideoId}
+          playlistVideos={playlistVideos}
+          initialScope={initialChatScope}
         />
       </div>
     </div>
