@@ -40,8 +40,8 @@ export const StudioView: React.FC<StudioViewProps> = ({
 
         {/* Playlist Video Selector */}
         {playlistVideos.length > 0 && (
-          <div className="glass-panel" style={styles.playlistBox}>
-            <div style={styles.playlistHeader}>
+          <details className="glass-panel" style={styles.playlistBox}>
+            <summary style={styles.playlistHeader}>
               <div style={styles.playlistTitleRow}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <polygon points="12 2 2 7 12 12 22 7 12 2" />
@@ -49,11 +49,11 @@ export const StudioView: React.FC<StudioViewProps> = ({
                   <polyline points="2 12 12 17 22 12" />
                 </svg>
                 <span style={styles.playlistTitle}>
-                  Indexed Playlist Videos ({playlistVideos.length})
+                  Playlist queue ({playlistVideos.length})
                 </span>
               </div>
               <span style={styles.playlistHint}>Click to switch active player video</span>
-            </div>
+            </summary>
 
             <div style={styles.videoList}>
               {playlistVideos.map((vid) => {
@@ -67,26 +67,22 @@ export const StudioView: React.FC<StudioViewProps> = ({
                     }}
                     onClick={() => onSelectVideo(vid.video_id, vid.title)}
                   >
-                    <div style={styles.videoItemIcon}>
-                      {isSelected ? (
-                        <div className="live-dot" />
-                      ) : (
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                          <polygon points="5 3 19 12 5 21 5 3" fill="currentColor" />
-                        </svg>
-                      )}
-                    </div>
+                    <img
+                      src={`https://img.youtube.com/vi/${vid.video_id}/mqdefault.jpg`}
+                      alt=""
+                      style={styles.videoThumbnail}
+                    />
                     <div style={styles.videoItemText}>
                       <span style={styles.videoItemTitle}>{vid.title}</span>
                       <span style={styles.videoItemMeta}>
-                        ID: {vid.video_id} • {vid.chunks || 0} chunks
+                        {isSelected ? "Now playing" : "Play next"} · {vid.chunks || 0} chunks
                       </span>
                     </div>
                   </button>
                 );
               })}
             </div>
-          </div>
+          </details>
         )}
       </div>
 
@@ -95,6 +91,7 @@ export const StudioView: React.FC<StudioViewProps> = ({
         <ChatPanel
           apiBaseUrl={apiBaseUrl}
           onSeek={onSeek}
+          onSelectVideo={onSelectVideo}
           activeVideoId={activeVideoId}
           playlistVideos={playlistVideos}
           initialScope={initialChatScope}
@@ -135,6 +132,8 @@ const styles: { [key: string]: React.CSSProperties } = {
     marginBottom: "12px",
     paddingBottom: "8px",
     borderBottom: "1px solid var(--border-subtle)",
+    cursor: "pointer",
+    listStyle: "none",
   },
   playlistTitleRow: {
     display: "flex",
@@ -154,7 +153,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     display: "flex",
     flexDirection: "column",
     gap: "6px",
-    maxHeight: "220px",
+    maxHeight: "300px",
     overflowY: "auto",
   },
   videoItem: {
@@ -180,6 +179,14 @@ const styles: { [key: string]: React.CSSProperties } = {
     alignItems: "center",
     justifyContent: "center",
     color: "var(--text-dim)",
+  },
+  videoThumbnail: {
+    width: "112px",
+    aspectRatio: "16 / 9",
+    objectFit: "cover",
+    borderRadius: "6px",
+    flexShrink: 0,
+    background: "#111",
   },
   videoItemText: {
     display: "flex",

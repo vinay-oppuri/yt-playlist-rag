@@ -5,6 +5,7 @@ from pathlib import Path
 import re
 import sys
 from typing import Any, Dict, List, Optional
+import xml.etree.ElementTree as ET
 import httpx
 import yt_dlp
 
@@ -217,6 +218,27 @@ def parse_vtt_subtitles(vtt_text: str) -> List[Dict[str, Any]]:
     return segments
 
 
+def parse_srv1_subtitles(xml_text: str) -> List[Dict[str, Any]]:
+    """Parser for YouTube srv1 XML subtitle format."""
+    segments = []
+    try:
+        root = ET.fromstring(xml_text)
+        for elem in root.findall("text"):
+            raw_text = clean_text(elem.text or "")
+            if raw_text:
+                start = float(elem.attrib.get("start", 0.0))
+                duration = float(elem.attrib.get("dur", 0.0))
+                segments.append({"start": start, "duration": duration, "text": raw_text})
+    except Exception as e:
+        print(f"Error parsing srv1 XML subtitles: {e}")
+    return segments
+
+
+def _has_devanagari(text: str) -> bool:
+    """Return True if text contains Devanagari (Hindi) script."""
+    return bool(re.search(r"[\u0900-\u097F]", text))
+
+
 def _load_cached_transcript(video_id: str) -> Optional[List[Dict[str, Any]]]:
     """Check if transcript is already cached on disk."""
     cache_file = CACHE_DIR / f"{video_id}.json"
@@ -224,7 +246,15 @@ def _load_cached_transcript(video_id: str) -> Optional[List[Dict[str, Any]]]:
         try:
             with open(cache_file, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                return data.get("segments", [])
+                segments = data.get("segments", [])
+                if segments:
+                    # If cached file was stored in non-Latin/Devanagari script,
+                    # bypass cache so we can fetch the proper English transcript if available
+                    sample = " ".join(s.get("text", "") for s in segments[:10])
+                    if _has_devanagari(sample):
+                        print(f"  [Cache notice] Cached transcript for {video_id} is in Devanagari script. Checking for English transcript...")
+                        return None
+                    return segments
         except Exception as e:
             print(f"Warning: Failed reading cache for {video_id}: {e}")
     return None
@@ -258,18 +288,40 @@ def _save_cached_transcript(video_id: str, segments: List[Dict[str, Any]], title
 def get_transcript(url: str, force_refresh: bool = False) -> List[Dict[str, Any]]:
     """
     Fetch transcript segments with timestamps for a YouTube video.
-    Checks local disk cache first. If not cached, fetches from YouTube.
+    Strictly prioritizes English transcripts whenever available.
     Returns a list of dicts: [{'start': float, 'duration': float, 'text': str}]
     """
     video_id = extract_video_url(url)
 
-    # 1. Check local cache first (idempotent & fast)
+    # 1. Check local cache first (idempotent & fast, bypasses if non-English)
     if not force_refresh:
         cached = _load_cached_transcript(video_id)
         if cached is not None:
             return cached
 
     clean_url = f"https://www.youtube.com/watch?v={video_id}"
+
+    # 2. Stage 1: Try YouTubeTranscriptApi for English transcripts first
+    try:
+        from youtube_transcript_api import YouTubeTranscriptApi
+        api = YouTubeTranscriptApi()
+        raw = api.fetch(video_id, languages=["en-US", "en", "en-GB", "en-IN", "en-CA", "en-AU"])
+        segments: List[Dict[str, Any]] = []
+        for item in raw:
+            t = getattr(item, "text", None) or (item.get("text") if isinstance(item, dict) else "")
+            st = getattr(item, "start", None) or (item.get("start") if isinstance(item, dict) else 0.0)
+            dur = getattr(item, "duration", None) or (item.get("duration") if isinstance(item, dict) else 0.0)
+            cleaned = clean_text(t or "")
+            if cleaned:
+                segments.append({"start": float(st), "duration": float(dur), "text": cleaned})
+        if segments:
+            print(f"  -> Fetched {len(segments)} English segments via YouTubeTranscriptApi for {video_id}.")
+            _save_cached_transcript(video_id, segments, f"Video {video_id}")
+            return segments
+    except Exception:
+        pass
+
+    # 3. Stage 2: Fallback to yt-dlp with strict English priority
     ydl_opts = {
         "skip_download": True,
         "extractor_args": {"youtube": {"player_client": ["android"]}},
@@ -282,78 +334,114 @@ def get_transcript(url: str, force_refresh: bool = False) -> List[Dict[str, Any]
             info = ydl.extract_info(clean_url, download=False)
             video_title = info.get("title", f"Video {video_id}")
 
-            # Filter out non-subtitle tracks like live_chat
             subs = {k: v for k, v in (info.get("subtitles") or {}).items() if k != "live_chat"}
             auto = {k: v for k, v in (info.get("automatic_captions") or {}).items() if k != "live_chat"}
-            # Manual subtitles take precedence over auto-generated ones (merge: auto first, subs overwrite)
             all_subs = {**auto, **subs}
 
             if not all_subs:
                 print(f"No captions found for video {video_id}.")
                 return []
 
-            # Priority order:
-            # 1. *-orig tracks — the raw original-language audio (most accurate for non-English content)
-            #    Sort by explicit preference: hi-orig > en-orig > other-orig
-            # 2. Manual subtitles in common Indian/Hinglish languages
-            # 3. English variants as fallback (may be auto-translated and lower quality for non-EN videos)
-            # 4. Any remaining track
-            _ORIG_PREF = ["hi-orig", "en-orig", "pa-orig", "ur-orig", "bn-orig", "mr-orig"]
-            orig_keys_raw = [k for k in all_subs if k.endswith("-orig")]
-            orig_keys = sorted(
-                orig_keys_raw,
-                key=lambda k: _ORIG_PREF.index(k) if k in _ORIG_PREF else len(_ORIG_PREF),
+            # Priority 1: English tracks strictly first!
+            en_keys = (
+                ["en-orig", "en-US-orig", "en-GB-orig", "en-IN-orig"]
+                + ["en", "en-US", "en-GB", "en-IN", "en-CA", "en-AU"]
+                + [k for k in all_subs if k.lower().startswith("en")]
             )
-            preferred_keys = (
-                orig_keys  # e.g. hi-orig, en-orig — always prefer original speech
-                + ["hi", "hi-IN", "pa", "ur", "bn", "mr", "te", "ta", "kn", "gu", "ml"]  # Indian languages
-                + ["en", "en-US", "en-GB", "en-CA"]  # English fallbacks (may be translated)
-            )
-            track_key = None
-            track_list = None
-            for key in preferred_keys:
-                if key in all_subs:
-                    track_key = key
-                    track_list = all_subs[key]
-                    break
-            if not track_list:
-                track_key, track_list = next(iter(all_subs.items()))
-            print(f"  -> Selected caption track: '{track_key}' (from {len(all_subs)} available: {list(all_subs.keys())[:8]}{'...' if len(all_subs) > 8 else ''})")  # noqa: E501
+            # Priority 2: Original audio speech tracks for non-English
+            non_en_orig = [k for k in all_subs if k.endswith("-orig") and not k.lower().startswith("en")]
+            # Priority 3: Any remaining tracks
+            other_keys = [k for k in all_subs if k not in en_keys and k not in non_en_orig]
 
-            # 1. Look for json3 format first (standard for Android client)
-            json3_track = next((t for t in track_list if t.get("ext") == "json3"), None)
-            if json3_track and "url" in json3_track:
-                res = httpx.get(json3_track["url"], timeout=15.0)
-                if res.status_code == 200:
-                    data = res.json()
-                    segments: List[Dict[str, Any]] = []
-                    for event in data.get("events", []):
-                        if "segs" in event:
-                            raw_text = "".join(s.get("utf8", "") for s in event["segs"])
-                            cleaned = clean_text(raw_text)
-                            if cleaned:
-                                start = event.get("tStartMs", 0) / 1000.0
-                                duration = event.get("dDurationMs", 0) / 1000.0
-                                segments.append({"start": start, "duration": duration, "text": cleaned})
-                    if segments:
-                        _save_cached_transcript(video_id, segments, video_title)
-                        return segments
+            candidate_keys = []
+            seen = set()
+            for k in en_keys + non_en_orig + other_keys:
+                if k in all_subs and k not in seen:
+                    seen.add(k)
+                    candidate_keys.append(k)
 
-            # 2. Fallback to vtt format if json3 wasn't available
-            vtt_track = next((t for t in track_list if t.get("ext") == "vtt"), None)
-            if vtt_track and "url" in vtt_track:
-                res = httpx.get(vtt_track["url"], timeout=15.0)
-                if res.status_code == 200:
-                    segments = parse_vtt_subtitles(res.text)
-                    if segments:
-                        _save_cached_transcript(video_id, segments, video_title)
-                        return segments
+            # Try candidate tracks in priority order
+            for track_key in candidate_keys:
+                track_list = all_subs[track_key]
 
-            print(f"No parseable caption track available for video {video_id}.")
-            return []
+                # Format 1: json3
+                json3_track = next((t for t in track_list if t.get("ext") == "json3"), None)
+                if json3_track and "url" in json3_track:
+                    try:
+                        res = httpx.get(json3_track["url"], timeout=15.0)
+                        if res.status_code == 200:
+                            data = res.json()
+                            segments: List[Dict[str, Any]] = []
+                            for event in data.get("events", []):
+                                if "segs" in event:
+                                    raw_text = "".join(s.get("utf8", "") for s in event["segs"])
+                                    cleaned = clean_text(raw_text)
+                                    if cleaned:
+                                        start = event.get("tStartMs", 0) / 1000.0
+                                        duration = event.get("dDurationMs", 0) / 1000.0
+                                        segments.append({"start": start, "duration": duration, "text": cleaned})
+                            if segments:
+                                print(f"  -> Selected caption track: '{track_key}' (json3, {len(segments)} segments)")
+                                _save_cached_transcript(video_id, segments, video_title)
+                                return segments
+                    except Exception:
+                        pass
+
+                # Format 2: srv1 (XML)
+                srv1_track = next((t for t in track_list if t.get("ext") == "srv1"), None)
+                if srv1_track and "url" in srv1_track:
+                    try:
+                        res = httpx.get(srv1_track["url"], timeout=15.0)
+                        if res.status_code == 200:
+                            segments = parse_srv1_subtitles(res.text)
+                            if segments:
+                                print(f"  -> Selected caption track: '{track_key}' (srv1, {len(segments)} segments)")
+                                _save_cached_transcript(video_id, segments, video_title)
+                                return segments
+                    except Exception:
+                        pass
+
+                # Format 3: vtt
+                vtt_track = next((t for t in track_list if t.get("ext") == "vtt"), None)
+                if vtt_track and "url" in vtt_track:
+                    try:
+                        res = httpx.get(vtt_track["url"], timeout=15.0)
+                        if res.status_code == 200:
+                            segments = parse_vtt_subtitles(res.text)
+                            if segments:
+                                print(f"  -> Selected caption track: '{track_key}' (vtt, {len(segments)} segments)")
+                                _save_cached_transcript(video_id, segments, video_title)
+                                return segments
+                    except Exception:
+                        pass
+
     except Exception as e:
-        print(f"Error fetching transcript for {video_id}: {e}")
-        return []
+        print(f"Error fetching via yt-dlp for {video_id}: {e}")
+
+    # 4. Stage 3: If no English and yt-dlp failed, fetch default language via YouTubeTranscriptApi
+    try:
+        from youtube_transcript_api import YouTubeTranscriptApi
+        api = YouTubeTranscriptApi()
+        tl = api.list(video_id)
+        first_t = next(iter(tl))
+        raw = first_t.fetch()
+        segments = []
+        for item in raw:
+            t = getattr(item, "text", None) or (item.get("text") if isinstance(item, dict) else "")
+            st = getattr(item, "start", None) or (item.get("start") if isinstance(item, dict) else 0.0)
+            dur = getattr(item, "duration", None) or (item.get("duration") if isinstance(item, dict) else 0.0)
+            cleaned = clean_text(t or "")
+            if cleaned:
+                segments.append({"start": float(st), "duration": float(dur), "text": cleaned})
+        if segments:
+            print(f"  -> Fetched {len(segments)} default language segments via YouTubeTranscriptApi for {video_id}.")
+            _save_cached_transcript(video_id, segments, f"Video {video_id}")
+            return segments
+    except Exception as e:
+        print(f"Failed fallback transcript fetch for {video_id}: {e}")
+
+    print(f"No parseable caption track available for video {video_id}.")
+    return []
 
 
 if __name__ == "__main__":

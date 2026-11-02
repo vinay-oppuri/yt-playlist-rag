@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useMemo } from "react";
 
 export interface Citation {
   citation_index: number;
@@ -27,26 +27,75 @@ export interface ChatMessage {
 interface ChatPanelProps {
   apiBaseUrl?: string;
   onSeek: (videoId: string, startSec: number, videoTitle: string) => void;
+  onSelectVideo?: (videoId: string, title: string) => void;
   activeVideoId?: string;
-  playlistVideos?: { video_id: string; title: string; chunks?: number }[];
+  playlistVideos?: { video_id: string; title: string; chunks?: number; playlist_id?: string }[];
   initialScope?: string;
 }
 
 export const ChatPanel: React.FC<ChatPanelProps> = ({
   apiBaseUrl = "http://127.0.0.1:8000",
   onSeek,
+  onSelectVideo,
   activeVideoId,
   playlistVideos = [],
   initialScope,
 }) => {
-  // "all" = search entire playlist, or specific video_id
-  const [selectedScope, setSelectedScope] = useState<string>(initialScope || "all");
+  // Keep playlist scope tied to the active video so multi-playlist libraries
+  // never mix videos in the scope picker or the retrieval filter.
+  const activePlaylistId = useMemo(() => {
+    const fromActive = playlistVideos.find((v) => v.video_id === activeVideoId)?.playlist_id;
+    if (fromActive && fromActive !== "standalone") return fromActive;
+  }, [playlistVideos, activeVideoId]);
+  const hasActualPlaylist = Boolean(activePlaylistId);
+  const scopeVideos = useMemo(
+    () => playlistVideos.filter((video) => activePlaylistId
+      ? video.playlist_id === activePlaylistId
+      : !video.playlist_id || video.playlist_id === "standalone"),
+    [playlistVideos, activePlaylistId],
+  );
 
+  // Compute resolved initial scope
+  const resolvedDefault = useMemo(() => {
+    if (initialScope === "all") {
+      return hasActualPlaylist ? "all" : (activeVideoId || scopeVideos[0]?.video_id || "all");
+    }
+    return initialScope || (hasActualPlaylist ? "all" : (activeVideoId || scopeVideos[0]?.video_id || "all"));
+  }, [initialScope, hasActualPlaylist, activeVideoId, scopeVideos]);
+
+  const [selectedScope, setSelectedScope] = useState<string>(resolvedDefault);
+
+  // Synchronize when initialScope or activeVideoId changes
   useEffect(() => {
     if (initialScope) {
-      setSelectedScope(initialScope);
+      if (initialScope === "all" && !hasActualPlaylist) {
+        setSelectedScope(activeVideoId || scopeVideos[0]?.video_id || "");
+      } else {
+        setSelectedScope(initialScope);
+      }
+    } else if (activeVideoId && !hasActualPlaylist) {
+      setSelectedScope(activeVideoId);
     }
-  }, [initialScope]);
+  }, [initialScope, activeVideoId, hasActualPlaylist, scopeVideos]);
+
+  // When activeVideoId changes in studio, switch scope to that video unless explicitly searching all in playlist
+  useEffect(() => {
+    if (activeVideoId) {
+      if (!hasActualPlaylist || selectedScope !== "all") {
+        setSelectedScope(activeVideoId);
+      }
+    }
+  }, [activeVideoId, hasActualPlaylist]);
+
+  // Ensure current effective scope matches what's rendered in DOM
+  const effectiveScope = useMemo(() => {
+    if (selectedScope === "all") {
+      return hasActualPlaylist ? "all" : (activeVideoId || scopeVideos[0]?.video_id || "");
+    }
+    const exists = scopeVideos.some((v) => v.video_id === selectedScope);
+    if (exists) return selectedScope;
+    return activeVideoId || scopeVideos[0]?.video_id || (hasActualPlaylist ? "all" : "");
+  }, [selectedScope, hasActualPlaylist, activeVideoId, scopeVideos]);
 
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
@@ -91,8 +140,12 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({
         min_score: 0.50,
       };
 
-      if (selectedScope && selectedScope !== "all") {
-        requestPayload.video_id = selectedScope;
+      if (effectiveScope && effectiveScope !== "all") {
+        requestPayload.video_id = effectiveScope;
+      } else if (hasActualPlaylist && activePlaylistId) {
+        requestPayload.playlist_id = activePlaylistId;
+      } else if (!hasActualPlaylist && activeVideoId) {
+        requestPayload.video_id = activeVideoId;
       }
 
       const response = await fetch(`${apiBaseUrl}/api/chat`, {
@@ -155,31 +208,30 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({
         </div>
 
         {/* Video Query Scope Selector (Entire Playlist vs Selected Video) */}
-        {(() => {
-          const hasActualPlaylist = playlistVideos.some(
-            (v) => (v as any).playlist_id && (v as any).playlist_id !== "standalone"
-          );
-
-          return (
-            <div style={styles.scopeSelectorContainer}>
-              <label style={styles.scopeLabel}>Search Scope:</label>
-              <select
-                value={selectedScope}
-                onChange={(e) => setSelectedScope(e.target.value)}
-                style={styles.scopeSelect}
-              >
-                {hasActualPlaylist && (
-                  <option value="all">📚 Entire Playlist (All Lectures)</option>
-                )}
-                {playlistVideos.map((v) => (
-                  <option key={v.video_id} value={v.video_id}>
-                    🎬 {v.title ? (v.title.length > 40 ? v.title.slice(0, 38) + "..." : v.title) : v.video_id}
-                  </option>
-                ))}
-              </select>
-            </div>
-          );
-        })()}
+        <div style={styles.scopeSelectorContainer}>
+          <label style={styles.scopeLabel}>Search Scope:</label>
+          <select
+            value={effectiveScope}
+            onChange={(e) => {
+              const val = e.target.value;
+              setSelectedScope(val);
+              if (val && val !== "all") {
+              const target = scopeVideos.find((v) => v.video_id === val);
+                onSelectVideo?.(val, target?.title || `Video ${val}`);
+              }
+            }}
+            style={styles.scopeSelect}
+          >
+            {hasActualPlaylist && (
+              <option value="all">📚 Entire Playlist (All Lectures)</option>
+            )}
+            {scopeVideos.map((v) => (
+              <option key={v.video_id} value={v.video_id}>
+                🎬 {v.title ? (v.title.length > 40 ? v.title.slice(0, 38) + "..." : v.title) : v.video_id}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       <div style={styles.messageList}>

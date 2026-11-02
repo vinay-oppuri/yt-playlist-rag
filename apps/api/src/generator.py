@@ -98,7 +98,7 @@ def build_excerpts_context(hits: List[Dict[str, Any]]) -> str:
     for idx, hit in enumerate(hits, start=1):
         title = hit.get("video_title", "Video")
         time_str = hit.get("timestamp") or f"{int(hit.get('start', 0))}s"
-        text = hit.get("text", "")
+        text = hit.get("body") or hit.get("text", "")
         blocks.append(f'[{idx}] "{title}" @ {time_str}\n{text}')
     return "\n\n".join(blocks)
 
@@ -155,6 +155,7 @@ def generate_answer(
     top_k: int = 5,
     min_score: float = MIN_SIMILARITY_SCORE,
     filter_video_id: Optional[str] = None,
+    filter_playlist_id: Optional[str] = None,
     enable_jit: bool = True,
 ) -> Dict[str, Any]:
     """
@@ -185,11 +186,14 @@ def generate_answer(
         videos_collection=videos_collection,
         limit=top_k,
         filter_video_id=filter_video_id,
+        filter_playlist_id=filter_playlist_id,
         enable_jit=enable_jit,
     )
 
     # Filter by minimum similarity score
-    qualifying_hits = [h for h in raw_hits if h.get("score", 0.0) >= min_score]
+    qualifying_hits = [
+        h for h in raw_hits if h.get("rerank_score", h.get("score", 0.0)) >= min_score
+    ]
 
     # GUARD 1: No retrieved chunks survived the score threshold -> Refuse immediately
     if not qualifying_hits:

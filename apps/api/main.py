@@ -52,6 +52,7 @@ class SearchRequest(BaseModel):
     videos_collection: str = Field(default="yt_videos", description="Qdrant collection name for Tier 1 video registry")
     limit: int = Field(default=5, ge=1, le=50, description="Maximum results to return")
     video_id: Optional[str] = Field(default=None, description="Optional filter by specific YouTube video ID")
+    playlist_id: Optional[str] = Field(default=None, description="Optional filter by specific YouTube playlist ID")
     score_threshold: Optional[float] = Field(default=None, ge=0.0, le=1.0, description="Minimum cosine similarity score")
     enable_jit: bool = Field(default=True, description="Enable JIT on-demand transcript fetching")
 
@@ -63,6 +64,7 @@ class ChatRequest(BaseModel):
     top_k: int = Field(default=5, ge=1, le=20, description="Number of context chunks to retrieve")
     min_score: float = Field(default=0.50, ge=0.0, le=1.0, description="Minimum similarity score cutoff")
     video_id: Optional[str] = Field(default=None, description="Optional filter to a specific video")
+    playlist_id: Optional[str] = Field(default=None, description="Optional filter to a specific playlist")
     enable_jit: bool = Field(default=True, description="Enable JIT on-demand transcript fetching")
 
 
@@ -112,7 +114,7 @@ def health_check():
 
 
 @app.get("/api/videos")
-def get_indexed_videos(collection_name: str = "yt_videos", limit: int = 300):
+def get_indexed_videos(collection_name: str = "yt_videos", limit: int = 1000):
     """
     List all registered video lectures in the Tier 1 registry with transcription states.
     Allows frontend to display playlist library instantly without waiting for chunking.
@@ -197,6 +199,7 @@ def search_transcripts(request: SearchRequest):
             limit=request.limit,
             score_threshold=request.score_threshold,
             filter_video_id=request.video_id,
+            filter_playlist_id=request.playlist_id,
             enable_jit=request.enable_jit,
         )
         return {
@@ -232,6 +235,7 @@ def chat_with_lectures(request: ChatRequest):
             top_k=request.top_k,
             min_score=request.min_score,
             filter_video_id=request.video_id,
+            filter_playlist_id=request.playlist_id,
             enable_jit=request.enable_jit,
         )
         return {

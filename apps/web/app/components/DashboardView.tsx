@@ -267,15 +267,15 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                       </div>
 
                       {/* Horizontal Scroll / Grid of Lectures inside this Playlist */}
-                      <div style={styles.playlistVideosSection}>
-                        <div style={styles.playlistVideosSectionHeader}>
+                      <details style={styles.playlistVideosSection}>
+                        <summary style={{ ...styles.playlistVideosSectionHeader, cursor: "pointer", listStyle: "none" }}>
                           <span style={styles.playlistVideosLabel}>
                             Lectures in this Playlist ({group.videos.length})
                           </span>
                           <span style={styles.playlistVideosHint}>
                             Select any lecture to study individually & ask video-specific questions
                           </span>
-                        </div>
+                        </summary>
 
                         <div style={styles.playlistVideosScroll}>
                           {group.videos.map((vid, idx) => {
@@ -284,7 +284,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                               <div
                                 key={vid.video_id}
                                 style={styles.lectureCard}
-                                onClick={() => onSelectVideoForStudio(vid.video_id, vid.title)}
+                                onClick={() => onSelectVideoForStudio(vid.video_id, vid.title, vid.video_id)}
                               >
                                 <div style={styles.lectureThumbWrapper}>
                                   <img
@@ -314,7 +314,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                                       style={styles.lecturePlayBtn}
                                       onClick={(e) => {
                                         e.stopPropagation();
-                                        onSelectVideoForStudio(vid.video_id, vid.title);
+                                        onSelectVideoForStudio(vid.video_id, vid.title, vid.video_id);
                                       }}
                                       title="Study this video & ask targeted questions"
                                     >
@@ -329,7 +329,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                             );
                           })}
                         </div>
-                      </div>
+                      </details>
                     </div>
                   );
                 })}

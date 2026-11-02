@@ -50,7 +50,7 @@ export default function Home() {
     "Sorry HackerR**k 😈 I Built a product That Takes Your Real Interview"
   );
   // Initial Chat scope in Studio ("all" or specific video_id)
-  const [studioChatScope, setStudioChatScope] = useState<string>("all");
+  const [studioChatScope, setStudioChatScope] = useState<string>("A9Q0DrxgLrk");
 
   // Query handoff to Explorer tab
   const [explorerQuery, setExplorerQuery] = useState("");
@@ -74,6 +74,7 @@ export default function Home() {
                     status: v.is_transcribed ? "success" : v.status || "registered",
                     playlist_id: v.playlist_id,
                     playlist_title: v.playlist_title,
+                    playlist_index: v.playlist_index,
                   }))
                 );
               }
@@ -124,7 +125,12 @@ export default function Home() {
       // Merge unique by video_id
       const existingIds = new Set(prev.map((v) => v.video_id));
       const filteredNew = newVideos.filter((v) => !existingIds.has(v.video_id));
-      return [...filteredNew, ...prev];
+      return [...filteredNew, ...prev].sort((a, b) => {
+        const groupA = a.playlist_id || a.video_id;
+        const groupB = b.playlist_id || b.video_id;
+        if (groupA !== groupB) return groupA.localeCompare(groupB);
+        return (a.playlist_index || 0) - (b.playlist_index || 0);
+      });
     });
 
     const valid = newVideos.find((v) => v.status === "success") || newVideos[0];
@@ -168,6 +174,7 @@ export default function Home() {
             onSelectVideo={(id, title) => {
               setActiveVideoId(id);
               setActiveVideoTitle(title);
+              setStudioChatScope(id);
               playerRef.current?.loadVideo(id, 0);
             }}
             onSeek={handleSeek}

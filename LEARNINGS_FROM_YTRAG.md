@@ -142,3 +142,27 @@ To know whether a change (chunk size, overlap, embedding model, or prompt) actua
 | **Refusal & Grounding** | 3-tier refusal guardrails | To implement in `generator.py` | 🚀 Build next |
 | **Web Frontend** | Plain HTML + YouTube IFrame | Next.js (`apps/web`) + IFrame API | 🚀 Build next |
 | **Golden Eval** | `eval/golden.json` CLI | To add | 🎯 Optional Polish |
+
+---
+
+## 8. TODO: Durable Ingestion for Very Large Playlists (300+ Videos)
+
+The current two-tier design makes playlist metadata available quickly and can transcribe relevant videos on demand. Full-playlist ingestion still runs sequentially in an in-memory background thread, so it takes a long time to finish and cannot reliably resume after an API restart.
+
+### Target Approach
+
+- [ ] **Register first:** Keep flat playlist extraction and video-title indexing as the fast response path. Return a durable ingestion job ID rather than waiting for transcript processing.
+- [ ] **Use a durable queue:** Move transcript work out of the API process into persistent jobs so pending work survives restarts and can be retried.
+- [ ] **Bound concurrency:** Process multiple videos with a small configurable worker pool and rate limits to improve throughput without overloading YouTube, the embedding model, or Qdrant.
+- [ ] **Resume safely:** Persist per-video states, attempts, errors, and progress. Make retries idempotent and allow interrupted playlists to continue without duplicating vectors.
+- [ ] **Prioritize questions:** Let chat trigger JIT transcription for the most relevant unindexed videos while the queue continues processing the rest.
+- [ ] **Keep chat responsive:** Isolate query and ingestion capacity so a large playlist job does not block retrieval or stop the entire ingestion job when a question arrives.
+- [ ] **Expose progress:** Add job status and cancellation endpoints, plus UI progress, retry, and resume controls.
+
+### Acceptance Criteria
+
+- Playlist submission returns after metadata registration, without waiting for transcript ingestion.
+- A 300+ video job continues after API restarts and reports accurate per-video and overall progress.
+- Failed videos can retry independently; completed videos are not fetched or embedded again.
+- Chat can answer from relevant indexed or JIT-loaded videos while background ingestion continues.
+- Worker count and provider rate limits are configurable, and job state is observable through health and status endpoints.

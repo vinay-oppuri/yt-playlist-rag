@@ -21,18 +21,36 @@ export const IngestModal: React.FC<IngestModalProps> = ({
   const [overlapWords, setOverlapWords] = useState(35);
   const [collectionName, setCollectionName] = useState("yt_transcripts");
   const [showAdvanced, setShowAdvanced] = useState(false);
-  const [ingestMode, setIngestMode] = useState<"video" | "playlist">("playlist");
+  const [ingestMode, setIngestMode] = useState<"video" | "playlist" | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<{ type: "success" | "error"; text: string } | null>(null);
 
   const hasVideoParam = url.includes("v=");
   const hasPlaylistParam = url.includes("list=");
+  const needsScopeChoice = hasVideoParam && hasPlaylistParam;
 
   if (!isOpen) return null;
 
   const handleIngest = async (targetUrl?: string) => {
     const finalUrl = (targetUrl || url).trim();
     if (!finalUrl) return;
+
+    // A watch URL may carry playlist context. Remove it for video-only ingestion;
+    // the backend correctly treats any remaining list= parameter as a playlist.
+    let ingestUrl = finalUrl;
+    if (needsScopeChoice && !ingestMode) {
+      setResult({ type: "error", text: "Choose whether to ingest this video only or the entire playlist." });
+      return;
+    }
+    if (ingestMode === "video" && finalUrl.includes("list=")) {
+      try {
+        const parsed = new URL(finalUrl);
+        parsed.searchParams.delete("list");
+        ingestUrl = parsed.toString();
+      } catch {
+        ingestUrl = finalUrl.replace(/([?&])list=[^&]+&?/, "$1").replace(/[?&]$/, "");
+      }
+    }
 
     setIsLoading(true);
     setResult(null);
@@ -44,11 +62,11 @@ export const IngestModal: React.FC<IngestModalProps> = ({
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          url: finalUrl,
+          url: ingestUrl,
           collection_name: collectionName,
           target_words: targetWords,
           overlap_words: overlapWords,
-          force_playlist: isPlaylistMode,
+          force_playlist: isPlaylistMode && ingestUrl.includes("list="),
         }),
       });
 
@@ -129,14 +147,18 @@ export const IngestModal: React.FC<IngestModalProps> = ({
               type="text"
               placeholder="https://www.youtube.com/watch?v=... or playlist?list=..."
               value={url}
-              onChange={(e) => setUrl(e.target.value)}
+              onChange={(e) => {
+                setUrl(e.target.value);
+                setIngestMode(null);
+                setResult(null);
+              }}
               className="input-field"
               disabled={isLoading}
             />
             <button
               className="btn-primary"
               onClick={() => handleIngest()}
-              disabled={isLoading || !url.trim()}
+              disabled={isLoading || !url.trim() || (needsScopeChoice && !ingestMode)}
               style={{ whiteSpace: "nowrap" }}
             >
               {isLoading ? (
@@ -156,7 +178,7 @@ export const IngestModal: React.FC<IngestModalProps> = ({
           </div>
 
           {/* Mode Selector for URLs with both video and playlist */}
-          {hasVideoParam && hasPlaylistParam && (
+          {needsScopeChoice && (
             <div style={styles.scopeBox}>
               <span style={styles.scopeNotice}>
                 Detected video inside a playlist. Choose ingestion scope:

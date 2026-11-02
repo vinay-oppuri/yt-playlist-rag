@@ -1,5 +1,12 @@
 [
   {
+    "question": "what is pydantic",
+    "expected_video_id": "lRArylZCeOs",
+    "expected_around_sec": 767,
+    "tolerance_sec": 120,
+    "notes": "FastAPI for Machine Learning playlist: Pydantic validation explanation."
+  },
+  {
     "question": "What is the difference between memoization and tabulation?",
     "expected_video_id": null,
     "expected_around_sec": null,

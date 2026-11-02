@@ -28,6 +28,7 @@ export const YouTubePlayer = forwardRef<YouTubePlayerRef, YouTubePlayerProps>(
     const [currentVideoId, setCurrentVideoId] = useState(initialVideoId);
     const [lastJumpTime, setLastJumpTime] = useState<number | null>(null);
     const [jumpNotice, setJumpNotice] = useState<string | null>(null);
+    const pendingJumpRef = useRef<{ videoId: string; startSeconds: number } | null>(null);
 
     // Expose seekTo and loadVideo to parent component
     useImperativeHandle(ref, () => ({
@@ -55,9 +56,30 @@ export const YouTubePlayer = forwardRef<YouTubePlayerRef, YouTubePlayerProps>(
           const secs = Math.floor(startSeconds % 60);
           setJumpNotice(`Switched video & jumped to ${mins}:${secs < 10 ? "0" : ""}${secs}`);
           setTimeout(() => setJumpNotice(null), 4000);
+        } else {
+          pendingJumpRef.current = { videoId, startSeconds };
         }
       },
     }));
+
+    // Synchronize player with initialVideoId prop changes
+    useEffect(() => {
+      if (initialVideoId && initialVideoId !== currentVideoId) {
+        setCurrentVideoId(initialVideoId);
+        if (playerRef.current && typeof playerRef.current.loadVideoById === "function") {
+          try {
+            playerRef.current.loadVideoById({
+              videoId: initialVideoId,
+              startSeconds: 0,
+            });
+          } catch (e) {
+            console.warn("loadVideoById error:", e);
+          }
+        } else {
+          pendingJumpRef.current = { videoId: initialVideoId, startSeconds: 0 };
+        }
+      }
+    }, [initialVideoId, currentVideoId]);
 
     useEffect(() => {
       // 1. Load YouTube IFrame API Script if not already loaded
@@ -79,11 +101,18 @@ export const YouTubePlayer = forwardRef<YouTubePlayerRef, YouTubePlayerProps>(
             modestbranding: 1,
             rel: 0,
             enablejsapi: 1,
-            origin: window.location.origin,
+            origin: typeof window !== "undefined" ? window.location.origin : undefined,
           },
           events: {
             onReady: () => {
               setIsReady(true);
+              if (pendingJumpRef.current && playerRef.current) {
+                const { videoId, startSeconds } = pendingJumpRef.current;
+                pendingJumpRef.current = null;
+                try {
+                  playerRef.current.loadVideoById({ videoId, startSeconds });
+                } catch (e) {}
+              }
             },
           },
         });
@@ -101,7 +130,7 @@ export const YouTubePlayer = forwardRef<YouTubePlayerRef, YouTubePlayerProps>(
           playerRef.current = null;
         }
       };
-    }, [currentVideoId]);
+    }, []);
 
     return (
       <div style={styles.container}>

@@ -9,6 +9,7 @@ export interface IngestedVideo {
   status: string;
   playlist_id?: string;
   playlist_title?: string;
+  playlist_index?: number;
 }
 
 interface IngestionBarProps {

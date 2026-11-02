@@ -1,4 +1,5 @@
 import os
+import re
 import sys
 import threading
 import time
@@ -29,6 +30,20 @@ if sys.platform == "win32":
 
 DEFAULT_TRANSCRIPTS_COLLECTION = "yt_transcripts"
 DEFAULT_VIDEOS_COLLECTION = "yt_videos"
+_QUERY_STOPWORDS = {
+    "a", "about", "an", "and", "are", "as", "at", "be", "by", "can", "do",
+    "does", "explain", "for", "from", "how", "i", "in", "is", "it", "me",
+    "of", "on", "or", "please", "tell", "that", "the", "this", "to", "was",
+    "what", "when", "where", "which", "who", "why", "with", "you",
+}
+
+
+def _query_terms(text: str) -> List[str]:
+    """Normalize a query into useful exact-match terms for hybrid retrieval."""
+    return [
+        term for term in re.findall(r"[\w'-]+", text.lower())
+        if len(term) > 1 and term not in _QUERY_STOPWORDS
+    ]
 
 
 class VectorStore:
@@ -62,6 +77,10 @@ class VectorStore:
         self._bg_stop_event = threading.Event()
         self._bg_lock = threading.Lock()
         self._transcribe_lock = threading.RLock()
+        self._index_lock = threading.Lock()
+        self._indexed_collections: set[str] = set()
+        self._playlist_reconcile_lock = threading.Lock()
+        self._reconciled_playlists: set[tuple[str, str]] = set()
         self._bg_status: Dict[str, Any] = {
             "is_running": False,
             "playlist_id": None,
@@ -104,10 +123,84 @@ class VectorStore:
                         distance=models.Distance.COSINE,
                     ),
                 )
+            self._ensure_payload_indexes(collection_name)
             return True
         except Exception as e:
             print(f"Error checking/creating collection '{collection_name}': {e}")
             raise
+
+    def _ensure_payload_indexes(self, collection_name: str) -> None:
+        """Create the text and keyword indexes used by hybrid retrieval and filters."""
+        if collection_name in self._indexed_collections:
+            return
+        with self._index_lock:
+            if collection_name in self._indexed_collections:
+                return
+            indexes = (
+                ("body", models.TextIndexParams(
+                    type=models.TextIndexType.TEXT,
+                    tokenizer=models.TokenizerType.WORD,
+                    lowercase=True,
+                )),
+                ("title", models.TextIndexParams(
+                    type=models.TextIndexType.TEXT,
+                    tokenizer=models.TokenizerType.WORD,
+                    lowercase=True,
+                )),
+                ("video_title", models.TextIndexParams(
+                    type=models.TextIndexType.TEXT,
+                    tokenizer=models.TokenizerType.WORD,
+                    lowercase=True,
+                )),
+                ("video_id", models.PayloadSchemaType.KEYWORD),
+                ("playlist_id", models.PayloadSchemaType.KEYWORD),
+            )
+            existing_schema = self.client.get_collection(collection_name).payload_schema or {}
+            for field_name, schema in indexes:
+                if field_name in existing_schema:
+                    continue
+                try:
+                    self.client.create_payload_index(
+                        collection_name=collection_name,
+                        field_name=field_name,
+                        field_schema=schema,
+                        wait=True,
+                    )
+                except Exception as exc:
+                    # Existing indexes are expected on a warm collection. Keep
+                    # working if a server version cannot add optional indexes.
+                    print(f"[Qdrant] Payload index {collection_name}.{field_name}: {exc}")
+            self._indexed_collections.add(collection_name)
+
+    def _lexical_candidates(
+        self,
+        collection_name: str,
+        field_name: str,
+        query: str,
+        limit: int,
+        extra_conditions: Optional[List[Any]] = None,
+    ) -> Dict[str, Any]:
+        """Fetch exact-token candidates from Qdrant's full-text payload index."""
+        candidates: Dict[str, Any] = {}
+        for term in dict.fromkeys(_query_terms(query)):
+            conditions = list(extra_conditions or [])
+            conditions.append(models.FieldCondition(
+                key=field_name,
+                match=models.MatchText(text=term),
+            ))
+            try:
+                points, _ = self.client.scroll(
+                    collection_name=collection_name,
+                    scroll_filter=models.Filter(must=conditions),
+                    limit=limit,
+                    with_payload=True,
+                    with_vectors=False,
+                )
+                for point in points:
+                    candidates[str(point.id)] = point
+            except Exception as exc:
+                print(f"[Qdrant] Full-text lookup for {field_name} failed: {exc}")
+        return candidates
 
     def embed_texts(self, texts: List[str], batch_size: int = 64) -> List[List[float]]:
         """Generate dense vector embeddings for a list of text strings."""
@@ -197,6 +290,7 @@ class VectorStore:
                     "url": item.get("url", f"https://www.youtube.com/watch?v={vid}"),
                     "playlist_id": item.get("playlist_id"),
                     "playlist_title": item.get("playlist_title"),
+                    "playlist_index": item.get("playlist_index"),
                     "is_transcribed": bool(item.get("is_transcribed", False)),
                     "chunks_count": int(item.get("chunks_count", 0)),
                     "status": item.get("status", "registered"),
@@ -220,6 +314,7 @@ class VectorStore:
         collection_name: str = DEFAULT_VIDEOS_COLLECTION,
         limit: int = 5,
         score_threshold: Optional[float] = None,
+        filter_playlist_id: Optional[str] = None,
     ) -> List[Dict[str, Any]]:
         """
         Search Qdrant video metadata registry to route a query to the most relevant videos.
@@ -229,25 +324,47 @@ class VectorStore:
         query_vector = self.embed_query(query)
 
         try:
+            conditions = []
+            if filter_playlist_id and filter_playlist_id != "standalone":
+                conditions.append(models.FieldCondition(
+                    key="playlist_id", match=models.MatchValue(value=filter_playlist_id)
+                ))
+            query_filter = models.Filter(must=conditions) if conditions else None
+            candidate_limit = min(max(limit * 5, 50), 200)
             response = self.client.query_points(
                 collection_name=collection_name,
                 query=query_vector,
-                limit=limit,
-                score_threshold=score_threshold,
+                limit=candidate_limit,
+                query_filter=query_filter,
                 with_payload=True,
             )
         except Exception as e:
             print(f"Error querying video registry '{collection_name}': {e}")
             return []
 
+        points_by_id = {str(point.id): point for point in response.points}
+        lexical_filter = list(conditions)
+        lexical_points = self._lexical_candidates(
+            collection_name, "title", query, candidate_limit, lexical_filter
+        )
+        for point_id, point in lexical_points.items():
+            points_by_id.setdefault(point_id, point)
+
+        query_terms = set(_query_terms(query))
         results: List[Dict[str, Any]] = []
-        for point in response.points:
+        for point_id, point in points_by_id.items():
             payload = point.payload or {}
+            title = str(payload.get("title", ""))
+            title_terms = set(_query_terms(title))
+            lexical = len(query_terms & title_terms) / max(1, len(query_terms))
+            point_score = getattr(point, "score", None)
+            semantic_score = float(point_score) if point_score is not None else 0.0
             results.append(
                 {
-                    "score": round(float(point.score), 4),
+                    "score": round(semantic_score, 4),
+                    "rerank_score": round(0.5 * semantic_score + 0.5 * lexical, 4),
                     "video_id": payload.get("video_id"),
-                    "title": payload.get("title"),
+                    "title": title,
                     "url": payload.get("url"),
                     "playlist_id": payload.get("playlist_id"),
                     "playlist_title": payload.get("playlist_title"),
@@ -256,7 +373,10 @@ class VectorStore:
                     "status": payload.get("status", "registered"),
                 }
             )
-        return results
+        results.sort(key=lambda item: item["rerank_score"], reverse=True)
+        if score_threshold is not None:
+            results = [item for item in results if item["score"] >= score_threshold]
+        return results[:limit]
 
     def list_videos(
         self,
@@ -266,27 +386,34 @@ class VectorStore:
         """List all videos registered in the Qdrant video metadata registry."""
         try:
             self.ensure_collection(collection_name)
-            res, _ = self.client.scroll(
-                collection_name=collection_name,
-                limit=limit,
-                with_payload=True,
-                with_vectors=False,
-            )
             videos = []
-            for p in res:
-                payload = p.payload or {}
-                videos.append(
-                    {
-                        "video_id": payload.get("video_id"),
-                        "title": payload.get("title"),
-                        "url": payload.get("url"),
-                        "playlist_id": payload.get("playlist_id"),
-                        "playlist_title": payload.get("playlist_title"),
-                        "is_transcribed": bool(payload.get("is_transcribed", False)),
-                        "chunks_count": int(payload.get("chunks_count", 0)),
-                        "status": payload.get("status", "registered"),
-                    }
+            offset = None
+            while len(videos) < limit:
+                page, offset = self.client.scroll(
+                    collection_name=collection_name,
+                    limit=min(256, limit - len(videos)),
+                    offset=offset,
+                    with_payload=True,
+                    with_vectors=False,
                 )
+                for p in page:
+                    payload = p.payload or {}
+                    videos.append(
+                        {
+                            "video_id": payload.get("video_id"),
+                            "title": payload.get("title"),
+                            "url": payload.get("url"),
+                            "playlist_id": payload.get("playlist_id"),
+                            "playlist_title": payload.get("playlist_title"),
+                            "playlist_index": payload.get("playlist_index"),
+                            "is_transcribed": bool(payload.get("is_transcribed", False)),
+                            "chunks_count": int(payload.get("chunks_count", 0)),
+                            "status": payload.get("status", "registered"),
+                        }
+                    )
+                if offset is None or not page:
+                    break
+            videos.sort(key=lambda video: (video.get("playlist_id") or "", video.get("playlist_index") or 10**9))
             return videos
         except Exception as e:
             print(f"Error listing videos from '{collection_name}': {e}")
@@ -315,6 +442,132 @@ class VectorStore:
             return cnt.count > 0
         except Exception:
             return False
+
+    def refresh_indexed_video_metadata(
+        self,
+        video_id: str,
+        transcripts_collection: str = DEFAULT_TRANSCRIPTS_COLLECTION,
+        videos_collection: str = DEFAULT_VIDEOS_COLLECTION,
+        playlist_id: Optional[str] = None,
+        reembed_title_prefix: bool = True,
+    ) -> int:
+        """Repair chunk scope/title metadata from the authoritative video registry.
+
+        Older indexed chunks may predate playlist metadata. Without this repair,
+        playlist filters silently hide otherwise valid transcript evidence.
+        """
+        point_uuid = str(uuid.uuid5(uuid.NAMESPACE_DNS, f"video_{video_id}"))
+        try:
+            registry_points = self.client.retrieve(
+                collection_name=videos_collection,
+                ids=[point_uuid],
+                with_payload=True,
+            )
+        except Exception:
+            registry_points = []
+        registry = registry_points[0].payload if registry_points else {}
+        resolved_title = (registry or {}).get("title") or f"Video {video_id}"
+        resolved_playlist_id = playlist_id or (registry or {}).get("playlist_id")
+        resolved_playlist_title = (registry or {}).get("playlist_title")
+
+        video_filter = models.Filter(must=[models.FieldCondition(
+            key="video_id", match=models.MatchValue(value=video_id)
+        )])
+        offset = None
+        repaired = 0
+        while True:
+            points, offset = self.client.scroll(
+                collection_name=transcripts_collection,
+                scroll_filter=video_filter,
+                limit=128,
+                offset=offset,
+                with_payload=True,
+                with_vectors=False,
+            )
+            if not points:
+                break
+
+            points_to_reembed = []
+            unchanged_text = False
+            for point in points:
+                payload = point.payload or {}
+                body = str(payload.get("body", ""))
+                new_text = f"{resolved_title}\n\n{body}" if body and reembed_title_prefix else payload.get("text", "")
+                changed_text = payload.get("text") != new_text
+                payload_updates: Dict[str, Any] = {
+                    "video_title": resolved_title,
+                    "text": new_text,
+                }
+                if resolved_playlist_id:
+                    payload_updates["playlist_id"] = resolved_playlist_id
+                if resolved_playlist_title:
+                    payload_updates["playlist_title"] = resolved_playlist_title
+
+                if changed_text:
+                    payload.update(payload_updates)
+                    points_to_reembed.append((point.id, payload))
+                else:
+                    unchanged_text = True
+                repaired += 1
+
+            if points_to_reembed:
+                vectors = self.embed_texts([payload["text"] for _, payload in points_to_reembed])
+                self.client.upsert(
+                    collection_name=transcripts_collection,
+                    points=[
+                        models.PointStruct(id=point_id, vector=vector, payload=payload)
+                        for (point_id, payload), vector in zip(points_to_reembed, vectors)
+                    ],
+                )
+            if unchanged_text:
+                shared_updates: Dict[str, Any] = {"video_title": resolved_title}
+                if resolved_playlist_id:
+                    shared_updates["playlist_id"] = resolved_playlist_id
+                if resolved_playlist_title:
+                    shared_updates["playlist_title"] = resolved_playlist_title
+                self.client.set_payload(
+                    collection_name=transcripts_collection,
+                    payload=shared_updates,
+                    points=models.FilterSelector(filter=video_filter),
+                )
+
+            if offset is None:
+                break
+
+        if registry_points:
+            self.client.set_payload(
+                collection_name=videos_collection,
+                payload={"status": "success", "is_transcribed": repaired > 0, "chunks_count": repaired},
+                points=[point_uuid],
+            )
+        return repaired
+
+    def reconcile_playlist_chunks(
+        self,
+        playlist_id: str,
+        transcripts_collection: str = DEFAULT_TRANSCRIPTS_COLLECTION,
+        videos_collection: str = DEFAULT_VIDEOS_COLLECTION,
+    ) -> None:
+        """Backfill playlist metadata on legacy chunks once per playlist/process."""
+        reconcile_key = (transcripts_collection, playlist_id)
+        if reconcile_key in self._reconciled_playlists:
+            return
+        with self._playlist_reconcile_lock:
+            if reconcile_key in self._reconciled_playlists:
+                return
+            for video in self.list_videos(collection_name=videos_collection, limit=1000):
+                if video.get("playlist_id") != playlist_id:
+                    continue
+                video_id = video.get("video_id")
+                if video_id and self.is_video_transcribed(video_id, collection_name=transcripts_collection):
+                    self.refresh_indexed_video_metadata(
+                        video_id=video_id,
+                        transcripts_collection=transcripts_collection,
+                        videos_collection=videos_collection,
+                        playlist_id=playlist_id,
+                        reembed_title_prefix=False,
+                    )
+            self._reconciled_playlists.add(reconcile_key)
 
     def start_background_playlist_ingest(
         self,
@@ -381,6 +634,7 @@ class VectorStore:
                         videos_collection=videos_collection,
                         target_words=target_words,
                         overlap_words=overlap_words,
+                        playlist_id=playlist_id,
                     )
                     with self._bg_lock:
                         self._bg_status["completed"] += 1
@@ -434,6 +688,7 @@ class VectorStore:
         videos_collection: str = DEFAULT_VIDEOS_COLLECTION,
         target_words: int = 180,
         overlap_words: int = 35,
+        playlist_id: Optional[str] = None,
     ) -> Dict[str, Any]:
         """
         Just-In-Time (JIT) transcript extraction and chunking.
@@ -442,24 +697,61 @@ class VectorStore:
         Thread-safe via self._transcribe_lock.
         """
         if self.is_video_transcribed(video_id, collection_name=transcripts_collection):
-            chunk_cnt = 0
+            # Inspect existing chunks: if they are in Devanagari, purge and upgrade to English
             try:
-                cnt = self.client.count(
+                sample_pts, _ = self.client.scroll(
                     collection_name=transcripts_collection,
-                    count_filter=models.Filter(
+                    scroll_filter=models.Filter(
                         must=[models.FieldCondition(key="video_id", match=models.MatchValue(value=video_id))]
                     ),
-                    exact=True,
+                    limit=1,
+                    with_payload=True,
                 )
-                chunk_cnt = cnt.count
+                if sample_pts and sample_pts[0].payload:
+                    sample_text = sample_pts[0].payload.get("text", "")
+                    if re.search(r"[\u0900-\u097F]", sample_text):
+                        print(f"[Language Upgrade] Video {video_id} was indexed with Devanagari script. Purging old chunks to re-index in English...")
+                        self.client.delete(
+                            collection_name=transcripts_collection,
+                            points_selector=models.FilterSelector(
+                                filter=models.Filter(
+                                    must=[models.FieldCondition(key="video_id", match=models.MatchValue(value=video_id))]
+                                )
+                            ),
+                        )
+                    else:
+                        chunk_cnt = 0
+                        try:
+                            cnt = self.client.count(
+                                collection_name=transcripts_collection,
+                                count_filter=models.Filter(
+                                    must=[models.FieldCondition(key="video_id", match=models.MatchValue(value=video_id))]
+                                ),
+                                exact=True,
+                            )
+                            chunk_cnt = cnt.count
+                        except Exception:
+                            chunk_cnt = 1
+                        chunk_cnt = self.refresh_indexed_video_metadata(
+                            video_id=video_id,
+                            transcripts_collection=collection_name,
+                            videos_collection=videos_collection,
+                            playlist_id=playlist_id,
+                        ) or chunk_cnt
+                        return {"status": "success", "video_id": video_id, "chunks": chunk_cnt, "already_indexed": True}
             except Exception:
-                chunk_cnt = 1
-            return {"status": "success", "video_id": video_id, "chunks": chunk_cnt, "already_indexed": True}
+                pass
 
         with self._transcribe_lock:
             # Double check in case another thread just completed it
             if self.is_video_transcribed(video_id, collection_name=transcripts_collection):
-                return {"status": "success", "video_id": video_id, "chunks": 1, "already_indexed": True}
+                chunk_count = self.refresh_indexed_video_metadata(
+                    video_id=video_id,
+                    transcripts_collection=transcripts_collection,
+                    videos_collection=videos_collection,
+                    playlist_id=playlist_id,
+                )
+                return {"status": "success", "video_id": video_id, "chunks": chunk_count or 1, "already_indexed": True}
 
             target_url = url or f"https://www.youtube.com/watch?v={video_id}"
             print(f"[JIT] Fetching on-demand transcript for video {video_id} ('{title or target_url}')...")
@@ -480,13 +772,30 @@ class VectorStore:
                     pass
                 return {"status": "no_captions", "video_id": video_id, "chunks": 0}
 
+            if not playlist_id:
+                try:
+                    pts = self.client.retrieve(
+                        collection_name=videos_collection,
+                        ids=[point_uuid],
+                        with_payload=True,
+                    )
+                    if pts and pts[0].payload:
+                        playlist_id = pts[0].payload.get("playlist_id")
+                except Exception:
+                    pass
+
             resolved_title = title or f"Video {video_id}"
+            extra_meta: Dict[str, Any] = {}
+            if playlist_id:
+                extra_meta["playlist_id"] = playlist_id
+
             chunks = chunk_transcript(
                 segments=segments,
                 video_id=video_id,
                 video_title=resolved_title,
                 target_words=target_words,
                 overlap_words=overlap_words,
+                extra_metadata=extra_meta,
             )
 
             upserted = self.upsert_chunks(chunks=chunks, collection_name=transcripts_collection)
@@ -512,6 +821,7 @@ class VectorStore:
         limit: int = 5,
         score_threshold: Optional[float] = None,
         filter_video_id: Optional[str] = None,
+        filter_playlist_id: Optional[str] = None,
         enable_jit: bool = True,
     ) -> List[Dict[str, Any]]:
         """
@@ -529,12 +839,19 @@ class VectorStore:
         self.ensure_collection(collection_name)
 
         if enable_jit:
+            if filter_playlist_id and filter_playlist_id != "standalone":
+                self.reconcile_playlist_chunks(
+                    playlist_id=filter_playlist_id,
+                    transcripts_collection=collection_name,
+                    videos_collection=videos_collection,
+                )
             if filter_video_id:
                 # Video-specific filter: JIT ingest this video if not already indexed
                 self.ensure_video_transcribed(
                     video_id=filter_video_id,
                     transcripts_collection=collection_name,
                     videos_collection=videos_collection,
+                    playlist_id=filter_playlist_id,
                 )
             else:
                 # Two-tier semantic routing across video titles
@@ -542,12 +859,17 @@ class VectorStore:
                     top_candidates = self.search_videos(
                         query=query,
                         collection_name=videos_collection,
-                        limit=4,
+                        limit=8 if filter_playlist_id else 4,
+                        filter_playlist_id=filter_playlist_id,
                     )
-                    for idx, cand in enumerate(top_candidates):
-                        score = cand.get("score", 0.0)
+                    # Filter candidates by playlist_id if scope is constrained to a specific playlist
+                    if filter_playlist_id and filter_playlist_id != "standalone":
+                        top_candidates = [c for c in top_candidates if c.get("playlist_id") == filter_playlist_id]
+
+                    for idx, cand in enumerate(top_candidates[:4]):
+                        score = cand.get("rerank_score", cand.get("score", 0.0))
                         is_transcribed = cand.get("is_transcribed", False)
-                        # Check top candidate if score >= 0.20, or subsequent candidate if score >= 0.28
+                        # Route exact title matches as well as semantic title matches.
                         threshold = 0.20 if idx == 0 else 0.28
                         if score >= threshold and not is_transcribed:
                             print(
@@ -560,55 +882,90 @@ class VectorStore:
                                 url=cand.get("url"),
                                 transcripts_collection=collection_name,
                                 videos_collection=videos_collection,
+                                playlist_id=cand.get("playlist_id") or filter_playlist_id,
                             )
                 except Exception as e:
                     print(f"[Two-Tier Routing] Note: {e}")
 
         query_vector = self.embed_query(query)
 
-        query_filter = None
+        must_conditions = []
         if filter_video_id:
-            query_filter = models.Filter(
-                must=[
-                    models.FieldCondition(
-                        key="video_id",
-                        match=models.MatchValue(value=filter_video_id),
-                    )
-                ]
+            must_conditions.append(
+                models.FieldCondition(
+                    key="video_id",
+                    match=models.MatchValue(value=filter_video_id),
+                )
+            )
+        if filter_playlist_id and filter_playlist_id != "standalone":
+            must_conditions.append(
+                models.FieldCondition(
+                    key="playlist_id",
+                    match=models.MatchValue(value=filter_playlist_id),
+                )
             )
 
+        query_filter = models.Filter(must=must_conditions) if must_conditions else None
+
+        candidate_limit = min(max(limit * 5, 50), 200)
         response = self.client.query_points(
             collection_name=collection_name,
             query=query_vector,
             query_filter=query_filter,
-            limit=limit,
-            score_threshold=score_threshold,
+            limit=candidate_limit,
             with_payload=True,
         )
 
+        candidate_points = {str(point.id): (point.payload or {}, float(point.score)) for point in response.points}
+        lexical_conditions = list(must_conditions)
+        lexical_points = self._lexical_candidates(
+            collection_name, "body", query, candidate_limit, lexical_conditions
+        )
+        for point_id, point in lexical_points.items():
+            candidate_points.setdefault(point_id, (point.payload or {}, 0.0))
+        title_points = self._lexical_candidates(
+            collection_name, "video_title", query, candidate_limit, lexical_conditions
+        )
+        for point_id, point in title_points.items():
+            candidate_points.setdefault(point_id, (point.payload or {}, 0.0))
+
         results: List[Dict[str, Any]] = []
-        for point in response.points:
-            payload = point.payload or {}
+        query_terms = set(_query_terms(query))
+        for payload, semantic_score in candidate_points.values():
             start_val = float(payload.get("start", 0.0))
             end_val = float(payload.get("end", 0.0))
             link_sec_val = int(payload.get("link_sec", max(0, int(start_val) - 5)))
+            text = str(payload.get("text", ""))
+            body = str(payload.get("body", text))
+            title = str(payload.get("video_title", ""))
+            # Lightweight second-stage reranking: reward exact transcript and title
+            # term matches while retaining the dense cosine score as the dominant signal.
+            tokens = set(_query_terms(f"{title} {body}"))
+            lexical = len(query_terms & tokens) / max(1, len(query_terms))
+            # Preserve exact keyword matches while allowing dense similarity to
+            # distinguish chunks that discuss the same term in different contexts.
+            rerank_score = 0.5 * semantic_score + 0.5 * lexical
+            if score_threshold is not None and semantic_score < score_threshold and rerank_score < score_threshold:
+                continue
             results.append(
                 {
-                    "score": round(float(point.score), 4),
+                    "score": round(semantic_score, 4),
+                    "rerank_score": round(rerank_score, 4),
                     "chunk_id": payload.get("chunk_id"),
-                    "text": payload.get("text"),
-                    "body": payload.get("body", payload.get("text", "")),
+                    "text": text,
+                    "body": body,
                     "start": start_val,
                     "end": end_val,
                     "link_sec": link_sec_val,
                     "timestamp": payload.get("timestamp") or f"{int(start_val // 60):02d}:{int(start_val % 60):02d}",
                     "duration": payload.get("duration", round(max(0.0, end_val - start_val), 2)),
                     "video_id": payload.get("video_id"),
-                    "video_title": payload.get("video_title"),
+                    "video_title": title,
                     "video_url": payload.get("video_url"),
                 }
             )
-        return results
+        results.sort(key=lambda item: item["rerank_score"], reverse=True)
+        return results[:limit]
 
     def ingest_youtube_url(
         self,
@@ -670,11 +1027,12 @@ class VectorStore:
             }
 
         # ── 1. Register all videos in Tier 1 Registry ──
-        for vid in videos_to_process:
+        for playlist_index, vid in enumerate(videos_to_process, start=1):
             if playlist_id:
                 vid["playlist_id"] = playlist_id
             if playlist_title:
                 vid["playlist_title"] = playlist_title
+            vid["playlist_index"] = playlist_index
 
         self.upsert_videos(videos_to_process, collection_name=videos_collection)
         print(f"Registered {len(videos_to_process)} videos in Tier 1 registry ('{videos_collection}').")
@@ -717,6 +1075,7 @@ class VectorStore:
                 videos_collection=videos_collection,
                 target_words=target_words,
                 overlap_words=overlap_words,
+                playlist_id=playlist_id,
             )
 
             total_chunks_stored = jit_res.get("chunks", 0)
@@ -726,6 +1085,9 @@ class VectorStore:
                 "title": title,
                 "status": status_val,
                 "chunks": total_chunks_stored,
+                "playlist_id": playlist_id,
+                "playlist_title": playlist_title,
+                "playlist_index": target_idx + 1,
             })
 
             # Following videos in the playlist (ordered: subsequent videos first, then previous videos)
@@ -741,6 +1103,9 @@ class VectorStore:
                     "title": vid.get("title", f"Video {vid['video_id']}"),
                     "status": "registered",
                     "chunks": 0,
+                    "playlist_id": playlist_id,
+                    "playlist_title": playlist_title,
+                    "playlist_index": (videos_to_process.index(vid) + 1),
                 })
 
             # Start background ingestion for the following videos until a query is asked
@@ -791,6 +1156,7 @@ class VectorStore:
                 videos_collection=videos_collection,
                 target_words=target_words,
                 overlap_words=overlap_words,
+                playlist_id=playlist_id,
             )
 
             chunks_cnt = jit_res.get("chunks", 0)
@@ -801,6 +1167,9 @@ class VectorStore:
                 "title": title,
                 "status": status_val,
                 "chunks": chunks_cnt,
+                "playlist_id": playlist_id,
+                "playlist_title": playlist_title,
+                "playlist_index": idx + 1,
             })
 
         return {
@@ -809,6 +1178,7 @@ class VectorStore:
             "url": url,
             "is_playlist": is_playlist,
             "playlist_title": playlist_title,
+            "playlist_id": playlist_id,
             "collection_name": collection_name,
             "videos_total": len(videos_to_process),
             "videos_indexed": sum(1 for r in results_summary if r["status"] == "success"),
