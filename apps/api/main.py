@@ -1,5 +1,5 @@
 import os
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Literal, Optional
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -13,7 +13,7 @@ load_dotenv()
 
 app = FastAPI(
     title="YouTube Playlist RAG API",
-    description="API for transcribing YouTube videos/playlists, generating vector embeddings, and answering questions with grounded timestamps.",
+    description="API for transcribing YouTube videos/playlists, generating vector embeddings, and answering context-aware questions with grounded timestamps.",
     version="0.2.0",
 )
 
@@ -57,6 +57,11 @@ class SearchRequest(BaseModel):
     enable_jit: bool = Field(default=True, description="Enable JIT on-demand transcript fetching")
 
 
+class ChatHistoryMessage(BaseModel):
+    role: Literal["user", "assistant"]
+    content: str = Field(..., min_length=1, max_length=1200)
+
+
 class ChatRequest(BaseModel):
     question: str = Field(..., description="User question to answer using indexed video transcripts")
     collection_name: str = Field(default="yt_transcripts", description="Qdrant collection name")
@@ -66,6 +71,7 @@ class ChatRequest(BaseModel):
     video_id: Optional[str] = Field(default=None, description="Optional filter to a specific video")
     playlist_id: Optional[str] = Field(default=None, description="Optional filter to a specific playlist")
     enable_jit: bool = Field(default=True, description="Enable JIT on-demand transcript fetching")
+    chat_history: List[ChatHistoryMessage] = Field(default_factory=list, max_length=8)
 
 
 @app.get("/")
@@ -237,6 +243,7 @@ def chat_with_lectures(request: ChatRequest):
             filter_video_id=request.video_id,
             filter_playlist_id=request.playlist_id,
             enable_jit=request.enable_jit,
+            chat_history=[message.model_dump() for message in request.chat_history],
         )
         return {
             "question": request.question,

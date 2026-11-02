@@ -23,9 +23,60 @@ Rules:
 3. Cite your sources inline using [1], [2], etc., corresponding to the excerpt numbers provided.
 4. Keep your answer concise, direct, and well-grounded (3 to 6 sentences maximum).
 5. Match the language style of the user's question (e.g. if the user asks in Hinglish, respond in natural Hinglish).
-6. Never invent a fact, timestamp, or video title."""
+6. Conversation history may clarify references in the question, but it is NOT a factual source. Every factual claim must be supported by the transcript excerpts.
+7. Never invent a fact, timestamp, or video title."""
 
 _CITATION_REGEX = re.compile(r"\[(\d+)\]")
+_FOLLOWUP_REGEX = re.compile(
+    r"^\s*(?:why\s+(?:is|does|did|are|was|were)\s+(?:it|they|this|that|these|those|he|she)\b|"
+    r"how\s+(?:does|do|did|can|could)\s+(?:it|they|this|that|these|those|he|she)\b|"
+    r"what\s+(?:about|does\s+(?:it|this|that|they)|are\s+(?:they|these|those))\b|"
+    r"(?:and|also|then)\b|give\s+(?:me\s+)?(?:an?\s+)?examples?\b|show\s+(?:me\s+)?examples?\b|"
+    r"tell\s+me\s+more\b|explain\s+(?:more|that|this|it)\b|can\s+you\s+elaborate\b|"
+    r"compare\s+(?:them|these|those)\b|which\s+one\b|"
+    r"(?:kyun|kaise|aur\s+(?:kya|kyun)|isko|usko|isme|usme|ye|woh)\b)",
+    re.IGNORECASE,
+)
+
+
+def _fallback_contextual_query(question: str, chat_history: List[Dict[str, str]]) -> str:
+    """Keep recent user topics when no rewrite model is configured or available."""
+    prior_user_questions = [
+        str(message.get("content", "")).strip()
+        for message in chat_history
+        if message.get("role") == "user" and str(message.get("content", "")).strip()
+    ]
+    return " ".join([*prior_user_questions[-2:], question]).strip()
+
+
+def contextualize_question(
+    question: str,
+    chat_history: Optional[List[Dict[str, str]]] = None,
+) -> tuple[str, bool]:
+    """Rewrite an ambiguous follow-up into a standalone retrieval query."""
+    history = (chat_history or [])[-8:]
+    if not history or not _FOLLOWUP_REGEX.search(question):
+        return question, False
+    # Reuse recent user topics as retrieval context without an extra model call.
+    # The answer-generation prompt still receives the original question and uses
+    # transcript excerpts as its only factual evidence.
+    return _fallback_contextual_query(question, history), True
+
+
+def _conversation_context(chat_history: Optional[List[Dict[str, str]]]) -> str:
+    """Format short recent turns as reference context, never as answer evidence."""
+    turns = []
+    for message in (chat_history or [])[-6:]:
+        role = message.get("role", "user").upper()
+        content = re.sub(r"\s+", " ", str(message.get("content", ""))).strip()
+        if content:
+            turns.append(f"{role}: {content[:500]}")
+    if not turns:
+        return ""
+    return (
+        "CONVERSATION HISTORY (use only to resolve references in the question; "
+        "it is not evidence):\n" + "\n".join(turns)
+    )
 
 
 def _call_gemini(system: str, prompt: str, model_name: str, api_key: str) -> str:
@@ -157,6 +208,7 @@ def generate_answer(
     filter_video_id: Optional[str] = None,
     filter_playlist_id: Optional[str] = None,
     enable_jit: bool = True,
+    chat_history: Optional[List[Dict[str, str]]] = None,
 ) -> Dict[str, Any]:
     """
     Full Grounded RAG Generation Pipeline:
@@ -177,11 +229,13 @@ def generate_answer(
             "retrieved_count": 0,
         }
 
+    retrieval_query, was_contextualized = contextualize_question(clean_question, chat_history)
+
     store = get_vector_store()
     # Halt background chunking so query retrieval gets immediate priority
-    store.stop_background_ingest(reason=f"chat_query: {clean_question[:30]}")
+    store.stop_background_ingest(reason=f"chat_query: {retrieval_query[:30]}")
     raw_hits = store.search(
-        query=clean_question,
+        query=retrieval_query,
         collection_name=collection_name,
         videos_collection=videos_collection,
         limit=top_k,
@@ -205,11 +259,15 @@ def generate_answer(
             "retrieved_count": len(raw_hits),
             "qualifying_count": 0,
             "reason": "No retrieved video segments met the minimum relevance threshold.",
+            "retrieval_query": retrieval_query,
+            "contextualized": was_contextualized,
         }
 
     # Format context for LLM
     context_str = build_excerpts_context(qualifying_hits)
-    user_prompt = f"EXCERPTS:\n{context_str}\n\nQUESTION: {clean_question}"
+    conversation_context = _conversation_context(chat_history)
+    context_prefix = f"{conversation_context}\n\n" if conversation_context else ""
+    user_prompt = f"{context_prefix}EXCERPTS:\n{context_str}\n\nQUESTION: {clean_question}"
 
     raw_answer, provider, model = dispatch_llm(SYSTEM_PROMPT, user_prompt)
 
@@ -236,6 +294,8 @@ def generate_answer(
             "retrieved_count": len(raw_hits),
             "provider": provider,
             "model": model,
+            "retrieval_query": retrieval_query,
+            "contextualized": was_contextualized,
         }
 
     # GUARD 2: Did the LLM output the refusal message?
@@ -248,6 +308,8 @@ def generate_answer(
             "retrieved_count": len(raw_hits),
             "provider": provider,
             "model": model,
+            "retrieval_query": retrieval_query,
+            "contextualized": was_contextualized,
         }
 
     # GUARD 3: Keep only citations actually cited by the LLM and renumber them
@@ -262,6 +324,8 @@ def generate_answer(
         "qualifying_count": len(qualifying_hits),
         "provider": provider,
         "model": model,
+        "retrieval_query": retrieval_query,
+        "contextualized": was_contextualized,
     }
 
 

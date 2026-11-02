@@ -135,6 +135,13 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({
     try {
       const requestPayload: Record<string, any> = {
         question: q.trim(),
+        chat_history: messages
+          .filter((message) => message.id !== "welcome")
+          .slice(-8)
+          .map((message) => ({
+            role: message.sender,
+            content: message.text.slice(0, 1200),
+          })),
         collection_name: "yt_transcripts",
         top_k: 5,
         min_score: 0.50,

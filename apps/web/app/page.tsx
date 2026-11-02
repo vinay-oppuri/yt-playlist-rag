@@ -75,6 +75,8 @@ export default function Home() {
                     playlist_id: v.playlist_id,
                     playlist_title: v.playlist_title,
                     playlist_index: v.playlist_index,
+                    summary: v.summary,
+                    topics: v.topics || [],
                   }))
                 );
               }
