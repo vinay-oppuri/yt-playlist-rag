@@ -128,7 +128,7 @@ export const SearchExplorerView: React.FC<SearchExplorerViewProps> = ({
           {/* Min Similarity Score Slider */}
           <div style={styles.filterItem}>
             <div style={styles.sliderLabelRow}>
-              <span style={styles.filterLabel}>Min Similarity Cutoff:</span>
+              <span style={styles.filterLabel}>Min Relevance Cutoff:</span>
               <span style={styles.sliderValue}>{Math.round(scoreThreshold * 100)}%</span>
             </div>
             <input
@@ -171,7 +171,7 @@ export const SearchExplorerView: React.FC<SearchExplorerViewProps> = ({
       {searched && !isLoading && results.length === 0 && !errorMsg && (
         <div className="glass-panel" style={styles.emptyState}>
           <p style={{ color: "var(--text-muted)" }}>
-            No transcript chunks matched &ldquo;{query}&rdquo; above {Math.round(scoreThreshold * 100)}% similarity.
+            No transcript chunks matched &ldquo;{query}&rdquo; above the {Math.round(scoreThreshold * 100)}% relevance cutoff.
           </p>
           <p style={{ fontSize: "0.8rem", color: "var(--text-dim)", marginTop: "6px" }}>
             Try lowering the similarity cutoff slider or ingesting the video containing this topic.
@@ -183,7 +183,7 @@ export const SearchExplorerView: React.FC<SearchExplorerViewProps> = ({
         <div style={styles.resultsContainer}>
           <div style={styles.resultsHeader}>
             <span style={styles.resultsCount}>
-              Found <strong>{results.length}</strong> matching transcript windows (Ranked by Cosine Similarity)
+              Found <strong>{results.length}</strong> matching transcript windows (hybrid search with cross-encoder reranking)
             </span>
           </div>
 

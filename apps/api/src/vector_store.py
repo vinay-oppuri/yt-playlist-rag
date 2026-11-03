@@ -32,7 +32,8 @@ if sys.platform == "win32":
 DEFAULT_TRANSCRIPTS_COLLECTION = "yt_transcripts"
 DEFAULT_VIDEOS_COLLECTION = "yt_videos"
 DEFAULT_PROFILES_COLLECTION = "yt_video_profiles"
-VIDEO_PROFILE_VERSION = 1
+VIDEO_PROFILE_VERSION = 2
+RRF_RANK_CONSTANT = 60
 _QUERY_STOPWORDS = {
     "a", "about", "an", "and", "are", "as", "at", "be", "by", "can", "do",
     "does", "explain", "for", "from", "how", "i", "in", "is", "it", "me",
@@ -47,6 +48,50 @@ def _query_terms(text: str) -> List[str]:
         term for term in re.findall(r"[\w'-]+", text.lower())
         if len(term) > 1 and term not in _QUERY_STOPWORDS
     ]
+
+
+def _normalized_rrf(rank: Optional[int]) -> float:
+    """Return a reciprocal-rank score normalized so rank one equals one."""
+    if rank is None or rank < 1:
+        return 0.0
+    return (RRF_RANK_CONSTANT + 1) / (RRF_RANK_CONSTANT + rank)
+
+
+def _diversify_results(
+    candidates: List[Dict[str, Any]],
+    limit: int,
+    relevance_weight: float = 0.82,
+) -> List[Dict[str, Any]]:
+    """Use lexical MMR to avoid returning several nearly identical windows."""
+    remaining = list(candidates)
+    selected: List[Dict[str, Any]] = []
+    token_cache = {
+        id(item): set(_query_terms(str(item.get("body") or item.get("text") or "")))
+        for item in remaining
+    }
+
+    while remaining and len(selected) < limit:
+        best_item = None
+        best_score = float("-inf")
+        for item in remaining:
+            terms = token_cache[id(item)]
+            redundancy = 0.0
+            for chosen in selected:
+                chosen_terms = token_cache[id(chosen)]
+                union = terms | chosen_terms
+                if union:
+                    redundancy = max(redundancy, len(terms & chosen_terms) / len(union))
+            relevance = float(item.get("rerank_score", item.get("confidence_score", 0.0)))
+            mmr_score = relevance_weight * relevance - (1.0 - relevance_weight) * redundancy
+            if mmr_score > best_score:
+                best_item = item
+                best_score = mmr_score
+        if best_item is None:
+            break
+        best_item["diversity_score"] = round(best_score, 4)
+        selected.append(best_item)
+        remaining = [item for item in remaining if item is not best_item]
+    return selected
 
 
 class VectorStore:
@@ -81,6 +126,12 @@ class VectorStore:
         self._bg_lock = threading.Lock()
         self._transcribe_lock = threading.RLock()
         self._index_lock = threading.Lock()
+        self._reranker_lock = threading.Lock()
+        self._reranker_model_name = os.getenv(
+            "RERANKER_MODEL", "Xenova/ms-marco-MiniLM-L-6-v2"
+        ).strip()
+        self._reranker = None
+        self._reranker_attempted = False
         self._indexed_collections: set[str] = set()
         self._playlist_reconcile_lock = threading.Lock()
         self._reconciled_playlists: set[tuple[str, str]] = set()
@@ -93,6 +144,55 @@ class VectorStore:
             "total": 0,
             "stopped_reason": None,
         }
+
+    def _rerank_with_cross_encoder(
+        self,
+        query: str,
+        candidates: List[Dict[str, Any]],
+    ) -> List[Dict[str, Any]]:
+        """Apply a local cross-encoder to the fused shortlist, with safe fallback."""
+        if not candidates or not self._reranker_model_name or self._reranker_model_name.lower() == "none":
+            return candidates
+
+        with self._reranker_lock:
+            if not self._reranker_attempted:
+                self._reranker_attempted = True
+                try:
+                    from fastembed.rerank.cross_encoder import TextCrossEncoder
+
+                    self._reranker = TextCrossEncoder(model_name=self._reranker_model_name)
+                    print(f"[Reranker] Loaded local cross-encoder: {self._reranker_model_name}")
+                except Exception as exc:
+                    print(f"[Reranker] Could not load {self._reranker_model_name}; using rank fusion: {exc}")
+                    self._reranker = None
+            if self._reranker is None:
+                return candidates
+
+            documents = [
+                f"Title: {item.get('video_title', '')}\nTranscript: {item.get('body', '')[:3000]}"
+                for item in candidates
+            ]
+            try:
+                scores = list(self._reranker.rerank(query, documents, batch_size=16))
+            except Exception as exc:
+                print(f"[Reranker] Inference failed; using rank fusion: {exc}")
+                return candidates
+
+        if len(scores) != len(candidates):
+            return candidates
+        ranked = sorted(
+            zip(candidates, scores),
+            key=lambda pair: float(pair[1]),
+            reverse=True,
+        )
+        for rank, (item, raw_score) in enumerate(ranked, start=1):
+            item["cross_encoder_score"] = round(float(raw_score), 4)
+            item["rerank_score"] = round(
+                0.70 * _normalized_rrf(rank) + 0.30 * item["confidence_score"],
+                4,
+            )
+        ranked.sort(key=lambda item: (item[0]["rerank_score"], item[0]["confidence_score"]), reverse=True)
+        return [item for item, _ in ranked]
 
     def _init_qdrant_client(self) -> QdrantClient:
         """Connect to Qdrant server if running, otherwise fallback to local on-disk storage."""
@@ -228,10 +328,10 @@ class VectorStore:
         return [vec.tolist() for vec in embeddings_gen]
 
     def embed_query(self, query: str) -> List[float]:
-        """Generate embedding vector for a single search query."""
+        """Generate a query-optimized vector for asymmetric retrieval models."""
         clean_q = str(query).strip() if query else " "
-        results = self.embed_texts([clean_q])
-        return results[0] if results else []
+        results = list(self.embedder.query_embed(clean_q))
+        return results[0].tolist() if results else []
 
     def upsert_chunks(
         self,
@@ -481,7 +581,7 @@ class VectorStore:
             "chunks_count": len(chunks),
         }
         self.ensure_collection(profiles_collection)
-        vector = self.embed_query(profile_text)
+        vector = self.embed_texts([profile_text])[0]
         self.client.upsert(
             collection_name=profiles_collection,
             points=[models.PointStruct(id=point_uuid, vector=vector, payload=profile_payload)],
@@ -1143,21 +1243,36 @@ class VectorStore:
             with_payload=True,
         )
 
+        dense_rank_by_id = {
+            str(point.id): rank for rank, point in enumerate(response.points, start=1)
+        }
         candidate_points = {str(point.id): (point.payload or {}, float(point.score)) for point in response.points}
         lexical_conditions = list(must_conditions)
         lexical_points = self._lexical_candidates(
             collection_name, "body", query, candidate_limit, lexical_conditions
         )
-        for point_id, point in lexical_points.items():
-            candidate_points.setdefault(point_id, (point.payload or {}, 0.0))
         title_points = self._lexical_candidates(
             collection_name, "video_title", query, candidate_limit, lexical_conditions
         )
-        for point_id, point in title_points.items():
+        lexical_points.update({point_id: point for point_id, point in title_points.items() if point_id not in lexical_points})
+        query_terms = set(_query_terms(query))
+        lexical_coverage_by_id = {}
+        for point_id, point in lexical_points.items():
             candidate_points.setdefault(point_id, (point.payload or {}, 0.0))
+            payload = point.payload or {}
+            indexed_terms = set(_query_terms(
+                f"{payload.get('video_title', '')} {payload.get('body', payload.get('text', ''))}"
+            ))
+            lexical_coverage_by_id[point_id] = len(query_terms & indexed_terms) / max(1, len(query_terms))
+        lexical_rank_by_id = {
+            point_id: rank
+            for rank, (point_id, _) in enumerate(
+                sorted(lexical_coverage_by_id.items(), key=lambda item: item[1], reverse=True),
+                start=1,
+            )
+        }
 
         results: List[Dict[str, Any]] = []
-        query_terms = set(_query_terms(query))
         for payload, semantic_score in candidate_points.values():
             start_val = float(payload.get("start", 0.0))
             end_val = float(payload.get("end", 0.0))
@@ -1169,21 +1284,29 @@ class VectorStore:
             # term matches while retaining the dense cosine score as the dominant signal.
             tokens = set(_query_terms(f"{title} {body}"))
             lexical = len(query_terms & tokens) / max(1, len(query_terms))
-            # A matching video profile provides a useful document-level prior;
-            # transcript relevance and exact term overlap still dominate ranking.
+            point_id = str(uuid.uuid5(uuid.NAMESPACE_DNS, str(payload.get("chunk_id", ""))))
+            dense_rank = dense_rank_by_id.get(point_id)
+            lexical_rank = lexical_rank_by_id.get(point_id)
             profile_rank = profile_ranks.get(payload.get("video_id"))
-            profile_relevance = 1.0 / profile_rank if profile_rank else 0.0
-            rerank_score = (
-                0.42 * semantic_score + 0.33 * lexical + 0.25 * profile_relevance
-                if profile_rank
-                else 0.55 * semantic_score + 0.45 * lexical
+            fusion_score = (
+                0.50 * _normalized_rrf(dense_rank)
+                + 0.30 * _normalized_rrf(lexical_rank)
+                + 0.20 * _normalized_rrf(profile_rank)
             )
-            if score_threshold is not None and semantic_score < score_threshold and rerank_score < score_threshold:
+            # Keep an absolute relevance score for confidence cutoffs; rank fusion
+            # alone must not make an irrelevant top result look confident.
+            # Confidence is based only on the transcript chunk itself. Video
+            # profiles help order candidates but are not answer evidence.
+            confidence_score = 0.65 * semantic_score + 0.35 * lexical
+            rerank_score = 0.65 * fusion_score + 0.35 * confidence_score
+            if score_threshold is not None and semantic_score < score_threshold and confidence_score < score_threshold:
                 continue
             results.append(
                 {
                     "score": round(semantic_score, 4),
                     "rerank_score": round(rerank_score, 4),
+                    "confidence_score": round(confidence_score, 4),
+                    "fusion_score": round(fusion_score, 4),
                     "profile_rank": profile_rank,
                     "chunk_id": payload.get("chunk_id"),
                     "text": text,
@@ -1196,10 +1319,13 @@ class VectorStore:
                     "video_id": payload.get("video_id"),
                     "video_title": title,
                     "video_url": payload.get("video_url"),
+                    "chunk_index": payload.get("chunk_index"),
                 }
             )
-        results.sort(key=lambda item: item["rerank_score"], reverse=True)
-        return results[:limit]
+        results.sort(key=lambda item: (item["fusion_score"], item["confidence_score"]), reverse=True)
+        rerank_candidate_limit = min(max(limit * 3, 15), 60)
+        reranked = self._rerank_with_cross_encoder(query, results[:rerank_candidate_limit])
+        return _diversify_results(reranked, limit)
 
     def ingest_youtube_url(
         self,

@@ -8,6 +8,10 @@ interface HealthData {
   embedding_model?: string;
   vector_dimension?: number;
   collections?: string[];
+  reranker?: {
+    model?: string | null;
+    status?: string;
+  };
   llm?: {
     configured_provider: string;
     has_gemini_key: boolean;
@@ -168,6 +172,18 @@ export const SystemHealthView: React.FC<SystemHealthViewProps> = ({
               <span style={styles.specKey}>Deduplication</span>
               <span style={styles.specVal}>Deterministic UUID from video+timestamp</span>
             </div>
+            <div style={styles.specRow}>
+              <span style={styles.specKey}>Cross-Encoder Reranker</span>
+              <span style={styles.specVal}>
+                {health?.reranker?.status === "disabled"
+                  ? "Disabled"
+                  : health?.reranker?.status === "loaded"
+                    ? `${health.reranker.model} (loaded)`
+                    : health?.reranker?.status === "unavailable"
+                      ? "Unavailable; using rank fusion"
+                      : `${health?.reranker?.model || "Configured model"} (loads on first query)`}
+              </span>
+            </div>
           </div>
         </div>
 
@@ -203,8 +219,8 @@ export const SystemHealthView: React.FC<SystemHealthViewProps> = ({
               </span>
             </div>
             <div style={styles.specRow}>
-              <span style={styles.specKey}>Pre-LLM Score Cutoff</span>
-              <span style={styles.specVal}>0.50 (Rejects irrelevant queries without invoking LLM)</span>
+              <span style={styles.specKey}>Pre-LLM Evidence Cutoff</span>
+              <span style={styles.specVal}>Transcript-based confidence threshold before invoking the LLM</span>
             </div>
           </div>
         </div>

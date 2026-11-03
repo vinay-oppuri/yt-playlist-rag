@@ -100,12 +100,23 @@ def health_check():
         llm_provider = os.getenv("LLM_PROVIDER", "auto")
         has_gemini = bool(os.getenv("GEMINI_API_KEY"))
         has_groq = bool(os.getenv("GROQ_API_KEY"))
+        reranker_enabled = bool(store._reranker_model_name) and store._reranker_model_name.lower() != "none"
+        reranker_status = (
+            "disabled" if not reranker_enabled else
+            "loaded" if store._reranker is not None else
+            "unavailable" if store._reranker_attempted else
+            "loads_on_first_query"
+        )
         return {
             "status": "healthy",
             "qdrant_target": store.target_url,
             "embedding_model": store.embedding_model_name,
             "vector_dimension": store.vector_dim,
             "collections": collection_names,
+            "reranker": {
+                "model": store._reranker_model_name or None,
+                "status": reranker_status,
+            },
             "llm": {
                 "configured_provider": llm_provider,
                 "has_gemini_key": has_gemini,

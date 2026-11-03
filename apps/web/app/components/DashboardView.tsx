@@ -82,7 +82,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </div>
           <div style={{ ...styles.statValue, fontSize: "1.45rem" }}>FastEmbed 384d</div>
           <div style={styles.statFooter}>
-            <span style={styles.statFootText}>ONNX Runtime CPU • Cosine Similarity</span>
+            <span style={styles.statFootText}>ONNX Runtime CPU • Hybrid retrieval and reranking</span>
           </div>
         </div>
 
@@ -97,7 +97,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           </div>
           <div style={{ ...styles.statValue, fontSize: "1.45rem" }}>3-Tier Guardrails</div>
           <div style={styles.statFooter}>
-            <span style={styles.statFootText}>Cutoff ≥ 0.50 • Refusal Enforced • -5s Lead-in</span>
+            <span style={styles.statFootText}>Evidence cutoff • Citation required • -5s Lead-in</span>
           </div>
         </div>
       </div>

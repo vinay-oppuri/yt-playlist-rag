@@ -37,7 +37,7 @@ const FEATURES = [
   {
     icon: "🔍",
     title: "Semantic Vector Search",
-    desc: "FastEmbed (ONNX, zero GPU) embeds chunks into Qdrant. Cosine similarity search returns the most relevant 60-second window.",
+    desc: "FastEmbed query embeddings, dense and lexical retrieval, reciprocal rank fusion, and a local cross-encoder rerank timestamped transcript chunks.",
   },
   {
     icon: "🤖",
@@ -100,7 +100,7 @@ const API_ENDPOINTS = [
     params: [
       { name: "query", type: "string", desc: "Your search question" },
       { name: "video_id", type: "string?", desc: "Filter to a specific video ID" },
-      { name: "score_threshold", type: "float?", desc: "Min cosine similarity (e.g. 0.35)" },
+      { name: "score_threshold", type: "float?", desc: "Minimum transcript relevance cutoff (e.g. 0.35)" },
     ],
   },
   {
@@ -110,7 +110,7 @@ const API_ENDPOINTS = [
     params: [
       { name: "question", type: "string", desc: "Natural language question" },
       { name: "top_k", type: "int", desc: "Chunks to retrieve (default: 5)" },
-      { name: "min_score", type: "float", desc: "Score cutoff before LLM (default: 0.50)" },
+      { name: "min_score", type: "float", desc: "Transcript evidence confidence cutoff before LLM (default: 0.50)" },
     ],
   },
 ];
@@ -169,6 +169,9 @@ QDRANT_COLLECTION=yt_transcripts
 
 # Score cutoff before calling LLM (0.0 – 1.0)
 MIN_SIMILARITY_SCORE=0.50
+
+# Local cross-encoder for final reranking; set to "none" to disable
+RERANKER_MODEL=Xenova/ms-marco-MiniLM-L-6-v2
 
 # Production CORS origin
 CORS_ORIGIN=http://localhost:3000`,
@@ -593,7 +596,8 @@ export default function Home() {
               { key: "GEMINI_API_KEY", val: "your-key", desc: "From aistudio.google.com" },
               { key: "GROQ_API_KEY", val: "your-key", desc: "From console.groq.com" },
               { key: "QDRANT_URL", val: "http://localhost:6333", desc: "Docker Qdrant" },
-              { key: "MIN_SIMILARITY_SCORE", val: "0.50", desc: "Pre-LLM cutoff threshold" },
+              { key: "MIN_SIMILARITY_SCORE", val: "0.50", desc: "Transcript evidence cutoff before LLM" },
+              { key: "RERANKER_MODEL", val: "Xenova/ms-marco-MiniLM-L-6-v2", desc: "Local final-stage cross-encoder" },
               { key: "CORS_ORIGIN", val: "https://your-app.vercel.app", desc: "Production domain" },
             ].map((row) => (
               <div key={row.key} style={{ display: "flex", gap: "0.5rem", alignItems: "baseline", marginBottom: "0.4rem", fontFamily: "monospace", fontSize: "0.78rem" }}>
@@ -629,8 +633,11 @@ export default function Home() {
 <span class="code-key">QDRANT_URL</span>=<span class="code-str">http://localhost:6333</span>
 <span class="code-key">QDRANT_COLLECTION</span>=<span class="code-str">yt_transcripts</span>
 
-<span class="code-comment"># Score cutoff before calling LLM (0.0 – 1.0)</span>
+<span class="code-comment"># Transcript evidence cutoff before calling LLM (0.0 – 1.0)</span>
 <span class="code-key">MIN_SIMILARITY_SCORE</span>=<span class="code-num">0.50</span>
+
+<span class="code-comment"># Local final-stage cross-encoder; set to "none" to disable</span>
+<span class="code-key">RERANKER_MODEL</span>=<span class="code-str">Xenova/ms-marco-MiniLM-L-6-v2</span>
 
 <span class="code-comment"># Production CORS origin</span>
 <span class="code-key">CORS_ORIGIN</span>=` }} />
