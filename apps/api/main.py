@@ -1,5 +1,5 @@
 import os
-from contextlib import asynccontextmanager
+from contextlib import asynccontextmanager, nullcontext
 from typing import Any, Dict, List, Literal, Optional
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
@@ -283,17 +283,19 @@ def search_transcripts(request: SearchRequest):
     """
     try:
         store = get_vector_store()
-        hits = store.search(
-            query=request.query,
-            collection_name=request.collection_name,
-            videos_collection=request.videos_collection,
-            limit=request.limit,
-            score_threshold=request.score_threshold,
-            filter_video_id=request.video_id,
-            filter_playlist_id=request.playlist_id,
-            enable_jit=request.enable_jit,
-            interrupt_background_ingest=False,
-        )
+        priority = store.prioritize_interactive_retrieval() if request.enable_jit else nullcontext()
+        with priority:
+            hits = store.search(
+                query=request.query,
+                collection_name=request.collection_name,
+                videos_collection=request.videos_collection,
+                limit=request.limit,
+                score_threshold=request.score_threshold,
+                filter_video_id=request.video_id,
+                filter_playlist_id=request.playlist_id,
+                enable_jit=request.enable_jit,
+                interrupt_background_ingest=False,
+            )
         return {
             "query": request.query,
             "collection_name": request.collection_name,

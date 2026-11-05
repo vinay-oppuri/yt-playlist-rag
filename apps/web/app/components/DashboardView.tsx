@@ -235,6 +235,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                   </div>
                   <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 8, color: "var(--text-dim)", fontSize: "0.72rem" }}>
                     <span>Queued {job.counts.queued || 0}</span>
+                    <span>Paused {job.counts.paused || 0}</span>
                     <span>Indexed {job.counts.completed || 0}</span>
                     <span>No captions {job.counts.no_captions || 0}</span>
                     <span>Failed {job.counts.failed || 0}</span>

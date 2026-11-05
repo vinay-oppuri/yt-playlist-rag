@@ -26,9 +26,9 @@ Start Qdrant from the repository root with `docker compose up -d qdrant`. Config
 - `POST /api/search` returns timestamped transcript matches.
 - `POST /api/chat` and `/api/ask` return a grounded answer and citations used.
 
-Jobs and per-video attempts are stored in SQLite at `apps/api/data/ingestion_jobs.sqlite3` by default. Queued work and items interrupted during a restart recover automatically. The worker is sequential; transcript/JIT work also shares a process-level lock, so a chat request for a not-yet-indexed video may wait for the current transcript operation to finish. This queue is designed for a single API instance.
+Jobs and per-video attempts are stored in SQLite at `apps/api/data/ingestion_jobs.sqlite3` by default. Queued work and items interrupted during a restart recover automatically. A SQLite lease elects one sequential queue worker across API processes that share this same local database file. Interactive retrieval gets the transcript slot after the current video completes, before the worker takes another video. Cross-host SQLite sharing and distributed JIT locks are unsupported; use one API process until those are added.
 
-Set `INGESTION_DB_PATH` to move the queue database and `INGESTION_MAX_ATTEMPTS` to change retry count. Keep the database on persistent local storage; placing it on ephemeral storage removes restart recovery.
+Set `INGESTION_DB_PATH` to move the queue database, `INGESTION_MAX_ATTEMPTS` to change retry count, and `INGESTION_WORKER_LEASE_SECONDS` to change the worker failover window. Keep the database on persistent local storage; placing it on ephemeral storage removes restart recovery.
 
 ## Retrieval and grounding
 

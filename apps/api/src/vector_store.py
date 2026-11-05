@@ -3,7 +3,8 @@ import re
 import sys
 import threading
 import uuid
-from typing import Any, Dict, List, Optional
+from contextlib import contextmanager
+from typing import Any, Dict, Iterator, List, Optional
 from fastembed import TextEmbedding
 import httpx
 from qdrant_client import QdrantClient, models
@@ -127,6 +128,8 @@ class VectorStore:
         # FastEmbed instances are shared by API requests and the playlist worker.
         # Serialize access so concurrent retrieval and ingestion cannot race the ONNX session.
         self._embedding_lock = threading.RLock()
+        self._priority_condition = threading.Condition()
+        self._interactive_retrievals = 0
 
         # 2. Connect to Qdrant (server or local disk fallback)
         self.client = self._init_qdrant_client()
@@ -896,16 +899,44 @@ class VectorStore:
             f"[Ingestion job {item['job_id']}] Processing "
             f"{item['video_id']} ({item['title']})"
         )
-        return self.ensure_video_transcribed(
-            video_id=item["video_id"],
-            title=item["title"],
-            url=item["url"],
-            transcripts_collection=job["collection_name"],
-            videos_collection=job["videos_collection"],
-            target_words=job["target_words"],
-            overlap_words=job["overlap_words"],
-            playlist_id=job.get("playlist_id"),
-        )
+        with self._background_transcription_slot():
+            return self.ensure_video_transcribed(
+                video_id=item["video_id"],
+                title=item["title"],
+                url=item["url"],
+                transcripts_collection=job["collection_name"],
+                videos_collection=job["videos_collection"],
+                target_words=job["target_words"],
+                overlap_words=job["overlap_words"],
+                playlist_id=job.get("playlist_id"),
+            )
+
+    @contextmanager
+    def prioritize_interactive_retrieval(self) -> Iterator[None]:
+        """Let interactive JIT work take the next transcript slot between videos."""
+        with self._priority_condition:
+            self._interactive_retrievals += 1
+            self._priority_condition.notify_all()
+        try:
+            yield
+        finally:
+            with self._priority_condition:
+                self._interactive_retrievals = max(0, self._interactive_retrievals - 1)
+                self._priority_condition.notify_all()
+
+    @contextmanager
+    def _background_transcription_slot(self) -> Iterator[None]:
+        """Acquire a transcript slot only when no interactive retrieval is queued."""
+        with self._priority_condition:
+            while self._interactive_retrievals:
+                self._priority_condition.wait()
+            # Hold the condition until the lock is owned. A query arriving just
+            # after the priority check then waits behind at most this one video.
+            self._transcribe_lock.acquire()
+        try:
+            yield
+        finally:
+            self._transcribe_lock.release()
 
     def stop_background_ingest(self, reason: str = "query_received") -> bool:
         """Pause queued ingestion safely; the active video finishes before pausing."""

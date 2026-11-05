@@ -1,4 +1,5 @@
 import os
+from contextlib import nullcontext
 from pathlib import Path
 import re
 from typing import Any, Dict, List, Optional
@@ -252,16 +253,18 @@ def generate_answer(
     # Interactive chat takes priority; offline evaluation can leave ingestion alone.
     if interrupt_background_ingest:
         store.stop_background_ingest(reason=f"chat_query: {retrieval_query[:30]}")
-    raw_hits = store.search(
-        query=retrieval_query,
-        collection_name=collection_name,
-        videos_collection=videos_collection,
-        limit=top_k,
-        filter_video_id=filter_video_id,
-        filter_playlist_id=filter_playlist_id,
-        enable_jit=enable_jit,
-        interrupt_background_ingest=interrupt_background_ingest,
-    )
+    priority = store.prioritize_interactive_retrieval() if enable_jit else nullcontext()
+    with priority:
+        raw_hits = store.search(
+            query=retrieval_query,
+            collection_name=collection_name,
+            videos_collection=videos_collection,
+            limit=top_k,
+            filter_video_id=filter_video_id,
+            filter_playlist_id=filter_playlist_id,
+            enable_jit=enable_jit,
+            interrupt_background_ingest=interrupt_background_ingest,
+        )
 
     # Filter by minimum similarity score
     qualifying_hits = [

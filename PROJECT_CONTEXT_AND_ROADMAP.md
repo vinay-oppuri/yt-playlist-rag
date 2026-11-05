@@ -13,7 +13,7 @@ YT-RAG helps a learner ask questions about one video or an entire YouTube playli
 - **Video profiles:** `yt_video_profiles` stores extractive summaries, topic tags and key moments for video discovery. Profiles may affect retrieval order, but must never be treated as answer evidence.
 - **Retrieval:** query-aware FastEmbed vectors, Qdrant dense search, exact-token lexical candidates, video-profile ranks and reciprocal rank fusion form the candidate list. Common English and Hinglish filler words are removed before lexical/profile matching. A local FastEmbed cross-encoder reranks the shortlist. A lexical MMR pass reduces near-duplicate transcript windows.
 - **Grounded chat:** recent chat history may resolve references but is not evidence. The answer prompt requires transcript support and citations. Answers without valid excerpt citations fail closed.
-- **Playlist ingestion:** titles are registered quickly; remaining videos enter a SQLite-backed per-video job queue. Queued and interrupted work resumes when the API starts, failures retry up to three times, and jobs expose per-video state. The worker is currently sequential and local to one API process; SQLite is durable, but horizontal multi-worker deployment is not supported.
+- **Playlist ingestion:** titles are registered quickly; remaining videos enter a SQLite-backed per-video job queue. Queued and interrupted work resumes when the API starts, failures retry up to three times, and jobs expose per-video state. SQLite leases elect one queue worker across API processes that share the same local database file. Multi-host database sharing and cross-process JIT locking are not supported.
 - **Answer validation:** generated answers must cite every sentence or list item and every reference must point to a supplied transcript excerpt. Answers that fail citation coverage are refused.
 - **Operations:** `RERANKER_MODEL` controls the local reranker. Its model downloads on first use; set it to `none` to use rank fusion without the cross-encoder.
 
@@ -105,8 +105,8 @@ This command may make external LLM calls. JIT transcription and interruption of 
 
 - SQLite now stores jobs and per-video states, attempts, errors, and chunk counts. Active work recovers after API restart; users can pause/resume jobs and retry individual failures.
 - The worker intentionally processes one video at a time to bound pressure on YouTube and local CPU. Benchmark a configurable worker pool only after separating model/Qdrant capacity and adding provider rate limits.
-- JIT transcription still shares a process-level lock with the background worker. Add priority scheduling so a chat request for an unindexed video can move ahead of queued work, without interrupting the active video.
-- Move job coordination to a shared queue/database before running multiple API replicas; the current in-process worker assumes one API instance.
+- Interactive search/chat now registers priority before retrieval. The active video finishes, then queued background work waits while interactive JIT uses the shared transcript slot.
+- SQLite leases now prevent multiple API processes sharing the same local database from processing the same queue item. Keep one API process for safe JIT transcript locking; multi-host deployment still needs a shared database/queue and distributed per-video locks.
 
 ### 5. Add GraphRAG only when evidence calls for it
 

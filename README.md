@@ -57,7 +57,7 @@ Open `http://localhost:3000`. FastAPI docs are at `http://127.0.0.1:8000/docs`; 
 4. The generator refuses when no chunk passes the relevance cutoff, asks the configured LLM to answer only from excerpts, and requires valid citations on every sentence or list item.
 5. The UI shows the cited video and timestamp. Clicking a citation seeks the in-page player.
 
-Playlist indexing is stored as a SQLite job with per-video progress, errors, and retries. Pending work resumes when the API starts again. The worker is sequential and local to one API process; multi-replica queue coordination and priority scheduling for JIT work remain planned.
+Playlist indexing is stored as a SQLite job with per-video progress, errors, and retries. Pending work resumes when the API starts again. Interactive retrieval gets priority at the next video boundary. SQLite leases allow one queue worker across API processes sharing the same local database file; multi-host coordination and distributed JIT locks are still needed before deploying API replicas across hosts.
 
 ## Evaluation
 
@@ -91,6 +91,7 @@ Copy `apps/api/.env.example` to `apps/api/.env` and configure:
 | `MIN_SIMILARITY_SCORE` | Transcript relevance cutoff used by grounded chat |
 | `INGESTION_DB_PATH` | SQLite file for durable playlist jobs, relative to `apps/api` by default |
 | `INGESTION_MAX_ATTEMPTS` | Maximum attempts per video before marking it failed; default `3` |
+| `INGESTION_WORKER_LEASE_SECONDS` | Queue worker failover lease duration; default `30` seconds |
 | `CORS_ORIGIN` | Additional allowed web origin |
 
 See [PROJECT_CONTEXT_AND_ROADMAP.md](PROJECT_CONTEXT_AND_ROADMAP.md) for the current architecture, quality rules, and next phases.

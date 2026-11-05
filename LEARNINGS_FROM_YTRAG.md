@@ -147,15 +147,15 @@ To know whether a change (chunk size, overlap, embedding model, or prompt) actua
 
 ## 8. TODO: Durable Ingestion for Very Large Playlists (300+ Videos)
 
-The two-tier design makes playlist metadata available quickly and can transcribe relevant videos on demand. Full-playlist jobs now persist in SQLite and resume after an API restart. Processing remains sequential in the API process, so throughput is bounded by a single local worker.
+The two-tier design makes playlist metadata available quickly and can transcribe relevant videos on demand. Full-playlist jobs now persist in SQLite and resume after an API restart. A SQLite lease elects one sequential queue worker across API processes sharing the same local database file.
 
 ### Target Approach
 
 - [x] **Register first:** Keep flat playlist extraction and video-title indexing as the fast response path. Return a durable ingestion job ID rather than waiting for transcript processing.
-- [x] **Use a durable queue:** Persist playlist work and resume pending jobs after an API restart. The queue is SQLite-backed and currently runs in the API process.
+- [x] **Use a durable queue:** Persist playlist work and resume pending jobs after an API restart. SQLite leases keep one queue worker active across API processes that share the database file.
 - [ ] **Bound concurrency:** The current worker intentionally processes one video at a time. Benchmark a small configurable pool only after adding YouTube/provider rate limits and separating model capacity.
 - [x] **Resume safely:** Persist per-video states, attempts, errors, and progress. Deterministic Qdrant IDs make retries idempotent; failed videos can retry independently.
-- [ ] **Prioritize questions:** Let chat trigger JIT transcription for the most relevant unindexed videos while the queue continues processing the rest.
+- [x] **Prioritize questions:** Give interactive retrieval the transcript slot after the current background video finishes and before the worker claims another queued video.
 - [ ] **Keep chat responsive:** Isolate query and ingestion capacity so a large playlist job does not block retrieval or stop the entire ingestion job when a question arrives.
 - [x] **Expose progress:** Add job status, pause/resume, per-video retry endpoints, and dashboard progress controls.
 
