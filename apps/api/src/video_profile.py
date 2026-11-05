@@ -20,6 +20,13 @@ _STOPWORDS = {
     "while", "who", "why", "will", "with", "would", "yeah", "yes", "you", "your", "okay", "ok",
     "guys", "guy", "alright", "actually", "basically", "going", "gonna", "kind", "know", "look",
     "make", "made", "mean", "means", "maybe", "right", "talk", "video", "welcome",
+    # Ignore common Hinglish grammar when matching query terms to profiles.
+    "aap", "ab", "acha", "aur", "batao", "bhi", "hai", "hain", "hoga", "hogi",
+    "hote", "hoti", "hum", "iska", "iske", "isko", "ka", "kab", "kaha", "kaise",
+    "kar", "kare", "karen", "karna", "karo", "ke", "ki", "kya", "kyu", "kyun",
+    "mein", "me", "mera", "meri", "mere", "mujhe", "nahi", "nahin", "par", "samjhao",
+    "se", "toh", "tum", "uska", "uske", "usko", "wala", "wali", "wale", "ya", "ye",
+    "yaha", "wo", "woh",
 }
 
 

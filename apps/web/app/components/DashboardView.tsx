@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IngestedVideo } from "./IngestionBar";
 
 interface DashboardViewProps {
@@ -11,13 +11,84 @@ interface DashboardViewProps {
   apiBaseUrl?: string;
 }
 
+interface IngestionJob {
+  job_id: string;
+  playlist_title?: string | null;
+  status: string;
+  total: number;
+  completed: number;
+  counts: Record<string, number>;
+  failed_items: { video_id: string; title: string; status: string; attempts: number; error?: string | null }[];
+}
+
 export const DashboardView: React.FC<DashboardViewProps> = ({
   videos,
   onSelectVideoForStudio,
   onOpenExplorerWithQuery,
   onOpenIngestModal,
+  apiBaseUrl = "http://127.0.0.1:8000",
 }) => {
   const [filterQuery, setFilterQuery] = useState("");
+  const [ingestionJobs, setIngestionJobs] = useState<IngestionJob[]>([]);
+  const [ingestionPaused, setIngestionPaused] = useState(false);
+  const [ingestionActionError, setIngestionActionError] = useState("");
+
+  useEffect(() => {
+    let disposed = false;
+    const refresh = async () => {
+      try {
+        const [jobsResponse, statusResponse] = await Promise.all([
+          fetch(`${apiBaseUrl}/api/ingest/jobs?limit=5`),
+          fetch(`${apiBaseUrl}/api/ingest/status`),
+        ]);
+        if (!jobsResponse.ok || !statusResponse.ok) return;
+        const [jobsData, statusData] = await Promise.all([jobsResponse.json(), statusResponse.json()]);
+        if (!disposed) {
+          setIngestionJobs(Array.isArray(jobsData.jobs) ? jobsData.jobs : []);
+          setIngestionPaused(Boolean(statusData.is_paused));
+        }
+      } catch {
+        // Keep the last progress snapshot visible while the API reconnects.
+      }
+    };
+    void refresh();
+    const timer = window.setInterval(refresh, 5000);
+    return () => {
+      disposed = true;
+      window.clearInterval(timer);
+    };
+  }, [apiBaseUrl]);
+
+  const controlIngestion = async (action: "stop" | "resume") => {
+    setIngestionActionError("");
+    try {
+      const response = await fetch(`${apiBaseUrl}/api/ingest/${action}`, { method: "POST" });
+      if (!response.ok) throw new Error(`Request failed (${response.status})`);
+      const data = await response.json();
+      setIngestionPaused(Boolean(data.status?.is_paused));
+    } catch (error) {
+      setIngestionActionError(error instanceof Error ? error.message : "Could not update ingestion job.");
+    }
+  };
+
+  const retryVideo = async (jobId: string, videoId: string) => {
+    setIngestionActionError("");
+    try {
+      const response = await fetch(
+        `${apiBaseUrl}/api/ingest/jobs/${encodeURIComponent(jobId)}/retry?video_id=${encodeURIComponent(videoId)}`,
+        { method: "POST" },
+      );
+      if (!response.ok) throw new Error(`Retry request failed (${response.status})`);
+      const data = await response.json();
+      const updatedJob = {
+        ...data.job,
+        failed_items: (data.job.items || []).filter((item: IngestionJob["failed_items"][number]) => item.status === "failed").slice(0, 10),
+      };
+      setIngestionJobs((previous) => previous.map((job) => job.job_id === jobId ? updatedJob : job));
+    } catch (error) {
+      setIngestionActionError(error instanceof Error ? error.message : "Could not retry this video.");
+    }
+  };
 
   const totalChunks = videos.reduce((acc, v) => acc + (v.chunks || 0), 0);
 
@@ -132,6 +203,55 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       </div>
 
       {/* ── Video Library Section ────────────────────────────────── */}
+      {ingestionJobs.length > 0 && (
+        <section className="glass-panel" style={{ padding: "20px 22px", borderRadius: "16px" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+            <div>
+              <h3 style={{ ...styles.sectionTitle, margin: 0 }}>Playlist indexing jobs</h3>
+              <p style={{ ...styles.sectionSubtitle, marginTop: 5 }}>Progress is saved locally and resumes after an API restart.</p>
+            </div>
+            {ingestionJobs.some((job) => ["queued", "running", "paused"].includes(job.status)) && (
+              <button
+                className="btn-secondary"
+                onClick={() => void controlIngestion(ingestionPaused ? "resume" : "stop")}
+              >
+                {ingestionPaused ? "Resume indexing" : "Pause indexing"}
+              </button>
+            )}
+          </div>
+          {ingestionActionError && <p role="alert" style={{ color: "#fca5a5", fontSize: "0.8rem" }}>{ingestionActionError}</p>}
+          <div style={{ display: "grid", gap: 14, marginTop: 16 }}>
+            {ingestionJobs.map((job) => {
+              const progress = job.total ? Math.round((job.completed / job.total) * 100) : 0;
+              const failedItems = job.failed_items || [];
+              return (
+                <div key={job.job_id} style={{ padding: 14, borderRadius: 12, background: "rgba(255,255,255,0.035)", border: "1px solid var(--border-subtle)" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap", fontSize: "0.82rem" }}>
+                    <strong>{job.playlist_title || "Playlist ingestion"}</strong>
+                    <span style={{ color: "var(--text-muted)" }}>{job.status.replaceAll("_", " ")} · {job.completed}/{job.total} videos · {progress}%</span>
+                  </div>
+                  <div style={{ height: 6, marginTop: 10, borderRadius: 999, background: "rgba(255,255,255,0.08)", overflow: "hidden" }}>
+                    <div style={{ width: `${progress}%`, height: "100%", background: "linear-gradient(90deg, #6366f1, #a78bfa)", transition: "width 0.3s ease" }} />
+                  </div>
+                  <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 8, color: "var(--text-dim)", fontSize: "0.72rem" }}>
+                    <span>Queued {job.counts.queued || 0}</span>
+                    <span>Indexed {job.counts.completed || 0}</span>
+                    <span>No captions {job.counts.no_captions || 0}</span>
+                    <span>Failed {job.counts.failed || 0}</span>
+                  </div>
+                  {failedItems.slice(0, 3).map((item) => (
+                    <div key={item.video_id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12, marginTop: 8, fontSize: "0.76rem" }}>
+                      <span title={item.error || undefined} style={{ color: "#fca5a5", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{item.title}: {item.error || "Indexing failed"}</span>
+                      <button className="btn-secondary" onClick={() => void retryVideo(job.job_id, item.video_id)}>Retry</button>
+                    </div>
+                  ))}
+                </div>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
       <div style={styles.sectionHeader}>
         <div style={styles.sectionTitleCol}>
           <h3 style={styles.sectionTitle}>Indexed Lecture Library</h3>

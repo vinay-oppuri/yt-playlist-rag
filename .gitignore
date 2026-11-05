@@ -40,6 +40,7 @@ yarn-error.log*
 # Qdrant & Python
 qdrant_data/
 qdrant_storage/
+apps/api/data/ingestion_jobs.sqlite3*
 .venv/
 __pycache__/
 *.pyc

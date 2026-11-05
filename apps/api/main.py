@@ -1,4 +1,5 @@
 import os
+from contextlib import asynccontextmanager
 from typing import Any, Dict, List, Literal, Optional
 from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
@@ -11,10 +12,21 @@ from src.vector_store import get_vector_store
 
 load_dotenv()
 
+@asynccontextmanager
+async def lifespan(_: FastAPI):
+    # The SQLite queue recovers queued/processing work when the API starts.
+    store = get_vector_store()
+    try:
+        yield
+    finally:
+        store.shutdown_ingestion_queue()
+
+
 app = FastAPI(
     title="YouTube Playlist RAG API",
-    description="API for transcribing YouTube videos/playlists, generating vector embeddings, and answering context-aware questions with grounded timestamps.",
-    version="0.2.0",
+    description="API for indexing YouTube playlists and answering questions with timestamped transcript evidence.",
+    version="0.3.0",
+    lifespan=lifespan,
 )
 
 # Enable CORS for Next.js web application.
@@ -43,7 +55,7 @@ class IngestRequest(BaseModel):
     target_words: int = Field(default=180, ge=50, le=1000, description="Target word count per chunk")
     overlap_words: int = Field(default=35, ge=0, le=200, description="Word overlap between chunks")
     force_playlist: bool = Field(default=False, description="Set True to force full playlist ingestion when URL contains list=")
-    deep_ingest: bool = Field(default=False, description="Set True to transcribe every video in playlist upfront. Default False uses instant Hierarchical Tier 1 registration.")
+    deep_ingest: bool = Field(default=False, description="Queue every playlist video for durable background indexing. Default False indexes the selected video first, then queues the remaining videos.")
 
 
 class SearchRequest(BaseModel):
@@ -84,6 +96,10 @@ def root():
             "/api/videos",
             "/api/ingest",
             "/api/ingest/status",
+            "/api/ingest/jobs",
+            "/api/ingest/jobs/{job_id}",
+            "/api/ingest/jobs/{job_id}/retry",
+            "/api/ingest/resume",
             "/api/ingest/stop",
             "/api/search",
             "/api/chat",
@@ -107,6 +123,7 @@ def health_check():
             "unavailable" if store._reranker_attempted else
             "loads_on_first_query"
         )
+        ingestion_status = store.get_background_ingest_status()
         return {
             "status": "healthy",
             "qdrant_target": store.target_url,
@@ -121,6 +138,15 @@ def health_check():
                 "configured_provider": llm_provider,
                 "has_gemini_key": has_gemini,
                 "has_groq_key": has_groq,
+            },
+            "ingestion": {
+                "worker_alive": ingestion_status.get("worker_alive", False),
+                "is_running": ingestion_status.get("is_running", False),
+                "is_paused": ingestion_status.get("is_paused", False),
+                "job_id": ingestion_status.get("job_id"),
+                "current_video": ingestion_status.get("current_video"),
+                "completed": ingestion_status.get("completed", 0),
+                "total": ingestion_status.get("total", 0),
             },
         }
     except Exception as e:
@@ -152,8 +178,8 @@ def get_indexed_videos(collection_name: str = "yt_videos", limit: int = 1000):
 def ingest_url(request: IngestRequest):
     """
     Hierarchical Ingestion Endpoint:
-    - If playlist: Instantly registers all video titles and metadata into Tier 1 (yt_videos) in ~2s.
-      Transcribes 1st video for immediate playback; remaining transcripts load on-demand (JIT).
+    - If playlist: Registers all video titles and metadata, indexes the selected video, and queues remaining videos durably.
+      With deep_ingest=True, all videos are queued without waiting for transcript processing.
     - If single video: Registers and transcribes immediately.
     """
     try:
@@ -176,7 +202,7 @@ def ingest_url(request: IngestRequest):
 def get_background_ingest_status():
     """
     Check the current progress of background playlist ingestion.
-    Returns whether the worker is active, the video currently being chunked, and completion count.
+    Returns active worker state, aggregate progress, and recent durable jobs.
     """
     try:
         store = get_vector_store()
@@ -185,10 +211,59 @@ def get_background_ingest_status():
         raise HTTPException(status_code=500, detail=f"Failed to fetch ingest status: {str(e)}")
 
 
+@app.get("/api/ingest/jobs")
+def get_ingestion_jobs(limit: int = 20):
+    """List recent durable ingestion jobs with per-video progress."""
+    try:
+        return {"jobs": get_vector_store().list_ingestion_jobs(limit=limit)}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to list ingestion jobs: {str(e)}")
+
+
+@app.get("/api/ingest/jobs/{job_id}")
+def get_ingestion_job(job_id: str):
+    """Get a durable ingestion job and its per-video results."""
+    try:
+        job = get_vector_store().get_ingestion_job(job_id)
+        if job is None:
+            raise HTTPException(status_code=404, detail="Ingestion job not found")
+        return job
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to fetch ingestion job: {str(e)}")
+
+
+@app.post("/api/ingest/jobs/{job_id}/retry")
+def retry_ingestion_job(job_id: str, video_id: Optional[str] = None):
+    """Retry failed videos from a job, or just one failed video."""
+    try:
+        store = get_vector_store()
+        if store.get_ingestion_job(job_id) is None:
+            raise HTTPException(status_code=404, detail="Ingestion job not found")
+        retried = store.retry_failed_ingestion(job_id, video_id)
+        return {"retried": retried, "job": store.get_ingestion_job(job_id)}
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to retry ingestion job: {str(e)}")
+
+
+@app.post("/api/ingest/resume")
+def resume_background_ingestion():
+    """Resume paused jobs and restart pending durable work."""
+    try:
+        store = get_vector_store()
+        resumed = store.resume_background_ingest()
+        return {"resumed": resumed, "status": store.get_background_ingest_status()}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to resume ingestion: {str(e)}")
+
+
 @app.post("/api/ingest/stop")
 def stop_background_ingestion():
     """
-    Manually halt any active background playlist ingestion worker.
+    Pause active ingestion after its current video completes. Jobs can be resumed later.
     """
     try:
         store = get_vector_store()
@@ -202,13 +277,12 @@ def stop_background_ingestion():
 def search_transcripts(request: SearchRequest):
     """
     Perform semantic vector search across ingested YouTube transcripts.
-    Halts background ingestion immediately upon arrival.
+    Runs alongside background ingestion; it does not cancel the playlist job.
     Uses Two-Tier routing: if query relates to an unindexed lecture, it transcribes and chunks JIT.
     Returns matched chunks with timestamps, lead-in links, and text preview.
     """
     try:
         store = get_vector_store()
-        store.stop_background_ingest(reason=f"search_query: {request.query[:30]}")
         hits = store.search(
             query=request.query,
             collection_name=request.collection_name,
@@ -218,6 +292,7 @@ def search_transcripts(request: SearchRequest):
             filter_video_id=request.video_id,
             filter_playlist_id=request.playlist_id,
             enable_jit=request.enable_jit,
+            interrupt_background_ingest=False,
         )
         return {
             "query": request.query,
@@ -234,7 +309,7 @@ def search_transcripts(request: SearchRequest):
 def chat_with_lectures(request: ChatRequest):
     """
     Full Grounded RAG Chat Endpoint:
-    - Halts background ingestion immediately upon query arrival.
+    - Runs alongside background ingestion without cancelling the playlist job.
     - Hierarchical Two-Tier Routing: routes question across playlist titles and JIT fetches/chunks transcripts.
     - Retrieves relevant chunks from Qdrant.
     - Guardrail 1: Rejects off-topic questions without calling the LLM.
@@ -244,7 +319,6 @@ def chat_with_lectures(request: ChatRequest):
     """
     try:
         store = get_vector_store()
-        store.stop_background_ingest(reason=f"chat_query: {request.question[:30]}")
         result = generate_answer(
             question=request.question,
             collection_name=request.collection_name,
@@ -255,6 +329,7 @@ def chat_with_lectures(request: ChatRequest):
             filter_playlist_id=request.playlist_id,
             enable_jit=request.enable_jit,
             chat_history=[message.model_dump() for message in request.chat_history],
+            interrupt_background_ingest=False,
         )
         return {
             "question": request.question,

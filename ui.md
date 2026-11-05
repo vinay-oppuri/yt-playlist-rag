@@ -151,12 +151,17 @@ Ingesting a 300-video YouTube course sequentially (fetching captions, chunking t
 1. **Tier 1 (Instant Registry & Title Indexing ~2 seconds)**:
    * When a playlist is submitted, `yt-dlp` flat extraction (`extract_flat: True`) extracts metadata for all 300 videos in ~2 seconds without downloading video content.
    * All 300 video titles are batch-embedded and indexed into Qdrant collection `yt_videos`.
-   * Video 1 is immediately transcribed and ready for interactive playback in the Studio.
-   * The user immediately receives an instant success confirmation and can explore the library.
+   * The selected video is indexed for immediate playback; remaining videos enter a SQLite-backed durable job.
+   * The ingestion request returns a job ID without waiting for every playlist transcript.
 
-2. **Tier 2 (Just-In-Time JIT Transcription on Demand)**:
+2. **Tier 2 (Durable Background Indexing and Just-In-Time Retrieval)**:
+   * Job state, per-video attempts, errors, and progress persist in SQLite. Pending work resumes after an API restart.
+   * Users can pause and resume jobs, inspect progress, and retry failed videos from the dashboard.
+   * Search and chat do not cancel the background job. JIT work for an unindexed video may wait for the active transcript operation.
    * **Targeted Video Query**: When a user queries a specific video, the system verifies if its transcript is already in `yt_transcripts`. If not, it fetches and indexes it JIT in ~1–2s.
    * **Cross-Playlist General Query**: When a user asks a general question without knowing which lecture covers it, Tier 1 semantic title routing identifies the top matching video lectures (`yt_videos`).
    * The backend dynamically JIT-transcribes the top matching video(s), indexes their chunks into `yt_transcripts`, and performs the vector search and grounded LLM generation.
-   * Cached transcript files on disk (`.transcripts_cache/*.json`) guarantee sub-millisecond retrieval on future visits.
+   * Cached transcript files on disk avoid refetching captions on later attempts; embeddings and Qdrant indexing still need to be verified or completed.
+
+The queue currently uses one sequential worker in one API process. Multi-replica coordination, priority scheduling for JIT work, and configurable concurrency remain future work.
 

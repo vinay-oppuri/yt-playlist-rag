@@ -210,7 +210,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({
           </div>
           <div>
             <h2 style={styles.headerTitle}>Grounded Lecture Q&A</h2>
-            <p style={styles.headerSubtitle}>Zero hallucinations • Strict timestamp citations</p>
+            <p style={styles.headerSubtitle}>Transcript-grounded answers • Timestamp citations</p>
           </div>
         </div>
 
@@ -272,7 +272,7 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({
               {msg.citations && msg.citations.length > 0 && (
                 <div style={styles.citationSection}>
                   <div style={styles.citationHeader}>
-                    <span>VERIFIED TIMESTAMP SOURCES (Click to Jump In-Page):</span>
+                    <span>TRANSCRIPT CITATIONS (Click to Jump In-Page):</span>
                   </div>
                   <div style={styles.citationGrid}>
                     {msg.citations.map((c) => (
@@ -291,7 +291,6 @@ export const ChatPanel: React.FC<ChatPanelProps> = ({
                             {c.timestamp}
                           </span>
                           <span style={styles.leadInTag}>-5s lead-in</span>
-                          <span style={styles.scoreTag}>Score: {Math.round(c.score * 100)}%</span>
                         </div>
                         <div style={styles.citationVideoTitle}>{c.video_title}</div>
                         {c.preview && <div style={styles.citationPreview}>&ldquo;{c.preview}...&rdquo;</div>}
@@ -541,11 +540,6 @@ const styles: { [key: string]: React.CSSProperties } = {
     background: "rgba(255, 255, 255, 0.05)",
     padding: "2px 6px",
     borderRadius: "var(--radius-sm)",
-  },
-  scoreTag: {
-    fontSize: "0.7rem",
-    color: "var(--success)",
-    fontWeight: 600,
   },
   citationVideoTitle: {
     fontSize: "0.82rem",

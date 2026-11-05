@@ -2,7 +2,6 @@ import os
 import re
 import sys
 import threading
-import time
 import uuid
 from typing import Any, Dict, List, Optional
 from fastembed import TextEmbedding
@@ -11,6 +10,7 @@ from qdrant_client import QdrantClient, models
 from qdrant_client.http.exceptions import UnexpectedResponse
 
 from src.chunker import TranscriptChunk, chunk_transcript
+from src.ingestion_queue import IngestionQueue
 from src.video_profile import build_video_profile
 from src.transcribe import (
     extract_video_url,
@@ -39,6 +39,14 @@ _QUERY_STOPWORDS = {
     "does", "explain", "for", "from", "how", "i", "in", "is", "it", "me",
     "of", "on", "or", "please", "tell", "that", "the", "this", "to", "was",
     "what", "when", "where", "which", "who", "why", "with", "you",
+    # Common Hinglish/Hindi query filler. Removing these keeps lexical coverage
+    # focused on lecture concepts instead of grammar and polite instructions.
+    "aap", "ab", "acha", "aur", "batao", "bhi", "but", "hai", "hain", "hoga",
+    "hogi", "hote", "hoti", "hum", "iska", "iske", "isko", "ka", "kab",
+    "kaha", "kaise", "kar", "kare", "karen", "karna", "karo", "ke", "ki", "kya",
+    "kyu", "kyun", "mein", "me", "mera", "meri", "mere", "mujhe", "nahi", "nahin",
+    "par", "samjhao", "se", "toh", "tum", "uska", "uske", "usko", "wala",
+    "wali", "wale", "ya", "ye", "yaha", "wo", "woh",
 }
 
 
@@ -116,14 +124,14 @@ class VectorStore:
         # 1. Initialize FastEmbed model
         print(f"Loading FastEmbed model: {self.embedding_model_name}...")
         self.embedder = TextEmbedding(model_name=self.embedding_model_name)
+        # FastEmbed instances are shared by API requests and the playlist worker.
+        # Serialize access so concurrent retrieval and ingestion cannot race the ONNX session.
+        self._embedding_lock = threading.RLock()
 
         # 2. Connect to Qdrant (server or local disk fallback)
         self.client = self._init_qdrant_client()
 
-        # 3. Background playlist ingestion management
-        self._bg_thread: Optional[threading.Thread] = None
-        self._bg_stop_event = threading.Event()
-        self._bg_lock = threading.Lock()
+        # 3. Durable playlist ingestion. The queue recovers unfinished items from SQLite.
         self._transcribe_lock = threading.RLock()
         self._index_lock = threading.Lock()
         self._reranker_lock = threading.Lock()
@@ -135,15 +143,8 @@ class VectorStore:
         self._indexed_collections: set[str] = set()
         self._playlist_reconcile_lock = threading.Lock()
         self._reconciled_playlists: set[tuple[str, str]] = set()
-        self._bg_status: Dict[str, Any] = {
-            "is_running": False,
-            "playlist_id": None,
-            "playlist_title": None,
-            "current_video": None,
-            "completed": 0,
-            "total": 0,
-            "stopped_reason": None,
-        }
+        self._ingestion_queue = IngestionQueue(self._process_ingestion_item)
+        self._ingestion_queue.start()
 
     def _rerank_with_cross_encoder(
         self,
@@ -324,13 +325,15 @@ class VectorStore:
             str(t).strip() if (t is not None and str(t).strip()) else " "
             for t in texts
         ]
-        embeddings_gen = self.embedder.embed(clean_texts, batch_size=batch_size)
-        return [vec.tolist() for vec in embeddings_gen]
+        with self._embedding_lock:
+            embeddings_gen = self.embedder.embed(clean_texts, batch_size=batch_size)
+            return [vec.tolist() for vec in embeddings_gen]
 
     def embed_query(self, query: str) -> List[float]:
         """Generate a query-optimized vector for asymmetric retrieval models."""
         clean_q = str(query).strip() if query else " "
-        results = list(self.embedder.query_embed(clean_q))
+        with self._embedding_lock:
+            results = list(self.embedder.query_embed(clean_q))
         return results[0].tolist() if results else []
 
     def upsert_chunks(
@@ -874,106 +877,60 @@ class VectorStore:
         overlap_words: int = 35,
         playlist_id: Optional[str] = None,
         playlist_title: Optional[str] = None,
-    ) -> None:
-        """
-        Start a background daemon thread that sequentially transcribes, chunks, and indexes
-        remaining videos in the playlist until complete or interrupted by a user query.
-        """
-        # Stop any existing background ingestion first
-        self.stop_background_ingest(reason="new_playlist_ingest_started")
+    ) -> str:
+        """Persist a playlist job and schedule each remaining video independently."""
+        return self._ingestion_queue.enqueue(
+            videos,
+            collection_name=collection_name,
+            videos_collection=videos_collection,
+            target_words=target_words,
+            overlap_words=overlap_words,
+            playlist_id=playlist_id,
+            playlist_title=playlist_title,
+        )
 
-        with self._bg_lock:
-            self._bg_stop_event.clear()
-            self._bg_status = {
-                "is_running": True,
-                "playlist_id": playlist_id,
-                "playlist_title": playlist_title,
-                "current_video": None,
-                "completed": 0,
-                "total": len(videos),
-                "stopped_reason": None,
-            }
-
-        def _worker():
-            print(f"[Background Ingest] Worker started for '{playlist_title or playlist_id}' ({len(videos)} videos queued)...")
-            try:
-                for idx, vid in enumerate(videos):
-                    if self._bg_stop_event.is_set():
-                        print(f"[Background Ingest] Stop event detected before video #{idx+1}. Halting worker immediately.")
-                        break
-
-                    v_id = vid.get("video_id")
-                    if not v_id:
-                        continue
-
-                    # If already transcribed, count it and proceed
-                    if self.is_video_transcribed(v_id, collection_name=collection_name):
-                        with self._bg_lock:
-                            self._bg_status["completed"] += 1
-                        continue
-
-                    title = vid.get("title", f"Video {v_id}")
-                    v_url = vid.get("url", f"https://www.youtube.com/watch?v={v_id}")
-                    with self._bg_lock:
-                        self._bg_status["current_video"] = title
-
-                    if self._bg_stop_event.is_set():
-                        print(f"[Background Ingest] Stop event detected before fetching {v_id}. Halting.")
-                        break
-
-                    print(f"[Background Ingest] [{idx+1}/{len(videos)}] Chunking video {v_id} ('{title}')...")
-                    jit_res = self.ensure_video_transcribed(
-                        video_id=v_id,
-                        title=title,
-                        url=v_url,
-                        transcripts_collection=collection_name,
-                        videos_collection=videos_collection,
-                        target_words=target_words,
-                        overlap_words=overlap_words,
-                        playlist_id=playlist_id,
-                    )
-                    with self._bg_lock:
-                        self._bg_status["completed"] += 1
-                    print(f"[Background Ingest] Video {v_id} indexed ({jit_res.get('chunks', 0)} chunks).")
-
-                    # Brief pause between videos to yield CPU and check stop event
-                    time.sleep(0.05)
-            except Exception as e:
-                print(f"[Background Ingest] Error during ingestion: {e}")
-            finally:
-                with self._bg_lock:
-                    was_stopped = self._bg_stop_event.is_set()
-                    self._bg_status["is_running"] = False
-                    self._bg_status["current_video"] = None
-                    if was_stopped:
-                        print(f"[Background Ingest] Halted. Reason: {self._bg_status.get('stopped_reason', 'stopped')}")
-                    else:
-                        self._bg_status["stopped_reason"] = "completed"
-                        print(f"[Background Ingest] All {len(videos)} playlist videos indexed successfully.")
-
-        self._bg_thread = threading.Thread(target=_worker, daemon=True, name="bg-playlist-ingest")
-        self._bg_thread.start()
+    def _process_ingestion_item(
+        self, item: Dict[str, Any], job: Dict[str, Any]
+    ) -> Dict[str, Any]:
+        print(
+            f"[Ingestion job {item['job_id']}] Processing "
+            f"{item['video_id']} ({item['title']})"
+        )
+        return self.ensure_video_transcribed(
+            video_id=item["video_id"],
+            title=item["title"],
+            url=item["url"],
+            transcripts_collection=job["collection_name"],
+            videos_collection=job["videos_collection"],
+            target_words=job["target_words"],
+            overlap_words=job["overlap_words"],
+            playlist_id=job.get("playlist_id"),
+        )
 
     def stop_background_ingest(self, reason: str = "query_received") -> bool:
-        """
-        Stop any running background playlist ingestion immediately.
-        Signals the worker thread to halt at the earliest checkpoint.
-        """
-        with self._bg_lock:
-            if self._bg_thread and self._bg_thread.is_alive():
-                print(f"[Background Ingest] Stop signal received ('{reason}'). Halting background chunking immediately!")
-                self._bg_status["stopped_reason"] = reason
-                self._bg_stop_event.set()
-                return True
-        return False
+        """Pause queued ingestion safely; the active video finishes before pausing."""
+        print(f"[Ingestion queue] Pause requested ({reason}).")
+        return self._ingestion_queue.pause()
+
+    def resume_background_ingest(self) -> bool:
+        """Resume queued and paused durable playlist jobs."""
+        return self._ingestion_queue.resume()
+
+    def get_ingestion_job(self, job_id: str) -> Optional[Dict[str, Any]]:
+        return self._ingestion_queue.get_job(job_id)
+
+    def list_ingestion_jobs(self, limit: int = 20) -> List[Dict[str, Any]]:
+        return self._ingestion_queue.list_jobs(limit)
+
+    def retry_failed_ingestion(self, job_id: str, video_id: Optional[str] = None) -> int:
+        return self._ingestion_queue.retry_failed(job_id, video_id)
+
+    def shutdown_ingestion_queue(self) -> None:
+        self._ingestion_queue.shutdown()
 
     def get_background_ingest_status(self) -> Dict[str, Any]:
-        """Return the current background ingestion status."""
-        with self._bg_lock:
-            is_alive = bool(self._bg_thread and self._bg_thread.is_alive())
-            status = dict(self._bg_status)
-            status["is_running"] = is_alive
-            return status
+        """Return active job progress and recent persisted jobs."""
+        return self._ingestion_queue.status()
 
     def ensure_video_transcribed(
         self,
@@ -1400,6 +1357,41 @@ class VectorStore:
         self.upsert_videos(videos_to_process, collection_name=videos_collection)
         print(f"Registered {len(videos_to_process)} videos in Tier 1 registry ('{videos_collection}').")
 
+        if is_playlist and deep_ingest:
+            job_id = self.start_background_playlist_ingest(
+                videos=videos_to_process,
+                collection_name=collection_name,
+                videos_collection=videos_collection,
+                target_words=target_words,
+                overlap_words=overlap_words,
+                playlist_id=playlist_id,
+                playlist_title=playlist_title,
+            )
+            return {
+                "success": True,
+                "mode": "deep_queued",
+                "url": url,
+                "is_playlist": True,
+                "playlist_title": playlist_title,
+                "playlist_id": playlist_id,
+                "collection_name": collection_name,
+                "videos_total": len(videos_to_process),
+                "videos_registered": len(videos_to_process),
+                "videos_indexed": 0,
+                "total_chunks_stored": 0,
+                "background_ingestion": True,
+                "queued_background_videos": len(videos_to_process),
+                "ingestion_job_id": job_id,
+                "details": [
+                    {"video_id": video["video_id"], "title": video.get("title"),
+                     "status": "queued", "chunks": 0,
+                     "playlist_id": playlist_id, "playlist_title": playlist_title,
+                     "playlist_index": video.get("playlist_index")}
+                    for video in videos_to_process
+                ],
+                "message": f"All {len(videos_to_process)} playlist videos were queued as durable job {job_id}.",
+            }
+
         # ── 2. Handle Hierarchical Fast Registration vs Full Deep Ingest ──
         results_summary = []
         total_chunks_stored = 0
@@ -1471,9 +1463,10 @@ class VectorStore:
                     "playlist_index": (videos_to_process.index(vid) + 1),
                 })
 
-            # Start background ingestion for the following videos until a query is asked
+            # Continue background ingestion while users search or chat.
+            job_id = None
             if following_videos:
-                self.start_background_playlist_ingest(
+                job_id = self.start_background_playlist_ingest(
                     videos=following_videos,
                     collection_name=collection_name,
                     videos_collection=videos_collection,
@@ -1496,11 +1489,13 @@ class VectorStore:
                 "videos_indexed": 1 if total_chunks_stored > 0 else 0,
                 "total_chunks_stored": total_chunks_stored,
                 "background_ingestion": bool(following_videos),
+                "ingestion_job_id": job_id,
                 "queued_background_videos": len(following_videos),
                 "details": results_summary,
                 "message": (
                     f"Target video '{title}' indexed instantly for playback. "
-                    f"Background chunking started for {len(following_videos)} remaining video(s) and will run until a query is asked."
+                    f"Durable background indexing queued for {len(following_videos)} remaining video(s). "
+                    f"It will resume after an API restart and continue while you search or chat."
                 ),
             }
 

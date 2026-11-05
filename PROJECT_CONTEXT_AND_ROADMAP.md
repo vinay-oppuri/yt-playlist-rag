@@ -11,9 +11,10 @@ YT-RAG helps a learner ask questions about one video or an entire YouTube playli
 - **Playlist registry:** `yt_videos` stores titles and metadata for fast routing across large playlists.
 - **Transcript evidence:** `yt_transcripts` stores segment-aligned, timestamped chunks. These chunks are the only factual answer source.
 - **Video profiles:** `yt_video_profiles` stores extractive summaries, topic tags and key moments for video discovery. Profiles may affect retrieval order, but must never be treated as answer evidence.
-- **Retrieval:** query-aware FastEmbed vectors, Qdrant dense search, exact-token lexical candidates, video-profile ranks and reciprocal rank fusion form the candidate list. A local FastEmbed cross-encoder reranks the shortlist. A lexical MMR pass reduces near-duplicate transcript windows.
+- **Retrieval:** query-aware FastEmbed vectors, Qdrant dense search, exact-token lexical candidates, video-profile ranks and reciprocal rank fusion form the candidate list. Common English and Hinglish filler words are removed before lexical/profile matching. A local FastEmbed cross-encoder reranks the shortlist. A lexical MMR pass reduces near-duplicate transcript windows.
 - **Grounded chat:** recent chat history may resolve references but is not evidence. The answer prompt requires transcript support and citations. Answers without valid excerpt citations fail closed.
-- **Playlist ingestion:** titles are registered quickly; transcripts are loaded on demand. The durable queue for very large playlists remains deferred as requested.
+- **Playlist ingestion:** titles are registered quickly; remaining videos enter a SQLite-backed per-video job queue. Queued and interrupted work resumes when the API starts, failures retry up to three times, and jobs expose per-video state. The worker is currently sequential and local to one API process; SQLite is durable, but horizontal multi-worker deployment is not supported.
+- **Answer validation:** generated answers must cite every sentence or list item and every reference must point to a supplied transcript excerpt. Answers that fail citation coverage are refused.
 - **Operations:** `RERANKER_MODEL` controls the local reranker. Its model downloads on first use; set it to `none` to use rank fusion without the cross-encoder.
 
 ## Accuracy rules
@@ -22,8 +23,11 @@ YT-RAG helps a learner ask questions about one video or an entire YouTube playli
 2. Do not let profile rank, chat history, video titles or model knowledge satisfy the transcript evidence cutoff.
 3. Cite every factual answer sentence. Refuse if an answer has no valid citations or references excerpts that were not provided.
 4. Keep citation timestamps tied to the exact retrieved chunk. Preserve segment boundaries and the short player lead-in.
-5. Rank fusion and cross-encoder scores order candidates; they are not calibrated probabilities. The answer cutoff must use transcript relevance signals and should be tuned against labeled cases.
+5. Rank fusion, cross-encoder and cosine scores order candidates; they are not calibrated probabilities. Do not display them as confidence percentages. The answer cutoff must use transcript relevance signals and should be tuned against labeled cases.
 6. Keep evaluation non-disruptive by default: no JIT transcription and no interruption of an active background ingestion job.
+7. Keep interactive search and chat from cancelling background playlist ingestion. Shared embedding operations are serialized for thread safety.
+8. Require a citation on every generated sentence/list item; citation coverage is a structural guardrail, not proof of semantic entailment.
+9. Persist playlist work per video; retry failures independently and make upserts idempotent so a restart cannot create duplicate transcript chunks.
 
 ## Quality evaluation
 
@@ -97,9 +101,12 @@ This command may make external LLM calls. JIT transcription and interruption of 
 - The configured cross-encoder defaults to `Xenova/ms-marco-MiniLM-L-6-v2`, an English MS MARCO reranker. Treat Hinglish results as a model coverage risk and compare multilingual candidates before changing defaults.
 - Keep licensing, model size, first-query latency and re-embedding requirements in the decision.
 
-### 4. Revisit durable ingestion later
+### 4. Scale durable ingestion
 
-When the deferred large-playlist work resumes, move sequential in-memory jobs to durable per-video jobs with retries, bounded concurrency, restart recovery and observable progress. Keep chat/JIT work independent so an interactive query cannot cancel an entire playlist job.
+- SQLite now stores jobs and per-video states, attempts, errors, and chunk counts. Active work recovers after API restart; users can pause/resume jobs and retry individual failures.
+- The worker intentionally processes one video at a time to bound pressure on YouTube and local CPU. Benchmark a configurable worker pool only after separating model/Qdrant capacity and adding provider rate limits.
+- JIT transcription still shares a process-level lock with the background worker. Add priority scheduling so a chat request for an unindexed video can move ahead of queued work, without interrupting the active video.
+- Move job coordination to a shared queue/database before running multiple API replicas; the current in-process worker assumes one API instance.
 
 ### 5. Add GraphRAG only when evidence calls for it
 

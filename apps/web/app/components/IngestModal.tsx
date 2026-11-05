@@ -76,11 +76,11 @@ export const IngestModal: React.FC<IngestModalProps> = ({
       }
 
       const data = await response.json();
-      const isHierarchical = data.mode === "hierarchical";
+      const isQueuedPlaylist = Boolean(data.background_ingestion);
       setResult({
         type: "success",
-        text: isHierarchical
-          ? `⚡ Registered all ${data.videos_total} playlist videos! Initial video is ready for playback (${data.total_chunks_stored} chunks). Background chunking started for remaining lectures and will automatically pause/stop whenever you ask a search or chat query.`
+        text: isQueuedPlaylist
+          ? `${data.message || `Queued ${data.queued_background_videos} playlist videos for durable indexing.`} Job ${data.ingestion_job_id?.slice(0, 8) || "queued"} will resume after API restarts. Track progress on the dashboard.`
           : `Successfully indexed ${data.videos_indexed} of ${data.videos_total} video(s) • ${data.total_chunks_stored} vector embeddings created.`,
       });
 

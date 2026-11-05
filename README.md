@@ -1,159 +1,96 @@
-# Turborepo starter
+# YT-RAG
 
-This Turborepo starter is maintained by the Turborepo core team.
+Ask questions about YouTube videos and playlists, get transcript-grounded answers, and jump directly to the cited moments.
 
-## Using this example
+YT-RAG combines timestamp-preserving transcript chunking, Qdrant retrieval, local reranking, and a Next.js study workspace. Transcripts are the factual source for answers. Video titles and transcript-derived profiles help route a question, but are not answer evidence.
 
-Run the following command:
+## Features
 
-```sh
-npx create-turbo@latest
+- Register playlists quickly from YouTube metadata and explore videos in the study workspace.
+- Index transcripts on demand and continue background playlist indexing while searching or chatting.
+- Search with dense vectors, exact-token candidates, reciprocal rank fusion, video profiles, cross-encoder reranking, and result diversification.
+- Ask questions in English or Hinglish; lexical routing removes common filler words before matching.
+- Receive timestamp citations that seek the embedded player.
+- Refuse answers without sufficient transcript evidence or sentence-level citations.
+- Review retrieval and generated-answer quality using labeled evaluation cases.
+
+## Requirements
+
+- Node.js 24 or newer and npm 11 or newer for the web monorepo.
+- Python 3.12 or newer and [uv](https://docs.astral.sh/uv/) for the API.
+- Docker for the included Qdrant service.
+- A Gemini or Groq API key to generate answers. Transcript search works without an LLM key.
+
+## Run locally
+
+Start Qdrant from the repository root:
+
+```powershell
+docker compose up -d qdrant
 ```
 
-## What's inside?
+Install API dependencies and start FastAPI:
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `@next/eslint-plugin-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo build
+```powershell
+cd apps/api
+uv sync
+Copy-Item .env.example .env
+uv run uvicorn main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-Without global `turbo`, use your package manager:
+Set `GEMINI_API_KEY` or `GROQ_API_KEY` in `apps/api/.env` to enable generated answers. Embedding and reranking models download locally when first used.
 
-```sh
-cd my-turborepo
-npx turbo build
-npm exec turbo build
-npm exec turbo build
+In a second terminal, start the web app from the repository root:
+
+```powershell
+npm install
+npm run dev:web
 ```
 
-You can build a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
+Open `http://localhost:3000`. FastAPI docs are at `http://127.0.0.1:8000/docs`; Qdrant's dashboard is at `http://localhost:6333/dashboard`.
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
+## How a question is answered
 
-```sh
-turbo build --filter=docs
+1. The API applies the selected video or playlist filter and retrieves transcript candidates using dense and lexical search.
+2. Video profiles contribute routing rank only; transcript chunks remain the sole factual source.
+3. Reciprocal rank fusion, a local cross-encoder, and diversity selection order the candidates.
+4. The generator refuses when no chunk passes the relevance cutoff, asks the configured LLM to answer only from excerpts, and requires valid citations on every sentence or list item.
+5. The UI shows the cited video and timestamp. Clicking a citation seeks the in-page player.
+
+Playlist indexing is stored as a SQLite job with per-video progress, errors, and retries. Pending work resumes when the API starts again. The worker is sequential and local to one API process; multi-replica queue coordination and priority scheduling for JIT work remain planned.
+
+## Evaluation
+
+The retrieval golden set lives in `apps/api/eval/golden.json`. It includes English and Hinglish queries with expected video and timestamp labels. Run it from `apps/api` after the corresponding videos have transcript vectors in Qdrant:
+
+```powershell
+uv run python eval/eval_retrieval.py --group strivers_a2z --json-out eval/results.json
 ```
 
-Without global `turbo`:
+Add `--playlist-id YOUR_PLAYLIST_ID` to constrain playlist retrieval. Use `--disable-reranker` to compare rank fusion without the cross-encoder. Reports include timestamp Hit@K, video Hit@K, MRR, and metrics by query language.
 
-```sh
-npx turbo build --filter=docs
-npm exec turbo build --filter=docs
-npm exec turbo build --filter=docs
+Generated-answer review cases are in `apps/api/eval/golden_answers.json`. The evaluator can call the configured LLM:
+
+```powershell
+uv run python eval/eval_answers.py --group campusx_fastapi --json-out eval/answer_report.json
 ```
 
-### Develop
+Inspect generated answers and cited transcript excerpts manually. A citation check confirms the answer points to retrieved evidence; it does not prove that every claim is entailed by that evidence.
 
-To develop all apps and packages, run the following command:
+## Configuration
 
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
+Copy `apps/api/.env.example` to `apps/api/.env` and configure:
 
-```sh
-cd my-turborepo
-turbo dev
-```
+| Variable | Purpose |
+| --- | --- |
+| `LLM_PROVIDER` | Select `gemini` or `groq` |
+| `GEMINI_API_KEY`, `GEMINI_MODEL` | Gemini credentials and model |
+| `GROQ_API_KEY`, `GROQ_MODEL` | Groq credentials and model |
+| `QDRANT_URL` | Qdrant endpoint, default `http://localhost:6333` |
+| `RERANKER_MODEL` | Local cross-encoder; set `none` to disable |
+| `MIN_SIMILARITY_SCORE` | Transcript relevance cutoff used by grounded chat |
+| `INGESTION_DB_PATH` | SQLite file for durable playlist jobs, relative to `apps/api` by default |
+| `INGESTION_MAX_ATTEMPTS` | Maximum attempts per video before marking it failed; default `3` |
+| `CORS_ORIGIN` | Additional allowed web origin |
 
-Without global `turbo`, use your package manager:
-
-```sh
-cd my-turborepo
-npx turbo dev
-npm exec turbo dev
-npm exec turbo dev
-```
-
-You can develop a specific package by using a [filter](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters):
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo dev --filter=web
-```
-
-Without global `turbo`:
-
-```sh
-npx turbo dev --filter=web
-npm exec turbo dev --filter=web
-npm exec turbo dev --filter=web
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed (recommended):
-
-```sh
-cd my-turborepo
-turbo login
-```
-
-Without global `turbo`, use your package manager:
-
-```sh
-cd my-turborepo
-npx turbo login
-npm exec turbo login
-npm exec turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-With [global `turbo`](https://turborepo.dev/docs/getting-started/installation#global-installation) installed:
-
-```sh
-turbo link
-```
-
-Without global `turbo`:
-
-```sh
-npx turbo link
-npm exec turbo link
-npm exec turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.dev/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.dev/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.dev/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.dev/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.dev/docs/reference/configuration)
-- [CLI Usage](https://turborepo.dev/docs/reference/command-line-reference)
+See [PROJECT_CONTEXT_AND_ROADMAP.md](PROJECT_CONTEXT_AND_ROADMAP.md) for the current architecture, quality rules, and next phases.
