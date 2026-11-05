@@ -215,6 +215,7 @@ def generate_answer(
     filter_playlist_id: Optional[str] = None,
     enable_jit: bool = True,
     chat_history: Optional[List[Dict[str, str]]] = None,
+    interrupt_background_ingest: bool = True,
 ) -> Dict[str, Any]:
     """
     Full Grounded RAG Generation Pipeline:
@@ -238,8 +239,9 @@ def generate_answer(
     retrieval_query, was_contextualized = contextualize_question(clean_question, chat_history)
 
     store = get_vector_store()
-    # Halt background chunking so query retrieval gets immediate priority
-    store.stop_background_ingest(reason=f"chat_query: {retrieval_query[:30]}")
+    # Interactive chat takes priority; offline evaluation can leave ingestion alone.
+    if interrupt_background_ingest:
+        store.stop_background_ingest(reason=f"chat_query: {retrieval_query[:30]}")
     raw_hits = store.search(
         query=retrieval_query,
         collection_name=collection_name,
@@ -248,6 +250,7 @@ def generate_answer(
         filter_video_id=filter_video_id,
         filter_playlist_id=filter_playlist_id,
         enable_jit=enable_jit,
+        interrupt_background_ingest=interrupt_background_ingest,
     )
 
     # Filter by minimum similarity score

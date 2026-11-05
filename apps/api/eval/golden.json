@@ -1,135 +1,167 @@
 [
   {
-    "question": "what is pydantic",
+    "question": "What does Pydantic help validate in Python?",
     "expected_video_id": "lRArylZCeOs",
-    "expected_around_sec": 767,
-    "tolerance_sec": 120,
-    "notes": "FastAPI for Machine Learning playlist: Pydantic validation explanation."
+    "expected_around_sec": 60,
+    "tolerance_sec": 60,
+    "notes": "Defines Pydantic as a Python library for type and data validation.",
+    "group": "campusx_fastapi"
   },
   {
-    "question": "What is the difference between memoization and tabulation?",
-    "expected_video_id": null,
-    "expected_around_sec": null,
-    "tolerance_sec": 60,
-    "notes": "Replace expected_video_id and expected_around_sec after ingesting your playlist."
+    "question": "How does Pydantic reduce repeated manual validation code?",
+    "expected_video_id": "lRArylZCeOs",
+    "expected_around_sec": 779,
+    "tolerance_sec": 75,
+    "notes": "Explains that Pydantic handles type and data validation and reduces manual code.",
+    "group": "campusx_fastapi"
   },
   {
-    "question": "How does a sliding window technique work?",
-    "expected_video_id": null,
-    "expected_around_sec": null,
+    "question": "What does GCD or HCF mean, using 9 and 12 as an example?",
+    "expected_video_id": "1xNbjMdbjug",
+    "expected_around_sec": 2756,
     "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "notes": "Defines the greatest common divisor and identifies 3 as the GCD of 9 and 12.",
+    "group": "strivers_a2z"
   },
   {
-    "question": "What is time complexity of binary search?",
-    "expected_video_id": null,
-    "expected_around_sec": null,
-    "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "question": "Why is the second largest value not always the item immediately before the largest after sorting?",
+    "expected_video_id": "37E9ckMDdTk",
+    "expected_around_sec": 871,
+    "tolerance_sec": 75,
+    "notes": "Shows that duplicate maximum values mean the previous item may also be the maximum.",
+    "group": "strivers_a2z"
   },
   {
-    "question": "Explain BFS vs DFS traversal",
-    "expected_video_id": null,
-    "expected_around_sec": null,
+    "question": "What is the maximum subarray sum problem asking us to find?",
+    "expected_video_id": "AHZpyENo7k4",
+    "expected_around_sec": 53,
     "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "notes": "Defines a subarray and asks for the contiguous subarray with the greatest sum.",
+    "group": "strivers_a2z"
   },
   {
-    "question": "What are the steps to implement dynamic programming?",
-    "expected_video_id": null,
-    "expected_around_sec": null,
+    "question": "What are the time and space complexities of the optimal Kadane solution?",
+    "expected_video_id": "AHZpyENo7k4",
+    "expected_around_sec": 931,
     "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "notes": "States O(n) time and O(1) extra space.",
+    "group": "strivers_a2z"
   },
   {
-    "question": "How does a hash map resolve collisions?",
-    "expected_video_id": null,
-    "expected_around_sec": null,
+    "question": "What is a hash collision?",
+    "expected_video_id": "KEs5UyBJ39g",
+    "expected_around_sec": 3348,
     "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "notes": "Defines a collision as multiple keys ending up at the same hash location.",
+    "group": "strivers_a2z"
   },
   {
-    "question": "What is quicksort and when should you use it?",
-    "expected_video_id": null,
-    "expected_around_sec": null,
+    "question": "What are the two main steps in merge sort?",
+    "expected_video_id": "ogjf7ORKfd8",
+    "expected_around_sec": 184,
     "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "notes": "The lecture describes merge sort as divide and merge.",
+    "group": "strivers_a2z"
   },
   {
-    "question": "How does merge sort guarantee O(n log n)?",
-    "expected_video_id": null,
-    "expected_around_sec": null,
+    "question": "How does quicksort choose its pivot?",
+    "expected_video_id": "WIrA4YexLRQ",
+    "expected_around_sec": 231,
     "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "notes": "Explains that the pivot may be any element, with no single required choice.",
+    "group": "strivers_a2z"
   },
   {
-    "question": "What is the two pointer approach?",
-    "expected_video_id": null,
-    "expected_around_sec": null,
+    "question": "When is a graph bipartite according to the two-color definition?",
+    "expected_video_id": "-vu34sct1g8",
+    "expected_around_sec": 95,
     "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "notes": "Defines a bipartite graph by coloring it with two colors so adjacent nodes differ.",
+    "group": "strivers_a2z"
   },
   {
-    "question": "Explain heap data structure and its applications",
-    "expected_video_id": null,
-    "expected_around_sec": null,
-    "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "question": "How does functional recursion differ from parameterized recursion?",
+    "expected_video_id": "69ZCDFy-OUo",
+    "expected_around_sec": 456,
+    "tolerance_sec": 75,
+    "notes": "Contrasts returning a result from a function with using parameters to carry the work.",
+    "group": "strivers_a2z"
   },
   {
-    "question": "What is a trie and how is it used for string search?",
-    "expected_video_id": null,
-    "expected_around_sec": null,
-    "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "question": "What regions do low, mid, and high mark when sorting an array of zeroes, ones, and twos?",
+    "expected_video_id": "tp8JIuCXBaU",
+    "expected_around_sec": 427,
+    "tolerance_sec": 75,
+    "notes": "Describes the three pointer invariants used by the Dutch national flag method.",
+    "group": "strivers_a2z"
   },
   {
-    "question": "Explain Dijkstra's shortest path algorithm",
-    "expected_video_id": null,
-    "expected_around_sec": null,
-    "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "question": "How can a hash map help solve the two-sum problem?",
+    "expected_video_id": "UXDSeD9mN-k",
+    "expected_around_sec": 371,
+    "tolerance_sec": 75,
+    "notes": "Uses the map to check whether the complement needed for the target has appeared.",
+    "group": "strivers_a2z"
   },
   {
-    "question": "What is backtracking and how does it differ from recursion?",
-    "expected_video_id": null,
-    "expected_around_sec": null,
-    "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "question": "How can prefix sums find a subarray whose sum is K?",
+    "expected_video_id": "frf7qxiN2qU",
+    "expected_around_sec": 1031,
+    "tolerance_sec": 75,
+    "notes": "Looks for an earlier prefix sum equal to the current prefix minus K.",
+    "group": "strivers_a2z"
   },
   {
-    "question": "How do you detect a cycle in a linked list?",
-    "expected_video_id": null,
-    "expected_around_sec": null,
+    "question": "Why is time complexity different from the number of seconds a program takes?",
+    "expected_video_id": "FPu9Uld7W-E",
+    "expected_around_sec": 203,
     "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "notes": "Explains that run time varies with machine configuration while complexity describes growth with input size.",
+    "group": "strivers_a2z"
   },
   {
-    "question": "What is a monotonic stack and when is it useful?",
-    "expected_video_id": null,
-    "expected_around_sec": null,
+    "question": "Kadane algorithm ki time aur space complexity kya hai?",
+    "expected_video_id": "AHZpyENo7k4",
+    "expected_around_sec": 931,
     "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "notes": "Hinglish query for the lecture's O(n) time and O(1) extra-space explanation.",
+    "group": "strivers_a2z",
+    "query_language": "hinglish"
   },
   {
-    "question": "Explain union-find (disjoint set) data structure",
-    "expected_video_id": null,
-    "expected_around_sec": null,
+    "question": "Hash collision kab hota hai? Jab multiple keys same hash location pe aa jaate hain, usko samjhao.",
+    "expected_video_id": "KEs5UyBJ39g",
+    "expected_around_sec": 3348,
     "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "notes": "Hinglish query for the transcript's definition of a collision.",
+    "group": "strivers_a2z",
+    "query_language": "hinglish"
   },
   {
-    "question": "What is amortized time complexity?",
-    "expected_video_id": null,
-    "expected_around_sec": null,
+    "question": "Merge sort ke main steps kya hain? Divide aur merge kaise hota hai?",
+    "expected_video_id": "ogjf7ORKfd8",
+    "expected_around_sec": 184,
     "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "notes": "Hinglish query for the lecture's divide-and-merge description.",
+    "group": "strivers_a2z",
+    "query_language": "hinglish"
   },
   {
-    "question": "How does Kadane's algorithm find the maximum subarray sum?",
-    "expected_video_id": null,
-    "expected_around_sec": null,
+    "question": "Bipartite graph kya hota hai? Two colors wala rule samjhao.",
+    "expected_video_id": "-vu34sct1g8",
+    "expected_around_sec": 95,
     "tolerance_sec": 60,
-    "notes": "Replace after ingestion."
+    "notes": "Hinglish query for the two-color definition in the transcript.",
+    "group": "strivers_a2z",
+    "query_language": "hinglish"
+  },
+  {
+    "question": "Two sum mein hash map target ka complement kaise find karta hai?",
+    "expected_video_id": "UXDSeD9mN-k",
+    "expected_around_sec": 371,
+    "tolerance_sec": 75,
+    "notes": "Hinglish query for checking whether the required complement has already appeared.",
+    "group": "strivers_a2z",
+    "query_language": "hinglish"
   }
 ]

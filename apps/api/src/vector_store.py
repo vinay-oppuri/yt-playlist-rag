@@ -1138,18 +1138,21 @@ class VectorStore:
         filter_video_id: Optional[str] = None,
         filter_playlist_id: Optional[str] = None,
         enable_jit: bool = True,
+        interrupt_background_ingest: bool = True,
     ) -> List[Dict[str, Any]]:
         """
-        Search Qdrant for transcript chunks most semantically relevant to the query.
+        Search Qdrant for transcript chunks relevant to the query using hybrid retrieval.
         Incorporates Hierarchical Two-Tier RAG:
-        1. Signals background ingestion to halt immediately so all CPU/network goes to the query.
+        1. Interactive queries can pause background ingestion when requested.
         2. If filter_video_id is provided, ensures that video's transcript is loaded and chunked JIT.
         3. If no filter_video_id is provided, routes query against video titles in Tier 1
            and JIT-transcribes top matching unindexed videos before searching chunks.
         4. Returns matching chunks with relevance score, text, and timestamp links.
         """
-        # Halt background playlist chunking immediately when a query arrives
-        self.stop_background_ingest(reason=f"query_search: {query[:30]}")
+        # Interactive requests take priority over ingestion. Offline evaluation
+        # can disable this so it never interrupts a user's active ingest job.
+        if interrupt_background_ingest:
+            self.stop_background_ingest(reason=f"query_search: {query[:30]}")
 
         self.ensure_collection(collection_name)
 

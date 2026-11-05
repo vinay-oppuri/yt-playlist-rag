@@ -1,0 +1,67 @@
+[
+  {
+    "question": "What does Pydantic do, and why is it useful?",
+    "expected_video_id": "lRArylZCeOs",
+    "expected_around_sec": 60,
+    "tolerance_sec": 90,
+    "expected_claims": [
+      "Pydantic is a Python library.",
+      "It helps with type or data validation."
+    ],
+    "group": "campusx_fastapi"
+  },
+  {
+    "question": "What is the GCD of 9 and 12, and why?",
+    "expected_video_id": "1xNbjMdbjug",
+    "expected_around_sec": 2756,
+    "tolerance_sec": 90,
+    "expected_claims": [
+      "The GCD is 3.",
+      "3 is the largest number that divides both 9 and 12."
+    ],
+    "group": "strivers_a2z"
+  },
+  {
+    "question": "What is a hash collision?",
+    "expected_video_id": "KEs5UyBJ39g",
+    "expected_around_sec": 3348,
+    "tolerance_sec": 90,
+    "expected_claims": [
+      "A collision occurs when multiple keys map to the same hash location."
+    ],
+    "group": "strivers_a2z"
+  },
+  {
+    "question": "When is a graph bipartite according to the two-color rule?",
+    "expected_video_id": "-vu34sct1g8",
+    "expected_around_sec": 95,
+    "tolerance_sec": 90,
+    "expected_claims": [
+      "The graph can be colored with two colors.",
+      "Adjacent nodes must have different colors."
+    ],
+    "group": "strivers_a2z"
+  },
+  {
+    "question": "How does a hash map help solve two sum?",
+    "expected_video_id": "UXDSeD9mN-k",
+    "expected_around_sec": 371,
+    "tolerance_sec": 90,
+    "expected_claims": [
+      "For each value, look for the complement needed to reach the target.",
+      "A map can record values already seen."
+    ],
+    "group": "strivers_a2z"
+  },
+  {
+    "question": "Why is time complexity not the number of seconds a program takes?",
+    "expected_video_id": "FPu9Uld7W-E",
+    "expected_around_sec": 203,
+    "tolerance_sec": 90,
+    "expected_claims": [
+      "Elapsed time depends on the machine or its configuration.",
+      "Time complexity describes how running time grows with input size."
+    ],
+    "group": "strivers_a2z"
+  }
+]
