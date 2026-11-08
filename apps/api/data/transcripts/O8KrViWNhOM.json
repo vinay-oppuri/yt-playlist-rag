@@ -1,0 +1,5522 @@
+{
+  "video_id": "O8KrViWNhOM",
+  "title": "HTTP Methods in FastAPI | Video 3 | CampusX",
+  "total_segments": 1103,
+  "segments": [
+    {
+      "start": 2.629,
+      "duration": 0.010000000000000231,
+      "text": "Hi Guys, My name is Nish and welcome to"
+    },
+    {
+      "start": 2.6390000000000002,
+      "duration": 2.311,
+      "text": "Hi Guys, My name is Nish and welcome to my YouTube channel. So in this video also we will"
+    },
+    {
+      "start": 4.95,
+      "duration": 0.009999999999999787,
+      "text": "my YouTube channel. So in this video also we will"
+    },
+    {
+      "start": 4.96,
+      "duration": 2.0700000000000003,
+      "text": "my YouTube channel. So in this video also we will continue our fast API playlist."
+    },
+    {
+      "start": 7.03,
+      "duration": 0.009999999999999787,
+      "text": "continue our fast API playlist."
+    },
+    {
+      "start": 7.04,
+      "duration": 2.2299999999999995,
+      "text": "continue our fast API playlist. So far I have added two videos to this playlist."
+    },
+    {
+      "start": 9.27,
+      "duration": 0.009999999999999787,
+      "text": "So far I have added two videos to this playlist."
+    },
+    {
+      "start": 9.28,
+      "duration": 1.9900000000000002,
+      "text": "So far I have added two videos to this playlist. In the first video,"
+    },
+    {
+      "start": 11.27,
+      "duration": 0.009999999999999787,
+      "text": "In the first video,"
+    },
+    {
+      "start": 11.28,
+      "duration": 2.469000000000001,
+      "text": "In the first video, I explained"
+    },
+    {
+      "start": 13.749,
+      "duration": 0.009999999999999787,
+      "text": "I explained"
+    },
+    {
+      "start": 13.759,
+      "duration": 2.151,
+      "text": "I explained in great detail what an API is, and then in the second video,"
+    },
+    {
+      "start": 15.91,
+      "duration": 0.009999999999999787,
+      "text": "in great detail what an API is, and then in the second video,"
+    },
+    {
+      "start": 15.92,
+      "duration": 1.9900000000000002,
+      "text": "in great detail what an API is, and then in the second video, I gave you an in-"
+    },
+    {
+      "start": 17.91,
+      "duration": 0.010000000000001563,
+      "text": "I gave you an in-"
+    },
+    {
+      "start": 17.92,
+      "duration": 2.389999999999997,
+      "text": "I gave you an in- depth introduction to the Fast API. Now with today's"
+    },
+    {
+      "start": 20.31,
+      "duration": 0.010000000000001563,
+      "text": "depth introduction to the Fast API. Now with today's"
+    },
+    {
+      "start": 20.32,
+      "duration": 1.9100000000000001,
+      "text": "depth introduction to the Fast API. Now with today's video we will start working on our project."
+    },
+    {
+      "start": 22.23,
+      "duration": 0.00999999999999801,
+      "text": "video we will start working on our project."
+    },
+    {
+      "start": 22.24,
+      "duration": 2.0700000000000003,
+      "text": "video we will start working on our project. So in today's video, first of all"
+    },
+    {
+      "start": 24.31,
+      "duration": 0.010000000000001563,
+      "text": "So in today's video, first of all"
+    },
+    {
+      "start": 24.32,
+      "duration": 1.9100000000000001,
+      "text": "So in today's video, first of all I will give you an overview of the project, what"
+    },
+    {
+      "start": 26.23,
+      "duration": 0.00999999999999801,
+      "text": "I will give you an overview of the project, what"
+    },
+    {
+      "start": 26.24,
+      "duration": 2.6300000000000026,
+      "text": "I will give you an overview of the project, what exactly is this project"
+    },
+    {
+      "start": 28.87,
+      "duration": 0.00999999999999801,
+      "text": "exactly is this project"
+    },
+    {
+      "start": 28.88,
+      "duration": 2.0700000000000003,
+      "text": "exactly is this project ? What we're going to create in this and"
+    },
+    {
+      "start": 30.95,
+      "duration": 0.010000000000001563,
+      "text": "? What we're going to create in this and"
+    },
+    {
+      "start": 30.96,
+      "duration": 2.3900000000000006,
+      "text": "? What we're going to create in this and then we're going to"
+    },
+    {
+      "start": 33.35,
+      "duration": 0.00999999999999801,
+      "text": "then we're going to"
+    },
+    {
+      "start": 33.36,
+      "duration": 2.3900000000000006,
+      "text": "then we're going to start coding its initial parts in today's video."
+    },
+    {
+      "start": 35.75,
+      "duration": 0.00999999999999801,
+      "text": "start coding its initial parts in today's video."
+    },
+    {
+      "start": 35.76,
+      "duration": 2.5500000000000043,
+      "text": "start coding its initial parts in today's video. Ok? So going forward, whatever happens"
+    },
+    {
+      "start": 38.31,
+      "duration": 0.00999999999999801,
+      "text": "Ok? So going forward, whatever happens"
+    },
+    {
+      "start": 38.32,
+      "duration": 2.3100000000000023,
+      "text": "Ok? So going forward, whatever happens in this entire playlist, you can say"
+    },
+    {
+      "start": 40.63,
+      "duration": 0.00999999999999801,
+      "text": "in this entire playlist, you can say"
+    },
+    {
+      "start": 40.64,
+      "duration": 2.1499999999999986,
+      "text": "in this entire playlist, you can say that everything will be very hands-on and"
+    },
+    {
+      "start": 42.79,
+      "duration": 0.00999999999999801,
+      "text": "that everything will be very hands-on and"
+    },
+    {
+      "start": 42.8,
+      "duration": 2.3100000000000023,
+      "text": "that everything will be very hands-on and practical. Ok? So now let's"
+    },
+    {
+      "start": 45.11,
+      "duration": 0.00999999999999801,
+      "text": "practical. Ok? So now let's"
+    },
+    {
+      "start": 45.12,
+      "duration": 2.3100000000000023,
+      "text": "practical. Ok? So now let's start the video. So come on guys let me give"
+    },
+    {
+      "start": 47.43,
+      "duration": 0.00999999999999801,
+      "text": "start the video. So come on guys let me give"
+    },
+    {
+      "start": 47.44,
+      "duration": 2.230000000000004,
+      "text": "start the video. So come on guys let me give you the overview of the project. Ok? So"
+    },
+    {
+      "start": 49.67,
+      "duration": 0.00999999999999801,
+      "text": "you the overview of the project. Ok? So"
+    },
+    {
+      "start": 49.68,
+      "duration": 1.6700000000000017,
+      "text": "you the overview of the project. Ok? So first let me tell you the problem statement,"
+    },
+    {
+      "start": 51.35,
+      "duration": 0.00999999999999801,
+      "text": "first let me tell you the problem statement,"
+    },
+    {
+      "start": 51.36,
+      "duration": 1.5900000000000034,
+      "text": "first let me tell you the problem statement, what problem our project is"
+    },
+    {
+      "start": 52.95,
+      "duration": 0.00999999999999801,
+      "text": "what problem our project is"
+    },
+    {
+      "start": 52.96,
+      "duration": 3.6700000000000017,
+      "text": "what problem our project is solving. So if you have ever visited a"
+    },
+    {
+      "start": 56.63,
+      "duration": 0.00999999999999801,
+      "text": "solving. So if you have ever visited a"
+    },
+    {
+      "start": 56.64,
+      "duration": 2.389000000000003,
+      "text": "solving. So if you have ever visited a doctor's clinic, you might have"
+    },
+    {
+      "start": 59.029,
+      "duration": 0.00999999999999801,
+      "text": "doctor's clinic, you might have"
+    },
+    {
+      "start": 59.039,
+      "duration": 3.1899999999999977,
+      "text": "doctor's clinic, you might have noticed one thing that they provide you a"
+    },
+    {
+      "start": 62.229,
+      "duration": 0.00999999999999801,
+      "text": "noticed one thing that they provide you a"
+    },
+    {
+      "start": 62.239,
+      "duration": 1.990000000000002,
+      "text": "noticed one thing that they provide you a prescription type. There is"
+    },
+    {
+      "start": 64.229,
+      "duration": 0.010000000000005116,
+      "text": "prescription type. There is"
+    },
+    {
+      "start": 64.239,
+      "duration": 3.271000000000001,
+      "text": "prescription type. There is a document which is"
+    },
+    {
+      "start": 67.51,
+      "duration": 0.009999999999990905,
+      "text": "a document which is"
+    },
+    {
+      "start": 67.52,
+      "duration": 2.948999999999998,
+      "text": "a document which is made on the letterhead of their clinic. The doctor"
+    },
+    {
+      "start": 70.469,
+      "duration": 0.010000000000005116,
+      "text": "made on the letterhead of their clinic. The doctor"
+    },
+    {
+      "start": 70.479,
+      "duration": 3.5109999999999957,
+      "text": "made on the letterhead of their clinic. The doctor writes his remarks with a pen and the"
+    },
+    {
+      "start": 73.99,
+      "duration": 0.010000000000005116,
+      "text": "writes his remarks with a pen and the"
+    },
+    {
+      "start": 74.0,
+      "duration": 2.8700000000000045,
+      "text": "writes his remarks with a pen and the names of the medicines there and"
+    },
+    {
+      "start": 76.87,
+      "duration": 0.009999999999990905,
+      "text": "names of the medicines there and"
+    },
+    {
+      "start": 76.88,
+      "duration": 1.8299999999999983,
+      "text": "names of the medicines there and tells you that the next time you"
+    },
+    {
+      "start": 78.71,
+      "duration": 0.010000000000005116,
+      "text": "tells you that the next time you"
+    },
+    {
+      "start": 78.72,
+      "duration": 2.1500000000000057,
+      "text": "tells you that the next time you come to the clinic for a visit, please"
+    },
+    {
+      "start": 80.87,
+      "duration": 0.009999999999990905,
+      "text": "come to the clinic for a visit, please"
+    },
+    {
+      "start": 80.88,
+      "duration": 2.228999999999999,
+      "text": "come to the clinic for a visit, please bring this document with you. Then on the next visit"
+    },
+    {
+      "start": 83.109,
+      "duration": 0.010000000000005116,
+      "text": "bring this document with you. Then on the next visit"
+    },
+    {
+      "start": 83.119,
+      "duration": 1.7510000000000048,
+      "text": "bring this document with you. Then on the next visit they give you a second similar"
+    },
+    {
+      "start": 84.87,
+      "duration": 0.009999999999990905,
+      "text": "they give you a second similar"
+    },
+    {
+      "start": 84.88,
+      "duration": 1.8299999999999983,
+      "text": "they give you a second similar document. And you have to maintain all these"
+    },
+    {
+      "start": 86.71,
+      "duration": 0.010000000000005116,
+      "text": "document. And you have to maintain all these"
+    },
+    {
+      "start": 86.72,
+      "duration": 2.1500000000000057,
+      "text": "document. And you have to maintain all these documents in a file"
+    },
+    {
+      "start": 88.87,
+      "duration": 0.009999999999990905,
+      "text": "documents in a file"
+    },
+    {
+      "start": 88.88,
+      "duration": 2.469999999999999,
+      "text": "documents in a file over the years. Now obviously all this"
+    },
+    {
+      "start": 91.35,
+      "duration": 0.010000000000005116,
+      "text": "over the years. Now obviously all this"
+    },
+    {
+      "start": 91.36,
+      "duration": 2.709000000000003,
+      "text": "over the years. Now obviously all this is offline. Tomorrow one or two papers may be"
+    },
+    {
+      "start": 94.069,
+      "duration": 0.009999999999990905,
+      "text": "is offline. Tomorrow one or two papers may be"
+    },
+    {
+      "start": 94.079,
+      "duration": 2.551000000000002,
+      "text": "is offline. Tomorrow one or two papers may be missed here and there. So it is not good."
+    },
+    {
+      "start": 96.63,
+      "duration": 0.010000000000005116,
+      "text": "missed here and there. So it is not good."
+    },
+    {
+      "start": 96.64,
+      "duration": 2.468999999999994,
+      "text": "missed here and there. So it is not good. Right? From the patient's side as well as from the doctor's"
+    },
+    {
+      "start": 99.109,
+      "duration": 0.010000000000005116,
+      "text": "Right? From the patient's side as well as from the doctor's"
+    },
+    {
+      "start": 99.119,
+      "duration": 1.831000000000003,
+      "text": "Right? From the patient's side as well as from the doctor's side. The copy"
+    },
+    {
+      "start": 100.95,
+      "duration": 0.009999999999990905,
+      "text": "side. The copy"
+    },
+    {
+      "start": 100.96,
+      "duration": 2.0700000000000074,
+      "text": "side. The copy of the document on the doctor's side may also be misplaced."
+    },
+    {
+      "start": 103.03,
+      "duration": 0.010000000000005116,
+      "text": "of the document on the doctor's side may also be misplaced."
+    },
+    {
+      "start": 103.04,
+      "duration": 2.9099999999999966,
+      "text": "of the document on the doctor's side may also be misplaced. So what a great way to do that is to"
+    },
+    {
+      "start": 105.95,
+      "duration": 0.009999999999990905,
+      "text": "So what a great way to do that is to"
+    },
+    {
+      "start": 105.96,
+      "duration": 4.27000000000001,
+      "text": "So what a great way to do that is to build a startup that's"
+    },
+    {
+      "start": 110.23,
+      "duration": 0.009999999999990905,
+      "text": "build a startup that's"
+    },
+    {
+      "start": 110.24,
+      "duration": 3.2700000000000102,
+      "text": "build a startup that's tasked with bringing this whole thing online. This"
+    },
+    {
+      "start": 113.51,
+      "duration": 0.009999999999990905,
+      "text": "tasked with bringing this whole thing online. This"
+    },
+    {
+      "start": 113.52,
+      "duration": 4.228999999999999,
+      "text": "tasked with bringing this whole thing online. This means that we will give an app to the doctor."
+    },
+    {
+      "start": 117.749,
+      "duration": 0.010000000000005116,
+      "text": "means that we will give an app to the doctor."
+    },
+    {
+      "start": 117.759,
+      "duration": 3.989999999999995,
+      "text": "means that we will give an app to the doctor. Ok? And what can the doctor do through that app"
+    },
+    {
+      "start": 121.749,
+      "duration": 0.010000000000005116,
+      "text": "Ok? And what can the doctor do through that app"
+    },
+    {
+      "start": 121.759,
+      "duration": 3.271000000000001,
+      "text": "Ok? And what can the doctor do through that app ? Can maintain a profile of each of his patients."
+    },
+    {
+      "start": 125.03,
+      "duration": 0.010000000000005116,
+      "text": "? Can maintain a profile of each of his patients."
+    },
+    {
+      "start": 125.04,
+      "duration": 3.1099999999999994,
+      "text": "? Can maintain a profile of each of his patients. Ok? A"
+    },
+    {
+      "start": 128.15,
+      "duration": 0.009999999999990905,
+      "text": "Ok? A"
+    },
+    {
+      "start": 128.16,
+      "duration": 1.9099999999999966,
+      "text": "Ok? A typical profile might look something like this."
+    },
+    {
+      "start": 130.07,
+      "duration": 0.010000000000019327,
+      "text": "typical profile might look something like this."
+    },
+    {
+      "start": 130.08,
+      "duration": 1.9899999999999807,
+      "text": "typical profile might look something like this. Ok? What is the name of the patient?"
+    },
+    {
+      "start": 132.07,
+      "duration": 5.439999999999998,
+      "text": "Ok? What is the name of the patient?"
+    },
+    {
+      "start": 141.35,
+      "duration": 0.010000000000019327,
+      "text": "You can enter city, age, gender, height, weight, BMI and many other medical details here. But since we are doing a basic"
+    },
+    {
+      "start": 141.36,
+      "duration": 1.6699999999999875,
+      "text": "You can enter city, age, gender, height, weight, BMI and many other medical details here. But since we are doing a basic level project. So we're"
+    },
+    {
+      "start": 143.03,
+      "duration": 0.009999999999990905,
+      "text": "level project. So we're"
+    },
+    {
+      "start": 143.04,
+      "duration": 2.3100000000000023,
+      "text": "level project. So we're sticking to height, weight, and BAMI for now. Ok"
+    },
+    {
+      "start": 145.35,
+      "duration": 0.010000000000019327,
+      "text": "sticking to height, weight, and BAMI for now. Ok"
+    },
+    {
+      "start": 145.36,
+      "duration": 1.5089999999999861,
+      "text": "sticking to height, weight, and BAMI for now. Ok ? But you can understand"
+    },
+    {
+      "start": 146.869,
+      "duration": 0.009999999999990905,
+      "text": "? But you can understand"
+    },
+    {
+      "start": 146.879,
+      "duration": 2.4710000000000036,
+      "text": "? But you can understand how many more things can be added here. So,"
+    },
+    {
+      "start": 149.35,
+      "duration": 0.010000000000019327,
+      "text": "how many more things can be added here. So,"
+    },
+    {
+      "start": 149.36,
+      "duration": 3.508999999999986,
+      "text": "how many more things can be added here. So, what will we do? We are giving an app to the doctor"
+    },
+    {
+      "start": 152.869,
+      "duration": 0.009999999999990905,
+      "text": "what will we do? We are giving an app to the doctor"
+    },
+    {
+      "start": 152.879,
+      "duration": 3.5109999999999957,
+      "text": "what will we do? We are giving an app to the doctor and through this app the doctor can create"
+    },
+    {
+      "start": 156.39,
+      "duration": 0.010000000000019327,
+      "text": "and through this app the doctor can create"
+    },
+    {
+      "start": 156.4,
+      "duration": 2.3100000000000023,
+      "text": "and through this app the doctor can create new patients, new records. Ok?"
+    },
+    {
+      "start": 158.71,
+      "duration": 0.009999999999990905,
+      "text": "new patients, new records. Ok?"
+    },
+    {
+      "start": 158.72,
+      "duration": 2.469999999999999,
+      "text": "new patients, new records. Ok? And what are we doing? All those patients are being"
+    },
+    {
+      "start": 161.19,
+      "duration": 0.009999999999990905,
+      "text": "And what are we doing? All those patients are being"
+    },
+    {
+      "start": 161.2,
+      "duration": 2.230000000000018,
+      "text": "And what are we doing? All those patients are being stored at one place."
+    },
+    {
+      "start": 163.43,
+      "duration": 0.009999999999990905,
+      "text": "stored at one place."
+    },
+    {
+      "start": 163.44,
+      "duration": 2.9499999999999886,
+      "text": "stored at one place. Ideally, we should store it"
+    },
+    {
+      "start": 166.39,
+      "duration": 0.010000000000019327,
+      "text": "Ideally, we should store it"
+    },
+    {
+      "start": 166.4,
+      "duration": 2.8700000000000045,
+      "text": "Ideally, we should store it inside a database. But since we are doing a basic level"
+    },
+    {
+      "start": 169.27,
+      "duration": 0.009999999999990905,
+      "text": "inside a database. But since we are doing a basic level"
+    },
+    {
+      "start": 169.28,
+      "duration": 1.6690000000000111,
+      "text": "inside a database. But since we are doing a basic level project. So for now, we will"
+    },
+    {
+      "start": 170.949,
+      "duration": 2.559999999999974,
+      "text": "project. So for now, we will"
+    },
+    {
+      "start": 176.55,
+      "duration": 0.009999999999990905,
+      "text": "store all the new patient records that come in a JSON file."
+    },
+    {
+      "start": 176.56,
+      "duration": 2.469999999999999,
+      "text": "store all the new patient records that come in a JSON file. Ok? The method will be exactly the same. Will operate in the same manner."
+    },
+    {
+      "start": 179.03,
+      "duration": 0.009999999999990905,
+      "text": "Ok? The method will be exactly the same. Will operate in the same manner."
+    },
+    {
+      "start": 179.04,
+      "duration": 1.9090000000000202,
+      "text": "Ok? The method will be exactly the same. Will operate in the same manner. It's just that instead of"
+    },
+    {
+      "start": 180.949,
+      "duration": 0.009999999999990905,
+      "text": "It's just that instead of"
+    },
+    {
+      "start": 180.959,
+      "duration": 2.7109999999999843,
+      "text": "It's just that instead of using a database we are using JSON."
+    },
+    {
+      "start": 183.67,
+      "duration": 0.010000000000019327,
+      "text": "using a database we are using JSON."
+    },
+    {
+      "start": 183.68,
+      "duration": 3.430000000000007,
+      "text": "using a database we are using JSON. Ok? And not only that, we are not just giving our"
+    },
+    {
+      "start": 187.11,
+      "duration": 0.009999999999990905,
+      "text": "Ok? And not only that, we are not just giving our"
+    },
+    {
+      "start": 187.12,
+      "duration": 2.549999999999983,
+      "text": "Ok? And not only that, we are not just giving our doctors the option to create new patients."
+    },
+    {
+      "start": 189.67,
+      "duration": 0.010000000000019327,
+      "text": "doctors the option to create new patients."
+    },
+    {
+      "start": 189.68,
+      "duration": 3.3499999999999943,
+      "text": "doctors the option to create new patients. We are also giving him the option to view new patients. This"
+    },
+    {
+      "start": 193.03,
+      "duration": 0.009999999999990905,
+      "text": "We are also giving him the option to view new patients. This"
+    },
+    {
+      "start": 193.04,
+      "duration": 1.670000000000016,
+      "text": "We are also giving him the option to view new patients. This means that he can"
+    },
+    {
+      "start": 194.71,
+      "duration": 2.798999999999978,
+      "text": "means that he can"
+    },
+    {
+      "start": 199.99,
+      "duration": 0.009999999999990905,
+      "text": "view the profile of any patient from within our entire database. Along with this,"
+    },
+    {
+      "start": 200.0,
+      "duration": 2.3089999999999975,
+      "text": "view the profile of any patient from within our entire database. Along with this, we are also giving him the option"
+    },
+    {
+      "start": 202.309,
+      "duration": 0.009999999999990905,
+      "text": "we are also giving him the option"
+    },
+    {
+      "start": 202.319,
+      "duration": 2.3910000000000196,
+      "text": "we are also giving him the option that he can modify the record of any existing patient."
+    },
+    {
+      "start": 204.71,
+      "duration": 0.009999999999990905,
+      "text": "that he can modify the record of any existing patient."
+    },
+    {
+      "start": 204.72,
+      "duration": 2.469999999999999,
+      "text": "that he can modify the record of any existing patient. For example,"
+    },
+    {
+      "start": 207.19,
+      "duration": 0.009999999999990905,
+      "text": "For example,"
+    },
+    {
+      "start": 207.2,
+      "duration": 3.029000000000025,
+      "text": "For example, after a year it is discovered that this patient's weight has"
+    },
+    {
+      "start": 210.229,
+      "duration": 0.009999999999990905,
+      "text": "after a year it is discovered that this patient's weight has"
+    },
+    {
+      "start": 210.239,
+      "duration": 2.790999999999997,
+      "text": "after a year it is discovered that this patient's weight has reduced a little. So he will quickly go and"
+    },
+    {
+      "start": 213.03,
+      "duration": 4.240000000000009,
+      "text": "reduced a little. So he will quickly go and"
+    },
+    {
+      "start": 219.509,
+      "duration": 0.010000000000019327,
+      "text": "change the value of the weight through this app and what will our back end do automatically"
+    },
+    {
+      "start": 219.519,
+      "duration": 2.710000000000008,
+      "text": "change the value of the weight through this app and what will our back end do automatically ? BMI will be adjusted."
+    },
+    {
+      "start": 222.229,
+      "duration": 0.009999999999990905,
+      "text": "? BMI will be adjusted."
+    },
+    {
+      "start": 222.239,
+      "duration": 2.150999999999982,
+      "text": "? BMI will be adjusted. Ok? So we are giving him this update feature"
+    },
+    {
+      "start": 224.39,
+      "duration": 0.010000000000019327,
+      "text": "Ok? So we are giving him this update feature"
+    },
+    {
+      "start": 224.4,
+      "duration": 2.069999999999993,
+      "text": "Ok? So we are giving him this update feature and at the same time we are"
+    },
+    {
+      "start": 226.47,
+      "duration": 0.009999999999990905,
+      "text": "and at the same time we are"
+    },
+    {
+      "start": 226.48,
+      "duration": 2.7490000000000236,
+      "text": "and at the same time we are also giving him the delete feature. Ok? So"
+    },
+    {
+      "start": 229.229,
+      "duration": 0.009999999999990905,
+      "text": "also giving him the delete feature. Ok? So"
+    },
+    {
+      "start": 229.239,
+      "duration": 2.990000000000009,
+      "text": "also giving him the delete feature. Ok? So basically what is our job in this whole project"
+    },
+    {
+      "start": 232.229,
+      "duration": 0.009999999999990905,
+      "text": "basically what is our job in this whole project"
+    },
+    {
+      "start": 232.239,
+      "duration": 3.031000000000006,
+      "text": "basically what is our job in this whole project ? Our job is to develop an API."
+    },
+    {
+      "start": 235.27,
+      "duration": 0.009999999999990905,
+      "text": "? Our job is to develop an API."
+    },
+    {
+      "start": 235.28,
+      "duration": 2.3089999999999975,
+      "text": "? Our job is to develop an API. Obviously we are not going to make this app. It is the"
+    },
+    {
+      "start": 237.589,
+      "duration": 2.080999999999989,
+      "text": "Obviously we are not going to make this app. It is the"
+    },
+    {
+      "start": 243.11,
+      "duration": 0.009999999999990905,
+      "text": "job of the front end people to create this app. We Edge back end engineers we're going to"
+    },
+    {
+      "start": 243.12,
+      "duration": 4.549999999999983,
+      "text": "job of the front end people to create this app. We Edge back end engineers we're going to build an API. In which there will be four end"
+    },
+    {
+      "start": 247.67,
+      "duration": 0.010000000000019327,
+      "text": "build an API. In which there will be four end"
+    },
+    {
+      "start": 247.68,
+      "duration": 2.9499999999999886,
+      "text": "build an API. In which there will be four end points."
+    },
+    {
+      "start": 250.63,
+      "duration": 0.009999999999990905,
+      "text": "points."
+    },
+    {
+      "start": 250.64,
+      "duration": 4.149000000000001,
+      "text": "points. Ok? The first end point will be to create a new patient."
+    },
+    {
+      "start": 254.789,
+      "duration": 0.010000000000019327,
+      "text": "Ok? The first end point will be to create a new patient."
+    },
+    {
+      "start": 254.799,
+      "duration": 3.5109999999999957,
+      "text": "Ok? The first end point will be to create a new patient. Ok? The doctor will"
+    },
+    {
+      "start": 258.31,
+      "duration": 0.009999999999990905,
+      "text": "Ok? The doctor will"
+    },
+    {
+      "start": 258.32,
+      "duration": 2.9499999999999886,
+      "text": "Ok? The doctor will fill the form here. This data will be received by this endpoint."
+    },
+    {
+      "start": 261.27,
+      "duration": 0.009999999999990905,
+      "text": "fill the form here. This data will be received by this endpoint."
+    },
+    {
+      "start": 261.28,
+      "duration": 2.469000000000051,
+      "text": "fill the form here. This data will be received by this endpoint. And this endpoint will"
+    },
+    {
+      "start": 263.749,
+      "duration": 0.009999999999990905,
+      "text": "And this endpoint will"
+    },
+    {
+      "start": 263.759,
+      "duration": 2.8700000000000045,
+      "text": "And this endpoint will add a new patient inside our json file. Ok"
+    },
+    {
+      "start": 266.629,
+      "duration": 0.009999999999990905,
+      "text": "add a new patient inside our json file. Ok"
+    },
+    {
+      "start": 266.639,
+      "duration": 3.190999999999974,
+      "text": "add a new patient inside our json file. Ok ? Second, we will give patients an end point to"
+    },
+    {
+      "start": 269.83,
+      "duration": 0.009999999999990905,
+      "text": "? Second, we will give patients an end point to"
+    },
+    {
+      "start": 269.84,
+      "duration": 4.470000000000027,
+      "text": "? Second, we will give patients an end point to view. As soon as you hit this particular endpoint, all the"
+    },
+    {
+      "start": 274.31,
+      "duration": 2.158999999999992,
+      "text": "view. As soon as you hit this particular endpoint, all the"
+    },
+    {
+      "start": 277.99,
+      "duration": 0.009999999999990905,
+      "text": "records in your JSON file will be"
+    },
+    {
+      "start": 278.0,
+      "duration": 3.829999999999984,
+      "text": "records in your JSON file will be visible to you. After that we will"
+    },
+    {
+      "start": 281.83,
+      "duration": 0.009999999999990905,
+      "text": "visible to you. After that we will"
+    },
+    {
+      "start": 281.84,
+      "duration": 3.1899999999999977,
+      "text": "visible to you. After that we will create another end point. Where you"
+    },
+    {
+      "start": 285.03,
+      "duration": 0.010000000000047748,
+      "text": "create another end point. Where you"
+    },
+    {
+      "start": 285.04,
+      "duration": 2.5499999999999545,
+      "text": "create another end point. Where you can see the profile of any particular patient."
+    },
+    {
+      "start": 287.59,
+      "duration": 0.010000000000047748,
+      "text": "can see the profile of any particular patient."
+    },
+    {
+      "start": 287.6,
+      "duration": 2.308999999999969,
+      "text": "can see the profile of any particular patient. Patient ID one, patient ID five"
+    },
+    {
+      "start": 289.909,
+      "duration": 0.009999999999990905,
+      "text": "Patient ID one, patient ID five"
+    },
+    {
+      "start": 289.919,
+      "duration": 3.11099999999999,
+      "text": "Patient ID one, patient ID five , patient ID 10. Ok? After that"
+    },
+    {
+      "start": 293.03,
+      "duration": 0.010000000000047748,
+      "text": ", patient ID 10. Ok? After that"
+    },
+    {
+      "start": 293.04,
+      "duration": 2.5499999999999545,
+      "text": ", patient ID 10. Ok? After that we will create another endpoint with the help of which"
+    },
+    {
+      "start": 295.59,
+      "duration": 0.010000000000047748,
+      "text": "we will create another endpoint with the help of which"
+    },
+    {
+      "start": 295.6,
+      "duration": 4.109999999999957,
+      "text": "we will create another endpoint with the help of which you"
+    },
+    {
+      "start": 299.71,
+      "duration": 0.010000000000047748,
+      "text": "you"
+    },
+    {
+      "start": 299.72,
+      "duration": 3.3099999999999454,
+      "text": "you can update the record of any particular patient. Ok?"
+    },
+    {
+      "start": 303.03,
+      "duration": 0.010000000000047748,
+      "text": "can update the record of any particular patient. Ok?"
+    },
+    {
+      "start": 303.04,
+      "duration": 3.349999999999966,
+      "text": "can update the record of any particular patient. Ok? Basically for update and finally we will"
+    },
+    {
+      "start": 306.39,
+      "duration": 0.009999999999990905,
+      "text": "Basically for update and finally we will"
+    },
+    {
+      "start": 306.4,
+      "duration": 2.4700000000000273,
+      "text": "Basically for update and finally we will create a last end point where for a"
+    },
+    {
+      "start": 308.87,
+      "duration": 0.009999999999990905,
+      "text": "create a last end point where for a"
+    },
+    {
+      "start": 308.88,
+      "duration": 4.309000000000026,
+      "text": "create a last end point where for a given patient ID we can delete that patient"
+    },
+    {
+      "start": 313.189,
+      "duration": 0.009999999999990905,
+      "text": "given patient ID we can delete that patient"
+    },
+    {
+      "start": 313.199,
+      "duration": 2.3909999999999627,
+      "text": "given patient ID we can delete that patient from inside our database."
+    },
+    {
+      "start": 315.59,
+      "duration": 0.010000000000047748,
+      "text": "from inside our database."
+    },
+    {
+      "start": 315.6,
+      "duration": 2.3899999999999864,
+      "text": "from inside our database. Ok? So our job in this whole project is"
+    },
+    {
+      "start": 317.99,
+      "duration": 0.009999999999990905,
+      "text": "Ok? So our job in this whole project is"
+    },
+    {
+      "start": 318.0,
+      "duration": 2.7099999999999795,
+      "text": "Ok? So our job in this whole project is simply that we have to create this API."
+    },
+    {
+      "start": 320.71,
+      "duration": 0.010000000000047748,
+      "text": "simply that we have to create this API."
+    },
+    {
+      "start": 320.72,
+      "duration": 3.9899999999999523,
+      "text": "simply that we have to create this API. Now tomorrow anyone can"
+    },
+    {
+      "start": 324.71,
+      "duration": 0.010000000000047748,
+      "text": "Now tomorrow anyone can"
+    },
+    {
+      "start": 324.72,
+      "duration": 2.8699999999999477,
+      "text": "Now tomorrow anyone can create such an app or website using this API."
+    },
+    {
+      "start": 327.59,
+      "duration": 0.010000000000047748,
+      "text": "create such an app or website using this API."
+    },
+    {
+      "start": 327.6,
+      "duration": 2.5499999999999545,
+      "text": "create such an app or website using this API. That's above the front end guy. But"
+    },
+    {
+      "start": 330.15,
+      "duration": 0.010000000000047748,
+      "text": "That's above the front end guy. But"
+    },
+    {
+      "start": 330.16,
+      "duration": 2.468999999999994,
+      "text": "That's above the front end guy. But our task throughout this project is to"
+    },
+    {
+      "start": 332.629,
+      "duration": 0.009999999999990905,
+      "text": "our task throughout this project is to"
+    },
+    {
+      "start": 332.639,
+      "duration": 3.7509999999999764,
+      "text": "our task throughout this project is to develop this API which will contain around"
+    },
+    {
+      "start": 336.39,
+      "duration": 0.009999999999990905,
+      "text": "develop this API which will contain around"
+    },
+    {
+      "start": 336.4,
+      "duration": 3.0300000000000296,
+      "text": "develop this API which will contain around five end points and may be more in the future."
+    },
+    {
+      "start": 339.43,
+      "duration": 0.009999999999990905,
+      "text": "five end points and may be more in the future."
+    },
+    {
+      "start": 339.44,
+      "duration": 1.670000000000016,
+      "text": "five end points and may be more in the future. I haven't decided completely yet."
+    },
+    {
+      "start": 341.11,
+      "duration": 0.009999999999990905,
+      "text": "I haven't decided completely yet."
+    },
+    {
+      "start": 341.12,
+      "duration": 2.3899999999999864,
+      "text": "I haven't decided completely yet. But I really hope you got the idea of"
+    },
+    {
+      "start": 343.51,
+      "duration": 0.009999999999990905,
+      "text": "But I really hope you got the idea of"
+    },
+    {
+      "start": 343.52,
+      "duration": 1.910000000000025,
+      "text": "But I really hope you got the idea of what we are going to do in this project."
+    },
+    {
+      "start": 345.43,
+      "duration": 0.009999999999990905,
+      "text": "what we are going to do in this project."
+    },
+    {
+      "start": 345.44,
+      "duration": 1.910000000000025,
+      "text": "what we are going to do in this project. Ok? Now"
+    },
+    {
+      "start": 347.35,
+      "duration": 0.009999999999990905,
+      "text": "Ok? Now"
+    },
+    {
+      "start": 347.36,
+      "duration": 2.069999999999993,
+      "text": "Ok? Now before starting the project, it is important to have a very important discussion"
+    },
+    {
+      "start": 349.43,
+      "duration": 0.009999999999990905,
+      "text": "before starting the project, it is important to have a very important discussion"
+    },
+    {
+      "start": 349.44,
+      "duration": 2.7099999999999795,
+      "text": "before starting the project, it is important to have a very important discussion and that discussion is around"
+    },
+    {
+      "start": 352.15,
+      "duration": 0.010000000000047748,
+      "text": "and that discussion is around"
+    },
+    {
+      "start": 352.16,
+      "duration": 3.269999999999982,
+      "text": "and that discussion is around HTTP methods. Because this is something"
+    },
+    {
+      "start": 355.43,
+      "duration": 0.009999999999990905,
+      "text": "HTTP methods. Because this is something"
+    },
+    {
+      "start": 355.44,
+      "duration": 3.269999999999982,
+      "text": "HTTP methods. Because this is something you'll see throughout this playlist, it's"
+    },
+    {
+      "start": 358.71,
+      "duration": 0.010000000000047748,
+      "text": "you'll see throughout this playlist, it's"
+    },
+    {
+      "start": 358.72,
+      "duration": 1.829999999999984,
+      "text": "you'll see throughout this playlist, it's best to discuss it at the beginning."
+    },
+    {
+      "start": 360.55,
+      "duration": 0.009999999999990905,
+      "text": "best to discuss it at the beginning."
+    },
+    {
+      "start": 360.56,
+      "duration": 2.7099999999999795,
+      "text": "best to discuss it at the beginning. So"
+    },
+    {
+      "start": 363.27,
+      "duration": 0.009999999999990905,
+      "text": "So"
+    },
+    {
+      "start": 363.28,
+      "duration": 1.990000000000009,
+      "text": "So to discuss HTTP methods, we will go a little bit to the fundamental"
+    },
+    {
+      "start": 365.27,
+      "duration": 0.009999999999990905,
+      "text": "to discuss HTTP methods, we will go a little bit to the fundamental"
+    },
+    {
+      "start": 365.28,
+      "duration": 3.430000000000007,
+      "text": "to discuss HTTP methods, we will go a little bit to the fundamental level. Ok? So"
+    },
+    {
+      "start": 368.71,
+      "duration": 0.010000000000047748,
+      "text": "level. Ok? So"
+    },
+    {
+      "start": 368.72,
+      "duration": 1.9089999999999918,
+      "text": "level. Ok? So I want to ask you a question. The"
+    },
+    {
+      "start": 370.629,
+      "duration": 0.009999999999990905,
+      "text": "I want to ask you a question. The"
+    },
+    {
+      "start": 370.639,
+      "duration": 3.829999999999984,
+      "text": "I want to ask you a question. The question is if I ask you"
+    },
+    {
+      "start": 374.469,
+      "duration": 0.009999999999990905,
+      "text": "question is if I ask you"
+    },
+    {
+      "start": 374.479,
+      "duration": 3.11099999999999,
+      "text": "question is if I ask you how many categories can you divide the software into"
+    },
+    {
+      "start": 377.59,
+      "duration": 0.010000000000047748,
+      "text": "how many categories can you divide the software into"
+    },
+    {
+      "start": 377.6,
+      "duration": 3.069999999999993,
+      "text": "how many categories can you divide the software into based on user"
+    },
+    {
+      "start": 380.67,
+      "duration": 0.009999999999990905,
+      "text": "based on user"
+    },
+    {
+      "start": 380.68,
+      "duration": 3.069000000000017,
+      "text": "based on user interaction? So what would you say? I Guess"
+    },
+    {
+      "start": 383.749,
+      "duration": 0.009999999999990905,
+      "text": "interaction? So what would you say? I Guess"
+    },
+    {
+      "start": 383.759,
+      "duration": 1.4300000000000068,
+      "text": "interaction? So what would you say? I Guess is visible on your screen and perhaps"
+    },
+    {
+      "start": 385.189,
+      "duration": 0.009999999999990905,
+      "text": "is visible on your screen and perhaps"
+    },
+    {
+      "start": 385.199,
+      "duration": 2.0709999999999695,
+      "text": "is visible on your screen and perhaps this question might be coming to your mind as to"
+    },
+    {
+      "start": 387.27,
+      "duration": 0.009999999999990905,
+      "text": "this question might be coming to your mind as to"
+    },
+    {
+      "start": 387.28,
+      "duration": 2.469000000000051,
+      "text": "this question might be coming to your mind as to how much a user can interact with a software. On the"
+    },
+    {
+      "start": 389.749,
+      "duration": 0.009999999999990905,
+      "text": "how much a user can interact with a software. On the"
+    },
+    {
+      "start": 389.759,
+      "duration": 2.5500000000000114,
+      "text": "how much a user can interact with a software. On the basis of this thing you"
+    },
+    {
+      "start": 392.309,
+      "duration": 2.159999999999968,
+      "text": "basis of this thing you"
+    },
+    {
+      "start": 397.99,
+      "duration": 0.009999999999990905,
+      "text": "can divide the software into two parts. A software that is static."
+    },
+    {
+      "start": 398.0,
+      "duration": 2.629000000000019,
+      "text": "can divide the software into two parts. A software that is static. Being static means that your"
+    },
+    {
+      "start": 400.629,
+      "duration": 0.009999999999990905,
+      "text": "Being static means that your"
+    },
+    {
+      "start": 400.639,
+      "duration": 2.790999999999997,
+      "text": "Being static means that your user does not interact much with the software."
+    },
+    {
+      "start": 403.43,
+      "duration": 0.009999999999990905,
+      "text": "user does not interact much with the software."
+    },
+    {
+      "start": 403.44,
+      "duration": 2.6299999999999955,
+      "text": "user does not interact much with the software. Ok?"
+    },
+    {
+      "start": 406.07,
+      "duration": 0.009999999999990905,
+      "text": "Ok?"
+    },
+    {
+      "start": 406.08,
+      "duration": 2.4700000000000273,
+      "text": "Ok? Mostly we use such software to"
+    },
+    {
+      "start": 408.55,
+      "duration": 0.009999999999990905,
+      "text": "Mostly we use such software to"
+    },
+    {
+      "start": 408.56,
+      "duration": 2.7900000000000205,
+      "text": "Mostly we use such software to receive information. Ok?"
+    },
+    {
+      "start": 411.35,
+      "duration": 0.009999999999990905,
+      "text": "receive information. Ok?"
+    },
+    {
+      "start": 411.36,
+      "duration": 2.8700000000000045,
+      "text": "receive information. Ok? On the other hand we have another class of"
+    },
+    {
+      "start": 414.23,
+      "duration": 0.009999999999990905,
+      "text": "On the other hand we have another class of"
+    },
+    {
+      "start": 414.24,
+      "duration": 1.990000000000009,
+      "text": "On the other hand we have another class of software which we"
+    },
+    {
+      "start": 416.23,
+      "duration": 0.009999999999990905,
+      "text": "software which we"
+    },
+    {
+      "start": 416.24,
+      "duration": 2.228999999999985,
+      "text": "software which we call dynamic software. And these are such"
+    },
+    {
+      "start": 418.469,
+      "duration": 0.009999999999990905,
+      "text": "call dynamic software. And these are such"
+    },
+    {
+      "start": 418.479,
+      "duration": 2.150000000000034,
+      "text": "call dynamic software. And these are such software with which the user"
+    },
+    {
+      "start": 420.629,
+      "duration": 0.009999999999990905,
+      "text": "software with which the user"
+    },
+    {
+      "start": 420.639,
+      "duration": 2.7110000000000127,
+      "text": "software with which the user interaction is very high. Ok?"
+    },
+    {
+      "start": 423.35,
+      "duration": 0.009999999999990905,
+      "text": "interaction is very high. Ok?"
+    },
+    {
+      "start": 423.36,
+      "duration": 2.8700000000000045,
+      "text": "interaction is very high. Ok? Meaning you can do two way communication. The"
+    },
+    {
+      "start": 426.23,
+      "duration": 0.009999999999990905,
+      "text": "Meaning you can do two way communication. The"
+    },
+    {
+      "start": 426.24,
+      "duration": 2.3100000000000023,
+      "text": "Meaning you can do two way communication. The user is saying something to the software. The"
+    },
+    {
+      "start": 428.55,
+      "duration": 0.009999999999990905,
+      "text": "user is saying something to the software. The"
+    },
+    {
+      "start": 428.56,
+      "duration": 1.990000000000009,
+      "text": "user is saying something to the software. The software is saying something to the user. So that is"
+    },
+    {
+      "start": 430.55,
+      "duration": 0.009999999999990905,
+      "text": "software is saying something to the user. So that is"
+    },
+    {
+      "start": 430.56,
+      "duration": 2.3100000000000023,
+      "text": "software is saying something to the user. So that is communication. Ok?"
+    },
+    {
+      "start": 432.87,
+      "duration": 0.009999999999990905,
+      "text": "communication. Ok?"
+    },
+    {
+      "start": 432.88,
+      "duration": 1.670000000000016,
+      "text": "communication. Ok? I will give you an example of both of these so that you can"
+    },
+    {
+      "start": 434.55,
+      "duration": 0.009999999999990905,
+      "text": "I will give you an example of both of these so that you can"
+    },
+    {
+      "start": 434.56,
+      "duration": 2.468999999999994,
+      "text": "I will give you an example of both of these so that you can understand this thing better."
+    },
+    {
+      "start": 437.029,
+      "duration": 0.009999999999990905,
+      "text": "understand this thing better."
+    },
+    {
+      "start": 437.039,
+      "duration": 2.7100000000000364,
+      "text": "understand this thing better. So a very good example of static software"
+    },
+    {
+      "start": 439.749,
+      "duration": 0.009999999999990905,
+      "text": "So a very good example of static software"
+    },
+    {
+      "start": 439.759,
+      "duration": 3.11099999999999,
+      "text": "So a very good example of static software is calendar. Think about it yourself."
+    },
+    {
+      "start": 442.87,
+      "duration": 0.009999999999990905,
+      "text": "is calendar. Think about it yourself."
+    },
+    {
+      "start": 442.88,
+      "duration": 2.3899999999999864,
+      "text": "is calendar. Think about it yourself. Your Windows machine has a calendar"
+    },
+    {
+      "start": 445.27,
+      "duration": 0.009999999999990905,
+      "text": "Your Windows machine has a calendar"
+    },
+    {
+      "start": 445.28,
+      "duration": 2.230000000000018,
+      "text": "Your Windows machine has a calendar software. You click on it."
+    },
+    {
+      "start": 447.51,
+      "duration": 0.009999999999990905,
+      "text": "software. You click on it."
+    },
+    {
+      "start": 447.52,
+      "duration": 2.5500000000000114,
+      "text": "software. You click on it. He quickly tells you today's date. It"
+    },
+    {
+      "start": 450.07,
+      "duration": 0.009999999999990905,
+      "text": "He quickly tells you today's date. It"
+    },
+    {
+      "start": 450.08,
+      "duration": 2.4700000000000273,
+      "text": "He quickly tells you today's date. It tells you what day it is today and you"
+    },
+    {
+      "start": 452.55,
+      "duration": 0.009999999999990905,
+      "text": "tells you what day it is today and you"
+    },
+    {
+      "start": 452.56,
+      "duration": 2.629000000000019,
+      "text": "tells you what day it is today and you can also see future dates there. But do"
+    },
+    {
+      "start": 455.189,
+      "duration": 0.009999999999990905,
+      "text": "can also see future dates there. But do"
+    },
+    {
+      "start": 455.199,
+      "duration": 1.990000000000009,
+      "text": "can also see future dates there. But do we interact too much"
+    },
+    {
+      "start": 457.189,
+      "duration": 0.009999999999990905,
+      "text": "we interact too much"
+    },
+    {
+      "start": 457.199,
+      "duration": 2.5500000000000114,
+      "text": "we interact too much with that calendar software? The answer is no."
+    },
+    {
+      "start": 459.749,
+      "duration": 0.009999999999990905,
+      "text": "with that calendar software? The answer is no."
+    },
+    {
+      "start": 459.759,
+      "duration": 2.5500000000000114,
+      "text": "with that calendar software? The answer is no. We only use it to see the date."
+    },
+    {
+      "start": 462.309,
+      "duration": 0.009999999999990905,
+      "text": "We only use it to see the date."
+    },
+    {
+      "start": 462.319,
+      "duration": 2.4710000000000036,
+      "text": "We only use it to see the date. So there is just one way communication."
+    },
+    {
+      "start": 464.79,
+      "duration": 0.009999999999990905,
+      "text": "So there is just one way communication."
+    },
+    {
+      "start": 464.8,
+      "duration": 1.990000000000009,
+      "text": "So there is just one way communication. Our software is telling us something. Ok"
+    },
+    {
+      "start": 466.79,
+      "duration": 0.009999999999990905,
+      "text": "Our software is telling us something. Ok"
+    },
+    {
+      "start": 466.8,
+      "duration": 2.069999999999993,
+      "text": "Our software is telling us something. Ok ? That's all the communication is. There is no"
+    },
+    {
+      "start": 468.87,
+      "duration": 0.009999999999990905,
+      "text": "? That's all the communication is. There is no"
+    },
+    {
+      "start": 468.88,
+      "duration": 2.709000000000003,
+      "text": "? That's all the communication is. There is no more interaction involved. Wherever I am going to"
+    },
+    {
+      "start": 471.589,
+      "duration": 0.009999999999990905,
+      "text": "more interaction involved. Wherever I am going to"
+    },
+    {
+      "start": 471.599,
+      "duration": 2.0710000000000264,
+      "text": "more interaction involved. Wherever I am going to give you an example of dynamic software, it could be"
+    },
+    {
+      "start": 473.67,
+      "duration": 0.009999999999990905,
+      "text": "give you an example of dynamic software, it could be"
+    },
+    {
+      "start": 473.68,
+      "duration": 3.589999999999975,
+      "text": "give you an example of dynamic software, it could be Microsoft Excel. Just"
+    },
+    {
+      "start": 477.27,
+      "duration": 0.009999999999990905,
+      "text": "Microsoft Excel. Just"
+    },
+    {
+      "start": 477.28,
+      "duration": 3.5100000000000477,
+      "text": "Microsoft Excel. Just imagine"
+    },
+    {
+      "start": 480.79,
+      "duration": 0.009999999999990905,
+      "text": "imagine"
+    },
+    {
+      "start": 480.8,
+      "duration": 2.4699999999999704,
+      "text": "imagine how many levels you can interact with a Microsoft Excel worksheet."
+    },
+    {
+      "start": 483.27,
+      "duration": 0.009999999999990905,
+      "text": "how many levels you can interact with a Microsoft Excel worksheet."
+    },
+    {
+      "start": 483.28,
+      "duration": 2.7900000000000205,
+      "text": "how many levels you can interact with a Microsoft Excel worksheet. You can create new worksheets. You"
+    },
+    {
+      "start": 486.07,
+      "duration": 0.009999999999990905,
+      "text": "You can create new worksheets. You"
+    },
+    {
+      "start": 486.08,
+      "duration": 2.069999999999993,
+      "text": "You can create new worksheets. You can enter data in it. You"
+    },
+    {
+      "start": 488.15,
+      "duration": 0.010000000000047748,
+      "text": "can enter data in it. You"
+    },
+    {
+      "start": 488.16,
+      "duration": 2.7899999999999636,
+      "text": "can enter data in it. You can perform analysis on existing data. So you can see"
+    },
+    {
+      "start": 490.95,
+      "duration": 2.480000000000018,
+      "text": "can perform analysis on existing data. So you can see"
+    },
+    {
+      "start": 496.23,
+      "duration": 0.009999999999990905,
+      "text": "how high the level of interaction is with Microsoft Excel. Microsoft Excel"
+    },
+    {
+      "start": 496.24,
+      "duration": 3.0299999999999727,
+      "text": "how high the level of interaction is with Microsoft Excel. Microsoft Excel is just one software. You can think for yourself"
+    },
+    {
+      "start": 499.27,
+      "duration": 0.009999999999990905,
+      "text": "is just one software. You can think for yourself"
+    },
+    {
+      "start": 499.28,
+      "duration": 1.7490000000000236,
+      "text": "is just one software. You can think for yourself and there are many such softwares like"
+    },
+    {
+      "start": 501.029,
+      "duration": 0.009999999999990905,
+      "text": "and there are many such softwares like"
+    },
+    {
+      "start": 501.039,
+      "duration": 2.4710000000000036,
+      "text": "and there are many such softwares like Microsoft Word, PPT etc. Ah, there are"
+    },
+    {
+      "start": 503.51,
+      "duration": 0.009999999999990905,
+      "text": "Microsoft Word, PPT etc. Ah, there are"
+    },
+    {
+      "start": 503.52,
+      "duration": 1.830000000000041,
+      "text": "Microsoft Word, PPT etc. Ah, there are many such software where there is a"
+    },
+    {
+      "start": 505.35,
+      "duration": 0.009999999999990905,
+      "text": "many such software where there is a"
+    },
+    {
+      "start": 505.36,
+      "duration": 1.8290000000000077,
+      "text": "many such software where there is a lot of user interaction."
+    },
+    {
+      "start": 507.189,
+      "duration": 0.009999999999990905,
+      "text": "lot of user interaction."
+    },
+    {
+      "start": 507.199,
+      "duration": 2.4710000000000036,
+      "text": "lot of user interaction. On the other hand static software has"
+    },
+    {
+      "start": 509.67,
+      "duration": 0.009999999999990905,
+      "text": "On the other hand static software has"
+    },
+    {
+      "start": 509.68,
+      "duration": 1.75,
+      "text": "On the other hand static software has very little user interaction. One more example could be a"
+    },
+    {
+      "start": 511.43,
+      "duration": 0.009999999999990905,
+      "text": "very little user interaction. One more example could be a"
+    },
+    {
+      "start": 511.44,
+      "duration": 3.029000000000053,
+      "text": "very little user interaction. One more example could be a clock which you use only to see the time."
+    },
+    {
+      "start": 514.469,
+      "duration": 0.009999999999990905,
+      "text": "clock which you use only to see the time."
+    },
+    {
+      "start": 514.479,
+      "duration": 2.1509999999999536,
+      "text": "clock which you use only to see the time. Right? And some user"
+    },
+    {
+      "start": 516.63,
+      "duration": 0.009999999999990905,
+      "text": "Right? And some user"
+    },
+    {
+      "start": 516.64,
+      "duration": 1.990000000000009,
+      "text": "Right? And some user interaction does not happen there. So I really hope"
+    },
+    {
+      "start": 518.63,
+      "duration": 0.009999999999990905,
+      "text": "interaction does not happen there. So I really hope"
+    },
+    {
+      "start": 518.64,
+      "duration": 3.1100000000000136,
+      "text": "interaction does not happen there. So I really hope you understand at this point that there can be"
+    },
+    {
+      "start": 521.75,
+      "duration": 0.009999999999990905,
+      "text": "you understand at this point that there can be"
+    },
+    {
+      "start": 521.76,
+      "duration": 2.38900000000001,
+      "text": "you understand at this point that there can be two classes in software. One"
+    },
+    {
+      "start": 524.149,
+      "duration": 0.009999999999990905,
+      "text": "two classes in software. One"
+    },
+    {
+      "start": 524.159,
+      "duration": 1.669999999999959,
+      "text": "two classes in software. One is static software, the other is"
+    },
+    {
+      "start": 525.829,
+      "duration": 0.010000000000104592,
+      "text": "is static software, the other is"
+    },
+    {
+      "start": 525.839,
+      "duration": 2.3909999999999627,
+      "text": "is static software, the other is dynamic software. Now we will focus our entire"
+    },
+    {
+      "start": 528.23,
+      "duration": 0.009999999999990905,
+      "text": "dynamic software. Now we will focus our entire"
+    },
+    {
+      "start": 528.24,
+      "duration": 2.3099999999999454,
+      "text": "dynamic software. Now we will focus our entire discussion around dynamic software."
+    },
+    {
+      "start": 530.55,
+      "duration": 0.009999999999990905,
+      "text": "discussion around dynamic software."
+    },
+    {
+      "start": 530.56,
+      "duration": 3.590000000000032,
+      "text": "discussion around dynamic software. Ok? So when I told you"
+    },
+    {
+      "start": 534.15,
+      "duration": 0.009999999999990905,
+      "text": "Ok? So when I told you"
+    },
+    {
+      "start": 534.16,
+      "duration": 3.269999999999982,
+      "text": "Ok? So when I told you that we can do"
+    },
+    {
+      "start": 537.43,
+      "duration": 0.010000000000104592,
+      "text": "that we can do"
+    },
+    {
+      "start": 537.44,
+      "duration": 3.349999999999909,
+      "text": "that we can do many types of interactions as a user with dynamic software."
+    },
+    {
+      "start": 540.79,
+      "duration": 0.009999999999990905,
+      "text": "many types of interactions as a user with dynamic software."
+    },
+    {
+      "start": 540.8,
+      "duration": 2.7900000000000773,
+      "text": "many types of interactions as a user with dynamic software. So what would you think like what do you"
+    },
+    {
+      "start": 543.59,
+      "duration": 0.009999999999990905,
+      "text": "So what would you think like what do you"
+    },
+    {
+      "start": 543.6,
+      "duration": 2.6299999999999955,
+      "text": "So what would you think like what do you think how many types of interactions can we have"
+    },
+    {
+      "start": 546.23,
+      "duration": 0.009999999999990905,
+      "text": "think how many types of interactions can we have"
+    },
+    {
+      "start": 546.24,
+      "duration": 2.149000000000001,
+      "text": "think how many types of interactions can we have ? If I ask you this question that"
+    },
+    {
+      "start": 548.389,
+      "duration": 0.009999999999990905,
+      "text": "? If I ask you this question that"
+    },
+    {
+      "start": 548.399,
+      "duration": 2.7910000000000537,
+      "text": "? If I ask you this question that you have a dynamic software. Can"
+    },
+    {
+      "start": 551.19,
+      "duration": 0.009999999999990905,
+      "text": "you have a dynamic software. Can"
+    },
+    {
+      "start": 551.2,
+      "duration": 2.7099999999999227,
+      "text": "you have a dynamic software. Can you tell me how many ways you can interact with that software"
+    },
+    {
+      "start": 553.91,
+      "duration": 0.009999999999990905,
+      "text": "you tell me how many ways you can interact with that software"
+    },
+    {
+      "start": 553.92,
+      "duration": 2.230000000000018,
+      "text": "you tell me how many ways you can interact with that software ? So what"
+    },
+    {
+      "start": 556.15,
+      "duration": 0.009999999999990905,
+      "text": "? So what"
+    },
+    {
+      "start": 556.16,
+      "duration": 3.269999999999982,
+      "text": "? So what would be your answer? I can tell you the answer? The"
+    },
+    {
+      "start": 559.43,
+      "duration": 0.010000000000104592,
+      "text": "would be your answer? I can tell you the answer? The"
+    },
+    {
+      "start": 559.44,
+      "duration": 2.7899999999999636,
+      "text": "would be your answer? I can tell you the answer? The answer is that you can"
+    },
+    {
+      "start": 562.23,
+      "duration": 0.009999999999990905,
+      "text": "answer is that you can"
+    },
+    {
+      "start": 562.24,
+      "duration": 2.9500000000000455,
+      "text": "answer is that you can only have four types of"
+    },
+    {
+      "start": 565.19,
+      "duration": 0.009999999999990905,
+      "text": "only have four types of"
+    },
+    {
+      "start": 565.2,
+      "duration": 2.7099999999999227,
+      "text": "only have four types of interactions with any dynamic software. And"
+    },
+    {
+      "start": 567.91,
+      "duration": 0.009999999999990905,
+      "text": "interactions with any dynamic software. And"
+    },
+    {
+      "start": 567.92,
+      "duration": 2.550000000000068,
+      "text": "interactions with any dynamic software. And a term has also been coined for these four types of interactions"
+    },
+    {
+      "start": 570.47,
+      "duration": 0.009999999999990905,
+      "text": "a term has also been coined for these four types of interactions"
+    },
+    {
+      "start": 570.48,
+      "duration": 3.75,
+      "text": "a term has also been coined for these four types of interactions and it is called crowd."
+    },
+    {
+      "start": 574.23,
+      "duration": 0.009999999999990905,
+      "text": "and it is called crowd."
+    },
+    {
+      "start": 574.24,
+      "duration": 2.669999999999959,
+      "text": "and it is called crowd. Ok? Where C stands for"
+    },
+    {
+      "start": 576.91,
+      "duration": 0.009999999999990905,
+      "text": "Ok? Where C stands for"
+    },
+    {
+      "start": 576.92,
+      "duration": 4.2700000000000955,
+      "text": "Ok? Where C stands for Create. R stands for retrieve,"
+    },
+    {
+      "start": 581.19,
+      "duration": 0.009999999999990905,
+      "text": "Create. R stands for retrieve,"
+    },
+    {
+      "start": 581.2,
+      "duration": 1.7099999999999227,
+      "text": "Create. R stands for retrieve, U stands for"
+    },
+    {
+      "start": 582.91,
+      "duration": 0.009999999999990905,
+      "text": "U stands for"
+    },
+    {
+      "start": 582.92,
+      "duration": 4.2700000000000955,
+      "text": "U stands for update and D stands for delete. Now"
+    },
+    {
+      "start": 587.19,
+      "duration": 0.009999999999990905,
+      "text": "update and D stands for delete. Now"
+    },
+    {
+      "start": 587.2,
+      "duration": 1.74899999999991,
+      "text": "update and D stands for delete. Now think about it yourself."
+    },
+    {
+      "start": 588.949,
+      "duration": 0.009999999999990905,
+      "text": "think about it yourself."
+    },
+    {
+      "start": 588.959,
+      "duration": 1.8310000000000173,
+      "text": "think about it yourself. Think of any dynamic software in your mind"
+    },
+    {
+      "start": 590.79,
+      "duration": 0.009999999999990905,
+      "text": "Think of any dynamic software in your mind"
+    },
+    {
+      "start": 590.8,
+      "duration": 3.1100000000000136,
+      "text": "Think of any dynamic software in your mind and try to think what are"
+    },
+    {
+      "start": 593.91,
+      "duration": 0.009999999999990905,
+      "text": "and try to think what are"
+    },
+    {
+      "start": 593.92,
+      "duration": 1.9089999999999918,
+      "text": "and try to think what are the types of interactions that I can do"
+    },
+    {
+      "start": 595.829,
+      "duration": 0.010000000000104592,
+      "text": "the types of interactions that I can do"
+    },
+    {
+      "start": 595.839,
+      "duration": 2.950999999999908,
+      "text": "the types of interactions that I can do with the software. And I can bet"
+    },
+    {
+      "start": 598.79,
+      "duration": 0.009999999999990905,
+      "text": "with the software. And I can bet"
+    },
+    {
+      "start": 598.8,
+      "duration": 2.7900000000000773,
+      "text": "with the software. And I can bet you'll eventually realize that yes, it's one of these"
+    },
+    {
+      "start": 601.59,
+      "duration": 0.009999999999990905,
+      "text": "you'll eventually realize that yes, it's one of these"
+    },
+    {
+      "start": 601.6,
+      "duration": 1.990000000000009,
+      "text": "you'll eventually realize that yes, it's one of these four types of interaction."
+    },
+    {
+      "start": 603.59,
+      "duration": 0.009999999999990905,
+      "text": "four types of interaction."
+    },
+    {
+      "start": 603.6,
+      "duration": 2.3899999999999864,
+      "text": "four types of interaction. We were moving ahead taking the example of Microsoft Excel."
+    },
+    {
+      "start": 605.99,
+      "duration": 0.009999999999990905,
+      "text": "We were moving ahead taking the example of Microsoft Excel."
+    },
+    {
+      "start": 606.0,
+      "duration": 2.07000000000005,
+      "text": "We were moving ahead taking the example of Microsoft Excel. You think about it there. You"
+    },
+    {
+      "start": 608.07,
+      "duration": 0.009999999999990905,
+      "text": "You think about it there. You"
+    },
+    {
+      "start": 608.08,
+      "duration": 2.4699999999999136,
+      "text": "You think about it there. You either create sales. You enter data in it and"
+    },
+    {
+      "start": 610.55,
+      "duration": 0.009999999999990905,
+      "text": "either create sales. You enter data in it and"
+    },
+    {
+      "start": 610.56,
+      "duration": 3.1100000000000136,
+      "text": "either create sales. You enter data in it and either"
+    },
+    {
+      "start": 613.67,
+      "duration": 0.009999999999990905,
+      "text": "either"
+    },
+    {
+      "start": 613.68,
+      "duration": 2.8700000000000045,
+      "text": "either view or retrieve the existing cells or"
+    },
+    {
+      "start": 616.55,
+      "duration": 0.009999999999990905,
+      "text": "view or retrieve the existing cells or"
+    },
+    {
+      "start": 616.56,
+      "duration": 1.9100000000000819,
+      "text": "view or retrieve the existing cells or you go to the existing cells and make changes or"
+    },
+    {
+      "start": 618.47,
+      "duration": 0.009999999999990905,
+      "text": "you go to the existing cells and make changes or"
+    },
+    {
+      "start": 618.48,
+      "duration": 1.3489999999999327,
+      "text": "you go to the existing cells and make changes or update them or"
+    },
+    {
+      "start": 619.829,
+      "duration": 0.010000000000104592,
+      "text": "update them or"
+    },
+    {
+      "start": 619.839,
+      "duration": 2.3909999999999627,
+      "text": "update them or you delete the existing cells."
+    },
+    {
+      "start": 622.23,
+      "duration": 0.009999999999990905,
+      "text": "you delete the existing cells."
+    },
+    {
+      "start": 622.24,
+      "duration": 2.4700000000000273,
+      "text": "you delete the existing cells. Right? So these are the four possible interactions."
+    },
+    {
+      "start": 624.71,
+      "duration": 0.009999999999990905,
+      "text": "Right? So these are the four possible interactions."
+    },
+    {
+      "start": 624.72,
+      "duration": 2.3899999999999864,
+      "text": "Right? So these are the four possible interactions. Take the example of Microsoft Word."
+    },
+    {
+      "start": 627.11,
+      "duration": 0.009999999999990905,
+      "text": "Take the example of Microsoft Word."
+    },
+    {
+      "start": 627.12,
+      "duration": 1.75,
+      "text": "Take the example of Microsoft Word. There you are either creating a new document"
+    },
+    {
+      "start": 628.87,
+      "duration": 0.009999999999990905,
+      "text": "There you are either creating a new document"
+    },
+    {
+      "start": 628.88,
+      "duration": 2.1499999999999773,
+      "text": "There you are either creating a new document or reading an existing document"
+    },
+    {
+      "start": 631.03,
+      "duration": 0.009999999999990905,
+      "text": "or reading an existing document"
+    },
+    {
+      "start": 631.04,
+      "duration": 1.6700000000000728,
+      "text": "or reading an existing document or"
+    },
+    {
+      "start": 632.71,
+      "duration": 0.009999999999990905,
+      "text": "or"
+    },
+    {
+      "start": 632.72,
+      "duration": 1.509999999999991,
+      "text": "or updating an existing document or"
+    },
+    {
+      "start": 634.23,
+      "duration": 0.009999999999990905,
+      "text": "updating an existing document or"
+    },
+    {
+      "start": 634.24,
+      "duration": 1.990000000000009,
+      "text": "updating an existing document or deleting an existing document."
+    },
+    {
+      "start": 636.23,
+      "duration": 0.009999999999990905,
+      "text": "deleting an existing document."
+    },
+    {
+      "start": 636.24,
+      "duration": 2.9500000000000455,
+      "text": "deleting an existing document. So these are the four classes of interactions"
+    },
+    {
+      "start": 639.19,
+      "duration": 0.009999999999990905,
+      "text": "So these are the four classes of interactions"
+    },
+    {
+      "start": 639.2,
+      "duration": 2.1499999999999773,
+      "text": "So these are the four classes of interactions in any dynamic software."
+    },
+    {
+      "start": 641.35,
+      "duration": 0.009999999999990905,
+      "text": "in any dynamic software."
+    },
+    {
+      "start": 641.36,
+      "duration": 2.0699999999999363,
+      "text": "in any dynamic software. I really hope you understood the discussion till here."
+    },
+    {
+      "start": 643.43,
+      "duration": 0.010000000000104592,
+      "text": "I really hope you understood the discussion till here."
+    },
+    {
+      "start": 643.44,
+      "duration": 1.5899999999999181,
+      "text": "I really hope you understood the discussion till here. The Entire Thing That We"
+    },
+    {
+      "start": 645.03,
+      "duration": 0.009999999999990905,
+      "text": "The Entire Thing That We"
+    },
+    {
+      "start": 645.04,
+      "duration": 2.6299999999999955,
+      "text": "The Entire Thing That We Discussed. The summary is that there are two"
+    },
+    {
+      "start": 647.67,
+      "duration": 0.009999999999990905,
+      "text": "Discussed. The summary is that there are two"
+    },
+    {
+      "start": 647.68,
+      "duration": 1.9100000000000819,
+      "text": "Discussed. The summary is that there are two types of software. Static"
+    },
+    {
+      "start": 649.59,
+      "duration": 0.009999999999990905,
+      "text": "types of software. Static"
+    },
+    {
+      "start": 649.6,
+      "duration": 1.509999999999991,
+      "text": "types of software. Static Dynamic. Eliminates static. Let's"
+    },
+    {
+      "start": 651.11,
+      "duration": 0.009999999999990905,
+      "text": "Dynamic. Eliminates static. Let's"
+    },
+    {
+      "start": 651.12,
+      "duration": 1.669999999999959,
+      "text": "Dynamic. Eliminates static. Let's talk about dynamic. Dynamic"
+    },
+    {
+      "start": 652.79,
+      "duration": 0.009999999999990905,
+      "text": "talk about dynamic. Dynamic"
+    },
+    {
+      "start": 652.8,
+      "duration": 1.830000000000041,
+      "text": "talk about dynamic. Dynamic software is software where users can perform"
+    },
+    {
+      "start": 654.63,
+      "duration": 0.009999999999990905,
+      "text": "software is software where users can perform"
+    },
+    {
+      "start": 654.64,
+      "duration": 2.629000000000019,
+      "text": "software is software where users can perform various types of interactions. But"
+    },
+    {
+      "start": 657.269,
+      "duration": 0.009999999999990905,
+      "text": "various types of interactions. But"
+    },
+    {
+      "start": 657.279,
+      "duration": 2.3909999999999627,
+      "text": "various types of interactions. But how many types of interactions can there be? The"
+    },
+    {
+      "start": 659.67,
+      "duration": 0.009999999999990905,
+      "text": "how many types of interactions can there be? The"
+    },
+    {
+      "start": 659.68,
+      "duration": 3.6700000000000728,
+      "text": "how many types of interactions can there be? The answer is four. Crud CRUD Create,"
+    },
+    {
+      "start": 663.35,
+      "duration": 0.009999999999990905,
+      "text": "answer is four. Crud CRUD Create,"
+    },
+    {
+      "start": 663.36,
+      "duration": 2.7089999999999463,
+      "text": "answer is four. Crud CRUD Create, Retrieve, Update and Delete. Ok? So this was about"
+    },
+    {
+      "start": 666.069,
+      "duration": 0.009999999999990905,
+      "text": "Retrieve, Update and Delete. Ok? So this was about"
+    },
+    {
+      "start": 666.079,
+      "duration": 3.671000000000049,
+      "text": "Retrieve, Update and Delete. Ok? So this was about software. Now let's talk about"
+    },
+    {
+      "start": 669.75,
+      "duration": 0.009999999999990905,
+      "text": "software. Now let's talk about"
+    },
+    {
+      "start": 669.76,
+      "duration": 2.7899999999999636,
+      "text": "software. Now let's talk about websites. Is this true on websites as well"
+    },
+    {
+      "start": 672.55,
+      "duration": 0.009999999999990905,
+      "text": "websites. Is this true on websites as well"
+    },
+    {
+      "start": 672.56,
+      "duration": 3.0300000000000864,
+      "text": "websites. Is this true on websites as well or not? Now"
+    },
+    {
+      "start": 675.59,
+      "duration": 0.009999999999990905,
+      "text": "or not? Now"
+    },
+    {
+      "start": 675.6,
+      "duration": 2.3099999999999454,
+      "text": "or not? Now before talking about websites, one thing I would"
+    },
+    {
+      "start": 677.91,
+      "duration": 0.009999999999990905,
+      "text": "before talking about websites, one thing I would"
+    },
+    {
+      "start": 677.92,
+      "duration": 2.7900000000000773,
+      "text": "before talking about websites, one thing I would like to clarify is that websites are not a"
+    },
+    {
+      "start": 680.71,
+      "duration": 0.009999999999990905,
+      "text": "like to clarify is that websites are not a"
+    },
+    {
+      "start": 680.72,
+      "duration": 3.3489999999999327,
+      "text": "like to clarify is that websites are not a separate thing in themselves. This is also a type"
+    },
+    {
+      "start": 684.069,
+      "duration": 0.009999999999990905,
+      "text": "separate thing in themselves. This is also a type"
+    },
+    {
+      "start": 684.079,
+      "duration": 3.671000000000049,
+      "text": "separate thing in themselves. This is also a type of software. The only difference is"
+    },
+    {
+      "start": 687.75,
+      "duration": 0.009999999999990905,
+      "text": "of software. The only difference is"
+    },
+    {
+      "start": 687.76,
+      "duration": 2.9500000000000455,
+      "text": "of software. The only difference is that normal software like"
+    },
+    {
+      "start": 690.71,
+      "duration": 0.009999999999990905,
+      "text": "that normal software like"
+    },
+    {
+      "start": 690.72,
+      "duration": 3.0299999999999727,
+      "text": "that normal software like Microsoft Excel or calendar or clock are"
+    },
+    {
+      "start": 693.75,
+      "duration": 4.159999999999968,
+      "text": "Microsoft Excel or calendar or clock are"
+    },
+    {
+      "start": 700.31,
+      "duration": 0.010000000000104592,
+      "text": "used on the same machine on which they are installed. Just"
+    },
+    {
+      "start": 700.32,
+      "duration": 1.9099999999999682,
+      "text": "used on the same machine on which they are installed. Just think, you have"
+    },
+    {
+      "start": 702.23,
+      "duration": 0.009999999999990905,
+      "text": "think, you have"
+    },
+    {
+      "start": 702.24,
+      "duration": 2.3899999999999864,
+      "text": "think, you have installed Microsoft Excel on your machine and you"
+    },
+    {
+      "start": 704.63,
+      "duration": 0.009999999999990905,
+      "text": "installed Microsoft Excel on your machine and you"
+    },
+    {
+      "start": 704.64,
+      "duration": 2.7100000000000364,
+      "text": "installed Microsoft Excel on your machine and you use it on your own machine. Right?"
+    },
+    {
+      "start": 707.35,
+      "duration": 0.009999999999990905,
+      "text": "use it on your own machine. Right?"
+    },
+    {
+      "start": 707.36,
+      "duration": 2.3099999999999454,
+      "text": "use it on your own machine. Right? But what happens in the case of a website is that the"
+    },
+    {
+      "start": 709.67,
+      "duration": 0.009999999999990905,
+      "text": "But what happens in the case of a website is that the"
+    },
+    {
+      "start": 709.68,
+      "duration": 3.1100000000000136,
+      "text": "But what happens in the case of a website is that the website is a special software which is"
+    },
+    {
+      "start": 712.79,
+      "duration": 0.009999999999990905,
+      "text": "website is a special software which is"
+    },
+    {
+      "start": 712.8,
+      "duration": 3.1100000000000136,
+      "text": "website is a special software which is installed on another machine and is"
+    },
+    {
+      "start": 715.91,
+      "duration": 0.009999999999990905,
+      "text": "installed on another machine and is"
+    },
+    {
+      "start": 715.92,
+      "duration": 2.7900000000000773,
+      "text": "installed on another machine and is used on another machine."
+    },
+    {
+      "start": 718.71,
+      "duration": 0.009999999999990905,
+      "text": "used on another machine."
+    },
+    {
+      "start": 718.72,
+      "duration": 3.6689999999999827,
+      "text": "used on another machine. Right? So the machine on which the website"
+    },
+    {
+      "start": 722.389,
+      "duration": 0.009999999999990905,
+      "text": "Right? So the machine on which the website"
+    },
+    {
+      "start": 722.399,
+      "duration": 3.7509999999999764,
+      "text": "Right? So the machine on which the website is installed is called a server."
+    },
+    {
+      "start": 726.15,
+      "duration": 0.009999999999990905,
+      "text": "is installed is called a server."
+    },
+    {
+      "start": 726.16,
+      "duration": 3.830000000000041,
+      "text": "is installed is called a server. And the machine from which that website is accessed and"
+    },
+    {
+      "start": 729.99,
+      "duration": 0.009999999999990905,
+      "text": "And the machine from which that website is accessed and"
+    },
+    {
+      "start": 730.0,
+      "duration": 2.1499999999999773,
+      "text": "And the machine from which that website is accessed and used is"
+    },
+    {
+      "start": 732.15,
+      "duration": 0.009999999999990905,
+      "text": "used is"
+    },
+    {
+      "start": 732.16,
+      "duration": 3.6689999999999827,
+      "text": "used is called a client. Ok? So this is two way"
+    },
+    {
+      "start": 735.829,
+      "duration": 0.010000000000104592,
+      "text": "called a client. Ok? So this is two way"
+    },
+    {
+      "start": 735.839,
+      "duration": 2.47099999999989,
+      "text": "called a client. Ok? So this is two way communication. The client"
+    },
+    {
+      "start": 738.31,
+      "duration": 0.010000000000104592,
+      "text": "communication. The client"
+    },
+    {
+      "start": 738.32,
+      "duration": 2.5499999999999545,
+      "text": "communication. The client requests something from the server. The server returns and"
+    },
+    {
+      "start": 740.87,
+      "duration": 0.009999999999990905,
+      "text": "requests something from the server. The server returns and"
+    },
+    {
+      "start": 740.88,
+      "duration": 1.9099999999999682,
+      "text": "requests something from the server. The server returns and gives something to the client. And this entire"
+    },
+    {
+      "start": 742.79,
+      "duration": 0.009999999999990905,
+      "text": "gives something to the client. And this entire"
+    },
+    {
+      "start": 742.8,
+      "duration": 2.70900000000006,
+      "text": "gives something to the client. And this entire communication happens through a protocol"
+    },
+    {
+      "start": 745.509,
+      "duration": 0.009999999999990905,
+      "text": "communication happens through a protocol"
+    },
+    {
+      "start": 745.519,
+      "duration": 2.630999999999972,
+      "text": "communication happens through a protocol which we call http."
+    },
+    {
+      "start": 748.15,
+      "duration": 0.009999999999990905,
+      "text": "which we call http."
+    },
+    {
+      "start": 748.16,
+      "duration": 3.3490000000000464,
+      "text": "which we call http. I hope you already know all this."
+    },
+    {
+      "start": 751.509,
+      "duration": 0.009999999999990905,
+      "text": "I hope you already know all this."
+    },
+    {
+      "start": 751.519,
+      "duration": 2.79099999999994,
+      "text": "I hope you already know all this. Now if we talk about the website, then"
+    },
+    {
+      "start": 754.31,
+      "duration": 0.010000000000104592,
+      "text": "Now if we talk about the website, then"
+    },
+    {
+      "start": 754.32,
+      "duration": 2.8700000000000045,
+      "text": "Now if we talk about the website, then in the website also you"
+    },
+    {
+      "start": 757.19,
+      "duration": 0.009999999999990905,
+      "text": "in the website also you"
+    },
+    {
+      "start": 757.2,
+      "duration": 2.7899999999999636,
+      "text": "in the website also you can consider two categories in the same way. The first is"
+    },
+    {
+      "start": 759.99,
+      "duration": 0.009999999999990905,
+      "text": "can consider two categories in the same way. The first is"
+    },
+    {
+      "start": 760.0,
+      "duration": 3.990000000000009,
+      "text": "can consider two categories in the same way. The first is static websites and the second is"
+    },
+    {
+      "start": 763.99,
+      "duration": 0.009999999999990905,
+      "text": "static websites and the second is"
+    },
+    {
+      "start": 764.0,
+      "duration": 1.629000000000019,
+      "text": "static websites and the second is dynamic"
+    },
+    {
+      "start": 765.629,
+      "duration": 0.009999999999990905,
+      "text": "dynamic"
+    },
+    {
+      "start": 765.639,
+      "duration": 2.75,
+      "text": "dynamic websites. So a static website is a"
+    },
+    {
+      "start": 768.389,
+      "duration": 0.009999999999990905,
+      "text": "websites. So a static website is a"
+    },
+    {
+      "start": 768.399,
+      "duration": 3.270999999999958,
+      "text": "websites. So a static website is a website where the user, who is your client, does"
+    },
+    {
+      "start": 771.67,
+      "duration": 0.009999999999990905,
+      "text": "website where the user, who is your client, does"
+    },
+    {
+      "start": 771.68,
+      "duration": 1.9100000000000819,
+      "text": "website where the user, who is your client, does not interact much"
+    },
+    {
+      "start": 773.59,
+      "duration": 0.009999999999990905,
+      "text": "not interact much"
+    },
+    {
+      "start": 773.6,
+      "duration": 3.509999999999991,
+      "text": "not interact much with the website. So pick up any blog"
+    },
+    {
+      "start": 777.11,
+      "duration": 0.009999999999990905,
+      "text": "with the website. So pick up any blog"
+    },
+    {
+      "start": 777.12,
+      "duration": 2.3500000000000227,
+      "text": "with the website. So pick up any blog or any government website."
+    },
+    {
+      "start": 779.47,
+      "duration": 0.009999999999990905,
+      "text": "or any government website."
+    },
+    {
+      "start": 779.48,
+      "duration": 2.8299999999999272,
+      "text": "or any government website. So you"
+    },
+    {
+      "start": 782.31,
+      "duration": 0.010000000000104592,
+      "text": "So you"
+    },
+    {
+      "start": 782.32,
+      "duration": 2.1499999999999773,
+      "text": "So you can put these websites in the category of static websites. There is"
+    },
+    {
+      "start": 784.47,
+      "duration": 0.009999999999990905,
+      "text": "can put these websites in the category of static websites. There is"
+    },
+    {
+      "start": 784.48,
+      "duration": 4.230000000000018,
+      "text": "can put these websites in the category of static websites. There is not much interaction going on. Right? And"
+    },
+    {
+      "start": 788.71,
+      "duration": 0.009999999999990905,
+      "text": "not much interaction going on. Right? And"
+    },
+    {
+      "start": 788.72,
+      "duration": 2.7889999999999873,
+      "text": "not much interaction going on. Right? And if you talk about dynamic websites, then"
+    },
+    {
+      "start": 791.509,
+      "duration": 0.009999999999990905,
+      "text": "if you talk about dynamic websites, then"
+    },
+    {
+      "start": 791.519,
+      "duration": 2.0710000000000264,
+      "text": "if you talk about dynamic websites, then dynamic websites are those websites where the"
+    },
+    {
+      "start": 793.59,
+      "duration": 0.009999999999990905,
+      "text": "dynamic websites are those websites where the"
+    },
+    {
+      "start": 793.6,
+      "duration": 3.75,
+      "text": "dynamic websites are those websites where the user or the edge client makes"
+    },
+    {
+      "start": 797.35,
+      "duration": 0.009999999999990905,
+      "text": "user or the edge client makes"
+    },
+    {
+      "start": 797.36,
+      "duration": 2.3099999999999454,
+      "text": "user or the edge client makes many types of interactions with your website. Ok"
+    },
+    {
+      "start": 799.67,
+      "duration": 0.009999999999990905,
+      "text": "many types of interactions with your website. Ok"
+    },
+    {
+      "start": 799.68,
+      "duration": 3.2690000000000055,
+      "text": "many types of interactions with your website. Ok ? For example,"
+    },
+    {
+      "start": 802.949,
+      "duration": 0.009999999999990905,
+      "text": "? For example,"
+    },
+    {
+      "start": 802.959,
+      "duration": 1.8310000000000173,
+      "text": "? For example, you can do many types of interactions on Instagram. You"
+    },
+    {
+      "start": 804.79,
+      "duration": 0.009999999999990905,
+      "text": "you can do many types of interactions on Instagram. You"
+    },
+    {
+      "start": 804.8,
+      "duration": 2.9500000000000455,
+      "text": "you can do many types of interactions on Instagram. You log in, you comment, you"
+    },
+    {
+      "start": 807.75,
+      "duration": 0.009999999999990905,
+      "text": "log in, you comment, you"
+    },
+    {
+      "start": 807.76,
+      "duration": 2.3899999999999864,
+      "text": "log in, you comment, you create posts, you like other people's posts"
+    },
+    {
+      "start": 810.15,
+      "duration": 0.009999999999990905,
+      "text": "create posts, you like other people's posts"
+    },
+    {
+      "start": 810.16,
+      "duration": 2.07000000000005,
+      "text": "create posts, you like other people's posts , you reply to other people's comments."
+    },
+    {
+      "start": 812.23,
+      "duration": 0.009999999999990905,
+      "text": ", you reply to other people's comments."
+    },
+    {
+      "start": 812.24,
+      "duration": 1.5889999999999418,
+      "text": ", you reply to other people's comments. Right? So a lot of"
+    },
+    {
+      "start": 813.829,
+      "duration": 0.010000000000104592,
+      "text": "Right? So a lot of"
+    },
+    {
+      "start": 813.839,
+      "duration": 3.1909999999999172,
+      "text": "Right? So a lot of interactions are possible. And I guess you must have"
+    },
+    {
+      "start": 817.03,
+      "duration": 0.009999999999990905,
+      "text": "interactions are possible. And I guess you must have"
+    },
+    {
+      "start": 817.04,
+      "duration": 1.75,
+      "text": "interactions are possible. And I guess you must have understood what I am going to say next."
+    },
+    {
+      "start": 818.79,
+      "duration": 0.009999999999990905,
+      "text": "understood what I am going to say next."
+    },
+    {
+      "start": 818.8,
+      "duration": 2.230000000000018,
+      "text": "understood what I am going to say next. Here also, no matter how many"
+    },
+    {
+      "start": 821.03,
+      "duration": 0.009999999999990905,
+      "text": "Here also, no matter how many"
+    },
+    {
+      "start": 821.04,
+      "duration": 3.3490000000000464,
+      "text": "Here also, no matter how many interactions you do on any website,"
+    },
+    {
+      "start": 824.389,
+      "duration": 0.009999999999990905,
+      "text": "interactions you do on any website,"
+    },
+    {
+      "start": 824.399,
+      "duration": 2.951000000000022,
+      "text": "interactions you do on any website, you can again divide those interactions into four categories."
+    },
+    {
+      "start": 827.35,
+      "duration": 0.009999999999990905,
+      "text": "you can again divide those interactions into four categories."
+    },
+    {
+      "start": 827.36,
+      "duration": 3.1100000000000136,
+      "text": "you can again divide those interactions into four categories. Create, Retrieve,"
+    },
+    {
+      "start": 830.47,
+      "duration": 0.009999999999990905,
+      "text": "Create, Retrieve,"
+    },
+    {
+      "start": 830.48,
+      "duration": 2.7889999999999873,
+      "text": "Create, Retrieve, Update and Delete. Think about it."
+    },
+    {
+      "start": 833.269,
+      "duration": 0.009999999999990905,
+      "text": "Update and Delete. Think about it."
+    },
+    {
+      "start": 833.279,
+      "duration": 2.4710000000000036,
+      "text": "Update and Delete. Think about it. On Instagram, you are creating a new post"
+    },
+    {
+      "start": 835.75,
+      "duration": 0.009999999999990905,
+      "text": "On Instagram, you are creating a new post"
+    },
+    {
+      "start": 835.76,
+      "duration": 1.7490000000000236,
+      "text": "On Instagram, you are creating a new post , uploading a photo, writing a new comment."
+    },
+    {
+      "start": 837.509,
+      "duration": 0.009999999999990905,
+      "text": ", uploading a photo, writing a new comment."
+    },
+    {
+      "start": 837.519,
+      "duration": 2.7110000000000127,
+      "text": ", uploading a photo, writing a new comment. All of this came within Create."
+    },
+    {
+      "start": 840.23,
+      "duration": 0.009999999999990905,
+      "text": "All of this came within Create."
+    },
+    {
+      "start": 840.24,
+      "duration": 2.6299999999999955,
+      "text": "All of this came within Create. You are scrolling through the feed. You are viewing someone's"
+    },
+    {
+      "start": 842.87,
+      "duration": 0.009999999999990905,
+      "text": "You are scrolling through the feed. You are viewing someone's"
+    },
+    {
+      "start": 842.88,
+      "duration": 1.990000000000009,
+      "text": "You are scrolling through the feed. You are viewing someone's profile. He"
+    },
+    {
+      "start": 844.87,
+      "duration": 0.009999999999990905,
+      "text": "profile. He"
+    },
+    {
+      "start": 844.88,
+      "duration": 2.7100000000000364,
+      "text": "profile. He came inside the retrieve. You are going to edit your profile. You are"
+    },
+    {
+      "start": 847.59,
+      "duration": 0.009999999999990905,
+      "text": "came inside the retrieve. You are going to edit your profile. You are"
+    },
+    {
+      "start": 847.6,
+      "duration": 2.1499999999999773,
+      "text": "came inside the retrieve. You are going to edit your profile. You are going and editing your comment."
+    },
+    {
+      "start": 849.75,
+      "duration": 0.009999999999990905,
+      "text": "going and editing your comment."
+    },
+    {
+      "start": 849.76,
+      "duration": 3.1100000000000136,
+      "text": "going and editing your comment. He came in the update. You are"
+    },
+    {
+      "start": 852.87,
+      "duration": 0.009999999999990905,
+      "text": "He came in the update. You are"
+    },
+    {
+      "start": 852.88,
+      "duration": 2.38900000000001,
+      "text": "He came in the update. You are going to your profile and deleting some posts. Are you"
+    },
+    {
+      "start": 855.269,
+      "duration": 0.009999999999990905,
+      "text": "going to your profile and deleting some posts. Are you"
+    },
+    {
+      "start": 855.279,
+      "duration": 2.1509999999999536,
+      "text": "going to your profile and deleting some posts. Are you deleting any of your comments? He"
+    },
+    {
+      "start": 857.43,
+      "duration": 0.010000000000104592,
+      "text": "deleting any of your comments? He"
+    },
+    {
+      "start": 857.44,
+      "duration": 2.9489999999999554,
+      "text": "deleting any of your comments? He came inside delete. And you can pick up any other website."
+    },
+    {
+      "start": 860.389,
+      "duration": 0.009999999999990905,
+      "text": "came inside delete. And you can pick up any other website."
+    },
+    {
+      "start": 860.399,
+      "duration": 2.8700000000000045,
+      "text": "came inside delete. And you can pick up any other website. You can pick up Zomato. If you are placing a new"
+    },
+    {
+      "start": 863.269,
+      "duration": 0.009999999999990905,
+      "text": "You can pick up Zomato. If you are placing a new"
+    },
+    {
+      "start": 863.279,
+      "duration": 1.990000000000009,
+      "text": "You can pick up Zomato. If you are placing a new order. You are creating."
+    },
+    {
+      "start": 865.269,
+      "duration": 0.009999999999990905,
+      "text": "order. You are creating."
+    },
+    {
+      "start": 865.279,
+      "duration": 2.0710000000000264,
+      "text": "order. You are creating. If you are viewing your past orders"
+    },
+    {
+      "start": 867.35,
+      "duration": 0.009999999999990905,
+      "text": "If you are viewing your past orders"
+    },
+    {
+      "start": 867.36,
+      "duration": 2.3099999999999454,
+      "text": "If you are viewing your past orders , you are retrieving. If you are"
+    },
+    {
+      "start": 869.67,
+      "duration": 0.009999999999990905,
+      "text": ", you are retrieving. If you are"
+    },
+    {
+      "start": 869.68,
+      "duration": 2.38900000000001,
+      "text": ", you are retrieving. If you are updating your address, you are updating it,"
+    },
+    {
+      "start": 872.069,
+      "duration": 0.009999999999990905,
+      "text": "updating your address, you are updating it,"
+    },
+    {
+      "start": 872.079,
+      "duration": 2.6310000000000855,
+      "text": "updating your address, you are updating it, if you are deleting any of your addresses, you are"
+    },
+    {
+      "start": 874.71,
+      "duration": 0.009999999999990905,
+      "text": "if you are deleting any of your addresses, you are"
+    },
+    {
+      "start": 874.72,
+      "duration": 1.9089999999999918,
+      "text": "if you are deleting any of your addresses, you are deleting it. Right? So, in"
+    },
+    {
+      "start": 876.629,
+      "duration": 0.009999999999990905,
+      "text": "deleting it. Right? So, in"
+    },
+    {
+      "start": 876.639,
+      "duration": 2.1509999999999536,
+      "text": "deleting it. Right? So, in all the dynamic"
+    },
+    {
+      "start": 878.79,
+      "duration": 0.009999999999990905,
+      "text": "all the dynamic"
+    },
+    {
+      "start": 878.8,
+      "duration": 2.230000000000018,
+      "text": "all the dynamic websites across the world, you can do only four types of"
+    },
+    {
+      "start": 881.03,
+      "duration": 0.009999999999990905,
+      "text": "websites across the world, you can do only four types of"
+    },
+    {
+      "start": 881.04,
+      "duration": 3.1100000000000136,
+      "text": "websites across the world, you can do only four types of interactions. Create, Retrieve,"
+    },
+    {
+      "start": 884.15,
+      "duration": 0.009999999999990905,
+      "text": "interactions. Create, Retrieve,"
+    },
+    {
+      "start": 884.16,
+      "duration": 2.469000000000051,
+      "text": "interactions. Create, Retrieve, Update and Delete. Just"
+    },
+    {
+      "start": 886.629,
+      "duration": 0.009999999999990905,
+      "text": "Update and Delete. Just"
+    },
+    {
+      "start": 886.639,
+      "duration": 4.390999999999963,
+      "text": "Update and Delete. Just like software. The only problem here is that"
+    },
+    {
+      "start": 891.03,
+      "duration": 0.009999999999990905,
+      "text": "like software. The only problem here is that"
+    },
+    {
+      "start": 891.04,
+      "duration": 2.3899999999999864,
+      "text": "like software. The only problem here is that since these are dynamic websites and since"
+    },
+    {
+      "start": 893.43,
+      "duration": 0.010000000000104592,
+      "text": "since these are dynamic websites and since"
+    },
+    {
+      "start": 893.44,
+      "duration": 2.06899999999996,
+      "text": "since these are dynamic websites and since these are websites, this communication is happening"
+    },
+    {
+      "start": 895.509,
+      "duration": 0.009999999999990905,
+      "text": "these are websites, this communication is happening"
+    },
+    {
+      "start": 895.519,
+      "duration": 3.270999999999958,
+      "text": "these are websites, this communication is happening through the internet. This"
+    },
+    {
+      "start": 898.79,
+      "duration": 0.009999999999990905,
+      "text": "through the internet. This"
+    },
+    {
+      "start": 898.8,
+      "duration": 2.6299999999999955,
+      "text": "through the internet. This HTTP request is coming from the client and this"
+    },
+    {
+      "start": 901.43,
+      "duration": 0.010000000000104592,
+      "text": "HTTP request is coming from the client and this"
+    },
+    {
+      "start": 901.44,
+      "duration": 3.1889999999999645,
+      "text": "HTTP request is coming from the client and this request is going to the server and the server"
+    },
+    {
+      "start": 904.629,
+      "duration": 0.009999999999990905,
+      "text": "request is going to the server and the server"
+    },
+    {
+      "start": 904.639,
+      "duration": 2.8700000000000045,
+      "text": "request is going to the server and the server is understanding what the client wants and"
+    },
+    {
+      "start": 907.509,
+      "duration": 0.009999999999990905,
+      "text": "is understanding what the client wants and"
+    },
+    {
+      "start": 907.519,
+      "duration": 2.630999999999972,
+      "text": "is understanding what the client wants and then that thing is being returned as a"
+    },
+    {
+      "start": 910.15,
+      "duration": 0.009999999999990905,
+      "text": "then that thing is being returned as a"
+    },
+    {
+      "start": 910.16,
+      "duration": 3.1090000000000373,
+      "text": "then that thing is being returned as a response. So here it becomes very important"
+    },
+    {
+      "start": 913.269,
+      "duration": 0.009999999999990905,
+      "text": "response. So here it becomes very important"
+    },
+    {
+      "start": 913.279,
+      "duration": 3.909999999999968,
+      "text": "response. So here it becomes very important that when you are performing any of these operations"
+    },
+    {
+      "start": 917.189,
+      "duration": 0.009999999999990905,
+      "text": "that when you are performing any of these operations"
+    },
+    {
+      "start": 917.199,
+      "duration": 3.591000000000008,
+      "text": "that when you are performing any of these operations , performing any interaction"
+    },
+    {
+      "start": 920.79,
+      "duration": 0.009999999999990905,
+      "text": ", performing any interaction"
+    },
+    {
+      "start": 920.8,
+      "duration": 2.149000000000001,
+      "text": ", performing any interaction , create, retrieve,"
+    },
+    {
+      "start": 922.949,
+      "duration": 0.009999999999990905,
+      "text": ", create, retrieve,"
+    },
+    {
+      "start": 922.959,
+      "duration": 3.4300000000000637,
+      "text": ", create, retrieve, update or delete, then you should"
+    },
+    {
+      "start": 926.389,
+      "duration": 0.009999999999990905,
+      "text": "update or delete, then you should"
+    },
+    {
+      "start": 926.399,
+      "duration": 3.1100000000000136,
+      "text": "update or delete, then you should mention in your http request that we have to"
+    },
+    {
+      "start": 929.509,
+      "duration": 0.009999999999990905,
+      "text": "mention in your http request that we have to"
+    },
+    {
+      "start": 929.519,
+      "duration": 2.3099999999999454,
+      "text": "mention in your http request that we have to perform this type of interaction"
+    },
+    {
+      "start": 931.829,
+      "duration": 0.010000000000104592,
+      "text": "perform this type of interaction"
+    },
+    {
+      "start": 931.839,
+      "duration": 4.630999999999972,
+      "text": "perform this type of interaction with the website. For example, suppose you"
+    },
+    {
+      "start": 936.47,
+      "duration": 3.2799999999999727,
+      "text": "with the website. For example, suppose you"
+    },
+    {
+      "start": 941.269,
+      "duration": 0.009999999999990905,
+      "text": "want to request your profile page from a website."
+    },
+    {
+      "start": 941.279,
+      "duration": 3.191000000000031,
+      "text": "want to request your profile page from a website. So what kind of interaction is this? This"
+    },
+    {
+      "start": 944.47,
+      "duration": 0.009999999999990905,
+      "text": "So what kind of interaction is this? This"
+    },
+    {
+      "start": 944.48,
+      "duration": 2.3099999999999454,
+      "text": "So what kind of interaction is this? This is a retrieve type interaction. Because you"
+    },
+    {
+      "start": 946.79,
+      "duration": 0.009999999999990905,
+      "text": "is a retrieve type interaction. Because you"
+    },
+    {
+      "start": 946.8,
+      "duration": 2.230000000000018,
+      "text": "is a retrieve type interaction. Because you want to view something. So"
+    },
+    {
+      "start": 949.03,
+      "duration": 0.009999999999990905,
+      "text": "want to view something. So"
+    },
+    {
+      "start": 949.04,
+      "duration": 2.70900000000006,
+      "text": "want to view something. So what will you do here? You will"
+    },
+    {
+      "start": 951.749,
+      "duration": 0.009999999999990905,
+      "text": "what will you do here? You will"
+    },
+    {
+      "start": 951.759,
+      "duration": 4.150999999999954,
+      "text": "what will you do here? You will add a verb inside your http request and the name of that verb"
+    },
+    {
+      "start": 955.91,
+      "duration": 0.009999999999990905,
+      "text": "add a verb inside your http request and the name of that verb"
+    },
+    {
+      "start": 955.92,
+      "duration": 3.509999999999991,
+      "text": "add a verb inside your http request and the name of that verb is get. What does gate mean? That"
+    },
+    {
+      "start": 959.43,
+      "duration": 0.010000000000104592,
+      "text": "is get. What does gate mean? That"
+    },
+    {
+      "start": 959.44,
+      "duration": 2.7099999999999227,
+      "text": "is get. What does gate mean? That I want to retrieve something"
+    },
+    {
+      "start": 962.15,
+      "duration": 0.009999999999990905,
+      "text": "I want to retrieve something"
+    },
+    {
+      "start": 962.16,
+      "duration": 3.830000000000041,
+      "text": "I want to retrieve something from my website. Ok? Similarly, if you are"
+    },
+    {
+      "start": 965.99,
+      "duration": 0.009999999999990905,
+      "text": "from my website. Ok? Similarly, if you are"
+    },
+    {
+      "start": 966.0,
+      "duration": 3.0299999999999727,
+      "text": "from my website. Ok? Similarly, if you are filling a form and sending that information to a website,"
+    },
+    {
+      "start": 969.03,
+      "duration": 0.009999999999990905,
+      "text": "filling a form and sending that information to a website,"
+    },
+    {
+      "start": 969.04,
+      "duration": 1.75,
+      "text": "filling a form and sending that information to a website, like a login form"
+    },
+    {
+      "start": 970.79,
+      "duration": 0.009999999999990905,
+      "text": "like a login form"
+    },
+    {
+      "start": 970.8,
+      "duration": 2.6299999999999955,
+      "text": "like a login form , a registration form, or if"
+    },
+    {
+      "start": 973.43,
+      "duration": 0.010000000000104592,
+      "text": ", a registration form, or if"
+    },
+    {
+      "start": 973.44,
+      "duration": 1.8289999999999509,
+      "text": ", a registration form, or if you are providing any kind of information"
+    },
+    {
+      "start": 975.269,
+      "duration": 0.009999999999990905,
+      "text": "you are providing any kind of information"
+    },
+    {
+      "start": 975.279,
+      "duration": 2.4700000000000273,
+      "text": "you are providing any kind of information and you want to send"
+    },
+    {
+      "start": 977.749,
+      "duration": 0.009999999999990905,
+      "text": "and you want to send"
+    },
+    {
+      "start": 977.759,
+      "duration": 4.390999999999963,
+      "text": "and you want to send it to a website, then"
+    },
+    {
+      "start": 982.15,
+      "duration": 0.009999999999990905,
+      "text": "it to a website, then"
+    },
+    {
+      "start": 982.16,
+      "duration": 1.990000000000009,
+      "text": "it to a website, then what you do at this time is that you"
+    },
+    {
+      "start": 984.15,
+      "duration": 0.009999999999990905,
+      "text": "what you do at this time is that you"
+    },
+    {
+      "start": 984.16,
+      "duration": 2.550000000000068,
+      "text": "what you do at this time is that you add a second type of verb to your HTTP request,"
+    },
+    {
+      "start": 986.71,
+      "duration": 0.009999999999990905,
+      "text": "add a second type of verb to your HTTP request,"
+    },
+    {
+      "start": 986.72,
+      "duration": 2.548999999999978,
+      "text": "add a second type of verb to your HTTP request, which we call POST. Post"
+    },
+    {
+      "start": 989.269,
+      "duration": 0.009999999999990905,
+      "text": "which we call POST. Post"
+    },
+    {
+      "start": 989.279,
+      "duration": 3.030999999999949,
+      "text": "which we call POST. Post means we want to create interaction."
+    },
+    {
+      "start": 992.31,
+      "duration": 0.010000000000104592,
+      "text": "means we want to create interaction."
+    },
+    {
+      "start": 992.32,
+      "duration": 2.7899999999999636,
+      "text": "means we want to create interaction. Ok? Similarly, if you"
+    },
+    {
+      "start": 995.11,
+      "duration": 0.009999999999990905,
+      "text": "Ok? Similarly, if you"
+    },
+    {
+      "start": 995.12,
+      "duration": 2.7089999999999463,
+      "text": "Ok? Similarly, if you want to update some existing resource on a"
+    },
+    {
+      "start": 997.829,
+      "duration": 0.010000000000104592,
+      "text": "want to update some existing resource on a"
+    },
+    {
+      "start": 997.839,
+      "duration": 2.950999999999908,
+      "text": "want to update some existing resource on a website, the"
+    },
+    {
+      "start": 1000.79,
+      "duration": 0.009999999999990905,
+      "text": "website, the"
+    },
+    {
+      "start": 1000.8,
+      "duration": 2.149000000000001,
+      "text": "website, the verb you add to your http request"
+    },
+    {
+      "start": 1002.949,
+      "duration": 0.009999999999990905,
+      "text": "verb you add to your http request"
+    },
+    {
+      "start": 1002.959,
+      "duration": 3.0310000000000628,
+      "text": "verb you add to your http request is called put. Put means you"
+    },
+    {
+      "start": 1005.99,
+      "duration": 0.009999999999990905,
+      "text": "is called put. Put means you"
+    },
+    {
+      "start": 1006.0,
+      "duration": 2.5499999999999545,
+      "text": "is called put. Put means you want to perform an update interaction. And"
+    },
+    {
+      "start": 1008.55,
+      "duration": 0.009999999999990905,
+      "text": "want to perform an update interaction. And"
+    },
+    {
+      "start": 1008.56,
+      "duration": 2.550000000000068,
+      "text": "want to perform an update interaction. And finally, if you want to delete something on the"
+    },
+    {
+      "start": 1011.11,
+      "duration": 0.009999999999990905,
+      "text": "finally, if you want to delete something on the"
+    },
+    {
+      "start": 1011.12,
+      "duration": 2.8700000000000045,
+      "text": "finally, if you want to delete something on the website, the verb you add is"
+    },
+    {
+      "start": 1013.99,
+      "duration": 0.009999999999990905,
+      "text": "website, the verb you add is"
+    },
+    {
+      "start": 1014.0,
+      "duration": 3.3500000000000227,
+      "text": "website, the verb you add is called delete, which tells the"
+    },
+    {
+      "start": 1017.35,
+      "duration": 0.009999999999990905,
+      "text": "called delete, which tells the"
+    },
+    {
+      "start": 1017.36,
+      "duration": 3.828999999999951,
+      "text": "called delete, which tells the server that the user, the client,"
+    },
+    {
+      "start": 1021.189,
+      "duration": 0.009999999999990905,
+      "text": "server that the user, the client,"
+    },
+    {
+      "start": 1021.199,
+      "duration": 2.2309999999999945,
+      "text": "server that the user, the client, wants to perform the delete interaction."
+    },
+    {
+      "start": 1023.43,
+      "duration": 0.010000000000104592,
+      "text": "wants to perform the delete interaction."
+    },
+    {
+      "start": 1023.44,
+      "duration": 3.1499999999998636,
+      "text": "wants to perform the delete interaction. So basically for every type of"
+    },
+    {
+      "start": 1026.59,
+      "duration": 0.009999999999990905,
+      "text": "So basically for every type of"
+    },
+    {
+      "start": 1026.6,
+      "duration": 5.110000000000127,
+      "text": "So basically for every type of interaction in the HTTP body you send a"
+    },
+    {
+      "start": 1031.71,
+      "duration": 0.009999999999990905,
+      "text": "interaction in the HTTP body you send a"
+    },
+    {
+      "start": 1031.72,
+      "duration": 6.189000000000078,
+      "text": "interaction in the HTTP body you send a verb and these verbs are collectively"
+    },
+    {
+      "start": 1041.27,
+      "duration": 0.009999999999990905,
+      "text": "called an HTTP method. So, these are the four"
+    },
+    {
+      "start": 1041.28,
+      "duration": 2.9500000000000455,
+      "text": "called an HTTP method. So, these are the four most commonly used methods. Due to these,"
+    },
+    {
+      "start": 1044.23,
+      "duration": 0.009999999999990905,
+      "text": "most commonly used methods. Due to these,"
+    },
+    {
+      "start": 1044.24,
+      "duration": 2.4700000000000273,
+      "text": "most commonly used methods. Due to these, gates and posts are used more in these."
+    },
+    {
+      "start": 1046.71,
+      "duration": 0.009999999999990905,
+      "text": "gates and posts are used more in these."
+    },
+    {
+      "start": 1046.72,
+      "duration": 1.8289999999999509,
+      "text": "gates and posts are used more in these. Put and Delete are used slightly less."
+    },
+    {
+      "start": 1048.549,
+      "duration": 0.009999999999990905,
+      "text": "Put and Delete are used slightly less."
+    },
+    {
+      "start": 1048.559,
+      "duration": 3.191000000000031,
+      "text": "Put and Delete are used slightly less. But you should know these four HTTP methods."
+    },
+    {
+      "start": 1051.75,
+      "duration": 0.009999999999990905,
+      "text": "But you should know these four HTTP methods."
+    },
+    {
+      "start": 1051.76,
+      "duration": 2.5499999999999545,
+      "text": "But you should know these four HTTP methods. If you are ever going to create a website or"
+    },
+    {
+      "start": 1054.31,
+      "duration": 0.009999999999990905,
+      "text": "If you are ever going to create a website or"
+    },
+    {
+      "start": 1054.32,
+      "duration": 2.5499999999999545,
+      "text": "If you are ever going to create a website or API. Ok? And"
+    },
+    {
+      "start": 1056.87,
+      "duration": 0.010000000000218279,
+      "text": "API. Ok? And"
+    },
+    {
+      "start": 1056.88,
+      "duration": 1.668999999999869,
+      "text": "API. Ok? And you'll notice in the project we're creating"
+    },
+    {
+      "start": 1058.549,
+      "duration": 0.009999999999990905,
+      "text": "you'll notice in the project we're creating"
+    },
+    {
+      "start": 1058.559,
+      "duration": 3.030999999999949,
+      "text": "you'll notice in the project we're creating that we'll"
+    },
+    {
+      "start": 1061.59,
+      "duration": 3.3600000000001273,
+      "text": "that we'll"
+    },
+    {
+      "start": 1067.669,
+      "duration": 2.160999999999831,
+      "text": "definitely be using one of these methods when designing our endpoints. Ok? So guys let me"
+    },
+    {
+      "start": 1075.029,
+      "duration": 0.009999999999990905,
+      "text": "show you a demo of what I just taught you about http methods. Ok? So this is our website."
+    },
+    {
+      "start": 1075.039,
+      "duration": 2.630000000000109,
+      "text": "show you a demo of what I just taught you about http methods. Ok? So this is our website. Obviously it is hosted on some server"
+    },
+    {
+      "start": 1077.669,
+      "duration": 0.009999999999990905,
+      "text": "Obviously it is hosted on some server"
+    },
+    {
+      "start": 1077.679,
+      "duration": 3.1099999999999,
+      "text": "Obviously it is hosted on some server and right now I will become a client and"
+    },
+    {
+      "start": 1080.789,
+      "duration": 0.009999999999990905,
+      "text": "and right now I will become a client and"
+    },
+    {
+      "start": 1080.799,
+      "duration": 3.1100000000001273,
+      "text": "and right now I will become a client and send an HTTP request to our website."
+    },
+    {
+      "start": 1083.909,
+      "duration": 0.009999999999990905,
+      "text": "send an HTTP request to our website."
+    },
+    {
+      "start": 1083.919,
+      "duration": 2.390999999999849,
+      "text": "send an HTTP request to our website. Ok? So first thing I"
+    },
+    {
+      "start": 1086.31,
+      "duration": 0.009999999999990905,
+      "text": "Ok? So first thing I"
+    },
+    {
+      "start": 1086.32,
+      "duration": 2.630000000000109,
+      "text": "Ok? So first thing I want to do is I want to access the courses page."
+    },
+    {
+      "start": 1088.95,
+      "duration": 0.009999999999990905,
+      "text": "want to do is I want to access the courses page."
+    },
+    {
+      "start": 1088.96,
+      "duration": 2.869999999999891,
+      "text": "want to do is I want to access the courses page. So think for yourself"
+    },
+    {
+      "start": 1091.83,
+      "duration": 0.009999999999990905,
+      "text": "So think for yourself"
+    },
+    {
+      "start": 1091.84,
+      "duration": 3.0299999999999727,
+      "text": "So think for yourself what kind of operation took place in CRUD."
+    },
+    {
+      "start": 1094.87,
+      "duration": 0.010000000000218279,
+      "text": "what kind of operation took place in CRUD."
+    },
+    {
+      "start": 1094.88,
+      "duration": 2.0699999999999363,
+      "text": "what kind of operation took place in CRUD. I guess you can figure out that"
+    },
+    {
+      "start": 1096.95,
+      "duration": 0.009999999999990905,
+      "text": "I guess you can figure out that"
+    },
+    {
+      "start": 1096.96,
+      "duration": 2.4700000000000273,
+      "text": "I guess you can figure out that this is a kind of retrieve operation. Ok?"
+    },
+    {
+      "start": 1099.43,
+      "duration": 0.009999999999990905,
+      "text": "this is a kind of retrieve operation. Ok?"
+    },
+    {
+      "start": 1099.44,
+      "duration": 2.229000000000042,
+      "text": "this is a kind of retrieve operation. Ok? So I'll show you really behind the"
+    },
+    {
+      "start": 1101.669,
+      "duration": 0.009999999999990905,
+      "text": "So I'll show you really behind the"
+    },
+    {
+      "start": 1101.679,
+      "duration": 2.7110000000000127,
+      "text": "So I'll show you really behind the scenes a get request will go to my server."
+    },
+    {
+      "start": 1104.39,
+      "duration": 0.009999999999990905,
+      "text": "scenes a get request will go to my server."
+    },
+    {
+      "start": 1104.4,
+      "duration": 2.5499999999999545,
+      "text": "scenes a get request will go to my server. And to show that I will go to"
+    },
+    {
+      "start": 1106.95,
+      "duration": 0.009999999999990905,
+      "text": "And to show that I will go to"
+    },
+    {
+      "start": 1106.96,
+      "duration": 3.4300000000000637,
+      "text": "And to show that I will go to the Inspect tab. From there I will go to the"
+    },
+    {
+      "start": 1110.39,
+      "duration": 0.009999999999990905,
+      "text": "the Inspect tab. From there I will go to the"
+    },
+    {
+      "start": 1110.4,
+      "duration": 3.8299999999999272,
+      "text": "the Inspect tab. From there I will go to the network. And here we will see that"
+    },
+    {
+      "start": 1114.23,
+      "duration": 0.009999999999990905,
+      "text": "network. And here we will see that"
+    },
+    {
+      "start": 1114.24,
+      "duration": 2.7889999999999873,
+      "text": "network. And here we will see that you will actually have a get request go through. Ok? So I"
+    },
+    {
+      "start": 1117.029,
+      "duration": 0.009999999999990905,
+      "text": "you will actually have a get request go through. Ok? So I"
+    },
+    {
+      "start": 1117.039,
+      "duration": 1.5509999999999309,
+      "text": "you will actually have a get request go through. Ok? So I will click on"
+    },
+    {
+      "start": 1118.59,
+      "duration": 0.009999999999990905,
+      "text": "will click on"
+    },
+    {
+      "start": 1118.6,
+      "duration": 2.910000000000082,
+      "text": "will click on courses. And look, the courses page has loaded. There"
+    },
+    {
+      "start": 1121.51,
+      "duration": 0.009999999999990905,
+      "text": "courses. And look, the courses page has loaded. There"
+    },
+    {
+      "start": 1121.52,
+      "duration": 2.230000000000018,
+      "text": "courses. And look, the courses page has loaded. There is a lot of movement here. But"
+    },
+    {
+      "start": 1123.75,
+      "duration": 0.009999999999990905,
+      "text": "is a lot of movement here. But"
+    },
+    {
+      "start": 1123.76,
+      "duration": 2.3900000000001,
+      "text": "is a lot of movement here. But what will we do? Here we will go to the store"
+    },
+    {
+      "start": 1126.15,
+      "duration": 0.009999999999990905,
+      "text": "what will we do? Here we will go to the store"
+    },
+    {
+      "start": 1126.16,
+      "duration": 2.4700000000000273,
+      "text": "what will we do? Here we will go to the store page. Because this is the URL. So"
+    },
+    {
+      "start": 1128.63,
+      "duration": 0.009999999999990905,
+      "text": "page. Because this is the URL. So"
+    },
+    {
+      "start": 1128.64,
+      "duration": 2.0699999999999363,
+      "text": "page. Because this is the URL. So if you go to the store URL, you"
+    },
+    {
+      "start": 1130.71,
+      "duration": 0.009999999999990905,
+      "text": "if you go to the store URL, you"
+    },
+    {
+      "start": 1130.72,
+      "duration": 3.189000000000078,
+      "text": "if you go to the store URL, you can see that this is the request URL that"
+    },
+    {
+      "start": 1133.909,
+      "duration": 0.009999999999990905,
+      "text": "can see that this is the request URL that"
+    },
+    {
+      "start": 1133.919,
+      "duration": 2.390999999999849,
+      "text": "can see that this is the request URL that we sent in our http request. And"
+    },
+    {
+      "start": 1136.31,
+      "duration": 0.009999999999990905,
+      "text": "we sent in our http request. And"
+    },
+    {
+      "start": 1136.32,
+      "duration": 3.910000000000082,
+      "text": "we sent in our http request. And look at this what is request method? Gate. I hope"
+    },
+    {
+      "start": 1140.23,
+      "duration": 0.009999999999990905,
+      "text": "look at this what is request method? Gate. I hope"
+    },
+    {
+      "start": 1140.24,
+      "duration": 2.6299999999998818,
+      "text": "look at this what is request method? Gate. I hope you are able to understand. Now let me show you an"
+    },
+    {
+      "start": 1142.87,
+      "duration": 0.010000000000218279,
+      "text": "you are able to understand. Now let me show you an"
+    },
+    {
+      "start": 1142.88,
+      "duration": 2.7889999999999873,
+      "text": "you are able to understand. Now let me show you an example of the post. So next let's me"
+    },
+    {
+      "start": 1145.669,
+      "duration": 0.009999999999990905,
+      "text": "example of the post. So next let's me"
+    },
+    {
+      "start": 1145.679,
+      "duration": 2.15099999999984,
+      "text": "example of the post. So next let's me log in to this website."
+    },
+    {
+      "start": 1147.83,
+      "duration": 0.009999999999990905,
+      "text": "log in to this website."
+    },
+    {
+      "start": 1147.84,
+      "duration": 1.509999999999991,
+      "text": "log in to this website. What do I need to do to log in now"
+    },
+    {
+      "start": 1149.35,
+      "duration": 0.009999999999990905,
+      "text": "What do I need to do to log in now"
+    },
+    {
+      "start": 1149.36,
+      "duration": 3.3500000000001364,
+      "text": "What do I need to do to log in now ? I need to send some data."
+    },
+    {
+      "start": 1152.71,
+      "duration": 0.009999999999990905,
+      "text": "? I need to send some data."
+    },
+    {
+      "start": 1152.72,
+      "duration": 2.5499999999999545,
+      "text": "? I need to send some data. Right? Or"
+    },
+    {
+      "start": 1155.27,
+      "duration": 0.009999999999990905,
+      "text": "Right? Or"
+    },
+    {
+      "start": 1155.28,
+      "duration": 2.7899999999999636,
+      "text": "Right? Or I have to send some data to the server to log in or register. So"
+    },
+    {
+      "start": 1158.07,
+      "duration": 0.009999999999990905,
+      "text": "I have to send some data to the server to log in or register. So"
+    },
+    {
+      "start": 1158.08,
+      "duration": 3.589000000000169,
+      "text": "I have to send some data to the server to log in or register. So I'm clicking on Log In. I am"
+    },
+    {
+      "start": 1161.669,
+      "duration": 0.009999999999990905,
+      "text": "I'm clicking on Log In. I am"
+    },
+    {
+      "start": 1161.679,
+      "duration": 2.869999999999891,
+      "text": "I'm clicking on Log In. I am clicking on sign up. Or I'm going to"
+    },
+    {
+      "start": 1164.549,
+      "duration": 0.009999999999990905,
+      "text": "clicking on sign up. Or I'm going to"
+    },
+    {
+      "start": 1164.559,
+      "duration": 1.9110000000000582,
+      "text": "clicking on sign up. Or I'm going to continue with email by clicking on Let's Log In."
+    },
+    {
+      "start": 1166.47,
+      "duration": 0.009999999999990905,
+      "text": "continue with email by clicking on Let's Log In."
+    },
+    {
+      "start": 1166.48,
+      "duration": 4.1099999999999,
+      "text": "continue with email by clicking on Let's Log In. I put a dummy email here."
+    },
+    {
+      "start": 1170.59,
+      "duration": 0.009999999999990905,
+      "text": "I put a dummy email here."
+    },
+    {
+      "start": 1170.6,
+      "duration": 1.8300000000001546,
+      "text": "I put a dummy email here."
+    },
+    {
+      "start": 1175.35,
+      "duration": 0.009999999999990905,
+      "text": "gmail.com 1 2 3 4 I entered the wrong password."
+    },
+    {
+      "start": 1175.36,
+      "duration": 2.230000000000018,
+      "text": "gmail.com 1 2 3 4 I entered the wrong password. Clicked on Next. Ok? So"
+    },
+    {
+      "start": 1177.59,
+      "duration": 0.009999999999990905,
+      "text": "Clicked on Next. Ok? So"
+    },
+    {
+      "start": 1177.6,
+      "duration": 2.550000000000182,
+      "text": "Clicked on Next. Ok? So currently our URL is authenticated."
+    },
+    {
+      "start": 1180.15,
+      "duration": 0.009999999999990905,
+      "text": "currently our URL is authenticated."
+    },
+    {
+      "start": 1180.16,
+      "duration": 2.6289999999999054,
+      "text": "currently our URL is authenticated. So if I go here and search for"
+    },
+    {
+      "start": 1182.789,
+      "duration": 0.009999999999990905,
+      "text": "So if I go here and search for"
+    },
+    {
+      "start": 1182.799,
+      "duration": 4.070999999999913,
+      "text": "So if I go here and search for authenticate, here it is authenticate and"
+    },
+    {
+      "start": 1186.87,
+      "duration": 0.010000000000218279,
+      "text": "authenticate, here it is authenticate and"
+    },
+    {
+      "start": 1186.88,
+      "duration": 2.3899999999998727,
+      "text": "authenticate, here it is authenticate and look here guys what is the request method?"
+    },
+    {
+      "start": 1189.27,
+      "duration": 0.009999999999990905,
+      "text": "look here guys what is the request method?"
+    },
+    {
+      "start": 1189.28,
+      "duration": 3.0299999999999727,
+      "text": "look here guys what is the request method? Post. Ok? So I hope I was able to explain to you"
+    },
+    {
+      "start": 1192.31,
+      "duration": 0.009999999999990905,
+      "text": "Post. Ok? So I hope I was able to explain to you"
+    },
+    {
+      "start": 1192.32,
+      "duration": 3.4300000000000637,
+      "text": "Post. Ok? So I hope I was able to explain to you with examples what http methods are"
+    },
+    {
+      "start": 1195.75,
+      "duration": 0.009999999999990905,
+      "text": "with examples what http methods are"
+    },
+    {
+      "start": 1195.76,
+      "duration": 2.5499999999999545,
+      "text": "with examples what http methods are ? Now what we're going to do today is"
+    },
+    {
+      "start": 1198.31,
+      "duration": 0.009999999999990905,
+      "text": "? Now what we're going to do today is"
+    },
+    {
+      "start": 1198.32,
+      "duration": 2.310000000000173,
+      "text": "? Now what we're going to do today is we're going to kick start our project and"
+    },
+    {
+      "start": 1200.63,
+      "duration": 0.009999999999990905,
+      "text": "we're going to kick start our project and"
+    },
+    {
+      "start": 1200.64,
+      "duration": 2.5499999999999545,
+      "text": "we're going to kick start our project and I'm going to show you how to build an API. I am going to"
+    },
+    {
+      "start": 1203.19,
+      "duration": 0.009999999999990905,
+      "text": "I'm going to show you how to build an API. I am going to"
+    },
+    {
+      "start": 1203.2,
+      "duration": 1.5889999999999418,
+      "text": "I'm going to show you how to build an API. I am going to make an end point I am sorry."
+    },
+    {
+      "start": 1204.789,
+      "duration": 0.009999999999990905,
+      "text": "make an end point I am sorry."
+    },
+    {
+      "start": 1204.799,
+      "duration": 2.79099999999994,
+      "text": "make an end point I am sorry. Where we will be"
+    },
+    {
+      "start": 1207.59,
+      "duration": 0.009999999999990905,
+      "text": "Where we will be"
+    },
+    {
+      "start": 1207.6,
+      "duration": 4.069000000000187,
+      "text": "Where we will be able to retrieve the data of all our patients. So I"
+    },
+    {
+      "start": 1211.669,
+      "duration": 0.009999999999990905,
+      "text": "able to retrieve the data of all our patients. So I"
+    },
+    {
+      "start": 1211.679,
+      "duration": 2.79099999999994,
+      "text": "able to retrieve the data of all our patients. So I hope you are able to figure out that the"
+    },
+    {
+      "start": 1214.47,
+      "duration": 0.009999999999990905,
+      "text": "hope you are able to figure out that the"
+    },
+    {
+      "start": 1214.48,
+      "duration": 2.9500000000000455,
+      "text": "hope you are able to figure out that the HTTP method we will use will be get."
+    },
+    {
+      "start": 1217.43,
+      "duration": 0.009999999999990905,
+      "text": "HTTP method we will use will be get."
+    },
+    {
+      "start": 1217.44,
+      "duration": 2.229000000000042,
+      "text": "HTTP method we will use will be get. Ok? So let's start with the"
+    },
+    {
+      "start": 1219.669,
+      "duration": 0.009999999999990905,
+      "text": "Ok? So let's start with the"
+    },
+    {
+      "start": 1219.679,
+      "duration": 2.4710000000000036,
+      "text": "Ok? So let's start with the project. Now before creating the end point, let's do some"
+    },
+    {
+      "start": 1222.15,
+      "duration": 0.009999999999990905,
+      "text": "project. Now before creating the end point, let's do some"
+    },
+    {
+      "start": 1222.16,
+      "duration": 2.3889999999998963,
+      "text": "project. Now before creating the end point, let's do some setup related work."
+    },
+    {
+      "start": 1224.549,
+      "duration": 0.009999999999990905,
+      "text": "setup related work."
+    },
+    {
+      "start": 1224.559,
+      "duration": 2.8710000000000946,
+      "text": "setup related work. We'll be working in the exact same project folder"
+    },
+    {
+      "start": 1227.43,
+      "duration": 0.009999999999990905,
+      "text": "We'll be working in the exact same project folder"
+    },
+    {
+      "start": 1227.44,
+      "duration": 1.5889999999999418,
+      "text": "We'll be working in the exact same project folder that I showed you in the last video."
+    },
+    {
+      "start": 1229.029,
+      "duration": 0.009999999999990905,
+      "text": "that I showed you in the last video."
+    },
+    {
+      "start": 1229.039,
+      "duration": 3.1099999999999,
+      "text": "that I showed you in the last video. Ah, I"
+    },
+    {
+      "start": 1232.149,
+      "duration": 0.010000000000218279,
+      "text": "Ah, I"
+    },
+    {
+      "start": 1232.159,
+      "duration": 1.8309999999999036,
+      "text": "Ah, I showed you how to install Fast API there. I"
+    },
+    {
+      "start": 1233.99,
+      "duration": 0.009999999999990905,
+      "text": "showed you how to install Fast API there. I"
+    },
+    {
+      "start": 1234.0,
+      "duration": 2.869999999999891,
+      "text": "showed you how to install Fast API there. I demonstrated installing piddant and uvicon"
+    },
+    {
+      "start": 1236.87,
+      "duration": 0.010000000000218279,
+      "text": "demonstrated installing piddant and uvicon"
+    },
+    {
+      "start": 1236.88,
+      "duration": 3.668999999999869,
+      "text": "demonstrated installing piddant and uvicon and creating a basic small app API."
+    },
+    {
+      "start": 1240.549,
+      "duration": 0.009999999999990905,
+      "text": "and creating a basic small app API."
+    },
+    {
+      "start": 1240.559,
+      "duration": 2.07100000000014,
+      "text": "and creating a basic small app API. Right? There also, if you remember,"
+    },
+    {
+      "start": 1242.63,
+      "duration": 0.009999999999990905,
+      "text": "Right? There also, if you remember,"
+    },
+    {
+      "start": 1242.64,
+      "duration": 2.229999999999791,
+      "text": "Right? There also, if you remember, we created two endpoints, one was"
+    },
+    {
+      "start": 1244.87,
+      "duration": 0.010000000000218279,
+      "text": "we created two endpoints, one was"
+    },
+    {
+      "start": 1244.88,
+      "duration": 3.8299999999999272,
+      "text": "we created two endpoints, one was hello, one was about and both of them were"
+    },
+    {
+      "start": 1248.71,
+      "duration": 0.009999999999990905,
+      "text": "hello, one was about and both of them were"
+    },
+    {
+      "start": 1248.72,
+      "duration": 2.1499999999998636,
+      "text": "hello, one was about and both of them were using get type HTTP methods."
+    },
+    {
+      "start": 1250.87,
+      "duration": 0.010000000000218279,
+      "text": "using get type HTTP methods."
+    },
+    {
+      "start": 1250.88,
+      "duration": 2.709999999999809,
+      "text": "using get type HTTP methods. Because obviously we were retrieving the data and giving it to the user."
+    },
+    {
+      "start": 1253.59,
+      "duration": 0.009999999999990905,
+      "text": "Because obviously we were retrieving the data and giving it to the user."
+    },
+    {
+      "start": 1253.6,
+      "duration": 2.790000000000191,
+      "text": "Because obviously we were retrieving the data and giving it to the user. Ok? So now"
+    },
+    {
+      "start": 1256.39,
+      "duration": 0.009999999999990905,
+      "text": "Ok? So now"
+    },
+    {
+      "start": 1256.4,
+      "duration": 2.4699999999998,
+      "text": "Ok? So now we will continue our work from here. So the"
+    },
+    {
+      "start": 1258.87,
+      "duration": 0.010000000000218279,
+      "text": "we will continue our work from here. So the"
+    },
+    {
+      "start": 1258.88,
+      "duration": 1.75,
+      "text": "we will continue our work from here. So the first thing that we will do is that since"
+    },
+    {
+      "start": 1260.63,
+      "duration": 0.009999999999990905,
+      "text": "first thing that we will do is that since"
+    },
+    {
+      "start": 1260.64,
+      "duration": 1.990000000000009,
+      "text": "first thing that we will do is that since we have started a new session, we will first start"
+    },
+    {
+      "start": 1262.63,
+      "duration": 0.009999999999990905,
+      "text": "we have started a new session, we will first start"
+    },
+    {
+      "start": 1262.64,
+      "duration": 1.5899999999999181,
+      "text": "we have started a new session, we will first start our virtual"
+    },
+    {
+      "start": 1264.23,
+      "duration": 0.009999999999990905,
+      "text": "our virtual"
+    },
+    {
+      "start": 1264.24,
+      "duration": 2.869999999999891,
+      "text": "our virtual environment here. So I would write"
+    },
+    {
+      "start": 1267.11,
+      "duration": 0.009999999999990905,
+      "text": "environment here. So I would write"
+    },
+    {
+      "start": 1267.12,
+      "duration": 2.990000000000009,
+      "text": "environment here. So I would write my"
+    },
+    {
+      "start": 1279.19,
+      "duration": 2.3199999999999363,
+      "text": "Ok? seconds What have I done? I have"
+    },
+    {
+      "start": 1285.11,
+      "duration": 0.009999999999990905,
+      "text": "created a file here called patients.json and have already"
+    },
+    {
+      "start": 1285.12,
+      "duration": 2.9500000000000455,
+      "text": "created a file here called patients.json and have already added the data of five patients here. Ok?"
+    },
+    {
+      "start": 1288.07,
+      "duration": 0.009999999999990905,
+      "text": "added the data of five patients here. Ok?"
+    },
+    {
+      "start": 1288.08,
+      "duration": 2.310000000000173,
+      "text": "added the data of five patients here. Ok? So this will kind of operate like our database."
+    },
+    {
+      "start": 1290.39,
+      "duration": 0.009999999999990905,
+      "text": "So this will kind of operate like our database."
+    },
+    {
+      "start": 1290.4,
+      "duration": 4.589999999999918,
+      "text": "So this will kind of operate like our database. So this is our first patient."
+    },
+    {
+      "start": 1294.99,
+      "duration": 0.009999999999990905,
+      "text": "So this is our first patient."
+    },
+    {
+      "start": 1295.0,
+      "duration": 2.6690000000000964,
+      "text": "So this is our first patient. Then after that our second"
+    },
+    {
+      "start": 1297.669,
+      "duration": 0.009999999999990905,
+      "text": "Then after that our second"
+    },
+    {
+      "start": 1297.679,
+      "duration": 3.4309999999998126,
+      "text": "Then after that our second patient comes from here. Then third, then fourth and"
+    },
+    {
+      "start": 1301.11,
+      "duration": 0.009999999999990905,
+      "text": "patient comes from here. Then third, then fourth and"
+    },
+    {
+      "start": 1301.12,
+      "duration": 2.5490000000002055,
+      "text": "patient comes from here. Then third, then fourth and fifth. Ok? So whatever new patient comes,"
+    },
+    {
+      "start": 1303.669,
+      "duration": 0.009999999999990905,
+      "text": "fifth. Ok? So whatever new patient comes,"
+    },
+    {
+      "start": 1303.679,
+      "duration": 2.390999999999849,
+      "text": "fifth. Ok? So whatever new patient comes, we will add him here. And"
+    },
+    {
+      "start": 1306.07,
+      "duration": 0.009999999999990905,
+      "text": "we will add him here. And"
+    },
+    {
+      "start": 1306.08,
+      "duration": 1.75,
+      "text": "we will add him here. And existing patients are here. So we will"
+    },
+    {
+      "start": 1307.83,
+      "duration": 0.009999999999990905,
+      "text": "existing patients are here. So we will"
+    },
+    {
+      "start": 1307.84,
+      "duration": 2.630000000000109,
+      "text": "existing patients are here. So we will retrieve it from here and show it to the user."
+    },
+    {
+      "start": 1310.47,
+      "duration": 0.009999999999990905,
+      "text": "retrieve it from here and show it to the user."
+    },
+    {
+      "start": 1310.48,
+      "duration": 3.1099999999999,
+      "text": "retrieve it from here and show it to the user. Ok? So this is another setup."
+    },
+    {
+      "start": 1313.59,
+      "duration": 0.009999999999990905,
+      "text": "Ok? So this is another setup."
+    },
+    {
+      "start": 1313.6,
+      "duration": 2.0690000000001874,
+      "text": "Ok? So this is another setup. I also modify the existing code a little bit."
+    },
+    {
+      "start": 1315.669,
+      "duration": 0.009999999999990905,
+      "text": "I also modify the existing code a little bit."
+    },
+    {
+      "start": 1315.679,
+      "duration": 2.310999999999922,
+      "text": "I also modify the existing code a little bit. So in Hello, where I"
+    },
+    {
+      "start": 1317.99,
+      "duration": 0.009999999999990905,
+      "text": "So in Hello, where I"
+    },
+    {
+      "start": 1318.0,
+      "duration": 2.869999999999891,
+      "text": "So in Hello, where I wrote Hello World in the message. Here"
+    },
+    {
+      "start": 1320.87,
+      "duration": 0.010000000000218279,
+      "text": "wrote Hello World in the message. Here"
+    },
+    {
+      "start": 1320.88,
+      "duration": 2.349999999999909,
+      "text": "wrote Hello World in the message. Here I write"
+    },
+    {
+      "start": 1323.23,
+      "duration": 0.009999999999990905,
+      "text": "I write"
+    },
+    {
+      "start": 1323.24,
+      "duration": 3.589999999999918,
+      "text": "I write Patient"
+    },
+    {
+      "start": 1330.71,
+      "duration": 0.009999999999990905,
+      "text": "Management System API."
+    },
+    {
+      "start": 1330.72,
+      "duration": 4.389999999999873,
+      "text": "Management System API. Ok? And in About, we can write a"
+    },
+    {
+      "start": 1335.11,
+      "duration": 0.009999999999990905,
+      "text": "Ok? And in About, we can write a"
+    },
+    {
+      "start": 1335.12,
+      "duration": 1.6300000000001091,
+      "text": "Ok? And in About, we can write a fully"
+    },
+    {
+      "start": 1336.75,
+      "duration": 0.009999999999990905,
+      "text": "fully"
+    },
+    {
+      "start": 1336.76,
+      "duration": 6.630000000000109,
+      "text": "fully functional API to manage"
+    },
+    {
+      "start": 1349.19,
+      "duration": 0.009999999999990905,
+      "text": "your patients' patient records."
+    },
+    {
+      "start": 1349.2,
+      "duration": 3.1499999999998636,
+      "text": "your patients' patient records. Ok? Now we will start our work from here."
+    },
+    {
+      "start": 1352.35,
+      "duration": 0.009999999999990905,
+      "text": "Ok? Now we will start our work from here."
+    },
+    {
+      "start": 1352.36,
+      "duration": 2.5900000000001455,
+      "text": "Ok? Now we will start our work from here. So what do we do? First of all we have to"
+    },
+    {
+      "start": 1354.95,
+      "duration": 0.009999999999990905,
+      "text": "So what do we do? First of all we have to"
+    },
+    {
+      "start": 1354.96,
+      "duration": 3.0299999999999727,
+      "text": "So what do we do? First of all we have to create an endpoint named"
+    },
+    {
+      "start": 1357.99,
+      "duration": 0.009999999999990905,
+      "text": "create an endpoint named"
+    },
+    {
+      "start": 1358.0,
+      "duration": 3.269999999999982,
+      "text": "create an endpoint named view. And as soon as someone hits that endpoint of ours, what"
+    },
+    {
+      "start": 1361.27,
+      "duration": 0.009999999999990905,
+      "text": "view. And as soon as someone hits that endpoint of ours, what"
+    },
+    {
+      "start": 1361.28,
+      "duration": 3.629000000000133,
+      "text": "view. And as soon as someone hits that endpoint of ours, what we will do is that"
+    },
+    {
+      "start": 1364.909,
+      "duration": 0.009999999999990905,
+      "text": "we will do is that"
+    },
+    {
+      "start": 1364.919,
+      "duration": 3.7110000000000127,
+      "text": "we will do is that we will send the data of all our patients to the"
+    },
+    {
+      "start": 1368.63,
+      "duration": 0.009999999999990905,
+      "text": "we will send the data of all our patients to the"
+    },
+    {
+      "start": 1368.64,
+      "duration": 3.0289999999999964,
+      "text": "we will send the data of all our patients to the client. Ok?"
+    },
+    {
+      "start": 1371.669,
+      "duration": 0.009999999999990905,
+      "text": "client. Ok?"
+    },
+    {
+      "start": 1371.679,
+      "duration": 2.630999999999858,
+      "text": "client. Ok? This is going to be our end point."
+    },
+    {
+      "start": 1374.31,
+      "duration": 0.009999999999990905,
+      "text": "This is going to be our end point."
+    },
+    {
+      "start": 1374.32,
+      "duration": 4.70900000000006,
+      "text": "This is going to be our end point. Ok? So what you will do is that"
+    },
+    {
+      "start": 1379.029,
+      "duration": 0.009999999999990905,
+      "text": "Ok? So what you will do is that"
+    },
+    {
+      "start": 1379.039,
+      "duration": 3.591000000000122,
+      "text": "Ok? So what you will do is that before you create the endpoint, you will first have to write a function to"
+    },
+    {
+      "start": 1382.63,
+      "duration": 0.009999999999990905,
+      "text": "before you create the endpoint, you will first have to write a function to"
+    },
+    {
+      "start": 1382.64,
+      "duration": 4.148999999999887,
+      "text": "before you create the endpoint, you will first have to write a function to load the data from inside this patient dot json."
+    },
+    {
+      "start": 1386.789,
+      "duration": 2.4809999999999945,
+      "text": "load the data from inside this patient dot json."
+    },
+    {
+      "start": 1393.11,
+      "duration": 0.009999999999990905,
+      "text": "Because you have to do this work again and again. In the future,"
+    },
+    {
+      "start": 1393.12,
+      "duration": 2.9500000000000455,
+      "text": "Because you have to do this work again and again. In the future, when you create endpoints, you will need to extract"
+    },
+    {
+      "start": 1396.07,
+      "duration": 0.009999999999990905,
+      "text": "when you create endpoints, you will need to extract"
+    },
+    {
+      "start": 1396.08,
+      "duration": 2.469000000000051,
+      "text": "when you create endpoints, you will need to extract records from your patients.json file."
+    },
+    {
+      "start": 1398.549,
+      "duration": 0.009999999999990905,
+      "text": "records from your patients.json file."
+    },
+    {
+      "start": 1398.559,
+      "duration": 2.07100000000014,
+      "text": "records from your patients.json file. So what I will do is"
+    },
+    {
+      "start": 1400.63,
+      "duration": 0.009999999999990905,
+      "text": "So what I will do is"
+    },
+    {
+      "start": 1400.64,
+      "duration": 2.6299999999998818,
+      "text": "So what I will do is I am creating a helper function here"
+    },
+    {
+      "start": 1403.27,
+      "duration": 0.009999999999990905,
+      "text": "I am creating a helper function here"
+    },
+    {
+      "start": 1403.28,
+      "duration": 4.629000000000133,
+      "text": "I am creating a helper function here saying load data and this function does"
+    },
+    {
+      "start": 1407.909,
+      "duration": 0.009999999999990905,
+      "text": "saying load data and this function does"
+    },
+    {
+      "start": 1407.919,
+      "duration": 2.229999999999791,
+      "text": "saying load data and this function does not need anything as input. What we are doing inside this function is"
+    },
+    {
+      "start": 1410.149,
+      "duration": 0.010000000000218279,
+      "text": "not need anything as input. What we are doing inside this function is"
+    },
+    {
+      "start": 1410.159,
+      "duration": 2.6299999999998818,
+      "text": "not need anything as input. What we are doing inside this function is that we are opening the patience json file"
+    },
+    {
+      "start": 1412.789,
+      "duration": 3.161000000000058,
+      "text": "that we are opening the patience json file"
+    },
+    {
+      "start": 1421.31,
+      "duration": 0.009999999999990905,
+      "text": "and we are opening it in read mode"
+    },
+    {
+      "start": 1421.32,
+      "duration": 5.110000000000127,
+      "text": "and we are opening it in read mode as f"
+    },
+    {
+      "start": 1426.43,
+      "duration": 0.009999999999990905,
+      "text": "as f"
+    },
+    {
+      "start": 1426.44,
+      "duration": 3.3899999999998727,
+      "text": "as f and we have since this is a json file. To read this"
+    },
+    {
+      "start": 1429.83,
+      "duration": 0.009999999999990905,
+      "text": "and we have since this is a json file. To read this"
+    },
+    {
+      "start": 1429.84,
+      "duration": 1.8290000000001783,
+      "text": "and we have since this is a json file. To read this we will need the json module."
+    },
+    {
+      "start": 1431.669,
+      "duration": 0.009999999999990905,
+      "text": "we will need the json module."
+    },
+    {
+      "start": 1431.679,
+      "duration": 1.6309999999998581,
+      "text": "we will need the json module. So we will"
+    },
+    {
+      "start": 1433.31,
+      "duration": 0.009999999999990905,
+      "text": "So we will"
+    },
+    {
+      "start": 1433.32,
+      "duration": 3.3900000000001,
+      "text": "So we will write import json and here we"
+    },
+    {
+      "start": 1436.71,
+      "duration": 0.009999999999990905,
+      "text": "write import json and here we"
+    },
+    {
+      "start": 1436.72,
+      "duration": 1.990000000000009,
+      "text": "write import json and here we will write"
+    },
+    {
+      "start": 1438.71,
+      "duration": 0.009999999999990905,
+      "text": "will write"
+    },
+    {
+      "start": 1438.72,
+      "duration": 3.349999999999909,
+      "text": "will write json dot load and here we will pass our file"
+    },
+    {
+      "start": 1442.07,
+      "duration": 0.009999999999990905,
+      "text": "json dot load and here we will pass our file"
+    },
+    {
+      "start": 1442.08,
+      "duration": 3.3900000000001,
+      "text": "json dot load and here we will pass our file and from this we will get our data"
+    },
+    {
+      "start": 1445.47,
+      "duration": 0.009999999999990905,
+      "text": "and from this we will get our data"
+    },
+    {
+      "start": 1445.48,
+      "duration": 2.869999999999891,
+      "text": "and from this we will get our data and what we will do is return this data,"
+    },
+    {
+      "start": 1448.35,
+      "duration": 2.798999999999978,
+      "text": "and what we will do is return this data,"
+    },
+    {
+      "start": 1453.75,
+      "duration": 0.009999999999990905,
+      "text": "okay, so this is a very simple function,"
+    },
+    {
+      "start": 1453.76,
+      "duration": 2.5499999999999545,
+      "text": "okay, so this is a very simple function, whenever you call this function,"
+    },
+    {
+      "start": 1456.31,
+      "duration": 0.009999999999990905,
+      "text": "whenever you call this function,"
+    },
+    {
+      "start": 1456.32,
+      "duration": 3.1100000000001273,
+      "text": "whenever you call this function, this function will return all the data of this file, okay, so"
+    },
+    {
+      "start": 1459.43,
+      "duration": 0.009999999999990905,
+      "text": "this function will return all the data of this file, okay, so"
+    },
+    {
+      "start": 1459.44,
+      "duration": 4.069999999999936,
+      "text": "this function will return all the data of this file, okay, so our work is done, now we will do one thing, we will"
+    },
+    {
+      "start": 1463.51,
+      "duration": 0.009999999999990905,
+      "text": "our work is done, now we will do one thing, we will"
+    },
+    {
+      "start": 1463.52,
+      "duration": 4.990000000000009,
+      "text": "our work is done, now we will do one thing, we will create a new end point"
+    },
+    {
+      "start": 1468.51,
+      "duration": 0.009999999999990905,
+      "text": "create a new end point"
+    },
+    {
+      "start": 1468.52,
+      "duration": 5.230000000000018,
+      "text": "create a new end point gate and its route is view."
+    },
+    {
+      "start": 1473.75,
+      "duration": 0.009999999999990905,
+      "text": "gate and its route is view."
+    },
+    {
+      "start": 1473.76,
+      "duration": 2.8299999999999272,
+      "text": "gate and its route is view. Ok? And here we will create its function"
+    },
+    {
+      "start": 1476.59,
+      "duration": 0.009999999999990905,
+      "text": "Ok? And here we will create its function"
+    },
+    {
+      "start": 1476.6,
+      "duration": 3.3900000000001,
+      "text": "Ok? And here we will create its function view. It does not require input."
+    },
+    {
+      "start": 1479.99,
+      "duration": 0.009999999999990905,
+      "text": "view. It does not require input."
+    },
+    {
+      "start": 1480.0,
+      "duration": 2.4700000000000273,
+      "text": "view. It does not require input. What will you do here? As soon as a"
+    },
+    {
+      "start": 1482.47,
+      "duration": 0.009999999999990905,
+      "text": "What will you do here? As soon as a"
+    },
+    {
+      "start": 1482.48,
+      "duration": 2.4700000000000273,
+      "text": "What will you do here? As soon as a request comes in this route, you will"
+    },
+    {
+      "start": 1484.95,
+      "duration": 0.009999999999990905,
+      "text": "request comes in this route, you will"
+    },
+    {
+      "start": 1484.96,
+      "duration": 3.1099999999999,
+      "text": "request comes in this route, you will first fetch the data using the load"
+    },
+    {
+      "start": 1488.07,
+      "duration": 0.009999999999990905,
+      "text": "first fetch the data using the load"
+    },
+    {
+      "start": 1488.08,
+      "duration": 3.189000000000078,
+      "text": "first fetch the data using the load data function and then simply return that data as it is. That's it guys."
+    },
+    {
+      "start": 1491.269,
+      "duration": 2.921000000000049,
+      "text": "data function and then simply return that data as it is. That's it guys."
+    },
+    {
+      "start": 1501.269,
+      "duration": 0.009999999999990905,
+      "text": "This is our end point will give all the patience"
+    },
+    {
+      "start": 1501.279,
+      "duration": 2.869999999999891,
+      "text": "This is our end point will give all the patience data to our client. Ok? So now let's do one"
+    },
+    {
+      "start": 1504.149,
+      "duration": 0.010000000000218279,
+      "text": "data to our client. Ok? So now let's do one"
+    },
+    {
+      "start": 1504.159,
+      "duration": 1.15099999999984,
+      "text": "data to our client. Ok? So now let's do one thing. Let's"
+    },
+    {
+      "start": 1505.31,
+      "duration": 0.009999999999990905,
+      "text": "thing. Let's"
+    },
+    {
+      "start": 1505.32,
+      "duration": 2.990000000000009,
+      "text": "thing. Let's run this app. Ok?"
+    },
+    {
+      "start": 1508.31,
+      "duration": 0.009999999999990905,
+      "text": "run this app. Ok?"
+    },
+    {
+      "start": 1508.32,
+      "duration": 3.6700000000000728,
+      "text": "run this app. Ok? UVConn Main App Reload. This was our command"
+    },
+    {
+      "start": 1511.99,
+      "duration": 0.009999999999990905,
+      "text": "UVConn Main App Reload. This was our command"
+    },
+    {
+      "start": 1512.0,
+      "duration": 3.1489999999998872,
+      "text": "UVConn Main App Reload. This was our command to start the uvon server, hit enter."
+    },
+    {
+      "start": 1515.149,
+      "duration": 0.010000000000218279,
+      "text": "to start the uvon server, hit enter."
+    },
+    {
+      "start": 1515.159,
+      "duration": 2.550999999999931,
+      "text": "to start the uvon server, hit enter. And here is our"
+    },
+    {
+      "start": 1517.71,
+      "duration": 0.009999999999990905,
+      "text": "And here is our"
+    },
+    {
+      "start": 1517.72,
+      "duration": 3.869999999999891,
+      "text": "And here is our URL. So here's our URL guys."
+    },
+    {
+      "start": 1521.59,
+      "duration": 0.009999999999990905,
+      "text": "URL. So here's our URL guys."
+    },
+    {
+      "start": 1521.6,
+      "duration": 3.3900000000001,
+      "text": "URL. So here's our URL guys. We are currently on the home URL."
+    },
+    {
+      "start": 1524.99,
+      "duration": 0.009999999999990905,
+      "text": "We are currently on the home URL."
+    },
+    {
+      "start": 1525.0,
+      "duration": 4.2690000000000055,
+      "text": "We are currently on the home URL. You can go on a lot of Ely About."
+    },
+    {
+      "start": 1529.269,
+      "duration": 0.009999999999990905,
+      "text": "You can go on a lot of Ely About."
+    },
+    {
+      "start": 1529.279,
+      "duration": 2.550999999999931,
+      "text": "You can go on a lot of Ely About. Ok? And you can also go to the view very easily."
+    },
+    {
+      "start": 1531.83,
+      "duration": 3.0790000000001783,
+      "text": "Ok? And you can also go to the view very easily."
+    },
+    {
+      "start": 1537.63,
+      "duration": 0.009999999999990905,
+      "text": "And you can see here is"
+    },
+    {
+      "start": 1537.64,
+      "duration": 3.0289999999999964,
+      "text": "And you can see here is our"
+    },
+    {
+      "start": 1540.669,
+      "duration": 0.009999999999990905,
+      "text": "our"
+    },
+    {
+      "start": 1540.679,
+      "duration": 5.430999999999813,
+      "text": "our data. Ok? And if you go to the docs,"
+    },
+    {
+      "start": 1549.99,
+      "duration": 0.009999999999990905,
+      "text": "you'll find documentation for this new endpoint as well."
+    },
+    {
+      "start": 1550.0,
+      "duration": 2.869999999999891,
+      "text": "you'll find documentation for this new endpoint as well. Ok? Here is"
+    },
+    {
+      "start": 1552.87,
+      "duration": 0.010000000000218279,
+      "text": "Ok? Here is"
+    },
+    {
+      "start": 1552.88,
+      "duration": 3.1099999999999,
+      "text": "Ok? Here is your third gate end point. If I"
+    },
+    {
+      "start": 1555.99,
+      "duration": 0.009999999999990905,
+      "text": "your third gate end point. If I"
+    },
+    {
+      "start": 1556.0,
+      "duration": 2.4700000000000273,
+      "text": "your third gate end point. If I expand this here, if I go to try it out"
+    },
+    {
+      "start": 1558.47,
+      "duration": 0.009999999999990905,
+      "text": "expand this here, if I go to try it out"
+    },
+    {
+      "start": 1558.48,
+      "duration": 2.668999999999869,
+      "text": "expand this here, if I go to try it out and click on the execute button,"
+    },
+    {
+      "start": 1561.149,
+      "duration": 0.010000000000218279,
+      "text": "and click on the execute button,"
+    },
+    {
+      "start": 1561.159,
+      "duration": 3.3899999999998727,
+      "text": "and click on the execute button, you can see this is the response that"
+    },
+    {
+      "start": 1564.549,
+      "duration": 0.009999999999990905,
+      "text": "you can see this is the response that"
+    },
+    {
+      "start": 1564.559,
+      "duration": 1.831000000000131,
+      "text": "you can see this is the response that I am getting. Ok? Ok? So,"
+    },
+    {
+      "start": 1566.39,
+      "duration": 1.8399999999999181,
+      "text": "I am getting. Ok? Ok? So,"
+    },
+    {
+      "start": 1571.029,
+      "duration": 0.009999999999990905,
+      "text": "we are loading and showing all the patients we have in our patients.json file."
+    },
+    {
+      "start": 1571.039,
+      "duration": 2.3910000000000764,
+      "text": "we are loading and showing all the patients we have in our patients.json file. Ok? So I hope"
+    },
+    {
+      "start": 1573.43,
+      "duration": 0.009999999999990905,
+      "text": "Ok? So I hope"
+    },
+    {
+      "start": 1573.44,
+      "duration": 2.6299999999998818,
+      "text": "Ok? So I hope you understand how our first"
+    },
+    {
+      "start": 1576.07,
+      "duration": 0.009999999999990905,
+      "text": "you understand how our first"
+    },
+    {
+      "start": 1576.08,
+      "duration": 3.589000000000169,
+      "text": "you understand how our first end point is working. Ok? Now"
+    },
+    {
+      "start": 1579.669,
+      "duration": 0.009999999999990905,
+      "text": "end point is working. Ok? Now"
+    },
+    {
+      "start": 1579.679,
+      "duration": 2.15099999999984,
+      "text": "end point is working. Ok? Now we will develop this project in a better way"
+    },
+    {
+      "start": 1581.83,
+      "duration": 0.009999999999990905,
+      "text": "we will develop this project in a better way"
+    },
+    {
+      "start": 1581.84,
+      "duration": 2.630000000000109,
+      "text": "we will develop this project in a better way in the upcoming videos."
+    },
+    {
+      "start": 1584.47,
+      "duration": 0.009999999999990905,
+      "text": "in the upcoming videos."
+    },
+    {
+      "start": 1584.48,
+      "duration": 2.548999999999978,
+      "text": "in the upcoming videos. Like in the next video we will develop this endpoint where"
+    },
+    {
+      "start": 1587.029,
+      "duration": 0.009999999999990905,
+      "text": "Like in the next video we will develop this endpoint where"
+    },
+    {
+      "start": 1587.039,
+      "duration": 2.550999999999931,
+      "text": "Like in the next video we will develop this endpoint where if you want, you can"
+    },
+    {
+      "start": 1589.59,
+      "duration": 0.009999999999990905,
+      "text": "if you want, you can"
+    },
+    {
+      "start": 1589.6,
+      "duration": 2.4700000000000273,
+      "text": "if you want, you can load the data of any specific patient."
+    },
+    {
+      "start": 1592.07,
+      "duration": 0.009999999999990905,
+      "text": "load the data of any specific patient."
+    },
+    {
+      "start": 1592.08,
+      "duration": 2.8700000000001182,
+      "text": "load the data of any specific patient. Or if you want, you can display the patient"
+    },
+    {
+      "start": 1594.95,
+      "duration": 0.009999999999990905,
+      "text": "Or if you want, you can display the patient"
+    },
+    {
+      "start": 1594.96,
+      "duration": 2.3899999999998727,
+      "text": "Or if you want, you can display the patient data by sorting it on the basis of a particular parameter."
+    },
+    {
+      "start": 1597.35,
+      "duration": 0.009999999999990905,
+      "text": "data by sorting it on the basis of a particular parameter."
+    },
+    {
+      "start": 1597.36,
+      "duration": 1.9090000000001055,
+      "text": "data by sorting it on the basis of a particular parameter. Ok"
+    },
+    {
+      "start": 1599.269,
+      "duration": 0.009999999999990905,
+      "text": "Ok"
+    },
+    {
+      "start": 1599.279,
+      "duration": 1.990000000000009,
+      "text": "Ok ? So we will do this kind of thing"
+    },
+    {
+      "start": 1601.269,
+      "duration": 0.009999999999990905,
+      "text": "? So we will do this kind of thing"
+    },
+    {
+      "start": 1601.279,
+      "duration": 2.550999999999931,
+      "text": "? So we will do this kind of thing in the next video. Ok? So I hope"
+    },
+    {
+      "start": 1603.83,
+      "duration": 0.009999999999990905,
+      "text": "in the next video. Ok? So I hope"
+    },
+    {
+      "start": 1603.84,
+      "duration": 2.230000000000018,
+      "text": "in the next video. Ok? So I hope you liked this video. Here we"
+    },
+    {
+      "start": 1606.07,
+      "duration": 0.009999999999990905,
+      "text": "you liked this video. Here we"
+    },
+    {
+      "start": 1606.08,
+      "duration": 1.75,
+      "text": "you liked this video. Here we discussed about HTTP methods."
+    },
+    {
+      "start": 1607.83,
+      "duration": 0.009999999999990905,
+      "text": "discussed about HTTP methods."
+    },
+    {
+      "start": 1607.84,
+      "duration": 1.75,
+      "text": "discussed about HTTP methods. We introduced our project"
+    },
+    {
+      "start": 1609.59,
+      "duration": 0.009999999999990905,
+      "text": "We introduced our project"
+    },
+    {
+      "start": 1609.6,
+      "duration": 1.8300000000001546,
+      "text": "We introduced our project and we started working on the project."
+    },
+    {
+      "start": 1611.43,
+      "duration": 0.009999999999990905,
+      "text": "and we started working on the project."
+    },
+    {
+      "start": 1611.44,
+      "duration": 2.1499999999998636,
+      "text": "and we started working on the project. Ok? If you"
+    },
+    {
+      "start": 1613.59,
+      "duration": 0.009999999999990905,
+      "text": "Ok? If you"
+    },
+    {
+      "start": 1613.6,
+      "duration": 2.3090000000001965,
+      "text": "Ok? If you liked the video then please like it. If you have"
+    },
+    {
+      "start": 1615.909,
+      "duration": 0.009999999999990905,
+      "text": "liked the video then please like it. If you have"
+    },
+    {
+      "start": 1615.919,
+      "duration": 1.6709999999998217,
+      "text": "liked the video then please like it. If you have not subscribed to this channel,"
+    },
+    {
+      "start": 1617.59,
+      "duration": 0.009999999999990905,
+      "text": "not subscribed to this channel,"
+    },
+    {
+      "start": 1617.6,
+      "duration": 1.75,
+      "text": "not subscribed to this channel, please do subscribe. See you"
+    },
+    {
+      "start": 1619.35,
+      "duration": 0.009999999999990905,
+      "text": "please do subscribe. See you"
+    },
+    {
+      "start": 1619.36,
+      "duration": 3.1200000000001182,
+      "text": "please do subscribe. See you in the next video. Bye."
+    }
+  ]
+}

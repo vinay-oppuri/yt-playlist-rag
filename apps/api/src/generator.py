@@ -5,6 +5,7 @@ import re
 from typing import Any, Dict, List, Optional
 from dotenv import load_dotenv
 
+from src.evidence import meets_transcript_evidence_cutoff
 from src.vector_store import get_vector_store
 
 # Load environment variables from apps/api/.env or workspace root .env
@@ -267,9 +268,7 @@ def generate_answer(
         )
 
     # Filter by minimum similarity score
-    qualifying_hits = [
-        h for h in raw_hits if h.get("confidence_score", h.get("rerank_score", h.get("score", 0.0))) >= min_score
-    ]
+    qualifying_hits = [h for h in raw_hits if meets_transcript_evidence_cutoff(h, min_score)]
 
     # GUARD 1: No retrieved chunks survived the score threshold -> Refuse immediately
     if not qualifying_hits:

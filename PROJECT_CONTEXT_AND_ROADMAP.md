@@ -11,11 +11,13 @@ YT-RAG helps a learner ask questions about one video or an entire YouTube playli
 - **Playlist registry:** `yt_videos` stores titles and metadata for fast routing across large playlists.
 - **Transcript evidence:** `yt_transcripts` stores segment-aligned, timestamped chunks. These chunks are the only factual answer source.
 - **Video profiles:** `yt_video_profiles` stores extractive summaries, topic tags and key moments for video discovery. Profiles may affect retrieval order, but must never be treated as answer evidence.
-- **Retrieval:** query-aware FastEmbed vectors, Qdrant dense search, exact-token lexical candidates, video-profile ranks and reciprocal rank fusion form the candidate list. Common English and Hinglish filler words are removed before lexical/profile matching. A local FastEmbed cross-encoder reranks the shortlist. A lexical MMR pass reduces near-duplicate transcript windows.
+- **Retrieval:** query-aware FastEmbed vectors, Qdrant dense search, exact-token lexical candidates, video-profile ranks and reciprocal rank fusion form the candidate list. Common English and Hinglish filler words are removed before lexical/profile matching. A local FastEmbed cross-encoder reranks the shortlist. A lexical MMR pass reduces near-duplicate transcript windows. Answer eligibility uses transcript-body lexical overlap plus dense similarity; title overlap may affect ordering but cannot pass the evidence cutoff. Exact transcript matches can rescue short concept queries only above a minimum dense-similarity floor.
 - **Grounded chat:** recent chat history may resolve references but is not evidence. The answer prompt requires transcript support and citations. Answers without valid excerpt citations fail closed.
 - **Playlist ingestion:** titles are registered quickly; remaining videos enter a SQLite-backed per-video job queue. Queued and interrupted work resumes when the API starts, failures retry up to three times, and jobs expose per-video state. SQLite leases elect one queue worker across API processes that share the same local database file. Multi-host database sharing and cross-process JIT locking are not supported.
 - **Answer validation:** generated answers must cite every sentence or list item and every reference must point to a supplied transcript excerpt. Answers that fail citation coverage are refused.
 - **Operations:** `RERANKER_MODEL` controls the local reranker. Its model downloads on first use; set it to `none` to use rank fusion without the cross-encoder.
+- **API boundary:** ingestion URLs are restricted to supported HTTPS YouTube hosts and URL forms; request identifiers, limits, and collection/video/playlist identifiers are validated. Failures return safe messages while detailed exceptions stay in server logs. `/api/ready` reports Qdrant readiness separately from diagnostic health.
+- **Deployment security:** the API has no built-in user authentication or per-user isolation. Deploy behind an authenticated gateway before exposing it to untrusted users; CORS alone is not authentication.
 
 ## Accuracy rules
 
@@ -24,6 +26,7 @@ YT-RAG helps a learner ask questions about one video or an entire YouTube playli
 3. Cite every factual answer sentence. Refuse if an answer has no valid citations or references excerpts that were not provided.
 4. Keep citation timestamps tied to the exact retrieved chunk. Preserve segment boundaries and the short player lead-in.
 5. Rank fusion, cross-encoder and cosine scores order candidates; they are not calibrated probabilities. Do not display them as confidence percentages. The answer cutoff must use transcript relevance signals and should be tuned against labeled cases.
+   Video titles and profiles may route retrieval, but only transcript body text may satisfy the answer evidence cutoff. Exact lexical overlap is a fallback for short queries and must also clear a dense-similarity floor.
 6. Keep evaluation non-disruptive by default: no JIT transcription and no interruption of an active background ingestion job.
 7. Keep interactive search and chat from cancelling background playlist ingestion. Shared embedding operations are serialized for thread safety.
 8. Require a citation on every generated sentence/list item; citation coverage is a structural guardrail, not proof of semantic entailment.

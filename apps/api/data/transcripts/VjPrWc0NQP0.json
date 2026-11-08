@@ -1,0 +1,1347 @@
+{
+  "video_id": "VjPrWc0NQP0",
+  "title": "Video VjPrWc0NQP0",
+  "total_segments": 268,
+  "segments": [
+    {
+      "start": 0.463,
+      "duration": 3.239,
+      "text": "Hi guys, my name is Nitesh, and welcome"
+    },
+    {
+      "start": 2.76,
+      "duration": 3.409,
+      "text": "to my YouTube channel. So, around three"
+    },
+    {
+      "start": 5.228,
+      "duration": 3.125,
+      "text": "months ago, we started a playlist on"
+    },
+    {
+      "start": 7.412,
+      "duration": 3.124,
+      "text": "this YouTube channel on the topic of"
+    },
+    {
+      "start": 9.595,
+      "duration": 3.525,
+      "text": "Fast APIs. There, I explained why you"
+    },
+    {
+      "start": 12.188,
+      "duration": 3.942,
+      "text": "should learn Fast APIs. The reason I"
+    },
+    {
+      "start": 15.196,
+      "duration": 3.594,
+      "text": "mentioned was that if you're building a"
+    },
+    {
+      "start": 17.856,
+      "duration": 3.261,
+      "text": "model using machine learning, deep"
+    },
+    {
+      "start": 20.184,
+      "duration": 3.593,
+      "text": "learning, or GenAI, you ultimately need"
+    },
+    {
+      "start": 22.844,
+      "duration": 4.789,
+      "text": "to expose that model to your users. One"
+    },
+    {
+      "start": 26.712,
+      "duration": 3.582,
+      "text": "way to do this is to build an API"
+    },
+    {
+      "start": 29.372,
+      "duration": 3.818,
+      "text": "around your machine learning or deep"
+    },
+    {
+      "start": 32.268,
+      "duration": 3.583,
+      "text": "learning model and then serve the"
+    },
+    {
+      "start": 34.929,
+      "duration": 3.661,
+      "text": "predictions coming from your model"
+    },
+    {
+      "start": 37.668,
+      "duration": 4.814,
+      "text": "through that API. While there are many"
+    },
+    {
+      "start": 41.561,
+      "duration": 3.969,
+      "text": "libraries available for building APIs,"
+    },
+    {
+      "start": 44.608,
+      "duration": 3.97,
+      "text": "the leading library in Python today is"
+    },
+    {
+      "start": 47.656,
+      "duration": 3.809,
+      "text": "Fast API. And that's why it's almost a"
+    },
+    {
+      "start": 50.531,
+      "duration": 3.453,
+      "text": "default standard in the industry that"
+    },
+    {
+      "start": 53.05,
+      "duration": 3.453,
+      "text": "if you want to build an API around AI"
+    },
+    {
+      "start": 55.569,
+      "duration": 3.63,
+      "text": "models, it's built using Fast APIs. And"
+    },
+    {
+      "start": 58.267,
+      "duration": 3.519,
+      "text": "that's why, as an aspirant looking to"
+    },
+    {
+      "start": 60.854,
+      "duration": 3.519,
+      "text": "enter the data science industry, it's"
+    },
+    {
+      "start": 63.441,
+      "duration": 3.721,
+      "text": "crucial for you to learn Fast APIs. And"
+    },
+    {
+      "start": 66.223,
+      "duration": 3.704,
+      "text": "that's why we created that playlist. In"
+    },
+    {
+      "start": 69.011,
+      "duration": 4.03,
+      "text": "that playlist, we included around 12"
+    },
+    {
+      "start": 72.125,
+      "duration": 3.945,
+      "text": "videos covering the fundamentals of"
+    },
+    {
+      "start": 75.154,
+      "duration": 3.777,
+      "text": "I-Guess and Fast APIs, as well as"
+    },
+    {
+      "start": 78.016,
+      "duration": 4.438,
+      "text": "building a small project. But after"
+    },
+    {
+      "start": 81.529,
+      "duration": 3.696,
+      "text": "completing that playlist, I received"
+    },
+    {
+      "start": 84.3,
+      "duration": 3.323,
+      "text": "feedback from you guys that you"
+    },
+    {
+      "start": 86.698,
+      "duration": 3.771,
+      "text": "understood what we've covered in this"
+    },
+    {
+      "start": 89.544,
+      "duration": 3.622,
+      "text": "playlist, but we need to learn Fast"
+    },
+    {
+      "start": 92.241,
+      "duration": 4.264,
+      "text": "APIs in a little more depth. And back"
+    },
+    {
+      "start": 95.592,
+      "duration": 4.219,
+      "text": "then, I promised you that if you gave"
+    },
+    {
+      "start": 98.898,
+      "duration": 4.046,
+      "text": "me a month or two, I'd bring you an"
+    },
+    {
+      "start": 102.031,
+      "duration": 4.393,
+      "text": "in-depth course on Fast APIs within one"
+    },
+    {
+      "start": 105.511,
+      "duration": 3.061,
+      "text": "or two months. And that's exactly what"
+    },
+    {
+      "start": 107.604,
+      "duration": 3.305,
+      "text": "I'm going to do in today's video. I'm"
+    },
+    {
+      "start": 109.989,
+      "duration": 4.04,
+      "text": "going to announce a new paid course on"
+    },
+    {
+      "start": 113.109,
+      "duration": 3.778,
+      "text": "the topic of Fast APIs. We've been"
+    },
+    {
+      "start": 115.955,
+      "duration": 3.504,
+      "text": "building and creating this particular"
+    },
+    {
+      "start": 118.527,
+      "duration": 3.436,
+      "text": "course for the past four months, and"
+    },
+    {
+      "start": 121.031,
+      "duration": 3.639,
+      "text": "last week, around 14 days ago, I guess,"
+    },
+    {
+      "start": 123.738,
+      "duration": 3.504,
+      "text": "we completed this course, and then we"
+    },
+    {
+      "start": 126.309,
+      "duration": 3.704,
+      "text": "planned to launch it. So, my main goal"
+    },
+    {
+      "start": 129.082,
+      "duration": 3.668,
+      "text": "in today's video is to first give you a"
+    },
+    {
+      "start": 131.819,
+      "duration": 3.326,
+      "text": "detailed overview of the topics we"
+    },
+    {
+      "start": 134.214,
+      "duration": 3.6,
+      "text": "covered in this course, and then we'll"
+    },
+    {
+      "start": 136.883,
+      "duration": 4.221,
+      "text": "talk about it a little more. Okay? So,"
+    },
+    {
+      "start": 140.179,
+      "duration": 3.927,
+      "text": "what you see on the screen right now is"
+    },
+    {
+      "start": 143.182,
+      "duration": 3.927,
+      "text": "the official Git repository for our API"
+    },
+    {
+      "start": 146.184,
+      "duration": 3.327,
+      "text": "course, and we've built it very"
+    },
+    {
+      "start": 148.586,
+      "duration": 4.398,
+      "text": "carefully and with great love. We've"
+    },
+    {
+      "start": 152.053,
+      "duration": 3.936,
+      "text": "arranged all the code module-wise. And"
+    },
+    {
+      "start": 155.06,
+      "duration": 3.6,
+      "text": "we've also added a Read Me file here."
+    },
+    {
+      "start": 158.22,
+      "duration": 3.036,
+      "text": "And what I'll do is go through this"
+    },
+    {
+      "start": 160.314,
+      "duration": 2.978,
+      "text": "Read Me file and tell you what the"
+    },
+    {
+      "start": 162.35,
+      "duration": 3.682,
+      "text": "curriculum of our course is. Okay? So,"
+    },
+    {
+      "start": 165.117,
+      "duration": 4.118,
+      "text": "we've divided this entire course into"
+    },
+    {
+      "start": 168.32,
+      "duration": 4.447,
+      "text": "nine different modules. And now let me"
+    },
+    {
+      "start": 171.831,
+      "duration": 3.465,
+      "text": "tell you one by one what we covered in"
+    },
+    {
+      "start": 174.361,
+      "duration": 4.561,
+      "text": "each module. So, in the first module,"
+    },
+    {
+      "start": 178.019,
+      "duration": 4.825,
+      "text": "we covered what APIs are. Okay? Even if"
+    },
+    {
+      "start": 181.902,
+      "duration": 3.198,
+      "text": "you're a beginner, you don't know what"
+    },
+    {
+      "start": 184.158,
+      "duration": 3.32,
+      "text": "APIs are. This particular module will"
+    },
+    {
+      "start": 186.532,
+      "duration": 4.268,
+      "text": "help you. So, here we've taught you in"
+    },
+    {
+      "start": 189.882,
+      "duration": 4.204,
+      "text": "great detail about the definition of an"
+    },
+    {
+      "start": 193.168,
+      "duration": 3.958,
+      "text": "API, its working, the different HTTP"
+    },
+    {
+      "start": 196.208,
+      "duration": 3.547,
+      "text": "methods, status codes, and best"
+    },
+    {
+      "start": 198.837,
+      "duration": 4.297,
+      "text": "practices. Okay? Once you've covered"
+    },
+    {
+      "start": 202.212,
+      "duration": 3.755,
+      "text": "this particular module, we'll start"
+    },
+    {
+      "start": 205.045,
+      "duration": 4.29,
+      "text": "focusing on fast APIs in module two. So"
+    },
+    {
+      "start": 208.335,
+      "duration": 4.056,
+      "text": ", here we've covered all the essentials"
+    },
+    {
+      "start": 211.469,
+      "duration": 3.586,
+      "text": "of fast APIs, comparing them with"
+    },
+    {
+      "start": 214.133,
+      "duration": 4.376,
+      "text": "libraries like Flask. And then we've"
+    },
+    {
+      "start": 217.585,
+      "duration": 3.75,
+      "text": "covered some other concepts that are"
+    },
+    {
+      "start": 220.412,
+      "duration": 3.826,
+      "text": "essential in learning fast APIs, like"
+    },
+    {
+      "start": 223.315,
+      "duration": 3.673,
+      "text": "type hinting, async support, and id"
+    },
+    {
+      "start": 226.065,
+      "duration": 3.514,
+      "text": "theory. Once you've mastered the"
+    },
+    {
+      "start": 228.642,
+      "duration": 3.407,
+      "text": "fundamentals of Fast APIs, we'll teach"
+    },
+    {
+      "start": 231.112,
+      "duration": 3.343,
+      "text": "you how to build basic APIs in Module"
+    },
+    {
+      "start": 233.519,
+      "duration": 3.844,
+      "text": "Three. Here, we'll cover creating"
+    },
+    {
+      "start": 236.442,
+      "duration": 3.595,
+      "text": "routes, building request-response"
+    },
+    {
+      "start": 239.116,
+      "duration": 3.438,
+      "text": "models, defining query and path"
+    },
+    {
+      "start": 241.633,
+      "duration": 3.674,
+      "text": "parameters, and applying different"
+    },
+    {
+      "start": 244.386,
+      "duration": 4.341,
+      "text": "types of validation. Once you've"
+    },
+    {
+      "start": 247.806,
+      "duration": 4.077,
+      "text": "learned how to build a basic API, we'll"
+    },
+    {
+      "start": 250.962,
+      "duration": 4.143,
+      "text": "delve a little deeper. In a fourth"
+    },
+    {
+      "start": 254.187,
+      "duration": 3.477,
+      "text": "module, we'll teach you how to"
+    },
+    {
+      "start": 256.747,
+      "duration": 3.89,
+      "text": "integrate Fast APIs with databases."
+    },
+    {
+      "start": 260.179,
+      "duration": 3.847,
+      "text": "Here, we'll demonstrate the integration"
+    },
+    {
+      "start": 263.099,
+      "duration": 3.191,
+      "text": "of Sequel with Fast APIs using"
+    },
+    {
+      "start": 265.363,
+      "duration": 3.773,
+      "text": "different ORMs. We received a lot of"
+    },
+    {
+      "start": 268.202,
+      "duration": 3.33,
+      "text": "feedback during the playlist, \"Sir,"
+    },
+    {
+      "start": 270.598,
+      "duration": 3.463,
+      "text": "please teach us how to integrate Fast"
+    },
+    {
+      "start": 273.128,
+      "duration": 3.837,
+      "text": "APIs with databases.\" We covered that"
+    },
+    {
+      "start": 276.027,
+      "duration": 3.282,
+      "text": "particular aspect in detail in Module"
+    },
+    {
+      "start": 278.371,
+      "duration": 4.696,
+      "text": "Four. Then, in Module Five, we'll jump"
+    },
+    {
+      "start": 282.166,
+      "duration": 4.844,
+      "text": "into our main agenda: building APIs for"
+    },
+    {
+      "start": 286.108,
+      "duration": 4.725,
+      "text": "machine learning models. Here, we'll"
+    },
+    {
+      "start": 289.928,
+      "duration": 4.638,
+      "text": "teach you how to build APIs using Fast"
+    },
+    {
+      "start": 293.662,
+      "duration": 4.638,
+      "text": "APIs to load and serve your ML models."
+    },
+    {
+      "start": 298.479,
+      "duration": 3.84,
+      "text": "Once you've covered all this, we'll"
+    },
+    {
+      "start": 301.4,
+      "duration": 4.164,
+      "text": "delve into more advanced concepts, such"
+    },
+    {
+      "start": 304.645,
+      "duration": 4.165,
+      "text": "as dependency injection, authentication"
+    },
+    {
+      "start": 307.81,
+      "duration": 4.33,
+      "text": ", and API key management. You'll also"
+    },
+    {
+      "start": 311.225,
+      "duration": 4.053,
+      "text": "learn the concept of middlewares and"
+    },
+    {
+      "start": 314.363,
+      "duration": 4.308,
+      "text": "error handling in module number seven ("
+    },
+    {
+      "start": 317.671,
+      "duration": 4.891,
+      "text": "sorry, six). After you've built the"
+    },
+    {
+      "start": 321.665,
+      "duration": 4.928,
+      "text": "APIs, it's crucial to test them before"
+    },
+    {
+      "start": 325.697,
+      "duration": 4.218,
+      "text": "deploying them. In module seven, we've"
+    },
+    {
+      "start": 328.967,
+      "duration": 2.963,
+      "text": "introduced the concepts of testing and"
+    },
+    {
+      "start": 330.982,
+      "duration": 4.088,
+      "text": "debugging. Here, you'll learn how to"
+    },
+    {
+      "start": 334.132,
+      "duration": 3.391,
+      "text": "write unit tests and integration tests"
+    },
+    {
+      "start": 336.586,
+      "duration": 3.316,
+      "text": "using the PiTest module. Various"
+    },
+    {
+      "start": 338.956,
+      "duration": 3.782,
+      "text": "debugging tips will be shared. You'll"
+    },
+    {
+      "start": 341.835,
+      "duration": 4.573,
+      "text": "also learn how to use the Aurst API's"
+    },
+    {
+      "start": 345.504,
+      "duration": 4.863,
+      "text": "Swagger UI for debugging. After that, a"
+    },
+    {
+      "start": 349.418,
+      "duration": 3.01,
+      "text": "very important module comes where we'll"
+    },
+    {
+      "start": 351.48,
+      "duration": 2.958,
+      "text": "teach you performance optimization and"
+    },
+    {
+      "start": 353.49,
+      "duration": 3.932,
+      "text": "monitoring. So, simply building APIs"
+    },
+    {
+      "start": 356.515,
+      "duration": 3.697,
+      "text": "isn't enough. Optimizing them for"
+    },
+    {
+      "start": 359.27,
+      "duration": 2.875,
+      "text": "performance so that there are no"
+    },
+    {
+      "start": 361.204,
+      "duration": 3.05,
+      "text": "latency-related issues is also very"
+    },
+    {
+      "start": 363.313,
+      "duration": 3.683,
+      "text": "important. So, here we'll teach you the"
+    },
+    {
+      "start": 366.061,
+      "duration": 3.474,
+      "text": "concept of how to cache your APIs with"
+    },
+    {
+      "start": 368.6,
+      "duration": 4.036,
+      "text": "the help of Redis. Okay? And we'll also"
+    },
+    {
+      "start": 371.705,
+      "duration": 3.539,
+      "text": "teach you monitoring concepts, how to"
+    },
+    {
+      "start": 374.312,
+      "duration": 3.471,
+      "text": "monitor the performance of your APIs"
+    },
+    {
+      "start": 376.851,
+      "duration": 3.059,
+      "text": "with the help of tools such as"
+    },
+    {
+      "start": 378.978,
+      "duration": 3.592,
+      "text": "Prometheus and Grafana. Okay? And"
+    },
+    {
+      "start": 381.64,
+      "duration": 3.632,
+      "text": "finally, once you've learned all this,"
+    },
+    {
+      "start": 384.341,
+      "duration": 3.494,
+      "text": "we'll combine all these concepts and"
+    },
+    {
+      "start": 386.904,
+      "duration": 3.61,
+      "text": "show you a capstone project. Where"
+    },
+    {
+      "start": 389.601,
+      "duration": 3.961,
+      "text": "we'll build a car price prediction"
+    },
+    {
+      "start": 392.649,
+      "duration": 4.31,
+      "text": "model and then build an API around it."
+    },
+    {
+      "start": 396.242,
+      "duration": 3.309,
+      "text": "Throughout this project, we'll learn"
+    },
+    {
+      "start": 398.615,
+      "duration": 3.641,
+      "text": "multiple things. Such as how to apply"
+    },
+    {
+      "start": 401.33,
+      "duration": 3.733,
+      "text": "authentication, how to apply caching,"
+    },
+    {
+      "start": 404.137,
+      "duration": 3.142,
+      "text": "how to apply login, how to do"
+    },
+    {
+      "start": 406.352,
+      "duration": 3.733,
+      "text": "monitoring, how to dockerization, and"
+    },
+    {
+      "start": 409.159,
+      "duration": 4.118,
+      "text": "finally, how to deploy this project. So"
+    },
+    {
+      "start": 412.277,
+      "duration": 3.098,
+      "text": ", whatever concepts you've learned so"
+    },
+    {
+      "start": 414.431,
+      "duration": 3.155,
+      "text": "far, you'll practically implement them"
+    },
+    {
+      "start": 416.642,
+      "duration": 3.042,
+      "text": "in this particular capstone project."
+    },
+    {
+      "start": 419.099,
+      "duration": 3.414,
+      "text": "Right? If you're talking text, these"
+    },
+    {
+      "start": 421.575,
+      "duration": 3.208,
+      "text": "are the things you'll be studying in"
+    },
+    {
+      "start": 423.845,
+      "duration": 3.178,
+      "text": "this particular course. Obviously,"
+    },
+    {
+      "start": 426.087,
+      "duration": 3.445,
+      "text": "you'll learn Python, you'll learn fast"
+    },
+    {
+      "start": 428.596,
+      "duration": 2.994,
+      "text": "APIs, and you'll also learn JWT"
+    },
+    {
+      "start": 430.655,
+      "duration": 2.903,
+      "text": "authentication. This is what we'll use"
+    },
+    {
+      "start": 432.596,
+      "duration": 3.676,
+      "text": "for authentication. We'll learn PyTest"
+    },
+    {
+      "start": 435.343,
+      "duration": 3.726,
+      "text": "for testing and debugging, SciKitLearn"
+    },
+    {
+      "start": 438.141,
+      "duration": 3.367,
+      "text": "for machine learning integration,"
+    },
+    {
+      "start": 440.58,
+      "duration": 3.797,
+      "text": "Sequel for database integration, Docker"
+    },
+    {
+      "start": 443.449,
+      "duration": 3.654,
+      "text": "for dockerization, Redis for caching,"
+    },
+    {
+      "start": 446.175,
+      "duration": 3.725,
+      "text": "Prometheus and Grafana for monitoring,"
+    },
+    {
+      "start": 448.972,
+      "duration": 3.583,
+      "text": "and finally, we'll use RenderBoll, a"
+    },
+    {
+      "start": 451.626,
+      "duration": 3.873,
+      "text": "platform, for deployment. Okay, so this"
+    },
+    {
+      "start": 454.554,
+      "duration": 3.105,
+      "text": "is going to be our text tag throughout"
+    },
+    {
+      "start": 456.714,
+      "duration": 4.1,
+      "text": "this course. Here, we've added a little"
+    },
+    {
+      "start": 459.881,
+      "duration": 3.365,
+      "text": "detail about exactly what you'll be"
+    },
+    {
+      "start": 462.314,
+      "duration": 3.433,
+      "text": "doing in the Capston project, so you"
+    },
+    {
+      "start": 464.814,
+      "duration": 2.838,
+      "text": "can take a look. Regarding"
+    },
+    {
+      "start": 466.711,
+      "duration": 3.133,
+      "text": "prerequisites, you should know three"
+    },
+    {
+      "start": 468.904,
+      "duration": 2.862,
+      "text": "things. First, you should know the"
+    },
+    {
+      "start": 470.813,
+      "duration": 3.083,
+      "text": "fundamentals of Python. Obviously,"
+    },
+    {
+      "start": 472.964,
+      "duration": 3.64,
+      "text": "second, you should know the concepts of"
+    },
+    {
+      "start": 475.672,
+      "duration": 3.921,
+      "text": "get and getup. And third, if you know a"
+    },
+    {
+      "start": 478.638,
+      "duration": 2.755,
+      "text": "little bit of Docker, it'll be helpful."
+    },
+    {
+      "start": 481.299,
+      "duration": 3.045,
+      "text": "Even if you don't, there's a 1 1/2 hour"
+    },
+    {
+      "start": 483.397,
+      "duration": 3.535,
+      "text": "video on our channel. Watching that"
+    },
+    {
+      "start": 485.987,
+      "duration": 4.199,
+      "text": "video will be enough. Okay? So, that's"
+    },
+    {
+      "start": 489.294,
+      "duration": 4.758,
+      "text": "a detailed overview of our VAST API"
+    },
+    {
+      "start": 493.16,
+      "duration": 3.783,
+      "text": "course. Now, let me quickly explain how"
+    },
+    {
+      "start": 495.996,
+      "duration": 3.883,
+      "text": "you can enroll in this course. Go to"
+    },
+    {
+      "start": 498.957,
+      "duration": 3.824,
+      "text": "our website and click on the Courses"
+    },
+    {
+      "start": 501.859,
+      "duration": 3.952,
+      "text": "section. There, under Paid Courses,"
+    },
+    {
+      "start": 504.881,
+      "duration": 4.202,
+      "text": "you'll see a course called VAST API. As"
+    },
+    {
+      "start": 508.159,
+      "duration": 3.953,
+      "text": "soon as you click on this, it'll be the"
+    },
+    {
+      "start": 511.188,
+      "duration": 4.649,
+      "text": "landing page for our API course. The"
+    },
+    {
+      "start": 514.931,
+      "duration": 4.557,
+      "text": "current pricing for this course is 599"
+    },
+    {
+      "start": 518.581,
+      "duration": 3.455,
+      "text": "rupees. But at this point, we're"
+    },
+    {
+      "start": 521.101,
+      "duration": 3.686,
+      "text": "running a discount. You'll see it at"
+    },
+    {
+      "start": 523.835,
+      "duration": 5.361,
+      "text": "the top. If you apply this discount,"
+    },
+    {
+      "start": 528.325,
+      "duration": 5.935,
+      "text": "the course fee will be ₹ 399. Okay?"
+    },
+    {
+      "start": 533.84,
+      "duration": 3.981,
+      "text": "You'll get a ₹ 200 discount, and"
+    },
+    {
+      "start": 536.908,
+      "duration": 4.069,
+      "text": "you'll have to pay ₹ 399 for this"
+    },
+    {
+      "start": 540.065,
+      "duration": 2.735,
+      "text": "course. Okay? The rest of the"
+    },
+    {
+      "start": 541.841,
+      "duration": 2.924,
+      "text": "registration process is very simple. If"
+    },
+    {
+      "start": 543.819,
+      "duration": 2.827,
+      "text": "you already have an account on our"
+    },
+    {
+      "start": 545.699,
+      "duration": 3.037,
+      "text": "website, then it's very easy. Simply go"
+    },
+    {
+      "start": 547.774,
+      "duration": 2.888,
+      "text": "and make the purchase. Otherwise, you"
+    },
+    {
+      "start": 549.715,
+      "duration": 2.902,
+      "text": "have to register, create an account,"
+    },
+    {
+      "start": 551.67,
+      "duration": 2.915,
+      "text": "and then purchase the course. Okay?"
+    },
+    {
+      "start": 553.685,
+      "duration": 3.607,
+      "text": "Very simple. Let's talk about a couple"
+    },
+    {
+      "start": 556.336,
+      "duration": 3.047,
+      "text": "more things about this course. The"
+    },
+    {
+      "start": 558.469,
+      "duration": 4.349,
+      "text": "first question we get a lot is, \"Who is"
+    },
+    {
+      "start": 561.904,
+      "duration": 4.385,
+      "text": "the instructor of this course?\" So, I"
+    },
+    {
+      "start": 565.378,
+      "duration": 3.792,
+      "text": "want to be clear upfront. I didn't"
+    },
+    {
+      "start": 568.226,
+      "duration": 3.364,
+      "text": "create this particular course. I'm not"
+    },
+    {
+      "start": 570.65,
+      "duration": 3.632,
+      "text": "the instructor. Although I contributed"
+    },
+    {
+      "start": 573.338,
+      "duration": 2.74,
+      "text": "significantly to the design and"
+    },
+    {
+      "start": 575.134,
+      "duration": 2.908,
+      "text": "curriculum planning of this entire"
+    },
+    {
+      "start": 577.098,
+      "duration": 3.132,
+      "text": "course, the instructor for this course"
+    },
+    {
+      "start": 579.286,
+      "duration": 4.161,
+      "text": "is Mispah. I hope you know him. He's"
+    },
+    {
+      "start": 582.499,
+      "duration": 3.028,
+      "text": "created multiple courses with us in the"
+    },
+    {
+      "start": 584.579,
+      "duration": 3.006,
+      "text": "past. In fact, a few days ago, I"
+    },
+    {
+      "start": 586.644,
+      "duration": 2.925,
+      "text": "launched a course on the topic of"
+    },
+    {
+      "start": 588.627,
+      "duration": 2.953,
+      "text": "webscaping. You see, we launched that"
+    },
+    {
+      "start": 590.618,
+      "duration": 2.882,
+      "text": "course on Yume. That course was also"
+    },
+    {
+      "start": 592.543,
+      "duration": 3.638,
+      "text": "created by Mispah. If you check it on"
+    },
+    {
+      "start": 595.244,
+      "duration": 3.222,
+      "text": "Yume right now, the rating for that"
+    },
+    {
+      "start": 597.529,
+      "duration": 3.501,
+      "text": "course is above 4.3. The 4.3 rating is"
+    },
+    {
+      "start": 600.096,
+      "duration": 3.263,
+      "text": "because that course had some video"
+    },
+    {
+      "start": 602.426,
+      "duration": 3.595,
+      "text": "quality issues, which we've resolved in"
+    },
+    {
+      "start": 605.088,
+      "duration": 3.671,
+      "text": "this particular course. So, he's a very"
+    },
+    {
+      "start": 607.809,
+      "duration": 3.319,
+      "text": "good instructor. He also has a free"
+    },
+    {
+      "start": 610.186,
+      "duration": 3.165,
+      "text": "course on our website on the topic of"
+    },
+    {
+      "start": 612.409,
+      "duration": 3.359,
+      "text": "SageMaker. So, if you want to be sure"
+    },
+    {
+      "start": 614.829,
+      "duration": 3.017,
+      "text": "about their teaching style before"
+    },
+    {
+      "start": 616.907,
+      "duration": 3.2,
+      "text": "purchasing this course, you can take"
+    },
+    {
+      "start": 619.168,
+      "duration": 3.322,
+      "text": "the free course and then purchase this"
+    },
+    {
+      "start": 621.551,
+      "duration": 3.958,
+      "text": "course. Okay? Second, a question arises"
+    },
+    {
+      "start": 624.509,
+      "duration": 3.059,
+      "text": ": what will be the language of this"
+    },
+    {
+      "start": 626.627,
+      "duration": 3.986,
+      "text": "course? Our language is English."
+    },
+    {
+      "start": 629.86,
+      "duration": 3.15,
+      "text": "Meaning, Hindi plus sometimes English,"
+    },
+    {
+      "start": 632.067,
+      "duration": 3.674,
+      "text": "but sometimes it switches. And this is"
+    },
+    {
+      "start": 634.791,
+      "duration": 2.75,
+      "text": "the same language we use in all our"
+    },
+    {
+      "start": 636.591,
+      "duration": 2.844,
+      "text": "courses. We use it on our YouTube"
+    },
+    {
+      "start": 638.48,
+      "duration": 3.538,
+      "text": "channel. Third, will doubt clearance be"
+    },
+    {
+      "start": 641.067,
+      "duration": 3.108,
+      "text": "available in this course? The answer is"
+    },
+    {
+      "start": 643.229,
+      "duration": 3.446,
+      "text": "no. The reason is simple: this"
+    },
+    {
+      "start": 645.738,
+      "duration": 3.446,
+      "text": "particular course is a low ticket value"
+    },
+    {
+      "start": 648.246,
+      "duration": 3.433,
+      "text": "course. We're not charging you much."
+    },
+    {
+      "start": 650.98,
+      "duration": 2.687,
+      "text": "And that's why it's not possible to"
+    },
+    {
+      "start": 652.715,
+      "duration": 3.277,
+      "text": "provide doubt clearance support. But"
+    },
+    {
+      "start": 655.07,
+      "duration": 3.651,
+      "text": "don't worry, I think the way we've"
+    },
+    {
+      "start": 657.799,
+      "duration": 4.041,
+      "text": "designed and prepared the course, there"
+    },
+    {
+      "start": 660.918,
+      "duration": 4.041,
+      "text": "are very few chances of doubts arising."
+    },
+    {
+      "start": 664.5,
+      "duration": 3.075,
+      "text": "Okay? And lastly, what will be the"
+    },
+    {
+      "start": 666.626,
+      "duration": 3.037,
+      "text": "validity of the course? This course"
+    },
+    {
+      "start": 668.731,
+      "duration": 3.793,
+      "text": "will be valid for 3 years. So, if you"
+    },
+    {
+      "start": 671.616,
+      "duration": 4.212,
+      "text": "purchase this course today, it will"
+    },
+    {
+      "start": 674.919,
+      "duration": 4.784,
+      "text": "expire after 3 years. And if you ask me"
+    },
+    {
+      "start": 678.703,
+      "duration": 3.377,
+      "text": ", I think 3 years is more than enough."
+    },
+    {
+      "start": 681.28,
+      "duration": 2.964,
+      "text": "I don't think you'll need to relearn"
+    },
+    {
+      "start": 683.299,
+      "duration": 2.91,
+      "text": "the fundamentals of Fast APIs after"
+    },
+    {
+      "start": 685.264,
+      "duration": 3.553,
+      "text": "three years. It's a very practical"
+    },
+    {
+      "start": 687.878,
+      "duration": 3.124,
+      "text": "thing. Learn it once, then apply it to"
+    },
+    {
+      "start": 690.049,
+      "duration": 3.552,
+      "text": "different projects. And this is how you"
+    },
+    {
+      "start": 692.673,
+      "duration": 3.52,
+      "text": "master a technology like Fast APIs."
+    },
+    {
+      "start": 695.559,
+      "duration": 2.967,
+      "text": "Okay? So, I've provided all the"
+    },
+    {
+      "start": 697.588,
+      "duration": 4.389,
+      "text": "information I had to offer. I'd like to"
+    },
+    {
+      "start": 701.049,
+      "duration": 3.758,
+      "text": "give one last verdict from my side, as"
+    },
+    {
+      "start": 703.879,
+      "duration": 3.758,
+      "text": "I was heavily involved in the creation"
+    },
+    {
+      "start": 706.709,
+      "duration": 4.336,
+      "text": "process of this course. So, I can tell"
+    },
+    {
+      "start": 710.141,
+      "duration": 4.365,
+      "text": "you this much: if you purchase this"
+    },
+    {
+      "start": 713.602,
+      "duration": 4.558,
+      "text": "course for ₹ 399, you'll never feel"
+    },
+    {
+      "start": 717.256,
+      "duration": 4.417,
+      "text": "like your ₹ 399 wasted. We've"
+    },
+    {
+      "start": 720.776,
+      "duration": 4.6,
+      "text": "designed this course to give you at"
+    },
+    {
+      "start": 724.479,
+      "duration": 4.402,
+      "text": "least 10x ROI. Right? Return on"
+    },
+    {
+      "start": 727.975,
+      "duration": 4.589,
+      "text": "Investment is a 25-hour course, so you"
+    },
+    {
+      "start": 731.658,
+      "duration": 4.866,
+      "text": "can easily purchase it. So, this is my"
+    },
+    {
+      "start": 735.628,
+      "duration": 4.201,
+      "text": "suggestion. Right? And that's it for"
+    },
+    {
+      "start": 738.892,
+      "duration": 2.796,
+      "text": "this video. See you in the next video."
+    },
+    {
+      "start": 740.788,
+      "duration": 1.4,
+      "text": "Bye."
+    }
+  ]
+}

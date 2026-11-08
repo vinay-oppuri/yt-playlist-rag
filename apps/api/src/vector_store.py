@@ -1273,8 +1273,12 @@ class VectorStore:
             title = str(payload.get("video_title", ""))
             # Lightweight second-stage reranking: reward exact transcript and title
             # term matches while retaining the dense cosine score as the dominant signal.
-            tokens = set(_query_terms(f"{title} {body}"))
-            lexical = len(query_terms & tokens) / max(1, len(query_terms))
+            # Keep title matches useful for candidate ordering, but never let a
+            # title/profile match satisfy the transcript evidence cutoff.
+            transcript_tokens = set(_query_terms(body))
+            lexical = len(query_terms & transcript_tokens) / max(1, len(query_terms))
+            routing_tokens = set(_query_terms(title))
+            routing_lexical = len(query_terms & routing_tokens) / max(1, len(query_terms))
             point_id = str(uuid.uuid5(uuid.NAMESPACE_DNS, str(payload.get("chunk_id", ""))))
             dense_rank = dense_rank_by_id.get(point_id)
             lexical_rank = lexical_rank_by_id.get(point_id)
@@ -1297,6 +1301,8 @@ class VectorStore:
                     "score": round(semantic_score, 4),
                     "rerank_score": round(rerank_score, 4),
                     "confidence_score": round(confidence_score, 4),
+                    "transcript_lexical_score": round(lexical, 4),
+                    "title_lexical_score": round(routing_lexical, 4),
                     "fusion_score": round(fusion_score, 4),
                     "profile_rank": profile_rank,
                     "chunk_id": payload.get("chunk_id"),

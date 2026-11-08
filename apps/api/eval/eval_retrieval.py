@@ -18,6 +18,7 @@ from typing import Any, Dict, List, Optional
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from src.vector_store import get_vector_store
+from src.evidence import meets_transcript_evidence_cutoff
 
 
 def _is_timestamp_hit(result: Dict[str, Any], expected_sec: int, tolerance_sec: int) -> bool:
@@ -135,7 +136,7 @@ def run_eval(
         )
         expected_refusal = case.get("expect_refusal") is True
         predicted_refusal = not any(
-            float(hit.get("confidence_score", hit.get("score", 0.0))) >= min_score
+            meets_transcript_evidence_cutoff(hit, min_score)
             for hit in results
         )
 
@@ -207,6 +208,7 @@ def run_eval(
                     "end": hit.get("end"),
                     "score": hit.get("score"),
                     "confidence_score": hit.get("confidence_score"),
+                    "transcript_lexical_score": hit.get("transcript_lexical_score"),
                     "rerank_score": hit.get("rerank_score"),
                 }
                 for hit in results
