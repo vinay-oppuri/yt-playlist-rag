@@ -1,2537 +1,4677 @@
 {
   "video_id": "JdDoMi_vqbM",
   "title": "Serving ML Models with FastAPI | Video 7 | CampusX",
-  "total_segments": 506,
+  "total_segments": 934,
   "segments": [
     {
       "start": 0.16,
-      "duration": 6.08,
-      "text": "हाय गाइस, माय नेम इज नितेश एंड यू वेलकम टू माय YouTube चैनल। आज के वीडियो में भी"
+      "duration": 4.48,
+      "text": "Hi Guys, My name is Nitesh and welcome"
+    },
+    {
+      "start": 2.399,
+      "duration": 3.841,
+      "text": "to my YouTube channel. In today's video also"
     },
     {
       "start": 4.64,
-      "duration": 6.16,
-      "text": "हम लोग अपना फास्ट एपीआई प्लेलिस्ट कंटिन्यू करेंगे। वीडियो को शुरू करने के"
+      "duration": 4.4,
+      "text": "we will continue our fast API playlist."
     },
     {
       "start": 9.04,
-      "duration": 5.44,
-      "text": "पहले आपको एक क्विक रिककैप देना चाहूंगा कि अभी तक इस प्लेलिस्ट में हमने"
+      "duration": 3.04,
+      "text": "Before we start the video, I'd like to give you a quick recap of what"
+    },
+    {
+      "start": 10.8,
+      "duration": 3.68,
+      "text": "we've covered so far in this playlist."
     },
     {
       "start": 12.08,
-      "duration": 7.6,
-      "text": "क्या-क्या कवर कर लिया है। अ मेरे हिसाब से अभी तक हमने इस प्लेलिस्ट में सिक्स"
+      "duration": 5.119,
+      "text": "A I think"
+    },
+    {
+      "start": 14.48,
+      "duration": 5.2,
+      "text": "we've added six videos to this playlist so far."
     },
     {
       "start": 17.199,
-      "duration": 9.201,
-      "text": "वीडियोस डाले हैं। आई गेस और इन सिक्स वीडियोस में हमने फास्ट एपीआई के जो"
+      "duration": 5.041,
+      "text": "I guess in these six"
     },
     {
-      "start": 22.24,
-      "duration": 9.439,
-      "text": "फंडामेंटल्स हैं वो हमने कवर कर लिए हैं। ठीक है? सो हमने क्या किया? इन छह वीडियोस"
+      "start": 19.68,
+      "duration": 6.72,
+      "text": "videos we've covered the fundamentals of the FAST API."
+    },
+    {
+      "start": 26.4,
+      "duration": 5.279,
+      "text": "Ok? So what did we do?"
     },
     {
       "start": 29.519,
-      "duration": 7.841,
-      "text": "में एक छोटा सा प्रोजेक्ट बनाया। एक पेशेंट मैनेजमेंट सिस्टम बनाया और बेसिकली"
+      "duration": 5.601,
+      "text": "Made a small project in these six videos."
     },
     {
-      "start": 35.12,
-      "duration": 8.48,
-      "text": "पेशेंट मैनेजमेंट सिस्टम के लिए एक एपीआई बनाई जिसमें हमने अलग-अलग एंड पॉइंट्स"
+      "start": 31.679,
+      "duration": 5.681,
+      "text": "Created a patient management system and basically"
+    },
+    {
+      "start": 37.36,
+      "duration": 6.24,
+      "text": "created an API for the patient management system in which we created different endpoints"
     },
     {
       "start": 39.68,
-      "duration": 8.64,
-      "text": "क्रिएट किए टू परफॉर्म द फॉलोइंग ऑपरेशंस क्रड क्रिएट, रिट्रीव, अपडेट, डिलीट। तो"
+      "duration": 6.879,
+      "text": "to perform the following operations"
     },
     {
-      "start": 46.559,
-      "duration": 5.52,
-      "text": "पेशेंट क्रिएट करने के लिए एंड पॉइंट बनाया। पेशेंट अपडेट करने के लिए एंड"
+      "start": 43.6,
+      "duration": 4.72,
+      "text": "crd create, retrieve, update, delete. So"
     },
     {
-      "start": 50.239,
-      "duration": 6.081,
-      "text": "पॉइंट बनाया। पेशेंट को रिट्रीव करने के लिए अलग-अलग एंड पॉइंट्स बनाए। और फाइनली"
+      "start": 48.32,
+      "duration": 3.759,
+      "text": "created an end point to create a patient. Created an endpoint to update the patient."
+    },
+    {
+      "start": 52.079,
+      "duration": 4.241,
+      "text": "Created different end points to retrieve the patient. And finally an"
     },
     {
       "start": 54.559,
-      "duration": 7.601,
-      "text": "पेशेंट को डिलीट करने के लिए भी एंड पॉइंट बनाया। अब इस पूरे प्रोसेस में हमने नॉट"
+      "duration": 5.441,
+      "text": "end point was also created to delete the patient."
+    },
+    {
+      "start": 56.32,
+      "duration": 5.84,
+      "text": "Now in this entire process, we not"
     },
     {
       "start": 60.0,
-      "duration": 7.439,
-      "text": "ओनली यह प्रोजेक्ट बिल्ड किया बट एट द सेम टाइमस्ट एपीआई के जो फंडामेंटल्स हैं वो"
+      "duration": 4.96,
+      "text": "only built this project but at the same"
+    },
+    {
+      "start": 62.16,
+      "duration": 5.279,
+      "text": "time, we also covered the fundamentals of API"
     },
     {
       "start": 64.96,
-      "duration": 6.64,
-      "text": "भी एक-एक करके कवर किया। ठीक है? जैसे कि सबसे पहले हमने यह देखा कि एपीआई क्या"
+      "duration": 4.64,
+      "text": "one by one. Ok? Like first of all"
+    },
+    {
+      "start": 67.439,
+      "duration": 4.161,
+      "text": "we saw what are APIs"
     },
     {
       "start": 69.6,
-      "duration": 6.64,
-      "text": "होते हैं? उनकी क्या जरूरत होती है। फिर मैंने आपको फास्ट एपीआई के बारे में काफी"
+      "duration": 4.24,
+      "text": "? What is their need? Then"
+    },
+    {
+      "start": 71.6,
+      "duration": 4.64,
+      "text": "I gave you a very detailed introduction about Fast API and"
     },
     {
       "start": 73.84,
-      "duration": 7.36,
-      "text": "एक डिट डिटेल्ड इंट्रोडक्शन दिया कि कैसे फास्ट एपीआई बाकी के जो फ्रेमवर्क्स हैं"
+      "duration": 4.8,
+      "text": "how"
+    },
+    {
+      "start": 76.24,
+      "duration": 4.96,
+      "text": "Fast API is better than other frameworks."
     },
     {
       "start": 78.64,
-      "duration": 6.96,
-      "text": "उनके कंपैरिजन में बेटर है। उसके बाद हमने कांसेप्ट्स पढ़े जैसे कि http मेथड्स क्या"
+      "duration": 5.04,
+      "text": "After that we"
+    },
+    {
+      "start": 81.2,
+      "duration": 4.4,
+      "text": "studied concepts like what are http methods"
     },
     {
       "start": 83.68,
-      "duration": 6.96,
-      "text": "होते हैं और उनको आप कैसे इंप्लीमेंट कर सकते हो। इनफस्ट एपीआई। उसके अलावा हमने"
+      "duration": 4.88,
+      "text": "and how can you implement them."
+    },
+    {
+      "start": 85.6,
+      "duration": 5.04,
+      "text": "InFirst API. Apart from that we"
     },
     {
       "start": 88.56,
-      "duration": 6.879,
-      "text": "और थोड़े छोटे-छोटे कांसेप्ट्स पढ़े। जैसे कि पाथ पैराटर्स क्या होते हैं? क्वेरी"
+      "duration": 4.32,
+      "text": "studied some other small concepts. Like"
+    },
+    {
+      "start": 90.64,
+      "duration": 4.799,
+      "text": "what are path parameters?"
     },
     {
       "start": 92.88,
-      "duration": 7.8,
-      "text": "पैराटर्स क्या होते हैं? रिक्वेस्ट बॉडी क्या होती है? अ एक और बहुत बड़ा टॉपिक"
+      "duration": 5.12,
+      "text": "What are query parameters?"
+    },
+    {
+      "start": 95.439,
+      "duration": 5.241,
+      "text": "What is a request body? Another very big topic"
     },
     {
       "start": 98.0,
-      "duration": 7.2,
-      "text": "हमने इस बीच कवर किया और वो था पidेंटिक। पाइडेंटिक की हेल्प से आप कैसे"
+      "duration": 5.28,
+      "text": "we covered in the meantime was"
+    },
+    {
+      "start": 100.68,
+      "duration": 4.52,
+      "text": "pedantic. How to use Pydantic to perform"
     },
     {
       "start": 103.28,
-      "duration": 6.879,
-      "text": "डेटा वैलिडेशन कर सकते हो फास्ट एपीआई में। ये हमने सीखा। तो बेसिकली हम"
+      "duration": 4.56,
+      "text": "data validation in Fast API."
+    },
+    {
+      "start": 105.2,
+      "duration": 4.959,
+      "text": "This is what we learned. So basically, we"
     },
     {
       "start": 107.84,
-      "duration": 7.44,
-      "text": "कॉन्फिडेंटली ये बोल सकते हैं कि इस पॉइंट तक हमने फास्ट एपीआई के जो फंडामेंटल्स"
+      "duration": 4.959,
+      "text": "can confidently say that up to this point,"
     },
     {
-      "start": 112.799,
-      "duration": 6.96,
-      "text": "होते हैं जो आपको बड़े प्रोजेक्ट्स बनाने में चाहिए होते हैं उतना हमने कवर कर लिया"
+      "start": 115.28,
+      "duration": 4.479,
+      "text": "we've covered the fundamentals of fast APIs that you'll need to build large projects."
     },
     {
       "start": 117.52,
-      "duration": 9.52,
-      "text": "है। ठीक है? तो अब हम क्या करेंगे? हम इस प्लेलिस्ट में आगे मूव करेंगे। और अब हम"
+      "duration": 5.84,
+      "text": "Ok? So what will we do now? We'll move on"
+    },
+    {
+      "start": 119.759,
+      "duration": 7.281,
+      "text": "to this playlist. And now we'll"
     },
     {
       "start": 123.36,
-      "duration": 7.959,
-      "text": "ये सीखेंगे कि कैसे आप अपने एक मशीन लर्निंग मॉडल"
+      "duration": 5.239,
+      "text": "learn how you can serve one of your machine"
     },
     {
-      "start": 128.599,
-      "duration": 8.441,
-      "text": "को फास्ट एपीआई के थ्रू सर्व कर सकते हो।"
+      "start": 127.04,
+      "duration": 4.279,
+      "text": "learning models"
+    },
+    {
+      "start": 131.319,
+      "duration": 5.721,
+      "text": "via a fast API. You"
     },
     {
       "start": 134.48,
-      "duration": 7.36,
-      "text": "सर्व कर सकते हो एज इन यूज़र्स के सामने ला सकते हो। सो दैट यूज़र्स उस एमएल मॉडल को"
+      "duration": 4.96,
+      "text": "can serve it and bring it in front of these users."
+    },
+    {
+      "start": 137.04,
+      "duration": 4.8,
+      "text": "So that users can use that ML model."
     },
     {
       "start": 139.44,
-      "duration": 6.64,
-      "text": "यूज कर पाएं। क्योंकि आपको यह बात पता है कि जब कोई डेटा साइंटिस्ट किसी मॉडल के"
+      "duration": 4.96,
+      "text": "Because you know"
+    },
+    {
+      "start": 141.84,
+      "duration": 4.24,
+      "text": "that when a data scientist"
     },
     {
       "start": 144.4,
-      "duration": 5.68,
-      "text": "ऊपर काम कर रहा होता है, कोई मॉडल बिल्ड कर रहा होता है तो वो शायद अपने मशीन पे"
+      "duration": 3.919,
+      "text": "is working on a model, building a model,"
+    },
+    {
+      "start": 146.08,
+      "duration": 4.0,
+      "text": "he is probably building the model by performing different experiments on his machine using"
     },
     {
       "start": 148.319,
-      "duration": 7.92,
-      "text": "जुपिटर नोटबुक के ऊपर अलग-अलग एक्सपेरिमेंट्स परफॉर्म करने के साथ मॉडल"
+      "duration": 4.321,
+      "text": "Jupyter Notebook."
     },
     {
       "start": 152.64,
-      "duration": 9.2,
-      "text": "को बिल्ड कर रहा होता है। बट उसको मॉडल को यूज़र्स के सामने भी लाना है। तो वो करने"
+      "duration": 6.64,
+      "text": "But he"
+    },
+    {
+      "start": 156.239,
+      "duration": 5.601,
+      "text": "also has to bring the model in front of the users. So"
     },
     {
       "start": 159.28,
-      "duration": 7.76,
-      "text": "के लिए फास्ट एपीआई आपको हेल्प करता है। ठीक है? तो आज के वीडियो में हम यही सीखने"
+      "duration": 4.64,
+      "text": "Fast API helps you to do that."
+    },
+    {
+      "start": 161.84,
+      "duration": 5.2,
+      "text": "Ok? So in today's video we are going to learn"
     },
     {
       "start": 163.92,
-      "duration": 8.24,
-      "text": "वाले हैं कि कैसे एक बने हुए मॉडल को हम यूज़र्स के सामने सर्व कर सकते हैं विद द"
+      "duration": 5.84,
+      "text": "how we can serve a created model to the"
+    },
+    {
+      "start": 167.04,
+      "duration": 5.12,
+      "text": "users with the"
     },
     {
       "start": 169.76,
-      "duration": 6.88,
-      "text": "हेल्प ऑफ फास्ट एपीआई। कैसे हम एक एपीआई बना सकते हैं अराउंड दैट मॉडल जो हमें"
+      "duration": 4.479,
+      "text": "help of fast API. How can we build an API"
+    },
+    {
+      "start": 172.16,
+      "duration": 4.48,
+      "text": "around that model that will fetch"
     },
     {
       "start": 174.239,
-      "duration": 7.041,
-      "text": "प्रेडिक्शंस ला करके देगा मॉडल से। ठीक है? तो आज का जो वीडियो है उसको मैं तीन"
+      "duration": 4.64,
+      "text": "predictions from the model. Ok"
+    },
+    {
+      "start": 176.64,
+      "duration": 4.64,
+      "text": "? So I will divide today's video"
     },
     {
       "start": 178.879,
-      "duration": 7.481,
-      "text": "पार्ट्स में डिवाइड करूंगा। जो फर्स्ट पार्ट है वहां पे हम थोड़ी सी बात करेंगे"
+      "duration": 5.28,
+      "text": "into three parts. In the first"
+    },
+    {
+      "start": 181.28,
+      "duration": 5.08,
+      "text": "part, we will talk a little"
     },
     {
       "start": 184.159,
-      "duration": 9.36,
-      "text": "मॉडल बिल्डिंग के बारे में कि हम कौन से प्रॉब्लम स्टेटमेंट पे"
+      "duration": 7.44,
+      "text": "about model building and"
+    },
+    {
+      "start": 186.36,
+      "duration": 7.159,
+      "text": "what problem statement are we"
     },
     {
       "start": 191.599,
-      "duration": 6.481,
-      "text": "काम कर रहे हैं? हमने कौन सा एमएल एल्गोरिदम लगाया और वो पूरा का पूरा मॉडल"
+      "duration": 4.081,
+      "text": "working on? Which ML"
+    },
+    {
+      "start": 193.519,
+      "duration": 4.561,
+      "text": "algorithm did we use and"
     },
     {
       "start": 195.68,
-      "duration": 8.0,
-      "text": "हमने बिल्ड कैसे किया। ठीक है? तो वो हम इस पार्ट में कवर करेंगे पार्ट वन में।"
+      "duration": 5.68,
+      "text": "how did we build the entire model. Ok? So we will"
+    },
+    {
+      "start": 198.08,
+      "duration": 5.6,
+      "text": "cover that in this part, Part One."
     },
     {
       "start": 201.36,
-      "duration": 8.56,
-      "text": "पार्ट टू में हम क्या करेंगे? हम फास्ट एपीआई को यूज़"
+      "duration": 4.68,
+      "text": "What will we do in part two? We will"
     },
     {
       "start": 206.04,
-      "duration": 10.36,
-      "text": "करके एक एंड पॉइंट बनाएंगे। जिसकी हेल्प से आप इस मॉडल का प्रेडिक्शन"
+      "duration": 7.4,
+      "text": "create an endpoint using the FAST API."
+    },
+    {
+      "start": 209.92,
+      "duration": 6.48,
+      "text": "With the help of which you will be able to provide the prediction of this model"
     },
     {
       "start": 213.44,
-      "duration": 7.799,
-      "text": "यूज़र्स को प्रोवाइड कर पाओगे। ठीक है? और पार्ट थ्री में हम क्या करेंगे कि हम एक"
+      "duration": 5.84,
+      "text": "to the users. Ok? And"
+    },
+    {
+      "start": 216.4,
+      "duration": 4.839,
+      "text": "what we'll do in part three is we'll"
     },
     {
       "start": 219.28,
-      "duration": 9.28,
-      "text": "फ्रंट एंड क्रिएट करेंगे। और वो फ्रंट एंड क्या करेगा? इस"
+      "duration": 5.2,
+      "text": "create a front end."
+    },
+    {
+      "start": 221.239,
+      "duration": 7.321,
+      "text": "And what will that front end do? It will"
     },
     {
       "start": 224.48,
-      "duration": 8.24,
-      "text": "एपीआई से इंटरेक्ट करेगा, इनपुट भेजेगा और पलट करके प्रेडिकशंस लेके आएगा। ठीक है?"
+      "duration": 6.64,
+      "text": "interact with this API, send inputs and"
+    },
+    {
+      "start": 228.56,
+      "duration": 4.16,
+      "text": "return predictions. Ok?"
     },
     {
       "start": 231.12,
-      "duration": 6.08,
-      "text": "तो बेसिकली आपको पूरा का पूरा जो स्पेक्ट्रम है वो मैं एक साथ इस वीडियो"
+      "duration": 3.92,
+      "text": "So basically"
+    },
+    {
+      "start": 232.72,
+      "duration": 4.48,
+      "text": "I am going to show you the entire spectrum together"
     },
     {
       "start": 235.04,
-      "duration": 6.88,
-      "text": "में दिखाने वाला हूं। मशीन लर्निंग मॉडल कैसे बनाया जाता है? उसके अराउंड एपीआईस"
+      "duration": 4.64,
+      "text": "in this video. How is a machine learning model"
+    },
+    {
+      "start": 237.2,
+      "duration": 4.72,
+      "text": "built? How APIs are built around it"
     },
     {
       "start": 239.68,
-      "duration": 7.839,
-      "text": "कैसे बनाई जाती हैं और फिर उन एपीआई को कंज्यूम कैसे किया जाता है। यह सब कुछ आप"
+      "duration": 5.119,
+      "text": "and then how those APIs are"
+    },
+    {
+      "start": 241.92,
+      "duration": 5.599,
+      "text": "consumed. You"
     },
     {
       "start": 244.799,
-      "duration": 8.08,
-      "text": "आज की वीडियो में एक साथ सीखोगे। तो ऑन द होल ट्रस्ट मी इट इज़ गोइंग टू बी अ वेरी"
+      "duration": 5.121,
+      "text": "will learn all this together in today's video. So on the"
+    },
+    {
+      "start": 247.519,
+      "duration": 5.36,
+      "text": "whole trust me it is going to be a very very"
     },
     {
       "start": 249.92,
-      "duration": 7.839,
-      "text": "वेरीरी इंटरेस्टिंग वीडियो। अ सो प्लीज मेक श्योर आप इसको एंड टू एंड देखो। ठीक"
+      "duration": 4.879,
+      "text": "interesting video. So please"
+    },
+    {
+      "start": 252.879,
+      "duration": 4.88,
+      "text": "make sure you watch it end to end. Ok"
     },
     {
       "start": 254.799,
-      "duration": 7.28,
-      "text": "है? नाउ लेट्स स्टार्ट द वीडियो। अब गाइज़ इस पूरे फ्लो को हम लोग एक डायग्राम के"
+      "duration": 4.881,
+      "text": "? Now let's start the video. Now guys, let us"
     },
     {
       "start": 259.68,
-      "duration": 7.6,
-      "text": "थ्रू समझ लेते हैं। सो जैसा मैंने बोला कि यह पूरा वीडियो तीन पार्ट्स में डिवाइडेड"
+      "duration": 4.32,
+      "text": "understand this entire flow through a diagram. So as I said,"
+    },
+    {
+      "start": 262.079,
+      "duration": 5.201,
+      "text": "this entire video is divided into three parts."
     },
     {
       "start": 264.0,
-      "duration": 10.639,
-      "text": "है। तो इन द फर्स्ट पार्ट हम क्या करेंगे कि हम एक मॉडल बिल्डिंग प्रोसेस यूज़ करके"
+      "duration": 7.68,
+      "text": "So in the first part what we'll do is"
+    },
+    {
+      "start": 267.28,
+      "duration": 7.359,
+      "text": "we'll generate our ML model using a model building process."
     },
     {
       "start": 271.68,
-      "duration": 6.56,
-      "text": "हमारा एमएल मॉडल जनरेट करेंगे। ये एक ट्रेंड मॉडल होगा जिसको अगर आप सही"
+      "duration": 4.64,
+      "text": "This will be a"
+    },
+    {
+      "start": 274.639,
+      "duration": 3.601,
+      "text": "trend model which, if you"
     },
     {
       "start": 276.32,
-      "duration": 6.48,
-      "text": "इनपुट्स दोगे तो ये आपको पलट के प्रेडिक्शंस करके देगा। ठीक है? फिर हम"
+      "duration": 4.4,
+      "text": "give correct inputs, will"
+    },
+    {
+      "start": 278.24,
+      "duration": 4.56,
+      "text": "give you predictions in return. Ok? Then"
     },
     {
       "start": 280.72,
-      "duration": 10.56,
-      "text": "सेकंड पार्ट में क्या करेंगे कि फास्ट एपीआई यूज करके इस मॉडल के अराउंड एक एंड"
+      "duration": 7.52,
+      "text": "what we'll do in the second part is"
+    },
+    {
+      "start": 282.8,
+      "duration": 8.48,
+      "text": "use the Fast API to design an endpoint around this model,"
     },
     {
       "start": 288.24,
-      "duration": 9.239,
-      "text": "पॉइंट डिजाइन करेंगे जिसका काम होगा मॉडल तक इनपुट्स पहुंचाना और मॉडल का आउटपुट"
+      "duration": 6.48,
+      "text": "which will be responsible for"
+    },
+    {
+      "start": 291.28,
+      "duration": 6.199,
+      "text": "providing inputs to the model and returning the model's output."
     },
     {
       "start": 294.72,
-      "duration": 9.12,
-      "text": "लेकर के आना। ठीक है? और फिर पार्ट थ्री में हम एक फ्रंट एंड बनाएंगे जो हमारे"
+      "duration": 6.8,
+      "text": "Ok? And then in part three"
+    },
+    {
+      "start": 297.479,
+      "duration": 6.361,
+      "text": "we'll create a front end that will"
     },
     {
       "start": 301.52,
-      "duration": 7.28,
-      "text": "एपीआई एंड पॉइंट से इंटरेक्ट करेगा। ठीक है? तो ये एंड पॉइंट बनाने आई एम सॉरी ये"
+      "duration": 5.2,
+      "text": "interact with our API endpoint. Ok"
+    },
+    {
+      "start": 303.84,
+      "duration": 4.96,
+      "text": "? So to create this endpoint, I'm sorry, this"
     },
     {
       "start": 306.72,
-      "duration": 9.68,
-      "text": "फ्रंट एंड बनाने के लिए हम स्ट्रीमलेट का यूज़ करेंगे। आइडियली इन अ रियल वर्ल्ड"
+      "duration": 4.16,
+      "text": "front end, we will"
+    },
+    {
+      "start": 308.8,
+      "duration": 7.6,
+      "text": "use streamlets. Ideally in a real world"
     },
     {
       "start": 310.88,
-      "duration": 10.56,
-      "text": "सिचुएशन आप यहां पे HTML CSS jवास्क्रिप्ट यूज़ करते हो। बट सिंस हम अ Python के"
+      "duration": 9.12,
+      "text": "situation you would use HTML CSS JavaScript here."
+    },
+    {
+      "start": 316.4,
+      "duration": 5.04,
+      "text": "But since we are"
     },
     {
       "start": 320.0,
-      "duration": 6.4,
-      "text": "डोमेन में काम कर रहे हैं तो हम लोग स्ट्रीमलेट यूज़ करेंगे। बहुत आसानी से"
+      "duration": 3.6,
+      "text": "working in the Python domain, we will"
+    },
+    {
+      "start": 321.44,
+      "duration": 4.96,
+      "text": "use Streamlets. The"
     },
     {
       "start": 323.6,
-      "duration": 10.159,
-      "text": "यहां पे अ स्ट्रीमलेट की हेल्प से UI बन जाता है। ठीक है? तो पूरा फ्लो ऐसा रहने"
+      "duration": 5.52,
+      "text": "UI can be created very easily here with the help of a streamlet."
+    },
+    {
+      "start": 326.4,
+      "duration": 7.359,
+      "text": "Ok? So the entire flow is going to be such that in this"
     },
     {
       "start": 329.12,
-      "duration": 11.519,
-      "text": "वाला है कि यह जो फ्रंट एंड है यहां पर एक वेबसाइट की फॉर्म में हम यूजर को ऐसे"
+      "duration": 7.84,
+      "text": "front end, here"
+    },
+    {
+      "start": 333.759,
+      "duration": 6.88,
+      "text": "in the form of a website, we will show such forms to the user."
     },
     {
       "start": 336.96,
-      "duration": 11.6,
-      "text": "फॉर्म दिखाएंगे। इस फॉर्म में यूजर इनपुट्स प्रोवाइड करेगा जो मॉडल को चाहिए"
+      "duration": 6.32,
+      "text": "In this form the user"
+    },
+    {
+      "start": 340.639,
+      "duration": 7.921,
+      "text": "will provide the inputs that the model requires."
     },
     {
       "start": 343.28,
-      "duration": 12.08,
-      "text": "है। जैसे ही सबमिट बटन पे क्लिक करेगा यह मॉडल इनपुट्स जाकर के सीधे एपीआई तक पहुंच"
+      "duration": 8.479,
+      "text": "As soon as the submit button is clicked, these"
+    },
+    {
+      "start": 348.56,
+      "duration": 6.8,
+      "text": "model inputs will go directly to the API."
     },
     {
       "start": 351.759,
-      "duration": 9.44,
-      "text": "जाएंगे। एपीआई क्या करेगा? इन इनपुट्स को वैलिडेट करेगा। ऑब्वियसली वैलिडेट करना"
+      "duration": 6.561,
+      "text": "What will the API do?"
+    },
+    {
+      "start": 355.36,
+      "duration": 5.839,
+      "text": "Will validate these inputs. Obviously validation"
     },
     {
       "start": 358.32,
-      "duration": 8.96,
-      "text": "जरूरी है और वैलिडेट करके इन इनपुट्स को वह एमएल मॉडल के पास भेजेगा। एमएल मॉडल"
+      "duration": 6.4,
+      "text": "is necessary and after validation"
+    },
+    {
+      "start": 361.199,
+      "duration": 6.081,
+      "text": "it will send these inputs to the ML model."
     },
     {
       "start": 364.72,
-      "duration": 9.039,
-      "text": "क्या करेगा? उन इनपुट्स के बेसिस पे एक आउटपुट जनरेट करेगा और वो आउटपुट एपीआई के"
+      "duration": 5.84,
+      "text": "What will the ML model do? Based on those inputs, an"
+    },
+    {
+      "start": 367.28,
+      "duration": 6.479,
+      "text": "output will be generated and that output will"
     },
     {
       "start": 370.56,
-      "duration": 8.8,
-      "text": "पास आएगा और फिर एपीआई वही आउटपुट jसon फॉर्मेट में फ्रंट एंड के पास भेजेगी और"
+      "duration": 5.84,
+      "text": "come to the API and then the API will send the same output"
+    },
+    {
+      "start": 373.759,
+      "duration": 5.601,
+      "text": "in JSON format to the front end and the"
     },
     {
       "start": 376.4,
-      "duration": 8.16,
-      "text": "फ्रंट एंड उस jसon को अच्छे से यूजर को दिखाए दिखा के अह डिस्प्ले करेगा। ठीक है?"
+      "duration": 6.16,
+      "text": "front end will display that JSON properly to the user."
+    },
+    {
+      "start": 379.36,
+      "duration": 5.2,
+      "text": "Ok?"
     },
     {
       "start": 382.56,
-      "duration": 7.84,
-      "text": "तो दिस इज गोइंग टू बी द एंटायर फ्लो ऑफ दिस अ वीडियो। ठीक है? तो अब हम लोग क्या"
+      "duration": 5.68,
+      "text": "So this is going to be the entire flow of"
+    },
+    {
+      "start": 384.56,
+      "duration": 5.84,
+      "text": "this video. Ok? So what will we do now"
     },
     {
       "start": 388.24,
-      "duration": 7.28,
-      "text": "करेंगे? एक-एक करके पार्ट बाय पार्ट इस पूरी चीज को एग्जीक्यूट करेंगे। तो सबसे"
+      "duration": 4.32,
+      "text": "? We will execute this whole thing one by one, part by part."
+    },
+    {
+      "start": 390.4,
+      "duration": 5.12,
+      "text": "So first of all"
     },
     {
       "start": 392.56,
-      "duration": 6.96,
-      "text": "पहले लेट्स फोकस ऑन पार्ट वन जहां पे मैं आपको बताऊंगा कि हम क्या प्रॉब्लम"
+      "duration": 5.04,
+      "text": "let's focus on part one where I will"
+    },
+    {
+      "start": 395.52,
+      "duration": 4.0,
+      "text": "tell you what problem"
     },
     {
       "start": 397.6,
-      "duration": 6.08,
-      "text": "स्टेटमेंट सॉल्व करने जा रहे हैं। क्या एमएल मॉडल बना रहे हैं। कौन सा एल्गोरिदम"
+      "duration": 4.319,
+      "text": "statement we are going to solve. What"
+    },
+    {
+      "start": 399.52,
+      "duration": 4.16,
+      "text": "ML models are you building? Which algorithm are you"
     },
     {
       "start": 401.919,
-      "duration": 6.641,
-      "text": "यूज़ कर रहे हैं। पूरा फ्लो क्या रहेगा। यह सब कुछ मैं आपको एक जुपिटर नोटबुक में"
+      "duration": 4.0,
+      "text": "using? What will be the complete flow?"
+    },
+    {
+      "start": 403.68,
+      "duration": 4.88,
+      "text": "I will show you all of this in a Jupyter Notebook."
     },
     {
       "start": 405.919,
-      "duration": 7.681,
-      "text": "दिखाऊंगा। चलो गाइस अब हम बात करते हैं स्टेप नंबर वन की जहां पर हम अपना मशीन"
+      "duration": 5.28,
+      "text": "Come on guys, now let's talk about"
+    },
+    {
+      "start": 408.56,
+      "duration": 5.04,
+      "text": "step number one where we will build our machine"
     },
     {
       "start": 411.199,
-      "duration": 7.44,
-      "text": "लर्निंग मॉडल बिल्ड करेंगे और उसको एक्सपोर्ट भी करेंगे। ठीक है? तो पहले एक"
+      "duration": 5.521,
+      "text": "learning model and"
+    },
+    {
+      "start": 413.6,
+      "duration": 5.039,
+      "text": "also export it. Ok? So first let's"
     },
     {
       "start": 416.72,
-      "duration": 5.919,
-      "text": "बार बात कर लेते हैं कि हम क्या प्रॉब्लम स्टेटमेंट सॉल्व कर रहे हैं। हम किस चीज"
+      "duration": 3.919,
+      "text": "talk about what problem"
+    },
+    {
+      "start": 418.639,
+      "duration": 4.0,
+      "text": "statement we are solving. What are we"
     },
     {
       "start": 420.639,
-      "duration": 7.601,
-      "text": "के ऊपर एक मशीन लर्निंग मॉडल बिल्ड कर रहे हैं। सो हम जो मशीन लर्निंग मॉडल बिल्ड कर"
+      "duration": 4.56,
+      "text": "building a machine learning model on?"
+    },
+    {
+      "start": 422.639,
+      "duration": 5.601,
+      "text": "So the machine learning model that we are building can be"
     },
     {
       "start": 425.199,
-      "duration": 7.761,
-      "text": "रहे हैं उसको आप बोल सकते हो इंश्योरेंस प्रीमियम प्रेडिक्शन मॉडल। ठीक है? मैं"
+      "duration": 5.601,
+      "text": "called insurance"
+    },
+    {
+      "start": 428.24,
+      "duration": 4.72,
+      "text": "premium prediction model. Ok? Let me give"
     },
     {
       "start": 430.8,
-      "duration": 6.0,
-      "text": "आपको पूरा कॉन्टेक्स्ट देता हूं। सो आप सभी को इंश्योरेंस के बारे में पता होगा।"
+      "duration": 4.08,
+      "text": "you the full context. So you"
+    },
+    {
+      "start": 432.96,
+      "duration": 3.84,
+      "text": "all must know about insurance."
     },
     {
       "start": 434.88,
-      "duration": 8.24,
-      "text": "अलग-अलग टाइप के इंश्योरेंस हम लोग लेते हैं। लाइफ इंश्योरेंस, हेल्थ इंश्योरेंस,"
+      "duration": 4.48,
+      "text": "We take different types of insurance."
+    },
+    {
+      "start": 436.8,
+      "duration": 6.32,
+      "text": "Life insurance, health insurance,"
     },
     {
       "start": 439.36,
-      "duration": 8.44,
-      "text": "आपका कार इंश्योरेंस। ठीक है? तो हर इंश्योरेंस में क्या होता है कि जब आप"
+      "duration": 5.44,
+      "text": "your car insurance. Ok? So"
+    },
+    {
+      "start": 443.12,
+      "duration": 4.68,
+      "text": "what happens in every insurance is that when you"
     },
     {
       "start": 444.8,
-      "duration": 7.92,
-      "text": "इंश्योरेंस परचेस करते हो तो फिर आपको एनुअली कुछ अमाउंट पे करना पड़ता है"
+      "duration": 5.92,
+      "text": "purchase insurance, then you have to"
+    },
+    {
+      "start": 447.8,
+      "duration": 4.92,
+      "text": "pay some amount annually"
     },
     {
       "start": 450.72,
-      "duration": 10.96,
-      "text": "इंश्योरेंस कंपनी को। ठीक है? जिसको हम इंश्योरेंस का प्रीमियम बोलते हैं। राइट?"
+      "duration": 5.919,
+      "text": "to the insurance company. Ok? Which we"
+    },
+    {
+      "start": 452.72,
+      "duration": 8.96,
+      "text": "call insurance premium. Right?"
     },
     {
       "start": 456.639,
-      "duration": 10.4,
-      "text": "तो ये जो प्रीमियम है, ये कितना होगा? ये कई चीजों पर डिपेंड करता है। जैसे मान लो"
+      "duration": 7.921,
+      "text": "So how much will this premium be? This"
+    },
+    {
+      "start": 461.68,
+      "duration": 5.359,
+      "text": "depends on many things. For example,"
     },
     {
       "start": 464.56,
-      "duration": 8.079,
-      "text": "अगर आप हेल्थ इंश्योरेंस की बात करो तो आपका हेल्थ इंश्योरेंस का प्रीमियम कितना"
+      "duration": 4.88,
+      "text": "if you talk about health insurance, then"
+    },
+    {
+      "start": 467.039,
+      "duration": 5.6,
+      "text": "how much your health insurance premium should be"
     },
     {
       "start": 469.44,
-      "duration": 8.319,
-      "text": "होना चाहिए एनुअली वो मल्टीपल फैक्टर्स पे डिपेंड करता है। आपके पर्सनल एट्रिब्यूट्स"
+      "duration": 6.0,
+      "text": "annually"
     },
     {
-      "start": 475.44,
-      "duration": 7.199,
-      "text": "पे डिपेंड करता है। आपके लाइफस्टाइल पे डिपेंड करता है। आपके फाइनेंसियल कंडीशन"
+      "start": 472.639,
+      "duration": 5.12,
+      "text": "depends on multiple factors. It depends on your personal attributes."
+    },
+    {
+      "start": 477.759,
+      "duration": 4.88,
+      "text": "Depends on your lifestyle. Depends on your financial condition."
     },
     {
       "start": 479.759,
-      "duration": 9.12,
-      "text": "पे डिपेंड करता है। तो हम एक ऐसा ही मॉडल बनाना चाहते हैं जो कि क्या करेगा कि अगर"
+      "duration": 5.521,
+      "text": "So we want to create a similar model"
+    },
+    {
+      "start": 482.639,
+      "duration": 6.24,
+      "text": "which will do that if"
     },
     {
       "start": 485.28,
-      "duration": 10.0,
-      "text": "आप किसी यूजर के पर्सनल एट्रिब्यूट्स, लाइफस्ट और फाइनेंसियल कंडीशन के बारे में"
+      "duration": 6.16,
+      "text": "you tell about the personal attributes,"
+    },
+    {
+      "start": 488.879,
+      "duration": 6.401,
+      "text": "lifestyle and financial condition of a user,"
     },
     {
       "start": 491.44,
-      "duration": 9.12,
-      "text": "बताओगे तो वो मॉडल आपको पलट के यह बता सकता है कि उस बंदे का इंश्योरेंस"
+      "duration": 6.039,
+      "text": "then that model can tell you in return"
+    },
+    {
+      "start": 495.28,
+      "duration": 5.28,
+      "text": "whether the insurance premium of that person will be"
     },
     {
       "start": 497.479,
-      "duration": 8.921,
-      "text": "प्रीमियम हाई होगा एज इन उसको ज्यादा पैसे देने होंगे या कम होगा या बहुत कम होगा।"
+      "duration": 6.601,
+      "text": "high i.e. he will have to pay more money"
+    },
+    {
+      "start": 500.56,
+      "duration": 5.84,
+      "text": "or it will be less or very less."
     },
     {
       "start": 504.08,
-      "duration": 6.959,
-      "text": "ठीक है? तो हम बेसिकली उसको काइंड ऑफ उस कस्टमर को सेग्रगेट करना चाहते हैं कि वो"
+      "duration": 4.16,
+      "text": "Ok? So basically we"
+    },
+    {
+      "start": 506.4,
+      "duration": 4.639,
+      "text": "want to segregate that kind of customer whether he"
     },
     {
       "start": 508.24,
-      "duration": 8.239,
-      "text": "हाई पेइंग कस्टमर है या लो पेइंग कस्टमर है। ठीक है? तो ये जो मॉडल है ये दो तरह"
+      "duration": 5.84,
+      "text": "is a high paying customer or a low paying customer."
+    },
+    {
+      "start": 511.039,
+      "duration": 5.44,
+      "text": "Ok? So this model is"
     },
     {
       "start": 514.08,
-      "duration": 7.6,
-      "text": "के लोगों के लिए यूज़फुल है। पहला इंश्योरेंस कंपनीज़ के"
+      "duration": 4.6,
+      "text": "useful for two types of people. First"
+    },
+    {
+      "start": 516.479,
+      "duration": 5.201,
+      "text": "for insurance companies."
     },
     {
       "start": 518.68,
-      "duration": 7.64,
-      "text": "लिए। तो इंश्योरेंस कंपनीज़ क्या कर सकती है? इस मॉडल की हेल्प से अपने कस्टमर्स को"
+      "duration": 5.0,
+      "text": "So what can insurance companies do"
+    },
+    {
+      "start": 521.68,
+      "duration": 4.64,
+      "text": "? With the help of this model you can segregate your customers. They"
     },
     {
       "start": 523.68,
-      "duration": 9.52,
-      "text": "सेग्रगेट कर सकती हैं। दे कैन आइडेंटिफाई कि कौन से कस्टमर किस अ कैटेगरी में आके"
+      "duration": 6.719,
+      "text": "can identify"
+    },
+    {
+      "start": 526.32,
+      "duration": 6.88,
+      "text": "which customers fall into which category."
     },
     {
       "start": 530.399,
-      "duration": 7.44,
-      "text": "गिरते हैं। ठीक है? और सेकंड यह मॉडल यूज़र्स के लिए भी लाइक मेरे आपके जैसे"
+      "duration": 5.44,
+      "text": "Ok? And secondly, this model"
     },
     {
       "start": 535.839,
-      "duration": 7.281,
-      "text": "यूज़र्स के लिए भी यूज़फुल है। बिकॉज़ मैं क्या कर सकता हूं? इस मॉडल के पास अपना"
+      "duration": 4.481,
+      "text": "is also useful for users like me and users like you. Because"
+    },
+    {
+      "start": 537.839,
+      "duration": 5.281,
+      "text": "what can I do? By passing my information to this model, I can"
     },
     {
       "start": 540.32,
-      "duration": 6.959,
-      "text": "इंफॉर्मेशन पास करके यह पता कर सकता हूं कि"
+      "duration": 4.36,
+      "text": "find out"
     },
     {
       "start": 544.68,
-      "duration": 5.8,
-      "text": "मुझे मैं किस क्लास को बिलोंग करता हूं। क्या मुझे ज्यादा प्रीमियम देना पड़ेगा या"
+      "duration": 4.2,
+      "text": "which class I belong to."
+    },
+    {
+      "start": 547.279,
+      "duration": 3.201,
+      "text": "Will I have to pay a higher premium or a"
     },
     {
       "start": 548.88,
-      "duration": 5.44,
-      "text": "कम प्रीमियम देना पड़ेगा? और उसके अकॉर्डिंगली मैं कुछ चेंजेस ला सकता हूं"
+      "duration": 3.519,
+      "text": "lower premium? And"
+    },
+    {
+      "start": 550.48,
+      "duration": 3.84,
+      "text": "accordingly I can bring some changes"
     },
     {
       "start": 552.399,
-      "duration": 7.601,
-      "text": "अपने लाइफ स्टाइल में। ठीक है? तो यू गेट द आईडिया। राइट? हम ये पर्टिकुलर मॉडल बना"
+      "duration": 4.081,
+      "text": "in my lifestyle. Ok? So you get"
+    },
+    {
+      "start": 554.32,
+      "duration": 5.68,
+      "text": "the idea. Right? We are making this particular model."
     },
     {
       "start": 556.48,
-      "duration": 10.72,
-      "text": "रहे हैं। और हमारे मॉडल में जो डेटा सेट हमें मिला है वो कुछ ऐसा है। ठीक है? तो"
+      "duration": 6.72,
+      "text": "And the data set we got in our model is"
+    },
+    {
+      "start": 560.0,
+      "duration": 7.2,
+      "text": "something like this. Ok? So"
     },
     {
       "start": 563.2,
-      "duration": 9.28,
-      "text": "हम हर यूजर से उसका एज मांग रहे हैं। उसका वेट मांग रहे हैं। हाइट मांग रहे हैं।"
+      "duration": 6.319,
+      "text": "we are asking each user for their age. They are"
+    },
+    {
+      "start": 567.2,
+      "duration": 5.28,
+      "text": "asking for his weight. Asking for height. They are"
     },
     {
       "start": 569.519,
-      "duration": 7.041,
-      "text": "उसका इनकम मांग रहे हैं। लैक्स पर एनम में। वो स्मोकर है या नहीं? यह मांग रहे"
+      "duration": 5.041,
+      "text": "asking for his income. In Enum on Lax. Is"
+    },
+    {
+      "start": 572.48,
+      "duration": 4.08,
+      "text": "he a smoker or not? This is what they are asking for."
     },
     {
       "start": 574.56,
-      "duration": 7.68,
-      "text": "हैं। किस सिटी को बिलोंग करता है। ऑक्यूपेशन क्या है? या ऑक्यूपेशन की"
+      "duration": 4.0,
+      "text": "Which city does it belong to?"
+    },
+    {
+      "start": 576.56,
+      "duration": 5.68,
+      "text": "What is occupation? Or"
     },
     {
       "start": 578.56,
-      "duration": 9.36,
-      "text": "कैटेगरी क्या है? यह सारे इनपुट फीचर्स हम अपने यूजर से मांग रहे हैं और यह इनपुट"
+      "duration": 6.719,
+      "text": "what is the category of occupation? We are asking for all these input features"
+    },
+    {
+      "start": 582.24,
+      "duration": 5.68,
+      "text": "from our users and"
     },
     {
       "start": 585.279,
-      "duration": 7.921,
-      "text": "फीचर्स को हम अपने मॉडल को दे रहे हैं और हमारा मॉडल इन इनपुट फीचर के बेसिस पे"
+      "duration": 5.361,
+      "text": "we are giving these input features to our model and on the basis of"
+    },
+    {
+      "start": 587.92,
+      "duration": 5.28,
+      "text": "these input features our model is"
     },
     {
       "start": 590.64,
-      "duration": 8.56,
-      "text": "डिसाइड कर रहा है कि उस पर्टिकुलर यूजर का इंश्योरेंस प्रीमियम कैटेगरी क्या होना"
+      "duration": 4.72,
+      "text": "deciding"
+    },
+    {
+      "start": 593.2,
+      "duration": 6.0,
+      "text": "what should be the insurance premium category of that particular user"
     },
     {
       "start": 595.36,
-      "duration": 8.64,
-      "text": "चाहिए? हाई, मीडियम या लो। ठीक है? तो यही एमएल मॉडल हमें बिल्ड करना है। ठीक है? तो"
+      "duration": 6.8,
+      "text": "? High, medium or low. Ok? So this is the"
+    },
+    {
+      "start": 599.2,
+      "duration": 4.8,
+      "text": "ML model we have to build. Ok? So"
     },
     {
       "start": 602.16,
-      "duration": 5.679,
-      "text": "सीधे कोड में जाने के पहले मैं आपको स्ट्रेटजी बता देता हूं कि मैंने क्या"
+      "duration": 3.44,
+      "text": "before going straight into the code, let me"
+    },
+    {
+      "start": 604.0,
+      "duration": 3.839,
+      "text": "tell you the strategy that I"
     },
     {
       "start": 605.6,
-      "duration": 7.359,
-      "text": "स्ट्रेटजी इंप्लीमेंट की थी। सो मेरी स्ट्रेटजी बहुत सिंपल थी। हमने थोड़ा सा"
+      "duration": 4.72,
+      "text": "implemented. So my"
+    },
+    {
+      "start": 607.839,
+      "duration": 5.12,
+      "text": "strategy was very simple. We"
     },
     {
       "start": 610.32,
-      "duration": 7.84,
-      "text": "फीचर इंजीनियरिंग किया। ठीक है? थोड़ा सा फीचर इंजीनियरिंग किया।"
+      "duration": 5.04,
+      "text": "did a bit of feature engineering."
+    },
+    {
+      "start": 612.959,
+      "duration": 5.201,
+      "text": "Ok? Did a bit of feature engineering."
     },
     {
       "start": 615.36,
-      "duration": 8.64,
-      "text": "और फीचर इंजीनियरिंग क्या किया कि हमने कुछ फीचर्स को थोड़ा सा ट्रांसफॉर्म किया"
+      "duration": 5.599,
+      "text": "And what feature engineering did was we"
+    },
+    {
+      "start": 618.16,
+      "duration": 5.84,
+      "text": "transformed some of the features a little bit"
     },
     {
       "start": 620.959,
-      "duration": 10.161,
-      "text": "और कुछ नए फीचर्स क्रिएट भी किए। ठीक है? जैसे कि ये नया फीचर देखो। एज ग्रुप। यह"
+      "duration": 6.801,
+      "text": "and also created some new features. Ok?"
+    },
+    {
+      "start": 624.0,
+      "duration": 7.12,
+      "text": "Like look at this new feature. Age group."
     },
     {
       "start": 627.76,
-      "duration": 9.6,
-      "text": "हमने बनाया ऐज से। ठीक है? है तो मैंने डायरेक्टली ऐज को न्यूमेरिकल वैल्यू की"
+      "duration": 5.44,
+      "text": "We made this from Edge. Ok? So instead of"
     },
     {
       "start": 633.2,
-      "duration": 9.28,
-      "text": "तरह यूज़ ना करके अ उसको कैटेगोरिकल फीचर की तरह यूज़ किया है। ठीक है? तो ज़ीरो से"
+      "duration": 6.72,
+      "text": "using age directly as a numerical value, I have used it as a categorical feature."
+    },
+    {
+      "start": 637.36,
+      "duration": 5.12,
+      "text": "Ok? So from zero to"
     },
     {
       "start": 639.92,
-      "duration": 7.28,
-      "text": "लेके 18 तक हमने एक ग्रुप बना दिया। 18 से लेके 45 तक एक ग्रुप बना दिया। 45 से 60"
+      "duration": 4.96,
+      "text": "18 we formed a group."
+    },
+    {
+      "start": 642.48,
+      "duration": 4.72,
+      "text": "A group was formed from 18 to 45. 45 to 60"
     },
     {
       "start": 644.88,
-      "duration": 7.36,
-      "text": "एक ग्रुप 60 से ज्यादा एक ग्रुप। ठीक है? तो ये अलग-अलग ग्रुप्स बन गए। मिडिल एज्ड,"
+      "duration": 4.56,
+      "text": "one group, more than 60 one group. Ok?"
+    },
+    {
+      "start": 647.2,
+      "duration": 5.04,
+      "text": "So these different groups were formed. Middle Aged,"
     },
     {
       "start": 649.44,
-      "duration": 8.16,
-      "text": "सीनियर एक्सट्रा। ठीक है? तो ये हमने एक फीचर इंजीनियरिंग की। सेकंड हमने एक"
+      "duration": 5.28,
+      "text": "Senior Extra. Ok? So this is a"
+    },
+    {
+      "start": 652.24,
+      "duration": 5.36,
+      "text": "feature engineering we did. Second, we"
     },
     {
       "start": 654.72,
-      "duration": 7.96,
-      "text": "कंप्लीटली नया फीचर बनाया बीएएमआई बोल के। ठीक है? तो वेट और हाइट इन दोनों को हमने"
+      "duration": 5.52,
+      "text": "created a completely new feature called BAMI."
+    },
+    {
+      "start": 657.6,
+      "duration": 5.08,
+      "text": "Ok? So we used both weight and height"
     },
     {
       "start": 660.24,
-      "duration": 8.4,
-      "text": "यूज किया और हमने एक नया फीचर बनाया बीएएमआई। सिमिलरली हमने एक नया फीचर बनाया"
+      "duration": 5.76,
+      "text": "and we created a new feature called"
+    },
+    {
+      "start": 662.68,
+      "duration": 5.96,
+      "text": "BAMI. Similarly, we have created a new feature"
     },
     {
       "start": 666.0,
-      "duration": 7.8,
-      "text": "लाइफस्टाइल रिस्क बोल के। अब ये लाइफस्टाइल रिस्क एक्चुअली दो फीचर्स के"
+      "duration": 4.88,
+      "text": "called Lifestyle Risk. Now this"
+    },
+    {
+      "start": 668.64,
+      "duration": 5.16,
+      "text": "lifestyle risk is actually"
     },
     {
       "start": 670.88,
-      "duration": 9.44,
-      "text": "कॉम्बिनेशन से बना है। एक है बीएमआई और दूसरा है स्मोकर। इन दोनों की"
+      "duration": 6.8,
+      "text": "made up of a combination of two features. One is"
+    },
+    {
+      "start": 673.8,
+      "duration": 6.52,
+      "text": "BMI and the other is smoker."
     },
     {
       "start": 677.68,
-      "duration": 8.24,
-      "text": "हेल्प से हमने लाइफस्टाइल रिस्क बोल करके एक फीचर बनाया कि लाइफस्टाइल रिस्क हाई"
+      "duration": 5.2,
+      "text": "With the help of these two, we"
+    },
+    {
+      "start": 680.32,
+      "duration": 5.6,
+      "text": "created a feature called Lifestyle Risk to show whether the lifestyle risk is high"
     },
     {
       "start": 682.88,
-      "duration": 8.639,
-      "text": "है, लो है या फिर मीडियम है। सो अगर बीएएमआई बहुत हाई है, 30 के ज्यादा है,"
+      "duration": 6.399,
+      "text": ", low or medium. So if the"
+    },
+    {
+      "start": 685.92,
+      "duration": 5.599,
+      "text": "BMI is very high, more than 30, the"
     },
     {
       "start": 689.279,
-      "duration": 6.641,
-      "text": "ओबीस है बेसिकली कस्टमर और वो स्मोकर भी है तो उसको हमने हाई रिस्क में डाला है।"
+      "duration": 4.24,
+      "text": "customer is obese basically and he is also a smoker,"
+    },
+    {
+      "start": 691.519,
+      "duration": 4.401,
+      "text": "then we have put him in high risk."
     },
     {
       "start": 693.519,
-      "duration": 6.801,
-      "text": "वेयर एज अगर किसी का बीएएमआई एकदम परफेक्ट है 25 के आसपास और वो स्मोकर नहीं है तो"
+      "duration": 5.121,
+      "text": "If someone's BMI"
+    },
+    {
+      "start": 695.92,
+      "duration": 4.4,
+      "text": "is perfect, around 25, and he is not a smoker, then"
     },
     {
       "start": 698.64,
-      "duration": 6.48,
-      "text": "उसको हमने लो रिस्क में डाला है। ठीक है? तो ये एक नया फीचर बनाया है। फिर हमने"
+      "duration": 3.84,
+      "text": "we have put him in low risk. Ok?"
+    },
+    {
+      "start": 700.32,
+      "duration": 4.8,
+      "text": "So this is a new feature that has been created. Then we"
     },
     {
       "start": 702.48,
-      "duration": 7.12,
-      "text": "सिटी टायर बोल के एक नया फीचर बनाया। हमने सिटीज को देखा और उनको तीन टायर्स में"
+      "duration": 5.359,
+      "text": "created a new feature called City Tire. We"
+    },
+    {
+      "start": 705.12,
+      "duration": 4.48,
+      "text": "looked at the cities and divided them into three tiers."
     },
     {
       "start": 707.839,
-      "duration": 7.44,
-      "text": "डिवाइड किया। टायर वन, टायर टू, टायर थ्री। ठीक है? तो ये एक नया फीचर है। उसके"
+      "duration": 4.641,
+      "text": "Tier one, tier two, tier"
+    },
+    {
+      "start": 709.6,
+      "duration": 5.679,
+      "text": "three. Ok? So this is a new feature."
     },
     {
       "start": 712.48,
-      "duration": 8.4,
-      "text": "अलावा इनकम एलपीए एज़ इट इज़ हम लोग यूज़ कर रहे हैं और ऑक्यूपेशन भी हम लोग एज़ इट इज़"
+      "duration": 5.68,
+      "text": "Apart from that, we are using Income LPA as it is"
+    },
+    {
+      "start": 715.279,
+      "duration": 5.601,
+      "text": "and we are also"
     },
     {
       "start": 718.16,
-      "duration": 9.04,
-      "text": "यूज़ कर रहे हैं। ठीक है? तो बेसिकली हमें यूजर ये डेटा दे रहा है। बट हम उससे ये"
+      "duration": 5.359,
+      "text": "using Occupation as it is. Ok? So basically the"
+    },
+    {
+      "start": 720.88,
+      "duration": 6.32,
+      "text": "user is giving us this data. But we are"
     },
     {
       "start": 723.519,
-      "duration": 10.241,
-      "text": "डेटा बना रहे हैं और ये डेटा एज इनपुट हम अपने मॉडल को दे रहे हैं और उसको ट्रेन कर"
+      "duration": 6.801,
+      "text": "creating this data from it and we are giving this data as input"
+    },
+    {
+      "start": 727.2,
+      "duration": 6.56,
+      "text": "to our model and training it."
     },
     {
       "start": 730.32,
-      "duration": 7.759,
-      "text": "रहे हैं। ठीक है? तो ये सेटअप रहने वाला है। ओके। तो, अब मैं आपको कोड में दिखाता"
+      "duration": 6.0,
+      "text": "Ok? So this setup"
+    },
+    {
+      "start": 733.76,
+      "duration": 4.319,
+      "text": "is going to stay. Ok. So, now let me show you in code"
     },
     {
       "start": 736.32,
-      "duration": 6.959,
-      "text": "हूं कि यह पूरी चीज मैंने कैसे की है। कौन सा एमएल एल्गोरििदम यूज किया है और हमारे"
+      "duration": 4.0,
+      "text": "how I did this whole thing. Which"
+    },
+    {
+      "start": 738.079,
+      "duration": 5.2,
+      "text": "ML algorithm have we used and"
     },
     {
       "start": 740.32,
-      "duration": 7.6,
-      "text": "रिजल्ट्स कैसे आए हैं। ठीक है? सो, गाइज़, कोड दिखाने के पहले मैं एक चीज क्लेरिफाई"
+      "duration": 5.04,
+      "text": "how have our results come. Ok? So, guys,"
+    },
+    {
+      "start": 743.279,
+      "duration": 4.641,
+      "text": "before I show you the code, I would like to clarify one thing"
     },
     {
       "start": 745.36,
-      "duration": 6.479,
-      "text": "करना चाहूंगा कि यह जो डेटा सेट है ना, यह एक टॉय डेटा सेट है। व्हिच मींस यह रियल"
+      "duration": 4.96,
+      "text": "that this data set is a"
+    },
+    {
+      "start": 747.92,
+      "duration": 3.919,
+      "text": "toy data set. Which means this is"
     },
     {
       "start": 750.32,
-      "duration": 6.8,
-      "text": "वर्ल्ड डेटा सेट नहीं है। इसको मैंने बनाया है। तो, ऑब्वियसली इस मॉडल को बनाने"
+      "duration": 4.079,
+      "text": "not a real world data set. I have"
+    },
+    {
+      "start": 751.839,
+      "duration": 5.281,
+      "text": "made this. So, obviously the"
     },
     {
       "start": 754.399,
-      "duration": 8.481,
-      "text": "के बाद जो रिजल्ट्स भी आएंगे ना, वो काइंड ऑफ बहुत अच्छे नहीं आएंगे। ठीक है? और टॉय"
+      "duration": 5.761,
+      "text": "results that will come after making this model will not be of"
+    },
+    {
+      "start": 757.12,
+      "duration": 5.76,
+      "text": "very good kind. Ok? And the"
     },
     {
       "start": 760.16,
-      "duration": 6.56,
-      "text": "डेटा सेट यूज करने का रीजन यह था कि मैं इस वीडियो में मेरा एंड गोल यह नहीं है कि"
+      "duration": 4.72,
+      "text": "reason I used a toy data set was because"
     },
     {
-      "start": 764.88,
-      "duration": 5.6,
-      "text": "मैं आपको एक अच्छा मशीन लर्निंग मॉडल बनाना सिखाऊं। मेरा एंड गोल ये है कि मैं"
+      "start": 762.88,
+      "duration": 3.84,
+      "text": "my end goal in this video is not to"
+    },
+    {
+      "start": 766.72,
+      "duration": 3.76,
+      "text": "teach you how to build a good machine learning model. My end goal is to"
     },
     {
       "start": 768.8,
-      "duration": 6.32,
-      "text": "आपको दिखाना चाहता हूं कि कैसे एक बने बनाए मॉडल को आप फास्ट एपीआई के थ्रू सर्व"
+      "duration": 4.32,
+      "text": "show you how to serve a ready-"
+    },
+    {
+      "start": 770.48,
+      "duration": 4.64,
+      "text": "made model via a fast API."
     },
     {
       "start": 773.12,
-      "duration": 6.719,
-      "text": "कर सकते हो। दैट इज व्हाई वी आर यूजिंग अ टॉय डेटा सेट हियर। बट स्टिल यहां पे जो"
+      "duration": 4.56,
+      "text": "That is why we are using a"
+    },
+    {
+      "start": 775.12,
+      "duration": 4.719,
+      "text": "toy data set here. But still, whatever"
     },
     {
       "start": 777.68,
-      "duration": 7.04,
-      "text": "भी चीजें मैं आपको दिखाऊंगा वो किसी रियल वर्ल्ड डेटा सेट के ऊपर भी एप्लीकेबल"
+      "duration": 4.0,
+      "text": "I show you here will be applicable to any real"
+    },
+    {
+      "start": 779.839,
+      "duration": 4.881,
+      "text": "world data set as well."
     },
     {
       "start": 781.68,
-      "duration": 7.599,
-      "text": "होंगी। ठीक है? तो देखो सबसे पहले हमने सारी लाइब्रेरीज इंपोर्ट कर ली। यहां पे"
+      "duration": 5.36,
+      "text": "Ok? So look, first of all we have"
+    },
+    {
+      "start": 784.72,
+      "duration": 4.559,
+      "text": "imported all the libraries. Here"
     },
     {
       "start": 787.04,
-      "duration": 8.96,
-      "text": "हमने अपना डेटा सेट इंपोर्ट कर लिया। ये हमने रैंडमली पांच रोज़ प्रिंट करके देख"
+      "duration": 6.08,
+      "text": "we have imported our data set."
+    },
+    {
+      "start": 789.279,
+      "duration": 6.721,
+      "text": "We tried printing this randomly for five days."
     },
     {
       "start": 793.12,
-      "duration": 6.56,
-      "text": "लिए। दिस इज द डेटा सेट दैट वी हैव। यहां पे हमने डेटा सेट की एक कॉपी क्रिएट कर"
+      "duration": 4.56,
+      "text": "This is the data set that we have. Here"
+    },
+    {
+      "start": 796.0,
+      "duration": 3.68,
+      "text": "we have created a copy of the data set."
     },
     {
       "start": 797.68,
-      "duration": 6.24,
-      "text": "ली। बिकॉज़ हम अपने डेटा सेट के ऊपर अभी बहुत सारे फीचर इंजीनियरिंग स्टेप्स"
+      "duration": 3.68,
+      "text": "Because we will be applying a lot of feature engineering steps to our data set now."
     },
     {
       "start": 801.36,
-      "duration": 7.919,
-      "text": "अप्लाई करेंगे। तो सबसे पहला जो स्टेप है वो ये है कि हम एक नया कॉलम बना रहे हैं"
+      "duration": 5.12,
+      "text": "So the first step is"
+    },
+    {
+      "start": 803.92,
+      "duration": 5.359,
+      "text": "that we are creating a new column with the"
     },
     {
       "start": 806.48,
-      "duration": 9.44,
-      "text": "बीएएमआई के नाम से। और वो बनाने का फार्मूला ये रहा। ठीक है? तो यह हमारा एक"
+      "duration": 6.159,
+      "text": "name BAMI. And"
+    },
+    {
+      "start": 809.279,
+      "duration": 6.641,
+      "text": "here is the formula to make it. Ok? So this"
     },
     {
       "start": 812.639,
-      "duration": 10.401,
-      "text": "नया फीचर बन गया। उसके बाद हमें एज ग्रुप बोल करके एक फीचर बनाना है जो कि इस लॉजिक"
+      "duration": 7.921,
+      "text": "became a new feature of ours. After that we have to"
+    },
+    {
+      "start": 815.92,
+      "duration": 7.12,
+      "text": "create a feature by calling age group which will"
     },
     {
       "start": 820.56,
-      "duration": 7.2,
-      "text": "पर काम करेगा कि अगर एज 25 से कम है तो यंग बुलाएंगे, 45 से कम है तो एडल्ट"
+      "duration": 5.04,
+      "text": "work on this logic that if the age is less than 25 then it"
+    },
+    {
+      "start": 823.04,
+      "duration": 4.72,
+      "text": "will be called young, if it is less than 45 then it will be called adult"
     },
     {
       "start": 825.6,
-      "duration": 8.4,
-      "text": "बुलाएंगे, मिडिल एज बुलाएंगे या फिर सीनियर बुलाएंगे। ठीक है? अ और यह हमने"
+      "duration": 5.359,
+      "text": ", middle age or"
+    },
+    {
+      "start": 827.76,
+      "duration": 6.24,
+      "text": "senior. Ok? And we have"
     },
     {
       "start": 830.959,
-      "duration": 7.201,
-      "text": "नया यहां पर क्रिएट कर लिया एज ग्रुप बोल के फीचर। उसके बाद जैसा मैंने बोला था"
+      "duration": 5.361,
+      "text": "created this new feature here by calling age group."
+    },
+    {
+      "start": 834.0,
+      "duration": 4.16,
+      "text": "After that, as I said,"
     },
     {
       "start": 836.32,
-      "duration": 6.72,
-      "text": "लाइफस्टाइल रिस्क बोल के हम एक फीचर क्रिएट करेंगे जो कि दो चीजों पे डिपेंड"
+      "duration": 4.319,
+      "text": "we will create a feature called lifestyle risk"
+    },
+    {
+      "start": 838.16,
+      "duration": 4.88,
+      "text": "which will depend on two things."
     },
     {
       "start": 840.639,
-      "duration": 8.88,
-      "text": "करेगा। पहला यूजर स्मोकर है कि नहीं और सेकंड उसका बीएएमआई कितना है। ठीक है? तो"
+      "duration": 5.44,
+      "text": "First, whether the user is a smoker or not and"
+    },
+    {
+      "start": 843.04,
+      "duration": 6.479,
+      "text": "second, what is his BMI. Ok? So"
     },
     {
       "start": 846.079,
-      "duration": 10.081,
-      "text": "अगर स्मोकर है और बीएएमआई 30 से ज्यादा है तो हाई रिस्क अगर स्मोकर है बट बीएमआई 27"
+      "duration": 6.88,
+      "text": "if you are a smoker and your BMI is more than 30"
+    },
+    {
+      "start": 849.519,
+      "duration": 6.641,
+      "text": "then you have high risk. If you are a smoker but your BMI is"
     },
     {
       "start": 852.959,
-      "duration": 8.0,
-      "text": "से ज्यादा है, 30 से कम है तो फिर मीडियम एल्स लो। ठीक है? तो यह हमारा लाइफस्टाइल"
+      "duration": 5.761,
+      "text": "more than 27 or less than 30 then you should take medium"
+    },
+    {
+      "start": 856.16,
+      "duration": 4.799,
+      "text": "risk. Ok? So this"
     },
     {
       "start": 858.72,
-      "duration": 7.6,
-      "text": "रिस्क का लॉजिक है और नेक्स्ट स्टेप में हमने वो फीचर भी बना लिया। ठीक है? उसके"
+      "duration": 4.96,
+      "text": "is our logic of lifestyle risk and in the next step"
+    },
+    {
+      "start": 860.959,
+      "duration": 5.361,
+      "text": "we also created that feature. Ok?"
     },
     {
       "start": 863.68,
-      "duration": 8.08,
-      "text": "बाद मैंने आपको बताया था कि हम हर सिटी को अलग से प्रोसेस ना करके सिटी को टायर्स"
+      "duration": 5.519,
+      "text": "After that I told you that instead of processing each city separately, we will"
     },
     {
       "start": 869.199,
-      "duration": 9.841,
-      "text": "में डिवाइड कर देंगे। तो यहां पे मैंने दो लिस्ट बना रखी है। टायर वन सिटीज वि इज"
+      "duration": 6.08,
+      "text": "divide the city into tiers. So here I have"
+    },
+    {
+      "start": 871.76,
+      "duration": 7.28,
+      "text": "made two lists. Tier one cities will do this"
     },
     {
       "start": 875.279,
-      "duration": 8.601,
-      "text": "दिस एंड टायर टू सिटीज वि इज दिस। ठीक है? इसके अलावा कुछ भी सिटी अगर आप डालोगे वो"
+      "duration": 6.0,
+      "text": "and tier two cities will do this. Ok?"
+    },
+    {
+      "start": 879.04,
+      "duration": 4.84,
+      "text": "Apart from this, if you enter any city, it will"
     },
     {
       "start": 881.279,
-      "duration": 10.961,
-      "text": "टायर थ्री में चली जाएगी। ठीक है? तो यह हमारा फंक्शन है। और यह हमारा नया"
+      "duration": 7.36,
+      "text": "go into Tier 3. Ok?"
+    },
+    {
+      "start": 883.88,
+      "duration": 8.36,
+      "text": "So this is our function. And this became our new"
     },
     {
       "start": 888.639,
-      "duration": 8.481,
-      "text": "फीचर बन गया। ठीक है? और ये सारे नए फीचर्स बनने के बाद मैं कुछ पुराने फीचर्स"
+      "duration": 6.481,
+      "text": "feature. Ok? And"
+    },
+    {
+      "start": 892.24,
+      "duration": 4.88,
+      "text": "after creating all these new features, I am deleting some old features."
     },
     {
       "start": 895.12,
-      "duration": 6.8,
-      "text": "को डिलीट कर रहा हूं। जैसे कि एज की अब जरूरत नहीं है। उसके बदले एज ग्रुप आ गया।"
+      "duration": 4.719,
+      "text": "As such Edge is"
+    },
+    {
+      "start": 897.12,
+      "duration": 4.8,
+      "text": "no longer needed. Age group came in its place."
     },
     {
       "start": 899.839,
-      "duration": 6.961,
-      "text": "वेट और हाइट की जरूरत नहीं है। उसके बदले बीएमआई आ गया। स्मोकर की जरूरत नहीं है।"
+      "duration": 4.481,
+      "text": "Weight and height are not required."
+    },
+    {
+      "start": 901.92,
+      "duration": 4.88,
+      "text": "BMI came in its place. No smoker needed. In"
     },
     {
       "start": 904.32,
-      "duration": 8.0,
-      "text": "उसके बदले लाइफस्टाइल आ गया। और सिटी की जरूरत नहीं है। उसके बदले सिटी टायर आ"
+      "duration": 4.56,
+      "text": "its place came lifestyle. And there"
+    },
+    {
+      "start": 906.8,
+      "duration": 5.52,
+      "text": "is no need for a city. City tyre came in its place."
     },
     {
       "start": 908.88,
-      "duration": 9.759,
-      "text": "गया। और ये करने के बाद हमारे पास जो नया डेटा सेट है वो ऐसा दिखाई देता है। ठीक"
+      "duration": 6.88,
+      "text": "And after doing this, the new"
+    },
+    {
+      "start": 912.32,
+      "duration": 6.319,
+      "text": "data set we have looks like this. Ok"
     },
     {
       "start": 915.76,
-      "duration": 7.519,
-      "text": "है? इस डेटा सेट पे हमें मॉडल को ट्रेन करना है। तो सबसे पहले हमने क्या किया कि"
+      "duration": 5.04,
+      "text": "? We have to train the model on this data set."
+    },
+    {
+      "start": 918.639,
+      "duration": 4.64,
+      "text": "So the first thing we did was"
     },
     {
       "start": 920.8,
-      "duration": 8.719,
-      "text": "हमारा एक्स और y हमने अलग-अलग कर लिया। ठीक है? यह हमारा टारगेट कॉलम है। यह बन"
+      "duration": 5.68,
+      "text": "we separated our x and y."
+    },
+    {
+      "start": 923.279,
+      "duration": 6.24,
+      "text": "Ok? This is our target column. These became all"
     },
     {
       "start": 926.48,
-      "duration": 10.96,
-      "text": "गए हमारे सारे के सारे फीचर्स। ठीक है? तो, इस कोड को रन कर लिया। यह रहा हमारा"
+      "duration": 6.84,
+      "text": "our features. Ok?"
+    },
+    {
+      "start": 929.519,
+      "duration": 7.921,
+      "text": "So, I ran this code. Here's our"
     },
     {
       "start": 933.32,
-      "duration": 7.879,
-      "text": "एक्स और यह रहा हमारा y। ठीक है? अब नेक्स्ट स्टेप में मैंने क्या किया है कि"
+      "duration": 5.639,
+      "text": "x and here's our y. Ok? Now"
     },
     {
-      "start": 938.959,
-      "duration": 6.0,
-      "text": "अपने सारे कैटेगोरिकल फीचर्स को एक अलग लिस्ट में डाल दिया है और न्यूमेरिकल"
+      "start": 937.44,
+      "duration": 3.759,
+      "text": "what I did in the next step is that I"
+    },
+    {
+      "start": 941.199,
+      "duration": 3.76,
+      "text": "put all my categorical features in a separate list and"
     },
     {
       "start": 942.8,
-      "duration": 6.8,
-      "text": "फीचर्स को अलग लिस्ट में डाल दिया है। ऐसा हमने इसलिए किया बिकॉज़ आगे चलके हम"
+      "duration": 4.399,
+      "text": "put the numerical features in a separate list."
     },
     {
-      "start": 947.199,
-      "duration": 7.521,
-      "text": "कैटेगोिकल फीचर्स के ऊपर वन हॉट एनकोडिंग लगाने वाले हैं। तो हमने क्या किया? एक"
+      "start": 944.959,
+      "duration": 4.641,
+      "text": "We did this because later on we are going to"
+    },
+    {
+      "start": 949.6,
+      "duration": 5.12,
+      "text": "apply one hot encoding on the categorical features. So what did we do?"
     },
     {
       "start": 952.399,
-      "duration": 6.88,
-      "text": "कॉलम ट्रांसफार्मर बनाया और उस कॉलम ट्रांसफार्मर में सारे कैटेगोरिकल फीचर्स"
+      "duration": 4.481,
+      "text": "Created a column transformer and"
     },
     {
       "start": 956.88,
-      "duration": 6.48,
-      "text": "के ऊपर वन हॉट एनकोडिंग लगा दी और सारे न्यूमेरिकल फीचर्स को एज़ इट इज़ पास थ्रू"
+      "duration": 4.72,
+      "text": "applied one hot encoding to all the categorical features in that column transformer and passed through all the"
     },
     {
-      "start": 961.6,
-      "duration": 6.08,
-      "text": "करा दिया। उसके ऊपर कोई ट्रांसफॉर्मेशन नहीं किया। ठीक है? फिर हमने एक साइकिट"
+      "start": 959.279,
+      "duration": 4.081,
+      "text": "numerical features as it is."
+    },
+    {
+      "start": 963.36,
+      "duration": 4.32,
+      "text": "No transformation was done on it. Ok? Then we"
     },
     {
       "start": 965.519,
-      "duration": 6.801,
-      "text": "लर्न पाइपलाइन बनाई जिसमें हम दो स्टेप्स कंडक्ट कर रहे हैं। पहला ये कॉलम"
+      "duration": 4.32,
+      "text": "created a SciKitLearn pipeline in which we are conducting two steps."
+    },
+    {
+      "start": 967.68,
+      "duration": 4.64,
+      "text": "First, this column is the"
     },
     {
       "start": 969.839,
-      "duration": 7.041,
-      "text": "ट्रांसफार्मर वाला और सेकंड हम उस ट्रांसफॉर्म डेटा के ऊपर एक रैंडम फॉरेस्ट"
+      "duration": 5.12,
+      "text": "transformer and second, we are training"
+    },
+    {
+      "start": 972.32,
+      "duration": 4.56,
+      "text": "a random forest classifier on that transformed data."
     },
     {
       "start": 974.959,
-      "duration": 6.32,
-      "text": "क्लासिफायर को ट्रेन कर रहे हैं। ठीक है? तो हम जो एल्गोरिदम यूज़ कर रहे हैं वो"
+      "duration": 3.44,
+      "text": "Ok?"
+    },
+    {
+      "start": 976.88,
+      "duration": 4.399,
+      "text": "So the algorithm we're using is a"
     },
     {
       "start": 978.399,
-      "duration": 7.12,
-      "text": "रैंडम फॉरेस्ट क्लासिफायर है। सो ये बन गई हमारी पाइपलाइन और अब हमारा लास्ट स्टेप"
+      "duration": 4.961,
+      "text": "random forest classifier. So this is"
+    },
+    {
+      "start": 981.279,
+      "duration": 4.24,
+      "text": "our pipeline and now our last step"
     },
     {
       "start": 983.36,
-      "duration": 8.719,
-      "text": "है हमने ट्रेन टेस्ट स्प्लिट करके अपने एक्स व को ट्रेनिंग और टेस्ट डेटा में कट"
+      "duration": 6.08,
+      "text": "is we"
+    },
+    {
+      "start": 985.519,
+      "duration": 6.56,
+      "text": "cut our X data into training and test data by using train test split"
     },
     {
       "start": 989.44,
-      "duration": 9.199,
-      "text": "किया और फिर पाइपलाइन डॉट फिट को कॉल करके मॉडल को ट्रेन कर लिया। ठीक है? और ये रहा"
+      "duration": 6.0,
+      "text": "and then"
+    },
+    {
+      "start": 992.079,
+      "duration": 6.56,
+      "text": "train the model by calling pipeline.fit. Ok? And here is the"
     },
     {
       "start": 995.44,
-      "duration": 7.199,
-      "text": "मॉडल का एक्यूरेसी। फिलहाल यह 90% के आसपास है। बट अगेन जैसा मैंने बोला यह टॉय"
+      "duration": 5.519,
+      "text": "accuracy of the model. At present it"
+    },
+    {
+      "start": 998.639,
+      "duration": 4.0,
+      "text": "is around 90%. But again, as I said, this"
     },
     {
       "start": 1000.959,
-      "duration": 5.841,
-      "text": "डेटा सेट है। बहुत बड़ा डेटा सेट नहीं है। तो ये जो रिजल्ट्स हैं ये बहुत रिलायबल"
+      "duration": 3.521,
+      "text": "is a toy data set. Not a very large data set."
+    },
+    {
+      "start": 1002.639,
+      "duration": 4.161,
+      "text": "So these results are not very reliable."
     },
     {
       "start": 1004.48,
-      "duration": 6.719,
-      "text": "नहीं है। ये पूरा का पूरा प्रोजेक्ट आप एक डमी प्रोजेक्ट की तरह ही लो। फ्लो सही है"
+      "duration": 4.64,
+      "text": "You should consider this entire project as a"
+    },
+    {
+      "start": 1006.8,
+      "duration": 4.399,
+      "text": "dummy project. The flow is correct"
     },
     {
       "start": 1009.12,
-      "duration": 7.2,
-      "text": "बट रिजल्ट्स के ऊपर आप रिलाई नहीं कर सकते। ठीक है? तो हमारा मॉडल बन चुका है।"
+      "duration": 5.279,
+      "text": "but you cannot rely on the results."
+    },
+    {
+      "start": 1011.199,
+      "duration": 5.121,
+      "text": "Ok? So our model is ready."
     },
     {
       "start": 1014.399,
-      "duration": 10.16,
-      "text": "अब हमें बस क्या करना है? लास्ट स्टेप में यह जो मॉडल बना है इसको हमें डाउनलोड कर"
+      "duration": 5.921,
+      "text": "Now what do we just have to do?"
+    },
+    {
+      "start": 1016.32,
+      "duration": 8.239,
+      "text": "We have to download this model which was created in the last step."
     },
     {
       "start": 1020.32,
-      "duration": 9.519,
-      "text": "लेना है। तो यहां पे अगर आप जाके रिफ्रेश करो तो यह बन गई हमारी मॉडल डॉट पीके"
+      "duration": 6.639,
+      "text": "So here if you go and refresh,"
+    },
+    {
+      "start": 1024.559,
+      "duration": 5.28,
+      "text": "this is our model.pk"
     },
     {
       "start": 1026.959,
-      "duration": 9.201,
-      "text": "फाइल। इसको हम लोग डाउनलोड कर लेंगे हमारी मशीन के अंदर। ठीक है? और इसी मॉडल फाइल"
+      "duration": 6.641,
+      "text": "file. We will download this"
+    },
+    {
+      "start": 1029.839,
+      "duration": 6.321,
+      "text": "into our machine. Ok? And what will we do with this model file"
     },
     {
       "start": 1033.6,
-      "duration": 10.079,
-      "text": "के ऊपर हम लोग क्या करेंगे? अपना एपीआई बिल्ड करेंगे। ठीक है? तो वि दैट हमारा यह"
+      "duration": 6.88,
+      "text": "? Build your own API."
+    },
+    {
+      "start": 1036.16,
+      "duration": 7.519,
+      "text": "Ok? So with that, our"
     },
     {
       "start": 1040.48,
-      "duration": 7.76,
-      "text": "जो स्टेप वन है, यह कंप्लीट हो गया। ठीक है? मॉडल बिल्डिंग हमने कंप्लीट कर ली और"
+      "duration": 5.76,
+      "text": "step one is complete. Ok"
+    },
+    {
+      "start": 1043.679,
+      "duration": 4.561,
+      "text": "? We have completed the model building and"
     },
     {
       "start": 1046.24,
-      "duration": 7.84,
-      "text": "इसका आउटपुट हमें क्या मिला कि हमारे पास एक मॉडल डॉट पीके फाइल आ गई है। तो दिस"
+      "duration": 4.799,
+      "text": "the output we got is that we have"
+    },
+    {
+      "start": 1048.24,
+      "duration": 5.84,
+      "text": "a model.pk file. So this"
     },
     {
       "start": 1051.039,
-      "duration": 9.201,
-      "text": "स्टेप इज़ डन। नाउ वी विल मूव ऑन टू स्टेप नंबर टू जहां पे हम फास्ट एपीआई यूज़ करके"
+      "duration": 5.841,
+      "text": "step is done. Now we will move on to step"
+    },
+    {
+      "start": 1054.08,
+      "duration": 6.16,
+      "text": "number two where we will"
     },
     {
       "start": 1056.88,
-      "duration": 10.4,
-      "text": "इस मॉडल के लिए एक एपीआई एंड पॉइंट क्रिएट करेंगे। तो इस पॉइंट पे हमारे पास एक मॉडल"
+      "duration": 7.76,
+      "text": "create an API endpoint for this model using the Fast API."
+    },
+    {
+      "start": 1060.24,
+      "duration": 7.04,
+      "text": "So at this point we have a model, a"
     },
     {
       "start": 1064.64,
-      "duration": 9.039,
-      "text": "है मशीन लर्निंग मॉडल जो कि ट्रेन हो चुका है और हमें इस एमएल मॉडल के प्रेडिक्शन के"
+      "duration": 5.84,
+      "text": "machine learning model, which has been trained"
+    },
+    {
+      "start": 1067.28,
+      "duration": 6.399,
+      "text": "and we need to write an API endpoint for the predictions of this ML model."
     },
     {
       "start": 1070.48,
-      "duration": 6.96,
-      "text": "लिए एक एपीआई एंड पॉइंट लिखना है। ठीक है? ये जो एपीआई एंड पॉइंट हम लिखेंगे इसके"
+      "duration": 5.52,
+      "text": "Ok?"
     },
     {
       "start": 1076.0,
-      "duration": 7.36,
-      "text": "बारे में कुछ चीजें मैं क्लियर करना चाहूंगा। सबसे पहली चीज ये होगी कि यहां"
+      "duration": 3.44,
+      "text": "I would like to clarify a few things about this API endpoint that we will write."
+    },
+    {
+      "start": 1077.44,
+      "duration": 5.92,
+      "text": "The first thing will be that the"
     },
     {
       "start": 1079.44,
-      "duration": 8.64,
-      "text": "पे हम जो http मेथड यूज़ करेंगे वो होगा पोस्ट। यहां पे आपके दिमाग में कंफ्यूजन आ"
+      "duration": 6.64,
+      "text": "http method we will use here will be"
+    },
+    {
+      "start": 1083.36,
+      "duration": 4.72,
+      "text": "post. This is where confusion may arise in your mind"
     },
     {
       "start": 1086.08,
-      "duration": 6.479,
-      "text": "सकता है अगर आप यह प्लेलिस्ट पूरा फॉलो कर रहे हो। कुछ वीडियोस पहले मैंने आपको"
+      "duration": 3.92,
+      "text": "if you are following this playlist completely. A"
+    },
+    {
+      "start": 1088.08,
+      "duration": 4.479,
+      "text": "few videos ago, I"
     },
     {
       "start": 1090.0,
-      "duration": 8.0,
-      "text": "बताया था कि http मेथड पोस्ट आप तब यूज करते हो जब आप सर्वर पर कोई नया रिसोर्स"
+      "duration": 5.28,
+      "text": "told you that you use the http method post"
+    },
+    {
+      "start": 1092.559,
+      "duration": 5.441,
+      "text": "when you're creating a new resource on the server."
     },
     {
       "start": 1095.28,
-      "duration": 7.519,
-      "text": "क्रिएट कर रहे होते हो। अब यहां पर तो हम कोई नया यूजर या नया रिसोर्स क्रिएट नहीं"
+      "duration": 5.2,
+      "text": "Now here we are"
+    },
+    {
+      "start": 1098.0,
+      "duration": 4.799,
+      "text": "not creating any new user or new resource."
     },
     {
       "start": 1100.48,
-      "duration": 6.319,
-      "text": "कर रहे हैं। तो फिर हम पोस्ट क्यों यूज़ कर रहे हैं? तो यहां पे बस मैं थोड़ा सा"
+      "duration": 4.319,
+      "text": "Then why are we using post"
+    },
+    {
+      "start": 1102.799,
+      "duration": 4.0,
+      "text": "? So here I would just like to"
     },
     {
       "start": 1104.799,
-      "duration": 6.88,
-      "text": "क्लेरिफाई करना चाहूंगा कि पहले जो मैंने आपको डेफिनेशन दी थी वो एक कंप्लीट"
+      "duration": 4.641,
+      "text": "clarify a little bit that the"
+    },
+    {
+      "start": 1106.799,
+      "duration": 4.88,
+      "text": "definition I gave you earlier was not a complete"
     },
     {
       "start": 1109.44,
-      "duration": 9.2,
-      "text": "डेफिनेशन नहीं थी। एक ब्रॉड और कंप्लीट डेफिनेशन यह होगी कि पोस्ट एचटीटीपी मेथड"
+      "duration": 5.76,
+      "text": "definition. A broad and complete"
+    },
+    {
+      "start": 1111.679,
+      "duration": 6.961,
+      "text": "definition would be that you use the POST HTTP method"
     },
     {
       "start": 1115.2,
-      "duration": 11.2,
-      "text": "आप तब यूज करते हो जब आपका क्लाइंट आपके सर्वर के पास कुछ डाटा सेंड करना"
+      "duration": 7.44,
+      "text": "when your client"
     },
     {
       "start": 1122.64,
-      "duration": 8.64,
-      "text": "चाहता है। ठीक है? और क्लाइंट चाहता है कि सर्वर इस डेटा को प्रोसेस करें। अब"
+      "duration": 6.24,
+      "text": "wants to send some data to your server. Ok? And the client wants the"
+    },
+    {
+      "start": 1126.4,
+      "duration": 4.88,
+      "text": "server to process this data. Now"
     },
     {
       "start": 1128.88,
-      "duration": 7.679,
-      "text": "प्रोसेस करके कई चीजें की जा सकती है। एक नया रिसोर्स क्रिएट किया जा सकता है या"
+      "duration": 5.12,
+      "text": "many things can be done by processing. A"
+    },
+    {
+      "start": 1131.28,
+      "duration": 5.279,
+      "text": "new resource can be created or"
     },
     {
       "start": 1134.0,
-      "duration": 8.0,
-      "text": "फिर एक एमएल मॉडल का इनफेंस कराया जा सकता है। ये सारी चीजें पॉसिबल है। ठीक है? तो"
+      "duration": 5.919,
+      "text": "an ML model can be inferred."
+    },
+    {
+      "start": 1136.559,
+      "duration": 5.441,
+      "text": "All these things are possible. Ok? So"
     },
     {
       "start": 1139.919,
-      "duration": 6.0,
-      "text": "गोइंग फॉरवर्ड आप हमेशा देखोगे कि कभी भी आप किसी भी मशीन लर्निंग मॉडल या डीप"
+      "duration": 3.841,
+      "text": "going forward you will always see that whenever"
+    },
+    {
+      "start": 1142.0,
+      "duration": 3.919,
+      "text": "you are writing prediction API of any machine learning model or deep"
     },
     {
       "start": 1143.76,
-      "duration": 9.44,
-      "text": "लर्निंग मॉडल का अगर आप प्रेडिक्शन एपीआई लिख रहे हो इनफास्ट एपीआई तो आप http मेथड"
+      "duration": 5.6,
+      "text": "learning model,"
+    },
+    {
+      "start": 1145.919,
+      "duration": 7.281,
+      "text": "in fast API then you will keep http method as"
     },
     {
       "start": 1149.36,
-      "duration": 11.36,
-      "text": "पोस्ट ही रखोगे। ठीक है? तो फंडा यह है कि हमें एक एंड पॉइंट बनाना है और एंड पॉइंट"
+      "duration": 7.679,
+      "text": "post only. Ok? So the funda is that"
+    },
+    {
+      "start": 1153.2,
+      "duration": 7.52,
+      "text": "we have to create an endpoint and the"
     },
     {
       "start": 1157.039,
-      "duration": 11.841,
-      "text": "का यूआरएल होगा स्लश प्रेडिक्ट। इसको बनाएंगे विद द हेल्प ऑफ पोस्ट http मेथड"
+      "duration": 7.441,
+      "text": "URL of the endpoint will be slush predict. We"
+    },
+    {
+      "start": 1160.72,
+      "duration": 8.16,
+      "text": "will create this with the help of post http method"
     },
     {
       "start": 1164.48,
-      "duration": 9.36,
-      "text": "और हम क्लाइंट की साइड से रिक्वेस्ट बॉडी में कुछ इनपुट भेजेंगे। क्या इनपुट"
+      "duration": 6.96,
+      "text": "and we will send some inputs in the request body from the client side."
+    },
+    {
+      "start": 1168.88,
+      "duration": 4.96,
+      "text": "What input"
     },
     {
       "start": 1171.44,
-      "duration": 8.479,
-      "text": "भेजेंगे? आई गेस आपको समझ में आ रहा है। हम किसी एक गिवन यूजर का सारा का सारा"
+      "duration": 5.92,
+      "text": "will you send? I guess you understand."
+    },
+    {
+      "start": 1173.84,
+      "duration": 6.079,
+      "text": "We will send all the input features of a given user."
     },
     {
       "start": 1177.36,
-      "duration": 7.679,
-      "text": "इनपुट फीचर्स भेजेंगे। जैसे कि उसका एज क्या है? वेट क्या है? हाइट क्या है?"
+      "duration": 4.72,
+      "text": "Like"
+    },
+    {
+      "start": 1179.919,
+      "duration": 5.12,
+      "text": "what is his age? What is weight? What is height?"
     },
     {
       "start": 1182.08,
-      "duration": 6.959,
-      "text": "इनकम, स्मोकर, सिटी, ऑक्यूपेशन। ये छह चीजें हम भेजेंगे। सात चीजें। अब आपके"
+      "duration": 4.88,
+      "text": "Income, Smoker, City, Occupation."
+    },
+    {
+      "start": 1185.039,
+      "duration": 4.0,
+      "text": "We will send these six things. Seven things. Now"
     },
     {
       "start": 1186.96,
-      "duration": 6.0,
-      "text": "दिमाग में शायद यह क्वेश्चन आ रहा होगा कि बट हमारा मॉडल तो इन फीचर्स पर ट्रेन हुआ"
+      "duration": 4.24,
+      "text": "this question might be coming to your mind that"
+    },
+    {
+      "start": 1189.039,
+      "duration": 3.921,
+      "text": "but our model is trained on these features."
     },
     {
       "start": 1191.2,
-      "duration": 8.0,
-      "text": "है। तो, हम यह फीचर्स क्यों नहीं भेज रहे? उसका रीज़न यह है कि हम यूजर से यह सारा"
+      "duration": 4.56,
+      "text": "So, why aren't we shipping these features? The"
+    },
+    {
+      "start": 1192.96,
+      "duration": 6.24,
+      "text": "reason for this is that we"
     },
     {
       "start": 1195.76,
-      "duration": 7.52,
-      "text": "कैलकुलेशन नहीं करवाना चाहते। जैसे अभी अगर हम उससे बीएमआई मांगेंगे, तो उसको बैठ"
+      "duration": 5.6,
+      "text": "don't want the user to do all these calculations. For example,"
+    },
+    {
+      "start": 1199.2,
+      "duration": 4.08,
+      "text": "if we ask him for his BMI, he will have to sit down and"
     },
     {
       "start": 1201.36,
-      "duration": 5.28,
-      "text": "के पहले अपना बीएएमआई कैलकुलेट करना पड़ेगा। अगर हम उससे सिटी का टायर"
+      "duration": 3.52,
+      "text": "calculate his BMI first."
+    },
+    {
+      "start": 1203.28,
+      "duration": 3.36,
+      "text": "If we ask him for the tyre of his city,"
     },
     {
       "start": 1204.88,
-      "duration": 6.0,
-      "text": "मांगेंगे तो उसको जाके पहले देखना पड़ेगा कि उसकी सिटी कौन से टायर में गिरती है।"
+      "duration": 4.08,
+      "text": "he will have to go and first see"
+    },
+    {
+      "start": 1206.64,
+      "duration": 4.24,
+      "text": "which tyre his city falls under."
     },
     {
       "start": 1208.96,
-      "duration": 5.76,
-      "text": "ठीक है? सिमिलरली लाइफस्टाइल रिस्क कैलकुलेट करने के लिए उसको बीएएमआई"
+      "duration": 3.52,
+      "text": "Ok? Similarly, to calculate lifestyle risk,"
+    },
+    {
+      "start": 1210.88,
+      "duration": 3.84,
+      "text": "he would need to"
     },
     {
       "start": 1212.48,
-      "duration": 6.72,
-      "text": "निकालना पड़ेगा और फिर एक एफएल स्टेटमेंट चलाना पड़ेगा। तो इतनी मेहनत हम यूजर से"
+      "duration": 4.16,
+      "text": "calculate BAMI and then run an FL statement."
+    },
+    {
+      "start": 1214.72,
+      "duration": 4.48,
+      "text": "So we don't want the user to work so hard."
     },
     {
       "start": 1216.64,
-      "duration": 9.039,
-      "text": "नहीं कराना चाहते। यूजर से हम यह रॉ डेटा मंगाएंगे उसके बारे में और फिर हम अपने"
+      "duration": 5.76,
+      "text": "We will ask the user for this raw data"
+    },
+    {
+      "start": 1219.2,
+      "duration": 6.479,
+      "text": "about them and then we will"
     },
     {
       "start": 1222.4,
-      "duration": 10.32,
-      "text": "एंड पॉइंट के अंदर ये फीचर्स बिल्ड करेंगे। ठीक है? तो दिस इज गोइंग टू बी द"
+      "duration": 7.04,
+      "text": "build these features inside our endpoint."
+    },
+    {
+      "start": 1225.679,
+      "duration": 7.041,
+      "text": "Ok? So this is going to be the"
     },
     {
       "start": 1229.44,
-      "duration": 8.0,
-      "text": "फ्लो। यूजर हमें ये सेट ऑफ फीचर्स देगा। हम फर्स्ट ऑफ़ ऑल इनको वैलिडेट करेंगे कि"
+      "duration": 6.0,
+      "text": "flow. The user will give us this set of features."
+    },
+    {
+      "start": 1232.72,
+      "duration": 4.72,
+      "text": "We will first of all validate these that"
     },
     {
       "start": 1235.44,
-      "duration": 6.8,
-      "text": "हां, यह वैल्यूज़ सही से मिल रही हैं। जब ये वैल्यूज़ सही से वैलिडेट हो जाएंगी, फिर"
+      "duration": 4.239,
+      "text": "yes, these values ​​are matching correctly. Once"
+    },
+    {
+      "start": 1237.44,
+      "duration": 4.8,
+      "text": "these values ​​are validated correctly, then"
     },
     {
       "start": 1239.679,
-      "duration": 8.961,
-      "text": "हम इन वैल्यूज़ की हेल्प से ये फीचर्स कैलकुलेट करेंगे। और फिर इन फीचर्स के"
+      "duration": 5.041,
+      "text": "we will calculate these features with the help of these values."
+    },
+    {
+      "start": 1242.24,
+      "duration": 6.4,
+      "text": "And then"
     },
     {
       "start": 1244.72,
-      "duration": 9.839,
-      "text": "मिलने के बाद हम इन फीचर्स को एमएल मॉडल के पास भेजेंगे। एमएल मॉडल प्रेडिक्शन"
+      "duration": 5.92,
+      "text": "after getting these features, we will send these features to the ML model. The"
+    },
+    {
+      "start": 1248.64,
+      "duration": 5.919,
+      "text": "ML model will make a prediction"
     },
     {
       "start": 1250.64,
-      "duration": 9.279,
-      "text": "करेगा और यह पलट के हमें jसon में उस प्रेडिक्शन का आउटपुट बताएगा। हाई, लो या"
+      "duration": 6.8,
+      "text": "and it will return the"
+    },
+    {
+      "start": 1254.559,
+      "duration": 5.36,
+      "text": "output of that prediction in JSON. High, low or"
     },
     {
       "start": 1257.44,
-      "duration": 6.719,
-      "text": "मीडियम जो भी है। ठीक है? तो ये बहुत इंपॉर्टेंट डिस्कशन था जो मुझे आपके साथ"
+      "duration": 4.239,
+      "text": "medium, whatever it is. Ok? So this was a very"
+    },
+    {
+      "start": 1259.919,
+      "duration": 4.24,
+      "text": "important discussion that I had to have with you"
     },
     {
       "start": 1261.679,
-      "duration": 8.561,
-      "text": "करना था कि http मेथड पोस्ट है। क्यों है पोस्ट? बता दिया मैंने। और सेकंड हम यह"
+      "duration": 6.24,
+      "text": "that the http method is post. Why is this a"
+    },
+    {
+      "start": 1264.159,
+      "duration": 6.081,
+      "text": "post? I told you. And second, we are"
     },
     {
       "start": 1267.919,
-      "duration": 8.64,
-      "text": "फीचर्स यूजर से मांग रहे हैं ना कि यह वाले। ठीक है? आई होप आपको यहां तक चीजें"
+      "duration": 5.12,
+      "text": "asking the user for these features, not these"
+    },
+    {
+      "start": 1270.24,
+      "duration": 6.319,
+      "text": "ones. Ok? I hope things are"
     },
     {
       "start": 1273.039,
-      "duration": 8.561,
-      "text": "क्लियर हो गई। अब हम कोडिंग करना स्टार्ट करते हैं और अपना एपीआई एंड पॉइंट बनाते"
+      "duration": 6.321,
+      "text": "clear to you till here. Now let's start coding"
+    },
+    {
+      "start": 1276.559,
+      "duration": 5.041,
+      "text": "and create our API endpoint."
     },
     {
       "start": 1279.36,
-      "duration": 6.24,
-      "text": "हैं। तो गाइस कोडिंग स्टार्ट करने के पहले मैं आपको थोड़ा सेटअप समझा देता हूं। हम"
+      "duration": 4.24,
+      "text": "So Guys, before we start coding, let me"
+    },
+    {
+      "start": 1281.6,
+      "duration": 4.0,
+      "text": "explain the setup a little bit. We're"
     },
     {
       "start": 1283.6,
-      "duration": 6.319,
-      "text": "एग्जैक्टली उसी फोल्डर में काम कर रहे हैं जिस फोल्डर को हम लोग इस पूरे प्लेलिस्ट"
+      "duration": 3.76,
+      "text": "working in the exact same folder"
+    },
+    {
+      "start": 1285.6,
+      "duration": 4.319,
+      "text": "we were using throughout this playlist."
     },
     {
       "start": 1287.36,
-      "duration": 7.76,
-      "text": "में यूज़ कर रहे थे। सो यू कैन सी main डॉटpy जो हमने पेशेंट मैनेजमेंट सिस्टम"
+      "duration": 4.96,
+      "text": "So you can see main.py which"
     },
     {
       "start": 1292.32,
-      "duration": 7.28,
-      "text": "बनाया था उसकी फाइल है। पेशेंट्स डॉट json ये फाइल भी है। यहां पर ही मैंने क्या"
+      "duration": 4.719,
+      "text": "is the file of the patient management system that we created. There's"
+    },
+    {
+      "start": 1295.12,
+      "duration": 4.48,
+      "text": "also this file patients.json. What have I"
     },
     {
       "start": 1297.039,
-      "duration": 6.561,
-      "text": "किया है? एक नई फाइल बना ली है app.py हालांकि यह रिकमेंडेड नहीं है। सही तरीका"
+      "duration": 4.721,
+      "text": "done here? I have created a new file app.py"
+    },
+    {
+      "start": 1299.6,
+      "duration": 4.0,
+      "text": "although this is not recommended. The correct way would have been to"
     },
     {
       "start": 1301.76,
-      "duration": 5.44,
-      "text": "यह होता कि हम एक अलग फोल्डर में काम करते। बट सिंस अभी हम कंटिन्यूएशन में काम"
+      "duration": 4.0,
+      "text": "work in a separate folder."
+    },
+    {
+      "start": 1303.6,
+      "duration": 3.6,
+      "text": "But since we are currently working in continuation,"
     },
     {
       "start": 1305.76,
-      "duration": 5.039,
-      "text": "कर रहे हैं तो मैं यहां पे सारा चीज कर रहा हूं। बट गोइंग फॉरवर्ड अगले वीडियो"
+      "duration": 3.279,
+      "text": "I am doing everything here."
+    },
+    {
+      "start": 1307.2,
+      "duration": 3.599,
+      "text": "But going forward in the next video"
     },
     {
       "start": 1309.039,
-      "duration": 5.76,
-      "text": "में जब हम डॉकर्स के ऊपर काम करेंगे तो मैं आपको दिखाऊंगा कि अलग फोल्डर में ये"
+      "duration": 3.601,
+      "text": "when we work on Docker,"
+    },
+    {
+      "start": 1310.799,
+      "duration": 4.0,
+      "text": "I will show you how to do all this work in a separate folder."
     },
     {
       "start": 1312.64,
-      "duration": 6.56,
-      "text": "सारा काम कैसे करना है। ठीक है? बट फिलहाल सेम फोल्डर में हमने ये फाइल बना ली। यहीं"
+      "duration": 4.24,
+      "text": "Ok? But for now"
+    },
+    {
+      "start": 1314.799,
+      "duration": 4.401,
+      "text": "we have created this file in the same folder. This is where"
     },
     {
       "start": 1316.88,
-      "duration": 6.56,
-      "text": "पे हम अपना एंड पॉइंट क्रिएट करेंगे। इसके अलावा एक और इंपॉर्टेंट काम मैंने कर लिया"
+      "duration": 4.08,
+      "text": "we will create our end point."
     },
     {
-      "start": 1320.96,
-      "duration": 6.48,
-      "text": "है। वो जो मॉडल डॉट पीके फाइल हमने डाउनलोड की थी Google कोलैब से उसको मैंने"
+      "start": 1319.2,
+      "duration": 4.24,
+      "text": "Apart from this, I have done another important work."
+    },
+    {
+      "start": 1323.44,
+      "duration": 4.0,
+      "text": "I have pasted the model.pk file that we downloaded from Google Collab"
     },
     {
       "start": 1325.52,
-      "duration": 6.159,
-      "text": "इस फोल्डर के अंदर पेस्ट कर लिया है। ठीक है? तो ये दो इंपॉर्टेंट चीजें हमने कर"
+      "duration": 3.92,
+      "text": "into this folder. Ok"
+    },
+    {
+      "start": 1327.44,
+      "duration": 4.239,
+      "text": "? So we have done these two important things."
     },
     {
       "start": 1329.44,
-      "duration": 8.16,
-      "text": "ली। अब हम क्या करेंगे? सबसे पहले स्टेप नंबर वन में वी विल इंपोर्ट द ML मॉडल। तो"
+      "duration": 6.16,
+      "text": "what shall we do now? First of all,"
+    },
+    {
+      "start": 1331.679,
+      "duration": 5.921,
+      "text": "in step number one, we will import the ML model. So for this"
     },
     {
       "start": 1335.6,
-      "duration": 9.04,
-      "text": "इसके लिए हमें सिंपल फाइल हैंडलिंग यूज़ करना है। हम लिखेंगे वि ओपन हमारी फाइल का"
+      "duration": 5.6,
+      "text": "we have to use simple file handling."
+    },
+    {
+      "start": 1337.6,
+      "duration": 7.04,
+      "text": "We will write v open our file"
     },
     {
       "start": 1341.2,
-      "duration": 7.68,
-      "text": "नाम मॉडल डॉट PKL और यहां पे आप बताओगे कि आप किस मोड में ओपन करना चाहते हो। हम रीड"
+      "duration": 5.839,
+      "text": "name model dot PKL and here you will tell"
+    },
+    {
+      "start": 1344.64,
+      "duration": 4.24,
+      "text": "in which mode you want to open it. We"
     },
     {
       "start": 1347.039,
-      "duration": 11.081,
-      "text": "बाइनरी मोड में ओपन करना चाहते हैं। बिकॉज़ दिस इज अ बाइनरी फाइल एज एफ और यहां पे हम"
+      "duration": 6.961,
+      "text": "want to open in read binary mode. Because"
+    },
+    {
+      "start": 1348.88,
+      "duration": 9.24,
+      "text": "this is a binary file as f and here we"
     },
     {
       "start": 1354.0,
-      "duration": 9.76,
-      "text": "लिखेंगे मॉडल इज इक्वल टू पिकल डॉट लोड और लोड में हम एफ अपना हैंडलर पास कर"
+      "duration": 8.24,
+      "text": "will write model is equal to pickle dot"
+    },
+    {
+      "start": 1358.12,
+      "duration": 5.64,
+      "text": "load and in load we will pass f our handler."
     },
     {
       "start": 1362.24,
-      "duration": 6.72,
-      "text": "देंगे। ठीक है? यहां पे मैंने पिकल इंपोर्ट कर रखा है। तो इस स्टेप में हमने"
+      "duration": 4.24,
+      "text": "Ok? I have imported pickle here."
+    },
+    {
+      "start": 1363.76,
+      "duration": 5.2,
+      "text": "So in this step we have"
     },
     {
       "start": 1366.48,
-      "duration": 11.679,
-      "text": "अपना एमएल मॉडल इंपोर्ट कर लिया है। अब हम क्या करेंगे? हम एकस्ट एपीआई ऐप ऑब्जेक्ट"
+      "duration": 5.96,
+      "text": "imported our ML model."
+    },
+    {
+      "start": 1368.96,
+      "duration": 9.199,
+      "text": "what shall we do now? We will create a cast API app object."
     },
     {
       "start": 1372.44,
-      "duration": 10.44,
-      "text": "बनाएंगे। सो ऐप इज इक्वल टू फास्ट एपीआई। ठीक है? यह हमने अपना ऐप ऑब्जेक्ट बना"
+      "duration": 7.8,
+      "text": "So app is equal to fast API."
+    },
+    {
+      "start": 1378.159,
+      "duration": 4.721,
+      "text": "Ok? This is how we created our app object."
     },
     {
       "start": 1380.24,
-      "duration": 12.48,
-      "text": "लिया। अब सबसे पहले हम क्या करेंगे? हम एक पidेंटिक मॉडल बिल्ड करेंगे टू"
+      "duration": 7.48,
+      "text": "Now what will we do first? We will"
+    },
+    {
+      "start": 1382.88,
+      "duration": 9.84,
+      "text": "build a Pydentic model to"
     },
     {
       "start": 1387.72,
-      "duration": 9.959,
-      "text": "वैलिडेट इनकमिंग डेटा। ठीक है? तो, इसके लिए आपको पता है क्या करना है? आपको सबसे"
+      "duration": 6.92,
+      "text": "validate incoming data. Ok? So, do"
+    },
+    {
+      "start": 1392.72,
+      "duration": 4.959,
+      "text": "you know what to do about it? The first thing you need to do is"
     },
     {
       "start": 1394.64,
-      "duration": 8.8,
-      "text": "पहले एक क्लास बनानी है। क्लास का नाम रख लेते हैं यूजर इनपुट। यह बेस मॉडल से"
+      "duration": 6.32,
+      "text": "create a class. Let's name the class as"
+    },
+    {
+      "start": 1397.679,
+      "duration": 5.761,
+      "text": "user input. This"
     },
     {
       "start": 1400.96,
       "duration": 7.199,
-      "text": "इन्हेरिट करेगी क्लास। और इसमें टोटल मिलाके सेवन फील्ड्स होंगी। ठीक है? एज"
+      "text": "class will inherit from the base model. And there will be a total of"
+    },
+    {
+      "start": 1403.44,
+      "duration": 4.719,
+      "text": "seven fields in it. Ok? There will be age"
     },
     {
       "start": 1408.679,
-      "duration": 10.081,
-      "text": "होगा, वेट होगा, हाइट"
+      "duration": 5.921,
+      "text": ", weight"
+    },
+    {
+      "start": 1411.64,
+      "duration": 7.12,
+      "text": ", height"
     },
     {
       "start": 1414.6,
-      "duration": 10.079,
-      "text": "होगा, इनकम इन एलपीए होगा, स्मोकर है या नहीं यह"
+      "duration": 7.68,
+      "text": ", income in LPA, whether you are a"
+    },
+    {
+      "start": 1418.76,
+      "duration": 5.919,
+      "text": "smoker or not"
     },
     {
       "start": 1422.28,
       "duration": 7.84,
-      "text": "होगा, सिटी होगा और आपका ऑक्यूपेशन होगा।"
+      "text": ", city"
+    },
+    {
+      "start": 1424.679,
+      "duration": 5.441,
+      "text": "and your occupation."
     },
     {
       "start": 1430.72,
-      "duration": 10.0,
-      "text": "ठीक है? सो इफ आई कैन शो यू ठीक है? एज, वेट, हाइट, इनकम, एलपीए,"
+      "duration": 7.36,
+      "text": "Ok? So if I can show you"
+    },
+    {
+      "start": 1435.679,
+      "duration": 5.041,
+      "text": "okay? Age, Weight, Height, Income, LPA,"
     },
     {
       "start": 1438.08,
-      "duration": 6.959,
-      "text": "स्मोकर, सिटी, ऑक्यूपेशन। ठीक है? अब इन सब में हमें क्या करना है? थोड़ा सा"
+      "duration": 4.32,
+      "text": "Smoker, City, Occupation. Ok? Now"
+    },
+    {
+      "start": 1440.72,
+      "duration": 4.319,
+      "text": "what are we to do in all this? Just need to"
     },
     {
       "start": 1442.4,
-      "duration": 12.04,
-      "text": "डिस्क्रिप्शन और वैलिडेशन ऐड करना है। तो हम टाइपिंग मॉड्यूल से इंपोर्ट कर लेंगे"
+      "duration": 7.56,
+      "text": "add a little description and validation. So"
+    },
+    {
+      "start": 1445.039,
+      "duration": 9.401,
+      "text": "we'll import annotated from the typing module."
     },
     {
       "start": 1449.96,
-      "duration": 11.64,
-      "text": "एनोटेटेड। और मैं यहां पे लिखूंगा एनोटेटेड। दिस विल बी अ"
+      "duration": 7.92,
+      "text": "And I'll write here"
+    },
+    {
+      "start": 1454.44,
+      "duration": 7.16,
+      "text": "annotated. This will be an"
     },
     {
       "start": 1457.88,
       "duration": 7.399,
-      "text": "इंटीजर। और यहां पर हम फील्ड फंक्शन को कॉल करके इसको"
+      "text": "integer. And here we will"
     },
     {
       "start": 1467.279,
-      "duration": 8.961,
-      "text": "रिक्वायर्ड बना लेंगे और यहां पर हम थोड़ा सा वैलिडेशन भी ऐड कर देंगे कि एज शुड बी"
+      "duration": 5.201,
+      "text": "make it required by calling the field function and here we will"
+    },
+    {
+      "start": 1470.08,
+      "duration": 6.16,
+      "text": "also add a little validation that the age should be"
     },
     {
       "start": 1472.48,
-      "duration": 10.96,
-      "text": "ग्रेटर दैन 0 एंड लेस दैन इक्वल टू 120 लेट्स से। ठीक है? सिमिलरली मैं एक काम"
+      "duration": 7.76,
+      "text": "greater than 0 and less than equal to 120 let's say."
+    },
+    {
+      "start": 1476.24,
+      "duration": 7.2,
+      "text": "Ok? Similarly, I do the same thing"
     },
     {
       "start": 1480.24,
-      "duration": 7.28,
-      "text": "करता हूं सभी में। यहां पर हम डिस्क्रिप्शन भी ऐड कर सकते"
+      "duration": 4.799,
+      "text": "in everything."
+    },
+    {
+      "start": 1483.44,
+      "duration": 4.08,
+      "text": "Here we can also add a description."
     },
     {
       "start": 1485.039,
       "duration": 2.481,
-      "text": "हैं। बाय द"
+      "text": "By the way, the"
     },
     {
       "start": 1488.6,
       "duration": 5.36,
-      "text": "वे एज ऑफ द यूजर।"
+      "text": "age of the user."
     },
     {
       "start": 1497.4,
-      "duration": 12.519,
-      "text": "कॉपी पेस्ट यह होगा आपका"
+      "duration": 5.12,
+      "text": "Copy"
+    },
+    {
+      "start": 1499.559,
+      "duration": 10.36,
+      "text": "paste this will happen your"
     },
     {
       "start": 1502.52,
       "duration": 7.399,
-      "text": "फ्लोट ग्रेटर देन 0 होना चाहिए और लेस"
+      "text": "float should be greater than 0 and less"
     },
     {
       "start": 1510.039,
       "duration": 5.441,
-      "text": "देन 2.5 मीटर्स आई गेस"
+      "text": "than 2.5 meters I guess"
     },
     {
       "start": 1516.039,
-      "duration": 10.201,
-      "text": "डिस्क्रिप्शन वेट ऑफ द पेशेंट उसके बाद आ जाएगा"
+      "duration": 6.801,
+      "text": "description weight of the"
+    },
+    {
+      "start": 1519.48,
+      "duration": 6.76,
+      "text": "patient after that"
     },
     {
       "start": 1522.84,
-      "duration": 10.76,
-      "text": "हाइट माय बैड 2.5 मैंने हाइट समझ के ले लिया। अ इनफैक्ट वेट में अब क्या ही अपर"
+      "duration": 6.839,
+      "text": "height will come my bad 2.5 I took it as height. In"
+    },
+    {
+      "start": 1526.24,
+      "duration": 7.36,
+      "text": "fact, whatever upper"
     },
     {
       "start": 1529.679,
       "duration": 6.801,
-      "text": "लिमिट डालें कितना भी हो सकता है। यहां पे भी हम लोग डाल देंगे"
+      "text": "limit you put on weight, it can be any amount. Here"
+    },
+    {
+      "start": 1533.6,
+      "duration": 2.88,
+      "text": "also we will put"
     },
     {
       "start": 1539.4,
       "duration": 8.0,
-      "text": "फ्लोट और यहां पर आप डाल सकते हो 2.5 2.5 मीटर्स"
+      "text": "float and here you can put 2.5 2.5"
+    },
+    {
+      "start": 1544.4,
+      "duration": 3.0,
+      "text": "meters"
     },
     {
       "start": 1551.76,
-      "duration": 8.0,
-      "text": "इनकम एलपीए भी फ्लोट हो सकता है। 3.2 किसी की सैलरी हो सकती है। ग्रेटर दन ज़ीरो होना"
+      "duration": 6.0,
+      "text": "income LPA can also be float. 3.2 Someone may have a"
+    },
+    {
+      "start": 1555.2,
+      "duration": 4.56,
+      "text": "salary. Must be greater than zero."
     },
     {
       "start": 1557.76,
-      "duration": 7.68,
-      "text": "चाहिए। अगेन कोई अपर लिमिट डालने की जरूरत नहीं"
+      "duration": 4.039,
+      "text": "Again there is no need to enter any upper limit."
     },
     {
       "start": 1561.799,
       "duration": 3.641,
-      "text": "है। एनुअल"
+      "text": "Annual"
     },
     {
       "start": 1566.44,
       "duration": 5.32,
-      "text": "सैलरी ऑफ द यूजर इन"
+      "text": "salary of the user in"
     },
     {
       "start": 1572.52,
-      "duration": 12.68,
-      "text": "एलपीए। उसके बाद आएगा आपका स्मोकर। स्मोकर होगा बूल"
+      "duration": 6.68,
+      "text": "LPA. After that your smoker will come. Smoker"
+    },
+    {
+      "start": 1576.799,
+      "duration": 8.401,
+      "text": "will be bool yes"
     },
     {
       "start": 1579.2,
       "duration": 6.0,
-      "text": "यस नो और यहां पर वैलिडेशन नहीं"
+      "text": "no and here validation is not"
     },
     {
       "start": 1586.2,
-      "duration": 8.959,
-      "text": "चाहिए इज द स्मोक इज द यूजर इज"
+      "duration": 7.16,
+      "text": "required is the smoke is the"
     },
     {
       "start": 1593.36,
-      "duration": 8.919,
-      "text": "यूजर अ स्मोकर ठीक है एंड उसके बाद बच गया सिटी"
+      "duration": 7.439,
+      "text": "user is a"
+    },
+    {
+      "start": 1595.159,
+      "duration": 7.12,
+      "text": "smoker okay and after that the remaining city"
     },
     {
       "start": 1600.799,
       "duration": 6.721,
-      "text": "सिटी होगा स्ट्रिंग रिक्वायर्ड है वैलिडेशन नहीं"
+      "text": "city will be"
+    },
+    {
+      "start": 1602.279,
+      "duration": 5.241,
+      "text": "string required validation is not"
     },
     {
       "start": 1608.679,
-      "duration": 9.681,
-      "text": "चाहिए द सिटी दैट द"
+      "duration": 4.961,
+      "text": "required the"
+    },
+    {
+      "start": 1610.919,
+      "duration": 7.441,
+      "text": "city that the"
     },
     {
       "start": 1613.64,
       "duration": 4.72,
-      "text": "यूजर बिलोंग्स टू"
+      "text": "user belongs to"
     },
     {
       "start": 1618.559,
-      "duration": 9.521,
-      "text": "ठीक है एंड लास्टली हमें चाहिए ऑक्यूपेशन की वैल्यू"
+      "duration": 6.281,
+      "text": "okay and lastly we need occupation key"
+    },
+    {
+      "start": 1621.679,
+      "duration": 6.401,
+      "text": "value"
     },
     {
       "start": 1624.84,
-      "duration": 8.76,
-      "text": "एनोटेटेड ये एक लिटरल होगा क्योंकि हम इसमें ऑप्शंस देना चाहते हैं। ठीक है? तो"
+      "duration": 6.12,
+      "text": "annotated this will be a literal because we"
+    },
+    {
+      "start": 1628.08,
+      "duration": 5.52,
+      "text": "want to give options in it. Ok? So"
     },
     {
       "start": 1630.96,
       "duration": 5.599,
-      "text": "ऑप्शंस क्या-क्या हैं? उसके लिए व्हाट वी कैन डू इज"
+      "text": "what are the options? For that, let us"
     },
     {
       "start": 1637.279,
-      "duration": 7.081,
-      "text": "एक बार चेक कर लेते हैं। सो व्हाट वी विल डू"
+      "duration": 4.681,
+      "text": "check what we can do once. So what we'll do is"
     },
     {
       "start": 1641.96,
-      "duration": 7.52,
-      "text": "इज हम लिखेंगे डीएफ"
+      "duration": 4.959,
+      "text": "we'll write"
+    },
+    {
+      "start": 1644.36,
+      "duration": 5.12,
+      "text": "df"
     },
     {
       "start": 1646.919,
-      "duration": 8.561,
-      "text": "ऑक्यूपेशन डॉट यूनिक सारी यूनिक वैल्यू्यूज निकालने के"
+      "duration": 5.161,
+      "text": "occupation dot"
+    },
+    {
+      "start": 1649.48,
+      "duration": 6.0,
+      "text": "unique to get all the unique values."
     },
     {
       "start": 1652.08,
-      "duration": 9.12,
-      "text": "लिए। तो ये रही वो सारी यूनिक वैल्यूज़"
+      "duration": 5.16,
+      "text": "So here are all those unique"
+    },
+    {
+      "start": 1655.48,
+      "duration": 5.72,
+      "text": "values, let"
     },
     {
       "start": 1657.24,
-      "duration": 9.679,
-      "text": "कॉपी इसको हम लोग यहां पे पेस्ट कर देते हैं। ठीक है? यही ऑप्शंस हैं। इसके अलावा"
+      "duration": 6.919,
+      "text": "us copy and paste it here."
+    },
+    {
+      "start": 1661.2,
+      "duration": 5.719,
+      "text": "Ok? These are the options. There can be no"
     },
     {
       "start": 1664.159,
-      "duration": 12.481,
-      "text": "और कोई ऑप्शन नहीं हो सकता। ऑक्यूपेशन ऑफ द यूजर। तो गाइज़, यह बन गया"
+      "duration": 7.241,
+      "text": "other option than this."
+    },
+    {
+      "start": 1666.919,
+      "duration": 9.721,
+      "text": "Occupation of the user. So guys, this is"
     },
     {
       "start": 1671.4,
-      "duration": 9.08,
-      "text": "हमारा बेसिक पाइडेंटिक मॉडल जिसमें हम अ थोड़ा बहुत मेटा डेटा प्रोवाइड कर रहे हैं"
+      "duration": 7.48,
+      "text": "our basic pydantic model where we are"
+    },
+    {
+      "start": 1676.64,
+      "duration": 3.84,
+      "text": "providing a little bit of metadata"
     },
     {
       "start": 1678.88,
-      "duration": 8.32,
-      "text": "क्लाइंट को और साथ ही साथ थोड़ा बहुत वैलिडेशन भी कर रहे हैं। ठीक है? आल्सो ये"
+      "duration": 3.84,
+      "text": "to the client and also doing a little bit of"
+    },
+    {
+      "start": 1680.48,
+      "duration": 6.72,
+      "text": "validation. Ok? Also,"
     },
     {
       "start": 1682.72,
       "duration": 4.48,
-      "text": "फील्ड में हमें ये सब देने की जरूरत नहीं"
+      "text": "we don't need to give all this in this field."
     },
     {
       "start": 1687.24,
-      "duration": 8.039,
-      "text": "है। या ठीक है? तो ये तो बात हो गई कि हम सारे के सारे इनपुट वैल्यू्यूज को सही से"
+      "duration": 6.2,
+      "text": "Or is it okay? So, it is a matter of whether we are"
     },
     {
       "start": 1693.44,
-      "duration": 8.959,
-      "text": "रिसीव करके वैलिडेट कर पा रहे हैं कि नहीं। अब देयर इज अ सेकंड पार्ट। सेकंड"
+      "duration": 4.16,
+      "text": "able to receive and validate all the input values ​​correctly or"
+    },
+    {
+      "start": 1695.279,
+      "duration": 7.12,
+      "text": "not. Now there is a second part. The second"
     },
     {
       "start": 1697.6,
-      "duration": 10.72,
-      "text": "पार्ट क्या है कि हमें इन फीचर्स से नए फीचर्स बनाने हैं। जैसे कि हमें हाइट और"
+      "duration": 7.679,
+      "text": "part is that we have to create new features from these features."
+    },
+    {
+      "start": 1702.399,
+      "duration": 5.921,
+      "text": "Like we have to"
     },
     {
       "start": 1705.279,
-      "duration": 8.801,
-      "text": "वेट की हेल्प से बीएएमआई बनाना है। सिमिलरली एज की हेल्प से हमें एज ग्रुप"
+      "duration": 5.76,
+      "text": "make BAMI with the help of height and weight."
+    },
+    {
+      "start": 1708.32,
+      "duration": 5.76,
+      "text": "With the help of similar age we have to create age group."
     },
     {
       "start": 1711.039,
-      "duration": 8.481,
-      "text": "बनाना है। सिटी की हेल्प से सिटी टियर बनाना है। और एक और कॉलम हमें बनाना है"
+      "duration": 6.0,
+      "text": "City tier has to be created with the help of the city."
+    },
+    {
+      "start": 1714.08,
+      "duration": 5.44,
+      "text": "And we have to create another column"
     },
     {
       "start": 1717.039,
-      "duration": 7.12,
-      "text": "लाइफस्टाइल स्टेटस बोल के। ठीक है? तो व्हाट वी विल डू इज हम लोग कंप्यूटेड"
+      "duration": 4.961,
+      "text": "called Lifestyle Status. Ok? So"
+    },
+    {
+      "start": 1719.52,
+      "duration": 4.639,
+      "text": "what we will do is we will"
     },
     {
       "start": 1722.0,
-      "duration": 7.12,
-      "text": "फील्ड्स यूज़ करेंगे। ठीक है? टू कंप्यूट दीज़ वैल्यूज़। सो व्हाट आई विल डू इज़ मैं"
+      "duration": 4.64,
+      "text": "use computed fields. Ok? To compute"
+    },
+    {
+      "start": 1724.159,
+      "duration": 4.961,
+      "text": "these values. So what I will do is first let me"
     },
     {
       "start": 1726.64,
-      "duration": 6.8,
-      "text": "सबसे पहले आपको बीएमआई वाला फील्ड बना के दिखाता हूं। उसके लिए हम क्या करेंगे? हम"
+      "duration": 5.039,
+      "text": "create the BMI field and"
+    },
+    {
+      "start": 1729.12,
+      "duration": 4.32,
+      "text": "show you. What will we do for that? We have"
     },
     {
       "start": 1731.679,
-      "duration": 5.0,
-      "text": "ऊपर से हमने कंप्यूटेड फील्ड इंपोर्ट कर रखा है। तो हम लिखेंगे @ कंप्यू्यूटेड"
+      "duration": 4.081,
+      "text": "imported the computed field from above."
     },
     {
-      "start": 1735.76,
-      "duration": 8.08,
-      "text": "फील्ड @ प्रॉपर्टी। और यहां पर हम बनाएंगे एक"
+      "start": 1733.44,
+      "duration": 3.239,
+      "text": "So we will write @ComputedField"
+    },
+    {
+      "start": 1736.679,
+      "duration": 7.161,
+      "text": "@Property. And here we will create a"
     },
     {
       "start": 1740.72,
-      "duration": 7.36,
-      "text": "नया फंक्शन बाय द नेम ऑफ बीएमआई। आपको पता है यहां पर फंक्शन का नाम एक्सजेक्टली वही"
+      "duration": 5.36,
+      "text": "new function by the name of BMI. You know"
+    },
+    {
+      "start": 1743.84,
+      "duration": 4.24,
+      "text": "here the name of the function should be exactly the same as the"
     },
     {
       "start": 1746.08,
-      "duration": 6.64,
-      "text": "होना चाहिए जो आपके फीचर का नाम है। फील्ड का नाम है। तो यहां पे हमें सेल्फ"
+      "duration": 4.079,
+      "text": "name of your feature. The"
+    },
+    {
+      "start": 1748.08,
+      "duration": 4.64,
+      "text": "name of the field is . So here we are"
     },
     {
       "start": 1750.159,
-      "duration": 8.721,
-      "text": "ऑब्जेक्ट मिल रहा है और पलट के हमें जो चीज मिल रही है वो एक स्ट्रिंग है। आई एम"
+      "duration": 5.201,
+      "text": "getting the self object and what we are"
+    },
+    {
+      "start": 1752.72,
+      "duration": 6.16,
+      "text": "getting in return is a string. I'm"
     },
     {
       "start": 1755.36,
-      "duration": 9.36,
-      "text": "सॉरी नॉट स्ट्रिंग फ्लोट है। ठीक है? बीएमआई की वैल्यू फ्लोट होगी। और ये"
+      "duration": 6.08,
+      "text": "sorry not string is float. Ok? The"
+    },
+    {
+      "start": 1758.88,
+      "duration": 5.84,
+      "text": "BMI value will be float. And this"
     },
     {
       "start": 1761.44,
       "duration": 3.28,
-      "text": "फंक्शन हमें रिटर्न कर रहा"
+      "text": "function is returning us"
     },
     {
       "start": 1764.76,
-      "duration": 7.72,
-      "text": "है सेल्फ डॉट"
+      "duration": 3.84,
+      "text": "self"
+    },
+    {
+      "start": 1766.919,
+      "duration": 5.561,
+      "text": "dot"
     },
     {
       "start": 1768.6,
-      "duration": 8.679,
-      "text": "वेट डिवाइडेड बाय सेल्फ डॉट हाइट का स्क्वायर"
+      "duration": 6.6,
+      "text": "weight divided by self dot height"
+    },
+    {
+      "start": 1772.48,
+      "duration": 4.799,
+      "text": "squared."
     },
     {
       "start": 1775.2,
-      "duration": 6.4,
-      "text": "नीचे वाली चीज को हम लोग ब्रैकेट में डाल रहे हैं"
+      "duration": 4.24,
+      "text": "We are putting the thing below in brackets like this."
     },
     {
       "start": 1779.44,
-      "duration": 8.16,
-      "text": "लाइक दिस। ठीक है? तो ये बन गई हमारी फर्स्ट कंप्यूटेड फील्ड। सिमिलरली एक और"
+      "duration": 5.76,
+      "text": "Ok? So this became our"
+    },
+    {
+      "start": 1781.6,
+      "duration": 6.0,
+      "text": "first computed field. Similarly,"
     },
     {
       "start": 1785.2,
-      "duration": 10.199,
-      "text": "कंप्यूटेड फील्ड हम लोग बनाते हैं अ लाइफस्टाइल रिस्क बोल के। सो कंप्यूटेड"
+      "duration": 7.0,
+      "text": "we create another computed field"
+    },
+    {
+      "start": 1787.6,
+      "duration": 7.799,
+      "text": "called lifestyle risk. So computed"
     },
     {
       "start": 1792.2,
-      "duration": 8.479,
-      "text": "फील्ड@ प्रॉपर्टी डेफ"
+      "duration": 5.199,
+      "text": "field@ property"
+    },
+    {
+      "start": 1795.399,
+      "duration": 5.28,
+      "text": "def"
     },
     {
       "start": 1797.399,
-      "duration": 8.801,
-      "text": "लाइफस्ट अंडरस्कोर रिस्क इसको भी सेल्फ मिल रहा है और यह पलट"
+      "duration": 6.52,
+      "text": "lifetime underscore"
+    },
+    {
+      "start": 1800.679,
+      "duration": 5.521,
+      "text": "risk this is also getting self and it will"
     },
     {
       "start": 1803.919,
-      "duration": 7.281,
-      "text": "के हमें रिटर्न करेगा एक स्ट्रिंग और इसका लॉजिक मैं खुद नहीं"
+      "duration": 4.801,
+      "text": "return us a"
+    },
+    {
+      "start": 1806.2,
+      "duration": 5.0,
+      "text": "string and I will not write its logic myself."
     },
     {
       "start": 1808.72,
-      "duration": 8.48,
-      "text": "लिखूंगा। व्हाट आई कैन डू इज आई कैन बोरो दिस लॉजिक फ्रॉम"
+      "duration": 5.48,
+      "text": "What I can do is I can borrow"
+    },
+    {
+      "start": 1811.2,
+      "duration": 6.0,
+      "text": "this logic from"
     },
     {
       "start": 1814.2,
       "duration": 3.0,
-      "text": "हियर"
+      "text": "here"
     },
     {
       "start": 1817.88,
-      "duration": 10.56,
-      "text": "कॉपी पेस्ट हमें बस थोड़ा सा चीजें यहां पे ठीक करनी पड़ेंगी।"
+      "duration": 7.48,
+      "text": "copy paste. We just have to fix things up a little bit here."
     },
     {
       "start": 1825.36,
-      "duration": 8.799,
-      "text": "सो यहां पर रो के बदले आ जाएगा सेल्फ"
+      "duration": 5.799,
+      "text": "So here instead of row it will come"
+    },
+    {
+      "start": 1828.44,
+      "duration": 5.719,
+      "text": "self"
     },
     {
       "start": 1831.159,
       "duration": 3.0,
-      "text": "डॉट"
+      "text": "dot"
     },
     {
       "start": 1834.76,
-      "duration": 9.799,
-      "text": "स्मोकर एंड सेल्फ डॉट बीएमआई"
+      "duration": 7.72,
+      "text": "smoker"
+    },
+    {
+      "start": 1837.24,
+      "duration": 7.319,
+      "text": "and self dot BMI"
     },
     {
       "start": 1842.48,
       "duration": 2.079,
-      "text": "ठीक"
+      "text": "okay"
     },
     {
       "start": 1847.32,
       "duration": 5.8,
-      "text": "है और इसको मैं यहां पर भी रिप्लेस कर दूंगा"
+      "text": "and I will replace this here also"
     },
     {
       "start": 1854.559,
-      "duration": 9.12,
-      "text": "ठीक है? और यह बन गया हमारा सेकंड कंप्यूटेड फील्ड लाइफस्टाइल रिस्क बोल के।"
+      "duration": 7.041,
+      "text": "okay? And this became our second"
+    },
+    {
+      "start": 1857.6,
+      "duration": 6.079,
+      "text": "computed field, lifestyle risk, speaking."
     },
     {
       "start": 1861.6,
-      "duration": 9.64,
-      "text": "अब इसी तरीके से हमें दो और कंप्यूटेड फील्ड्स बनानी है। एक होगा एज ग्रुप और एक"
+      "duration": 4.72,
+      "text": "Now we have to create two more computed fields in the same manner."
+    },
+    {
+      "start": 1863.679,
+      "duration": 7.561,
+      "text": "One will be age group and one"
     },
     {
       "start": 1866.32,
-      "duration": 10.2,
-      "text": "होगा सिटी टायर। तो फिर से @ कंप्यू्यूटेड"
+      "duration": 8.2,
+      "text": "will be city tyre. So again the"
     },
     {
-      "start": 1874.52,
-      "duration": 8.6,
-      "text": "फील्ड @"
+      "start": 1871.24,
+      "duration": 5.28,
+      "text": "@ComputedField"
+    },
+    {
+      "start": 1876.52,
+      "duration": 6.6,
+      "text": "@"
     },
     {
       "start": 1878.2,
-      "duration": 10.599,
-      "text": "प्रॉपर्टी एज ग्रुप फंक्शन का नाम सेल्फ मिल रहा है। रिटर्न हो रहा है"
+      "duration": 8.0,
+      "text": "PropertyAsGroup function is getting the name self."
+    },
+    {
+      "start": 1883.12,
+      "duration": 5.679,
+      "text": "Returning"
     },
     {
       "start": 1886.2,
-      "duration": 9.76,
-      "text": "स्ट्रिंग। अगेन यह लॉजिक पूरा लिखने की जरूरत नहीं है। हम सिंपली यह कोड कॉपी कर"
+      "duration": 6.52,
+      "text": "string. Again, there is no need to write this logic in full."
     },
     {
-      "start": 1892.72,
-      "duration": 3.24,
-      "text": "सकते हैं।"
+      "start": 1888.799,
+      "duration": 7.161,
+      "text": "We can simply copy this code."
     },
     {
       "start": 1900.32,
-      "duration": 7.92,
-      "text": "और जहां भी सेल्फ जहां भी एज लिखा हुआ है उसके बदले हमें सेल्फ डॉट एज करना"
+      "duration": 4.92,
+      "text": "And instead of self wherever edge is written,"
     },
     {
-      "start": 1905.24,
-      "duration": 3.0,
-      "text": "है।"
+      "start": 1902.96,
+      "duration": 5.28,
+      "text": "we have to do self dot edge."
     },
     {
       "start": 1908.6,
-      "duration": 9.559,
-      "text": "कॉपी पेस्ट पेस्ट ठीक है? यह बन गई हमारी थर्ड"
+      "duration": 6.439,
+      "text": "copy"
+    },
+    {
+      "start": 1910.76,
+      "duration": 7.399,
+      "text": "paste paste ok? This became our third"
     },
     {
       "start": 1915.039,
       "duration": 6.321,
-      "text": "कंप्यूटेड फील्ड। एंड लास्टली हमें एक और कंप्यूटर फील्ड बनानी"
+      "text": "computed field. And lastly we have to"
+    },
+    {
+      "start": 1918.159,
+      "duration": 3.201,
+      "text": "create another computer field"
     },
     {
       "start": 1922.6,
-      "duration": 10.48,
-      "text": "है और इसका नाम होगा सिटी टायर। अगेन सेल्फ मिलेगा पलट के हमें एक"
+      "duration": 8.6,
+      "text": "and its name will be City"
+    },
+    {
+      "start": 1926.84,
+      "duration": 6.24,
+      "text": "Tire. Again we will get self and after turning it we will get an"
     },
     {
       "start": 1931.2,
-      "duration": 7.16,
-      "text": "इंटीजर मिलेगा।"
+      "duration": 3.959,
+      "text": "integer."
     },
     {
       "start": 1935.159,
-      "duration": 7.4,
-      "text": "और व्हाट वी विल डू इज़ अच्छा इसके लिए हमें एक काम करना"
+      "duration": 5.88,
+      "text": "And what we will do is"
     },
     {
-      "start": 1941.039,
-      "duration": 8.801,
-      "text": "पड़ेगा। हमें सबसे पहले यह लिस्ट कॉपी करनी"
+      "start": 1938.36,
+      "duration": 4.199,
+      "text": "well for this we will have to do one thing."
+    },
+    {
+      "start": 1942.559,
+      "duration": 7.281,
+      "text": "We need to copy this list first. Only then will"
     },
     {
       "start": 1946.279,
-      "duration": 8.0,
-      "text": "पड़ेगी। तभी हम डिसाइड कर पाएंगे कि यूजर का जो शहर है वह कौन सी कैटेगरी में गिरता"
+      "duration": 5.721,
+      "text": "we be able to decide"
+    },
+    {
+      "start": 1949.84,
+      "duration": 4.439,
+      "text": "which category the user's city falls into."
     },
     {
       "start": 1952.0,
-      "duration": 10.36,
-      "text": "है। ठीक है? तो यह मैंने यहां पे कॉपी कर लिया। और अब हम क्या"
+      "duration": 5.24,
+      "text": "Ok? So I copied this over here."
+    },
+    {
+      "start": 1954.279,
+      "duration": 8.081,
+      "text": "And what will we do now"
     },
     {
       "start": 1957.24,
       "duration": 5.12,
-      "text": "करेंगे? इस कोड को कॉपी कर लेंगे।"
+      "text": "? We will copy this code."
     },
     {
       "start": 1967.6,
-      "duration": 8.559,
-      "text": "हम लिखेंगे सेल्फ डॉट सिटी अगर वो टियर वन"
+      "duration": 5.919,
+      "text": "We"
+    },
+    {
+      "start": 1969.799,
+      "duration": 6.36,
+      "text": "will write self dot city if it"
     },
     {
       "start": 1973.519,
-      "duration": 9.121,
-      "text": "सिटी में बिलोंग कर रहा है तो रिटर्न वन टू में बिलोंग कर रहा है तो टू अदरवाइज"
+      "duration": 5.121,
+      "text": "belongs to tier one city then return one if it belongs"
+    },
+    {
+      "start": 1976.159,
+      "duration": 6.481,
+      "text": "to tier two then return two otherwise"
     },
     {
       "start": 1978.64,
-      "duration": 11.919,
-      "text": "थ्री और ये बन गया गाइस हमारा फोर्थ कंप्यूटेड फील्ड ठीक है तो ये रहा हमारा"
+      "duration": 7.44,
+      "text": "three and this becomes our fourth"
+    },
+    {
+      "start": 1982.64,
+      "duration": 7.919,
+      "text": "computed field okay so here is our"
     },
     {
       "start": 1986.08,
       "duration": 9.92,
-      "text": "पाइडेंटिक मॉडल जो नॉट ओनली बेसिक डेटा को वैलिडेट कर रहा है बट एट द सेम टाइम टाइम"
+      "text": "pydantic model which is not only validating the basic data"
+    },
+    {
+      "start": 1990.559,
+      "duration": 5.441,
+      "text": "but at the same time"
     },
     {
       "start": 1996.519,
-      "duration": 10.681,
-      "text": "आपका मेटा डेटा प्रोवाइड कर रहा है क्लाइंट को और साथ ही साथ कुछ कंप्यूटेड"
+      "duration": 7.721,
+      "text": "providing your meta data to the"
+    },
+    {
+      "start": 2000.08,
+      "duration": 7.12,
+      "text": "client and at the same time"
     },
     {
       "start": 2004.24,
-      "duration": 8.4,
-      "text": "फील्ड्स के थ्रू आपको फीचर्स बना के भी दे रहा है। सो हमने बीएएमआई वाला बना लिया,"
+      "duration": 5.919,
+      "text": "creating features for you through some computed fields."
+    },
+    {
+      "start": 2007.2,
+      "duration": 5.44,
+      "text": "So we created BAMI,"
     },
     {
       "start": 2010.159,
-      "duration": 7.921,
-      "text": "एज ग्रुप बना लिया, लाइफस्टाइल रिस्क बना लिया, सिटी टायर बना लिया, इनकम एलपी ऐसा"
+      "duration": 5.76,
+      "text": "age group, lifestyle risk"
+    },
+    {
+      "start": 2012.64,
+      "duration": 5.44,
+      "text": ", city tier, income LP will"
     },
     {
       "start": 2015.919,
-      "duration": 7.441,
-      "text": "का ऐसा ही रहेगा और ऑक्यूपेशन ऐसा का ऐसा ही रहेगा। तो हमने काफी सारा काम कर लिया"
+      "duration": 5.441,
+      "text": "remain the same and occupation will remain the same."
+    },
+    {
+      "start": 2018.08,
+      "duration": 5.28,
+      "text": "So we have done a lot of work."
     },
     {
       "start": 2021.36,
-      "duration": 6.64,
-      "text": "है। ठीक है? एक बार कोड को सेव कर लेते हैं। सो"
+      "duration": 4.48,
+      "text": "Ok?"
+    },
+    {
+      "start": 2023.36,
+      "duration": 4.64,
+      "text": "Once you have saved the code. So the"
     },
     {
       "start": 2025.84,
-      "duration": 9.6,
-      "text": "पाइडेंटिक मॉडल तो बन गया। अब हम लोग बनाएंगे हमारा प्रेडिक्ट वाला एंड पॉइंट।"
+      "duration": 4.959,
+      "text": "pedantic model was created. Now we will"
+    },
+    {
+      "start": 2028.0,
+      "duration": 7.44,
+      "text": "create our predicted end point."
     },
     {
       "start": 2030.799,
-      "duration": 11.041,
-      "text": "ठीक है? तो उसके लिए हम सबसे पहले एक राउट क्रिएट करेंगे app डॉट पोस्ट। और राउट हम"
+      "duration": 9.041,
+      "text": "Ok? So for that, we will first create a route"
+    },
+    {
+      "start": 2035.44,
+      "duration": 6.4,
+      "text": "app dot post. And we"
     },
     {
       "start": 2039.84,
-      "duration": 6.679,
-      "text": "रख सकते हैं प्रिडिक्ट। ठीक है? और यहां पे लेट्स क्रिएट अ फंक्शन"
+      "duration": 5.199,
+      "text": "can put Route Predict."
+    },
+    {
+      "start": 2041.84,
+      "duration": 4.679,
+      "text": "Ok? And here let's create a function"
     },
     {
       "start": 2045.039,
-      "duration": 8.401,
-      "text": "बाय द नेम ऑफ़ प्रेडिक्ट प्रीमियम। इसको इनपुट में यूजर"
+      "duration": 5.6,
+      "text": "by the name of"
+    },
+    {
+      "start": 2046.519,
+      "duration": 6.921,
+      "text": "predict premium. It will receive user data as input."
     },
     {
       "start": 2050.639,
-      "duration": 8.96,
-      "text": "का डेटा मिलेगा। तो लेट्स कॉल इट डेटा। और यह जो यूजर का डेटा होगा, यह किस टाइप का"
+      "duration": 6.081,
+      "text": "So let's call it data. And"
+    },
+    {
+      "start": 2053.44,
+      "duration": 6.159,
+      "text": "what type of object will this user data be"
     },
     {
       "start": 2056.72,
-      "duration": 7.119,
-      "text": "ऑब्जेक्ट होगा? यह होगा यूजर इनपुट टाइप का ऑब्जेक्ट जो हमारा पाइडेंटिक मॉडल है।"
+      "duration": 4.959,
+      "text": "? This will be an"
+    },
+    {
+      "start": 2059.599,
+      "duration": 4.24,
+      "text": "object of type UserInput which is our pydantic model."
     },
     {
       "start": 2061.679,
-      "duration": 7.281,
-      "text": "ठीक है? तो हमें रिक्वेस्ट बॉडी से डेटा आएगा। वो सीधे चला जाएगा हमारे पाइडेंटिक"
+      "duration": 5.2,
+      "text": "Ok? So we will get data from the request body."
+    },
+    {
+      "start": 2063.839,
+      "duration": 5.121,
+      "text": "It will go straight to our pedantic"
     },
     {
       "start": 2066.879,
-      "duration": 7.601,
-      "text": "मॉडल के पास। हमारा पाइडेंटिक मॉडल उसके ऊपर काम करेगा, वैलिडेट करेगा, कंप्यूटेड"
+      "duration": 4.401,
+      "text": "model. Our pydantic model will"
+    },
+    {
+      "start": 2068.96,
+      "duration": 5.52,
+      "text": "work on it, validate it,"
     },
     {
       "start": 2071.28,
-      "duration": 7.92,
-      "text": "फील्ड्स निकालेगा और फिर वो पलट के हमें डेटा के फॉर्म में यहां पे मिल जाएगा। ठीक"
+      "duration": 5.04,
+      "text": "extract the computed fields, and then it will be returned to us"
+    },
+    {
+      "start": 2074.48,
+      "duration": 4.72,
+      "text": "in the form of data here. Ok"
     },
     {
       "start": 2076.32,
-      "duration": 8.64,
-      "text": "है? अब यहां पे बस हमें क्या करना है? हमारे मॉडल को लोड करना है। मॉडल तो"
+      "duration": 5.92,
+      "text": "? Now what do we have to do here?"
+    },
+    {
+      "start": 2079.2,
+      "duration": 5.76,
+      "text": "Our model needs to be loaded. The model"
     },
     {
       "start": 2082.24,
-      "duration": 8.439,
-      "text": "ऑलरेडी लोडेड है। वैसे हमें बस प्रॉपर इनपुट फॉर्मेट क्रिएट करना है। ठीक है? सो"
+      "duration": 5.52,
+      "text": "is already loaded. Well, we just have to"
+    },
+    {
+      "start": 2084.96,
+      "duration": 5.719,
+      "text": "create the proper input format. Ok? So"
     },
     {
       "start": 2087.76,
-      "duration": 9.44,
-      "text": "बेसिकली होगा क्या कि इस तरीके"
+      "duration": 5.96,
+      "text": "basically what will happen is that in"
+    },
+    {
+      "start": 2090.679,
+      "duration": 6.521,
+      "text": "this way"
     },
     {
       "start": 2093.72,
-      "duration": 10.119,
-      "text": "से एक रो का डेटा हमें पास करना है हमारे मॉडल में। ठीक है? और आपको यह ख्याल रखना"
+      "duration": 7.24,
+      "text": "we have to pass the data of one row"
+    },
+    {
+      "start": 2097.2,
+      "duration": 6.639,
+      "text": "to our model. Ok? And you have to keep in mind"
     },
     {
       "start": 2100.96,
-      "duration": 6.72,
-      "text": "है कि ये जो इनपुट भेजा जाएगा, यह पंडास डेटा फ्रेम के फॉर्मेट में भेजा जाएगा।"
+      "duration": 4.56,
+      "text": "that this input that will be sent will be"
+    },
+    {
+      "start": 2103.839,
+      "duration": 3.841,
+      "text": "sent in the format of Pandas data frame."
     },
     {
       "start": 2105.52,
-      "duration": 6.48,
-      "text": "बिकॉज़ हमारा जो रैंडम फॉरेस्ट मॉडल है वो एक डेटा फ्रेम ऑब्जेक्ट के ऊपर ट्रेन हुआ"
+      "duration": 3.92,
+      "text": "Because our random forest model is"
+    },
+    {
+      "start": 2107.68,
+      "duration": 4.32,
+      "text": "trained on a data frame object."
     },
     {
       "start": 2109.44,
-      "duration": 8.56,
-      "text": "है। तो व्हाट आई विल डू इज़ ऊपर मैंने पडास को इंपोर्ट कर लिया है। मैं यहां पर एक"
+      "duration": 5.28,
+      "text": "So what I will do is above I have"
+    },
+    {
+      "start": 2112.0,
+      "duration": 6.0,
+      "text": "imported the padas. I'm"
     },
     {
       "start": 2114.72,
-      "duration": 11.879,
-      "text": "नया डेटा फ्रेम बना रहा हूं। और वो जो डेटा फ्रेम है उसमें हम सिर्फ एक रो रखने"
+      "duration": 7.52,
+      "text": "creating a new data frame here. And in that"
+    },
+    {
+      "start": 2118.0,
+      "duration": 8.599,
+      "text": "data frame, we are going to keep only one row."
     },
     {
       "start": 2122.24,
-      "duration": 10.04,
-      "text": "वाले हैं। और उस रो के अंदर वी विल पास अ डिक्शनरी जिसमें बीएएमआई की वैल्यू हो"
+      "duration": 7.599,
+      "text": "And inside that row we will pass a"
+    },
+    {
+      "start": 2126.599,
+      "duration": 5.681,
+      "text": "dictionary in which the value of BAMI will be"
     },
     {
       "start": 2129.839,
-      "duration": 9.601,
-      "text": "जाएगी डाटा डॉट बीएमआई।"
+      "duration": 6.0,
+      "text": "data"
+    },
+    {
+      "start": 2132.28,
+      "duration": 7.16,
+      "text": "dot BMI."
     },
     {
       "start": 2135.839,
       "duration": 3.601,
-      "text": "उसके बाद आता है एज"
+      "text": "After that comes Age"
     },
     {
       "start": 2139.72,
-      "duration": 11.48,
-      "text": "ग्रुप और इसकी वैल्यू हो जाएगी डाटा डॉट एज"
+      "duration": 5.92,
+      "text": "Group and its value will be data dot"
+    },
+    {
+      "start": 2144.16,
+      "duration": 7.04,
+      "text": "Age"
     },
     {
       "start": 2145.64,
       "duration": 5.56,
-      "text": "ग्रुप उसके बाद आता है लाइफस्टाइल"
+      "text": "Group, after that comes Lifestyle"
     },
     {
       "start": 2154.2,
-      "duration": 11.08,
-      "text": "रिस्क और उसकी वैल्यू हो जाएगी डाटा डॉट लाइफस्टाइल"
+      "duration": 5.28,
+      "text": "Risk and its value will be data dot"
+    },
+    {
+      "start": 2158.4,
+      "duration": 6.88,
+      "text": "Lifestyle"
     },
     {
       "start": 2159.48,
-      "duration": 10.96,
-      "text": "रिस्क उसके बाद आता है सिटी टायर जिसकी वैल्यू हो जाएगी डाटा"
+      "duration": 8.639,
+      "text": "Risk, after that comes City Tire"
+    },
+    {
+      "start": 2165.28,
+      "duration": 5.16,
+      "text": "whose value will be data"
     },
     {
       "start": 2168.119,
-      "duration": 7.041,
-      "text": "डॉट सिटी टायर उसके बाद"
+      "duration": 4.401,
+      "text": "dot City"
+    },
+    {
+      "start": 2170.44,
+      "duration": 4.72,
+      "text": "Tire, after that"
     },
     {
       "start": 2172.52,
       "duration": 7.8,
-      "text": "आएगा इनकम एलपीए इसकी वैल्यू हो जाएगी डेटा"
+      "text": "comes Income"
+    },
+    {
+      "start": 2175.16,
+      "duration": 5.16,
+      "text": "LPA, its value will be data"
     },
     {
       "start": 2181.24,
       "duration": 6.119,
-      "text": "डॉट इनकम एलपीए उसके बाद लास्ट में आएगा"
+      "text": "dot Income LPA, after that comes"
     },
     {
       "start": 2188.119,
-      "duration": 8.761,
-      "text": "ऑक्यूपेशन और इसकी वैल्यू हो जाएगी डाटा डॉट ऑक्यूपेशन"
+      "duration": 5.881,
+      "text": "Occupation and its value will be data"
+    },
+    {
+      "start": 2191.64,
+      "duration": 5.24,
+      "text": "dot Occupation,"
     },
     {
       "start": 2194.0,
-      "duration": 8.32,
-      "text": "ठीक है? और इसको हम लोग एक वेरिएबल में स्टोर कर लेते हैं। लेट्स कॉल इट इनपुट"
+      "duration": 5.359,
+      "text": "okay? And we store this in a variable."
+    },
+    {
+      "start": 2196.88,
+      "duration": 5.44,
+      "text": "Let's call it input"
     },
     {
       "start": 2199.359,
-      "duration": 7.201,
-      "text": "डीएफ। तो, यह बन गया हमारा इनपुट जो हम अपने एमएल मॉडल के पास भेजेंगे। और अब"
+      "duration": 5.521,
+      "text": "df. So, this becomes our input that we will"
+    },
+    {
+      "start": 2202.32,
+      "duration": 4.24,
+      "text": "pass to our ML model. And now"
     },
     {
       "start": 2204.88,
-      "duration": 6.88,
-      "text": "हमें प्रेडिक्शन करना है। तो, हम ऊपर जो मॉडल हमने इंपोर्ट किया है, उसका"
+      "duration": 4.08,
+      "text": "we have to make a prediction. So, we will"
     },
     {
       "start": 2208.96,
-      "duration": 10.04,
-      "text": "प्रेडिक्ट फंक्शन को कॉल करेंगे। ठीक है? और वहां पे हम पास कर देंगे अपना इनपुट"
+      "duration": 6.0,
+      "text": "call the predict function of the model we imported above. Ok?"
+    },
+    {
+      "start": 2211.76,
+      "duration": 7.24,
+      "text": "And there we will pass our input"
     },
     {
       "start": 2214.96,
-      "duration": 10.639,
-      "text": "डीएफ। इससे हमें पलट करके एक लिस्ट में आउटपुट मिलेगा और हमें उस"
+      "duration": 7.76,
+      "text": "df. This will give us the"
+    },
+    {
+      "start": 2219.0,
+      "duration": 6.599,
+      "text": "output in the form of a list and we will"
     },
     {
       "start": 2222.72,
       "duration": 6.92,
-      "text": "लिस्ट का जीरोथ आइटम चाहिए होगा और यही होगा हमारा प्रेडिक्शन।"
+      "text": "need the zeroth item of that list and this will be"
+    },
+    {
+      "start": 2225.599,
+      "duration": 4.041,
+      "text": "our prediction."
     },
     {
       "start": 2232.16,
-      "duration": 10.32,
-      "text": "ठीक है? और अब इसी प्रेडिक्शन को हमें jसon के फॉर्मेट में रिटर्न कर देना है।"
+      "duration": 4.64,
+      "text": "Ok? And now we have to return this prediction"
+    },
+    {
+      "start": 2234.48,
+      "duration": 8.0,
+      "text": "in JSON format."
     },
     {
       "start": 2236.8,
       "duration": 5.68,
-      "text": "तो व्हाट वी विल डू इज़ कि हमस्ट एपीआई"
+      "text": "So what we will do is we will import json response from the HMS API"
     },
     {
       "start": 2243.0,
       "duration": 3.96,
-      "text": "से डॉट"
+      "text": "dot"
     },
     {
       "start": 2248.91,
       "duration": 3.24,
-      "text": "[संगीत]"
+      "text": "[music]"
     },
     {
       "start": 2253.359,
-      "duration": 8.521,
-      "text": "रिस्पांससेस से वी विल इंपोर्ट jसon"
+      "duration": 4.681,
+      "text": "responses"
     },
     {
       "start": 2258.04,
-      "duration": 12.28,
-      "text": "रिस्पांस और यहां पे हम आएंगे और हम लिखेंगे रिटर्न"
+      "duration": 6.52,
+      "text": "and here we will come and we"
+    },
+    {
+      "start": 2261.88,
+      "duration": 8.44,
+      "text": "will write return"
     },
     {
       "start": 2264.56,
-      "duration": 12.0,
-      "text": "jसon रिस्पांस स्टेटस कोड हो जाएगा 200 और यहां"
+      "duration": 7.64,
+      "text": "json response status code will be 200 and"
+    },
+    {
+      "start": 2270.32,
+      "duration": 6.24,
+      "text": "here"
     },
     {
       "start": 2272.2,
       "duration": 4.36,
-      "text": "पे कंटेंट में हम ऐड कर देंगे"
+      "text": "in the content we will add"
     },
     {
       "start": 2278.28,
-      "duration": 8.16,
-      "text": "प्रेडिक्टेड कैटेगरी इज़"
+      "duration": 5.76,
+      "text": "predicted"
+    },
+    {
+      "start": 2280.839,
+      "duration": 5.601,
+      "text": "category is"
     },
     {
       "start": 2284.04,
-      "duration": 9.559,
-      "text": "प्रेडिक्शन। एंड दैट्स इट गाइस। दिस इज़ आवर ML मॉडल।"
+      "duration": 7.079,
+      "text": "prediction. And that's it guys. This is"
+    },
+    {
+      "start": 2286.44,
+      "duration": 7.159,
+      "text": "our ML model."
     },
     {
       "start": 2291.119,
-      "duration": 5.841,
-      "text": "ठीक है? दिस इज़ आवर मॉडल। एक बार देख लेते हैं। रीकैप कर लेते हैं। मॉडल को हमने"
+      "duration": 4.0,
+      "text": "Ok? This is our model. Let's take a look. Let's"
+    },
+    {
+      "start": 2293.599,
+      "duration": 3.361,
+      "text": "recap. We"
     },
     {
       "start": 2295.119,
-      "duration": 8.24,
-      "text": "इंपोर्ट किया।स्ट एपीआई का ऑब्जेक्ट बनाया। ये अपना पाइडेंटिक मॉडल हमने"
+      "duration": 4.24,
+      "text": "imported the model.created an object of the API."
+    },
+    {
+      "start": 2296.96,
+      "duration": 6.399,
+      "text": "We created this pedantic model of our own."
     },
     {
       "start": 2299.359,
-      "duration": 8.801,
-      "text": "बनाया। और ये रहा हमारा एंड पॉइंट। ठीक है? ठीक है? सिंपल सा एंड पॉइंट है। अब"
+      "duration": 6.161,
+      "text": "And here is our end point. Ok"
+    },
+    {
+      "start": 2303.359,
+      "duration": 4.801,
+      "text": "? Ok? It's a simple end point."
     },
     {
       "start": 2305.52,
-      "duration": 7.28,
-      "text": "हमें क्या करना है? इसको रन करना है। तो सबसे पहले हमने अपना वर्चुअल एनवायरमेंट"
+      "duration": 5.12,
+      "text": "What do we do now? This has to be run. So first of all"
+    },
+    {
+      "start": 2308.16,
+      "duration": 4.64,
+      "text": "we have activated our virtual environment."
     },
     {
       "start": 2310.64,
-      "duration": 8.16,
-      "text": "एक्टिवेट कर लिया है। यहां पे आपको दो चीजें इंस्टॉल करनी पड़ेंगी। पहला आपको"
+      "duration": 4.8,
+      "text": "Here you will have to"
+    },
+    {
+      "start": 2312.8,
+      "duration": 6.0,
+      "text": "install two things. First you will need to"
     },
     {
       "start": 2315.44,
       "duration": 3.36,
-      "text": "इंस्टॉल करना पड़ेगा"
+      "text": "install"
     },
     {
       "start": 2320.52,
-      "duration": 7.52,
-      "text": "पंडास। हो गया। और सेकंड हमें इंस्टॉल करना पड़ेगा।"
+      "duration": 4.92,
+      "text": "Pandas. Done. And we have to install it in seconds."
     },
     {
       "start": 2325.44,
-      "duration": 8.72,
-      "text": "ठीक है? हो गया। अब हम क्या कर सकते हैं? हम अपने इस फास्ट एपीआई ऐप को रन कर"
+      "duration": 6.96,
+      "text": "Ok? Done. What can we do now"
     },
     {
-      "start": 2332.4,
-      "duration": 6.4,
-      "text": "सकते हैं। स्टार्ट हो गया। चलो फिर इसको टेस्ट करते"
+      "start": 2328.04,
+      "duration": 6.12,
+      "text": "? We can run our fast API app. It has"
+    },
+    {
+      "start": 2334.16,
+      "duration": 4.64,
+      "text": "started. Let's test it then guys."
     },
     {
       "start": 2336.72,
-      "duration": 6.32,
-      "text": "हैं गाइस। ऑब्वियसली यहां पर कुछ नहीं आएगा। हमने कोई होम यूआरएल बिल्ड नहीं"
+      "duration": 3.92,
+      "text": "Obviously nothing will"
+    },
+    {
+      "start": 2338.8,
+      "duration": 4.24,
+      "text": "come here. We have not built any home URL."
     },
     {
       "start": 2340.64,
-      "duration": 7.04,
-      "text": "किया है। तो हम डायरेक्टली जाएंगे डॉक्स के पास। एंड सम हाउ डॉक्स इज आल्सो नॉट"
+      "duration": 4.8,
+      "text": "So we will go directly to the docs."
+    },
+    {
+      "start": 2343.04,
+      "duration": 4.64,
+      "text": "And some how docs is also not"
     },
     {
       "start": 2345.44,
-      "duration": 8.8,
-      "text": "वर्किंग। नाउ इट इज़ वर्किंग। आई डोंट नो कुछ इशू हुआ था। बस रिफ्रेश करने से ठीक"
+      "duration": 4.8,
+      "text": "working. Now it is working. I don't know any"
+    },
+    {
+      "start": 2347.68,
+      "duration": 6.56,
+      "text": "issue happened. Just refreshing fixed it."
     },
     {
       "start": 2350.24,
-      "duration": 10.0,
-      "text": "हो गया। तो यह देखो गाइज़, यह है हमारा एक एंड पॉइंट जो कि पोस्ट है और इसका नाम है"
+      "duration": 6.879,
+      "text": "So look at this guys, this is one of our"
+    },
+    {
+      "start": 2354.24,
+      "duration": 6.0,
+      "text": "endpoints which is post and it's called"
     },
     {
       "start": 2357.119,
-      "duration": 11.041,
-      "text": "स्लैश प्रिडिक्ट। ठीक है? प्रेडिक्ट प्रीमियम वाला काम करता है यह और लेट्स"
+      "duration": 6.081,
+      "text": "slash predict. Ok? Predict"
+    },
+    {
+      "start": 2360.24,
+      "duration": 7.92,
+      "text": "Premium works and let's"
     },
     {
       "start": 2363.2,
-      "duration": 15.6,
-      "text": "ट्राई इट आउट। सो एज में डालते हैं वेट में डालते हैं 79 हाइट में डालते हैं 1 72"
+      "duration": 11.6,
+      "text": "try it out. So let's put in age,"
+    },
+    {
+      "start": 2368.16,
+      "duration": 10.64,
+      "text": "put in weight 79, put in height 1 72,"
     },
     {
       "start": 2374.8,
-      "duration": 10.799,
-      "text": "इनकम एलपीए में डालते हैं 10 स्मोकर लेट्स से हमने किया फॉल्स सिटी कर"
+      "duration": 7.559,
+      "text": "put in income LPA 10, from smoker lets"
+    },
+    {
+      "start": 2378.8,
+      "duration": 6.799,
+      "text": "we did Falls City, we made"
     },
     {
       "start": 2382.359,
-      "duration": 8.921,
-      "text": "दिया गुड़गांव। ठीक है? और ऑक्यूपेशन हमने कर लिया। यहां"
+      "duration": 6.281,
+      "text": "Gurgaon."
+    },
+    {
+      "start": 2385.599,
+      "duration": 5.681,
+      "text": "Ok? And we did the occupation. Let's pick it up"
     },
     {
       "start": 2388.64,
-      "duration": 9.84,
-      "text": "से ही उठा लेते हैं। गुड़गांव में जी कैपिटल कर लेते हैं। और ऑक्यूपेशन में कर"
+      "duration": 6.24,
+      "text": "from here. Let's do G Capital in Gurgaon."
     },
     {
-      "start": 2394.88,
-      "duration": 8.479,
-      "text": "लेते हैं। लेट्स से गवर्नमेंट जॉब यहां पे हमने डाल दिया।"
+      "start": 2391.28,
+      "duration": 7.2,
+      "text": "And we do it in occupation. Let"
+    },
+    {
+      "start": 2398.48,
+      "duration": 4.879,
+      "text": "'s put government jobs here."
     },
     {
       "start": 2400.72,
-      "duration": 12.0,
-      "text": "ठीक है? और अब हम क्या कर रहे हैं? इसको एग्जीक्यूट कर रहे हैं। और देखो इट सेस कि"
+      "duration": 5.68,
+      "text": "Ok? And what are we doing now? We are"
+    },
+    {
+      "start": 2403.359,
+      "duration": 9.361,
+      "text": "executing this. And see it cess that"
     },
     {
       "start": 2406.4,
-      "duration": 9.6,
-      "text": "प्रीमियम आपका लो होगा। बिकॉज़ एज कम है और बीएएमआई भी बहुत बिगड़ा हुआ नहीं लग रहा"
+      "duration": 8.16,
+      "text": "your premium will be low. Because the age is low and the"
     },
     {
-      "start": 2414.56,
-      "duration": 8.32,
-      "text": "है। और स्मोकर फॉल्स है। स्मोकर को एक बार"
+      "start": 2412.72,
+      "duration": 3.28,
+      "text": "BMI also does not seem to be very bad."
+    },
+    {
+      "start": 2416.0,
+      "duration": 6.88,
+      "text": "And there's Smoker Falls. Let's set Smoker to"
     },
     {
       "start": 2419.04,
-      "duration": 11.079,
-      "text": "ट्रू करते हैं और वेट को 100 करते हैं। और अब रन करते हैं। एग्जीक्यूट मीडियम आ रहा"
+      "duration": 7.76,
+      "text": "true once and set the weight to 100. And"
+    },
+    {
+      "start": 2422.88,
+      "duration": 7.239,
+      "text": "now let's run. Execute medium is coming."
     },
     {
       "start": 2426.8,
-      "duration": 8.2,
-      "text": "है। ठीक है? एज को बढ़ाते हैं। 69 कर देते हैं। और अब एग्जीक्यूट"
+      "duration": 7.44,
+      "text": "Ok? Let's increase the edge. Let's do it"
     },
     {
-      "start": 2434.24,
-      "duration": 6.24,
-      "text": "करते हैं। हाई आ रहा है। ठीक है? तो रफली इट इज़"
+      "start": 2430.119,
+      "duration": 4.881,
+      "text": "69. And now let's execute. The"
+    },
+    {
+      "start": 2435.0,
+      "duration": 5.48,
+      "text": "high is coming. Ok? So roughly it is"
     },
     {
       "start": 2438.8,
-      "duration": 6.48,
-      "text": "वर्किंग। आई एम नॉट सेइंग कि ये बहुत परफेक्ट मॉडल है और हमेशा सही रिजल्ट्स"
+      "duration": 3.44,
+      "text": "working. I am not saying that this"
+    },
+    {
+      "start": 2440.48,
+      "duration": 4.8,
+      "text": "is a perfect model and will always give perfect results."
     },
     {
       "start": 2442.24,
-      "duration": 9.2,
-      "text": "देगा। बट यू गेट द आईडिया। हमने अभी जस्ट हमारा सेकंड स्टेप कंप्लीट कर लिया। हमने"
+      "duration": 6.96,
+      "text": "But you get the idea. We have just"
+    },
+    {
+      "start": 2445.28,
+      "duration": 6.16,
+      "text": "completed our second step. We"
     },
     {
       "start": 2449.2,
-      "duration": 6.879,
-      "text": "यह वाला स्टेप भी बना लिया। अब हमारे पास हमारा एपीआई है। ठीक है? अब मैं आपको"
+      "duration": 4.56,
+      "text": "made this step also. Now we have"
+    },
+    {
+      "start": 2451.44,
+      "duration": 4.639,
+      "text": "our API. Ok? Now I will"
     },
     {
       "start": 2453.76,
-      "duration": 7.92,
-      "text": "दिखाऊंगा कि कैसे आप एक फ्रंट एंड बना करके इस एपीआई से इंटरेक्ट कर सकते हो"
+      "duration": 5.2,
+      "text": "show you how to create a front end and"
+    },
+    {
+      "start": 2456.079,
+      "duration": 5.601,
+      "text": "interact with this API"
     },
     {
       "start": 2458.96,
-      "duration": 7.92,
-      "text": "यूजिंग स्ट्रीम। सो अब स्ट्रीम वाले पार्ट के लिए मैंने क्या किया? मैंने एक नई फाइल"
+      "duration": 4.8,
+      "text": "using Stream. So now"
+    },
+    {
+      "start": 2461.68,
+      "duration": 5.2,
+      "text": "what did I do for the stream part? I created a new file."
     },
     {
       "start": 2463.76,
-      "duration": 9.28,
-      "text": "बना ली। फ्रंट डॉ. Py सेम फोल्डर के अंदर। आइडियली यह एक अलग प्रोजेक्ट होना चाहिए।"
+      "duration": 6.24,
+      "text": "Front Dr. Py Inside Same Folder."
+    },
+    {
+      "start": 2466.88,
+      "duration": 6.16,
+      "text": "Ideally this should be a separate project."
     },
     {
       "start": 2470.0,
-      "duration": 6.4,
-      "text": "जो आपका फ्रंट एंड है वह आपके एपीआई से कंप्लीटली डिफरेंट प्रोजेक्ट होता है। एंड"
+      "duration": 4.64,
+      "text": "Your front end is a"
+    },
+    {
+      "start": 2473.04,
+      "duration": 3.36,
+      "text": "completely separate project from your API. And that's why they should have"
     },
     {
       "start": 2474.64,
-      "duration": 5.6,
-      "text": "दैट्स व्हाई दे शुड हैव डिफरेंट प्रोजेक्ट डायरेक्टरीज़। बट अगेन हम एक बेसिक"
+      "duration": 3.84,
+      "text": "different project"
+    },
+    {
+      "start": 2476.4,
+      "duration": 3.84,
+      "text": "directories. But again we're doing a basic"
     },
     {
       "start": 2478.48,
-      "duration": 6.56,
-      "text": "ट्यूटोरियल कर रहे हैं। तो हम सेम जगह पे सारी चीजें कर रहे हैं। बट यू अंडरस्टैंड"
+      "duration": 3.92,
+      "text": "tutorial. So we are"
+    },
+    {
+      "start": 2480.24,
+      "duration": 4.8,
+      "text": "doing all the things at the same place. But you understand"
     },
     {
       "start": 2482.4,
-      "duration": 7.439,
-      "text": "राइट? उसके बाद मैंने क्या किया? मैंने ये दो डिपेंडेंसीज़ इंस्टॉल कर ली मेरे"
+      "duration": 5.36,
+      "text": "right? What did I do after that? I"
+    },
+    {
+      "start": 2485.04,
+      "duration": 4.799,
+      "text": "installed these two dependencies"
     },
     {
       "start": 2487.76,
-      "duration": 7.2,
-      "text": "वर्चुअल एनवायरमेंट में। पिप इंस्टॉल स्ट्रीमलेट पिप इंस्टॉल रिक्वेस्ट्स। ठीक"
+      "duration": 4.88,
+      "text": "in my virtual environment. pip install"
+    },
+    {
+      "start": 2489.839,
+      "duration": 5.121,
+      "text": "streamlet pip install requests. Ok"
     },
     {
       "start": 2492.64,
-      "duration": 6.4,
-      "text": "है? और कोड मैंने यहां पर ऑलरेडी लिख लिया है। बिकॉज़ इस वीडियो में मेरा गोल आपको"
+      "duration": 4.08,
+      "text": "? And I have already written the code here."
+    },
+    {
+      "start": 2494.96,
+      "duration": 4.08,
+      "text": "Because my goal in this video is"
     },
     {
       "start": 2496.72,
-      "duration": 5.599,
-      "text": "स्ट्रीमलेट पढ़ाने का नहीं है। मैं बस आपको फास्ट एपीआई में मॉडल सर्विंग दिखाना"
+      "duration": 4.08,
+      "text": "not to teach you Streamlets. I just want to"
+    },
+    {
+      "start": 2499.04,
+      "duration": 3.279,
+      "text": "show you model serving in Fast API."
     },
     {
       "start": 2500.8,
-      "duration": 6.24,
-      "text": "चाहता हूं। यह तो जस्ट मैं आपको दिखाना चाहता हूं कि एक बार जब आपका एपीआई बन"
+      "duration": 4.24,
+      "text": "So I just want to show you how"
     },
     {
-      "start": 2505.04,
-      "duration": 7.2,
-      "text": "जाता है तो आपके यूज़र्स, आपके क्लाइंट्स उस एपीआई को एक्सेस कैसे करते हैं। दे कैन"
+      "start": 2502.319,
+      "duration": 4.721,
+      "text": "once your API is created,"
+    },
+    {
+      "start": 2507.04,
+      "duration": 5.2,
+      "text": "how your users, your clients access that API. They can"
     },
     {
       "start": 2509.44,
-      "duration": 7.28,
-      "text": "एक्सेस इट वाया देयर वेबसाइट और वाया देयर मोबाइल ऐप। वो अलग-अलग यूज़ केसेस हैं। मैं"
+      "duration": 5.28,
+      "text": "access it via their website and via their"
     },
     {
-      "start": 2514.72,
-      "duration": 5.359,
-      "text": "आपको एक वेबसाइट के थ्रू कैसे एक्सेस किया जाएगा वो दिखाने वाला हूं। और यह वेबसाइट"
+      "start": 2512.24,
+      "duration": 4.48,
+      "text": "mobile app. Those are different use cases. I'm going to"
+    },
+    {
+      "start": 2516.72,
+      "duration": 3.359,
+      "text": "show you how to access it through a website. And"
     },
     {
       "start": 2518.72,
-      "duration": 6.08,
-      "text": "हम बना रहे हैं स्ट्रीमलेट की हेल्प। स्ट्रीमलेट इज़ अ पॉपुलर लाइब्रेरी इन"
+      "duration": 3.76,
+      "text": "we are creating this website with the help of Streamlet."
+    },
+    {
+      "start": 2520.079,
+      "duration": 4.721,
+      "text": "Streamlets is a popular library in"
     },
     {
       "start": 2522.48,
-      "duration": 7.68,
-      "text": "Python जिसकी हेल्प से आप यूआई बना सकते हो। अ आइडियली अगर आप वेबसाइट बनाते हो इन"
+      "duration": 4.96,
+      "text": "Python that helps you create UI."
+    },
+    {
+      "start": 2524.8,
+      "duration": 5.36,
+      "text": "Ideally, if you create a website in"
     },
     {
       "start": 2527.44,
-      "duration": 6.56,
-      "text": "अ रियल वर्ल्ड सिचुएशन तो आप HTML CSS की हेल्प से बनाते हो। बट अगेन मैंने जैसा"
+      "duration": 4.8,
+      "text": "a real world situation, you"
+    },
+    {
+      "start": 2530.16,
+      "duration": 3.84,
+      "text": "create it with the help of HTML CSS. But again, as I"
     },
     {
       "start": 2532.24,
-      "duration": 5.44,
-      "text": "बोला वीडियो की शुरुआत में हम Python के डोमेन में ही रहना चाहते हैं। ठीक है? तो"
+      "duration": 3.76,
+      "text": "said at the beginning of the video, we"
+    },
+    {
+      "start": 2534.0,
+      "duration": 3.68,
+      "text": "want to stay within the domain of Python. Ok? So the"
     },
     {
       "start": 2536.0,
-      "duration": 5.359,
-      "text": "कोड बहुत सिंपल है। सबसे अच्छी बात स्ट्रीम की ये है कि बहुत ही सिंपल"
+      "duration": 3.68,
+      "text": "code is very simple. The best thing about"
+    },
+    {
+      "start": 2537.68,
+      "duration": 3.679,
+      "text": "Stream is that it is a very simple"
     },
     {
       "start": 2539.68,
-      "duration": 6.88,
-      "text": "लाइब्रेरी है। बहुत ही पावरफुल लाइब्रेरी है। आप झट से बहुत पावरफुल यूआई बना सकते"
+      "duration": 4.8,
+      "text": "library. It is a very powerful library."
+    },
+    {
+      "start": 2541.359,
+      "duration": 5.201,
+      "text": "You can quickly create a very powerful UI."
     },
     {
       "start": 2544.48,
-      "duration": 8.0,
-      "text": "हो। ठीक है? तो यहां पे आपने क्या किया? सबसे पहले अपना एपीआई यूआरएल लिख दिया।"
+      "duration": 4.48,
+      "text": "Ok? So what did you do here? First of all,"
+    },
+    {
+      "start": 2546.56,
+      "duration": 5.92,
+      "text": "write down your API URL."
     },
     {
       "start": 2548.96,
-      "duration": 11.04,
-      "text": "आपका एपीआई यूआरएल है लोकल होस्ट कोलोन 8000 प्रेडिक्ट ठीक है"
+      "duration": 6.92,
+      "text": "Your API URL is localhost colon"
+    },
+    {
+      "start": 2552.48,
+      "duration": 7.52,
+      "text": "8000 predict okay"
     },
     {
       "start": 2555.88,
-      "duration": 11.16,
-      "text": "बेसिकली ये वाला एंड पॉइंट आप एक्सेस कर रहे हो ठीक है और ये जो आपका है ये"
+      "duration": 8.28,
+      "text": "basically this is the endpoint you are accessing"
+    },
+    {
+      "start": 2560.0,
+      "duration": 7.04,
+      "text": "okay and this is the URL of yours this"
     },
     {
       "start": 2564.16,
-      "duration": 8.959,
-      "text": "आपकास्ट एवीआई एपीआई सर्वर का यूआरएल है होम यूआरएल ठीक है अ यहां पे हमने"
+      "duration": 5.439,
+      "text": "is your AVI API server"
+    },
+    {
+      "start": 2567.04,
+      "duration": 6.079,
+      "text": "home URL okay here we have"
     },
     {
       "start": 2569.599,
-      "duration": 9.121,
-      "text": "स्ट्रीमलेट वेब पेज का टाइटल सेट कर दिया और यहां पे हमने एक टेक्स्ट में लिख दिया"
+      "duration": 6.561,
+      "text": "set the title of the streamlet web page"
+    },
+    {
+      "start": 2573.119,
+      "duration": 5.601,
+      "text": "and here we have written in a text"
     },
     {
       "start": 2576.16,
-      "duration": 6.48,
-      "text": "एंटर योर डिटेल्स बिलो अब यहां पे हमने ने एक फॉर्म बनाया है जहां पे हम यूजर से"
+      "duration": 4.8,
+      "text": "enter your details below now here we have"
+    },
+    {
+      "start": 2578.72,
+      "duration": 3.92,
+      "text": "created a form where we are"
     },
     {
       "start": 2580.96,
-      "duration": 7.359,
-      "text": "मल्टीपल चीजें मांग रहे हैं। प्रिसाइज़ली हम उससे सात चीजें मांग रहे हैं। पहला है"
+      "duration": 4.159,
+      "text": "asking multiple things from the user. Precisely"
+    },
+    {
+      "start": 2582.64,
+      "duration": 5.679,
+      "text": "we are asking him for seven things. The first one is"
     },
     {
       "start": 2585.119,
-      "duration": 7.761,
-      "text": "एज जिसको हम फच करके ला रहे हैं यूजिंग एच एसटी डॉट नंबर इनपुट की हेल्प से। यहां पे"
+      "duration": 5.681,
+      "text": "Edge which we are fetching using H"
+    },
+    {
+      "start": 2588.319,
+      "duration": 4.561,
+      "text": "ST dot number input. Here"
     },
     {
       "start": 2590.8,
-      "duration": 6.0,
-      "text": "हमने बता दिया है उस फॉर्म फील्ड का नाम क्या है? मिनिमम वैल्यू कितनी होगी?"
+      "duration": 3.6,
+      "text": "we have told what is the name of that form field"
+    },
+    {
+      "start": 2592.88,
+      "duration": 3.92,
+      "text": "? What will be the minimum value?"
     },
     {
       "start": 2594.4,
-      "duration": 7.84,
-      "text": "मैक्सिमम कितनी होगी और करंट वैल्यू कितनी है। ठीक है? ये कुछ डिफॉल्ट वैल्यूज़ हैं।"
+      "duration": 4.64,
+      "text": "What will be the maximum and what is the current value."
+    },
+    {
+      "start": 2596.8,
+      "duration": 5.44,
+      "text": "Ok? These are some default values."
     },
     {
       "start": 2599.04,
-      "duration": 7.279,
-      "text": "ठीक है? सेम फॉर वेट, हाइट, इनकम एलपी उसके बाद स्मोकर जो है इसमें हमने एक"
+      "duration": 5.279,
+      "text": "Ok? Same for weight, height, income LP,"
+    },
+    {
+      "start": 2602.24,
+      "duration": 4.079,
+      "text": "after that smoker, we have"
     },
     {
       "start": 2604.319,
-      "duration": 5.76,
-      "text": "ड्रॉपडाउन दे दिया है यूजिंग एसटी डॉट सेलेक्ट बॉक्स। हमने पूछा है आर यू अ"
+      "duration": 4.0,
+      "text": "given a dropdown in it using ST dot"
+    },
+    {
+      "start": 2606.319,
+      "duration": 3.76,
+      "text": "select box. We have asked are you a"
     },
     {
       "start": 2608.319,
-      "duration": 9.441,
-      "text": "स्मोकर दो ऑप्शंस दे दिए हैं ट्रू और फॉल्स। उसके बाद सिटी अ टेक्स्ट इनपुट है।"
+      "duration": 5.76,
+      "text": "smoker and have given two options true and"
+    },
+    {
+      "start": 2610.079,
+      "duration": 7.681,
+      "text": "false. Then there's the City A text input."
     },
     {
       "start": 2614.079,
-      "duration": 7.601,
-      "text": "अ यहां पे आप डिफॉल्ट वैल्यू दे रहे हो मुंबई बट यूजर कुछ भी डाल सकता है। एंड"
+      "duration": 5.921,
+      "text": "A: Here you are giving the default value"
+    },
+    {
+      "start": 2617.76,
+      "duration": 3.92,
+      "text": "Mumbai but the user can enter anything. And"
     },
     {
       "start": 2620.0,
-      "duration": 5.359,
-      "text": "सिमिलरली ऑक्यूपेशन के लिए हमने एक ड्रॉपडाउन दे दिया है। और ये रहे हमारे"
+      "duration": 3.28,
+      "text": "similarly, we have given a dropdown for occupation."
+    },
+    {
+      "start": 2621.68,
+      "duration": 3.679,
+      "text": "And here are our"
     },
     {
       "start": 2623.28,
-      "duration": 7.76,
-      "text": "ऑप्शंस जो हमारे यूजर को दिखाई देंगे। ठीक है? तो अगर यूआई पॉइंट ऑफ व्यू से बात"
+      "duration": 4.68,
+      "text": "options that will be visible to our user. Ok"
+    },
+    {
+      "start": 2625.359,
+      "duration": 5.681,
+      "text": "? So if we talk from the UI point of view,"
     },
     {
       "start": 2627.96,
-      "duration": 7.399,
-      "text": "करें तो दिस इज द यूआई दैट वी आर गेटिंग। ठीक है?"
+      "duration": 4.28,
+      "text": "this is the UI that we are getting."
+    },
+    {
+      "start": 2631.04,
+      "duration": 4.319,
+      "text": "Ok?"
     },
     {
       "start": 2632.24,
-      "duration": 9.599,
-      "text": "एंटर योर डिटेल्स बिलो एज डिफॉल्ट वैल्यू वेट हाइट एवरीथिंग इज देयर उसके बाद हमने"
+      "duration": 7.119,
+      "text": "Enter Your Details Below Age Default Value"
+    },
+    {
+      "start": 2635.359,
+      "duration": 6.48,
+      "text": "Weight Height Everything is There"
     },
     {
       "start": 2639.359,
-      "duration": 9.041,
-      "text": "क्या किया? एक बटन ऐड किया है। बटन का नाम है प्रेडिक्ट प्रीमियम कैटेगरी दिस बटन।"
+      "duration": 5.841,
+      "text": "What did we do after that? A button has been added. The name of the button"
+    },
+    {
+      "start": 2641.839,
+      "duration": 6.561,
+      "text": "is Predict Premium Category This Button."
     },
     {
       "start": 2645.2,
-      "duration": 9.52,
-      "text": "ठीक है? अब इसके क्लिक पे क्या होगा कि हम एक डिक्शनरी फॉर्म करेंगे जिसमें हम ये"
+      "duration": 6.399,
+      "text": "Ok? Now what will happen on clicking this is that we will"
+    },
+    {
+      "start": 2648.4,
+      "duration": 6.32,
+      "text": "form a dictionary in which we will"
     },
     {
       "start": 2651.599,
-      "duration": 7.201,
-      "text": "सारी वैल्यूज़ को बहुत केयरफुली अ एक डिक्शनरी में ऐड कर देंगे। जो भी यूजर ने"
+      "duration": 5.201,
+      "text": "very carefully add all these values"
+    },
+    {
+      "start": 2654.72,
+      "duration": 4.08,
+      "text": "to a dictionary. Whatever the user"
     },
     {
       "start": 2656.8,
-      "duration": 7.2,
-      "text": "प्रोवाइड की और फिर हम क्या करेंगे? रिक्वेस्ट लाइब्रेरी की हेल्प से हम इस"
+      "duration": 4.799,
+      "text": "provided and then what will we do?"
+    },
+    {
+      "start": 2658.8,
+      "duration": 5.2,
+      "text": "With the help of the request library, we will"
     },
     {
       "start": 2661.599,
-      "duration": 7.601,
-      "text": "यूआरएल पे हिट करेंगे जो हमने ऊपर डिसाइड किया था और यहां से हम अपना डेटा भेज"
+      "duration": 4.801,
+      "text": "hit this URL which we decided above"
+    },
+    {
+      "start": 2664.0,
+      "duration": 5.2,
+      "text": "and from here we will send our data."
     },
     {
       "start": 2666.4,
-      "duration": 8.8,
-      "text": "देंगे। यह वाला जो डेटा है। ठीक है? अब यहां से आगे का काम हमारी एपीआई का है।"
+      "duration": 6.0,
+      "text": "This is the data. Ok? Now"
+    },
+    {
+      "start": 2669.2,
+      "duration": 6.0,
+      "text": "from here onwards it is up to our API. The"
     },
     {
       "start": 2672.4,
-      "duration": 7.12,
-      "text": "एपीआई को यह डेटा मिलेगा। एपीआई उसके ऊपर प्रेडिक्शन करेगा। पलट के एक jसon"
+      "duration": 4.48,
+      "text": "API will get this data. The API will make"
+    },
+    {
+      "start": 2675.2,
+      "duration": 4.32,
+      "text": "predictions on top of that. It will send a JSON"
     },
     {
       "start": 2676.88,
-      "duration": 8.16,
-      "text": "रिस्पांस भेजेगा। अगर रिस्पांस का स्टेटस कोड 200 है तो हम प्रेडिक्टेड इंश्योरेंस"
+      "duration": 5.6,
+      "text": "response in return. If the response status"
+    },
+    {
+      "start": 2679.52,
+      "duration": 5.52,
+      "text": "code is 200, we will"
     },
     {
       "start": 2682.48,
-      "duration": 8.0,
-      "text": "प्रीमियम यहां पे निकाल के दिखा देंगे। अगर कुछ प्रॉब्लम होती है तो हम एरर दिखा"
+      "duration": 4.639,
+      "text": "calculate and display the predicted insurance premium here."
+    },
+    {
+      "start": 2685.04,
+      "duration": 5.44,
+      "text": "If there is any problem, we will show the error."
     },
     {
       "start": 2687.119,
-      "duration": 6.881,
-      "text": "देंगे। दिस इज द फंडा। ठीक है? तो इसको रन करने के लिए आपको कुछ नहीं करना होता है।"
+      "duration": 4.801,
+      "text": "This is the funda. Ok? So"
+    },
+    {
+      "start": 2690.48,
+      "duration": 3.52,
+      "text": "you don't have to do anything to run it."
     },
     {
       "start": 2691.92,
-      "duration": 6.96,
-      "text": "आपको बेसिकली एक कमांड रन करना होता है। स्ट्रीमलेट रन आपकी फाइल का नाम फ्रंट डॉट"
+      "duration": 4.96,
+      "text": "You basically have to run a command."
+    },
+    {
+      "start": 2694.0,
+      "duration": 4.88,
+      "text": "Streamlet run your file name front dot"
     },
     {
       "start": 2696.88,
-      "duration": 6.16,
-      "text": "py बहुत ही सिंपल है स्ट्रीमलेट। आप थोड़ा भी एक बार कोई ट्यूटोरियल देखोगे 10 मिनट"
+      "duration": 4.4,
+      "text": "py is very simple streamlet. If you"
+    },
+    {
+      "start": 2698.88,
+      "duration": 4.16,
+      "text": "watch any tutorial even for a little while,"
     },
     {
       "start": 2701.28,
-      "duration": 5.16,
-      "text": "का आपको समझ में आ जाएगा। ठीक है? तो मैं एक काम करता हूं। मैं फिर से यहां पे कुछ"
+      "duration": 3.52,
+      "text": "you will understand it for 10 minutes. Ok? So I do"
     },
     {
-      "start": 2704.8,
-      "duration": 8.0,
-      "text": "वैल्यू्यूज डालता हूं। 35"
+      "start": 2703.04,
+      "duration": 3.4,
+      "text": "one thing. Let me enter some values ​​here again."
+    },
+    {
+      "start": 2706.44,
+      "duration": 6.36,
+      "text": "35"
     },
     {
       "start": 2708.28,
-      "duration": 11.039,
-      "text": "79 1.72 एनुअल इनकम मान लो 10 डाल दिया। स्मोकर फॉल्स डाल दिया। सिटी"
+      "duration": 8.76,
+      "text": "79 1.72 Annual Income Suppose I put 10."
+    },
+    {
+      "start": 2712.8,
+      "duration": 6.519,
+      "text": "Smoker Falls put."
     },
     {
       "start": 2717.04,
-      "duration": 7.64,
-      "text": "गुड़गांव डाल दिया और बिजनेस ओनर डाल दिया। प्रेडिक्ट"
+      "duration": 5.92,
+      "text": "Enter city Gurgaon"
+    },
+    {
+      "start": 2719.319,
+      "duration": 5.361,
+      "text": "and enter business owner. Predict"
     },
     {
       "start": 2722.96,
-      "duration": 10.0,
-      "text": "प्रीमियम कैटेगरी एंड यू कैन सी लो आ रहा है। ठीक"
+      "duration": 4.72,
+      "text": "Premium"
+    },
+    {
+      "start": 2724.68,
+      "duration": 8.28,
+      "text": "Category And You Can See Low is coming. Ok"
     },
     {
       "start": 2727.68,
-      "duration": 11.08,
-      "text": "है? वही अगर मैं एज बढ़ा के 65 कर दूं और यह 100 कर दूं"
+      "duration": 8.12,
+      "text": "? Same if I increase the age to 65 and"
+    },
+    {
+      "start": 2732.96,
+      "duration": 5.8,
+      "text": "make it 100"
     },
     {
       "start": 2735.8,
-      "duration": 11.319,
-      "text": "और स्मोकर ट्रू कर दूं"
+      "duration": 5.84,
+      "text": "and make smoker true,"
     },
     {
       "start": 2741.64,
-      "duration": 9.88,
-      "text": "प्रेडिक्ट इट सेस हाई। ठीक है? तो या दिस इज हाउ यू कंज्यूम एन एपीआई। ठीक है? यही"
+      "duration": 7.959,
+      "text": "predict it's high. Ok? So this is how"
+    },
+    {
+      "start": 2747.119,
+      "duration": 4.401,
+      "text": "you consume an API. Ok? The same"
     },
     {
       "start": 2749.599,
-      "duration": 6.72,
-      "text": "सेम काम कोई मोबाइल ऐप के थ्रू भी किया जा सकता है। किसी वेबसाइट के थ्रू भी किया जा"
+      "duration": 3.921,
+      "text": "work can also be done through a mobile app. This can"
+    },
+    {
+      "start": 2751.52,
+      "duration": 4.799,
+      "text": "also be done through a website."
     },
     {
       "start": 2753.52,
-      "duration": 8.0,
-      "text": "सकता है। ठीक है? तो आई होप आपको समझ में आ गया। अगर मैं वापस इस फ्लो डायग्राम पे"
+      "duration": 5.2,
+      "text": "Ok? So I hope you understood."
+    },
+    {
+      "start": 2756.319,
+      "duration": 5.201,
+      "text": "If I go back to this flow diagram,"
     },
     {
       "start": 2758.72,
-      "duration": 7.52,
-      "text": "चलूं तो हमने ये थर्ड स्टेप भी कंप्लीट कर लिया। और यह जो पूरा फ्लो है, आई होप आपको"
+      "duration": 5.44,
+      "text": "we have completed this third step as well."
+    },
+    {
+      "start": 2761.52,
+      "duration": 4.72,
+      "text": "And this whole flow, I hope you are"
     },
     {
       "start": 2764.16,
-      "duration": 8.48,
-      "text": "यह भी समझ में आ रहा है। ठीक है? तो दिस इज़ हाउ यू बिल्ड एन एपीआई अराउंड अ मशीन"
+      "duration": 6.48,
+      "text": "understanding it too. Ok? So this is how"
+    },
+    {
+      "start": 2766.24,
+      "duration": 6.4,
+      "text": "you build an API around a machine"
     },
     {
       "start": 2770.64,
-      "duration": 6.4,
-      "text": "लर्निंग मॉडल। यही सेम कांसेप्ट डीप लर्निंग मॉडल के ऊपर भी ट्रू है। आप पाई"
+      "duration": 4.24,
+      "text": "learning model. The same concept"
+    },
+    {
+      "start": 2772.64,
+      "duration": 4.4,
+      "text": "is true for deep learning models as well. You can"
     },
     {
       "start": 2774.88,
-      "duration": 6.4,
-      "text": "टॉर्च में कोई मॉडल बिल्ड करो। आप उसको बिल्कुल सेम तरीके से एक्सपोर्ट करो और"
+      "duration": 4.64,
+      "text": "build a model in Pi Torch. You"
+    },
+    {
+      "start": 2777.04,
+      "duration": 4.24,
+      "text": "export it in exactly the same way and"
     },
     {
       "start": 2779.52,
-      "duration": 6.559,
-      "text": "उसके अराउंड यू कैन बिल्ड एन एपीआई। बिल्कुल सेम तरीके से। इनफैक्ट यू शुड"
+      "duration": 3.599,
+      "text": "you can build an API around it. In"
+    },
+    {
+      "start": 2781.28,
+      "duration": 4.799,
+      "text": "exactly the same way. In fact you should"
     },
     {
       "start": 2783.119,
-      "duration": 7.281,
-      "text": "ट्राई दैट। ठीक है? सो या विथ दैट आई विल क्लोज दिस वीडियो। आई रियली होप यह वीडियो"
+      "duration": 5.2,
+      "text": "try that. Ok? So with that I will"
+    },
+    {
+      "start": 2786.079,
+      "duration": 4.321,
+      "text": "close this video. I really hope you found this video"
     },
     {
       "start": 2788.319,
-      "duration": 5.841,
-      "text": "आपको यूज़फुल लगा। अगर आपको पसंद आया तो प्लीज लाइक करना। अगर आपने इस चैनल को"
+      "duration": 4.161,
+      "text": "useful. If you liked it,"
+    },
+    {
+      "start": 2790.4,
+      "duration": 3.76,
+      "text": "please like it. If you have not subscribed to this channel"
     },
     {
       "start": 2792.48,
-      "duration": 5.839,
-      "text": "सब्सक्राइब नहीं किया है, प्लीज डू सब्सक्राइब। मिलते हैं नेक्स्ट वीडियो"
+      "duration": 2.96,
+      "text": ", please do"
     },
     {
-      "start": 2795.44,
-      "duration": 2.879,
-      "text": "में। बाय।"
+      "start": 2794.16,
+      "duration": 4.159,
+      "text": "subscribe. See you in the next video. Bye."
     }
   ]
 }

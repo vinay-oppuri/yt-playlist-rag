@@ -12,7 +12,6 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator, model_valida
 from uuid import uuid4
 import uvicorn
 
-from src.api.routes.llm import router as llm_router
 from src.generator import generate_answer
 from src.vector_store import get_vector_store
 
@@ -103,9 +102,6 @@ app.add_middleware(
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["Content-Type", "Authorization"],
 )
-
-# ── LLM provider routes (/api/v1/llm/*) ────────────────────────────────
-app.include_router(llm_router)
 
 
 @app.middleware("http")
@@ -240,9 +236,6 @@ def root():
             "/api/ingest/stop",
             "/api/search",
             "/api/chat",
-            "/api/v1/llm/generate",
-            "/api/v1/llm/health",
-            "/api/v1/llm/connectivity",
         ],
     }
 
@@ -253,8 +246,8 @@ def health_check():
         store = get_vector_store()
         collections = store.client.get_collections().collections
         collection_names = [c.name for c in collections]
-        llm_provider = os.getenv("LLM_PROVIDER", "ollama")
-        llm_model = os.getenv("LLM_MODEL", "qwen3:8b")
+        gemini_model = os.getenv("GEMINI_MODEL", "gemini-3.8-flash")
+        has_gemini = bool(os.getenv("GEMINI_API_KEY"))
         reranker_enabled = bool(store._reranker_model_name) and store._reranker_model_name.lower() != "none"
         reranker_status = (
             "disabled" if not reranker_enabled else
@@ -274,8 +267,9 @@ def health_check():
                 "status": reranker_status,
             },
             "llm": {
-                "configured_provider": llm_provider,
-                "model": llm_model,
+                "provider": "gemini",
+                "model": gemini_model,
+                "configured": has_gemini,
             },
             "ingestion": {
                 "worker_alive": ingestion_status.get("worker_alive", False),
@@ -481,7 +475,7 @@ def chat_with_lectures(request: ChatRequest):
     - Hierarchical Two-Tier Routing: routes question across playlist titles and JIT fetches/chunks transcripts.
     - Retrieves relevant chunks from Qdrant.
     - Guardrail 1: Rejects off-topic questions without calling the LLM.
-    - Generates grounded answers using the configured LLM provider.
+    - Generates grounded answers using Google Gemini.
     - Guardrail 2: Enforces refusal if excerpts are insufficient.
     - Guardrail 3: Filters and renumbers only cited timestamps.
     """
