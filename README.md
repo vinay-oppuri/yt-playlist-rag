@@ -1,97 +1,156 @@
-# YT-RAG
+# YouTube Playlist RAG Assistant
 
-Ask questions about YouTube videos and playlists, get transcript-grounded answers, and jump directly to the cited moments.
+> An end-to-end Retrieval-Augmented Generation (RAG) system for YouTube playlists and technical video lectures. Ask questions in English or Hinglish, receive answers strictly grounded in transcript evidence, and jump directly to exact timestamped video moments.
 
-YT-RAG combines timestamp-preserving transcript chunking, Qdrant retrieval, local reranking, and a Next.js study workspace. Transcripts are the factual source for answers. Video titles and transcript-derived profiles help route a question, but are not answer evidence.
+---
 
-## Features
+## Architecture Overview
 
-- Register playlists quickly from YouTube metadata and explore videos in the study workspace.
-- Index transcripts on demand and continue background playlist indexing while searching or chatting.
-- Search with dense vectors, exact-token candidates, reciprocal rank fusion, video profiles, cross-encoder reranking, and result diversification.
-- Ask questions in English or Hinglish; lexical routing removes common filler words before matching.
-- Receive timestamp citations that seek the embedded player.
-- Refuse answers without sufficient transcript evidence or sentence-level citations.
-- Review retrieval and generated-answer quality using labeled evaluation cases.
+This project is organized as a Turborepo monorepo:
 
-## Requirements
-
-- Node.js 24 or newer and npm 11 or newer for the web monorepo.
-- Python 3.12 or newer and [uv](https://docs.astral.sh/uv/) for the API.
-- Docker for the included Qdrant service.
-- A Gemini or Groq API key to generate answers. Transcript search works without an LLM key.
-
-## Run locally
-
-Start Qdrant from the repository root:
-
-```powershell
-docker compose up -d qdrant
+```text
+yt-playlist-rag/
+├── apps/
+│   ├── api/          # FastAPI backend (Python 3.12, uv, Qdrant, FastEmbed, Google Gemini)
+│   ├── web/          # Interactive study workspace (Next.js 16, React, YouTube IFrame player)
+│   └── docs/         # Documentation & landing page (Next.js 16)
+└── packages/         # Shared configs (ESLint, TypeScript, Tailwind/UI)
 ```
 
-Install API dependencies and start FastAPI:
+### Core Technologies
+- **Backend**: FastAPI, `uv`, `fastembed` (`BAAI/bge-small-en-v1.5`), `google-genai` (`gemini-2.5-flash`), `yt-dlp`.
+- **Vector Database**: Qdrant (`http://localhost:6333`) containerized with persistent storage.
+- **Reranker**: Local cross-encoder (`Xenova/ms-marco-MiniLM-L-6-v2`).
+- **Frontend**: Next.js, React, Tailwind CSS, Turborepo.
+
+---
+
+## Prerequisites
+
+Before starting, ensure you have the following installed:
+
+1. **Docker Desktop** (for Qdrant vector database)
+2. **Python 3.12+** and [**uv**](https://docs.astral.sh/uv/) (for the FastAPI backend)
+3. **Node.js 20+** and **npm** / **pnpm** (for the web and docs applications)
+4. A **Google Gemini API Key** (get one at [Google AI Studio](https://aistudio.google.com/apikey))
+
+---
+
+## Step-by-Step Setup Guide
+
+### 1. Start Qdrant Vector Database
+
+All Docker configuration is located inside `apps/api/`:
 
 ```powershell
 cd apps/api
-uv sync
-Copy-Item .env.example .env
-uv run uvicorn main:app --reload --host 127.0.0.1 --port 8000
+docker compose up -d qdrant
 ```
 
-Set `GEMINI_API_KEY` or `GROQ_API_KEY` in `apps/api/.env` to enable generated answers. Embedding and reranking models download locally when first used.
+- **Qdrant REST API**: `http://localhost:6333`
+- **Qdrant Web Dashboard**: `http://localhost:6333/dashboard`
+- Persistent vectors and collections are stored in `apps/api/qdrant_data/`.
 
-In a second terminal, start the web app from the repository root:
+---
+
+### 2. Configure & Start the FastAPI Backend
+
+From the `apps/api` directory:
+
+1. Copy the example environment file:
+   ```powershell
+   Copy-Item .env.example .env
+   ```
+
+2. Open `.env` and set your Google Gemini API key:
+   ```env
+   GEMINI_API_KEY=your_actual_gemini_api_key_here
+   GEMINI_MODEL=gemini-2.5-flash
+   QDRANT_URL=http://localhost:6333
+   ```
+
+3. Install dependencies and start the API server using `uv`:
+   ```powershell
+   uv sync
+   uv run uvicorn main:app --reload --host 127.0.0.1 --port 8000
+   ```
+
+- **API Base**: `http://127.0.0.1:8000`
+- **Interactive OpenAPI Docs**: `http://127.0.0.1:8000/docs`
+- **Health Check**: `http://127.0.0.1:8000/api/health`
+
+---
+
+### 3. Start the Next.js Web Application
+
+In a separate terminal, from the root of the repository:
 
 ```powershell
+# Install Node dependencies across the monorepo
 npm install
+
+# Start the web study workspace
 npm run dev:web
 ```
 
-Open `http://localhost:3000`. FastAPI docs are at `http://127.0.0.1:8000/docs`; Qdrant's dashboard is at `http://localhost:6333/dashboard`.
+Open **`http://localhost:3000`** in your browser.
 
-## How a question is answered
+---
 
-1. The API applies the selected video or playlist filter and retrieves transcript candidates using dense and lexical search.
-2. Video profiles contribute routing rank only; transcript chunks remain the sole factual source.
-3. Reciprocal rank fusion, a local cross-encoder, and diversity selection order the candidates.
-4. The generator refuses when no chunk passes the relevance cutoff, asks the configured LLM to answer only from excerpts, and requires valid citations on every sentence or list item.
-5. The UI shows the cited video and timestamp. Clicking a citation seeks the in-page player.
+### 4. (Optional) Start Documentation App
 
-Playlist indexing is stored as a SQLite job with per-video progress, errors, and retries. Pending work resumes when the API starts again. Interactive retrieval gets priority at the next video boundary. SQLite leases allow one queue worker across API processes sharing the same local database file; multi-host coordination and distributed JIT locks are still needed before deploying API replicas across hosts.
-
-## Evaluation
-
-The retrieval golden set lives in `apps/api/eval/golden.json`. It includes English and Hinglish queries with expected video and timestamp labels. Run it from `apps/api` after the corresponding videos have transcript vectors in Qdrant:
+To view the documentation and landing site:
 
 ```powershell
-uv run python eval/eval_retrieval.py --group strivers_a2z --json-out eval/results.json
+npm run dev:docs
 ```
 
-Add `--playlist-id YOUR_PLAYLIST_ID` to constrain playlist retrieval. Use `--disable-reranker` to compare rank fusion without the cross-encoder. Reports include timestamp Hit@K, video Hit@K, MRR, and metrics by query language.
+Open **`http://localhost:3001`** in your browser.
 
-Generated-answer review cases are in `apps/api/eval/golden_answers.json`. The evaluator can call the configured LLM:
+---
+
+## Configuration Reference (`apps/api/.env`)
+
+| Variable | Default Value | Description |
+|---|---|---|
+| `GEMINI_API_KEY` | *(Required)* | Your Google Gemini API key from AI Studio |
+| `GEMINI_MODEL` | `gemini-2.5-flash` | Gemini model to use for grounded answer generation |
+| `QDRANT_URL` | `http://localhost:6333` | Qdrant vector database URL |
+| `QDRANT_COLLECTION` | `yt_transcripts` | Collection name for transcript chunk vectors |
+| `RERANKER_MODEL` | `Xenova/ms-marco-MiniLM-L-6-v2` | Local cross-encoder model (or `none` to disable) |
+| `MIN_SIMILARITY_SCORE` | `0.50` | Relevance cutoff score; queries below this refuse to hallucinate |
+| `INGESTION_DB_PATH` | `data/ingestion_jobs.sqlite3` | SQLite database for tracking playlist indexing jobs |
+| `INGESTION_MAX_ATTEMPTS`| `3` | Max retries per video during background playlist ingestion |
+| `CORS_ORIGIN` | `""` | Production frontend domain (leave empty for localhost) |
+
+---
+
+## Key RAG Features & Guardrails
+
+1. **Two-Tier Search Routing**:
+   - Matches questions against video metadata (`yt_videos`) to select the best lecture.
+   - Retrieves semantic chunks from transcripts (`yt_transcripts`) with JIT fetching for unindexed videos.
+
+2. **Strict Hallucination Defense (3 Guardrails)**:
+   - **Guard 1 (Cosine Cutoff)**: If no chunks meet `MIN_SIMILARITY_SCORE`, the system refuses immediately without calling the LLM.
+   - **Guard 2 (Strict Prompting)**: Gemini is instructed to use *only* facts present in the excerpts, returning an exact refusal if insufficient.
+   - **Guard 3 (Citation Filtering & Dynamic Renumbering)**: Only excerpts cited by the model are returned to the user, sequentially numbered `[1]`, `[2]`.
+
+3. **In-Page Player Seeking (`-5s` Lead-In)**:
+   - Citations include calculated time offsets subtracting 5 seconds from the chunk start, providing natural conversational context when the video starts playing.
+
+---
+
+## Quality Evaluation
+
+Accuracy benchmarks can be run from `apps/api`:
 
 ```powershell
+cd apps/api
+
+# Evaluate retrieval accuracy (Hit@K, MRR, Cutoff Accuracy):
+uv run python eval/eval_retrieval.py --group strivers_a2z --json-out eval/results.json
+
+# Evaluate generated answers with Gemini:
 uv run python eval/eval_answers.py --group campusx_fastapi --json-out eval/answer_report.json
 ```
-
-Inspect generated answers and cited transcript excerpts manually. A citation check confirms the answer points to retrieved evidence; it does not prove that every claim is entailed by that evidence.
-
-## Configuration
-
-Copy `apps/api/.env.example` to `apps/api/.env` and configure:
-
-| Variable | Purpose |
-| --- | --- |
-| `LLM_PROVIDER` | Select `gemini` or `groq` |
-| `GEMINI_API_KEY`, `GEMINI_MODEL` | Gemini credentials and model |
-| `GROQ_API_KEY`, `GROQ_MODEL` | Groq credentials and model |
-| `QDRANT_URL` | Qdrant endpoint, default `http://localhost:6333` |
-| `RERANKER_MODEL` | Local cross-encoder; set `none` to disable |
-| `MIN_SIMILARITY_SCORE` | Transcript relevance cutoff used by grounded chat |
-| `INGESTION_DB_PATH` | SQLite file for durable playlist jobs, relative to `apps/api` by default |
-| `INGESTION_MAX_ATTEMPTS` | Maximum attempts per video before marking it failed; default `3` |
-| `INGESTION_WORKER_LEASE_SECONDS` | Queue worker failover lease duration; default `30` seconds |
-| `CORS_ORIGIN` | Additional allowed web origin |
-
-See [PROJECT_CONTEXT_AND_ROADMAP.md](PROJECT_CONTEXT_AND_ROADMAP.md) for the current architecture, quality rules, and next phases.

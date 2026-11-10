@@ -1,60 +1,107 @@
-# API development
+# YouTube Playlist RAG API (`apps/api`)
 
-FastAPI serves YouTube transcript ingestion, search, and grounded chat. The live service exposes its canonical endpoint schemas at `/docs`.
+FastAPI backend serving YouTube transcript ingestion, vector retrieval, and grounded Q&A with Google Gemini.
 
-## Start
+The live service exposes its OpenAPI interactive docs at `http://127.0.0.1:8000/docs`.
+
+---
+
+## 1. Quick Start
+
+### Step 1: Start Qdrant (Docker)
 
 From this directory:
 
 ```powershell
-uv sync
+docker compose up -d qdrant
+```
+
+Qdrant runs with persistent storage mounted to `./qdrant_data`.
+- **REST API**: `http://localhost:6333`
+- **Dashboard**: `http://localhost:6333/dashboard`
+
+### Step 2: Configure Environment
+
+Copy the example configuration:
+
+```powershell
 Copy-Item .env.example .env
+```
+
+Edit `.env` and set your Google Gemini API key:
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+GEMINI_MODEL=gemini-2.5-flash
+```
+
+*(Transcript retrieval and search work without an API key; Gemini is only required for generating synthesized answers).*
+
+### Step 3: Install Dependencies & Run
+
+Using [uv](https://docs.astral.sh/uv/):
+
+```powershell
+uv sync
 uv run uvicorn main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-Start Qdrant from the repository root with `docker compose up -d qdrant`. Configure an LLM key in `.env` for generated answers; transcript retrieval works without a key.
+---
 
-## Endpoints
+## 2. API Endpoints
 
-- `GET /api/health` reports Qdrant, embedding, reranker, and LLM configuration state.
-- `GET /api/ready` is a readiness probe and returns HTTP 503 when Qdrant is unavailable; `/api/health` remains a diagnostic/liveness endpoint.
-- `GET /api/videos` lists registered playlist videos.
-- `POST /api/ingest` registers a video or playlist and creates a durable indexing job.
-- `GET /api/ingest/status` reports worker state and aggregate progress.
-- `GET /api/ingest/jobs` and `GET /api/ingest/jobs/{job_id}` report persisted job and per-video state.
-- `POST /api/ingest/jobs/{job_id}/retry?video_id=...` retries one failed video; omit `video_id` to retry all failed videos.
-- `POST /api/ingest/stop` pauses queued work; `POST /api/ingest/resume` resumes it.
-- `POST /api/search` returns timestamped transcript matches.
-- `POST /api/chat` and `/api/ask` return a grounded answer and citations used.
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/` | API status and directory of available endpoints |
+| `GET` | `/api/health` | Diagnostic status (Qdrant, embedding model, reranker, and LLM) |
+| `GET` | `/api/ready` | Readiness probe (returns HTTP 503 if Qdrant is unavailable) |
+| `GET` | `/api/videos` | List all registered video lectures in the Tier 1 registry |
+| `POST` | `/api/ingest` | Register and ingest a YouTube video or playlist URL into Qdrant |
+| `GET` | `/api/ingest/status` | Current background queue progress and active worker state |
+| `GET` | `/api/ingest/jobs` | List recent durable playlist ingestion jobs |
+| `GET` | `/api/ingest/jobs/{id}` | Inspect a specific job and per-video status |
+| `POST` | `/api/ingest/jobs/{id}/retry` | Retry failed videos from an ingestion job |
+| `POST` | `/api/ingest/stop` | Pause active playlist queue worker |
+| `POST` | `/api/ingest/resume` | Resume paused background playlist ingestion |
+| `POST` | `/api/search` | Semantic vector search across transcript chunks with timestamps |
+| `POST` | `/api/chat` (or `/api/ask`) | Grounded RAG Q&A with Gemini and sentence-level timestamp citations |
 
-Jobs and per-video attempts are stored in SQLite at `apps/api/data/ingestion_jobs.sqlite3` by default. Queued work and items interrupted during a restart recover automatically. A SQLite lease elects one sequential queue worker across API processes that share this same local database file. Interactive retrieval gets the transcript slot after the current video completes, before the worker takes another video. Cross-host SQLite sharing and distributed JIT locks are unsupported; use one API process until those are added.
+---
 
-Set `INGESTION_DB_PATH` to move the queue database, `INGESTION_MAX_ATTEMPTS` to change retry count, and `INGESTION_WORKER_LEASE_SECONDS` to change the worker failover window. Keep the database on persistent local storage; placing it on ephemeral storage removes restart recovery.
+## 3. Retrieval & Grounding Architecture
 
-## Retrieval and grounding
+1. **Two-Tier Indexing**:
+   - `yt_videos`: Fast catalog registry containing video titles and metadata for playlist routing.
+   - `yt_transcripts`: Dense vector chunks with exact timestamp windows (`start`, `duration`, `link_sec`).
+   - `yt_video_profiles`: Extractive video summaries for discovery and initial routing.
+2. **Dense + Lexical Retrieval**:
+   - Embeddings: `BAAI/bge-small-en-v1.5` (FastEmbed).
+   - Local Cross-Encoder Reranker: `Xenova/ms-marco-MiniLM-L-6-v2`.
+   - Hinglish and English support with conversational filler filtering.
+3. **Strict Grounding Guardrails**:
+   - **Guard 1 (Cutoff Guard)**: Queries with similarity below `MIN_SIMILARITY_SCORE` refuse immediately without calling Gemini, saving latency and cost.
+   - **Guard 2 (Strict Refusal)**: The model is prompted to answer strictly from transcript excerpts and output an exact refusal string if context is insufficient.
+   - **Guard 3 (Citation Validation)**: The response must cite valid transcript excerpts. Citations are filtered and sequentially renumbered.
 
-Transcript search combines Qdrant dense retrieval, exact-token full-text candidates, video-profile ranks, reciprocal rank fusion, a local cross-encoder, and a diversity pass. Common English and Hinglish filler terms are removed from lexical/profile matching. Profile summaries and titles route retrieval but are never factual answer evidence.
+---
 
-The answer cutoff now uses transcript-body overlap and dense similarity. Exact transcript matches can help short concept queries pass the cutoff when dense similarity clears a minimum floor; a title or profile match alone cannot qualify an answer. The retrieval evaluator uses the same cutoff logic as chat.
+## 4. Evaluation
 
-The answer generator applies a transcript relevance cutoff before calling an LLM. It rejects answers that omit sentence-level citations, cite excerpt indices that were not supplied, or contain no valid transcript references. This is a structural citation check; human review is still needed to establish whether a cited excerpt supports each claim.
-
-## Quality evaluation
-
-From this directory, evaluate retrieval after indexing the target videos:
+Run accuracy evaluation benchmarks from this directory:
 
 ```powershell
+# Evaluate retrieval quality against golden test cases:
 uv run python eval/eval_retrieval.py --group strivers_a2z --json-out eval/results.json
+
+# Evaluate answer generation:
+uv run python eval/eval_answers.py --group campusx_fastapi --json-out eval/answer_report.json
 ```
 
-Use `--playlist-id` for a playlist constraint and `--disable-reranker` for a rank-fusion comparison. `eval/golden.json` stores expected videos and timestamp windows. `eval/eval_answers.py` runs generated-answer review cases and may call the configured LLM; inspect its report manually.
+---
 
-See the repository's [project roadmap](../../PROJECT_CONTEXT_AND_ROADMAP.md) for known limitations and planned work.
+## 5. Docker Deployment
 
-## API boundaries and diagnostics
+To run both Qdrant and the API containerized:
 
-- Ingestion accepts HTTPS URLs on `youtube.com` and `youtu.be`, or an 11-character video ID. Other hosts, URL credentials, and nonstandard ports are rejected before invoking `yt-dlp`.
-- Collection names, video IDs, playlist IDs, question lengths, chat history size, and list limits are validated at the request boundary.
-- Each response includes an `X-Request-ID`. API logs include that ID, route, status, and duration, but do not log question or transcript content.
-- Internal exception details are written to server logs and are not returned in HTTP 500 responses.
-- The API does not provide user authentication or per-user data isolation. Put it behind an authenticated gateway before exposing it to untrusted users; CORS is a browser policy, not access control.
+```powershell
+docker compose --profile full up -d
+```
