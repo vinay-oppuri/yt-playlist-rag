@@ -1,3 +1,4 @@
+import logging
 import os
 from contextlib import nullcontext
 from pathlib import Path
@@ -5,7 +6,11 @@ import re
 from typing import Any, Dict, List, Optional
 from dotenv import load_dotenv
 
+logger = logging.getLogger("yt_rag.generator")
+
 from src.evidence import meets_transcript_evidence_cutoff
+from src.llm.exceptions import LLMConfigurationError, LLMError
+from src.llm.factory import get_llm
 from src.vector_store import get_vector_store
 
 # Load environment variables from apps/api/.env or workspace root .env
@@ -84,68 +89,39 @@ def _conversation_context(chat_history: Optional[List[Dict[str, str]]]) -> str:
     )
 
 
-def _call_gemini(system: str, prompt: str, model_name: str, api_key: str) -> str:
-    """Call Google Gemini API via official google-genai SDK."""
-    from google import genai
-    from google.genai import types
+def _run_async(coro):
+    """Run an async coroutine synchronously from sync code."""
+    import asyncio
+    try:
+        loop = asyncio.get_running_loop()
+    except RuntimeError:
+        loop = None
 
-    client = genai.Client(api_key=api_key)
-    response = client.models.generate_content(
-        model=model_name,
-        contents=prompt,
-        config=types.GenerateContentConfig(
-            system_instruction=system,
-            temperature=0.2,
-        ),
-    )
-    return (response.text or "").strip()
-
-
-def _call_groq(system: str, prompt: str, model_name: str, api_key: str) -> str:
-    """Call Groq API using groq client."""
-    from groq import Groq
-
-    client = Groq(api_key=api_key)
-    chat_completion = client.chat.completions.create(
-        model=model_name,
-        messages=[
-            {"role": "system", "content": system},
-            {"role": "user", "content": prompt},
-        ],
-        temperature=0.2,
-    )
-    return (chat_completion.choices[0].message.content or "").strip()
+    if loop and loop.is_running():
+        import concurrent.futures
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
+            return executor.submit(asyncio.run, coro).result()
+    return asyncio.run(coro)
 
 
 def dispatch_llm(system: str, prompt: str) -> tuple[str, str, str]:
     """
-    Route request to configured LLM provider (Gemini or Groq).
+    Route request to configured LLM provider using the unified BaseLLM abstraction.
     Returns tuple: (response_text, provider_name, model_name)
     """
-    provider = os.getenv("LLM_PROVIDER", "").lower()
-    gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
-    groq_key = os.getenv("GROQ_API_KEY", "").strip()
-
-    # Determine provider based on setting or available keys
-    if provider == "groq" or (not gemini_key and groq_key):
-        model = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
-        text = _call_groq(system, prompt, model, groq_key)
-        return text, "groq", model
-    elif gemini_key:
-        model = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
-        text = _call_gemini(system, prompt, model, gemini_key)
-        return text, "gemini", model
-    elif groq_key:
-        model = os.getenv("GROQ_MODEL", "llama-3.3-70b-versatile")
-        text = _call_groq(system, prompt, model, groq_key)
-        return text, "groq", model
-    else:
-        # Graceful fallback when no LLM key is configured
+    try:
+        llm = get_llm()
+        text = _run_async(llm.generate(prompt=prompt, system_prompt=system))
+        return text, llm.provider_name, llm.model_name
+    except LLMConfigurationError:
         fallback_msg = (
-            "[API Key Note: No GEMINI_API_KEY or GROQ_API_KEY found in apps/api/.env. "
+            "[Configuration Note: LLM provider is misconfigured or required settings are missing. "
             "Showing top retrieved timestamps and excerpts below.]"
         )
         return fallback_msg, "none", "none"
+    except LLMError as e:
+        logger.warning("LLM provider %s failed: %s", getattr(e, "provider", "unknown"), e)
+        raise
 
 
 def build_excerpts_context(hits: List[Dict[str, Any]]) -> str:
